@@ -1,0 +1,193 @@
+\hypertarget{classharv_info_class}{
+\section{harvInfoClass Class Reference}
+\label{classharv_info_class}\index{harvInfoClass@{harvInfoClass}}
+}
+
+
+Holds information on the amount, type and characteristics of an individual harvest \hyperlink{classproduct}{product}.  
+
+
+{\ttfamily \#include $<$harvInfoClass.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classharv_info_class_a8ac8ed72179f9ebae816c3eec0cacb2d}{harvInfoClass} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classharv_info_class_a137ea57a9a1bd2fb6ade546eec085114}{harvInfoClass} (const \hyperlink{classharv_info_class}{harvInfoClass} \&aharvInfoClass)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classharv_info_class_ae0fbc3cf9b27de7cc3f9357691243a71}{$\sim$harvInfoClass} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classharv_info_class_a65627109413ccce8e91f747a63d8bbad}{SetamountDM} (double aamountDM)
+\begin{DoxyCompactList}\small\item\em Set function. \item\end{DoxyCompactList}\item 
+void \hyperlink{classharv_info_class_a903f84ea29f54cdbca6df9661a6db9b5}{SetamountN} (double aamountN)
+\begin{DoxyCompactList}\small\item\em Set function. \item\end{DoxyCompactList}\item 
+void \hyperlink{classharv_info_class_a2a061c57df6018ca45d0b08d76e78398}{SetamountC} (double aamountC)
+\begin{DoxyCompactList}\small\item\em Set function. \item\end{DoxyCompactList}\item 
+void \hyperlink{classharv_info_class_a78841976fa02ba16ccc17165cced32fb}{SetproductCode} (int aVal)
+\begin{DoxyCompactList}\small\item\em Set function. \item\end{DoxyCompactList}\item 
+double \hyperlink{classharv_info_class_a5858cef78437d316bd6fb8897a0940d8}{GetamountDM} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns amount of dry \hyperlink{classmatter}{matter} in a harvest \hyperlink{classproduct}{product} (tonnes). \item\end{DoxyCompactList}\item 
+double \hyperlink{classharv_info_class_abe831c13c5f1ef62a39db532478f3501}{GetamountN} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns amount of \hyperlink{classnitrogen}{nitrogen} in a harvest \hyperlink{classproduct}{product} (kilograms). \item\end{DoxyCompactList}\item 
+double \hyperlink{classharv_info_class_a3e988f8774326261f60383a487f2dca3}{GetamountC} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns amount of carbon in a harvest \hyperlink{classproduct}{product} (kilograms). \item\end{DoxyCompactList}\item 
+int \hyperlink{classharv_info_class_ae050b8dda387fb17e1f64dc7ffc254b1}{GetproductCode} ()
+\begin{DoxyCompactList}\small\item\em Returns \hyperlink{classproduct}{product} code. \item\end{DoxyCompactList}\item 
+void \hyperlink{classharv_info_class_ad65bdedd15fb72b42bd8e0f90c72305a}{SetproductName} (char $\ast$aVal)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classharv_info_class_a1a3fe7dfd0860cdc91f818c4db6aa766}{amountDM}
+\begin{DoxyCompactList}\small\item\em Amount of dry \hyperlink{classmatter}{matter} in a harvest \hyperlink{classproduct}{product} (tonnes). \item\end{DoxyCompactList}\item 
+double \hyperlink{classharv_info_class_ae6e91edc30bd199357f99f0c19bd7eb8}{amountN}
+\begin{DoxyCompactList}\small\item\em Amount of \hyperlink{classnitrogen}{nitrogen} in a harvest \hyperlink{classproduct}{product} (kilograms). \item\end{DoxyCompactList}\item 
+double \hyperlink{classharv_info_class_ab248e1eae011902fddc10ee1645f1a75}{amountC}
+\begin{DoxyCompactList}\small\item\em Amount of carbon in a harvest \hyperlink{classproduct}{product} (kilograms). \item\end{DoxyCompactList}\item 
+int \hyperlink{classharv_info_class_a6018eec14905b0fc5a02ce1187f39ecc}{productCode}
+\begin{DoxyCompactList}\small\item\em Harvest \hyperlink{classproduct}{product} code (unique identifier, equates to the plantitem index in products.dat. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classharv_info_class_a174c8d172bdcd9b289bfa7471fef0fa3}{productName}
+\begin{DoxyCompactList}\small\item\em The name of the harvest \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds information on the amount, type and characteristics of an individual harvest \hyperlink{classproduct}{product}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classharv_info_class_a8ac8ed72179f9ebae816c3eec0cacb2d}{
+\index{harvInfoClass@{harvInfoClass}!harvInfoClass@{harvInfoClass}}
+\index{harvInfoClass@{harvInfoClass}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{harvInfoClass}]{\setlength{\rightskip}{0pt plus 5cm}harvInfoClass::harvInfoClass ()}}
+\label{classharv_info_class_a8ac8ed72179f9ebae816c3eec0cacb2d}
+
+
+Default Constructor. \hypertarget{classharv_info_class_a137ea57a9a1bd2fb6ade546eec085114}{
+\index{harvInfoClass@{harvInfoClass}!harvInfoClass@{harvInfoClass}}
+\index{harvInfoClass@{harvInfoClass}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{harvInfoClass}]{\setlength{\rightskip}{0pt plus 5cm}harvInfoClass::harvInfoClass (const {\bf harvInfoClass} \& {\em aharvInfoClass})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a137ea57a9a1bd2fb6ade546eec085114}
+
+
+Copy Constructor. \hypertarget{classharv_info_class_ae0fbc3cf9b27de7cc3f9357691243a71}{
+\index{harvInfoClass@{harvInfoClass}!$\sim$harvInfoClass@{$\sim$harvInfoClass}}
+\index{$\sim$harvInfoClass@{$\sim$harvInfoClass}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{$\sim$harvInfoClass}]{\setlength{\rightskip}{0pt plus 5cm}virtual harvInfoClass::$\sim$harvInfoClass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharv_info_class_ae0fbc3cf9b27de7cc3f9357691243a71}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classharv_info_class_a3e988f8774326261f60383a487f2dca3}{
+\index{harvInfoClass@{harvInfoClass}!GetamountC@{GetamountC}}
+\index{GetamountC@{GetamountC}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{GetamountC}]{\setlength{\rightskip}{0pt plus 5cm}double harvInfoClass::GetamountC (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a3e988f8774326261f60383a487f2dca3}
+
+
+Returns amount of carbon in a harvest \hyperlink{classproduct}{product} (kilograms). \hypertarget{classharv_info_class_a5858cef78437d316bd6fb8897a0940d8}{
+\index{harvInfoClass@{harvInfoClass}!GetamountDM@{GetamountDM}}
+\index{GetamountDM@{GetamountDM}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{GetamountDM}]{\setlength{\rightskip}{0pt plus 5cm}double harvInfoClass::GetamountDM (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a5858cef78437d316bd6fb8897a0940d8}
+
+
+Returns amount of dry \hyperlink{classmatter}{matter} in a harvest \hyperlink{classproduct}{product} (tonnes). \hypertarget{classharv_info_class_abe831c13c5f1ef62a39db532478f3501}{
+\index{harvInfoClass@{harvInfoClass}!GetamountN@{GetamountN}}
+\index{GetamountN@{GetamountN}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{GetamountN}]{\setlength{\rightskip}{0pt plus 5cm}double harvInfoClass::GetamountN (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_abe831c13c5f1ef62a39db532478f3501}
+
+
+Returns amount of \hyperlink{classnitrogen}{nitrogen} in a harvest \hyperlink{classproduct}{product} (kilograms). \hypertarget{classharv_info_class_ae050b8dda387fb17e1f64dc7ffc254b1}{
+\index{harvInfoClass@{harvInfoClass}!GetproductCode@{GetproductCode}}
+\index{GetproductCode@{GetproductCode}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{GetproductCode}]{\setlength{\rightskip}{0pt plus 5cm}int harvInfoClass::GetproductCode ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_ae050b8dda387fb17e1f64dc7ffc254b1}
+
+
+Returns \hyperlink{classproduct}{product} code. \hypertarget{classharv_info_class_a2a061c57df6018ca45d0b08d76e78398}{
+\index{harvInfoClass@{harvInfoClass}!SetamountC@{SetamountC}}
+\index{SetamountC@{SetamountC}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{SetamountC}]{\setlength{\rightskip}{0pt plus 5cm}void harvInfoClass::SetamountC (double {\em aamountC})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a2a061c57df6018ca45d0b08d76e78398}
+
+
+Set function. /pram aamountC Amount of carbon in harvest \hyperlink{classproduct}{product} (kilograms) \hypertarget{classharv_info_class_a65627109413ccce8e91f747a63d8bbad}{
+\index{harvInfoClass@{harvInfoClass}!SetamountDM@{SetamountDM}}
+\index{SetamountDM@{SetamountDM}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{SetamountDM}]{\setlength{\rightskip}{0pt plus 5cm}void harvInfoClass::SetamountDM (double {\em aamountDM})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a65627109413ccce8e91f747a63d8bbad}
+
+
+Set function. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aamountDM}]Amount of harvest \hyperlink{classproduct}{product} dry \hyperlink{classmatter}{matter} (tonnes) \end{DoxyParams}
+\hypertarget{classharv_info_class_a903f84ea29f54cdbca6df9661a6db9b5}{
+\index{harvInfoClass@{harvInfoClass}!SetamountN@{SetamountN}}
+\index{SetamountN@{SetamountN}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{SetamountN}]{\setlength{\rightskip}{0pt plus 5cm}void harvInfoClass::SetamountN (double {\em aamountN})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a903f84ea29f54cdbca6df9661a6db9b5}
+
+
+Set function. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aamountN}]Amount of \hyperlink{classnitrogen}{nitrogen} in harvest \hyperlink{classproduct}{product} (kilograms) \end{DoxyParams}
+\hypertarget{classharv_info_class_a78841976fa02ba16ccc17165cced32fb}{
+\index{harvInfoClass@{harvInfoClass}!SetproductCode@{SetproductCode}}
+\index{SetproductCode@{SetproductCode}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{SetproductCode}]{\setlength{\rightskip}{0pt plus 5cm}void harvInfoClass::SetproductCode (int {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_a78841976fa02ba16ccc17165cced32fb}
+
+
+Set function. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aVal}]Unique \hyperlink{classproduct}{product} identifier code \end{DoxyParams}
+\hypertarget{classharv_info_class_ad65bdedd15fb72b42bd8e0f90c72305a}{
+\index{harvInfoClass@{harvInfoClass}!SetproductName@{SetproductName}}
+\index{SetproductName@{SetproductName}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{SetproductName}]{\setlength{\rightskip}{0pt plus 5cm}void harvInfoClass::SetproductName (char $\ast$ {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharv_info_class_ad65bdedd15fb72b42bd8e0f90c72305a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classharv_info_class_ab248e1eae011902fddc10ee1645f1a75}{
+\index{harvInfoClass@{harvInfoClass}!amountC@{amountC}}
+\index{amountC@{amountC}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{amountC}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvInfoClass::amountC}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharv_info_class_ab248e1eae011902fddc10ee1645f1a75}
+
+
+Amount of carbon in a harvest \hyperlink{classproduct}{product} (kilograms). \hypertarget{classharv_info_class_a1a3fe7dfd0860cdc91f818c4db6aa766}{
+\index{harvInfoClass@{harvInfoClass}!amountDM@{amountDM}}
+\index{amountDM@{amountDM}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{amountDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvInfoClass::amountDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharv_info_class_a1a3fe7dfd0860cdc91f818c4db6aa766}
+
+
+Amount of dry \hyperlink{classmatter}{matter} in a harvest \hyperlink{classproduct}{product} (tonnes). \hypertarget{classharv_info_class_ae6e91edc30bd199357f99f0c19bd7eb8}{
+\index{harvInfoClass@{harvInfoClass}!amountN@{amountN}}
+\index{amountN@{amountN}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{amountN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvInfoClass::amountN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharv_info_class_ae6e91edc30bd199357f99f0c19bd7eb8}
+
+
+Amount of \hyperlink{classnitrogen}{nitrogen} in a harvest \hyperlink{classproduct}{product} (kilograms). \hypertarget{classharv_info_class_a6018eec14905b0fc5a02ce1187f39ecc}{
+\index{harvInfoClass@{harvInfoClass}!productCode@{productCode}}
+\index{productCode@{productCode}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{productCode}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf harvInfoClass::productCode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharv_info_class_a6018eec14905b0fc5a02ce1187f39ecc}
+
+
+Harvest \hyperlink{classproduct}{product} code (unique identifier, equates to the plantitem index in products.dat. \hypertarget{classharv_info_class_a174c8d172bdcd9b289bfa7471fef0fa3}{
+\index{harvInfoClass@{harvInfoClass}!productName@{productName}}
+\index{productName@{productName}!harvInfoClass@{harvInfoClass}}
+\subsubsection[{productName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf harvInfoClass::productName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharv_info_class_a174c8d172bdcd9b289bfa7471fef0fa3}
+
+
+The name of the harvest \hyperlink{classproduct}{product}. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/Nitroscape/\hyperlink{harv_info_class_8h}{harvInfoClass.h}\item 
+C:/main/trunk/src/Nitroscape/\hyperlink{harv_info_class_8cpp}{harvInfoClass.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,214 @@
+\hypertarget{classcrop_wwheat}{
+\section{cropWwheat Class Reference}
+\label{classcrop_wwheat}\index{cropWwheat@{cropWwheat}}
+}
+
+
+{\ttfamily \#include $<$cropWwheat.h$>$}Inheritance diagram for cropWwheat::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classcrop_wwheat}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_wwheat_a83736b84f650615fe4e66da97b4950bb}{cropWwheat} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_wwheat_af5d47f47e4bde1b3b698ec33a5c84c80}{cropWwheat} (const \hyperlink{classcrop_wwheat}{cropWwheat} \&acrop)
+\item 
+virtual \hyperlink{classcrop_wwheat_aa04ebb606ceec1418bbeaedebea19a5e}{$\sim$cropWwheat} ()
+\item 
+virtual void \hyperlink{classcrop_wwheat_a87f616dcc3aa36a34ac45eef667d6935}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual void \hyperlink{classcrop_wwheat_a48bc90182781fdf230087c37b372238d}{Sow} (double SeedDensDryMatt, double \hyperlink{classcrop_aa4666fdd11920e05003bfeefc5518ddf}{RelativeDensity}, double NitrogenInSeed)
+\item 
+virtual void \hyperlink{classcrop_wwheat_a846500070e461386ab5c309a9e6cd388}{Harvest} (\hyperlink{classdecomposable}{decomposable} $\ast$Storage, \hyperlink{classdecomposable}{decomposable} $\ast$Straw)
+\begin{DoxyCompactList}\small\item\em harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_wwheat_aa4c7b3fd03506c8d3ca174bfc31d93e2}{fNitrogen} ()
+\item 
+virtual void \hyperlink{classcrop_wwheat_a42da6f7e2539c75a2171f2dae571257f}{UpdateHeight} ()
+\item 
+virtual void \hyperlink{classcrop_wwheat_ae2a9c67716b7722a45b86e83d41ca26f}{ReadParameters} (char $\ast$filename)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_wwheat_a0c7c6fd6130f3e2d674425e197b89c18}{HeightA}
+\item 
+double \hyperlink{classcrop_wwheat_aef2d9cfa48e1900ebe12ea941d9a5c29}{HeightB}
+\item 
+double \hyperlink{classcrop_wwheat_a7276dce5dce60718bc86927cd07c1d37}{GrainNumber}
+\item 
+double \hyperlink{classcrop_wwheat_a9a61a270f58f56b99415565bacbc7593}{LeafNumber}
+\item 
+double \hyperlink{classcrop_wwheat_a70dc1057062a1f5253c85489f8e81b8c}{CritLeafNo}
+\item 
+double \hyperlink{classcrop_wwheat_a98060c396ec2acda253f4ced16e5a420}{FinalLeafNo}
+\item 
+double \hyperlink{classcrop_wwheat_aab8c0008d737c8d956fb6aae9e4836cf}{VernalIndex}
+\item 
+double \hyperlink{classcrop_wwheat_a344306614fe2a9d6eca60d40495f75f5}{TSum}
+\item 
+bool \hyperlink{classcrop_wwheat_a08798879fdcd00a5dbbfa8307d58ed16}{Sown}
+\item 
+bool \hyperlink{classcrop_wwheat_a62c768b4065c4f279fa457ca821f6288}{Germinated}
+\item 
+bool \hyperlink{classcrop_wwheat_a20586dec607d8ba2aad31484c111a7d0}{Emerged}
+\item 
+bool \hyperlink{classcrop_wwheat_a5b0ae3b52fec5932b9ca55964db35af4}{Vernalized}
+\item 
+bool \hyperlink{classcrop_wwheat_ae8060d1a4163cc8244cc5777d5c8f3ec}{CommitFlag}
+\item 
+bool \hyperlink{classcrop_wwheat_ae8abed987e9a9d614c805b4ca94aeb7b}{Extending}
+\item 
+bool \hyperlink{classcrop_wwheat_aa7ae2a24c245254748efd6393dc6995f}{Anthesis}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_wwheat_a83736b84f650615fe4e66da97b4950bb}{
+\index{cropWwheat@{cropWwheat}!cropWwheat@{cropWwheat}}
+\index{cropWwheat@{cropWwheat}!cropWwheat@{cropWwheat}}
+\subsubsection[{cropWwheat}]{\setlength{\rightskip}{0pt plus 5cm}cropWwheat::cropWwheat (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_wwheat_a83736b84f650615fe4e66da97b4950bb}
+\hypertarget{classcrop_wwheat_af5d47f47e4bde1b3b698ec33a5c84c80}{
+\index{cropWwheat@{cropWwheat}!cropWwheat@{cropWwheat}}
+\index{cropWwheat@{cropWwheat}!cropWwheat@{cropWwheat}}
+\subsubsection[{cropWwheat}]{\setlength{\rightskip}{0pt plus 5cm}cropWwheat::cropWwheat (const {\bf cropWwheat} \& {\em acrop})}}
+\label{classcrop_wwheat_af5d47f47e4bde1b3b698ec33a5c84c80}
+\hypertarget{classcrop_wwheat_aa04ebb606ceec1418bbeaedebea19a5e}{
+\index{cropWwheat@{cropWwheat}!$\sim$cropWwheat@{$\sim$cropWwheat}}
+\index{$\sim$cropWwheat@{$\sim$cropWwheat}!cropWwheat@{cropWwheat}}
+\subsubsection[{$\sim$cropWwheat}]{\setlength{\rightskip}{0pt plus 5cm}cropWwheat::$\sim$cropWwheat ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_aa04ebb606ceec1418bbeaedebea19a5e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_wwheat_a87f616dcc3aa36a34ac45eef667d6935}{
+\index{cropWwheat@{cropWwheat}!Add@{Add}}
+\index{Add@{Add}!cropWwheat@{cropWwheat}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cropWwheat::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_a87f616dcc3aa36a34ac45eef667d6935}
+\hypertarget{classcrop_wwheat_aa4c7b3fd03506c8d3ca174bfc31d93e2}{
+\index{cropWwheat@{cropWwheat}!fNitrogen@{fNitrogen}}
+\index{fNitrogen@{fNitrogen}!cropWwheat@{cropWwheat}}
+\subsubsection[{fNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}double cropWwheat::fNitrogen ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_aa4c7b3fd03506c8d3ca174bfc31d93e2}
+returns a factor that describe how much N that are in each part of the plant (root, veg and store) 
+
+Reimplemented from \hyperlink{classcrop_a602622ac2c0de6432e6b9438dbbb646b}{crop}.\hypertarget{classcrop_wwheat_a846500070e461386ab5c309a9e6cd388}{
+\index{cropWwheat@{cropWwheat}!Harvest@{Harvest}}
+\index{Harvest@{Harvest}!cropWwheat@{cropWwheat}}
+\subsubsection[{Harvest}]{\setlength{\rightskip}{0pt plus 5cm}void cropWwheat::Harvest ({\bf decomposable} $\ast$ {\em Storage}, \/  {\bf decomposable} $\ast$ {\em Straw})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_a846500070e461386ab5c309a9e6cd388}
+
+
+harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classstorage}{storage}}]pointer to an object containing the maincrop \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. grain) \item[{\em Straw}]pointer to an object containing the remaining \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. Straw)\end{DoxyParams}
+harvest the current \hyperlink{classcrop}{crop}. The drymatter and straw is stored in the input parameters. Nitroget is updated The plant is still alive 
+
+Reimplemented from \hyperlink{classcrop_a387dc393ee7cd05a40874739cff8579e}{crop}.\hypertarget{classcrop_wwheat_ae2a9c67716b7722a45b86e83d41ca26f}{
+\index{cropWwheat@{cropWwheat}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropWwheat@{cropWwheat}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropWwheat::ReadParameters (char $\ast$ {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_ae2a9c67716b7722a45b86e83d41ca26f}
+\hypertarget{classcrop_wwheat_a48bc90182781fdf230087c37b372238d}{
+\index{cropWwheat@{cropWwheat}!Sow@{Sow}}
+\index{Sow@{Sow}!cropWwheat@{cropWwheat}}
+\subsubsection[{Sow}]{\setlength{\rightskip}{0pt plus 5cm}void cropWwheat::Sow (double {\em SeedDensDryMatt}, \/  double {\em aRelativeDensity}, \/  double {\em NitrogenInSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_a48bc90182781fdf230087c37b372238d}
+An account of the DM lost via \char`\"{}GerminationConversion\char`\"{} must be added, in order to keep total balance of DM/carbon !!! 
+
+Reimplemented from \hyperlink{classcrop_a2c5df235a96a1daa3ab122baf17518d4}{crop}.\hypertarget{classcrop_wwheat_a42da6f7e2539c75a2171f2dae571257f}{
+\index{cropWwheat@{cropWwheat}!UpdateHeight@{UpdateHeight}}
+\index{UpdateHeight@{UpdateHeight}!cropWwheat@{cropWwheat}}
+\subsubsection[{UpdateHeight}]{\setlength{\rightskip}{0pt plus 5cm}void cropWwheat::UpdateHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_wwheat_a42da6f7e2539c75a2171f2dae571257f}
+updates the height of the plant 
+
+Reimplemented from \hyperlink{classcrop_aeccf3077c6ad647769145b8064ba426b}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_wwheat_aa7ae2a24c245254748efd6393dc6995f}{
+\index{cropWwheat@{cropWwheat}!Anthesis@{Anthesis}}
+\index{Anthesis@{Anthesis}!cropWwheat@{cropWwheat}}
+\subsubsection[{Anthesis}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::Anthesis}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_aa7ae2a24c245254748efd6393dc6995f}
+\hypertarget{classcrop_wwheat_ae8060d1a4163cc8244cc5777d5c8f3ec}{
+\index{cropWwheat@{cropWwheat}!CommitFlag@{CommitFlag}}
+\index{CommitFlag@{CommitFlag}!cropWwheat@{cropWwheat}}
+\subsubsection[{CommitFlag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::CommitFlag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_ae8060d1a4163cc8244cc5777d5c8f3ec}
+\hypertarget{classcrop_wwheat_a70dc1057062a1f5253c85489f8e81b8c}{
+\index{cropWwheat@{cropWwheat}!CritLeafNo@{CritLeafNo}}
+\index{CritLeafNo@{CritLeafNo}!cropWwheat@{cropWwheat}}
+\subsubsection[{CritLeafNo}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::CritLeafNo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a70dc1057062a1f5253c85489f8e81b8c}
+\hypertarget{classcrop_wwheat_a20586dec607d8ba2aad31484c111a7d0}{
+\index{cropWwheat@{cropWwheat}!Emerged@{Emerged}}
+\index{Emerged@{Emerged}!cropWwheat@{cropWwheat}}
+\subsubsection[{Emerged}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::Emerged}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a20586dec607d8ba2aad31484c111a7d0}
+\hypertarget{classcrop_wwheat_ae8abed987e9a9d614c805b4ca94aeb7b}{
+\index{cropWwheat@{cropWwheat}!Extending@{Extending}}
+\index{Extending@{Extending}!cropWwheat@{cropWwheat}}
+\subsubsection[{Extending}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::Extending}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_ae8abed987e9a9d614c805b4ca94aeb7b}
+\hypertarget{classcrop_wwheat_a98060c396ec2acda253f4ced16e5a420}{
+\index{cropWwheat@{cropWwheat}!FinalLeafNo@{FinalLeafNo}}
+\index{FinalLeafNo@{FinalLeafNo}!cropWwheat@{cropWwheat}}
+\subsubsection[{FinalLeafNo}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::FinalLeafNo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a98060c396ec2acda253f4ced16e5a420}
+\hypertarget{classcrop_wwheat_a62c768b4065c4f279fa457ca821f6288}{
+\index{cropWwheat@{cropWwheat}!Germinated@{Germinated}}
+\index{Germinated@{Germinated}!cropWwheat@{cropWwheat}}
+\subsubsection[{Germinated}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::Germinated}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a62c768b4065c4f279fa457ca821f6288}
+\hypertarget{classcrop_wwheat_a7276dce5dce60718bc86927cd07c1d37}{
+\index{cropWwheat@{cropWwheat}!GrainNumber@{GrainNumber}}
+\index{GrainNumber@{GrainNumber}!cropWwheat@{cropWwheat}}
+\subsubsection[{GrainNumber}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::GrainNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a7276dce5dce60718bc86927cd07c1d37}
+\hypertarget{classcrop_wwheat_a0c7c6fd6130f3e2d674425e197b89c18}{
+\index{cropWwheat@{cropWwheat}!HeightA@{HeightA}}
+\index{HeightA@{HeightA}!cropWwheat@{cropWwheat}}
+\subsubsection[{HeightA}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::HeightA}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a0c7c6fd6130f3e2d674425e197b89c18}
+\hypertarget{classcrop_wwheat_aef2d9cfa48e1900ebe12ea941d9a5c29}{
+\index{cropWwheat@{cropWwheat}!HeightB@{HeightB}}
+\index{HeightB@{HeightB}!cropWwheat@{cropWwheat}}
+\subsubsection[{HeightB}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::HeightB}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_aef2d9cfa48e1900ebe12ea941d9a5c29}
+\hypertarget{classcrop_wwheat_a9a61a270f58f56b99415565bacbc7593}{
+\index{cropWwheat@{cropWwheat}!LeafNumber@{LeafNumber}}
+\index{LeafNumber@{LeafNumber}!cropWwheat@{cropWwheat}}
+\subsubsection[{LeafNumber}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::LeafNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a9a61a270f58f56b99415565bacbc7593}
+\hypertarget{classcrop_wwheat_a08798879fdcd00a5dbbfa8307d58ed16}{
+\index{cropWwheat@{cropWwheat}!Sown@{Sown}}
+\index{Sown@{Sown}!cropWwheat@{cropWwheat}}
+\subsubsection[{Sown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::Sown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a08798879fdcd00a5dbbfa8307d58ed16}
+\hypertarget{classcrop_wwheat_a344306614fe2a9d6eca60d40495f75f5}{
+\index{cropWwheat@{cropWwheat}!TSum@{TSum}}
+\index{TSum@{TSum}!cropWwheat@{cropWwheat}}
+\subsubsection[{TSum}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::TSum}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a344306614fe2a9d6eca60d40495f75f5}
+\hypertarget{classcrop_wwheat_aab8c0008d737c8d956fb6aae9e4836cf}{
+\index{cropWwheat@{cropWwheat}!VernalIndex@{VernalIndex}}
+\index{VernalIndex@{VernalIndex}!cropWwheat@{cropWwheat}}
+\subsubsection[{VernalIndex}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropWwheat::VernalIndex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_aab8c0008d737c8d956fb6aae9e4836cf}
+\hypertarget{classcrop_wwheat_a5b0ae3b52fec5932b9ca55964db35af4}{
+\index{cropWwheat@{cropWwheat}!Vernalized@{Vernalized}}
+\index{Vernalized@{Vernalized}!cropWwheat@{cropWwheat}}
+\subsubsection[{Vernalized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropWwheat::Vernalized}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_wwheat_a5b0ae3b52fec5932b9ca55964db35af4}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_wwheat_8h}{cropWwheat.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_wwheat_8cpp}{cropWwheat.cpp}\end{DoxyCompactItemize}

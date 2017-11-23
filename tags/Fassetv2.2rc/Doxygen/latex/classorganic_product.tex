@@ -1,0 +1,438 @@
+\hypertarget{classorganic_product}{
+\section{organicProduct Class Reference}
+\label{classorganic_product}\index{organicProduct@{organicProduct}}
+}
+
+
+{\ttfamily \#include $<$organicProduct.h$>$}Inheritance diagram for organicProduct::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classorganic_product}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structorganic_product_1_1allocation}{allocation}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorganic_product_a9442aaacbeb8c6ece232b009e8849f11}{organicProduct} ()
+\item 
+\hyperlink{classorganic_product_a7f742dabf4d9dcfa12a14510a4d9e315}{organicProduct} (const char $\ast$Pname, const int \hyperlink{classbase_afa59aaa1a0201700640234eb13a03aae}{Index}, const \hyperlink{classbase}{base} $\ast$owner)
+\item 
+\hyperlink{classorganic_product_aefc7ff5ac707cd2d3f06b8a68267c6f1}{organicProduct} (const \hyperlink{classorganic_product}{organicProduct} \&\hyperlink{classproduct}{product})
+\item 
+void \hyperlink{classorganic_product_ab8e426e0ccc28b8e577d336f237bc956}{Add} (\hyperlink{classorganic_product}{organicProduct} $\ast$\hyperlink{classproduct}{product}, double fraction)
+\item 
+void \hyperlink{classorganic_product_acea84ea54c011ee842e7a90ae3fabcec}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, bool ncfrac)
+\item 
+void \hyperlink{classorganic_product_a37de4c556fd969898cdf6af1375a7542}{SetAmount} (\hyperlink{classcn_matter}{cnMatter} a)
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_product_acf7568317f8ce00b6073eda432ba7483}{GetAmount} ()
+\item 
+string \hyperlink{classorganic_product_a1ff3dd7c96d3d9fd7dee39aafc9cc0a5}{GetName} ()
+\item 
+void \hyperlink{classorganic_product_add731f4e9ff946d3c662545ce7b86785}{SetName} (string s)
+\item 
+double \hyperlink{classorganic_product_ae45c737a922deb7c54c890d503d2ed26}{GetDecompositionRate} (int num)
+\item 
+double \hyperlink{classorganic_product_a8017dbe0d08fdbc603c7e66c1aad6bb7}{GetCFraction} (int num)
+\item 
+double \hyperlink{classorganic_product_ab67cb65794b92f1f4181efdb988b0524}{GetNFraction} (int num)
+\item 
+void \hyperlink{classorganic_product_ae6f2c4cfc006067ed21baa50e8e3c4db}{SetCFraction} (int num, double f)
+\item 
+void \hyperlink{classorganic_product_a3442bd238770ac98b17b88b6a7939a51}{SetNFraction} (int num, double f)
+\item 
+string \hyperlink{classorganic_product_a819eb78c2c6ed351bdfc27264ea74281}{GetDestPool} (int num)
+\item 
+int \hyperlink{classorganic_product_a8901cf7bada2bbba03698a61ba213ea4}{GetNumOfFractions} ()
+\item 
+double \hyperlink{classorganic_product_a9d4c5ab06266e32de73559d1b80a47ac}{GetCarbonFraction} ()
+\item 
+void \hyperlink{classorganic_product_aad6b0a71fb2db562996e41d9e169c7ca}{SetParameterByName} (string parmName, double val)
+\item 
+void \hyperlink{classorganic_product_af925a90ee49c9f5ec1ab117ab4de0405}{SetStepFactor} (double sf)
+\item 
+void \hyperlink{classorganic_product_aed3ff10d5be6bddf62a64e3107d56d2c}{SetCarbon} (double c)
+\item 
+void \hyperlink{classorganic_product_a1da1b32c1a68a787fade1b1f6af1a85e}{SetNitrogen} (\hyperlink{classnitrogen}{nitrogen} n)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_product_a0802b95a06c9487102b3f8c1852f683a}{GetNitrate} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_product_a40c6ff10538b07cc1dcd0a9d55bb2b6e}{GetAmmonium} ()
+\item 
+void \hyperlink{classorganic_product_ae2618cd8eb23583035214d37cb4fbe0f}{SetNO3\_\-content} (\hyperlink{classnitrogen}{nitrogen} content)
+\item 
+void \hyperlink{classorganic_product_a62634111037a6e2961c7c042d6773038}{SetNH4\_\-content} (\hyperlink{classnitrogen}{nitrogen} content)
+\item 
+void \hyperlink{classorganic_product_a6068cca47d8fb9b69fa3f5ebdc4de374}{ClearNO3\_\-content} ()
+\item 
+void \hyperlink{classorganic_product_a8717b1f12853806f7e4290e6df1db63d}{ClearNH4\_\-content} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_product_a8e2346d9fb4a3309b32ae90548142246}{GetOrganicNitrogen} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_product_aba7720784ab3cc2e672d2659085b3950}{GetTotalNitrogen} ()
+\item 
+double \hyperlink{classorganic_product_a7a513aeab6d52db777468be459631919}{GetCarbon} ()
+\item 
+void \hyperlink{classorganic_product_aafe75e4ad827977c8f3679850581d19a}{Scale} (double f)
+\item 
+void \hyperlink{classorganic_product_ad126b4d58c7007da80a68cc60296c337}{SetkAOM1} (double k)
+\item 
+void \hyperlink{classorganic_product_a04807d30cde0dc4fee6868c17599b1f1}{SetkAOM2} (double k)
+\item 
+void \hyperlink{classorganic_product_accc8b9ad540adb9a9e22a1c2fcf53c78}{SetAOM1\_\-fraction} (double f)
+\item 
+void \hyperlink{classorganic_product_a7ecff65aede65e22d43835131881f495}{SetAOM2\_\-fraction} (double f)
+\item 
+\hyperlink{classorganic_product}{organicProduct} $\ast$ \hyperlink{classorganic_product_ab9f2dcb358bab6290b9fc01af1992d74}{GetFraction} (double frac)
+\item 
+\hyperlink{classorganic_product}{organicProduct} $\ast$ \hyperlink{classorganic_product_ae07714fe698c3da48f1840242ffe7a04}{Next} ()
+\item 
+bool \hyperlink{classorganic_product_a19db425e68324fe376be404cb52d1ba6}{AddNext} (\hyperlink{classorganic_product}{organicProduct} $\ast$\hyperlink{classproduct}{product})
+\item 
+bool \hyperlink{classorganic_product_aeafa792e066d2bfa04029019c94d2d6c}{ProductSimilarity} (const \hyperlink{classorganic_product}{organicProduct} $\ast$\hyperlink{classproduct}{product})
+\item 
+double \hyperlink{classorganic_product_abec5af127d3ff1f687ddec55f0d7a827}{GetCNratio} ()
+\item 
+void \hyperlink{classorganic_product_abe76058995d85817daf3bcf02e7f24bb}{SetReduceTurnover} (double Reduce)
+\item 
+double \hyperlink{classorganic_product_a6551379aedaae4fab19dfc9c985f1cb7}{GetReduceTurnover} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classorganic_product_a7d49b54ed2c7f92fce2e3f35115e1c22a061bb9fd136515aaad1613f6d80923a2}{maxAllocations} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorganic_product_a82afaea76d84157abc874f5d87067ad5}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_product_a1eba4729932fc4050b9a32c848f22248}{amount}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_product_aa137691fa72af0fdb0c79267a00ba09f}{NO3}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_product_aca69b6ed87c9760c2b848dc8a398d6d1}{NH4}
+\item 
+double \hyperlink{classorganic_product_a28373067ddc34d2b19c3891943d9695d}{ReduceTurnover}
+\item 
+double \hyperlink{classorganic_product_a72c71b42022333fe698ba1b4114f12e0}{stepFactor}
+\item 
+double \hyperlink{classorganic_product_abf93f684bb0111a45f3682fa96d9c738}{carbonFraction}
+\item 
+int \hyperlink{classorganic_product_a2a6b42a4ee2b65f7c6da110630df0a04}{numOfAllocations}
+\item 
+string \hyperlink{classorganic_product_a8c1958c15d3faca177a1cc54b347f5e8}{productName}
+\item 
+\hyperlink{structorganic_product_1_1allocation}{allocation} \hyperlink{classorganic_product_a1009688debdb12952259390ce6b761ad}{allocationList} \mbox{[}maxAllocations\mbox{]}
+\item 
+\hyperlink{classorganic_product}{organicProduct} $\ast$ \hyperlink{classorganic_product_a1fd373bd20bdba2e2637c3550f20af52}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classorganic_product_a7d49b54ed2c7f92fce2e3f35115e1c22}{
+\subsubsection[{"@30}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a7d49b54ed2c7f92fce2e3f35115e1c22}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{maxAllocations@{maxAllocations}!organicProduct@{organicProduct}}\index{organicProduct@{organicProduct}!maxAllocations@{maxAllocations}}\item[{\em 
+\hypertarget{classorganic_product_a7d49b54ed2c7f92fce2e3f35115e1c22a061bb9fd136515aaad1613f6d80923a2}{
+maxAllocations}
+\label{classorganic_product_a7d49b54ed2c7f92fce2e3f35115e1c22a061bb9fd136515aaad1613f6d80923a2}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorganic_product_a9442aaacbeb8c6ece232b009e8849f11}{
+\index{organicProduct@{organicProduct}!organicProduct@{organicProduct}}
+\index{organicProduct@{organicProduct}!organicProduct@{organicProduct}}
+\subsubsection[{organicProduct}]{\setlength{\rightskip}{0pt plus 5cm}organicProduct::organicProduct ()}}
+\label{classorganic_product_a9442aaacbeb8c6ece232b009e8849f11}
+\hypertarget{classorganic_product_a7f742dabf4d9dcfa12a14510a4d9e315}{
+\index{organicProduct@{organicProduct}!organicProduct@{organicProduct}}
+\index{organicProduct@{organicProduct}!organicProduct@{organicProduct}}
+\subsubsection[{organicProduct}]{\setlength{\rightskip}{0pt plus 5cm}organicProduct::organicProduct (const char $\ast$ {\em Pname}, \/  const int {\em Index}, \/  const {\bf base} $\ast$ {\em owner})}}
+\label{classorganic_product_a7f742dabf4d9dcfa12a14510a4d9e315}
+\hypertarget{classorganic_product_aefc7ff5ac707cd2d3f06b8a68267c6f1}{
+\index{organicProduct@{organicProduct}!organicProduct@{organicProduct}}
+\index{organicProduct@{organicProduct}!organicProduct@{organicProduct}}
+\subsubsection[{organicProduct}]{\setlength{\rightskip}{0pt plus 5cm}organicProduct::organicProduct (const {\bf organicProduct} \& {\em product})}}
+\label{classorganic_product_aefc7ff5ac707cd2d3f06b8a68267c6f1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorganic_product_ab8e426e0ccc28b8e577d336f237bc956}{
+\index{organicProduct@{organicProduct}!Add@{Add}}
+\index{Add@{Add}!organicProduct@{organicProduct}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::Add ({\bf organicProduct} $\ast$ {\em product}, \/  double {\em fraction})}}
+\label{classorganic_product_ab8e426e0ccc28b8e577d336f237bc956}
+\hypertarget{classorganic_product_a19db425e68324fe376be404cb52d1ba6}{
+\index{organicProduct@{organicProduct}!AddNext@{AddNext}}
+\index{AddNext@{AddNext}!organicProduct@{organicProduct}}
+\subsubsection[{AddNext}]{\setlength{\rightskip}{0pt plus 5cm}bool organicProduct::AddNext ({\bf organicProduct} $\ast$ {\em product})}}
+\label{classorganic_product_a19db425e68324fe376be404cb52d1ba6}
+\hypertarget{classorganic_product_a8717b1f12853806f7e4290e6df1db63d}{
+\index{organicProduct@{organicProduct}!ClearNH4\_\-content@{ClearNH4\_\-content}}
+\index{ClearNH4\_\-content@{ClearNH4\_\-content}!organicProduct@{organicProduct}}
+\subsubsection[{ClearNH4\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::ClearNH4\_\-content ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a8717b1f12853806f7e4290e6df1db63d}
+\hypertarget{classorganic_product_a6068cca47d8fb9b69fa3f5ebdc4de374}{
+\index{organicProduct@{organicProduct}!ClearNO3\_\-content@{ClearNO3\_\-content}}
+\index{ClearNO3\_\-content@{ClearNO3\_\-content}!organicProduct@{organicProduct}}
+\subsubsection[{ClearNO3\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::ClearNO3\_\-content ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a6068cca47d8fb9b69fa3f5ebdc4de374}
+\hypertarget{classorganic_product_a40c6ff10538b07cc1dcd0a9d55bb2b6e}{
+\index{organicProduct@{organicProduct}!GetAmmonium@{GetAmmonium}}
+\index{GetAmmonium@{GetAmmonium}!organicProduct@{organicProduct}}
+\subsubsection[{GetAmmonium}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} organicProduct::GetAmmonium ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a40c6ff10538b07cc1dcd0a9d55bb2b6e}
+\hypertarget{classorganic_product_acf7568317f8ce00b6073eda432ba7483}{
+\index{organicProduct@{organicProduct}!GetAmount@{GetAmount}}
+\index{GetAmount@{GetAmount}!organicProduct@{organicProduct}}
+\subsubsection[{GetAmount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} organicProduct::GetAmount ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_acf7568317f8ce00b6073eda432ba7483}
+\hypertarget{classorganic_product_a7a513aeab6d52db777468be459631919}{
+\index{organicProduct@{organicProduct}!GetCarbon@{GetCarbon}}
+\index{GetCarbon@{GetCarbon}!organicProduct@{organicProduct}}
+\subsubsection[{GetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetCarbon ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a7a513aeab6d52db777468be459631919}
+\hypertarget{classorganic_product_a9d4c5ab06266e32de73559d1b80a47ac}{
+\index{organicProduct@{organicProduct}!GetCarbonFraction@{GetCarbonFraction}}
+\index{GetCarbonFraction@{GetCarbonFraction}!organicProduct@{organicProduct}}
+\subsubsection[{GetCarbonFraction}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetCarbonFraction ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a9d4c5ab06266e32de73559d1b80a47ac}
+\hypertarget{classorganic_product_a8017dbe0d08fdbc603c7e66c1aad6bb7}{
+\index{organicProduct@{organicProduct}!GetCFraction@{GetCFraction}}
+\index{GetCFraction@{GetCFraction}!organicProduct@{organicProduct}}
+\subsubsection[{GetCFraction}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetCFraction (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a8017dbe0d08fdbc603c7e66c1aad6bb7}
+\hypertarget{classorganic_product_abec5af127d3ff1f687ddec55f0d7a827}{
+\index{organicProduct@{organicProduct}!GetCNratio@{GetCNratio}}
+\index{GetCNratio@{GetCNratio}!organicProduct@{organicProduct}}
+\subsubsection[{GetCNratio}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetCNratio ()}}
+\label{classorganic_product_abec5af127d3ff1f687ddec55f0d7a827}
+\hypertarget{classorganic_product_ae45c737a922deb7c54c890d503d2ed26}{
+\index{organicProduct@{organicProduct}!GetDecompositionRate@{GetDecompositionRate}}
+\index{GetDecompositionRate@{GetDecompositionRate}!organicProduct@{organicProduct}}
+\subsubsection[{GetDecompositionRate}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetDecompositionRate (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_ae45c737a922deb7c54c890d503d2ed26}
+\hypertarget{classorganic_product_a819eb78c2c6ed351bdfc27264ea74281}{
+\index{organicProduct@{organicProduct}!GetDestPool@{GetDestPool}}
+\index{GetDestPool@{GetDestPool}!organicProduct@{organicProduct}}
+\subsubsection[{GetDestPool}]{\setlength{\rightskip}{0pt plus 5cm}string organicProduct::GetDestPool (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a819eb78c2c6ed351bdfc27264ea74281}
+\hypertarget{classorganic_product_ab9f2dcb358bab6290b9fc01af1992d74}{
+\index{organicProduct@{organicProduct}!GetFraction@{GetFraction}}
+\index{GetFraction@{GetFraction}!organicProduct@{organicProduct}}
+\subsubsection[{GetFraction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf organicProduct} $\ast$ organicProduct::GetFraction (double {\em frac})}}
+\label{classorganic_product_ab9f2dcb358bab6290b9fc01af1992d74}
+\hypertarget{classorganic_product_a1ff3dd7c96d3d9fd7dee39aafc9cc0a5}{
+\index{organicProduct@{organicProduct}!GetName@{GetName}}
+\index{GetName@{GetName}!organicProduct@{organicProduct}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}string organicProduct::GetName (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a1ff3dd7c96d3d9fd7dee39aafc9cc0a5}
+
+
+Reimplemented from \hyperlink{classbase_a5b4079d3eb535e704fcaed3016c76ecb}{base}.\hypertarget{classorganic_product_ab67cb65794b92f1f4181efdb988b0524}{
+\index{organicProduct@{organicProduct}!GetNFraction@{GetNFraction}}
+\index{GetNFraction@{GetNFraction}!organicProduct@{organicProduct}}
+\subsubsection[{GetNFraction}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetNFraction (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_ab67cb65794b92f1f4181efdb988b0524}
+\hypertarget{classorganic_product_a0802b95a06c9487102b3f8c1852f683a}{
+\index{organicProduct@{organicProduct}!GetNitrate@{GetNitrate}}
+\index{GetNitrate@{GetNitrate}!organicProduct@{organicProduct}}
+\subsubsection[{GetNitrate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} organicProduct::GetNitrate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a0802b95a06c9487102b3f8c1852f683a}
+\hypertarget{classorganic_product_a8901cf7bada2bbba03698a61ba213ea4}{
+\index{organicProduct@{organicProduct}!GetNumOfFractions@{GetNumOfFractions}}
+\index{GetNumOfFractions@{GetNumOfFractions}!organicProduct@{organicProduct}}
+\subsubsection[{GetNumOfFractions}]{\setlength{\rightskip}{0pt plus 5cm}int organicProduct::GetNumOfFractions ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a8901cf7bada2bbba03698a61ba213ea4}
+\hypertarget{classorganic_product_a8e2346d9fb4a3309b32ae90548142246}{
+\index{organicProduct@{organicProduct}!GetOrganicNitrogen@{GetOrganicNitrogen}}
+\index{GetOrganicNitrogen@{GetOrganicNitrogen}!organicProduct@{organicProduct}}
+\subsubsection[{GetOrganicNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} organicProduct::GetOrganicNitrogen ()}}
+\label{classorganic_product_a8e2346d9fb4a3309b32ae90548142246}
+\hypertarget{classorganic_product_a6551379aedaae4fab19dfc9c985f1cb7}{
+\index{organicProduct@{organicProduct}!GetReduceTurnover@{GetReduceTurnover}}
+\index{GetReduceTurnover@{GetReduceTurnover}!organicProduct@{organicProduct}}
+\subsubsection[{GetReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}double organicProduct::GetReduceTurnover ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a6551379aedaae4fab19dfc9c985f1cb7}
+\hypertarget{classorganic_product_aba7720784ab3cc2e672d2659085b3950}{
+\index{organicProduct@{organicProduct}!GetTotalNitrogen@{GetTotalNitrogen}}
+\index{GetTotalNitrogen@{GetTotalNitrogen}!organicProduct@{organicProduct}}
+\subsubsection[{GetTotalNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} organicProduct::GetTotalNitrogen ()}}
+\label{classorganic_product_aba7720784ab3cc2e672d2659085b3950}
+\hypertarget{classorganic_product_a82afaea76d84157abc874f5d87067ad5}{
+\index{organicProduct@{organicProduct}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!organicProduct@{organicProduct}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a82afaea76d84157abc874f5d87067ad5}
+
+
+Reimplemented from \hyperlink{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{base}.\hypertarget{classorganic_product_ae07714fe698c3da48f1840242ffe7a04}{
+\index{organicProduct@{organicProduct}!Next@{Next}}
+\index{Next@{Next}!organicProduct@{organicProduct}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf organicProduct}$\ast$ organicProduct::Next ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_ae07714fe698c3da48f1840242ffe7a04}
+\hypertarget{classorganic_product_aeafa792e066d2bfa04029019c94d2d6c}{
+\index{organicProduct@{organicProduct}!ProductSimilarity@{ProductSimilarity}}
+\index{ProductSimilarity@{ProductSimilarity}!organicProduct@{organicProduct}}
+\subsubsection[{ProductSimilarity}]{\setlength{\rightskip}{0pt plus 5cm}bool organicProduct::ProductSimilarity (const {\bf organicProduct} $\ast$ {\em product})}}
+\label{classorganic_product_aeafa792e066d2bfa04029019c94d2d6c}
+\hypertarget{classorganic_product_acea84ea54c011ee842e7a90ae3fabcec}{
+\index{organicProduct@{organicProduct}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!organicProduct@{organicProduct}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::ReadParameters (fstream $\ast$ {\em file}, \/  bool {\em ncfrac})}}
+\label{classorganic_product_acea84ea54c011ee842e7a90ae3fabcec}
+\hypertarget{classorganic_product_aafe75e4ad827977c8f3679850581d19a}{
+\index{organicProduct@{organicProduct}!Scale@{Scale}}
+\index{Scale@{Scale}!organicProduct@{organicProduct}}
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::Scale (double {\em f})}}
+\label{classorganic_product_aafe75e4ad827977c8f3679850581d19a}
+\hypertarget{classorganic_product_a37de4c556fd969898cdf6af1375a7542}{
+\index{organicProduct@{organicProduct}!SetAmount@{SetAmount}}
+\index{SetAmount@{SetAmount}!organicProduct@{organicProduct}}
+\subsubsection[{SetAmount}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetAmount ({\bf cnMatter} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a37de4c556fd969898cdf6af1375a7542}
+\hypertarget{classorganic_product_accc8b9ad540adb9a9e22a1c2fcf53c78}{
+\index{organicProduct@{organicProduct}!SetAOM1\_\-fraction@{SetAOM1\_\-fraction}}
+\index{SetAOM1\_\-fraction@{SetAOM1\_\-fraction}!organicProduct@{organicProduct}}
+\subsubsection[{SetAOM1\_\-fraction}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetAOM1\_\-fraction (double {\em f})}}
+\label{classorganic_product_accc8b9ad540adb9a9e22a1c2fcf53c78}
+\hypertarget{classorganic_product_a7ecff65aede65e22d43835131881f495}{
+\index{organicProduct@{organicProduct}!SetAOM2\_\-fraction@{SetAOM2\_\-fraction}}
+\index{SetAOM2\_\-fraction@{SetAOM2\_\-fraction}!organicProduct@{organicProduct}}
+\subsubsection[{SetAOM2\_\-fraction}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetAOM2\_\-fraction (double {\em f})}}
+\label{classorganic_product_a7ecff65aede65e22d43835131881f495}
+\hypertarget{classorganic_product_aed3ff10d5be6bddf62a64e3107d56d2c}{
+\index{organicProduct@{organicProduct}!SetCarbon@{SetCarbon}}
+\index{SetCarbon@{SetCarbon}!organicProduct@{organicProduct}}
+\subsubsection[{SetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetCarbon (double {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_aed3ff10d5be6bddf62a64e3107d56d2c}
+\hypertarget{classorganic_product_ae6f2c4cfc006067ed21baa50e8e3c4db}{
+\index{organicProduct@{organicProduct}!SetCFraction@{SetCFraction}}
+\index{SetCFraction@{SetCFraction}!organicProduct@{organicProduct}}
+\subsubsection[{SetCFraction}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetCFraction (int {\em num}, \/  double {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_ae6f2c4cfc006067ed21baa50e8e3c4db}
+\hypertarget{classorganic_product_ad126b4d58c7007da80a68cc60296c337}{
+\index{organicProduct@{organicProduct}!SetkAOM1@{SetkAOM1}}
+\index{SetkAOM1@{SetkAOM1}!organicProduct@{organicProduct}}
+\subsubsection[{SetkAOM1}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetkAOM1 (double {\em k})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_ad126b4d58c7007da80a68cc60296c337}
+\hypertarget{classorganic_product_a04807d30cde0dc4fee6868c17599b1f1}{
+\index{organicProduct@{organicProduct}!SetkAOM2@{SetkAOM2}}
+\index{SetkAOM2@{SetkAOM2}!organicProduct@{organicProduct}}
+\subsubsection[{SetkAOM2}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetkAOM2 (double {\em k})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a04807d30cde0dc4fee6868c17599b1f1}
+\hypertarget{classorganic_product_add731f4e9ff946d3c662545ce7b86785}{
+\index{organicProduct@{organicProduct}!SetName@{SetName}}
+\index{SetName@{SetName}!organicProduct@{organicProduct}}
+\subsubsection[{SetName}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetName (string {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_add731f4e9ff946d3c662545ce7b86785}
+\hypertarget{classorganic_product_a3442bd238770ac98b17b88b6a7939a51}{
+\index{organicProduct@{organicProduct}!SetNFraction@{SetNFraction}}
+\index{SetNFraction@{SetNFraction}!organicProduct@{organicProduct}}
+\subsubsection[{SetNFraction}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetNFraction (int {\em num}, \/  double {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a3442bd238770ac98b17b88b6a7939a51}
+\hypertarget{classorganic_product_a62634111037a6e2961c7c042d6773038}{
+\index{organicProduct@{organicProduct}!SetNH4\_\-content@{SetNH4\_\-content}}
+\index{SetNH4\_\-content@{SetNH4\_\-content}!organicProduct@{organicProduct}}
+\subsubsection[{SetNH4\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetNH4\_\-content ({\bf nitrogen} {\em content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a62634111037a6e2961c7c042d6773038}
+\hypertarget{classorganic_product_a1da1b32c1a68a787fade1b1f6af1a85e}{
+\index{organicProduct@{organicProduct}!SetNitrogen@{SetNitrogen}}
+\index{SetNitrogen@{SetNitrogen}!organicProduct@{organicProduct}}
+\subsubsection[{SetNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetNitrogen ({\bf nitrogen} {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_a1da1b32c1a68a787fade1b1f6af1a85e}
+\hypertarget{classorganic_product_ae2618cd8eb23583035214d37cb4fbe0f}{
+\index{organicProduct@{organicProduct}!SetNO3\_\-content@{SetNO3\_\-content}}
+\index{SetNO3\_\-content@{SetNO3\_\-content}!organicProduct@{organicProduct}}
+\subsubsection[{SetNO3\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetNO3\_\-content ({\bf nitrogen} {\em content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_ae2618cd8eb23583035214d37cb4fbe0f}
+\hypertarget{classorganic_product_aad6b0a71fb2db562996e41d9e169c7ca}{
+\index{organicProduct@{organicProduct}!SetParameterByName@{SetParameterByName}}
+\index{SetParameterByName@{SetParameterByName}!organicProduct@{organicProduct}}
+\subsubsection[{SetParameterByName}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetParameterByName (string {\em parmName}, \/  double {\em val})}}
+\label{classorganic_product_aad6b0a71fb2db562996e41d9e169c7ca}
+\hypertarget{classorganic_product_abe76058995d85817daf3bcf02e7f24bb}{
+\index{organicProduct@{organicProduct}!SetReduceTurnover@{SetReduceTurnover}}
+\index{SetReduceTurnover@{SetReduceTurnover}!organicProduct@{organicProduct}}
+\subsubsection[{SetReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetReduceTurnover (double {\em Reduce})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_abe76058995d85817daf3bcf02e7f24bb}
+\hypertarget{classorganic_product_af925a90ee49c9f5ec1ab117ab4de0405}{
+\index{organicProduct@{organicProduct}!SetStepFactor@{SetStepFactor}}
+\index{SetStepFactor@{SetStepFactor}!organicProduct@{organicProduct}}
+\subsubsection[{SetStepFactor}]{\setlength{\rightskip}{0pt plus 5cm}void organicProduct::SetStepFactor (double {\em sf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_product_af925a90ee49c9f5ec1ab117ab4de0405}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorganic_product_a1009688debdb12952259390ce6b761ad}{
+\index{organicProduct@{organicProduct}!allocationList@{allocationList}}
+\index{allocationList@{allocationList}!organicProduct@{organicProduct}}
+\subsubsection[{allocationList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf allocation} {\bf organicProduct::allocationList}\mbox{[}maxAllocations\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a1009688debdb12952259390ce6b761ad}
+\hypertarget{classorganic_product_a1eba4729932fc4050b9a32c848f22248}{
+\index{organicProduct@{organicProduct}!amount@{amount}}
+\index{amount@{amount}!organicProduct@{organicProduct}}
+\subsubsection[{amount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf organicProduct::amount}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a1eba4729932fc4050b9a32c848f22248}
+\hypertarget{classorganic_product_abf93f684bb0111a45f3682fa96d9c738}{
+\index{organicProduct@{organicProduct}!carbonFraction@{carbonFraction}}
+\index{carbonFraction@{carbonFraction}!organicProduct@{organicProduct}}
+\subsubsection[{carbonFraction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf organicProduct::carbonFraction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_abf93f684bb0111a45f3682fa96d9c738}
+\hypertarget{classorganic_product_a1fd373bd20bdba2e2637c3550f20af52}{
+\index{organicProduct@{organicProduct}!next@{next}}
+\index{next@{next}!organicProduct@{organicProduct}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf organicProduct}$\ast$ {\bf organicProduct::next}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a1fd373bd20bdba2e2637c3550f20af52}
+\hypertarget{classorganic_product_aca69b6ed87c9760c2b848dc8a398d6d1}{
+\index{organicProduct@{organicProduct}!NH4@{NH4}}
+\index{NH4@{NH4}!organicProduct@{organicProduct}}
+\subsubsection[{NH4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf organicProduct::NH4}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_aca69b6ed87c9760c2b848dc8a398d6d1}
+\hypertarget{classorganic_product_aa137691fa72af0fdb0c79267a00ba09f}{
+\index{organicProduct@{organicProduct}!NO3@{NO3}}
+\index{NO3@{NO3}!organicProduct@{organicProduct}}
+\subsubsection[{NO3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf organicProduct::NO3}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_aa137691fa72af0fdb0c79267a00ba09f}
+\hypertarget{classorganic_product_a2a6b42a4ee2b65f7c6da110630df0a04}{
+\index{organicProduct@{organicProduct}!numOfAllocations@{numOfAllocations}}
+\index{numOfAllocations@{numOfAllocations}!organicProduct@{organicProduct}}
+\subsubsection[{numOfAllocations}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf organicProduct::numOfAllocations}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a2a6b42a4ee2b65f7c6da110630df0a04}
+\hypertarget{classorganic_product_a8c1958c15d3faca177a1cc54b347f5e8}{
+\index{organicProduct@{organicProduct}!productName@{productName}}
+\index{productName@{productName}!organicProduct@{organicProduct}}
+\subsubsection[{productName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf organicProduct::productName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a8c1958c15d3faca177a1cc54b347f5e8}
+\hypertarget{classorganic_product_a28373067ddc34d2b19c3891943d9695d}{
+\index{organicProduct@{organicProduct}!ReduceTurnover@{ReduceTurnover}}
+\index{ReduceTurnover@{ReduceTurnover}!organicProduct@{organicProduct}}
+\subsubsection[{ReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf organicProduct::ReduceTurnover}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a28373067ddc34d2b19c3891943d9695d}
+\hypertarget{classorganic_product_a72c71b42022333fe698ba1b4114f12e0}{
+\index{organicProduct@{organicProduct}!stepFactor@{stepFactor}}
+\index{stepFactor@{stepFactor}!organicProduct@{organicProduct}}
+\subsubsection[{stepFactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf organicProduct::stepFactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classorganic_product_a72c71b42022333fe698ba1b4114f12e0}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{organic_product_8h}{organicProduct.h}\item 
+C:/main/trunk/src/products/\hyperlink{organic_product_8cpp}{organicProduct.cpp}\end{DoxyCompactItemize}

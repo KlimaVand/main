@@ -1,0 +1,300 @@
+\hypertarget{classcattle_feeding_manager}{
+\section{cattleFeedingManager Class Reference}
+\label{classcattle_feeding_manager}\index{cattleFeedingManager@{cattleFeedingManager}}
+}
+
+
+{\ttfamily \#include $<$cattleFeedingManager.h$>$}Inheritance diagram for cattleFeedingManager::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classcattle_feeding_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcattle_feeding_manager_ae91c55982c67f8bc983c545c2a624ce7}{cattleFeedingManager} ()
+\item 
+\hyperlink{classcattle_feeding_manager_aa1efdcaac1a2b1a6f5247287a8d3232d}{cattleFeedingManager} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcattle_feeding_manager_a25bfea6e392a7097acfaafbdda189ff2}{$\sim$cattleFeedingManager} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_a777a9ea05ff6bf97d301ebaea5661dc0}{SetdairyPresent} (bool isPresent)
+\item 
+bool \hyperlink{classcattle_feeding_manager_a58813fa005a5df26504c78c94c58ab0b}{GetdairyPresent} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_a14e418c33839dc6e08048cff98197cd5}{SetbeefPresent} (bool isPresent)
+\item 
+bool \hyperlink{classcattle_feeding_manager_aee8f0f316a53c42ff846eab491f016d6}{GetbeefPresent} ()
+\item 
+bool \hyperlink{classcattle_feeding_manager_a07d92795c4670674abbaa0be7b07814d}{GetautoFeed} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_a45e8328242ab6930b4b3c1fd08fb16af}{SettargetMilkYieldFactor} (double aValue)
+\item 
+\hyperlink{classcattle_feeding_group}{cattleFeedingGroup} $\ast$ \hyperlink{classcattle_feeding_manager_ade13c39fd50aca07ec357f1a3dbaff2f}{GetGroupMember} (int elementNum)
+\item 
+void \hyperlink{classcattle_feeding_manager_a655795278b3ca1e7511f6c40c29e2e0c}{daily\_\-update} (int status)
+\item 
+void \hyperlink{classcattle_feeding_manager_aab4f3ceb55336198695404d5a32018ba}{Initialize} (\hyperlink{classlivestock}{livestock} $\ast$theLivestockptr)
+\item 
+void \hyperlink{classcattle_feeding_manager_a2e4bb44d555d13f9ebb0b960517de172}{ReceivePlan} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_aa1204eac6b3850b06e7b5b1a0f54cacc}{ReadFeedingGroupParameters} (int start, int stop)
+\item 
+void \hyperlink{classcattle_feeding_manager_aa1a64042c6fec08dd81b692c94a00349}{SortAnimals} (bool noCull)
+\item 
+void \hyperlink{classcattle_feeding_manager_a5d75b196c96519719f5580eadea8209e}{CheckDiets} (bool startup)
+\item 
+double \hyperlink{classcattle_feeding_manager_a2ba749a4e41bab1a7fac88fdc7783449}{GetHerbageRequired} (bool zeroGrazed)
+\item 
+double \hyperlink{classcattle_feeding_manager_a4d0a1389bc7cc6fa51824a521e2f83fe}{GetHerbageRequired} (int start, int end, bool zeroGrazed)
+\item 
+void \hyperlink{classcattle_feeding_manager_a02795723bb8cb2baab643f85962f2343}{weanCalves} (int herdNo, double daysSinceBirth)
+\item 
+\hyperlink{classdairy_stock}{dairyStock} $\ast$ \hyperlink{classcattle_feeding_manager_ab32e71fec849f4bb6598b18dcf24bcd4}{GetHerd} (int whichHerd)
+\item 
+void \hyperlink{classcattle_feeding_manager_a7981a5c91fd07f0286afa2f6cbcd7101}{ClearGroups} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_ae70db6fbe1e89dbfd363f475f1536bb0}{AllocateFieldsForGrazing} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfield}{field} $>$ $\ast$fields\_\-avail\_\-for\_\-grazing, int numOthers)
+\item 
+\hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classcattle_feeding_manager_a6fc27712d1be3fb9f192446d09f9e143}{GetTurnoutDate} ()
+\item 
+\hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classcattle_feeding_manager_aae27bce98c713f0c2ee71f49d824f967}{GetHousingDate} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_afb017b43e76fa6be2dcf1ee3419bf870}{CalcTurnoutandHousingDates} (bool zeroGrazed)
+\item 
+double \hyperlink{classcattle_feeding_manager_ae281377ceb953f7a91cf34992e36dbeb}{GetCattleIntake} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_ade877ad01c1b7137db6b1bbfaf26ac5f}{WriteGroupOutput} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_aa029e2a40c389801ab8fb6ecb4078c17}{InitialiseGroupOutput} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_a67a9e9ba669dc913bd9f209a377c39c1}{GetRoughageRequired} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$aList)
+\item 
+double \hyperlink{classcattle_feeding_manager_a8d59a8ddd47dfd6a2870b6441d0d5b2c}{GetDairyHerbageRequired} (bool zeroGrazed)
+\item 
+double \hyperlink{classcattle_feeding_manager_aa1f06485a79e16288f2c99bb85f078b0}{GetFollowerHerbageRequired} (bool zeroGrazed)
+\item 
+double \hyperlink{classcattle_feeding_manager_aeca7402e3d5aa584a76ea3e89cc53cad}{GetBeefHerbageRequired} (bool zeroGrazed)
+\item 
+int \hyperlink{classcattle_feeding_manager_a625686a337bc7f33fcc6e71cc426da61}{GetNumFeedingGroups} ()
+\item 
+double \hyperlink{classcattle_feeding_manager_a695168c165996079ecd9f0735bb6de1e}{GetGrassSilageRequired} ()
+\item 
+double \hyperlink{classcattle_feeding_manager_a7bd08ef0fe270e8301f5c84cb5564ba3}{GetSilageRequired} ()
+\item 
+double \hyperlink{classcattle_feeding_manager_a27d81fb8607d248d56e5fff6dd39b4c0}{GetPotentialMilkYield} (int durationOfLactation)
+\item 
+double \hyperlink{classcattle_feeding_manager_aff0a92836f05091db4b82ef3ddb6fbb5}{GetEnergyRequirement} ()
+\item 
+void \hyperlink{classcattle_feeding_manager_afe78e7b55dc96e2301072429293e97b7}{AutoFeed} (int conceptionTime, int lengthOfLactation)
+\item 
+void \hyperlink{classcattle_feeding_manager_a738461cf54320bcc6d6522c8e5c85494}{GetNumber} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcattle_feeding_manager_ae91c55982c67f8bc983c545c2a624ce7}{
+\index{cattleFeedingManager@{cattleFeedingManager}!cattleFeedingManager@{cattleFeedingManager}}
+\index{cattleFeedingManager@{cattleFeedingManager}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{cattleFeedingManager}]{\setlength{\rightskip}{0pt plus 5cm}cattleFeedingManager::cattleFeedingManager ()}}
+\label{classcattle_feeding_manager_ae91c55982c67f8bc983c545c2a624ce7}
+\hypertarget{classcattle_feeding_manager_aa1efdcaac1a2b1a6f5247287a8d3232d}{
+\index{cattleFeedingManager@{cattleFeedingManager}!cattleFeedingManager@{cattleFeedingManager}}
+\index{cattleFeedingManager@{cattleFeedingManager}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{cattleFeedingManager}]{\setlength{\rightskip}{0pt plus 5cm}cattleFeedingManager::cattleFeedingManager (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcattle_feeding_manager_aa1efdcaac1a2b1a6f5247287a8d3232d}
+\hypertarget{classcattle_feeding_manager_a25bfea6e392a7097acfaafbdda189ff2}{
+\index{cattleFeedingManager@{cattleFeedingManager}!$\sim$cattleFeedingManager@{$\sim$cattleFeedingManager}}
+\index{$\sim$cattleFeedingManager@{$\sim$cattleFeedingManager}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{$\sim$cattleFeedingManager}]{\setlength{\rightskip}{0pt plus 5cm}cattleFeedingManager::$\sim$cattleFeedingManager ()}}
+\label{classcattle_feeding_manager_a25bfea6e392a7097acfaafbdda189ff2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcattle_feeding_manager_ae70db6fbe1e89dbfd363f475f1536bb0}{
+\index{cattleFeedingManager@{cattleFeedingManager}!AllocateFieldsForGrazing@{AllocateFieldsForGrazing}}
+\index{AllocateFieldsForGrazing@{AllocateFieldsForGrazing}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{AllocateFieldsForGrazing}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::AllocateFieldsForGrazing ({\bf linkList}$<$ {\bf field} $>$ $\ast$ {\em fields\_\-avail\_\-for\_\-grazing}, \/  int {\em numOthers})}}
+\label{classcattle_feeding_manager_ae70db6fbe1e89dbfd363f475f1536bb0}
+\hypertarget{classcattle_feeding_manager_afe78e7b55dc96e2301072429293e97b7}{
+\index{cattleFeedingManager@{cattleFeedingManager}!AutoFeed@{AutoFeed}}
+\index{AutoFeed@{AutoFeed}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{AutoFeed}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::AutoFeed (int {\em conceptionTime}, \/  int {\em lengthOfLactation})}}
+\label{classcattle_feeding_manager_afe78e7b55dc96e2301072429293e97b7}
+\hypertarget{classcattle_feeding_manager_afb017b43e76fa6be2dcf1ee3419bf870}{
+\index{cattleFeedingManager@{cattleFeedingManager}!CalcTurnoutandHousingDates@{CalcTurnoutandHousingDates}}
+\index{CalcTurnoutandHousingDates@{CalcTurnoutandHousingDates}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{CalcTurnoutandHousingDates}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::CalcTurnoutandHousingDates (bool {\em zeroGrazed})}}
+\label{classcattle_feeding_manager_afb017b43e76fa6be2dcf1ee3419bf870}
+\hypertarget{classcattle_feeding_manager_a5d75b196c96519719f5580eadea8209e}{
+\index{cattleFeedingManager@{cattleFeedingManager}!CheckDiets@{CheckDiets}}
+\index{CheckDiets@{CheckDiets}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{CheckDiets}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::CheckDiets (bool {\em startup})}}
+\label{classcattle_feeding_manager_a5d75b196c96519719f5580eadea8209e}
+\hypertarget{classcattle_feeding_manager_a7981a5c91fd07f0286afa2f6cbcd7101}{
+\index{cattleFeedingManager@{cattleFeedingManager}!ClearGroups@{ClearGroups}}
+\index{ClearGroups@{ClearGroups}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{ClearGroups}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::ClearGroups ()}}
+\label{classcattle_feeding_manager_a7981a5c91fd07f0286afa2f6cbcd7101}
+\hypertarget{classcattle_feeding_manager_a655795278b3ca1e7511f6c40c29e2e0c}{
+\index{cattleFeedingManager@{cattleFeedingManager}!daily\_\-update@{daily\_\-update}}
+\index{daily\_\-update@{daily\_\-update}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{daily\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::daily\_\-update (int {\em status})}}
+\label{classcattle_feeding_manager_a655795278b3ca1e7511f6c40c29e2e0c}
+\hypertarget{classcattle_feeding_manager_a07d92795c4670674abbaa0be7b07814d}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetautoFeed@{GetautoFeed}}
+\index{GetautoFeed@{GetautoFeed}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetautoFeed}]{\setlength{\rightskip}{0pt plus 5cm}bool cattleFeedingManager::GetautoFeed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a07d92795c4670674abbaa0be7b07814d}
+\hypertarget{classcattle_feeding_manager_aeca7402e3d5aa584a76ea3e89cc53cad}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetBeefHerbageRequired@{GetBeefHerbageRequired}}
+\index{GetBeefHerbageRequired@{GetBeefHerbageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetBeefHerbageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetBeefHerbageRequired (bool {\em zeroGrazed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_aeca7402e3d5aa584a76ea3e89cc53cad}
+\hypertarget{classcattle_feeding_manager_aee8f0f316a53c42ff846eab491f016d6}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetbeefPresent@{GetbeefPresent}}
+\index{GetbeefPresent@{GetbeefPresent}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetbeefPresent}]{\setlength{\rightskip}{0pt plus 5cm}bool cattleFeedingManager::GetbeefPresent ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_aee8f0f316a53c42ff846eab491f016d6}
+\hypertarget{classcattle_feeding_manager_ae281377ceb953f7a91cf34992e36dbeb}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetCattleIntake@{GetCattleIntake}}
+\index{GetCattleIntake@{GetCattleIntake}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetCattleIntake}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetCattleIntake ()}}
+\label{classcattle_feeding_manager_ae281377ceb953f7a91cf34992e36dbeb}
+\hypertarget{classcattle_feeding_manager_a8d59a8ddd47dfd6a2870b6441d0d5b2c}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetDairyHerbageRequired@{GetDairyHerbageRequired}}
+\index{GetDairyHerbageRequired@{GetDairyHerbageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetDairyHerbageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetDairyHerbageRequired (bool {\em zeroGrazed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a8d59a8ddd47dfd6a2870b6441d0d5b2c}
+\hypertarget{classcattle_feeding_manager_a58813fa005a5df26504c78c94c58ab0b}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetdairyPresent@{GetdairyPresent}}
+\index{GetdairyPresent@{GetdairyPresent}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetdairyPresent}]{\setlength{\rightskip}{0pt plus 5cm}bool cattleFeedingManager::GetdairyPresent ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a58813fa005a5df26504c78c94c58ab0b}
+\hypertarget{classcattle_feeding_manager_aff0a92836f05091db4b82ef3ddb6fbb5}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetEnergyRequirement@{GetEnergyRequirement}}
+\index{GetEnergyRequirement@{GetEnergyRequirement}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetEnergyRequirement}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetEnergyRequirement ()}}
+\label{classcattle_feeding_manager_aff0a92836f05091db4b82ef3ddb6fbb5}
+\hypertarget{classcattle_feeding_manager_aa1f06485a79e16288f2c99bb85f078b0}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetFollowerHerbageRequired@{GetFollowerHerbageRequired}}
+\index{GetFollowerHerbageRequired@{GetFollowerHerbageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetFollowerHerbageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetFollowerHerbageRequired (bool {\em zeroGrazed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_aa1f06485a79e16288f2c99bb85f078b0}
+\hypertarget{classcattle_feeding_manager_a695168c165996079ecd9f0735bb6de1e}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetGrassSilageRequired@{GetGrassSilageRequired}}
+\index{GetGrassSilageRequired@{GetGrassSilageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetGrassSilageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetGrassSilageRequired ()}}
+\label{classcattle_feeding_manager_a695168c165996079ecd9f0735bb6de1e}
+\hypertarget{classcattle_feeding_manager_ade13c39fd50aca07ec357f1a3dbaff2f}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetGroupMember@{GetGroupMember}}
+\index{GetGroupMember@{GetGroupMember}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetGroupMember}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattleFeedingGroup}$\ast$ cattleFeedingManager::GetGroupMember (int {\em elementNum})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_ade13c39fd50aca07ec357f1a3dbaff2f}
+\hypertarget{classcattle_feeding_manager_a4d0a1389bc7cc6fa51824a521e2f83fe}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetHerbageRequired@{GetHerbageRequired}}
+\index{GetHerbageRequired@{GetHerbageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetHerbageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetHerbageRequired (int {\em start}, \/  int {\em end}, \/  bool {\em zeroGrazed})}}
+\label{classcattle_feeding_manager_a4d0a1389bc7cc6fa51824a521e2f83fe}
+\hypertarget{classcattle_feeding_manager_a2ba749a4e41bab1a7fac88fdc7783449}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetHerbageRequired@{GetHerbageRequired}}
+\index{GetHerbageRequired@{GetHerbageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetHerbageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetHerbageRequired (bool {\em zeroGrazed} = {\ttfamily false})}}
+\label{classcattle_feeding_manager_a2ba749a4e41bab1a7fac88fdc7783449}
+\hypertarget{classcattle_feeding_manager_ab32e71fec849f4bb6598b18dcf24bcd4}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetHerd@{GetHerd}}
+\index{GetHerd@{GetHerd}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetHerd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dairyStock} $\ast$ cattleFeedingManager::GetHerd (int {\em whichHerd})}}
+\label{classcattle_feeding_manager_ab32e71fec849f4bb6598b18dcf24bcd4}
+\hypertarget{classcattle_feeding_manager_aae27bce98c713f0c2ee71f49d824f967}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetHousingDate@{GetHousingDate}}
+\index{GetHousingDate@{GetHousingDate}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetHousingDate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bsTime}$\ast$ cattleFeedingManager::GetHousingDate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_aae27bce98c713f0c2ee71f49d824f967}
+\hypertarget{classcattle_feeding_manager_a738461cf54320bcc6d6522c8e5c85494}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetNumber}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::GetNumber ()}}
+\label{classcattle_feeding_manager_a738461cf54320bcc6d6522c8e5c85494}
+\hypertarget{classcattle_feeding_manager_a625686a337bc7f33fcc6e71cc426da61}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetNumFeedingGroups@{GetNumFeedingGroups}}
+\index{GetNumFeedingGroups@{GetNumFeedingGroups}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetNumFeedingGroups}]{\setlength{\rightskip}{0pt plus 5cm}int cattleFeedingManager::GetNumFeedingGroups ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a625686a337bc7f33fcc6e71cc426da61}
+\hypertarget{classcattle_feeding_manager_a27d81fb8607d248d56e5fff6dd39b4c0}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetPotentialMilkYield@{GetPotentialMilkYield}}
+\index{GetPotentialMilkYield@{GetPotentialMilkYield}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetPotentialMilkYield}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetPotentialMilkYield (int {\em durationOfLactation})}}
+\label{classcattle_feeding_manager_a27d81fb8607d248d56e5fff6dd39b4c0}
+\hypertarget{classcattle_feeding_manager_a67a9e9ba669dc913bd9f209a377c39c1}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetRoughageRequired@{GetRoughageRequired}}
+\index{GetRoughageRequired@{GetRoughageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetRoughageRequired}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::GetRoughageRequired ({\bf linkList}$<$ {\bf product} $>$ $\ast$ {\em aList})}}
+\label{classcattle_feeding_manager_a67a9e9ba669dc913bd9f209a377c39c1}
+\hypertarget{classcattle_feeding_manager_a7bd08ef0fe270e8301f5c84cb5564ba3}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetSilageRequired@{GetSilageRequired}}
+\index{GetSilageRequired@{GetSilageRequired}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetSilageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double cattleFeedingManager::GetSilageRequired ()}}
+\label{classcattle_feeding_manager_a7bd08ef0fe270e8301f5c84cb5564ba3}
+\hypertarget{classcattle_feeding_manager_a6fc27712d1be3fb9f192446d09f9e143}{
+\index{cattleFeedingManager@{cattleFeedingManager}!GetTurnoutDate@{GetTurnoutDate}}
+\index{GetTurnoutDate@{GetTurnoutDate}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{GetTurnoutDate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bsTime}$\ast$ cattleFeedingManager::GetTurnoutDate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a6fc27712d1be3fb9f192446d09f9e143}
+\hypertarget{classcattle_feeding_manager_aa029e2a40c389801ab8fb6ecb4078c17}{
+\index{cattleFeedingManager@{cattleFeedingManager}!InitialiseGroupOutput@{InitialiseGroupOutput}}
+\index{InitialiseGroupOutput@{InitialiseGroupOutput}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{InitialiseGroupOutput}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::InitialiseGroupOutput ()}}
+\label{classcattle_feeding_manager_aa029e2a40c389801ab8fb6ecb4078c17}
+\hypertarget{classcattle_feeding_manager_aab4f3ceb55336198695404d5a32018ba}{
+\index{cattleFeedingManager@{cattleFeedingManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::Initialize ({\bf livestock} $\ast$ {\em theLivestockptr})}}
+\label{classcattle_feeding_manager_aab4f3ceb55336198695404d5a32018ba}
+\hypertarget{classcattle_feeding_manager_aa1204eac6b3850b06e7b5b1a0f54cacc}{
+\index{cattleFeedingManager@{cattleFeedingManager}!ReadFeedingGroupParameters@{ReadFeedingGroupParameters}}
+\index{ReadFeedingGroupParameters@{ReadFeedingGroupParameters}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{ReadFeedingGroupParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::ReadFeedingGroupParameters (int {\em start}, \/  int {\em stop})}}
+\label{classcattle_feeding_manager_aa1204eac6b3850b06e7b5b1a0f54cacc}
+\hypertarget{classcattle_feeding_manager_a2e4bb44d555d13f9ebb0b960517de172}{
+\index{cattleFeedingManager@{cattleFeedingManager}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::ReceivePlan ()}}
+\label{classcattle_feeding_manager_a2e4bb44d555d13f9ebb0b960517de172}
+\hypertarget{classcattle_feeding_manager_a14e418c33839dc6e08048cff98197cd5}{
+\index{cattleFeedingManager@{cattleFeedingManager}!SetbeefPresent@{SetbeefPresent}}
+\index{SetbeefPresent@{SetbeefPresent}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{SetbeefPresent}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::SetbeefPresent (bool {\em isPresent})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a14e418c33839dc6e08048cff98197cd5}
+\hypertarget{classcattle_feeding_manager_a777a9ea05ff6bf97d301ebaea5661dc0}{
+\index{cattleFeedingManager@{cattleFeedingManager}!SetdairyPresent@{SetdairyPresent}}
+\index{SetdairyPresent@{SetdairyPresent}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{SetdairyPresent}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::SetdairyPresent (bool {\em isPresent})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a777a9ea05ff6bf97d301ebaea5661dc0}
+\hypertarget{classcattle_feeding_manager_a45e8328242ab6930b4b3c1fd08fb16af}{
+\index{cattleFeedingManager@{cattleFeedingManager}!SettargetMilkYieldFactor@{SettargetMilkYieldFactor}}
+\index{SettargetMilkYieldFactor@{SettargetMilkYieldFactor}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{SettargetMilkYieldFactor}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::SettargetMilkYieldFactor (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_feeding_manager_a45e8328242ab6930b4b3c1fd08fb16af}
+\hypertarget{classcattle_feeding_manager_aa1a64042c6fec08dd81b692c94a00349}{
+\index{cattleFeedingManager@{cattleFeedingManager}!SortAnimals@{SortAnimals}}
+\index{SortAnimals@{SortAnimals}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{SortAnimals}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::SortAnimals (bool {\em noCull})}}
+\label{classcattle_feeding_manager_aa1a64042c6fec08dd81b692c94a00349}
+\hypertarget{classcattle_feeding_manager_a02795723bb8cb2baab643f85962f2343}{
+\index{cattleFeedingManager@{cattleFeedingManager}!weanCalves@{weanCalves}}
+\index{weanCalves@{weanCalves}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{weanCalves}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::weanCalves (int {\em herdNo}, \/  double {\em daysSinceBirth})}}
+\label{classcattle_feeding_manager_a02795723bb8cb2baab643f85962f2343}
+\hypertarget{classcattle_feeding_manager_ade877ad01c1b7137db6b1bbfaf26ac5f}{
+\index{cattleFeedingManager@{cattleFeedingManager}!WriteGroupOutput@{WriteGroupOutput}}
+\index{WriteGroupOutput@{WriteGroupOutput}!cattleFeedingManager@{cattleFeedingManager}}
+\subsubsection[{WriteGroupOutput}]{\setlength{\rightskip}{0pt plus 5cm}void cattleFeedingManager::WriteGroupOutput ()}}
+\label{classcattle_feeding_manager_ade877ad01c1b7137db6b1bbfaf26ac5f}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/manager/\hyperlink{cattle_feeding_manager_8h}{cattleFeedingManager.h}\item 
+C:/main/trunk/src/manager/\hyperlink{cattle_feeding_manager_8cpp}{cattleFeedingManager.cpp}\end{DoxyCompactItemize}

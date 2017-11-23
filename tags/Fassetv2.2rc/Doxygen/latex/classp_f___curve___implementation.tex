@@ -1,0 +1,188 @@
+\hypertarget{classp_f___curve___implementation}{
+\section{pF\_\-Curve\_\-Implementation Class Reference}
+\label{classp_f___curve___implementation}\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}}
+}
+
+
+{\ttfamily \#include $<$pFCurveImplementation.h$>$}Inheritance diagram for pF\_\-Curve\_\-Implementation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classp_f___curve___implementation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classp_f___curve___implementation_a86be0b163ac80b4ecb0a2e7486bfa7d9}{pF\_\-Curve\_\-Implementation} (int Intpol=0)
+\item 
+\hyperlink{classp_f___curve___implementation_a5e0578b3de98bb56eea5b40a24961659}{pF\_\-Curve\_\-Implementation} (char $\ast$Pname, int Intpol=0)
+\item 
+\hyperlink{classp_f___curve___implementation_a7d1368d2fa1f8b27237c43830ec03c56}{pF\_\-Curve\_\-Implementation} (const \hyperlink{classp_f___curve___implementation}{pF\_\-Curve\_\-Implementation} \&pFSource)
+\item 
+\hyperlink{classp_f___curve___implementation_a1741e2601605b0fa1a7f578d4df25528}{$\sim$pF\_\-Curve\_\-Implementation} ()
+\item 
+void \hyperlink{classp_f___curve___implementation_ada7b4e4d08e6af2dc5df656853506104}{MakeTables} ()
+\item 
+void \hyperlink{classp_f___curve___implementation_a7c68c1d6ef72351fb8b24115aa89c057}{SetIntpol} (int Intpol)
+\item 
+void \hyperlink{classp_f___curve___implementation_a40f6e22b2fc11a97d03c8cd78a1ece91}{AddWaterItem} (\hyperlink{structp_f___water_data}{pF\_\-WaterData} data)
+\item 
+void \hyperlink{classp_f___curve___implementation_a6a802dc0367c94d8ff8bb800996ad77a}{AddWaterData} (double RelativeWater, double pFValue)
+\item 
+void \hyperlink{classp_f___curve___implementation_a9a54fe612db1222fae231f08c154b065}{AddConductionItem} (\hyperlink{structp_f___conduction_data}{pF\_\-ConductionData} data)
+\item 
+void \hyperlink{classp_f___curve___implementation_a690f9e12e86f868727a05eccaedf770b}{AddConductionData} (double pFValue, double logCond, double fluxPoten)
+\item 
+void \hyperlink{classp_f___curve___implementation_a7513fc9233b0844f592e904e1b17cb81}{MakeHydraulicConductivity} (double FieldConductivity)
+\item 
+double \hyperlink{classp_f___curve___implementation_aa242b6233b8d7c729fb09134d13577c3}{GetpF} (double RelativeWater)
+\item 
+double \hyperlink{classp_f___curve___implementation_a813897da0ebdbb1bda26ce032f664a9e}{GetPressurePotential} (double RelativeWater)
+\item 
+double \hyperlink{classp_f___curve___implementation_af27422ac8aa7464a5895cab20d44642b}{CalcRelativeWater} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve___implementation_aec0be188214cdef70e5b56c1a4af4889}{GetRelativeWater} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve___implementation_abefa0a2ca31acc282ec9f0ec0d478fa0}{GetConductivity} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve___implementation_a4bbf84d9bb853260ab867467e6f9b739}{GetFluxPotential} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve___implementation_a25faa888ce16f43ff602c46721f8487d}{GetPorosity} ()
+\item 
+double \hyperlink{classp_f___curve___implementation_a5728a4c645edd079e83517c862f367b3}{GetNumberOfPFCurves} ()
+\item 
+void \hyperlink{classp_f___curve___implementation_a574f0de0c3a61c10ad50c2818b824840}{AddOnePFCurve} ()
+\item 
+void \hyperlink{classp_f___curve___implementation_a90613f53c0a26185ecceccaff4c56668}{RemoveOnePFCurve} ()
+\item 
+void \hyperlink{classp_f___curve___implementation_a735d822ebddc7ff3ef79549047882881}{AddExternalConductionData} (double pFValue, double logCond)
+\item 
+void \hyperlink{classp_f___curve___implementation_a86f7e116cbf225b8094ffc0738684bc4}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, int index, double dryBulkDensity, double clayContent, double siltContent, double carbon, bool TopSoil)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classp_f___curve___implementation_a86be0b163ac80b4ecb0a2e7486bfa7d9}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}}
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{pF\_\-Curve\_\-Implementation}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve\_\-Implementation::pF\_\-Curve\_\-Implementation (int {\em Intpol} = {\ttfamily 0})}}
+\label{classp_f___curve___implementation_a86be0b163ac80b4ecb0a2e7486bfa7d9}
+\hypertarget{classp_f___curve___implementation_a5e0578b3de98bb56eea5b40a24961659}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}}
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{pF\_\-Curve\_\-Implementation}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve\_\-Implementation::pF\_\-Curve\_\-Implementation (char $\ast$ {\em Pname}, \/  int {\em Intpol} = {\ttfamily 0})}}
+\label{classp_f___curve___implementation_a5e0578b3de98bb56eea5b40a24961659}
+\hypertarget{classp_f___curve___implementation_a7d1368d2fa1f8b27237c43830ec03c56}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}}
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{pF\_\-Curve\_\-Implementation}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve\_\-Implementation::pF\_\-Curve\_\-Implementation (const {\bf pF\_\-Curve\_\-Implementation} \& {\em pFSource})}}
+\label{classp_f___curve___implementation_a7d1368d2fa1f8b27237c43830ec03c56}
+\hypertarget{classp_f___curve___implementation_a1741e2601605b0fa1a7f578d4df25528}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!$\sim$pF\_\-Curve\_\-Implementation@{$\sim$pF\_\-Curve\_\-Implementation}}
+\index{$\sim$pF\_\-Curve\_\-Implementation@{$\sim$pF\_\-Curve\_\-Implementation}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{$\sim$pF\_\-Curve\_\-Implementation}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve\_\-Implementation::$\sim$pF\_\-Curve\_\-Implementation ()}}
+\label{classp_f___curve___implementation_a1741e2601605b0fa1a7f578d4df25528}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classp_f___curve___implementation_a690f9e12e86f868727a05eccaedf770b}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!AddConductionData@{AddConductionData}}
+\index{AddConductionData@{AddConductionData}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{AddConductionData}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::AddConductionData (double {\em pFValue}, \/  double {\em logCond}, \/  double {\em fluxPoten})}}
+\label{classp_f___curve___implementation_a690f9e12e86f868727a05eccaedf770b}
+\hypertarget{classp_f___curve___implementation_a9a54fe612db1222fae231f08c154b065}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!AddConductionItem@{AddConductionItem}}
+\index{AddConductionItem@{AddConductionItem}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{AddConductionItem}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::AddConductionItem ({\bf pF\_\-ConductionData} {\em data})}}
+\label{classp_f___curve___implementation_a9a54fe612db1222fae231f08c154b065}
+\hypertarget{classp_f___curve___implementation_a735d822ebddc7ff3ef79549047882881}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!AddExternalConductionData@{AddExternalConductionData}}
+\index{AddExternalConductionData@{AddExternalConductionData}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{AddExternalConductionData}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::AddExternalConductionData (double {\em pFValue}, \/  double {\em logCond})}}
+\label{classp_f___curve___implementation_a735d822ebddc7ff3ef79549047882881}
+\hypertarget{classp_f___curve___implementation_a574f0de0c3a61c10ad50c2818b824840}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!AddOnePFCurve@{AddOnePFCurve}}
+\index{AddOnePFCurve@{AddOnePFCurve}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{AddOnePFCurve}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::AddOnePFCurve ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve___implementation_a574f0de0c3a61c10ad50c2818b824840}
+\hypertarget{classp_f___curve___implementation_a6a802dc0367c94d8ff8bb800996ad77a}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!AddWaterData@{AddWaterData}}
+\index{AddWaterData@{AddWaterData}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{AddWaterData}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::AddWaterData (double {\em RelativeWater}, \/  double {\em pFValue})}}
+\label{classp_f___curve___implementation_a6a802dc0367c94d8ff8bb800996ad77a}
+\hypertarget{classp_f___curve___implementation_a40f6e22b2fc11a97d03c8cd78a1ece91}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!AddWaterItem@{AddWaterItem}}
+\index{AddWaterItem@{AddWaterItem}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{AddWaterItem}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::AddWaterItem ({\bf pF\_\-WaterData} {\em data})}}
+\label{classp_f___curve___implementation_a40f6e22b2fc11a97d03c8cd78a1ece91}
+\hypertarget{classp_f___curve___implementation_af27422ac8aa7464a5895cab20d44642b}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!CalcRelativeWater@{CalcRelativeWater}}
+\index{CalcRelativeWater@{CalcRelativeWater}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{CalcRelativeWater}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::CalcRelativeWater (double {\em pFValue})}}
+\label{classp_f___curve___implementation_af27422ac8aa7464a5895cab20d44642b}
+\hypertarget{classp_f___curve___implementation_abefa0a2ca31acc282ec9f0ec0d478fa0}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetConductivity@{GetConductivity}}
+\index{GetConductivity@{GetConductivity}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetConductivity}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetConductivity (double {\em pFValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve___implementation_abefa0a2ca31acc282ec9f0ec0d478fa0}
+\hypertarget{classp_f___curve___implementation_a4bbf84d9bb853260ab867467e6f9b739}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetFluxPotential@{GetFluxPotential}}
+\index{GetFluxPotential@{GetFluxPotential}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetFluxPotential}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetFluxPotential (double {\em pFValue})}}
+\label{classp_f___curve___implementation_a4bbf84d9bb853260ab867467e6f9b739}
+\hypertarget{classp_f___curve___implementation_a5728a4c645edd079e83517c862f367b3}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetNumberOfPFCurves@{GetNumberOfPFCurves}}
+\index{GetNumberOfPFCurves@{GetNumberOfPFCurves}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetNumberOfPFCurves}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetNumberOfPFCurves ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve___implementation_a5728a4c645edd079e83517c862f367b3}
+\hypertarget{classp_f___curve___implementation_aa242b6233b8d7c729fb09134d13577c3}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetpF@{GetpF}}
+\index{GetpF@{GetpF}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetpF}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetpF (double {\em RelativeWater})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve___implementation_aa242b6233b8d7c729fb09134d13577c3}
+\hypertarget{classp_f___curve___implementation_a25faa888ce16f43ff602c46721f8487d}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetPorosity@{GetPorosity}}
+\index{GetPorosity@{GetPorosity}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetPorosity}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetPorosity ()}}
+\label{classp_f___curve___implementation_a25faa888ce16f43ff602c46721f8487d}
+\hypertarget{classp_f___curve___implementation_a813897da0ebdbb1bda26ce032f664a9e}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetPressurePotential@{GetPressurePotential}}
+\index{GetPressurePotential@{GetPressurePotential}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetPressurePotential}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetPressurePotential (double {\em RelativeWater})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve___implementation_a813897da0ebdbb1bda26ce032f664a9e}
+\hypertarget{classp_f___curve___implementation_aec0be188214cdef70e5b56c1a4af4889}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!GetRelativeWater@{GetRelativeWater}}
+\index{GetRelativeWater@{GetRelativeWater}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{GetRelativeWater}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve\_\-Implementation::GetRelativeWater (double {\em pFValue})}}
+\label{classp_f___curve___implementation_aec0be188214cdef70e5b56c1a4af4889}
+\hypertarget{classp_f___curve___implementation_a7513fc9233b0844f592e904e1b17cb81}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!MakeHydraulicConductivity@{MakeHydraulicConductivity}}
+\index{MakeHydraulicConductivity@{MakeHydraulicConductivity}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{MakeHydraulicConductivity}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::MakeHydraulicConductivity (double {\em FieldConductivity})}}
+\label{classp_f___curve___implementation_a7513fc9233b0844f592e904e1b17cb81}
+\hypertarget{classp_f___curve___implementation_ada7b4e4d08e6af2dc5df656853506104}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!MakeTables@{MakeTables}}
+\index{MakeTables@{MakeTables}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{MakeTables}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::MakeTables ()}}
+\label{classp_f___curve___implementation_ada7b4e4d08e6af2dc5df656853506104}
+\hypertarget{classp_f___curve___implementation_a86f7e116cbf225b8094ffc0738684bc4}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::ReadParameters (fstream $\ast$ {\em file}, \/  int {\em index}, \/  double {\em dryBulkDensity}, \/  double {\em clayContent}, \/  double {\em siltContent}, \/  double {\em carbon}, \/  bool {\em TopSoil})}}
+\label{classp_f___curve___implementation_a86f7e116cbf225b8094ffc0738684bc4}
+\hypertarget{classp_f___curve___implementation_a90613f53c0a26185ecceccaff4c56668}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!RemoveOnePFCurve@{RemoveOnePFCurve}}
+\index{RemoveOnePFCurve@{RemoveOnePFCurve}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{RemoveOnePFCurve}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::RemoveOnePFCurve ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve___implementation_a90613f53c0a26185ecceccaff4c56668}
+\hypertarget{classp_f___curve___implementation_a7c68c1d6ef72351fb8b24115aa89c057}{
+\index{pF\_\-Curve\_\-Implementation@{pF\_\-Curve\_\-Implementation}!SetIntpol@{SetIntpol}}
+\index{SetIntpol@{SetIntpol}!pF_Curve_Implementation@{pF\_\-Curve\_\-Implementation}}
+\subsubsection[{SetIntpol}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve\_\-Implementation::SetIntpol (int {\em Intpol})}}
+\label{classp_f___curve___implementation_a7c68c1d6ef72351fb8b24115aa89c057}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{p_f_curve_implementation_8h}{pFCurveImplementation.h}\item 
+C:/main/trunk/src/soil/\hyperlink{p_f_curve_implementation_8cpp}{pFCurveImplementation.cpp}\end{DoxyCompactItemize}

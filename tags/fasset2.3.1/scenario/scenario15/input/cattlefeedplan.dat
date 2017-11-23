@@ -1,0 +1,114 @@
+startLateLactation	 168	
+firstLateLimit	 20	
+matureLateLimit	 26	
+differentiation	 .3	//used in automatic generation of feed plans
+autoFeed	true
+
+
+[Group(0)]
+Alias	HEIFERS1
+[Group(0).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.05
+propGrazed	 0
+FeedCode	465
+Housed	 24
+[Group(0).Period(0).Normal.Supplement(0)]
+FeedCode	311
+[Group(0).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(1)]
+Alias	HEIFERS2
+[Group(1).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.95
+propGrazed	0
+Housed	24.0
+[Group(1).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(1).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(2)]
+Alias	HEIFERS3
+[Group(2).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.85
+propGrazed	0
+Housed	24.0
+[Group(2).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(2).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(3)]
+Alias	DAIRY-1stEarly
+[Group(3).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.35
+propGrazed	0
+Housed	24.0
+[Group(3).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(3).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(4)]
+Alias	DAIRY-1stLate
+[Group(4).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.55
+propGrazed	0
+Housed	24.0
+[Group(4).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(4).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(5)]
+Alias	DAIRY-MatureEarly
+[Group(5).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.35
+propGrazed	0
+Housed	24.0
+[Group(5).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(5).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(6)]
+Alias	DAIRY-MatureLate
+[Group(6).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.55
+propGrazed	0
+Housed	24.0
+[Group(6).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(6).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(7)]
+Alias	Dry
+[Group(7).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.55
+propGrazed	0
+Housed	24.0
+[Group(7).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(7).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+
+[end]

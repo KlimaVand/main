@@ -1,0 +1,121 @@
+[SoilParameters]              
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        100
+ConductivityFC  -5.3                 // Measured (log10(m/s)
+DryBulkDensity   1.11                // Measured    
+ClayContent      0.255               // Measured
+SiltContent      0.495               // Measured
+
+CarbonPct        4.33                // Measured
+CNRatio	11                           // Assumed !
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.049707917
+IOM	0.405174
+IOM.N	0.037624131
+
+MualemVanGenucten     1
+
+[SoilLayer(2)]
+Thickness        150
+ConductivityFC  -5.3                 // Measured
+DryBulkDensity   1.11                // Assumed as above  
+ClayContent      0.265               // Measured
+SiltContent      0.505               // Measured
+
+CarbonPct        2.00                // Guess ! Maybe to low?????
+CNRatio	11                           // Assumed !
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+MualemVanGenucten     1
+
+[SoilLayer(3)]
+Thickness        150
+ConductivityFC  -5.9                 // Measured
+DryBulkDensity   1.5                 // Measured  
+ClayContent      0.290               // Measured
+SiltContent      0.530               // Measured
+
+CarbonPct        0.70                // Guess ! Maybe to low?????
+CNRatio	11                           // Assumed !
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+MualemVanGenucten     1
+
+[SoilLayer(4)]
+Thickness        350
+ConductivityFC  -5.9                 // Measured
+DryBulkDensity   1.5                 // Assumed as above
+ClayContent      0.290               // Measured
+SiltContent      0.505               // Measured
+
+CarbonPct        0.10                // Guess ! Maybe to low?????
+CNRatio	11                           // Assumed !
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+MualemVanGenucten     1
+
+[SoilLayer(5)]
+Thickness        2000
+ConductivityFC  -5.9                 // Assumed as above
+DryBulkDensity   1.5                 // Assumed as above
+ClayContent      0.290               // Assumed as above
+SiltContent      0.505               // Assumed as above
+
+CarbonPct        0.01                // Guess ! Maybe to low?????
+CNRatio	11                           // Assumed !
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+MualemVanGenucten     1
+
+[end]

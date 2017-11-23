@@ -1,0 +1,117 @@
+\hypertarget{classcrop_beet}{
+\section{cropBeet Class Reference}
+\label{classcrop_beet}\index{cropBeet@{cropBeet}}
+}
+
+
+{\ttfamily \#include $<$cropBeet.h$>$}Inheritance diagram for cropBeet::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_beet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_beet_a31078128d157b876e757ab86a94a86c2}{cropBeet} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_beet_a86e12275e8d30db6add7c11fe2a8e8a1}{cropBeet} (const \hyperlink{classcrop_beet}{cropBeet} \&acrop)
+\item 
+virtual bool \hyperlink{classcrop_beet_a0d8bc5bc5f448342e8dd52824443ab63}{ReadyForHarvest} ()
+\item 
+virtual void \hyperlink{classcrop_beet_a9fa3fb8bd859fd42e9ca6e888ccc349c}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual void \hyperlink{classcrop_beet_a6082dfaca5fc7cae98ec3fd5208d1380}{TransferDryMatterToStorage} (double $\ast$dDryMatt)
+\item 
+virtual void \hyperlink{classcrop_beet_af71b9c0b8eba3bf313c7d5b9ce485533}{ReadParameters} (char $\ast$fileName)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classcrop_beet_a17329d19a1bedcce1b23b661b3d1d82a}{CalcSenescenseSpeed} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_beet_afb7dd14e41f2e9f9a74db2d474f94808}{TempSumStorage1}
+\item 
+double \hyperlink{classcrop_beet_ae4bed6a17efc19a31cca20121d0b5f44}{TempSumStorage2}
+\item 
+double \hyperlink{classcrop_beet_abfa5200bf40932d06448e7a6a678de83}{MinAllocToStorage}
+\item 
+double \hyperlink{classcrop_beet_abd20ec5c02e4df61d3c93f1074b15aa6}{MaxAllocToStorage}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_beet_a31078128d157b876e757ab86a94a86c2}{
+\index{cropBeet@{cropBeet}!cropBeet@{cropBeet}}
+\index{cropBeet@{cropBeet}!cropBeet@{cropBeet}}
+\subsubsection[{cropBeet}]{\setlength{\rightskip}{0pt plus 5cm}cropBeet::cropBeet (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_beet_a31078128d157b876e757ab86a94a86c2}
+\hypertarget{classcrop_beet_a86e12275e8d30db6add7c11fe2a8e8a1}{
+\index{cropBeet@{cropBeet}!cropBeet@{cropBeet}}
+\index{cropBeet@{cropBeet}!cropBeet@{cropBeet}}
+\subsubsection[{cropBeet}]{\setlength{\rightskip}{0pt plus 5cm}cropBeet::cropBeet (const {\bf cropBeet} \& {\em acrop})}}
+\label{classcrop_beet_a86e12275e8d30db6add7c11fe2a8e8a1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_beet_a9fa3fb8bd859fd42e9ca6e888ccc349c}{
+\index{cropBeet@{cropBeet}!Add@{Add}}
+\index{Add@{Add}!cropBeet@{cropBeet}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cropBeet::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_beet_a9fa3fb8bd859fd42e9ca6e888ccc349c}
+\hypertarget{classcrop_beet_a17329d19a1bedcce1b23b661b3d1d82a}{
+\index{cropBeet@{cropBeet}!CalcSenescenseSpeed@{CalcSenescenseSpeed}}
+\index{CalcSenescenseSpeed@{CalcSenescenseSpeed}!cropBeet@{cropBeet}}
+\subsubsection[{CalcSenescenseSpeed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cropBeet::CalcSenescenseSpeed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcrop_beet_a17329d19a1bedcce1b23b661b3d1d82a}
+\hypertarget{classcrop_beet_af71b9c0b8eba3bf313c7d5b9ce485533}{
+\index{cropBeet@{cropBeet}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropBeet@{cropBeet}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropBeet::ReadParameters (char $\ast$ {\em fileName})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_beet_af71b9c0b8eba3bf313c7d5b9ce485533}
+\hypertarget{classcrop_beet_a0d8bc5bc5f448342e8dd52824443ab63}{
+\index{cropBeet@{cropBeet}!ReadyForHarvest@{ReadyForHarvest}}
+\index{ReadyForHarvest@{ReadyForHarvest}!cropBeet@{cropBeet}}
+\subsubsection[{ReadyForHarvest}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cropBeet::ReadyForHarvest ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_beet_a0d8bc5bc5f448342e8dd52824443ab63}
+
+
+Reimplemented from \hyperlink{classcrop_a8f2d5d0807fb0a81e50ea09e6df594ac}{crop}.\hypertarget{classcrop_beet_a6082dfaca5fc7cae98ec3fd5208d1380}{
+\index{cropBeet@{cropBeet}!TransferDryMatterToStorage@{TransferDryMatterToStorage}}
+\index{TransferDryMatterToStorage@{TransferDryMatterToStorage}!cropBeet@{cropBeet}}
+\subsubsection[{TransferDryMatterToStorage}]{\setlength{\rightskip}{0pt plus 5cm}void cropBeet::TransferDryMatterToStorage (double $\ast$ {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_beet_a6082dfaca5fc7cae98ec3fd5208d1380}
+BPE and MEL 2007: New limitation to the transfer of DM to \hyperlink{classstorage}{storage} according to the concept of Justes et al. 1994. Annals of Botany 74:397-\/407. 
+
+Reimplemented from \hyperlink{classcrop_aa93103e69836afc4fb23c1a29b15584f}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_beet_abd20ec5c02e4df61d3c93f1074b15aa6}{
+\index{cropBeet@{cropBeet}!MaxAllocToStorage@{MaxAllocToStorage}}
+\index{MaxAllocToStorage@{MaxAllocToStorage}!cropBeet@{cropBeet}}
+\subsubsection[{MaxAllocToStorage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropBeet::MaxAllocToStorage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_beet_abd20ec5c02e4df61d3c93f1074b15aa6}
+\hypertarget{classcrop_beet_abfa5200bf40932d06448e7a6a678de83}{
+\index{cropBeet@{cropBeet}!MinAllocToStorage@{MinAllocToStorage}}
+\index{MinAllocToStorage@{MinAllocToStorage}!cropBeet@{cropBeet}}
+\subsubsection[{MinAllocToStorage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropBeet::MinAllocToStorage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_beet_abfa5200bf40932d06448e7a6a678de83}
+\hypertarget{classcrop_beet_afb7dd14e41f2e9f9a74db2d474f94808}{
+\index{cropBeet@{cropBeet}!TempSumStorage1@{TempSumStorage1}}
+\index{TempSumStorage1@{TempSumStorage1}!cropBeet@{cropBeet}}
+\subsubsection[{TempSumStorage1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropBeet::TempSumStorage1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_beet_afb7dd14e41f2e9f9a74db2d474f94808}
+\hypertarget{classcrop_beet_ae4bed6a17efc19a31cca20121d0b5f44}{
+\index{cropBeet@{cropBeet}!TempSumStorage2@{TempSumStorage2}}
+\index{TempSumStorage2@{TempSumStorage2}!cropBeet@{cropBeet}}
+\subsubsection[{TempSumStorage2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropBeet::TempSumStorage2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_beet_ae4bed6a17efc19a31cca20121d0b5f44}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_beet_8h}{cropBeet.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_beet_8cpp}{cropBeet.cpp}\end{DoxyCompactItemize}

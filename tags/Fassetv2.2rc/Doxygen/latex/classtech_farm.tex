@@ -1,0 +1,262 @@
+\hypertarget{classtech_farm}{
+\section{techFarm Class Reference}
+\label{classtech_farm}\index{techFarm@{techFarm}}
+}
+
+
+{\ttfamily \#include $<$techFarm.h$>$}Inheritance diagram for techFarm::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classtech_farm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtech_farm_ae7e2f213d28d34dd5c79a8af8f17bb7c}{techFarm} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classtech_farm_a9deb240c762e0410ccdf1027670bc093}{techFarm} (const \hyperlink{classtech_farm}{techFarm} \&atechFarm)
+\item 
+virtual \hyperlink{classtech_farm_acb6fb1867d18de12e43b7b28fe249240}{$\sim$techFarm} ()
+\item 
+virtual void \hyperlink{classtech_farm_aa64882b3e2248295d793274f75795707}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, char $\ast$sectionName=NULL)
+\item 
+void \hyperlink{classtech_farm_a1cd9afb11ce12b93db384f6f7c6ad275}{SethoursUltimo} (int ahoursUltimo)
+\item 
+int \hyperlink{classtech_farm_ad61694fe36efc7411dbe4de32452a214}{GethoursPrimo} (void)
+\item 
+int \hyperlink{classtech_farm_aa35b82884aeaf19920b51eee73587026}{GethoursUltimo} (void)
+\item 
+double \hyperlink{classtech_farm_a6e04678c8e66f3e822a3e8b8a70f7294}{GetmaintenancePrm} (void)
+\item 
+double \hyperlink{classtech_farm_aec1e92fc836465da596ae5688a6c5609}{GetinsurancePrm} (void)
+\item 
+double \hyperlink{classtech_farm_a319874aeafaad8782ca855c681dba134}{GetdeprPercent} (void)
+\item 
+double \hyperlink{classtech_farm_a1dadfab669ff7b46fb97a3b338120784}{GetpercentNewValue} (void)
+\item 
+double \hyperlink{classtech_farm_aff350591013d647ad68bd19b10b6cd12}{GetnewValue} (void)
+\item 
+void \hyperlink{classtech_farm_a0a91f0c3a4542469ae9e3c72727636ab}{CalcDeprPercent} ()
+\item 
+void \hyperlink{classtech_farm_af44046acba4d8a743c290004a90e9af0}{UpdateAge} ()
+\item 
+void \hyperlink{classtech_farm_a7c57bf770a4d278b5584d42e9f05fab1}{UpdateHours} (int aInvestStrategi)
+\item 
+void \hyperlink{classtech_farm_a541165dae0993a19b3e1df68075e1a5b}{UpdatePercentNewValue} ()
+\item 
+\hyperlink{structtech_econ_resp}{techEconResp} \hyperlink{classtech_farm_a2c8c275684f7369e6d7388793d5a5b9c}{SendTechEconomic} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtech_farm_a0baa87da42934d1351ff609caab75d1b}{percentNewValue}
+\item 
+double \hyperlink{classtech_farm_ab6e2b2da18fe94c6b383e7debd6e24e3}{deprK}
+\item 
+double \hyperlink{classtech_farm_a8bfead4fd584c3ce436d4ca690063f19}{deprKHours}
+\item 
+double \hyperlink{classtech_farm_a47efbd2140c6cdfac72124975d020642}{deprKLifetime}
+\item 
+int \hyperlink{classtech_farm_a3f395d50454e34c3f495fdc53a8ef194}{reqWorker}
+\item 
+int \hyperlink{classtech_farm_a938e00cc70834f5115fa1fde901a8ca9}{age}
+\item 
+double \hyperlink{classtech_farm_a74f6c9c28417b9aadebe157496d55313}{deprPercent}
+\item 
+int \hyperlink{classtech_farm_a7b246e44d0bb53d7a27544dc8f90f894}{hoursPrimo}
+\item 
+int \hyperlink{classtech_farm_addd00177637ae6a4d7b2b5b17d8165eb}{hoursUltimo}
+\item 
+int \hyperlink{classtech_farm_af30e2c2e0c28c28cc16805bf4ca58d69}{lifetimeHours}
+\item 
+int \hyperlink{classtech_farm_a2030e73d2288e2318ae895a7c408beb9}{lifetimeYears}
+\item 
+double \hyperlink{classtech_farm_a0d7f79586bcb59066cc0590535b28485}{maintenancePrm}
+\item 
+double \hyperlink{classtech_farm_a9003d90c9e3d01a55480ff9f25f2bdcb}{insurancePrm}
+\item 
+double \hyperlink{classtech_farm_abd1992a08582622f44ca7ed8fd9072d0}{newValue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtech_farm_ae7e2f213d28d34dd5c79a8af8f17bb7c}{
+\index{techFarm@{techFarm}!techFarm@{techFarm}}
+\index{techFarm@{techFarm}!techFarm@{techFarm}}
+\subsubsection[{techFarm}]{\setlength{\rightskip}{0pt plus 5cm}techFarm::techFarm (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classtech_farm_ae7e2f213d28d34dd5c79a8af8f17bb7c}
+\hypertarget{classtech_farm_a9deb240c762e0410ccdf1027670bc093}{
+\index{techFarm@{techFarm}!techFarm@{techFarm}}
+\index{techFarm@{techFarm}!techFarm@{techFarm}}
+\subsubsection[{techFarm}]{\setlength{\rightskip}{0pt plus 5cm}techFarm::techFarm (const {\bf techFarm} \& {\em atechFarm})}}
+\label{classtech_farm_a9deb240c762e0410ccdf1027670bc093}
+\hypertarget{classtech_farm_acb6fb1867d18de12e43b7b28fe249240}{
+\index{techFarm@{techFarm}!$\sim$techFarm@{$\sim$techFarm}}
+\index{$\sim$techFarm@{$\sim$techFarm}!techFarm@{techFarm}}
+\subsubsection[{$\sim$techFarm}]{\setlength{\rightskip}{0pt plus 5cm}techFarm::$\sim$techFarm ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classtech_farm_acb6fb1867d18de12e43b7b28fe249240}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtech_farm_a0a91f0c3a4542469ae9e3c72727636ab}{
+\index{techFarm@{techFarm}!CalcDeprPercent@{CalcDeprPercent}}
+\index{CalcDeprPercent@{CalcDeprPercent}!techFarm@{techFarm}}
+\subsubsection[{CalcDeprPercent}]{\setlength{\rightskip}{0pt plus 5cm}void techFarm::CalcDeprPercent ()}}
+\label{classtech_farm_a0a91f0c3a4542469ae9e3c72727636ab}
+\hypertarget{classtech_farm_a319874aeafaad8782ca855c681dba134}{
+\index{techFarm@{techFarm}!GetdeprPercent@{GetdeprPercent}}
+\index{GetdeprPercent@{GetdeprPercent}!techFarm@{techFarm}}
+\subsubsection[{GetdeprPercent}]{\setlength{\rightskip}{0pt plus 5cm}double techFarm::GetdeprPercent (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_a319874aeafaad8782ca855c681dba134}
+\hypertarget{classtech_farm_ad61694fe36efc7411dbe4de32452a214}{
+\index{techFarm@{techFarm}!GethoursPrimo@{GethoursPrimo}}
+\index{GethoursPrimo@{GethoursPrimo}!techFarm@{techFarm}}
+\subsubsection[{GethoursPrimo}]{\setlength{\rightskip}{0pt plus 5cm}int techFarm::GethoursPrimo (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_ad61694fe36efc7411dbe4de32452a214}
+
+
+Reimplemented from \hyperlink{classtech_equip_aa1d824dcc6a0b20bf896a4e9a63542ae}{techEquip}.\hypertarget{classtech_farm_aa35b82884aeaf19920b51eee73587026}{
+\index{techFarm@{techFarm}!GethoursUltimo@{GethoursUltimo}}
+\index{GethoursUltimo@{GethoursUltimo}!techFarm@{techFarm}}
+\subsubsection[{GethoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}int techFarm::GethoursUltimo (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_aa35b82884aeaf19920b51eee73587026}
+
+
+Reimplemented from \hyperlink{classtech_equip_a3b755c4eb6c71bb00b3cf745cd2d3c19}{techEquip}.\hypertarget{classtech_farm_aec1e92fc836465da596ae5688a6c5609}{
+\index{techFarm@{techFarm}!GetinsurancePrm@{GetinsurancePrm}}
+\index{GetinsurancePrm@{GetinsurancePrm}!techFarm@{techFarm}}
+\subsubsection[{GetinsurancePrm}]{\setlength{\rightskip}{0pt plus 5cm}double techFarm::GetinsurancePrm (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_aec1e92fc836465da596ae5688a6c5609}
+\hypertarget{classtech_farm_a6e04678c8e66f3e822a3e8b8a70f7294}{
+\index{techFarm@{techFarm}!GetmaintenancePrm@{GetmaintenancePrm}}
+\index{GetmaintenancePrm@{GetmaintenancePrm}!techFarm@{techFarm}}
+\subsubsection[{GetmaintenancePrm}]{\setlength{\rightskip}{0pt plus 5cm}double techFarm::GetmaintenancePrm (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_a6e04678c8e66f3e822a3e8b8a70f7294}
+\hypertarget{classtech_farm_aff350591013d647ad68bd19b10b6cd12}{
+\index{techFarm@{techFarm}!GetnewValue@{GetnewValue}}
+\index{GetnewValue@{GetnewValue}!techFarm@{techFarm}}
+\subsubsection[{GetnewValue}]{\setlength{\rightskip}{0pt plus 5cm}double techFarm::GetnewValue (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_aff350591013d647ad68bd19b10b6cd12}
+\hypertarget{classtech_farm_a1dadfab669ff7b46fb97a3b338120784}{
+\index{techFarm@{techFarm}!GetpercentNewValue@{GetpercentNewValue}}
+\index{GetpercentNewValue@{GetpercentNewValue}!techFarm@{techFarm}}
+\subsubsection[{GetpercentNewValue}]{\setlength{\rightskip}{0pt plus 5cm}double techFarm::GetpercentNewValue (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_a1dadfab669ff7b46fb97a3b338120784}
+\hypertarget{classtech_farm_aa64882b3e2248295d793274f75795707}{
+\index{techFarm@{techFarm}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!techFarm@{techFarm}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void techFarm::ReadParameters (fstream $\ast$ {\em file}, \/  char $\ast$ {\em sectionName} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classtech_farm_aa64882b3e2248295d793274f75795707}
+
+
+Reimplemented from \hyperlink{classtech_equip_a7b8543a8ead2be2a6a00d80123895e2c}{techEquip}.\hypertarget{classtech_farm_a2c8c275684f7369e6d7388793d5a5b9c}{
+\index{techFarm@{techFarm}!SendTechEconomic@{SendTechEconomic}}
+\index{SendTechEconomic@{SendTechEconomic}!techFarm@{techFarm}}
+\subsubsection[{SendTechEconomic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf techEconResp} techFarm::SendTechEconomic ()}}
+\label{classtech_farm_a2c8c275684f7369e6d7388793d5a5b9c}
+\hypertarget{classtech_farm_a1cd9afb11ce12b93db384f6f7c6ad275}{
+\index{techFarm@{techFarm}!SethoursUltimo@{SethoursUltimo}}
+\index{SethoursUltimo@{SethoursUltimo}!techFarm@{techFarm}}
+\subsubsection[{SethoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}void techFarm::SethoursUltimo (int {\em ahoursUltimo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_farm_a1cd9afb11ce12b93db384f6f7c6ad275}
+\hypertarget{classtech_farm_af44046acba4d8a743c290004a90e9af0}{
+\index{techFarm@{techFarm}!UpdateAge@{UpdateAge}}
+\index{UpdateAge@{UpdateAge}!techFarm@{techFarm}}
+\subsubsection[{UpdateAge}]{\setlength{\rightskip}{0pt plus 5cm}void techFarm::UpdateAge ()}}
+\label{classtech_farm_af44046acba4d8a743c290004a90e9af0}
+\hypertarget{classtech_farm_a7c57bf770a4d278b5584d42e9f05fab1}{
+\index{techFarm@{techFarm}!UpdateHours@{UpdateHours}}
+\index{UpdateHours@{UpdateHours}!techFarm@{techFarm}}
+\subsubsection[{UpdateHours}]{\setlength{\rightskip}{0pt plus 5cm}void techFarm::UpdateHours (int {\em aInvestStrategi})}}
+\label{classtech_farm_a7c57bf770a4d278b5584d42e9f05fab1}
+\hypertarget{classtech_farm_a541165dae0993a19b3e1df68075e1a5b}{
+\index{techFarm@{techFarm}!UpdatePercentNewValue@{UpdatePercentNewValue}}
+\index{UpdatePercentNewValue@{UpdatePercentNewValue}!techFarm@{techFarm}}
+\subsubsection[{UpdatePercentNewValue}]{\setlength{\rightskip}{0pt plus 5cm}void techFarm::UpdatePercentNewValue ()}}
+\label{classtech_farm_a541165dae0993a19b3e1df68075e1a5b}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtech_farm_a938e00cc70834f5115fa1fde901a8ca9}{
+\index{techFarm@{techFarm}!age@{age}}
+\index{age@{age}!techFarm@{techFarm}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techFarm::age}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a938e00cc70834f5115fa1fde901a8ca9}
+
+
+Reimplemented from \hyperlink{classtech_equip_abcca018fbc3f7fa3f12258914e1d20f7}{techEquip}.\hypertarget{classtech_farm_ab6e2b2da18fe94c6b383e7debd6e24e3}{
+\index{techFarm@{techFarm}!deprK@{deprK}}
+\index{deprK@{deprK}!techFarm@{techFarm}}
+\subsubsection[{deprK}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::deprK}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_ab6e2b2da18fe94c6b383e7debd6e24e3}
+\hypertarget{classtech_farm_a8bfead4fd584c3ce436d4ca690063f19}{
+\index{techFarm@{techFarm}!deprKHours@{deprKHours}}
+\index{deprKHours@{deprKHours}!techFarm@{techFarm}}
+\subsubsection[{deprKHours}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::deprKHours}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a8bfead4fd584c3ce436d4ca690063f19}
+\hypertarget{classtech_farm_a47efbd2140c6cdfac72124975d020642}{
+\index{techFarm@{techFarm}!deprKLifetime@{deprKLifetime}}
+\index{deprKLifetime@{deprKLifetime}!techFarm@{techFarm}}
+\subsubsection[{deprKLifetime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::deprKLifetime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a47efbd2140c6cdfac72124975d020642}
+\hypertarget{classtech_farm_a74f6c9c28417b9aadebe157496d55313}{
+\index{techFarm@{techFarm}!deprPercent@{deprPercent}}
+\index{deprPercent@{deprPercent}!techFarm@{techFarm}}
+\subsubsection[{deprPercent}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::deprPercent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a74f6c9c28417b9aadebe157496d55313}
+\hypertarget{classtech_farm_a7b246e44d0bb53d7a27544dc8f90f894}{
+\index{techFarm@{techFarm}!hoursPrimo@{hoursPrimo}}
+\index{hoursPrimo@{hoursPrimo}!techFarm@{techFarm}}
+\subsubsection[{hoursPrimo}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techFarm::hoursPrimo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a7b246e44d0bb53d7a27544dc8f90f894}
+
+
+Reimplemented from \hyperlink{classtech_equip_a45958baa672c3b616b5384615e7b3be8}{techEquip}.\hypertarget{classtech_farm_addd00177637ae6a4d7b2b5b17d8165eb}{
+\index{techFarm@{techFarm}!hoursUltimo@{hoursUltimo}}
+\index{hoursUltimo@{hoursUltimo}!techFarm@{techFarm}}
+\subsubsection[{hoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techFarm::hoursUltimo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_addd00177637ae6a4d7b2b5b17d8165eb}
+
+
+Reimplemented from \hyperlink{classtech_equip_a33c806f6d44641789a8e919ed46e8608}{techEquip}.\hypertarget{classtech_farm_a9003d90c9e3d01a55480ff9f25f2bdcb}{
+\index{techFarm@{techFarm}!insurancePrm@{insurancePrm}}
+\index{insurancePrm@{insurancePrm}!techFarm@{techFarm}}
+\subsubsection[{insurancePrm}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::insurancePrm}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a9003d90c9e3d01a55480ff9f25f2bdcb}
+\hypertarget{classtech_farm_af30e2c2e0c28c28cc16805bf4ca58d69}{
+\index{techFarm@{techFarm}!lifetimeHours@{lifetimeHours}}
+\index{lifetimeHours@{lifetimeHours}!techFarm@{techFarm}}
+\subsubsection[{lifetimeHours}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techFarm::lifetimeHours}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_af30e2c2e0c28c28cc16805bf4ca58d69}
+\hypertarget{classtech_farm_a2030e73d2288e2318ae895a7c408beb9}{
+\index{techFarm@{techFarm}!lifetimeYears@{lifetimeYears}}
+\index{lifetimeYears@{lifetimeYears}!techFarm@{techFarm}}
+\subsubsection[{lifetimeYears}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techFarm::lifetimeYears}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a2030e73d2288e2318ae895a7c408beb9}
+\hypertarget{classtech_farm_a0d7f79586bcb59066cc0590535b28485}{
+\index{techFarm@{techFarm}!maintenancePrm@{maintenancePrm}}
+\index{maintenancePrm@{maintenancePrm}!techFarm@{techFarm}}
+\subsubsection[{maintenancePrm}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::maintenancePrm}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a0d7f79586bcb59066cc0590535b28485}
+\hypertarget{classtech_farm_abd1992a08582622f44ca7ed8fd9072d0}{
+\index{techFarm@{techFarm}!newValue@{newValue}}
+\index{newValue@{newValue}!techFarm@{techFarm}}
+\subsubsection[{newValue}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::newValue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_abd1992a08582622f44ca7ed8fd9072d0}
+\hypertarget{classtech_farm_a0baa87da42934d1351ff609caab75d1b}{
+\index{techFarm@{techFarm}!percentNewValue@{percentNewValue}}
+\index{percentNewValue@{percentNewValue}!techFarm@{techFarm}}
+\subsubsection[{percentNewValue}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techFarm::percentNewValue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a0baa87da42934d1351ff609caab75d1b}
+\hypertarget{classtech_farm_a3f395d50454e34c3f495fdc53a8ef194}{
+\index{techFarm@{techFarm}!reqWorker@{reqWorker}}
+\index{reqWorker@{reqWorker}!techFarm@{techFarm}}
+\subsubsection[{reqWorker}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techFarm::reqWorker}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_farm_a3f395d50454e34c3f495fdc53a8ef194}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{tech_farm_8h}{techFarm.h}\item 
+C:/main/trunk/src/technics/\hyperlink{tech_farm_8cpp}{techFarm.cpp}\end{DoxyCompactItemize}

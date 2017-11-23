@@ -1,0 +1,740 @@
+\hypertarget{classpatch}{
+\section{patch Class Reference}
+\label{classpatch}\index{patch@{patch}}
+}
+
+
+{\ttfamily \#include $<$patch.h$>$}Inheritance diagram for patch::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpatch}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpatch_a962e1a1e7f87bd16d323c472e5dafbf0}{patch} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em construct with arguments \item\end{DoxyCompactList}\item 
+\hyperlink{classpatch_adb9e4cd6ab9f2df28a8c57e330b55719}{patch} (const \hyperlink{classpatch}{patch} \&p)
+\begin{DoxyCompactList}\small\item\em copy constructor \item\end{DoxyCompactList}\item 
+\hyperlink{classpatch_a673a341f34953f79c30d82b27a55ba7a}{$\sim$patch} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+\hyperlink{classpatch}{patch} $\ast$ \hyperlink{classpatch_a132e795ca186b7b274a4b69e3e19e127}{clone} () const 
+\begin{DoxyCompactList}\small\item\em creates a clone of the current \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_ace800e40d39f187d3d37b7d87b972a62}{Add} (\hyperlink{classpatch}{patch} $\ast$addPatch, double fraction)
+\begin{DoxyCompactList}\small\item\em Add one \hyperlink{classpatch}{patch} to another. \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_ac47bef0c79638b0c203bbdc2ef2a0408}{HandleOp} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$FOP)
+\begin{DoxyCompactList}\small\item\em handles all major \hyperlink{classfield}{field} operations \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_ae5ed6219bcd53dc67ca0dbbf33109649}{GetArea} ()
+\begin{DoxyCompactList}\small\item\em return the area of the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_af461c06a42b72cd9a26f452a0d583458}{CloverPercentage} ()
+\begin{DoxyCompactList}\small\item\em returned percentage contribution of clover to aboveground \hyperlink{classcrop}{crop} dry \hyperlink{classmatter}{matter} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_aa6e819a227c7d5aeceda53afad1de51f}{SetArea} (double ar)
+\begin{DoxyCompactList}\small\item\em set the area of patch$\ast$/ \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a4258aa2c074432be7603578ac1397e26}{AdjustArea} (double adjust)
+\begin{DoxyCompactList}\small\item\em adjust the area of the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a16276b251ebd3f27715ea21be08dfa68}{StartBudget} ()
+\begin{DoxyCompactList}\small\item\em initialised the budgets of those elements or compounds that are being budgeted \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_a081e88d1eef85a499e8f466dbe0bf546}{EndBudget} ()
+\begin{DoxyCompactList}\small\item\em check the budgets of those elements or compounds that are being budgeted \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_a9c12288512a19b8e44eb15f532f34a4d}{NitrogenInSystem} ()
+\begin{DoxyCompactList}\small\item\em return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_ae9173a337c4a025669947a8cd64f5d2e}{NitrogenInCrops} ()
+\begin{DoxyCompactList}\small\item\em return the total amount of \hyperlink{classnitrogen}{nitrogen} in the crops \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_adcb1581cac2687cd3d610faec438d935}{NitrogenInSoil} ()
+\begin{DoxyCompactList}\small\item\em return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_a13f8cc5a183f31aefe0b6fbf313e11b9}{Getgrazable} ()
+\begin{DoxyCompactList}\small\item\em returns true if the \hyperlink{classpatch}{patch} is grazable \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a6e95e7ea2fbab3b4dac4747ad2331648}{Setgrazable} (bool isGrazable)
+\begin{DoxyCompactList}\small\item\em set whether \hyperlink{classpatch}{patch} is grazable \item\end{DoxyCompactList}\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classpatch_a068ad8fb3dcd42c165c25fef304df220}{GetsoilManure} ()
+\begin{DoxyCompactList}\small\item\em get pointer to object describing \hyperlink{classmanure}{manure} on the \hyperlink{classsoil}{soil} surface \item\end{DoxyCompactList}\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classpatch_a7efc99bd3ae91359690c12eee53a7e4b}{GetcropManure} ()
+\begin{DoxyCompactList}\small\item\em it pointed to object describing \hyperlink{classmanure}{manure} on the \hyperlink{classcrop}{crop} surfaces \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a0fdda2c18cd319101078a5de170f19cb}{Volatilise} ()
+\begin{DoxyCompactList}\small\item\em calculate the gaseous loss of compounds \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_a279fb0c6870f98e0f391bb045a20628d}{getdung} () const 
+\begin{DoxyCompactList}\small\item\em returns true if the \hyperlink{classpatch}{patch} is classed as a dung \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_aeb73d687a6349a34695f19b4613008eb}{getoverlap} () const 
+\begin{DoxyCompactList}\small\item\em it turns true if the \hyperlink{classpatch}{patch} is classed as an overlap \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+\hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classpatch_a7093fdf2689a46a666762bb73803aadf}{Getbirthday} ()
+\begin{DoxyCompactList}\small\item\em return the date on which the \hyperlink{classpatch}{patch} was formed \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a64bb8ae35378455255ca5a1b546d70d1}{setdung} (bool adung)
+\begin{DoxyCompactList}\small\item\em set whether a \hyperlink{classpatch}{patch} is a dung \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_abceaced850ecf5b133c4e74b70f12d54}{setoverlap} (bool aoverlap)
+\begin{DoxyCompactList}\small\item\em set whether a \hyperlink{classpatch}{patch} is an overlap \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classpatch_a81ef82ba67a54c62690a8b3139a2e3a8}{Getmy\_\-resource} ()
+\begin{DoxyCompactList}\small\item\em returns an object describing the \hyperlink{classanimal}{animal} feed available within the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a9c53399ac48828cacb0fa4071952d9d4}{SetPatchBirthday} (\hyperlink{classbs_time}{bsTime} aTime)
+\begin{DoxyCompactList}\small\item\em set the date of formation of the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classpatch_a2b8f90d5a3bb56be406d4225d477d8a5}{GetFeedResource} (double bite\_\-depth\_\-factor, double min\_\-stubble\_\-ht, int animalType)
+\begin{DoxyCompactList}\small\item\em calculates then returns an object describing the \hyperlink{classanimal}{animal} feed available within the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+int \hyperlink{classpatch_af7300152fc005aa7b51ff74ec3824197}{GetPatchAge} ()
+\begin{DoxyCompactList}\small\item\em returns the age of the \hyperlink{classpatch}{patch} in days \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_a9e9681c8b32bc2638268b3eb9f230772}{GetPatchStandingDMkg} ()
+\begin{DoxyCompactList}\small\item\em returns the total amount of standing dry \hyperlink{classmatter}{matter} in the \hyperlink{classpatch}{patch}, in kilograms \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_a7acb474f81652d0f068fec53e4f39820}{GetPatchStandingDMkgPerHa} ()
+\begin{DoxyCompactList}\small\item\em returns the total amount of standing dry \hyperlink{classmatter}{matter} in the \hyperlink{classpatch}{patch}, in kilograms per hectare \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_aaa76dd5410cb800bd5281d2cc13d5807}{SetName} (char $\ast$aName)
+\begin{DoxyCompactList}\small\item\em set the name of the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_aed1dc764e72357aafb106b81fec5e703}{SetPatchType} (int t)
+\begin{DoxyCompactList}\small\item\em set the \hyperlink{classpatch}{patch} type \item\end{DoxyCompactList}\item 
+int \hyperlink{classpatch_a6bafafe564eadfc87a06315e01402444}{GetPatchType} ()
+\begin{DoxyCompactList}\small\item\em return the \hyperlink{classpatch}{patch} type \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_adee8003561555e32b46f06fff7d5381b}{WriteNitrogen} (double f)
+\begin{DoxyCompactList}\small\item\em writes details of the \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classpatch}{patch} to the console. Used only in debugging. \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_a84e0930d2c8a6a1e7bf77ae86d6de1ab}{GetGrazedDM} ()
+\begin{DoxyCompactList}\small\item\em returns the amount of \hyperlink{classnitrogen}{nitrogen} fixed within the \hyperlink{classpatch}{patch} during the day (in grams per square metre) \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a264e98a8bd59a3e2268e3edb8e440103}{GiveIndicators} ()
+\item 
+double \hyperlink{classpatch_a334f1d4bec7e4b63de7f008255b10904}{GetDailyDMProduction} ()
+\item 
+double \hyperlink{classpatch_a1084593c1a741685fc7277569df31516}{GetPotentialGrowthRate} (double radiation, double temperature)
+\begin{DoxyCompactList}\small\item\em returns the dry \hyperlink{classmatter}{matter} growth rate of the \hyperlink{classpatch}{patch} the absence of nutrient or \hyperlink{classwater}{water} limitations \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_aed7ec6869d21a7bae66741051b8056e2}{Initialise} (char $\ast$soilFileName, int anIndex, double anArea)
+\item 
+double \hyperlink{classpatch_a9ba4cf30533b050cb7e87b58defd4268}{StandingWater} ()
+\item 
+void \hyperlink{classpatch_a6e23eb42dae4af96e728568fc35ac256}{UpdatePatches} ()
+\item 
+void \hyperlink{classpatch_a710f7413560c8b891d35212341731b02}{DepositManure} (\hyperlink{classmanure}{manure} $\ast$animal\_\-urine, \hyperlink{classmanure}{manure} $\ast$animal\_\-dung)
+\item 
+void \hyperlink{classpatch_a92a760b5e2e027638c445888038d82fe}{Initialise} (char $\ast$soilFileName, int aIndex)
+\item 
+void \hyperlink{classpatch_a6b0055a5b5aa214e2f9e8f5024c942aa}{SimpleGraze} ()
+\item 
+void \hyperlink{classpatch_a691aceb2b8472215986518945b3b01d2}{SetGrazed} (double bite\_\-depth\_\-factor, double DMGrazed)
+\item 
+\hyperlink{classpatch_interface_class}{patchInterfaceClass} $\ast$ \hyperlink{classpatch_a537dde06dbfd967daf158975f4de51b4}{GetthePatchInterface} ()
+\item 
+void \hyperlink{classpatch_a79adbf0a0c1fee340accf581487d8f54}{SetFingerFlow} (int afingerFlow)
+\item 
+bool \hyperlink{classpatch_add309282252f1c83d6ad6ff827bd0c23}{ReadyForHarvestOrLater} ()
+\begin{DoxyCompactList}\small\item\em returns true if the main \hyperlink{classcrop}{crop} is ready for harvesting \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_add167b75947d6b59109dbd911d8ab681}{IrrigationDemand} ()
+\begin{DoxyCompactList}\small\item\em returns whether irrigation is required \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_ade5035e5e8a4319606944c22a1e360da}{GetAvailablePatchStandingDMkg} (double height)
+\begin{DoxyCompactList}\small\item\em Get mass of dry \hyperlink{classmatter}{matter} (kg DM)of \hyperlink{classpatch}{patch} that is above a certain cutting or grazing height (m). \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a2f798a718984143550119b1f639af144}{KillAllCrops} ()
+\item 
+double \hyperlink{classpatch_aa68d48a5d0a2c8b3a222b141d0d5c276}{GetAbovegroundCropN} ()
+\item 
+double \hyperlink{classpatch_a8f26f5ceb1577598a3230d8abff14cc4}{GetMaxPatchHeight} ()
+\begin{DoxyCompactList}\small\item\em returns the maximum height of the vegetation in the \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_a545552e8ba7fe79543bac8f9a5a33343}{SetirrigationWater} (\hyperlink{classwater}{water} $\ast$irrigationWater)
+\item 
+void \hyperlink{classpatch_a28511705585ad97653e54b1eaf16875a}{AddDecomposable} (\hyperlink{classdecomposable}{decomposable} $\ast$produc)
+\item 
+void \hyperlink{classpatch_a8748ec3076874edd7d38ff2c8680e6a1}{CropSoilExchange} ()
+\item 
+void \hyperlink{classpatch_a11e6e3fe5733ec6ebd7b033f6cd69d9e}{GiveEcoIndicators} ()
+\item 
+void \hyperlink{classpatch_ac05d20ddd41d95854eacce6ddbb6fa31}{AddNutrient} (\hyperlink{classnitrogen}{nitrogen} surfNitrate, \hyperlink{classnitrogen}{nitrogen} surfAmmonium, \hyperlink{classnitrogen}{nitrogen} soilNitrate, \hyperlink{classnitrogen}{nitrogen} soilAmmonium)
+\item 
+void \hyperlink{classpatch_a3ecb47e31952d5a27c52b515c46f0928}{Sow} (char $\ast$cropID, double SeedDensDryMatt, double RelativeDensity, double NitrogenInSeed)
+\item 
+void \hyperlink{classpatch_a8e0f4140df73da5dadd9a4aca8a7a7ee}{Tillage} (\hyperlink{classsoil_treat_fields}{soilTreatFields} $\ast$TillageOp)
+\item 
+void \hyperlink{classpatch_a79dd8d0f305e1ec56041fb8c041297cf}{HarvestOperations} (\hyperlink{classharvest_fields}{harvestFields} $\ast$hrv)
+\item 
+void \hyperlink{classpatch_a5a5c69eaf98d19b29f47e1a201901c7d}{GetFeedResource} (\hyperlink{classfeed_item}{feedItem} $\ast$\hyperlink{classpatch_a97e7c201cc90ebbdc6035a8465ebbaf2}{my\_\-resource}, double grazing\_\-height, double min\_\-stubble\_\-ht, int animalType)
+\item 
+double \hyperlink{classpatch_ac2ef357347b2fe9682d93a6c9f4556ef}{GetStandingDMdensity} ()
+\item 
+void \hyperlink{classpatch_a91c94802f8e2ebc3ebec73412165b2c3}{SendGrazed} (double grazing\_\-height, double DMGrazed)
+\item 
+void \hyperlink{classpatch_a4b4356190e88f7e5d1a538173556cc18}{outputCropDetails} (fstream $\ast$afile)
+\item 
+void \hyperlink{classpatch_a2b2bcc729804b8dac268f097e2a17104}{clearPatchRecords} ()
+\item 
+void \hyperlink{classpatch_a159121229ee7fb5b6d4094a99bdfe691}{AddChloride} (double amount)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{classpatch_a88e54bffc2427ce8f8afe0c673b76030}{str} \mbox{[}id\_\-len\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpatch_ac4c885fe59fc247c9e6f4871ac8966a4}{patch} ()
+\begin{DoxyCompactList}\small\item\em default constructor \item\end{DoxyCompactList}\item 
+\hyperlink{classpatch}{patch} \& \hyperlink{classpatch_aaa485c520a0fb67c68b2a5cfbe12d99e}{operator=} (const \hyperlink{classpatch}{patch} \&p)
+\begin{DoxyCompactList}\small\item\em default assignment operator \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classpatch_a151115fdf426eff6c70a6edfd7d6efa5}{area}
+\item 
+int \hyperlink{classpatch_ab5d8e4af96815a6b8ce482b5dc5e703f}{type}
+\item 
+\hyperlink{classecosystem}{ecosystem} $\ast$ \hyperlink{classpatch_a64f864d5f2b8b5cfd782490073cabd1d}{theEcosystem}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classpatch_a5cb930252aebd6491a5fb25d9b6be618}{soilManure}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmanure}{manure} on \hyperlink{classsoil}{soil} surface \item\end{DoxyCompactList}\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classpatch_a59e317efc68286e1d79f5325e9aecda3}{cropManure}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmanure}{manure} on the \hyperlink{classcrop}{crop} canopy \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_a47626e127c8decb1a45229fd8b6e0469}{grazable}
+\begin{DoxyCompactList}\small\item\em true if \hyperlink{classpatch}{patch} can be grazed \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_aec296679db0f5d3fb95f0d4975f1e66f}{dung}
+\begin{DoxyCompactList}\small\item\em true if this is a dung \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+bool \hyperlink{classpatch_a8f5b427e53ac95a509bc122c3ae38798}{overlap}
+\begin{DoxyCompactList}\small\item\em true if this is an overlap \hyperlink{classpatch}{patch} \item\end{DoxyCompactList}\item 
+\hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classpatch_ae0688668c13cf1087e8c2df0b7ddcd3b}{birthday}
+\begin{DoxyCompactList}\small\item\em date when \hyperlink{classpatch}{patch} was created \item\end{DoxyCompactList}\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classpatch_a97e7c201cc90ebbdc6035a8465ebbaf2}{my\_\-resource}
+\begin{DoxyCompactList}\small\item\em used to communicate data to and from grazing animals \item\end{DoxyCompactList}\item 
+\hyperlink{class_a_l_f_a_m}{ALFAM} $\ast$ \hyperlink{classpatch_ab5f7d71681c2f3a154051907c3d1cd3d}{anALFAM}
+\begin{DoxyCompactList}\small\item\em pointer to an object that contains the \hyperlink{class_a_l_f_a_m}{ALFAM} ammonia emission model \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulates a single \hyperlink{classpatch}{patch} in a \hyperlink{classfield}{field}, and acts as container class for \hyperlink{classsoil}{soil} and \hyperlink{classcrop}{crop} objects. (c) Bjrn Molt Petersen, Danmarks JordbrugsForskning E-\/mail: \href{mailto:bpe@pvf.sp.dk}{\tt bpe@pvf.sp.dk} 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpatch_a88e54bffc2427ce8f8afe0c673b76030}{
+\index{patch@{patch}!str@{str}}
+\index{str@{str}!patch@{patch}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf patch::str}\mbox{[}id\_\-len\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a88e54bffc2427ce8f8afe0c673b76030}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpatch_ac4c885fe59fc247c9e6f4871ac8966a4}{
+\index{patch@{patch}!patch@{patch}}
+\index{patch@{patch}!patch@{patch}}
+\subsubsection[{patch}]{\setlength{\rightskip}{0pt plus 5cm}patch::patch ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_ac4c885fe59fc247c9e6f4871ac8966a4}
+
+
+default constructor \hypertarget{classpatch_a962e1a1e7f87bd16d323c472e5dafbf0}{
+\index{patch@{patch}!patch@{patch}}
+\index{patch@{patch}!patch@{patch}}
+\subsubsection[{patch}]{\setlength{\rightskip}{0pt plus 5cm}patch::patch (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classpatch_a962e1a1e7f87bd16d323c472e5dafbf0}
+
+
+construct with arguments \hypertarget{classpatch_adb9e4cd6ab9f2df28a8c57e330b55719}{
+\index{patch@{patch}!patch@{patch}}
+\index{patch@{patch}!patch@{patch}}
+\subsubsection[{patch}]{\setlength{\rightskip}{0pt plus 5cm}patch::patch (const {\bf patch} \& {\em p})}}
+\label{classpatch_adb9e4cd6ab9f2df28a8c57e330b55719}
+
+
+copy constructor \hypertarget{classpatch_a673a341f34953f79c30d82b27a55ba7a}{
+\index{patch@{patch}!$\sim$patch@{$\sim$patch}}
+\index{$\sim$patch@{$\sim$patch}!patch@{patch}}
+\subsubsection[{$\sim$patch}]{\setlength{\rightskip}{0pt plus 5cm}patch::$\sim$patch ()}}
+\label{classpatch_a673a341f34953f79c30d82b27a55ba7a}
+
+
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classpatch_ace800e40d39f187d3d37b7d87b972a62}{
+\index{patch@{patch}!Add@{Add}}
+\index{Add@{Add}!patch@{patch}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Add ({\bf patch} $\ast$ {\em addPatch}, \/  double {\em fraction})}}
+\label{classpatch_ace800e40d39f187d3d37b7d87b972a62}
+
+
+Add one \hyperlink{classpatch}{patch} to another. 
+\begin{DoxyParams}{Parameters}
+\item[{\em fraction}]Weighting factor to be used when adding the donor \hyperlink{classpatch}{patch} to the recipient \hyperlink{classpatch}{patch} \end{DoxyParams}
+\hypertarget{classpatch_a159121229ee7fb5b6d4094a99bdfe691}{
+\index{patch@{patch}!AddChloride@{AddChloride}}
+\index{AddChloride@{AddChloride}!patch@{patch}}
+\subsubsection[{AddChloride}]{\setlength{\rightskip}{0pt plus 5cm}void patch::AddChloride (double {\em amount})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a159121229ee7fb5b6d4094a99bdfe691}
+\hypertarget{classpatch_a28511705585ad97653e54b1eaf16875a}{
+\index{patch@{patch}!AddDecomposable@{AddDecomposable}}
+\index{AddDecomposable@{AddDecomposable}!patch@{patch}}
+\subsubsection[{AddDecomposable}]{\setlength{\rightskip}{0pt plus 5cm}void patch::AddDecomposable ({\bf decomposable} $\ast$ {\em produc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a28511705585ad97653e54b1eaf16875a}
+\hypertarget{classpatch_ac05d20ddd41d95854eacce6ddbb6fa31}{
+\index{patch@{patch}!AddNutrient@{AddNutrient}}
+\index{AddNutrient@{AddNutrient}!patch@{patch}}
+\subsubsection[{AddNutrient}]{\setlength{\rightskip}{0pt plus 5cm}void patch::AddNutrient ({\bf nitrogen} {\em surfNitrate}, \/  {\bf nitrogen} {\em surfAmmonium}, \/  {\bf nitrogen} {\em soilNitrate}, \/  {\bf nitrogen} {\em soilAmmonium})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_ac05d20ddd41d95854eacce6ddbb6fa31}
+\hypertarget{classpatch_a4258aa2c074432be7603578ac1397e26}{
+\index{patch@{patch}!AdjustArea@{AdjustArea}}
+\index{AdjustArea@{AdjustArea}!patch@{patch}}
+\subsubsection[{AdjustArea}]{\setlength{\rightskip}{0pt plus 5cm}void patch::AdjustArea (double {\em adjust})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a4258aa2c074432be7603578ac1397e26}
+
+
+adjust the area of the \hyperlink{classpatch}{patch} 
+\begin{DoxyParams}{Parameters}
+\item[{\em adjust}]the number to be used when adjusting the area \end{DoxyParams}
+\hypertarget{classpatch_a2b2bcc729804b8dac268f097e2a17104}{
+\index{patch@{patch}!clearPatchRecords@{clearPatchRecords}}
+\index{clearPatchRecords@{clearPatchRecords}!patch@{patch}}
+\subsubsection[{clearPatchRecords}]{\setlength{\rightskip}{0pt plus 5cm}void patch::clearPatchRecords ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a2b2bcc729804b8dac268f097e2a17104}
+\hypertarget{classpatch_a132e795ca186b7b274a4b69e3e19e127}{
+\index{patch@{patch}!clone@{clone}}
+\index{clone@{clone}!patch@{patch}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf patch} $\ast$ patch::clone () const}}
+\label{classpatch_a132e795ca186b7b274a4b69e3e19e127}
+
+
+creates a clone of the current \hyperlink{classpatch}{patch} \hypertarget{classpatch_af461c06a42b72cd9a26f452a0d583458}{
+\index{patch@{patch}!CloverPercentage@{CloverPercentage}}
+\index{CloverPercentage@{CloverPercentage}!patch@{patch}}
+\subsubsection[{CloverPercentage}]{\setlength{\rightskip}{0pt plus 5cm}double patch::CloverPercentage ()}}
+\label{classpatch_af461c06a42b72cd9a26f452a0d583458}
+
+
+returned percentage contribution of clover to aboveground \hyperlink{classcrop}{crop} dry \hyperlink{classmatter}{matter} \hypertarget{classpatch_a8748ec3076874edd7d38ff2c8680e6a1}{
+\index{patch@{patch}!CropSoilExchange@{CropSoilExchange}}
+\index{CropSoilExchange@{CropSoilExchange}!patch@{patch}}
+\subsubsection[{CropSoilExchange}]{\setlength{\rightskip}{0pt plus 5cm}void patch::CropSoilExchange ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a8748ec3076874edd7d38ff2c8680e6a1}
+\hypertarget{classpatch_a710f7413560c8b891d35212341731b02}{
+\index{patch@{patch}!DepositManure@{DepositManure}}
+\index{DepositManure@{DepositManure}!patch@{patch}}
+\subsubsection[{DepositManure}]{\setlength{\rightskip}{0pt plus 5cm}void patch::DepositManure ({\bf manure} $\ast$ {\em animal\_\-urine}, \/  {\bf manure} $\ast$ {\em animal\_\-dung})}}
+\label{classpatch_a710f7413560c8b891d35212341731b02}
+\hypertarget{classpatch_a081e88d1eef85a499e8f466dbe0bf546}{
+\index{patch@{patch}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!patch@{patch}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}bool patch::EndBudget ()}}
+\label{classpatch_a081e88d1eef85a499e8f466dbe0bf546}
+
+
+check the budgets of those elements or compounds that are being budgeted \hypertarget{classpatch_aa68d48a5d0a2c8b3a222b141d0d5c276}{
+\index{patch@{patch}!GetAbovegroundCropN@{GetAbovegroundCropN}}
+\index{GetAbovegroundCropN@{GetAbovegroundCropN}!patch@{patch}}
+\subsubsection[{GetAbovegroundCropN}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetAbovegroundCropN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_aa68d48a5d0a2c8b3a222b141d0d5c276}
+\hypertarget{classpatch_ae5ed6219bcd53dc67ca0dbbf33109649}{
+\index{patch@{patch}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!patch@{patch}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_ae5ed6219bcd53dc67ca0dbbf33109649}
+
+
+return the area of the \hyperlink{classpatch}{patch} \hypertarget{classpatch_ade5035e5e8a4319606944c22a1e360da}{
+\index{patch@{patch}!GetAvailablePatchStandingDMkg@{GetAvailablePatchStandingDMkg}}
+\index{GetAvailablePatchStandingDMkg@{GetAvailablePatchStandingDMkg}!patch@{patch}}
+\subsubsection[{GetAvailablePatchStandingDMkg}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetAvailablePatchStandingDMkg (double {\em height})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_ade5035e5e8a4319606944c22a1e360da}
+
+
+Get mass of dry \hyperlink{classmatter}{matter} (kg DM)of \hyperlink{classpatch}{patch} that is above a certain cutting or grazing height (m). \hypertarget{classpatch_a7093fdf2689a46a666762bb73803aadf}{
+\index{patch@{patch}!Getbirthday@{Getbirthday}}
+\index{Getbirthday@{Getbirthday}!patch@{patch}}
+\subsubsection[{Getbirthday}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bsTime}$\ast$ patch::Getbirthday ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a7093fdf2689a46a666762bb73803aadf}
+
+
+return the date on which the \hyperlink{classpatch}{patch} was formed \hypertarget{classpatch_a7efc99bd3ae91359690c12eee53a7e4b}{
+\index{patch@{patch}!GetcropManure@{GetcropManure}}
+\index{GetcropManure@{GetcropManure}!patch@{patch}}
+\subsubsection[{GetcropManure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ patch::GetcropManure ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a7efc99bd3ae91359690c12eee53a7e4b}
+
+
+it pointed to object describing \hyperlink{classmanure}{manure} on the \hyperlink{classcrop}{crop} surfaces \hypertarget{classpatch_a334f1d4bec7e4b63de7f008255b10904}{
+\index{patch@{patch}!GetDailyDMProduction@{GetDailyDMProduction}}
+\index{GetDailyDMProduction@{GetDailyDMProduction}!patch@{patch}}
+\subsubsection[{GetDailyDMProduction}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetDailyDMProduction ()}}
+\label{classpatch_a334f1d4bec7e4b63de7f008255b10904}
+\hypertarget{classpatch_a279fb0c6870f98e0f391bb045a20628d}{
+\index{patch@{patch}!getdung@{getdung}}
+\index{getdung@{getdung}!patch@{patch}}
+\subsubsection[{getdung}]{\setlength{\rightskip}{0pt plus 5cm}bool patch::getdung () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a279fb0c6870f98e0f391bb045a20628d}
+
+
+returns true if the \hyperlink{classpatch}{patch} is classed as a dung \hyperlink{classpatch}{patch} \hypertarget{classpatch_a5a5c69eaf98d19b29f47e1a201901c7d}{
+\index{patch@{patch}!GetFeedResource@{GetFeedResource}}
+\index{GetFeedResource@{GetFeedResource}!patch@{patch}}
+\subsubsection[{GetFeedResource}]{\setlength{\rightskip}{0pt plus 5cm}void patch::GetFeedResource ({\bf feedItem} $\ast$ {\em my\_\-resource}, \/  double {\em grazing\_\-height}, \/  double {\em min\_\-stubble\_\-ht}, \/  int {\em animalType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a5a5c69eaf98d19b29f47e1a201901c7d}
+\hypertarget{classpatch_a2b8f90d5a3bb56be406d4225d477d8a5}{
+\index{patch@{patch}!GetFeedResource@{GetFeedResource}}
+\index{GetFeedResource@{GetFeedResource}!patch@{patch}}
+\subsubsection[{GetFeedResource}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem} $\ast$ patch::GetFeedResource (double {\em bite\_\-depth\_\-factor}, \/  double {\em min\_\-stubble\_\-ht}, \/  int {\em animalType})}}
+\label{classpatch_a2b8f90d5a3bb56be406d4225d477d8a5}
+
+
+calculates then returns an object describing the \hyperlink{classanimal}{animal} feed available within the \hyperlink{classpatch}{patch} 
+\begin{DoxyParams}{Parameters}
+\item[{\em bite\_\-depth\_\-factor}]depth to which animals graze, as a proportion of the canopy height \item[{\em min\_\-stubble\_\-ht}]minimum height of plant canopy of the grazing -\/ limits the depth of grazing \item[{\em animalType}]identifies the type of \hyperlink{classanimal}{animal} that is grazing \end{DoxyParams}
+\hypertarget{classpatch_a13f8cc5a183f31aefe0b6fbf313e11b9}{
+\index{patch@{patch}!Getgrazable@{Getgrazable}}
+\index{Getgrazable@{Getgrazable}!patch@{patch}}
+\subsubsection[{Getgrazable}]{\setlength{\rightskip}{0pt plus 5cm}bool patch::Getgrazable ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a13f8cc5a183f31aefe0b6fbf313e11b9}
+
+
+returns true if the \hyperlink{classpatch}{patch} is grazable \hypertarget{classpatch_a84e0930d2c8a6a1e7bf77ae86d6de1ab}{
+\index{patch@{patch}!GetGrazedDM@{GetGrazedDM}}
+\index{GetGrazedDM@{GetGrazedDM}!patch@{patch}}
+\subsubsection[{GetGrazedDM}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetGrazedDM ()}}
+\label{classpatch_a84e0930d2c8a6a1e7bf77ae86d6de1ab}
+
+
+returns the amount of \hyperlink{classnitrogen}{nitrogen} fixed within the \hyperlink{classpatch}{patch} during the day (in grams per square metre) Get amount grazed from this \hyperlink{classpatch}{patch} during the current \hyperlink{classperiod}{period} (kg) \hypertarget{classpatch_a8f26f5ceb1577598a3230d8abff14cc4}{
+\index{patch@{patch}!GetMaxPatchHeight@{GetMaxPatchHeight}}
+\index{GetMaxPatchHeight@{GetMaxPatchHeight}!patch@{patch}}
+\subsubsection[{GetMaxPatchHeight}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetMaxPatchHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a8f26f5ceb1577598a3230d8abff14cc4}
+
+
+returns the maximum height of the vegetation in the \hyperlink{classpatch}{patch} \hypertarget{classpatch_a81ef82ba67a54c62690a8b3139a2e3a8}{
+\index{patch@{patch}!Getmy\_\-resource@{Getmy\_\-resource}}
+\index{Getmy\_\-resource@{Getmy\_\-resource}!patch@{patch}}
+\subsubsection[{Getmy\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem}$\ast$ patch::Getmy\_\-resource ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a81ef82ba67a54c62690a8b3139a2e3a8}
+
+
+returns an object describing the \hyperlink{classanimal}{animal} feed available within the \hyperlink{classpatch}{patch} \hypertarget{classpatch_aeb73d687a6349a34695f19b4613008eb}{
+\index{patch@{patch}!getoverlap@{getoverlap}}
+\index{getoverlap@{getoverlap}!patch@{patch}}
+\subsubsection[{getoverlap}]{\setlength{\rightskip}{0pt plus 5cm}bool patch::getoverlap () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_aeb73d687a6349a34695f19b4613008eb}
+
+
+it turns true if the \hyperlink{classpatch}{patch} is classed as an overlap \hyperlink{classpatch}{patch} \hypertarget{classpatch_af7300152fc005aa7b51ff74ec3824197}{
+\index{patch@{patch}!GetPatchAge@{GetPatchAge}}
+\index{GetPatchAge@{GetPatchAge}!patch@{patch}}
+\subsubsection[{GetPatchAge}]{\setlength{\rightskip}{0pt plus 5cm}int patch::GetPatchAge ()}}
+\label{classpatch_af7300152fc005aa7b51ff74ec3824197}
+
+
+returns the age of the \hyperlink{classpatch}{patch} in days \hypertarget{classpatch_a9e9681c8b32bc2638268b3eb9f230772}{
+\index{patch@{patch}!GetPatchStandingDMkg@{GetPatchStandingDMkg}}
+\index{GetPatchStandingDMkg@{GetPatchStandingDMkg}!patch@{patch}}
+\subsubsection[{GetPatchStandingDMkg}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetPatchStandingDMkg ()}}
+\label{classpatch_a9e9681c8b32bc2638268b3eb9f230772}
+
+
+returns the total amount of standing dry \hyperlink{classmatter}{matter} in the \hyperlink{classpatch}{patch}, in kilograms \hypertarget{classpatch_a7acb474f81652d0f068fec53e4f39820}{
+\index{patch@{patch}!GetPatchStandingDMkgPerHa@{GetPatchStandingDMkgPerHa}}
+\index{GetPatchStandingDMkgPerHa@{GetPatchStandingDMkgPerHa}!patch@{patch}}
+\subsubsection[{GetPatchStandingDMkgPerHa}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetPatchStandingDMkgPerHa ()}}
+\label{classpatch_a7acb474f81652d0f068fec53e4f39820}
+
+
+returns the total amount of standing dry \hyperlink{classmatter}{matter} in the \hyperlink{classpatch}{patch}, in kilograms per hectare \hypertarget{classpatch_a6bafafe564eadfc87a06315e01402444}{
+\index{patch@{patch}!GetPatchType@{GetPatchType}}
+\index{GetPatchType@{GetPatchType}!patch@{patch}}
+\subsubsection[{GetPatchType}]{\setlength{\rightskip}{0pt plus 5cm}int patch::GetPatchType ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a6bafafe564eadfc87a06315e01402444}
+
+
+return the \hyperlink{classpatch}{patch} type \hypertarget{classpatch_a1084593c1a741685fc7277569df31516}{
+\index{patch@{patch}!GetPotentialGrowthRate@{GetPotentialGrowthRate}}
+\index{GetPotentialGrowthRate@{GetPotentialGrowthRate}!patch@{patch}}
+\subsubsection[{GetPotentialGrowthRate}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetPotentialGrowthRate (double {\em radiation}, \/  double {\em temperature})}}
+\label{classpatch_a1084593c1a741685fc7277569df31516}
+
+
+returns the dry \hyperlink{classmatter}{matter} growth rate of the \hyperlink{classpatch}{patch} the absence of nutrient or \hyperlink{classwater}{water} limitations 
+\begin{DoxyParams}{Parameters}
+\item[{\em radiation}]radiation in megajoules per metre squared \item[{\em temperature}]mean daily air temperature \end{DoxyParams}
+\hypertarget{classpatch_a068ad8fb3dcd42c165c25fef304df220}{
+\index{patch@{patch}!GetsoilManure@{GetsoilManure}}
+\index{GetsoilManure@{GetsoilManure}!patch@{patch}}
+\subsubsection[{GetsoilManure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ patch::GetsoilManure ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a068ad8fb3dcd42c165c25fef304df220}
+
+
+get pointer to object describing \hyperlink{classmanure}{manure} on the \hyperlink{classsoil}{soil} surface \hypertarget{classpatch_ac2ef357347b2fe9682d93a6c9f4556ef}{
+\index{patch@{patch}!GetStandingDMdensity@{GetStandingDMdensity}}
+\index{GetStandingDMdensity@{GetStandingDMdensity}!patch@{patch}}
+\subsubsection[{GetStandingDMdensity}]{\setlength{\rightskip}{0pt plus 5cm}double patch::GetStandingDMdensity ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_ac2ef357347b2fe9682d93a6c9f4556ef}
+\hypertarget{classpatch_a537dde06dbfd967daf158975f4de51b4}{
+\index{patch@{patch}!GetthePatchInterface@{GetthePatchInterface}}
+\index{GetthePatchInterface@{GetthePatchInterface}!patch@{patch}}
+\subsubsection[{GetthePatchInterface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf patchInterfaceClass}$\ast$ patch::GetthePatchInterface ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a537dde06dbfd967daf158975f4de51b4}
+\hypertarget{classpatch_a11e6e3fe5733ec6ebd7b033f6cd69d9e}{
+\index{patch@{patch}!GiveEcoIndicators@{GiveEcoIndicators}}
+\index{GiveEcoIndicators@{GiveEcoIndicators}!patch@{patch}}
+\subsubsection[{GiveEcoIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void patch::GiveEcoIndicators ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a11e6e3fe5733ec6ebd7b033f6cd69d9e}
+\hypertarget{classpatch_a264e98a8bd59a3e2268e3edb8e440103}{
+\index{patch@{patch}!GiveIndicators@{GiveIndicators}}
+\index{GiveIndicators@{GiveIndicators}!patch@{patch}}
+\subsubsection[{GiveIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void patch::GiveIndicators ()}}
+\label{classpatch_a264e98a8bd59a3e2268e3edb8e440103}
+returns the daily dry \hyperlink{classmatter}{matter} production in kilograms per hectare complete indicator values \hypertarget{classpatch_ac47bef0c79638b0c203bbdc2ef2a0408}{
+\index{patch@{patch}!HandleOp@{HandleOp}}
+\index{HandleOp@{HandleOp}!patch@{patch}}
+\subsubsection[{HandleOp}]{\setlength{\rightskip}{0pt plus 5cm}void patch::HandleOp ({\bf fieldOperationFields} $\ast$ {\em FOP})}}
+\label{classpatch_ac47bef0c79638b0c203bbdc2ef2a0408}
+
+
+handles all major \hyperlink{classfield}{field} operations 
+
+should be a parameter NJH Dec 2007 \hypertarget{classpatch_a79dd8d0f305e1ec56041fb8c041297cf}{
+\index{patch@{patch}!HarvestOperations@{HarvestOperations}}
+\index{HarvestOperations@{HarvestOperations}!patch@{patch}}
+\subsubsection[{HarvestOperations}]{\setlength{\rightskip}{0pt plus 5cm}void patch::HarvestOperations ({\bf harvestFields} $\ast$ {\em hrv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a79dd8d0f305e1ec56041fb8c041297cf}
+\hypertarget{classpatch_a92a760b5e2e027638c445888038d82fe}{
+\index{patch@{patch}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!patch@{patch}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Initialise (char $\ast$ {\em soilFileName}, \/  int {\em aIndex})}}
+\label{classpatch_a92a760b5e2e027638c445888038d82fe}
+\hypertarget{classpatch_aed7ec6869d21a7bae66741051b8056e2}{
+\index{patch@{patch}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!patch@{patch}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Initialise (char $\ast$ {\em soilFileName}, \/  int {\em anIndex}, \/  double {\em anArea})}}
+\label{classpatch_aed7ec6869d21a7bae66741051b8056e2}
+\hypertarget{classpatch_add167b75947d6b59109dbd911d8ab681}{
+\index{patch@{patch}!IrrigationDemand@{IrrigationDemand}}
+\index{IrrigationDemand@{IrrigationDemand}!patch@{patch}}
+\subsubsection[{IrrigationDemand}]{\setlength{\rightskip}{0pt plus 5cm}bool patch::IrrigationDemand ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_add167b75947d6b59109dbd911d8ab681}
+
+
+returns whether irrigation is required \hypertarget{classpatch_a2f798a718984143550119b1f639af144}{
+\index{patch@{patch}!KillAllCrops@{KillAllCrops}}
+\index{KillAllCrops@{KillAllCrops}!patch@{patch}}
+\subsubsection[{KillAllCrops}]{\setlength{\rightskip}{0pt plus 5cm}void patch::KillAllCrops ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a2f798a718984143550119b1f639af144}
+\hypertarget{classpatch_ae9173a337c4a025669947a8cd64f5d2e}{
+\index{patch@{patch}!NitrogenInCrops@{NitrogenInCrops}}
+\index{NitrogenInCrops@{NitrogenInCrops}!patch@{patch}}
+\subsubsection[{NitrogenInCrops}]{\setlength{\rightskip}{0pt plus 5cm}double patch::NitrogenInCrops ()}}
+\label{classpatch_ae9173a337c4a025669947a8cd64f5d2e}
+
+
+return the total amount of \hyperlink{classnitrogen}{nitrogen} in the crops \hypertarget{classpatch_adcb1581cac2687cd3d610faec438d935}{
+\index{patch@{patch}!NitrogenInSoil@{NitrogenInSoil}}
+\index{NitrogenInSoil@{NitrogenInSoil}!patch@{patch}}
+\subsubsection[{NitrogenInSoil}]{\setlength{\rightskip}{0pt plus 5cm}double patch::NitrogenInSoil ()}}
+\label{classpatch_adcb1581cac2687cd3d610faec438d935}
+
+
+return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classsoil}{soil} \hypertarget{classpatch_a9c12288512a19b8e44eb15f532f34a4d}{
+\index{patch@{patch}!NitrogenInSystem@{NitrogenInSystem}}
+\index{NitrogenInSystem@{NitrogenInSystem}!patch@{patch}}
+\subsubsection[{NitrogenInSystem}]{\setlength{\rightskip}{0pt plus 5cm}double patch::NitrogenInSystem ()}}
+\label{classpatch_a9c12288512a19b8e44eb15f532f34a4d}
+
+
+return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classpatch}{patch} \hypertarget{classpatch_aaa485c520a0fb67c68b2a5cfbe12d99e}{
+\index{patch@{patch}!operator=@{operator=}}
+\index{operator=@{operator=}!patch@{patch}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf patch}\& patch::operator= (const {\bf patch} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_aaa485c520a0fb67c68b2a5cfbe12d99e}
+
+
+default assignment operator 
+
+Reimplemented from \hyperlink{classbase_abd18e2130f975aacfde1833ad137e3c5}{base}.\hypertarget{classpatch_a4b4356190e88f7e5d1a538173556cc18}{
+\index{patch@{patch}!outputCropDetails@{outputCropDetails}}
+\index{outputCropDetails@{outputCropDetails}!patch@{patch}}
+\subsubsection[{outputCropDetails}]{\setlength{\rightskip}{0pt plus 5cm}void patch::outputCropDetails (fstream $\ast$ {\em afile})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a4b4356190e88f7e5d1a538173556cc18}
+\hypertarget{classpatch_add309282252f1c83d6ad6ff827bd0c23}{
+\index{patch@{patch}!ReadyForHarvestOrLater@{ReadyForHarvestOrLater}}
+\index{ReadyForHarvestOrLater@{ReadyForHarvestOrLater}!patch@{patch}}
+\subsubsection[{ReadyForHarvestOrLater}]{\setlength{\rightskip}{0pt plus 5cm}bool patch::ReadyForHarvestOrLater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_add309282252f1c83d6ad6ff827bd0c23}
+
+
+returns true if the main \hyperlink{classcrop}{crop} is ready for harvesting \hypertarget{classpatch_a91c94802f8e2ebc3ebec73412165b2c3}{
+\index{patch@{patch}!SendGrazed@{SendGrazed}}
+\index{SendGrazed@{SendGrazed}!patch@{patch}}
+\subsubsection[{SendGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SendGrazed (double {\em grazing\_\-height}, \/  double {\em DMGrazed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a91c94802f8e2ebc3ebec73412165b2c3}
+\hypertarget{classpatch_aa6e819a227c7d5aeceda53afad1de51f}{
+\index{patch@{patch}!SetArea@{SetArea}}
+\index{SetArea@{SetArea}!patch@{patch}}
+\subsubsection[{SetArea}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetArea (double {\em ar})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_aa6e819a227c7d5aeceda53afad1de51f}
+
+
+set the area of patch$\ast$/ \hypertarget{classpatch_a64bb8ae35378455255ca5a1b546d70d1}{
+\index{patch@{patch}!setdung@{setdung}}
+\index{setdung@{setdung}!patch@{patch}}
+\subsubsection[{setdung}]{\setlength{\rightskip}{0pt plus 5cm}void patch::setdung (bool {\em adung})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a64bb8ae35378455255ca5a1b546d70d1}
+
+
+set whether a \hyperlink{classpatch}{patch} is a dung \hyperlink{classpatch}{patch} \hypertarget{classpatch_a79adbf0a0c1fee340accf581487d8f54}{
+\index{patch@{patch}!SetFingerFlow@{SetFingerFlow}}
+\index{SetFingerFlow@{SetFingerFlow}!patch@{patch}}
+\subsubsection[{SetFingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetFingerFlow (int {\em afingerFlow})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a79adbf0a0c1fee340accf581487d8f54}
+\hypertarget{classpatch_a6e95e7ea2fbab3b4dac4747ad2331648}{
+\index{patch@{patch}!Setgrazable@{Setgrazable}}
+\index{Setgrazable@{Setgrazable}!patch@{patch}}
+\subsubsection[{Setgrazable}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Setgrazable (bool {\em isGrazable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a6e95e7ea2fbab3b4dac4747ad2331648}
+
+
+set whether \hyperlink{classpatch}{patch} is grazable \hypertarget{classpatch_a691aceb2b8472215986518945b3b01d2}{
+\index{patch@{patch}!SetGrazed@{SetGrazed}}
+\index{SetGrazed@{SetGrazed}!patch@{patch}}
+\subsubsection[{SetGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetGrazed (double {\em bite\_\-depth\_\-factor}, \/  double {\em DMGrazed})}}
+\label{classpatch_a691aceb2b8472215986518945b3b01d2}
+Sets the \hyperlink{classcrop}{crop} variables that record the material grazed Called by each \hyperlink{classanimal}{animal} that grazes this \hyperlink{classpatch}{patch} 
+\begin{DoxyParams}{Parameters}
+\item[{\em bite\_\-depth\_\-factor}]depth of biting as a proportion of canopy height \item[{\em DMGrazed}]kilograms of dry \hyperlink{classmatter}{matter} grazed by the \hyperlink{classanimal}{animal} \end{DoxyParams}
+\hypertarget{classpatch_a545552e8ba7fe79543bac8f9a5a33343}{
+\index{patch@{patch}!SetirrigationWater@{SetirrigationWater}}
+\index{SetirrigationWater@{SetirrigationWater}!patch@{patch}}
+\subsubsection[{SetirrigationWater}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetirrigationWater ({\bf water} $\ast$ {\em irrigationWater})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a545552e8ba7fe79543bac8f9a5a33343}
+\hypertarget{classpatch_aaa76dd5410cb800bd5281d2cc13d5807}{
+\index{patch@{patch}!SetName@{SetName}}
+\index{SetName@{SetName}!patch@{patch}}
+\subsubsection[{SetName}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetName (char $\ast$ {\em aName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_aaa76dd5410cb800bd5281d2cc13d5807}
+
+
+set the name of the \hyperlink{classpatch}{patch} \hypertarget{classpatch_abceaced850ecf5b133c4e74b70f12d54}{
+\index{patch@{patch}!setoverlap@{setoverlap}}
+\index{setoverlap@{setoverlap}!patch@{patch}}
+\subsubsection[{setoverlap}]{\setlength{\rightskip}{0pt plus 5cm}void patch::setoverlap (bool {\em aoverlap})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_abceaced850ecf5b133c4e74b70f12d54}
+
+
+set whether a \hyperlink{classpatch}{patch} is an overlap \hyperlink{classpatch}{patch} \hypertarget{classpatch_a9c53399ac48828cacb0fa4071952d9d4}{
+\index{patch@{patch}!SetPatchBirthday@{SetPatchBirthday}}
+\index{SetPatchBirthday@{SetPatchBirthday}!patch@{patch}}
+\subsubsection[{SetPatchBirthday}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetPatchBirthday ({\bf bsTime} {\em aTime})}}
+\label{classpatch_a9c53399ac48828cacb0fa4071952d9d4}
+
+
+set the date of formation of the \hyperlink{classpatch}{patch} \hypertarget{classpatch_aed1dc764e72357aafb106b81fec5e703}{
+\index{patch@{patch}!SetPatchType@{SetPatchType}}
+\index{SetPatchType@{SetPatchType}!patch@{patch}}
+\subsubsection[{SetPatchType}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SetPatchType (int {\em t})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_aed1dc764e72357aafb106b81fec5e703}
+
+
+set the \hyperlink{classpatch}{patch} type \hypertarget{classpatch_a6b0055a5b5aa214e2f9e8f5024c942aa}{
+\index{patch@{patch}!SimpleGraze@{SimpleGraze}}
+\index{SimpleGraze@{SimpleGraze}!patch@{patch}}
+\subsubsection[{SimpleGraze}]{\setlength{\rightskip}{0pt plus 5cm}void patch::SimpleGraze ()}}
+\label{classpatch_a6b0055a5b5aa214e2f9e8f5024c942aa}
+\hypertarget{classpatch_a3ecb47e31952d5a27c52b515c46f0928}{
+\index{patch@{patch}!Sow@{Sow}}
+\index{Sow@{Sow}!patch@{patch}}
+\subsubsection[{Sow}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Sow (char $\ast$ {\em cropID}, \/  double {\em SeedDensDryMatt}, \/  double {\em RelativeDensity}, \/  double {\em NitrogenInSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a3ecb47e31952d5a27c52b515c46f0928}
+\hypertarget{classpatch_a9ba4cf30533b050cb7e87b58defd4268}{
+\index{patch@{patch}!StandingWater@{StandingWater}}
+\index{StandingWater@{StandingWater}!patch@{patch}}
+\subsubsection[{StandingWater}]{\setlength{\rightskip}{0pt plus 5cm}double patch::StandingWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a9ba4cf30533b050cb7e87b58defd4268}
+\hypertarget{classpatch_a16276b251ebd3f27715ea21be08dfa68}{
+\index{patch@{patch}!StartBudget@{StartBudget}}
+\index{StartBudget@{StartBudget}!patch@{patch}}
+\subsubsection[{StartBudget}]{\setlength{\rightskip}{0pt plus 5cm}void patch::StartBudget ()}}
+\label{classpatch_a16276b251ebd3f27715ea21be08dfa68}
+
+
+initialised the budgets of those elements or compounds that are being budgeted \hypertarget{classpatch_a8e0f4140df73da5dadd9a4aca8a7a7ee}{
+\index{patch@{patch}!Tillage@{Tillage}}
+\index{Tillage@{Tillage}!patch@{patch}}
+\subsubsection[{Tillage}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Tillage ({\bf soilTreatFields} $\ast$ {\em TillageOp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_a8e0f4140df73da5dadd9a4aca8a7a7ee}
+\hypertarget{classpatch_a6e23eb42dae4af96e728568fc35ac256}{
+\index{patch@{patch}!UpdatePatches@{UpdatePatches}}
+\index{UpdatePatches@{UpdatePatches}!patch@{patch}}
+\subsubsection[{UpdatePatches}]{\setlength{\rightskip}{0pt plus 5cm}void patch::UpdatePatches ()}}
+\label{classpatch_a6e23eb42dae4af96e728568fc35ac256}
+\hypertarget{classpatch_a0fdda2c18cd319101078a5de170f19cb}{
+\index{patch@{patch}!Volatilise@{Volatilise}}
+\index{Volatilise@{Volatilise}!patch@{patch}}
+\subsubsection[{Volatilise}]{\setlength{\rightskip}{0pt plus 5cm}void patch::Volatilise ()}}
+\label{classpatch_a0fdda2c18cd319101078a5de170f19cb}
+
+
+calculate the gaseous loss of compounds \hypertarget{classpatch_adee8003561555e32b46f06fff7d5381b}{
+\index{patch@{patch}!WriteNitrogen@{WriteNitrogen}}
+\index{WriteNitrogen@{WriteNitrogen}!patch@{patch}}
+\subsubsection[{WriteNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void patch::WriteNitrogen (double {\em f})}}
+\label{classpatch_adee8003561555e32b46f06fff7d5381b}
+
+
+writes details of the \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classpatch}{patch} to the console. Used only in debugging. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classpatch_ab5f7d71681c2f3a154051907c3d1cd3d}{
+\index{patch@{patch}!anALFAM@{anALFAM}}
+\index{anALFAM@{anALFAM}!patch@{patch}}
+\subsubsection[{anALFAM}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ALFAM}$\ast$ {\bf patch::anALFAM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_ab5f7d71681c2f3a154051907c3d1cd3d}
+
+
+pointer to an object that contains the \hyperlink{class_a_l_f_a_m}{ALFAM} ammonia emission model \hypertarget{classpatch_a151115fdf426eff6c70a6edfd7d6efa5}{
+\index{patch@{patch}!area@{area}}
+\index{area@{area}!patch@{patch}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf patch::area}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a151115fdf426eff6c70a6edfd7d6efa5}
+\hypertarget{classpatch_ae0688668c13cf1087e8c2df0b7ddcd3b}{
+\index{patch@{patch}!birthday@{birthday}}
+\index{birthday@{birthday}!patch@{patch}}
+\subsubsection[{birthday}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bsTime}$\ast$ {\bf patch::birthday}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_ae0688668c13cf1087e8c2df0b7ddcd3b}
+
+
+date when \hyperlink{classpatch}{patch} was created \hypertarget{classpatch_a59e317efc68286e1d79f5325e9aecda3}{
+\index{patch@{patch}!cropManure@{cropManure}}
+\index{cropManure@{cropManure}!patch@{patch}}
+\subsubsection[{cropManure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf patch::cropManure}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a59e317efc68286e1d79f5325e9aecda3}
+
+
+\hyperlink{classmanure}{manure} on the \hyperlink{classcrop}{crop} canopy \hypertarget{classpatch_aec296679db0f5d3fb95f0d4975f1e66f}{
+\index{patch@{patch}!dung@{dung}}
+\index{dung@{dung}!patch@{patch}}
+\subsubsection[{dung}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf patch::dung}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_aec296679db0f5d3fb95f0d4975f1e66f}
+
+
+true if this is a dung \hyperlink{classpatch}{patch} \hypertarget{classpatch_a47626e127c8decb1a45229fd8b6e0469}{
+\index{patch@{patch}!grazable@{grazable}}
+\index{grazable@{grazable}!patch@{patch}}
+\subsubsection[{grazable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf patch::grazable}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a47626e127c8decb1a45229fd8b6e0469}
+
+
+true if \hyperlink{classpatch}{patch} can be grazed \hypertarget{classpatch_a97e7c201cc90ebbdc6035a8465ebbaf2}{
+\index{patch@{patch}!my\_\-resource@{my\_\-resource}}
+\index{my\_\-resource@{my\_\-resource}!patch@{patch}}
+\subsubsection[{my\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem}$\ast$ {\bf patch::my\_\-resource}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a97e7c201cc90ebbdc6035a8465ebbaf2}
+
+
+used to communicate data to and from grazing animals \hypertarget{classpatch_a8f5b427e53ac95a509bc122c3ae38798}{
+\index{patch@{patch}!overlap@{overlap}}
+\index{overlap@{overlap}!patch@{patch}}
+\subsubsection[{overlap}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf patch::overlap}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a8f5b427e53ac95a509bc122c3ae38798}
+
+
+true if this is an overlap \hyperlink{classpatch}{patch} \hypertarget{classpatch_a5cb930252aebd6491a5fb25d9b6be618}{
+\index{patch@{patch}!soilManure@{soilManure}}
+\index{soilManure@{soilManure}!patch@{patch}}
+\subsubsection[{soilManure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf patch::soilManure}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a5cb930252aebd6491a5fb25d9b6be618}
+
+
+\hyperlink{classmanure}{manure} on \hyperlink{classsoil}{soil} surface \hypertarget{classpatch_a64f864d5f2b8b5cfd782490073cabd1d}{
+\index{patch@{patch}!theEcosystem@{theEcosystem}}
+\index{theEcosystem@{theEcosystem}!patch@{patch}}
+\subsubsection[{theEcosystem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ecosystem}$\ast$ {\bf patch::theEcosystem}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_a64f864d5f2b8b5cfd782490073cabd1d}
+\hypertarget{classpatch_ab5d8e4af96815a6b8ce482b5dc5e703f}{
+\index{patch@{patch}!type@{type}}
+\index{type@{type}!patch@{patch}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf patch::type}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpatch_ab5d8e4af96815a6b8ce482b5dc5e703f}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/\hyperlink{patch_8h}{patch.h}\item 
+C:/main/trunk/src/fields/\hyperlink{patch_8cpp}{patch.cpp}\end{DoxyCompactItemize}

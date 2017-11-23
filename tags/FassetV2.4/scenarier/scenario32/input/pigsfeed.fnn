@@ -1,0 +1,23 @@
+[Group(0)]	
+Alias	PIGLETS
+[Group(1)]	
+Alias	BACONERS
+[Group(1).Feed(0)]	
+FeedCode	203
+Amount	2.0
+[Group(1).Feed(1)]	
+FeedCode	155
+Amount	1.5
+[Group(1).Feed(2)]	
+FeedCode	201
+Amount	0.5
+[Group(1).Feed(3)]	
+FeedCode	216
+Amount	0.111
+[Group(1).Feed(4)]	
+FeedCode	207
+Amount	0.089
+[Group(1).Feed(5)]	
+FeedCode	145
+Amount	0.089
+[end]

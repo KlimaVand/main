@@ -1,0 +1,212 @@
+[SoilParameters]                       / Silstrup soil jordvandstations projekt
+Nodes           40
+NodeThickness  50
+PloughingDepth 300
+//data for retention, condFC og bulkdensity fra VAP
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC  -7.39			/log10(m/s)  conductivity at field capacity
+DryBulkDensity   1.42
+ClayContent      0.120                  /from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.150
+
+CarbonPct        2.28
+CNRatio          10.1
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.049707917
+IOM	0.405174
+IOM.N	0.037624131
+
+RelativeWater(0) 0.46              
+PFValue(0)       0.0
+RelativeWater(1) 0.39              
+PFValue(1)       1.0
+RelativeWater(2) 0.38
+PFValue(2)       1.2
+RelativeWater(3) 0.36
+PFValue(3)       1.7
+RelativeWater(4) 0.35
+PFValue(4)       2.0
+RelativeWater(5) 0.34
+PFValue(5)       2.2
+RelativeWater(6) 0.28
+PFValue(6)       3.0
+RelativeWater(7) 0.13
+PFValue(7)       4.2
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -7.45		
+DryBulkDensity   1.62
+ClayContent      0.120        /from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.130
+
+CarbonPct        2.1    
+CNRatio          10.1
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0) 0.39              
+PFValue(0)       0.0
+RelativeWater(1) 0.35              
+PFValue(1)       1.0
+RelativeWater(2) 0.35
+PFValue(2)       1.2
+RelativeWater(3) 0.32
+PFValue(3)       1.7
+RelativeWater(4) 0.31
+PFValue(4)       2.0
+RelativeWater(5) 0.30
+PFValue(5)       2.2
+RelativeWater(6) 0.25
+PFValue(6)       3.0
+RelativeWater(7) 0.16
+PFValue(7)       4.2
+
+[SoilLayer(3)]                      
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -7.47				
+DryBulkDensity   1.77
+ClayContent      0.230        /from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.090
+
+CarbonPct        0.35   
+CNRatio          9.9
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0) 0.33              
+PFValue(0)       0.0
+RelativeWater(1) 0.30              
+PFValue(1)       1.0
+RelativeWater(2) 0.30
+PFValue(2)       1.2
+RelativeWater(3) 0.29
+PFValue(3)       1.7
+RelativeWater(4) 0.28
+PFValue(4)       2.0
+RelativeWater(5) 0.28
+PFValue(5)       2.2
+RelativeWater(6) 0.26
+PFValue(6)       3.0
+RelativeWater(7) 0.16
+PFValue(7)       4.2
+
+[SoilLayer(4)]                      
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -7.47     
+DryBulkDensity   1.77
+ClayContent      0.230          /from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.090
+
+
+CarbonPct        0.35
+CNRatio          8.4
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0) 0.33              
+PFValue(0)       0.0
+RelativeWater(1) 0.30              
+PFValue(1)       1.0
+RelativeWater(2) 0.30
+PFValue(2)       1.2
+RelativeWater(3) 0.29
+PFValue(3)       1.7
+RelativeWater(4) 0.28
+PFValue(4)       2.0
+RelativeWater(5) 0.28
+PFValue(5)       2.2
+RelativeWater(6) 0.26
+PFValue(6)       3.0
+RelativeWater(7) 0.16
+PFValue(7)       4.2
+
+[SoilLayer(5)]                        
+Thickness        1500
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC  -7.47			
+DryBulkDensity   1.77
+ClayContent      0.230          /from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.090
+
+CarbonPct        0.1   
+CNRatio          7.6
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0) 0.33              
+PFValue(0)       0.0
+RelativeWater(1) 0.30              
+PFValue(1)       1.0
+RelativeWater(2) 0.30
+PFValue(2)       1.2
+RelativeWater(3) 0.29
+PFValue(3)       1.7
+RelativeWater(4) 0.28
+PFValue(4)       2.0
+RelativeWater(5) 0.28
+PFValue(5)       2.2
+RelativeWater(6) 0.26
+PFValue(6)       3.0
+RelativeWater(7) 0.16
+PFValue(7)       4.2
+[end]

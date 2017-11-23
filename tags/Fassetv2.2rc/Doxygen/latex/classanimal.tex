@@ -1,0 +1,437 @@
+\hypertarget{classanimal}{
+\section{animal Class Reference}
+\label{classanimal}\index{animal@{animal}}
+}
+
+
+{\ttfamily \#include $<$animal.h$>$}Inheritance diagram for animal::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classanimal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_a01eae0aa68a191b48c488814fbec49ad}{animal} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classanimal_ac9bcedb7d063e6917acb53242e65750a}{animal} (const \hyperlink{classanimal}{animal} \&anAnimal)
+\item 
+virtual \hyperlink{classanimal}{animal} $\ast$ \hyperlink{classanimal_a0dcbd91d8e8eddffa86451dab017f2aa}{clone} () const 
+\item 
+virtual \hyperlink{classanimal_a4bee7f96358304ed6500f5cc2064dcc9}{$\sim$animal} ()
+\item 
+void \hyperlink{classanimal_a06e14e53c94c2184ec43993b78b8d74b}{Initialise} ()
+\item 
+double \hyperlink{classanimal_a65c63e46f48ed826735c7eb075c36ae3}{GetVariableCosts} ()
+\item 
+virtual void \hyperlink{classanimal_a258dbe20d150fc63fd99a08c28484a2c}{SetStableSection} (\hyperlink{classanimal_section}{animalSection} $\ast$aStableSection)
+\item 
+virtual \hyperlink{classanimal_section}{animalSection} $\ast$ \hyperlink{classanimal_a99d20eac6b06d781c35cf3f6fa9f5139}{GetStableSection} ()
+\item 
+virtual void \hyperlink{classanimal_a96c8db4af03ae55b4acb96ed250ea065}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classanimal_a80c4d74b88eb18cb48c4abe1a327d8ce}{SetN\_\-growth} (double aN\_\-growth)
+\item 
+virtual double \hyperlink{classanimal_a3bb4b70145b39791d77634f0a51435b9}{GetN\_\-growth} ()
+\item 
+virtual void \hyperlink{classanimal_a608092b77c96f9b667b5c4e7821a1db0}{SetC\_\-growth} (double aC\_\-growth)
+\item 
+virtual double \hyperlink{classanimal_a231533408e9e70e7278b7f3c352939a1}{GetC\_\-growth} ()
+\item 
+virtual void \hyperlink{classanimal_a1c0454fe63d9eb95b59178f0a1700f1f}{SetthisProduct} (\hyperlink{classanimal_product}{animalProduct} $\ast$ananimalProduct)
+\item 
+virtual \hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classanimal_a877a5ba690a73859295c0b2150d4d99b}{GetthisProduct} ()
+\item 
+virtual void \hyperlink{classanimal_abe026348f883bc244e1d8e473b173c81}{SetNumber} (double aNumber)
+\item 
+virtual double \hyperlink{classanimal_acaf29d614c9931e3ddc1e39447d5b2f8}{GetNumber} ()
+\item 
+virtual void \hyperlink{classanimal_a17002f60dd1721a4a73dd67bf4905ca0}{SetAlias} (string anAlias)
+\item 
+virtual void \hyperlink{classanimal_ab02fcc3a55c323f5bde1e50515e049ff}{SetDE} (double aVal)
+\item 
+virtual double \hyperlink{classanimal_aef7118b0c94cb1bc05aa8783d80e10f0}{GetDE} ()
+\item 
+virtual string \hyperlink{classanimal_a1fd13dcc0f1482d3f288d2265d1ed1ec}{GetAlias} ()
+\item 
+virtual void \hyperlink{classanimal_ad7a71ab5ae87becfa921f70501cf4ee1}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classanimal_a393e6582d15379a0dd58c0d7e1faf9a7}{checkBalances} (bool show=false)
+\item 
+virtual \hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classanimal_a9b3e9394438db452b3c1dcbd94419a9b}{Getcurrentfeed} ()
+\item 
+virtual double \hyperlink{classanimal_a1530f8f6b797c184ea18dff86970100a}{GetheatProduction} ()
+\item 
+virtual double \hyperlink{classanimal_ae10316ed2eb8bcf183540382bd67f0a3}{GetnormNExcretion} ()
+\item 
+virtual double \hyperlink{classanimal_a7d4699bba0c75390bb33bdf70254ad64}{GetamountSolid} ()
+\item 
+virtual double \hyperlink{classanimal_a47dafe1783cc6864cf11b345efc5e622}{GetamountFluid} ()
+\item 
+virtual double \hyperlink{classanimal_a03c49c3eccec4f4eec1275bd707595ab}{GetCarbon} (double fat, double protein)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_a1fd2e1162143bd494f2629975c01b96a}{animal} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classanimal_ae574d91108a470dd180278e787c95cb0}{amountSolid}
+\item 
+double \hyperlink{classanimal_a980913ef37036f30fdd2a743f190ad7c}{amountFluid}
+\item 
+double \hyperlink{classanimal_abce3ac87f3167d381f64de4784eeeaa6}{heatProduction}
+\item 
+double \hyperlink{classanimal_a0a5d1b8b99abe66a1a127973045009c6}{normNExcretion}
+\item 
+double \hyperlink{classanimal_a8b0bbe3bd6f4038bbafa212931f21ff2}{N\_\-growth}
+\item 
+double \hyperlink{classanimal_a029e384f9d14c602ca4569cd7928c6f7}{C\_\-growth}
+\item 
+double \hyperlink{classanimal_a000f5ea905fb5f547ac001e76c6a94f0}{P\_\-growth}
+\item 
+double \hyperlink{classanimal_a7a2c048b6e72a0b5d0f1a7f2191526f3}{K\_\-growth}
+\item 
+double \hyperlink{classanimal_a2c6e10a16f9d0368763cc2e133e289f2}{FE\_\-need}
+\item 
+double \hyperlink{classanimal_ac6bf667254a80f2526a5234592cb3fae}{P\_\-need}
+\item 
+double \hyperlink{classanimal_a3ef7ab5c8f0060a21c780dbe4de1589d}{K\_\-need}
+\item 
+double \hyperlink{classanimal_aecd025e91f381d7922621868cf5dad55}{Number}
+\item 
+double \hyperlink{classanimal_a04fb217c6513ffc36ddd036d2c38ee98}{LivestockUnits}
+\item 
+double \hyperlink{classanimal_a9e4809e28ae703c997e135bf28469163}{variableCosts}
+\item 
+\hyperlink{classanimal_section}{animalSection} $\ast$ \hyperlink{classanimal_a02b1cede3021c02ac7fe882dd5dfb036}{StableSection}
+\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classanimal_a824070a2c5f811b0613e3767b298c0f1}{currentfeed}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classanimal_a4a5b5cc4023830136ab5d9f81f4dcb9d}{manurePrDay}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classanimal_a7ffc4d8f055968d726673566f78f783f}{fluidManurePrDay}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classanimal_a33be7bd5359038d124130c3ca62e44ee}{solidManurePrDay}
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classanimal_adc0a0b3c8cba52e8ffbe39fdf311887a}{vetExpensesPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classanimal_a686e9edfe2ba45e7c160927e618cc3f6}{thisProduct}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classanimal_abdcc86166e02106463ac356ffe91f258}{Nbudget}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classanimal_a628e470a01f24baba08845a760574fa5}{Cbudget}
+\item 
+string \hyperlink{classanimal_acb5645f84affade5748c1cd8cf28a6f1}{Alias}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classanimal_a1fd2e1162143bd494f2629975c01b96a}{
+\index{animal@{animal}!animal@{animal}}
+\index{animal@{animal}!animal@{animal}}
+\subsubsection[{animal}]{\setlength{\rightskip}{0pt plus 5cm}animal::animal ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classanimal_a1fd2e1162143bd494f2629975c01b96a}
+\hypertarget{classanimal_a01eae0aa68a191b48c488814fbec49ad}{
+\index{animal@{animal}!animal@{animal}}
+\index{animal@{animal}!animal@{animal}}
+\subsubsection[{animal}]{\setlength{\rightskip}{0pt plus 5cm}animal::animal (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classanimal_a01eae0aa68a191b48c488814fbec49ad}
+Initialize following variable: currentfeed, manurePrDay, fluidManurePrDay, solidManurePrDay, vetExpensesPrDay, Nbudget, Cbudget Also calles: \begin{DoxySeeAlso}{See also}
+\hyperlink{classanimal_a06e14e53c94c2184ec43993b78b8d74b}{Initialise()} 
+
+\hyperlink{classbase}{base}(const char $\ast$ aName, const int aIndex = -\/1, const \hyperlink{classbase}{base} $\ast$ aOwner = NULL); 
+\end{DoxySeeAlso}
+\hypertarget{classanimal_ac9bcedb7d063e6917acb53242e65750a}{
+\index{animal@{animal}!animal@{animal}}
+\index{animal@{animal}!animal@{animal}}
+\subsubsection[{animal}]{\setlength{\rightskip}{0pt plus 5cm}animal::animal (const {\bf animal} \& {\em anAnimal})}}
+\label{classanimal_ac9bcedb7d063e6917acb53242e65750a}
+Make a copy of the \hyperlink{classanimal}{animal} instance. \hypertarget{classanimal_a4bee7f96358304ed6500f5cc2064dcc9}{
+\index{animal@{animal}!$\sim$animal@{$\sim$animal}}
+\index{$\sim$animal@{$\sim$animal}!animal@{animal}}
+\subsubsection[{$\sim$animal}]{\setlength{\rightskip}{0pt plus 5cm}animal::$\sim$animal ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_a4bee7f96358304ed6500f5cc2064dcc9}
+Deleting of pointers 
+
+\subsection{Member Function Documentation}
+\hypertarget{classanimal_a393e6582d15379a0dd58c0d7e1faf9a7}{
+\index{animal@{animal}!checkBalances@{checkBalances}}
+\index{checkBalances@{checkBalances}!animal@{animal}}
+\subsubsection[{checkBalances}]{\setlength{\rightskip}{0pt plus 5cm}void animal::checkBalances (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_a393e6582d15379a0dd58c0d7e1faf9a7}
+Is giving a Fatal Error:\char`\"{}name\char`\"{} \hyperlink{classanimal}{animal}: checkBalances -\/ \hyperlink{classbase}{base} class function should not be called Should not be used Fasset at this point 
+
+Reimplemented in \hyperlink{classcattle_a583babf76f49e8ab7dab411195bcda2e}{cattle}.\hypertarget{classanimal_a0dcbd91d8e8eddffa86451dab017f2aa}{
+\index{animal@{animal}!clone@{clone}}
+\index{clone@{clone}!animal@{animal}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animal} $\ast$ animal::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_a0dcbd91d8e8eddffa86451dab017f2aa}
+make a clone of current instance of Animal \hypertarget{classanimal_a96c8db4af03ae55b4acb96ed250ea065}{
+\index{animal@{animal}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!animal@{animal}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void animal::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_a96c8db4af03ae55b4acb96ed250ea065}
+
+
+Reimplemented in \hyperlink{classcattle_a418e7ccadab4a1b2b71d5687c4f22373}{cattle}, \hyperlink{classdk__cattle_a33ea8994d985d00a3c0910a44e7c5d15}{dk\_\-cattle}, \hyperlink{classpig_ace82dae0cc5b75ed3051b145e12d1803}{pig}, \hyperlink{classslaughter_swine_a878b44d9124ee9a550f86ecf353e1401}{slaughterSwine}, and \hyperlink{classswine_aa5b1551767e9bc33a2dad33ef32627fb}{swine}.\hypertarget{classanimal_a1fd13dcc0f1482d3f288d2265d1ed1ec}{
+\index{animal@{animal}!GetAlias@{GetAlias}}
+\index{GetAlias@{GetAlias}!animal@{animal}}
+\subsubsection[{GetAlias}]{\setlength{\rightskip}{0pt plus 5cm}virtual string animal::GetAlias ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a1fd13dcc0f1482d3f288d2265d1ed1ec}
+\hypertarget{classanimal_a47dafe1783cc6864cf11b345efc5e622}{
+\index{animal@{animal}!GetamountFluid@{GetamountFluid}}
+\index{GetamountFluid@{GetamountFluid}!animal@{animal}}
+\subsubsection[{GetamountFluid}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetamountFluid ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a47dafe1783cc6864cf11b345efc5e622}
+\hypertarget{classanimal_a7d4699bba0c75390bb33bdf70254ad64}{
+\index{animal@{animal}!GetamountSolid@{GetamountSolid}}
+\index{GetamountSolid@{GetamountSolid}!animal@{animal}}
+\subsubsection[{GetamountSolid}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetamountSolid ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a7d4699bba0c75390bb33bdf70254ad64}
+\hypertarget{classanimal_a231533408e9e70e7278b7f3c352939a1}{
+\index{animal@{animal}!GetC\_\-growth@{GetC\_\-growth}}
+\index{GetC\_\-growth@{GetC\_\-growth}!animal@{animal}}
+\subsubsection[{GetC\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetC\_\-growth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a231533408e9e70e7278b7f3c352939a1}
+\hypertarget{classanimal_a03c49c3eccec4f4eec1275bd707595ab}{
+\index{animal@{animal}!GetCarbon@{GetCarbon}}
+\index{GetCarbon@{GetCarbon}!animal@{animal}}
+\subsubsection[{GetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double animal::GetCarbon (double {\em fat}, \/  double {\em protein})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_a03c49c3eccec4f4eec1275bd707595ab}
+Calculate Carbon. Using this formular fat $\ast$0.7581 + protein $\ast$ 0.52; Nice to know: why those numbers? 
+\begin{DoxyParams}{Parameters}
+\item[{\em fat}]amount of fat \item[{\em protein}]amount of protein \end{DoxyParams}
+\hypertarget{classanimal_a9b3e9394438db452b3c1dcbd94419a9b}{
+\index{animal@{animal}!Getcurrentfeed@{Getcurrentfeed}}
+\index{Getcurrentfeed@{Getcurrentfeed}!animal@{animal}}
+\subsubsection[{Getcurrentfeed}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf feedItem}$\ast$ animal::Getcurrentfeed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a9b3e9394438db452b3c1dcbd94419a9b}
+\hypertarget{classanimal_aef7118b0c94cb1bc05aa8783d80e10f0}{
+\index{animal@{animal}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!animal@{animal}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetDE ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_aef7118b0c94cb1bc05aa8783d80e10f0}
+
+
+Reimplemented in \hyperlink{classpig_aeb56ca7a77c1f27b7bc90ee4df0d4d1f}{pig}.\hypertarget{classanimal_a1530f8f6b797c184ea18dff86970100a}{
+\index{animal@{animal}!GetheatProduction@{GetheatProduction}}
+\index{GetheatProduction@{GetheatProduction}!animal@{animal}}
+\subsubsection[{GetheatProduction}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetheatProduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a1530f8f6b797c184ea18dff86970100a}
+\hypertarget{classanimal_a3bb4b70145b39791d77634f0a51435b9}{
+\index{animal@{animal}!GetN\_\-growth@{GetN\_\-growth}}
+\index{GetN\_\-growth@{GetN\_\-growth}!animal@{animal}}
+\subsubsection[{GetN\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetN\_\-growth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a3bb4b70145b39791d77634f0a51435b9}
+\hypertarget{classanimal_ae10316ed2eb8bcf183540382bd67f0a3}{
+\index{animal@{animal}!GetnormNExcretion@{GetnormNExcretion}}
+\index{GetnormNExcretion@{GetnormNExcretion}!animal@{animal}}
+\subsubsection[{GetnormNExcretion}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetnormNExcretion ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_ae10316ed2eb8bcf183540382bd67f0a3}
+\hypertarget{classanimal_acaf29d614c9931e3ddc1e39447d5b2f8}{
+\index{animal@{animal}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!animal@{animal}}
+\subsubsection[{GetNumber}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animal::GetNumber ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_acaf29d614c9931e3ddc1e39447d5b2f8}
+\hypertarget{classanimal_a99d20eac6b06d781c35cf3f6fa9f5139}{
+\index{animal@{animal}!GetStableSection@{GetStableSection}}
+\index{GetStableSection@{GetStableSection}!animal@{animal}}
+\subsubsection[{GetStableSection}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf animalSection}$\ast$ animal::GetStableSection ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a99d20eac6b06d781c35cf3f6fa9f5139}
+
+
+Reimplemented in \hyperlink{classpig_a2320d7f431264ffed833fc93182787bb}{pig}.\hypertarget{classanimal_a877a5ba690a73859295c0b2150d4d99b}{
+\index{animal@{animal}!GetthisProduct@{GetthisProduct}}
+\index{GetthisProduct@{GetthisProduct}!animal@{animal}}
+\subsubsection[{GetthisProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf animalProduct}$\ast$ animal::GetthisProduct ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a877a5ba690a73859295c0b2150d4d99b}
+\hypertarget{classanimal_a65c63e46f48ed826735c7eb075c36ae3}{
+\index{animal@{animal}!GetVariableCosts@{GetVariableCosts}}
+\index{GetVariableCosts@{GetVariableCosts}!animal@{animal}}
+\subsubsection[{GetVariableCosts}]{\setlength{\rightskip}{0pt plus 5cm}double animal::GetVariableCosts ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_a65c63e46f48ed826735c7eb075c36ae3}
+\hypertarget{classanimal_a06e14e53c94c2184ec43993b78b8d74b}{
+\index{animal@{animal}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!animal@{animal}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void animal::Initialise ()}}
+\label{classanimal_a06e14e53c94c2184ec43993b78b8d74b}
+Initialize of variables 
+
+Reimplemented in \hyperlink{classcattle_a7a2111adbacdb6ec477005ac5779077b}{cattle}.\hypertarget{classanimal_ad7a71ab5ae87becfa921f70501cf4ee1}{
+\index{animal@{animal}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!animal@{animal}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void animal::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_ad7a71ab5ae87becfa921f70501cf4ee1}
+Initialize of variables from files 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]need to point a the file \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classcattle_a13ca8c9803fc7d414933e0cacb5e398c}{cattle}, \hyperlink{classdk__cattle_a7b51caf022492f303671bc80780bc49c}{dk\_\-cattle}, \hyperlink{classpig_a43fbf15dc40e35fbfd5939c1748ff71b}{pig}, and \hyperlink{classswine_a57668c3c30994f0c3969dcef6d7280db}{swine}.\hypertarget{classanimal_a17002f60dd1721a4a73dd67bf4905ca0}{
+\index{animal@{animal}!SetAlias@{SetAlias}}
+\index{SetAlias@{SetAlias}!animal@{animal}}
+\subsubsection[{SetAlias}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetAlias (string {\em anAlias})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a17002f60dd1721a4a73dd67bf4905ca0}
+\hypertarget{classanimal_a608092b77c96f9b667b5c4e7821a1db0}{
+\index{animal@{animal}!SetC\_\-growth@{SetC\_\-growth}}
+\index{SetC\_\-growth@{SetC\_\-growth}!animal@{animal}}
+\subsubsection[{SetC\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetC\_\-growth (double {\em aC\_\-growth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a608092b77c96f9b667b5c4e7821a1db0}
+\hypertarget{classanimal_ab02fcc3a55c323f5bde1e50515e049ff}{
+\index{animal@{animal}!SetDE@{SetDE}}
+\index{SetDE@{SetDE}!animal@{animal}}
+\subsubsection[{SetDE}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetDE (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_ab02fcc3a55c323f5bde1e50515e049ff}
+\hypertarget{classanimal_a80c4d74b88eb18cb48c4abe1a327d8ce}{
+\index{animal@{animal}!SetN\_\-growth@{SetN\_\-growth}}
+\index{SetN\_\-growth@{SetN\_\-growth}!animal@{animal}}
+\subsubsection[{SetN\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetN\_\-growth (double {\em aN\_\-growth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a80c4d74b88eb18cb48c4abe1a327d8ce}
+\hypertarget{classanimal_abe026348f883bc244e1d8e473b173c81}{
+\index{animal@{animal}!SetNumber@{SetNumber}}
+\index{SetNumber@{SetNumber}!animal@{animal}}
+\subsubsection[{SetNumber}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetNumber (double {\em aNumber})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_abe026348f883bc244e1d8e473b173c81}
+\hypertarget{classanimal_a258dbe20d150fc63fd99a08c28484a2c}{
+\index{animal@{animal}!SetStableSection@{SetStableSection}}
+\index{SetStableSection@{SetStableSection}!animal@{animal}}
+\subsubsection[{SetStableSection}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetStableSection ({\bf animalSection} $\ast$ {\em aStableSection})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a258dbe20d150fc63fd99a08c28484a2c}
+\hypertarget{classanimal_a1c0454fe63d9eb95b59178f0a1700f1f}{
+\index{animal@{animal}!SetthisProduct@{SetthisProduct}}
+\index{SetthisProduct@{SetthisProduct}!animal@{animal}}
+\subsubsection[{SetthisProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animal::SetthisProduct ({\bf animalProduct} $\ast$ {\em ananimalProduct})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_a1c0454fe63d9eb95b59178f0a1700f1f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classanimal_acb5645f84affade5748c1cd8cf28a6f1}{
+\index{animal@{animal}!Alias@{Alias}}
+\index{Alias@{Alias}!animal@{animal}}
+\subsubsection[{Alias}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf animal::Alias}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_acb5645f84affade5748c1cd8cf28a6f1}
+\hypertarget{classanimal_a980913ef37036f30fdd2a743f190ad7c}{
+\index{animal@{animal}!amountFluid@{amountFluid}}
+\index{amountFluid@{amountFluid}!animal@{animal}}
+\subsubsection[{amountFluid}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::amountFluid}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a980913ef37036f30fdd2a743f190ad7c}
+\hypertarget{classanimal_ae574d91108a470dd180278e787c95cb0}{
+\index{animal@{animal}!amountSolid@{amountSolid}}
+\index{amountSolid@{amountSolid}!animal@{animal}}
+\subsubsection[{amountSolid}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::amountSolid}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_ae574d91108a470dd180278e787c95cb0}
+\hypertarget{classanimal_a029e384f9d14c602ca4569cd7928c6f7}{
+\index{animal@{animal}!C\_\-growth@{C\_\-growth}}
+\index{C\_\-growth@{C\_\-growth}!animal@{animal}}
+\subsubsection[{C\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::C\_\-growth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a029e384f9d14c602ca4569cd7928c6f7}
+\hypertarget{classanimal_a628e470a01f24baba08845a760574fa5}{
+\index{animal@{animal}!Cbudget@{Cbudget}}
+\index{Cbudget@{Cbudget}!animal@{animal}}
+\subsubsection[{Cbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf animal::Cbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a628e470a01f24baba08845a760574fa5}
+\hypertarget{classanimal_a824070a2c5f811b0613e3767b298c0f1}{
+\index{animal@{animal}!currentfeed@{currentfeed}}
+\index{currentfeed@{currentfeed}!animal@{animal}}
+\subsubsection[{currentfeed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem}$\ast$ {\bf animal::currentfeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a824070a2c5f811b0613e3767b298c0f1}
+\hypertarget{classanimal_a2c6e10a16f9d0368763cc2e133e289f2}{
+\index{animal@{animal}!FE\_\-need@{FE\_\-need}}
+\index{FE\_\-need@{FE\_\-need}!animal@{animal}}
+\subsubsection[{FE\_\-need}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::FE\_\-need}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a2c6e10a16f9d0368763cc2e133e289f2}
+\hypertarget{classanimal_a7ffc4d8f055968d726673566f78f783f}{
+\index{animal@{animal}!fluidManurePrDay@{fluidManurePrDay}}
+\index{fluidManurePrDay@{fluidManurePrDay}!animal@{animal}}
+\subsubsection[{fluidManurePrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf animal::fluidManurePrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a7ffc4d8f055968d726673566f78f783f}
+\hypertarget{classanimal_abce3ac87f3167d381f64de4784eeeaa6}{
+\index{animal@{animal}!heatProduction@{heatProduction}}
+\index{heatProduction@{heatProduction}!animal@{animal}}
+\subsubsection[{heatProduction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::heatProduction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_abce3ac87f3167d381f64de4784eeeaa6}
+\hypertarget{classanimal_a7a2c048b6e72a0b5d0f1a7f2191526f3}{
+\index{animal@{animal}!K\_\-growth@{K\_\-growth}}
+\index{K\_\-growth@{K\_\-growth}!animal@{animal}}
+\subsubsection[{K\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::K\_\-growth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a7a2c048b6e72a0b5d0f1a7f2191526f3}
+\hypertarget{classanimal_a3ef7ab5c8f0060a21c780dbe4de1589d}{
+\index{animal@{animal}!K\_\-need@{K\_\-need}}
+\index{K\_\-need@{K\_\-need}!animal@{animal}}
+\subsubsection[{K\_\-need}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::K\_\-need}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a3ef7ab5c8f0060a21c780dbe4de1589d}
+\hypertarget{classanimal_a04fb217c6513ffc36ddd036d2c38ee98}{
+\index{animal@{animal}!LivestockUnits@{LivestockUnits}}
+\index{LivestockUnits@{LivestockUnits}!animal@{animal}}
+\subsubsection[{LivestockUnits}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::LivestockUnits}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a04fb217c6513ffc36ddd036d2c38ee98}
+\hypertarget{classanimal_a4a5b5cc4023830136ab5d9f81f4dcb9d}{
+\index{animal@{animal}!manurePrDay@{manurePrDay}}
+\index{manurePrDay@{manurePrDay}!animal@{animal}}
+\subsubsection[{manurePrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf animal::manurePrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a4a5b5cc4023830136ab5d9f81f4dcb9d}
+\hypertarget{classanimal_a8b0bbe3bd6f4038bbafa212931f21ff2}{
+\index{animal@{animal}!N\_\-growth@{N\_\-growth}}
+\index{N\_\-growth@{N\_\-growth}!animal@{animal}}
+\subsubsection[{N\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::N\_\-growth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a8b0bbe3bd6f4038bbafa212931f21ff2}
+\hypertarget{classanimal_abdcc86166e02106463ac356ffe91f258}{
+\index{animal@{animal}!Nbudget@{Nbudget}}
+\index{Nbudget@{Nbudget}!animal@{animal}}
+\subsubsection[{Nbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf animal::Nbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_abdcc86166e02106463ac356ffe91f258}
+\hypertarget{classanimal_a0a5d1b8b99abe66a1a127973045009c6}{
+\index{animal@{animal}!normNExcretion@{normNExcretion}}
+\index{normNExcretion@{normNExcretion}!animal@{animal}}
+\subsubsection[{normNExcretion}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::normNExcretion}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a0a5d1b8b99abe66a1a127973045009c6}
+\hypertarget{classanimal_aecd025e91f381d7922621868cf5dad55}{
+\index{animal@{animal}!Number@{Number}}
+\index{Number@{Number}!animal@{animal}}
+\subsubsection[{Number}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::Number}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_aecd025e91f381d7922621868cf5dad55}
+\hypertarget{classanimal_a000f5ea905fb5f547ac001e76c6a94f0}{
+\index{animal@{animal}!P\_\-growth@{P\_\-growth}}
+\index{P\_\-growth@{P\_\-growth}!animal@{animal}}
+\subsubsection[{P\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::P\_\-growth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a000f5ea905fb5f547ac001e76c6a94f0}
+\hypertarget{classanimal_ac6bf667254a80f2526a5234592cb3fae}{
+\index{animal@{animal}!P\_\-need@{P\_\-need}}
+\index{P\_\-need@{P\_\-need}!animal@{animal}}
+\subsubsection[{P\_\-need}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::P\_\-need}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_ac6bf667254a80f2526a5234592cb3fae}
+\hypertarget{classanimal_a33be7bd5359038d124130c3ca62e44ee}{
+\index{animal@{animal}!solidManurePrDay@{solidManurePrDay}}
+\index{solidManurePrDay@{solidManurePrDay}!animal@{animal}}
+\subsubsection[{solidManurePrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf animal::solidManurePrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a33be7bd5359038d124130c3ca62e44ee}
+\hypertarget{classanimal_a02b1cede3021c02ac7fe882dd5dfb036}{
+\index{animal@{animal}!StableSection@{StableSection}}
+\index{StableSection@{StableSection}!animal@{animal}}
+\subsubsection[{StableSection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalSection}$\ast$ {\bf animal::StableSection}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a02b1cede3021c02ac7fe882dd5dfb036}
+\hypertarget{classanimal_a686e9edfe2ba45e7c160927e618cc3f6}{
+\index{animal@{animal}!thisProduct@{thisProduct}}
+\index{thisProduct@{thisProduct}!animal@{animal}}
+\subsubsection[{thisProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf animal::thisProduct}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a686e9edfe2ba45e7c160927e618cc3f6}
+\hypertarget{classanimal_a9e4809e28ae703c997e135bf28469163}{
+\index{animal@{animal}!variableCosts@{variableCosts}}
+\index{variableCosts@{variableCosts}!animal@{animal}}
+\subsubsection[{variableCosts}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animal::variableCosts}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_a9e4809e28ae703c997e135bf28469163}
+\hypertarget{classanimal_adc0a0b3c8cba52e8ffbe39fdf311887a}{
+\index{animal@{animal}!vetExpensesPrDay@{vetExpensesPrDay}}
+\index{vetExpensesPrDay@{vetExpensesPrDay}!animal@{animal}}
+\subsubsection[{vetExpensesPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product}$\ast$ {\bf animal::vetExpensesPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_adc0a0b3c8cba52e8ffbe39fdf311887a}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{animal_8h}{animal.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{animal_8cpp}{animal.cpp}\end{DoxyCompactItemize}

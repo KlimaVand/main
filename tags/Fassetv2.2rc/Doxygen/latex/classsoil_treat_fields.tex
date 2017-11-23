@@ -1,0 +1,101 @@
+\hypertarget{classsoil_treat_fields}{
+\section{soilTreatFields Class Reference}
+\label{classsoil_treat_fields}\index{soilTreatFields@{soilTreatFields}}
+}
+
+
+{\ttfamily \#include $<$soilTreatFields.h$>$}Inheritance diagram for soilTreatFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classsoil_treat_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsoil_treat_fields_a8ad117f99639581ba5f2591861193b77}{soilTreatFields} ()
+\item 
+virtual \hyperlink{classsoil_treat_fields_ac73a1dabe76596e3c21281c58cded486}{$\sim$soilTreatFields} ()
+\item 
+virtual void \hyperlink{classsoil_treat_fields_a9639937ca350ed628e772c862d1d59bd}{SetType} (string aType)
+\item 
+virtual void \hyperlink{classsoil_treat_fields_ad838ce1a0d1cd7bac15f53785026753e}{SetDepth} (double aDepth)
+\item 
+virtual void \hyperlink{classsoil_treat_fields_ac6d918f9c12375c55641c4cacf737b85}{SetFractionIncorporated} (double aFractionIncorporated)
+\item 
+virtual string \hyperlink{classsoil_treat_fields_a575166b12e7900f9b321b2ac1ad8e1ea}{GetType} ()
+\item 
+virtual double \hyperlink{classsoil_treat_fields_a4911e157230f7e676f8477ca4cedf2d6}{GetDepth} ()
+\item 
+virtual double \hyperlink{classsoil_treat_fields_adb3f2983e379667290a90d19463112a4}{GetFractionIncorporated} ()
+\item 
+virtual \hyperlink{classsoil_treat_fields}{soilTreatFields} $\ast$ \hyperlink{classsoil_treat_fields_ac7a0bac794823169aaa85319842ce4d9}{clone} () const 
+\item 
+virtual bool \hyperlink{classsoil_treat_fields_a1b486e3dcf8ea9e3c0e8c58ec801a3e9}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsoil_treat_fields_a8ad117f99639581ba5f2591861193b77}{
+\index{soilTreatFields@{soilTreatFields}!soilTreatFields@{soilTreatFields}}
+\index{soilTreatFields@{soilTreatFields}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{soilTreatFields}]{\setlength{\rightskip}{0pt plus 5cm}soilTreatFields::soilTreatFields ()}}
+\label{classsoil_treat_fields_a8ad117f99639581ba5f2591861193b77}
+\hypertarget{classsoil_treat_fields_ac73a1dabe76596e3c21281c58cded486}{
+\index{soilTreatFields@{soilTreatFields}!$\sim$soilTreatFields@{$\sim$soilTreatFields}}
+\index{$\sim$soilTreatFields@{$\sim$soilTreatFields}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{$\sim$soilTreatFields}]{\setlength{\rightskip}{0pt plus 5cm}soilTreatFields::$\sim$soilTreatFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_fields_ac73a1dabe76596e3c21281c58cded486}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsoil_treat_fields_a1b486e3dcf8ea9e3c0e8c58ec801a3e9}{
+\index{soilTreatFields@{soilTreatFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool soilTreatFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_fields_a1b486e3dcf8ea9e3c0e8c58ec801a3e9}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it will return the cost in the cost variable 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classsoil_treat_fields_ac7a0bac794823169aaa85319842ce4d9}{
+\index{soilTreatFields@{soilTreatFields}!clone@{clone}}
+\index{clone@{clone}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soilTreatFields} $\ast$ soilTreatFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_fields_ac7a0bac794823169aaa85319842ce4d9}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classsoil_treat_fields_a4911e157230f7e676f8477ca4cedf2d6}{
+\index{soilTreatFields@{soilTreatFields}!GetDepth@{GetDepth}}
+\index{GetDepth@{GetDepth}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{GetDepth}]{\setlength{\rightskip}{0pt plus 5cm}virtual double soilTreatFields::GetDepth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsoil_treat_fields_a4911e157230f7e676f8477ca4cedf2d6}
+\hypertarget{classsoil_treat_fields_adb3f2983e379667290a90d19463112a4}{
+\index{soilTreatFields@{soilTreatFields}!GetFractionIncorporated@{GetFractionIncorporated}}
+\index{GetFractionIncorporated@{GetFractionIncorporated}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{GetFractionIncorporated}]{\setlength{\rightskip}{0pt plus 5cm}virtual double soilTreatFields::GetFractionIncorporated ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsoil_treat_fields_adb3f2983e379667290a90d19463112a4}
+\hypertarget{classsoil_treat_fields_a575166b12e7900f9b321b2ac1ad8e1ea}{
+\index{soilTreatFields@{soilTreatFields}!GetType@{GetType}}
+\index{GetType@{GetType}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{GetType}]{\setlength{\rightskip}{0pt plus 5cm}virtual string soilTreatFields::GetType ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsoil_treat_fields_a575166b12e7900f9b321b2ac1ad8e1ea}
+\hypertarget{classsoil_treat_fields_ad838ce1a0d1cd7bac15f53785026753e}{
+\index{soilTreatFields@{soilTreatFields}!SetDepth@{SetDepth}}
+\index{SetDepth@{SetDepth}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{SetDepth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void soilTreatFields::SetDepth (double {\em aDepth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsoil_treat_fields_ad838ce1a0d1cd7bac15f53785026753e}
+\hypertarget{classsoil_treat_fields_ac6d918f9c12375c55641c4cacf737b85}{
+\index{soilTreatFields@{soilTreatFields}!SetFractionIncorporated@{SetFractionIncorporated}}
+\index{SetFractionIncorporated@{SetFractionIncorporated}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{SetFractionIncorporated}]{\setlength{\rightskip}{0pt plus 5cm}virtual void soilTreatFields::SetFractionIncorporated (double {\em aFractionIncorporated})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsoil_treat_fields_ac6d918f9c12375c55641c4cacf737b85}
+\hypertarget{classsoil_treat_fields_a9639937ca350ed628e772c862d1d59bd}{
+\index{soilTreatFields@{soilTreatFields}!SetType@{SetType}}
+\index{SetType@{SetType}!soilTreatFields@{soilTreatFields}}
+\subsubsection[{SetType}]{\setlength{\rightskip}{0pt plus 5cm}virtual void soilTreatFields::SetType (string {\em aType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsoil_treat_fields_a9639937ca350ed628e772c862d1d59bd}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{soil_treat_fields_8h}{soilTreatFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{soil_treat_fields_8cpp}{soilTreatFields.cpp}\end{DoxyCompactItemize}

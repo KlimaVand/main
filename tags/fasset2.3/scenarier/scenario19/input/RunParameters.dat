@@ -1,0 +1,65 @@
+[Potato]
+//MaxRootDepthCrop  1.5
+//Conversfactor     0.4
+//LAIDMRatio        0.015
+//MaxRadUseEff      4.0
+
+[Pea]
+MinN_Store  0.04
+MaxN_Store  0.06
+// DMCostPerN  20 //DMCostPerN  15 (original) //DMCostPerN  10
+MaxFixPerDM  0.026 // Calculated from Nielsen et al. (2009)// MaxFixPerDM  0.02 (currently used for PEA) //MaxFixPerDM  0.027 (original)
+MaxRadUseEff  3.0 // MaxRadUseEff      2.0 //from Loss et al. (1997) // MaxRadUseEff      5.3 (MEL)
+// TS0  200
+// TS1  410
+// TS2  170
+// TS3  360
+
+[SpringBarley]
+FillFactor  0.6
+MinN_Store  0.015
+MaxN_Store  0.025
+MaxRadUseEff  3.7
+LAIDMRatio         0.015
+LAINitrogenRatio   0.4
+NitrateUptakeRate   0.000036;     // Uptake rate for nitrate-N g/m/d (m root length)
+k  0.65
+// MaxRootDepthCrop  0.2
+
+[Clover]
+MaxFixPerDM  0.022 
+// DMCostPerN   10.0
+// MaxDMtemp    10.0
+// MinDMtemp    2.0
+MaxRadUseEff  3.2
+// PowDM  0.0
+// NPctMax  4.5
+// LinearLeafPhase  3000
+//CoeffGreenIdx  0.057
+//CoeffGreenIdx      0.0092    
+//TS1  2500  
+//TS0  20
+//TS2  170
+k  1.0
+FractionNminInRoots  1.0       //Fraction of N in roots present as mineral N
+FractionNminInVegTop  1.0       //Fraction of N in VegTop present as mineral N
+//LAIDistributionPar  15.0
+
+
+
+[WinterWheat]
+WaterDeficitVegGrowth  0.0
+MaxRadUseEff  3.4
+k  0.44
+//InitialCAI  2.56
+//CoeffGreenIdx      0.0092
+LAIDMRatio         0.011
+//LAINitrogenRatio   0.4
+FillFactor  0.57
+//MinN_Store  0.02
+//MaxN_Store  0.027
+//TS1  200
+NitrateUptakeRate  	 0.000036;     // Uptake rate for nitrate-N g/m/d (m root length)
+//AmmoniumUptakeRate    0.0006;       // NEW value from DAISY (JB 2002-8) 0.0031;  
+
+[end]

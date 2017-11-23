@@ -1,0 +1,231 @@
+\hypertarget{classclone_list}{
+\section{cloneList$<$ T $>$ Class Template Reference}
+\label{classclone_list}\index{cloneList@{cloneList}}
+}
+
+
+{\ttfamily \#include $<$cloneList.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structclone_list_1_1_snode}{Snode}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structclone_list_1_1_snode}{Snode} $\ast$ \hyperlink{classclone_list_ac029edd1aa35f72f80aa0e52d8cfd106}{PS}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classclone_list_aaa28fe3ad846446120b27a1928dd406b}{CheckHeadAndTail} (char $\ast$c)
+\item 
+\hyperlink{classclone_list_a4734bf21bc044a2e277d51c6b12f605a}{cloneList} ()
+\item 
+\hyperlink{classclone_list_a4b1c911fa45b3525ecbaa754fb0c6e48}{$\sim$cloneList} ()
+\item 
+void \hyperlink{classclone_list_a2780cfb6574e5cd9b8797b1b5c8c9ad6}{PeekHead} (\hyperlink{structclone_list_1_1_snode}{PS} \&P)
+\item 
+void \hyperlink{classclone_list_a5c93719d6da05ac5249e8535c5c644d8}{PeekTail} (\hyperlink{structclone_list_1_1_snode}{PS} \&P)
+\item 
+int \hyperlink{classclone_list_a8f54a13007e33d1a1f08f77a0bd70927}{NumOfNodes} ()
+\item 
+void \hyperlink{classclone_list_a2e89afbba3e4eb248912cc2bd1830e7f}{OneStep} (\hyperlink{structclone_list_1_1_snode}{PS} \&P)
+\item 
+void \hyperlink{classclone_list_adbe44f675a57126b264432f5eda3f5fb}{Remove} (\hyperlink{structclone_list_1_1_snode}{PS} \&R)
+\item 
+void \hyperlink{classclone_list_a9dd071686629c50a473d691f2de1e0a2}{Release} (\hyperlink{structclone_list_1_1_snode}{PS} \&R)
+\item 
+void \hyperlink{classclone_list_a06a7e1332f87a0ace2d6b4293ba9f152}{InsertBefore} (\hyperlink{structclone_list_1_1_snode}{PS} \&S, \hyperlink{structclone_list_1_1_snode}{PS} \&P, T $\ast$E)
+\item 
+void \hyperlink{classclone_list_aa6c5dda0ddabd776d8aa4cf115a338e4}{InsertAfter} (\hyperlink{structclone_list_1_1_snode}{PS} \&S, \hyperlink{structclone_list_1_1_snode}{PS} \&P, T $\ast$E)
+\item 
+void \hyperlink{classclone_list_a14b4adf5b6e8ca8e6d262afcdb3cc42b}{InsertLast} (T $\ast$E)
+\item 
+void \hyperlink{classclone_list_a56a0c2c564dd251e6f9db7061370e1dc}{InsertFirst} (T $\ast$E)
+\item 
+void \hyperlink{classclone_list_a7f47b063b2357a0b391da5ecc9745524}{Reset} ()
+\item 
+void \hyperlink{classclone_list_ac4911df1517c594f4e0537f62f2751bc}{ForEach} (void($\ast$funcp)(T $\ast$))
+\item 
+double \hyperlink{classclone_list_a6bc26e4ddd491562d7349b0c4f7cf445}{AddForEach} (double($\ast$funcp)(T $\ast$))
+\item 
+void \hyperlink{classclone_list_a81bb55f92d51e3ffbeff53440537c84d}{FirstThat} (\hyperlink{structclone_list_1_1_snode}{PS} \&FT, int($\ast$funcp)(T $\ast$))
+\item 
+void \hyperlink{classclone_list_a5aca1d18d864f64a22a7f148e4e77dbf}{LastThat} (\hyperlink{structclone_list_1_1_snode}{PS} \&FT, int($\ast$funcp)(T $\ast$))
+\item 
+void \hyperlink{classclone_list_a0f871eb3e2f58a5c391fea0559e3e9fb}{SearchByNumber} (\hyperlink{structclone_list_1_1_snode}{PS} \&FT, int num)
+\item 
+T $\ast$ \hyperlink{classclone_list_a761c3700fcf12c3f48b3c34d2a0aef7f}{ElementAtNumber} (int num)
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ T $>$ $\ast$ \hyperlink{classclone_list_ac5e49d0132613e2bc1b5d148e83b22c7}{clone} () const 
+\item 
+void \hyperlink{classclone_list_a2e8c386500df44e04d8a8642ace18762}{ForgetAll} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classclone_list_acf959c1920c2b448fa4f68c35ce90044}{MakeFirstNode} (\hyperlink{structclone_list_1_1_snode}{PS} \&P, T $\ast$E)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structclone_list_1_1_snode}{PS} \hyperlink{classclone_list_a63ed3a2d8150bd059b176d2e3ac5264c}{Head}
+\item 
+\hyperlink{structclone_list_1_1_snode}{PS} \hyperlink{classclone_list_afc47ac761c75b14e0965888da6370790}{Tail}
+\item 
+int \hyperlink{classclone_list_a48e08f8fdedcda74b4d6afa17774e528}{numOfNodes}
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$class T$>$ class cloneList$<$ T $>$}
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classclone_list_ac029edd1aa35f72f80aa0e52d8cfd106}{
+\index{cloneList@{cloneList}!PS@{PS}}
+\index{PS@{PS}!cloneList@{cloneList}}
+\subsubsection[{PS}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ typedef {\bf Snode}$\ast$ {\bf cloneList}$<$ T $>$::{\bf PS}}}
+\label{classclone_list_ac029edd1aa35f72f80aa0e52d8cfd106}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classclone_list_a4734bf21bc044a2e277d51c6b12f605a}{
+\index{cloneList@{cloneList}!cloneList@{cloneList}}
+\index{cloneList@{cloneList}!cloneList@{cloneList}}
+\subsubsection[{cloneList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf cloneList}$<$ T $>$::{\bf cloneList} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a4734bf21bc044a2e277d51c6b12f605a}
+\hypertarget{classclone_list_a4b1c911fa45b3525ecbaa754fb0c6e48}{
+\index{cloneList@{cloneList}!$\sim$cloneList@{$\sim$cloneList}}
+\index{$\sim$cloneList@{$\sim$cloneList}!cloneList@{cloneList}}
+\subsubsection[{$\sim$cloneList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf cloneList}$<$ T $>$::$\sim${\bf cloneList} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a4b1c911fa45b3525ecbaa754fb0c6e48}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classclone_list_a6bc26e4ddd491562d7349b0c4f7cf445}{
+\index{cloneList@{cloneList}!AddForEach@{AddForEach}}
+\index{AddForEach@{AddForEach}!cloneList@{cloneList}}
+\subsubsection[{AddForEach}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ double {\bf cloneList}$<$ T $>$::AddForEach (double($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a6bc26e4ddd491562d7349b0c4f7cf445}
+\hypertarget{classclone_list_aaa28fe3ad846446120b27a1928dd406b}{
+\index{cloneList@{cloneList}!CheckHeadAndTail@{CheckHeadAndTail}}
+\index{CheckHeadAndTail@{CheckHeadAndTail}!cloneList@{cloneList}}
+\subsubsection[{CheckHeadAndTail}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::CheckHeadAndTail (char $\ast$ {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_aaa28fe3ad846446120b27a1928dd406b}
+\hypertarget{classclone_list_ac5e49d0132613e2bc1b5d148e83b22c7}{
+\index{cloneList@{cloneList}!clone@{clone}}
+\index{clone@{clone}!cloneList@{cloneList}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf cloneList}$<$ T $>$ $\ast$ {\bf cloneList}$<$ T $>$::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_ac5e49d0132613e2bc1b5d148e83b22c7}
+\hypertarget{classclone_list_a761c3700fcf12c3f48b3c34d2a0aef7f}{
+\index{cloneList@{cloneList}!ElementAtNumber@{ElementAtNumber}}
+\index{ElementAtNumber@{ElementAtNumber}!cloneList@{cloneList}}
+\subsubsection[{ElementAtNumber}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T $\ast$ {\bf cloneList}$<$ T $>$::ElementAtNumber (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a761c3700fcf12c3f48b3c34d2a0aef7f}
+\hypertarget{classclone_list_a81bb55f92d51e3ffbeff53440537c84d}{
+\index{cloneList@{cloneList}!FirstThat@{FirstThat}}
+\index{FirstThat@{FirstThat}!cloneList@{cloneList}}
+\subsubsection[{FirstThat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::FirstThat ({\bf PS} \& {\em FT}, \/  int($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a81bb55f92d51e3ffbeff53440537c84d}
+\hypertarget{classclone_list_ac4911df1517c594f4e0537f62f2751bc}{
+\index{cloneList@{cloneList}!ForEach@{ForEach}}
+\index{ForEach@{ForEach}!cloneList@{cloneList}}
+\subsubsection[{ForEach}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::ForEach (void($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_ac4911df1517c594f4e0537f62f2751bc}
+\hypertarget{classclone_list_a2e8c386500df44e04d8a8642ace18762}{
+\index{cloneList@{cloneList}!ForgetAll@{ForgetAll}}
+\index{ForgetAll@{ForgetAll}!cloneList@{cloneList}}
+\subsubsection[{ForgetAll}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::ForgetAll ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a2e8c386500df44e04d8a8642ace18762}
+\hypertarget{classclone_list_aa6c5dda0ddabd776d8aa4cf115a338e4}{
+\index{cloneList@{cloneList}!InsertAfter@{InsertAfter}}
+\index{InsertAfter@{InsertAfter}!cloneList@{cloneList}}
+\subsubsection[{InsertAfter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::InsertAfter ({\bf PS} \& {\em S}, \/  {\bf PS} \& {\em P}, \/  T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_aa6c5dda0ddabd776d8aa4cf115a338e4}
+\hypertarget{classclone_list_a06a7e1332f87a0ace2d6b4293ba9f152}{
+\index{cloneList@{cloneList}!InsertBefore@{InsertBefore}}
+\index{InsertBefore@{InsertBefore}!cloneList@{cloneList}}
+\subsubsection[{InsertBefore}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::InsertBefore ({\bf PS} \& {\em S}, \/  {\bf PS} \& {\em P}, \/  T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a06a7e1332f87a0ace2d6b4293ba9f152}
+\hypertarget{classclone_list_a56a0c2c564dd251e6f9db7061370e1dc}{
+\index{cloneList@{cloneList}!InsertFirst@{InsertFirst}}
+\index{InsertFirst@{InsertFirst}!cloneList@{cloneList}}
+\subsubsection[{InsertFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::InsertFirst (T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a56a0c2c564dd251e6f9db7061370e1dc}
+\hypertarget{classclone_list_a14b4adf5b6e8ca8e6d262afcdb3cc42b}{
+\index{cloneList@{cloneList}!InsertLast@{InsertLast}}
+\index{InsertLast@{InsertLast}!cloneList@{cloneList}}
+\subsubsection[{InsertLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::InsertLast (T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a14b4adf5b6e8ca8e6d262afcdb3cc42b}
+\hypertarget{classclone_list_a5aca1d18d864f64a22a7f148e4e77dbf}{
+\index{cloneList@{cloneList}!LastThat@{LastThat}}
+\index{LastThat@{LastThat}!cloneList@{cloneList}}
+\subsubsection[{LastThat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::LastThat ({\bf PS} \& {\em FT}, \/  int($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a5aca1d18d864f64a22a7f148e4e77dbf}
+\hypertarget{classclone_list_acf959c1920c2b448fa4f68c35ce90044}{
+\index{cloneList@{cloneList}!MakeFirstNode@{MakeFirstNode}}
+\index{MakeFirstNode@{MakeFirstNode}!cloneList@{cloneList}}
+\subsubsection[{MakeFirstNode}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf cloneList}$<$ T $>$::MakeFirstNode ({\bf PS} \& {\em P}, \/  T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classclone_list_acf959c1920c2b448fa4f68c35ce90044}
+\hypertarget{classclone_list_a8f54a13007e33d1a1f08f77a0bd70927}{
+\index{cloneList@{cloneList}!NumOfNodes@{NumOfNodes}}
+\index{NumOfNodes@{NumOfNodes}!cloneList@{cloneList}}
+\subsubsection[{NumOfNodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int {\bf cloneList}$<$ T $>$::NumOfNodes ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a8f54a13007e33d1a1f08f77a0bd70927}
+\hypertarget{classclone_list_a2e89afbba3e4eb248912cc2bd1830e7f}{
+\index{cloneList@{cloneList}!OneStep@{OneStep}}
+\index{OneStep@{OneStep}!cloneList@{cloneList}}
+\subsubsection[{OneStep}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::OneStep ({\bf PS} \& {\em P})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a2e89afbba3e4eb248912cc2bd1830e7f}
+\hypertarget{classclone_list_a2780cfb6574e5cd9b8797b1b5c8c9ad6}{
+\index{cloneList@{cloneList}!PeekHead@{PeekHead}}
+\index{PeekHead@{PeekHead}!cloneList@{cloneList}}
+\subsubsection[{PeekHead}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::PeekHead ({\bf PS} \& {\em P})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a2780cfb6574e5cd9b8797b1b5c8c9ad6}
+\hypertarget{classclone_list_a5c93719d6da05ac5249e8535c5c644d8}{
+\index{cloneList@{cloneList}!PeekTail@{PeekTail}}
+\index{PeekTail@{PeekTail}!cloneList@{cloneList}}
+\subsubsection[{PeekTail}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::PeekTail ({\bf PS} \& {\em P})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a5c93719d6da05ac5249e8535c5c644d8}
+\hypertarget{classclone_list_a9dd071686629c50a473d691f2de1e0a2}{
+\index{cloneList@{cloneList}!Release@{Release}}
+\index{Release@{Release}!cloneList@{cloneList}}
+\subsubsection[{Release}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::Release ({\bf PS} \& {\em R})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a9dd071686629c50a473d691f2de1e0a2}
+\hypertarget{classclone_list_adbe44f675a57126b264432f5eda3f5fb}{
+\index{cloneList@{cloneList}!Remove@{Remove}}
+\index{Remove@{Remove}!cloneList@{cloneList}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::Remove ({\bf PS} \& {\em R})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_adbe44f675a57126b264432f5eda3f5fb}
+\hypertarget{classclone_list_a7f47b063b2357a0b391da5ecc9745524}{
+\index{cloneList@{cloneList}!Reset@{Reset}}
+\index{Reset@{Reset}!cloneList@{cloneList}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::Reset ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a7f47b063b2357a0b391da5ecc9745524}
+\hypertarget{classclone_list_a0f871eb3e2f58a5c391fea0559e3e9fb}{
+\index{cloneList@{cloneList}!SearchByNumber@{SearchByNumber}}
+\index{SearchByNumber@{SearchByNumber}!cloneList@{cloneList}}
+\subsubsection[{SearchByNumber}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf cloneList}$<$ T $>$::SearchByNumber ({\bf PS} \& {\em FT}, \/  int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclone_list_a0f871eb3e2f58a5c391fea0559e3e9fb}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classclone_list_a63ed3a2d8150bd059b176d2e3ac5264c}{
+\index{cloneList@{cloneList}!Head@{Head}}
+\index{Head@{Head}!cloneList@{cloneList}}
+\subsubsection[{Head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf PS} {\bf cloneList}$<$ T $>$::{\bf Head}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classclone_list_a63ed3a2d8150bd059b176d2e3ac5264c}
+\hypertarget{classclone_list_a48e08f8fdedcda74b4d6afa17774e528}{
+\index{cloneList@{cloneList}!numOfNodes@{numOfNodes}}
+\index{numOfNodes@{numOfNodes}!cloneList@{cloneList}}
+\subsubsection[{numOfNodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf cloneList}$<$ T $>$::{\bf numOfNodes}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classclone_list_a48e08f8fdedcda74b4d6afa17774e528}
+\hypertarget{classclone_list_afc47ac761c75b14e0965888da6370790}{
+\index{cloneList@{cloneList}!Tail@{Tail}}
+\index{Tail@{Tail}!cloneList@{cloneList}}
+\subsubsection[{Tail}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf PS} {\bf cloneList}$<$ T $>$::{\bf Tail}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classclone_list_afc47ac761c75b14e0965888da6370790}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{clone_list_8h}{cloneList.h}\end{DoxyCompactItemize}

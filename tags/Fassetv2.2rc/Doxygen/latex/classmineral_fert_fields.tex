@@ -1,0 +1,117 @@
+\hypertarget{classmineral_fert_fields}{
+\section{mineralFertFields Class Reference}
+\label{classmineral_fert_fields}\index{mineralFertFields@{mineralFertFields}}
+}
+
+
+{\ttfamily \#include $<$mineralFertFields.h$>$}Inheritance diagram for mineralFertFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classmineral_fert_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmineral_fert_fields_ab9398eaffbf41879b66ec028d442e617}{mineralFertFields} ()
+\item 
+\hyperlink{classmineral_fert_fields_ae199e71e7532a348e6c251a94104e7ee}{mineralFertFields} (const \hyperlink{classmineral_fert_fields}{mineralFertFields} \&m)
+\item 
+virtual \hyperlink{classmineral_fert_fields_ab9828f2f16f5a2bd870beeaa2a0a57a0}{$\sim$mineralFertFields} ()
+\item 
+virtual \hyperlink{classmineral_fert_fields}{mineralFertFields} $\ast$ \hyperlink{classmineral_fert_fields_a29eb4d8ad0e09942f75f531c8b7c44b6}{clone} () const 
+\item 
+virtual bool \hyperlink{classmineral_fert_fields_a73b4d9ac6b06da725809f785a88edff1}{IsFertilizingOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+void \hyperlink{classmineral_fert_fields_a0fcabc516dd032435d3758a059a1c0f9}{DefineMineralFertFieldsOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, \hyperlink{classfertilizer}{fertilizer} $\ast$theFertilizer1, \hyperlink{classfertilizer}{fertilizer} $\ast$theFertilizer2, \hyperlink{classfertilizer}{fertilizer} $\ast$theFertilizer3)
+\item 
+virtual \hyperlink{classfertilizer}{fertilizer} $\ast$ \hyperlink{classmineral_fert_fields_a3a79f76ebce8738baa828a0b11db1f54}{GetFertilizer1} ()
+\item 
+virtual \hyperlink{classfertilizer}{fertilizer} $\ast$ \hyperlink{classmineral_fert_fields_a5c793240c6b803ab87c19d0be3513ea5}{GetFertilizer2} ()
+\item 
+virtual \hyperlink{classfertilizer}{fertilizer} $\ast$ \hyperlink{classmineral_fert_fields_a312491a593ff9258446d24704d833f5b}{GetFertilizer3} ()
+\item 
+virtual bool \hyperlink{classmineral_fert_fields_a9d71379448708130be77ca7166bb99dc}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\item 
+virtual void \hyperlink{classmineral_fert_fields_abbb016beaa3ec35d35a9ea0001c7b96c}{Output} (ofstream $\ast$fs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describe what to do when fertilisering a \hyperlink{classfield}{field} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmineral_fert_fields_ab9398eaffbf41879b66ec028d442e617}{
+\index{mineralFertFields@{mineralFertFields}!mineralFertFields@{mineralFertFields}}
+\index{mineralFertFields@{mineralFertFields}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{mineralFertFields}]{\setlength{\rightskip}{0pt plus 5cm}mineralFertFields::mineralFertFields ()}}
+\label{classmineral_fert_fields_ab9398eaffbf41879b66ec028d442e617}
+\hypertarget{classmineral_fert_fields_ae199e71e7532a348e6c251a94104e7ee}{
+\index{mineralFertFields@{mineralFertFields}!mineralFertFields@{mineralFertFields}}
+\index{mineralFertFields@{mineralFertFields}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{mineralFertFields}]{\setlength{\rightskip}{0pt plus 5cm}mineralFertFields::mineralFertFields (const {\bf mineralFertFields} \& {\em m})}}
+\label{classmineral_fert_fields_ae199e71e7532a348e6c251a94104e7ee}
+\hypertarget{classmineral_fert_fields_ab9828f2f16f5a2bd870beeaa2a0a57a0}{
+\index{mineralFertFields@{mineralFertFields}!$\sim$mineralFertFields@{$\sim$mineralFertFields}}
+\index{$\sim$mineralFertFields@{$\sim$mineralFertFields}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{$\sim$mineralFertFields}]{\setlength{\rightskip}{0pt plus 5cm}mineralFertFields::$\sim$mineralFertFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_fields_ab9828f2f16f5a2bd870beeaa2a0a57a0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmineral_fert_fields_a9d71379448708130be77ca7166bb99dc}{
+\index{mineralFertFields@{mineralFertFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool mineralFertFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_fields_a9d71379448708130be77ca7166bb99dc}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it will return the cost in the cost variable 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classmineral_fert_fields_a29eb4d8ad0e09942f75f531c8b7c44b6}{
+\index{mineralFertFields@{mineralFertFields}!clone@{clone}}
+\index{clone@{clone}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mineralFertFields} $\ast$ mineralFertFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_fields_a29eb4d8ad0e09942f75f531c8b7c44b6}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classmineral_fert_fields_a0fcabc516dd032435d3758a059a1c0f9}{
+\index{mineralFertFields@{mineralFertFields}!DefineMineralFertFieldsOp@{DefineMineralFertFieldsOp}}
+\index{DefineMineralFertFieldsOp@{DefineMineralFertFieldsOp}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{DefineMineralFertFieldsOp}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertFields::DefineMineralFertFieldsOp ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  {\bf fertilizer} $\ast$ {\em theFertilizer1}, \/  {\bf fertilizer} $\ast$ {\em theFertilizer2}, \/  {\bf fertilizer} $\ast$ {\em theFertilizer3})}}
+\label{classmineral_fert_fields_a0fcabc516dd032435d3758a059a1c0f9}
+\hypertarget{classmineral_fert_fields_a3a79f76ebce8738baa828a0b11db1f54}{
+\index{mineralFertFields@{mineralFertFields}!GetFertilizer1@{GetFertilizer1}}
+\index{GetFertilizer1@{GetFertilizer1}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{GetFertilizer1}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf fertilizer}$\ast$ mineralFertFields::GetFertilizer1 ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmineral_fert_fields_a3a79f76ebce8738baa828a0b11db1f54}
+\hypertarget{classmineral_fert_fields_a5c793240c6b803ab87c19d0be3513ea5}{
+\index{mineralFertFields@{mineralFertFields}!GetFertilizer2@{GetFertilizer2}}
+\index{GetFertilizer2@{GetFertilizer2}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{GetFertilizer2}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf fertilizer}$\ast$ mineralFertFields::GetFertilizer2 ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmineral_fert_fields_a5c793240c6b803ab87c19d0be3513ea5}
+\hypertarget{classmineral_fert_fields_a312491a593ff9258446d24704d833f5b}{
+\index{mineralFertFields@{mineralFertFields}!GetFertilizer3@{GetFertilizer3}}
+\index{GetFertilizer3@{GetFertilizer3}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{GetFertilizer3}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf fertilizer}$\ast$ mineralFertFields::GetFertilizer3 ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmineral_fert_fields_a312491a593ff9258446d24704d833f5b}
+\hypertarget{classmineral_fert_fields_a73b4d9ac6b06da725809f785a88edff1}{
+\index{mineralFertFields@{mineralFertFields}!IsFertilizingOp@{IsFertilizingOp}}
+\index{IsFertilizingOp@{IsFertilizingOp}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{IsFertilizingOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool mineralFertFields::IsFertilizingOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmineral_fert_fields_a73b4d9ac6b06da725809f785a88edff1}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_ae21a07b4ab147829465e5b79418708f7}{fieldOperationFields}.\hypertarget{classmineral_fert_fields_abbb016beaa3ec35d35a9ea0001c7b96c}{
+\index{mineralFertFields@{mineralFertFields}!Output@{Output}}
+\index{Output@{Output}!mineralFertFields@{mineralFertFields}}
+\subsubsection[{Output}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertFields::Output (ofstream $\ast$ {\em fs})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_fields_abbb016beaa3ec35d35a9ea0001c7b96c}
+Write down the Operation, the area of the \hyperlink{classfield}{field} and the time 
+
+Reimplemented from \hyperlink{classfield_operation_fields_a8dff595b832bca540dda946639f7f47a}{fieldOperationFields}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{mineral_fert_fields_8h}{mineralFertFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{mineral_fert_fields_8cpp}{mineralFertFields.cpp}\end{DoxyCompactItemize}

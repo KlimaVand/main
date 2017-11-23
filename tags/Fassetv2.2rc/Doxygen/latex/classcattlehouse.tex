@@ -1,0 +1,105 @@
+\hypertarget{classcattlehouse}{
+\section{cattlehouse Class Reference}
+\label{classcattlehouse}\index{cattlehouse@{cattlehouse}}
+}
+
+
+{\ttfamily \#include $<$cattlehouse.h$>$}Inheritance diagram for cattlehouse::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcattlehouse}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcattlehouse_afdd153b139a38dfbac4dfdb3fd558e73}{cattlehouse} (char $\ast$aname, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner, \hyperlink{classanimal_stock}{animalStock} $\ast$alivestock=NULL)
+\item 
+\hyperlink{classcattlehouse_aae784075e2e6f6518603cb85d0440d6a}{$\sim$cattlehouse} ()
+\item 
+string \hyperlink{classcattlehouse_ab4c837c538894c34c19d7a1cf23ce09f}{GetAnimalType} ()
+\item 
+void \hyperlink{classcattlehouse_ac9e26b19cc9e27590857650922c928a7}{SetLivestock} (\hyperlink{classdairy_stock}{dairyStock} $\ast$aLivestock)
+\item 
+virtual void \hyperlink{classcattlehouse_a75cd328a6b1b07b2eb49be0048ac889d}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classcattlehouse_a113f5bf0d97865c9872c0c4efd073861}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classcattlehouse_a7806fd8778ff33751dcb81e06a01471e}{CalcLP} ()
+\item 
+virtual void \hyperlink{classcattlehouse_ab71be5e3ab86351671ae24119ec62bd4}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+void \hyperlink{classcattlehouse_ad36720d676b62f2e8705994e70e0daf3}{PutStockInSection} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcattlehouse_afdd153b139a38dfbac4dfdb3fd558e73}{
+\index{cattlehouse@{cattlehouse}!cattlehouse@{cattlehouse}}
+\index{cattlehouse@{cattlehouse}!cattlehouse@{cattlehouse}}
+\subsubsection[{cattlehouse}]{\setlength{\rightskip}{0pt plus 5cm}cattlehouse::cattlehouse (char $\ast$ {\em aname}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner}, \/  {\bf animalStock} $\ast$ {\em alivestock} = {\ttfamily NULL})}}
+\label{classcattlehouse_afdd153b139a38dfbac4dfdb3fd558e73}
+\hypertarget{classcattlehouse_aae784075e2e6f6518603cb85d0440d6a}{
+\index{cattlehouse@{cattlehouse}!$\sim$cattlehouse@{$\sim$cattlehouse}}
+\index{$\sim$cattlehouse@{$\sim$cattlehouse}!cattlehouse@{cattlehouse}}
+\subsubsection[{$\sim$cattlehouse}]{\setlength{\rightskip}{0pt plus 5cm}cattlehouse::$\sim$cattlehouse ()}}
+\label{classcattlehouse_aae784075e2e6f6518603cb85d0440d6a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcattlehouse_a7806fd8778ff33751dcb81e06a01471e}{
+\index{cattlehouse@{cattlehouse}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!cattlehouse@{cattlehouse}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void cattlehouse::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattlehouse_a7806fd8778ff33751dcb81e06a01471e}
+CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classstable_acaf566bef659f0a671e27afa6244df4b}{stable}.\hypertarget{classcattlehouse_a75cd328a6b1b07b2eb49be0048ac889d}{
+\index{cattlehouse@{cattlehouse}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!cattlehouse@{cattlehouse}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void cattlehouse::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattlehouse_a75cd328a6b1b07b2eb49be0048ac889d}
+calling \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable::DailyUpdate()} 
+
+Reimplemented from \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable}.\hypertarget{classcattlehouse_ab4c837c538894c34c19d7a1cf23ce09f}{
+\index{cattlehouse@{cattlehouse}!GetAnimalType@{GetAnimalType}}
+\index{GetAnimalType@{GetAnimalType}!cattlehouse@{cattlehouse}}
+\subsubsection[{GetAnimalType}]{\setlength{\rightskip}{0pt plus 5cm}string cattlehouse::GetAnimalType ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattlehouse_ab4c837c538894c34c19d7a1cf23ce09f}
+returns the string \char`\"{}CATTLE\char`\"{} 
+
+Reimplemented from \hyperlink{classstable_af11653ccffcdc3bfb928d47485fc39b4}{stable}.\hypertarget{classcattlehouse_ab71be5e3ab86351671ae24119ec62bd4}{
+\index{cattlehouse@{cattlehouse}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!cattlehouse@{cattlehouse}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void cattlehouse::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattlehouse_ab71be5e3ab86351671ae24119ec62bd4}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{stable}.\hypertarget{classcattlehouse_ad36720d676b62f2e8705994e70e0daf3}{
+\index{cattlehouse@{cattlehouse}!PutStockInSection@{PutStockInSection}}
+\index{PutStockInSection@{PutStockInSection}!cattlehouse@{cattlehouse}}
+\subsubsection[{PutStockInSection}]{\setlength{\rightskip}{0pt plus 5cm}void cattlehouse::PutStockInSection ()}}
+\label{classcattlehouse_ad36720d676b62f2e8705994e70e0daf3}
+Checks is some \hyperlink{classanimal}{animal} is present. If not fasset will give this warning: \char`\"{}catstable::stable present but no livestock\char`\"{} \hypertarget{classcattlehouse_a113f5bf0d97865c9872c0c4efd073861}{
+\index{cattlehouse@{cattlehouse}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cattlehouse@{cattlehouse}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cattlehouse::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattlehouse_a113f5bf0d97865c9872c0c4efd073861}
+reading input files 
+
+Reimplemented from \hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{stable}.\hypertarget{classcattlehouse_ac9e26b19cc9e27590857650922c928a7}{
+\index{cattlehouse@{cattlehouse}!SetLivestock@{SetLivestock}}
+\index{SetLivestock@{SetLivestock}!cattlehouse@{cattlehouse}}
+\subsubsection[{SetLivestock}]{\setlength{\rightskip}{0pt plus 5cm}void cattlehouse::SetLivestock ({\bf dairyStock} $\ast$ {\em aLivestock})}}
+\label{classcattlehouse_ac9e26b19cc9e27590857650922c928a7}
+Set \hyperlink{classlivestock}{livestock} pointer, so that the \hyperlink{classanimal}{animal} house can find out about the animals it has 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{cattlehouse_8h}{cattlehouse.h}\item 
+C:/main/trunk/src/building/\hyperlink{cattlehouse_8cpp}{cattlehouse.cpp}\end{DoxyCompactItemize}

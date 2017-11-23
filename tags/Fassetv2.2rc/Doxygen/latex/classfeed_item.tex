@@ -1,0 +1,881 @@
+\hypertarget{classfeed_item}{
+\section{feedItem Class Reference}
+\label{classfeed_item}\index{feedItem@{feedItem}}
+}
+
+
+{\ttfamily \#include $<$feedItem.h$>$}Inheritance diagram for feedItem::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{classfeed_item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfeed_item_a73af127307e66daf2f3e33917b1280fb}{feedItem} ()
+\item 
+\hyperlink{classfeed_item_a197dc4177d7370a268a3415c6513f8c9}{feedItem} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classfeed_item_a0580da5b8464e7ff2e0c5f3dfb7d283f}{feedItem} (const \hyperlink{classfeed_item}{feedItem} \&afeedItem)
+\item 
+virtual \hyperlink{classfeed_item_af5ca79138cd28d4b7680dbb5a7364485}{$\sim$feedItem} ()
+\item 
+void \hyperlink{classfeed_item_a2d486d396496328acb2e582f893ec4de}{SetCa\_\-content} (double aCa\_\-content)
+\item 
+void \hyperlink{classfeed_item_af185439c6c0da32fc712bf9a35fda6c9}{SetNa\_\-content} (double aNa\_\-content)
+\item 
+void \hyperlink{classfeed_item_a95db87077d1b12a093660122ce24fabc}{SetMg\_\-content} (double aMg\_\-content)
+\item 
+void \hyperlink{classfeed_item_a7c18d24c378e42878f02a9176d50d602}{SetCu\_\-content} (double aCu\_\-content)
+\item 
+void \hyperlink{classfeed_item_a07bd81603f69ad7327240ed4cbe8d5dd}{Setfat} (double afat)
+\item 
+void \hyperlink{classfeed_item_a4a4100a9156246db8cfc71f3afb53ead}{Setsugar} (double asugar)
+\item 
+void \hyperlink{classfeed_item_aa8bab3d84660829128f91b2ae3dd0b80}{Setstarch} (double astarch)
+\item 
+void \hyperlink{classfeed_item_a4e2a499cdafc37014f23df3f07dcad23}{Setchew} (double achew)
+\item 
+void \hyperlink{classfeed_item_a5383fd234b023fc02524e43f6120b7f1}{Setaat} (double aaat)
+\item 
+void \hyperlink{classfeed_item_a8bec4685c5f70384fc3801c6c77dfc5a}{Setpbv} (double apbv)
+\item 
+void \hyperlink{classfeed_item_abbdbf6ffa1e77cd9fb8b4ba313caae2c}{Setcell} (double acell)
+\item 
+void \hyperlink{classfeed_item_a8ccb6b7516b1700a77e743ea15d778be}{Setfill} (double afill)
+\item 
+void \hyperlink{classfeed_item_af6ad7e93e9036dfb34a73c3232546d72}{SetfillU} (double afillU)
+\item 
+void \hyperlink{classfeed_item_a460189522e05438ac2c087df40434cd5}{SetMethionin} (double aMethionin)
+\item 
+void \hyperlink{classfeed_item_a66652abe6fd0ac478fc8f8fa62afb3b1}{SetThreonin} (double aThreonin)
+\item 
+void \hyperlink{classfeed_item_a8dd468e3cf1562e32c18f31363d4c3ea}{SetLysin} (double alysin)
+\item 
+void \hyperlink{classfeed_item_a6cea7c9bd1b2134a9714675e01b0c9f8}{SetproteinN\_\-digestibility} (double aproteinN\_\-digestibility)
+\item 
+void \hyperlink{classfeed_item_a09e4df6c141127dba83ca18d0878e0d3}{SetPlantName} (char aplantName\mbox{[}MAX\_\-TXT\mbox{]})
+\item 
+void \hyperlink{classfeed_item_a8f08fb0fa5aa998baec8cc09dda96f3e}{SetP\_\-digest} (double aP\_\-digest)
+\item 
+void \hyperlink{classfeed_item_aef50d0ad2fdb85bd962dfe5ee4fc5c4b}{SetMaxPercentage} (double aMaxPercentage)
+\item 
+void \hyperlink{classfeed_item_ab1d2af37391e40833af70b55b1ca6daf}{SetpigFeedUnitsPerItemUnit\_\-pregnant} (double apigFeedUnitsPerItemUnit)
+\item 
+void \hyperlink{classfeed_item_a18ed185e5691256001dbe832b2acea08}{SetOMD} (double aOMD)
+\item 
+void \hyperlink{classfeed_item_a2d4b61ce89e7e04f22c4454a63c0ed40}{SetpropRDP} (double aprop)
+\item 
+void \hyperlink{classfeed_item_a5cf127a6895d93e2a0ad370211693762}{SetpropAAinUDP} (double apropAAinUDP)
+\item 
+void \hyperlink{classfeed_item_ab36494c4378cdf496b70c9e92a5aeb40}{SetpropUDPdigestible} (double apropUDPdigestible)
+\item 
+void \hyperlink{classfeed_item_ab31be1d8bbd2be4fc1b96824e093306e}{SetmicroAAFactor} (double amicroAAFactor)
+\item 
+void \hyperlink{classfeed_item_aa50c44b1683a7dfb89f4af3b89cc8a84}{SetCHO\_\-content} (double aCHO\_\-content)
+\item 
+void \hyperlink{classfeed_item_a402e160cb67531d01d55621e7fab8c9b}{SetpropDigestCHO} (double apropDigestCHO)
+\item 
+void \hyperlink{classfeed_item_a524a9bf0c873bd9a420c3d66f837d005}{SetME} (double anME)
+\item 
+void \hyperlink{classfeed_item_aba08642a5aff1cc7222aaba9eb36f49a}{SetfeedCategory} (int aValue)
+\item 
+double \hyperlink{classfeed_item_a94fa874b2d66b1443fc2ebc26d4529aa}{GetOMD} (void) const 
+\item 
+double \hyperlink{classfeed_item_ac8e08bb19948212eccc3373ef2723be7}{GetproteinN\_\-digestibility} (void) const 
+\item 
+double \hyperlink{classfeed_item_a314101a64ec737a5927486a170221354}{GetfeedUnitsPerItemUnit} (void) const 
+\item 
+double \hyperlink{classfeed_item_a4d1c2b2b2a7712efa574f7449778ea2e}{GetCa\_\-content} (void) const 
+\item 
+double \hyperlink{classfeed_item_a0f82281bae07b0e543d12b3bcd73ffb7}{GetNa\_\-content} (void) const 
+\item 
+double \hyperlink{classfeed_item_ae07f366eec4cd04e9341405529c7dde7}{GetMg\_\-content} (void) const 
+\item 
+double \hyperlink{classfeed_item_ad7d0fb1b1df2e1b4bff4a88a731ca228}{GetCu\_\-content} (void) const 
+\item 
+double \hyperlink{classfeed_item_ae861dd22a8969ae2dabb00a2045f007c}{Getprotein\_\-N} (void) const 
+\item 
+double \hyperlink{classfeed_item_a83f57e603885d754d3bcdda09ab7957b}{Getfat} (void) const 
+\item 
+double \hyperlink{classfeed_item_a3f055d5bbb0f6466051560ce8806ed3f}{Getsugar} (void) const 
+\item 
+double \hyperlink{classfeed_item_a59a3cebd74f8c35ac5f4459ea9d837a1}{Getstarch} (void) const 
+\item 
+double \hyperlink{classfeed_item_abba921ea9d212032fd7b26f9b88a914b}{Getchew} (void) const 
+\item 
+double \hyperlink{classfeed_item_af006fe328a679e742fea693274e4cd18}{Getaat} (void) const 
+\item 
+double \hyperlink{classfeed_item_a1092222b8a89b1da63be44700369ba98}{Getpbv} (void) const 
+\item 
+double \hyperlink{classfeed_item_a9dfd0196ca3903aa35cd16cf4347e24f}{Getcell} (void) const 
+\item 
+double \hyperlink{classfeed_item_a8cbb0277a129786ec0ab344889f79023}{Getfill} (void) const 
+\item 
+double \hyperlink{classfeed_item_af97130ef91880018163acbc8dbe1e22c}{GetfillU} (void) const 
+\item 
+double \hyperlink{classfeed_item_ac0bd79ba7a1d138019d575f663d8c90e}{GetMethionin} (void) const 
+\item 
+double \hyperlink{classfeed_item_a6b9967db5cf1adde29ea5d92ff5659f2}{GetThreonin} (void) const 
+\item 
+double \hyperlink{classfeed_item_ab371de23a9de676670776b7af72a510f}{GetLysin} (void) const 
+\item 
+string \hyperlink{classfeed_item_a321aef5f54fda8f1efb8171b34426b97}{GetPlantName} (void) const 
+\item 
+double \hyperlink{classfeed_item_a7cdd42f66932edf929ceb2cc722a9388}{GetP\_\-digest} (void) const 
+\item 
+double \hyperlink{classfeed_item_a4d48b3435d41b59af68be30722fcab7f}{GetMaxPercentage} (void) const 
+\item 
+double \hyperlink{classfeed_item_ab3a6d62f0c19c58dc8437779ee7be171}{GetpigFeedUnitsPerItemUnit} (void) const 
+\item 
+double \hyperlink{classfeed_item_ad4a0a39f98a0ad57cc469d66eaacf576}{GetPropRDP} () const 
+\item 
+double \hyperlink{classfeed_item_aa8f5021c52de69702c08d5c8bb543a49}{GetmicroAAFactor} () const 
+\item 
+double \hyperlink{classfeed_item_a10093e6e59281eadf6ffb4e3c2a7c2b8}{GetpropAAinUDP} () const 
+\item 
+double \hyperlink{classfeed_item_a6721f9ea04781bf19ee97e9fbbcb32bb}{GetpropUDPdigestible} () const 
+\item 
+double \hyperlink{classfeed_item_ab902ec2617b4088620e2ef834738d67a}{GetCHOContent} () const 
+\item 
+double \hyperlink{classfeed_item_aca03317c4df43555b701e1bd11f7e287}{GetpropDigestCHO} () const 
+\item 
+double \hyperlink{classfeed_item_a8691a50ce52a8c3da1d022cae9b4ff13}{GetME} () const 
+\item 
+virtual double \hyperlink{classfeed_item_a9108f7c64a99965e0275b63c76a15f5b}{GetProteinContent} ()
+\item 
+virtual double \hyperlink{classfeed_item_a362c088eb02c044aabff9e987de44c11}{GetdigestibleEnergy} ()
+\item 
+virtual string \hyperlink{classfeed_item_a4f69deaedb7678ebab0aa8feb267ac64}{DerivedFrom} () const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classfeed_item_aff5b258f8da3b96282898cb9fa685c2f}{operator=} (const \hyperlink{classproduct}{product} \&someFeedItem)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classfeed_item_ab2bb86c4db1650dac95b927ce96f45c5}{operator+} (const \hyperlink{classproduct}{product} \&someFeedItem)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classfeed_item_aa3d93bb82d9d41b25214375a88ee36f8}{operator-\/} (const \hyperlink{classproduct}{product} \&someFeedItem)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classfeed_item_a7e3003ebb344d52fea31448657666253}{clone} () const 
+\item 
+bool \hyperlink{classfeed_item_ae5e9716346904aac836c5c3c2f49de3c}{ReadParams} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classfeed_item_a86cf44036c42020b4760d1e9b79f2bd1}{CalcDigestibility} ()
+\item 
+void \hyperlink{classfeed_item_aaed43966abf8f097fc6245e97ecb2726}{CopyFromPlantItem} (const \hyperlink{classplant_item}{plantItem} \&somePlantItem, int feedCat)
+\item 
+virtual double \hyperlink{classfeed_item_a3ecdcc476b661f9bc22864de7ee4da56}{CalcNFE} ()
+\item 
+virtual double \hyperlink{classfeed_item_a6b6490080cfae6efeaaeb7d4f92f9d05}{GetC} ()
+\item 
+virtual double \hyperlink{classfeed_item_af2e734ffbfb0150e8835f00828d100c4}{GetGrossEnergy} ()
+\item 
+virtual void \hyperlink{classfeed_item_a638c45c2e59d81f7e21cd92b511db906}{CalcFE} ()
+\item 
+virtual void \hyperlink{classfeed_item_a65b1eff694520848d90bcecad5f1c317}{CalcME} ()
+\item 
+virtual void \hyperlink{classfeed_item_a1df09eb5f68546dac21b1088cee22cea}{CalcFill} (int type)
+\item 
+virtual void \hyperlink{classfeed_item_ab684796df8e02d6ba66bbf0c39328dc5}{CalcAAT\_\-PBV} ()
+\item 
+virtual int \hyperlink{classfeed_item_a6f91099ccf3f6eb6d80a77d2d7741ae4}{GetfeedCategory} ()
+\item 
+virtual int \hyperlink{classfeed_item_ad32ea468e670ec4226661e1983116495}{GotItAll} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classfeed_item_ae08d4c420b75b14c595dab525f96dd9d}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classfeed_item_ac788c820b5c7d3312930d93c26dad5b0}{Ca\_\-content}
+\item 
+double \hyperlink{classfeed_item_a502f94112d21a2ce72fa9236f627453c}{Na\_\-content}
+\item 
+double \hyperlink{classfeed_item_ac47eaa252e721c423a64258bf42feecd}{Mg\_\-content}
+\item 
+double \hyperlink{classfeed_item_a765c2b8d1d72ca2b57d0c2a798ef1741}{Cu\_\-content}
+\item 
+double \hyperlink{classfeed_item_a8bb7f5be1c2a911ce61015c4e2a2fdb4}{fat}
+\item 
+double \hyperlink{classfeed_item_a0c724ea2e335d283f04a717de7f3eb4d}{sugar}
+\item 
+double \hyperlink{classfeed_item_aab4b5a23a38d01c1494923072e5b3991}{starch}
+\item 
+double \hyperlink{classfeed_item_a7f5463568597590e951205e68bec8d86}{chew}
+\item 
+double \hyperlink{classfeed_item_a68a4482387c13fa8cddaae7b6f57eb41}{aat}
+\item 
+double \hyperlink{classfeed_item_aaf7dbc38398df3f6d73927d6a797b417}{pbv}
+\item 
+double \hyperlink{classfeed_item_a533e749e1e0a2dea338621c1a3b926dd}{cell}
+\item 
+double \hyperlink{classfeed_item_a3210be35981756a25d53371ed71867e0}{fill}
+\item 
+double \hyperlink{classfeed_item_a856e7c00740acebd3daadfadcd87054f}{fillU}
+\item 
+double \hyperlink{classfeed_item_ab969699325da0b1d3c5a24418d979d64}{Lysin}
+\item 
+double \hyperlink{classfeed_item_a1e32708aa4bf0d21ef5a3f7e913164d8}{Threonin}
+\item 
+double \hyperlink{classfeed_item_a056337f342f7ce38f626edaee5b289b4}{Methionin}
+\item 
+double \hyperlink{classfeed_item_a1c4362b35420029a919106eefaf07812}{P\_\-digest}
+\item 
+double \hyperlink{classfeed_item_ad14c160732a996add59bcd5982f85ae0}{MaxPercentage}
+\item 
+double \hyperlink{classfeed_item_a6ad62b61a9aafd6e7b11e42747e06a6f}{OMD}
+\item 
+double \hyperlink{classfeed_item_a6fbec7b5517fc40ec79d2025a8a4c5f3}{pigFeedUnitsPerItemUnit}
+\item 
+double \hyperlink{classfeed_item_a7631eb60bc61ffe1747e2d7905074354}{propRDP}
+\item 
+double \hyperlink{classfeed_item_ab36221fe47963d288d641657c5db3acb}{propAAinUDP}
+\item 
+double \hyperlink{classfeed_item_a9890859fae7f6b709f9842dcc1c3d11b}{propUDPdigestible}
+\item 
+double \hyperlink{classfeed_item_aee79c71dcce27b38af7153777916bf46}{microAAFactor}
+\item 
+double \hyperlink{classfeed_item_ad57f1616cff410de8e833da22378d416}{CHO\_\-content}
+\item 
+double \hyperlink{classfeed_item_a8ffe7ae013e011d4bede05e2e39039e0}{propDigestCHO}
+\item 
+double \hyperlink{classfeed_item_a4d57dea3c603dd66f10ff41a60454f7a}{ME}
+\item 
+string \hyperlink{classfeed_item_ad12c641f632a932c6123782c6a135db3}{plantName}
+\item 
+double \hyperlink{classfeed_item_aa01fdfb8e58ecf8c93596a5ace9465db}{proteinN\_\-digestibility}
+\item 
+double \hyperlink{classfeed_item_a0824c3a72ff1a705827a76d358d7648c}{feedUnitsPerItemUnit}
+\item 
+int \hyperlink{classfeed_item_a369939a9ed0763db7c8da0c17ee28faf}{feedCategory}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classfeed_item_ab4c308e0864a941e9652ae997df1142c}{operator$<$$<$} (ostream \&os, const \hyperlink{classfeed_item}{feedItem} \&afeedItem)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfeed_item_a73af127307e66daf2f3e33917b1280fb}{
+\index{feedItem@{feedItem}!feedItem@{feedItem}}
+\index{feedItem@{feedItem}!feedItem@{feedItem}}
+\subsubsection[{feedItem}]{\setlength{\rightskip}{0pt plus 5cm}feedItem::feedItem ()}}
+\label{classfeed_item_a73af127307e66daf2f3e33917b1280fb}
+\hypertarget{classfeed_item_a197dc4177d7370a268a3415c6513f8c9}{
+\index{feedItem@{feedItem}!feedItem@{feedItem}}
+\index{feedItem@{feedItem}!feedItem@{feedItem}}
+\subsubsection[{feedItem}]{\setlength{\rightskip}{0pt plus 5cm}feedItem::feedItem (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classfeed_item_a197dc4177d7370a268a3415c6513f8c9}
+\hypertarget{classfeed_item_a0580da5b8464e7ff2e0c5f3dfb7d283f}{
+\index{feedItem@{feedItem}!feedItem@{feedItem}}
+\index{feedItem@{feedItem}!feedItem@{feedItem}}
+\subsubsection[{feedItem}]{\setlength{\rightskip}{0pt plus 5cm}feedItem::feedItem (const {\bf feedItem} \& {\em afeedItem})}}
+\label{classfeed_item_a0580da5b8464e7ff2e0c5f3dfb7d283f}
+\hypertarget{classfeed_item_af5ca79138cd28d4b7680dbb5a7364485}{
+\index{feedItem@{feedItem}!$\sim$feedItem@{$\sim$feedItem}}
+\index{$\sim$feedItem@{$\sim$feedItem}!feedItem@{feedItem}}
+\subsubsection[{$\sim$feedItem}]{\setlength{\rightskip}{0pt plus 5cm}feedItem::$\sim$feedItem ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_af5ca79138cd28d4b7680dbb5a7364485}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfeed_item_ab684796df8e02d6ba66bbf0c39328dc5}{
+\index{feedItem@{feedItem}!CalcAAT\_\-PBV@{CalcAAT\_\-PBV}}
+\index{CalcAAT\_\-PBV@{CalcAAT\_\-PBV}!feedItem@{feedItem}}
+\subsubsection[{CalcAAT\_\-PBV}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::CalcAAT\_\-PBV ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_ab684796df8e02d6ba66bbf0c39328dc5}
+\hypertarget{classfeed_item_a86cf44036c42020b4760d1e9b79f2bd1}{
+\index{feedItem@{feedItem}!CalcDigestibility@{CalcDigestibility}}
+\index{CalcDigestibility@{CalcDigestibility}!feedItem@{feedItem}}
+\subsubsection[{CalcDigestibility}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::CalcDigestibility ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a86cf44036c42020b4760d1e9b79f2bd1}
+\hypertarget{classfeed_item_a638c45c2e59d81f7e21cd92b511db906}{
+\index{feedItem@{feedItem}!CalcFE@{CalcFE}}
+\index{CalcFE@{CalcFE}!feedItem@{feedItem}}
+\subsubsection[{CalcFE}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::CalcFE ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a638c45c2e59d81f7e21cd92b511db906}
+\hypertarget{classfeed_item_a1df09eb5f68546dac21b1088cee22cea}{
+\index{feedItem@{feedItem}!CalcFill@{CalcFill}}
+\index{CalcFill@{CalcFill}!feedItem@{feedItem}}
+\subsubsection[{CalcFill}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::CalcFill (int {\em type})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a1df09eb5f68546dac21b1088cee22cea}
+\hypertarget{classfeed_item_a65b1eff694520848d90bcecad5f1c317}{
+\index{feedItem@{feedItem}!CalcME@{CalcME}}
+\index{CalcME@{CalcME}!feedItem@{feedItem}}
+\subsubsection[{CalcME}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::CalcME ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a65b1eff694520848d90bcecad5f1c317}
+\hypertarget{classfeed_item_a3ecdcc476b661f9bc22864de7ee4da56}{
+\index{feedItem@{feedItem}!CalcNFE@{CalcNFE}}
+\index{CalcNFE@{CalcNFE}!feedItem@{feedItem}}
+\subsubsection[{CalcNFE}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::CalcNFE ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a3ecdcc476b661f9bc22864de7ee4da56}
+\hypertarget{classfeed_item_a7e3003ebb344d52fea31448657666253}{
+\index{feedItem@{feedItem}!clone@{clone}}
+\index{clone@{clone}!feedItem@{feedItem}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ feedItem::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a7e3003ebb344d52fea31448657666253}
+
+
+Reimplemented from \hyperlink{classlive_matter_a08101ef64ee3eeec55d222bb75975370}{liveMatter}.
+
+Reimplemented in \hyperlink{classfeed__resource_ab5b47b60feeca736e185b15a5125836a}{feed\_\-resource}.\hypertarget{classfeed_item_aaed43966abf8f097fc6245e97ecb2726}{
+\index{feedItem@{feedItem}!CopyFromPlantItem@{CopyFromPlantItem}}
+\index{CopyFromPlantItem@{CopyFromPlantItem}!feedItem@{feedItem}}
+\subsubsection[{CopyFromPlantItem}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::CopyFromPlantItem (const {\bf plantItem} \& {\em somePlantItem}, \/  int {\em feedCat})}}
+\label{classfeed_item_aaed43966abf8f097fc6245e97ecb2726}
+\hypertarget{classfeed_item_a4f69deaedb7678ebab0aa8feb267ac64}{
+\index{feedItem@{feedItem}!DerivedFrom@{DerivedFrom}}
+\index{DerivedFrom@{DerivedFrom}!feedItem@{feedItem}}
+\subsubsection[{DerivedFrom}]{\setlength{\rightskip}{0pt plus 5cm}string feedItem::DerivedFrom () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a4f69deaedb7678ebab0aa8feb267ac64}
+
+
+Reimplemented from \hyperlink{classproduct_a57ad202aca39d005745e104f91349908}{product}.\hypertarget{classfeed_item_af006fe328a679e742fea693274e4cd18}{
+\index{feedItem@{feedItem}!Getaat@{Getaat}}
+\index{Getaat@{Getaat}!feedItem@{feedItem}}
+\subsubsection[{Getaat}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getaat (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_af006fe328a679e742fea693274e4cd18}
+\hypertarget{classfeed_item_a6b6490080cfae6efeaaeb7d4f92f9d05}{
+\index{feedItem@{feedItem}!GetC@{GetC}}
+\index{GetC@{GetC}!feedItem@{feedItem}}
+\subsubsection[{GetC}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetC ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a6b6490080cfae6efeaaeb7d4f92f9d05}
+\hypertarget{classfeed_item_a4d1c2b2b2a7712efa574f7449778ea2e}{
+\index{feedItem@{feedItem}!GetCa\_\-content@{GetCa\_\-content}}
+\index{GetCa\_\-content@{GetCa\_\-content}!feedItem@{feedItem}}
+\subsubsection[{GetCa\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetCa\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a4d1c2b2b2a7712efa574f7449778ea2e}
+\hypertarget{classfeed_item_a9dfd0196ca3903aa35cd16cf4347e24f}{
+\index{feedItem@{feedItem}!Getcell@{Getcell}}
+\index{Getcell@{Getcell}!feedItem@{feedItem}}
+\subsubsection[{Getcell}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getcell (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a9dfd0196ca3903aa35cd16cf4347e24f}
+\hypertarget{classfeed_item_abba921ea9d212032fd7b26f9b88a914b}{
+\index{feedItem@{feedItem}!Getchew@{Getchew}}
+\index{Getchew@{Getchew}!feedItem@{feedItem}}
+\subsubsection[{Getchew}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getchew (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_abba921ea9d212032fd7b26f9b88a914b}
+\hypertarget{classfeed_item_ab902ec2617b4088620e2ef834738d67a}{
+\index{feedItem@{feedItem}!GetCHOContent@{GetCHOContent}}
+\index{GetCHOContent@{GetCHOContent}!feedItem@{feedItem}}
+\subsubsection[{GetCHOContent}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetCHOContent () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ab902ec2617b4088620e2ef834738d67a}
+\hypertarget{classfeed_item_ad7d0fb1b1df2e1b4bff4a88a731ca228}{
+\index{feedItem@{feedItem}!GetCu\_\-content@{GetCu\_\-content}}
+\index{GetCu\_\-content@{GetCu\_\-content}!feedItem@{feedItem}}
+\subsubsection[{GetCu\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetCu\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ad7d0fb1b1df2e1b4bff4a88a731ca228}
+\hypertarget{classfeed_item_a362c088eb02c044aabff9e987de44c11}{
+\index{feedItem@{feedItem}!GetdigestibleEnergy@{GetdigestibleEnergy}}
+\index{GetdigestibleEnergy@{GetdigestibleEnergy}!feedItem@{feedItem}}
+\subsubsection[{GetdigestibleEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetdigestibleEnergy ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a362c088eb02c044aabff9e987de44c11}
+\hypertarget{classfeed_item_a83f57e603885d754d3bcdda09ab7957b}{
+\index{feedItem@{feedItem}!Getfat@{Getfat}}
+\index{Getfat@{Getfat}!feedItem@{feedItem}}
+\subsubsection[{Getfat}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getfat (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a83f57e603885d754d3bcdda09ab7957b}
+\hypertarget{classfeed_item_a6f91099ccf3f6eb6d80a77d2d7741ae4}{
+\index{feedItem@{feedItem}!GetfeedCategory@{GetfeedCategory}}
+\index{GetfeedCategory@{GetfeedCategory}!feedItem@{feedItem}}
+\subsubsection[{GetfeedCategory}]{\setlength{\rightskip}{0pt plus 5cm}virtual int feedItem::GetfeedCategory ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfeed_item_a6f91099ccf3f6eb6d80a77d2d7741ae4}
+\hypertarget{classfeed_item_a314101a64ec737a5927486a170221354}{
+\index{feedItem@{feedItem}!GetfeedUnitsPerItemUnit@{GetfeedUnitsPerItemUnit}}
+\index{GetfeedUnitsPerItemUnit@{GetfeedUnitsPerItemUnit}!feedItem@{feedItem}}
+\subsubsection[{GetfeedUnitsPerItemUnit}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetfeedUnitsPerItemUnit (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a314101a64ec737a5927486a170221354}
+\hypertarget{classfeed_item_a8cbb0277a129786ec0ab344889f79023}{
+\index{feedItem@{feedItem}!Getfill@{Getfill}}
+\index{Getfill@{Getfill}!feedItem@{feedItem}}
+\subsubsection[{Getfill}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getfill (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a8cbb0277a129786ec0ab344889f79023}
+\hypertarget{classfeed_item_af97130ef91880018163acbc8dbe1e22c}{
+\index{feedItem@{feedItem}!GetfillU@{GetfillU}}
+\index{GetfillU@{GetfillU}!feedItem@{feedItem}}
+\subsubsection[{GetfillU}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetfillU (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_af97130ef91880018163acbc8dbe1e22c}
+\hypertarget{classfeed_item_af2e734ffbfb0150e8835f00828d100c4}{
+\index{feedItem@{feedItem}!GetGrossEnergy@{GetGrossEnergy}}
+\index{GetGrossEnergy@{GetGrossEnergy}!feedItem@{feedItem}}
+\subsubsection[{GetGrossEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetGrossEnergy ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_af2e734ffbfb0150e8835f00828d100c4}
+\hypertarget{classfeed_item_ab371de23a9de676670776b7af72a510f}{
+\index{feedItem@{feedItem}!GetLysin@{GetLysin}}
+\index{GetLysin@{GetLysin}!feedItem@{feedItem}}
+\subsubsection[{GetLysin}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetLysin (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ab371de23a9de676670776b7af72a510f}
+\hypertarget{classfeed_item_a4d48b3435d41b59af68be30722fcab7f}{
+\index{feedItem@{feedItem}!GetMaxPercentage@{GetMaxPercentage}}
+\index{GetMaxPercentage@{GetMaxPercentage}!feedItem@{feedItem}}
+\subsubsection[{GetMaxPercentage}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetMaxPercentage (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a4d48b3435d41b59af68be30722fcab7f}
+\hypertarget{classfeed_item_a8691a50ce52a8c3da1d022cae9b4ff13}{
+\index{feedItem@{feedItem}!GetME@{GetME}}
+\index{GetME@{GetME}!feedItem@{feedItem}}
+\subsubsection[{GetME}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetME () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a8691a50ce52a8c3da1d022cae9b4ff13}
+\hypertarget{classfeed_item_ac0bd79ba7a1d138019d575f663d8c90e}{
+\index{feedItem@{feedItem}!GetMethionin@{GetMethionin}}
+\index{GetMethionin@{GetMethionin}!feedItem@{feedItem}}
+\subsubsection[{GetMethionin}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetMethionin (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ac0bd79ba7a1d138019d575f663d8c90e}
+\hypertarget{classfeed_item_ae07f366eec4cd04e9341405529c7dde7}{
+\index{feedItem@{feedItem}!GetMg\_\-content@{GetMg\_\-content}}
+\index{GetMg\_\-content@{GetMg\_\-content}!feedItem@{feedItem}}
+\subsubsection[{GetMg\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetMg\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ae07f366eec4cd04e9341405529c7dde7}
+\hypertarget{classfeed_item_aa8f5021c52de69702c08d5c8bb543a49}{
+\index{feedItem@{feedItem}!GetmicroAAFactor@{GetmicroAAFactor}}
+\index{GetmicroAAFactor@{GetmicroAAFactor}!feedItem@{feedItem}}
+\subsubsection[{GetmicroAAFactor}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetmicroAAFactor () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_aa8f5021c52de69702c08d5c8bb543a49}
+\hypertarget{classfeed_item_a0f82281bae07b0e543d12b3bcd73ffb7}{
+\index{feedItem@{feedItem}!GetNa\_\-content@{GetNa\_\-content}}
+\index{GetNa\_\-content@{GetNa\_\-content}!feedItem@{feedItem}}
+\subsubsection[{GetNa\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetNa\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a0f82281bae07b0e543d12b3bcd73ffb7}
+\hypertarget{classfeed_item_a94fa874b2d66b1443fc2ebc26d4529aa}{
+\index{feedItem@{feedItem}!GetOMD@{GetOMD}}
+\index{GetOMD@{GetOMD}!feedItem@{feedItem}}
+\subsubsection[{GetOMD}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetOMD (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a94fa874b2d66b1443fc2ebc26d4529aa}
+\hypertarget{classfeed_item_a7cdd42f66932edf929ceb2cc722a9388}{
+\index{feedItem@{feedItem}!GetP\_\-digest@{GetP\_\-digest}}
+\index{GetP\_\-digest@{GetP\_\-digest}!feedItem@{feedItem}}
+\subsubsection[{GetP\_\-digest}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetP\_\-digest (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a7cdd42f66932edf929ceb2cc722a9388}
+\hypertarget{classfeed_item_a1092222b8a89b1da63be44700369ba98}{
+\index{feedItem@{feedItem}!Getpbv@{Getpbv}}
+\index{Getpbv@{Getpbv}!feedItem@{feedItem}}
+\subsubsection[{Getpbv}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getpbv (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a1092222b8a89b1da63be44700369ba98}
+\hypertarget{classfeed_item_ab3a6d62f0c19c58dc8437779ee7be171}{
+\index{feedItem@{feedItem}!GetpigFeedUnitsPerItemUnit@{GetpigFeedUnitsPerItemUnit}}
+\index{GetpigFeedUnitsPerItemUnit@{GetpigFeedUnitsPerItemUnit}!feedItem@{feedItem}}
+\subsubsection[{GetpigFeedUnitsPerItemUnit}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetpigFeedUnitsPerItemUnit (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ab3a6d62f0c19c58dc8437779ee7be171}
+\hypertarget{classfeed_item_a321aef5f54fda8f1efb8171b34426b97}{
+\index{feedItem@{feedItem}!GetPlantName@{GetPlantName}}
+\index{GetPlantName@{GetPlantName}!feedItem@{feedItem}}
+\subsubsection[{GetPlantName}]{\setlength{\rightskip}{0pt plus 5cm}string feedItem::GetPlantName (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a321aef5f54fda8f1efb8171b34426b97}
+\hypertarget{classfeed_item_a10093e6e59281eadf6ffb4e3c2a7c2b8}{
+\index{feedItem@{feedItem}!GetpropAAinUDP@{GetpropAAinUDP}}
+\index{GetpropAAinUDP@{GetpropAAinUDP}!feedItem@{feedItem}}
+\subsubsection[{GetpropAAinUDP}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetpropAAinUDP () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a10093e6e59281eadf6ffb4e3c2a7c2b8}
+\hypertarget{classfeed_item_aca03317c4df43555b701e1bd11f7e287}{
+\index{feedItem@{feedItem}!GetpropDigestCHO@{GetpropDigestCHO}}
+\index{GetpropDigestCHO@{GetpropDigestCHO}!feedItem@{feedItem}}
+\subsubsection[{GetpropDigestCHO}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetpropDigestCHO () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_aca03317c4df43555b701e1bd11f7e287}
+\hypertarget{classfeed_item_ad4a0a39f98a0ad57cc469d66eaacf576}{
+\index{feedItem@{feedItem}!GetPropRDP@{GetPropRDP}}
+\index{GetPropRDP@{GetPropRDP}!feedItem@{feedItem}}
+\subsubsection[{GetPropRDP}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetPropRDP () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ad4a0a39f98a0ad57cc469d66eaacf576}
+\hypertarget{classfeed_item_a6721f9ea04781bf19ee97e9fbbcb32bb}{
+\index{feedItem@{feedItem}!GetpropUDPdigestible@{GetpropUDPdigestible}}
+\index{GetpropUDPdigestible@{GetpropUDPdigestible}!feedItem@{feedItem}}
+\subsubsection[{GetpropUDPdigestible}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetpropUDPdigestible () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a6721f9ea04781bf19ee97e9fbbcb32bb}
+\hypertarget{classfeed_item_ae861dd22a8969ae2dabb00a2045f007c}{
+\index{feedItem@{feedItem}!Getprotein\_\-N@{Getprotein\_\-N}}
+\index{Getprotein\_\-N@{Getprotein\_\-N}!feedItem@{feedItem}}
+\subsubsection[{Getprotein\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getprotein\_\-N (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ae861dd22a8969ae2dabb00a2045f007c}
+\hypertarget{classfeed_item_a9108f7c64a99965e0275b63c76a15f5b}{
+\index{feedItem@{feedItem}!GetProteinContent@{GetProteinContent}}
+\index{GetProteinContent@{GetProteinContent}!feedItem@{feedItem}}
+\subsubsection[{GetProteinContent}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetProteinContent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_a9108f7c64a99965e0275b63c76a15f5b}
+\hypertarget{classfeed_item_ac8e08bb19948212eccc3373ef2723be7}{
+\index{feedItem@{feedItem}!GetproteinN\_\-digestibility@{GetproteinN\_\-digestibility}}
+\index{GetproteinN\_\-digestibility@{GetproteinN\_\-digestibility}!feedItem@{feedItem}}
+\subsubsection[{GetproteinN\_\-digestibility}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetproteinN\_\-digestibility (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ac8e08bb19948212eccc3373ef2723be7}
+\hypertarget{classfeed_item_a59a3cebd74f8c35ac5f4459ea9d837a1}{
+\index{feedItem@{feedItem}!Getstarch@{Getstarch}}
+\index{Getstarch@{Getstarch}!feedItem@{feedItem}}
+\subsubsection[{Getstarch}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getstarch (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a59a3cebd74f8c35ac5f4459ea9d837a1}
+\hypertarget{classfeed_item_a3f055d5bbb0f6466051560ce8806ed3f}{
+\index{feedItem@{feedItem}!Getsugar@{Getsugar}}
+\index{Getsugar@{Getsugar}!feedItem@{feedItem}}
+\subsubsection[{Getsugar}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::Getsugar (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a3f055d5bbb0f6466051560ce8806ed3f}
+\hypertarget{classfeed_item_a6b9967db5cf1adde29ea5d92ff5659f2}{
+\index{feedItem@{feedItem}!GetThreonin@{GetThreonin}}
+\index{GetThreonin@{GetThreonin}!feedItem@{feedItem}}
+\subsubsection[{GetThreonin}]{\setlength{\rightskip}{0pt plus 5cm}double feedItem::GetThreonin (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a6b9967db5cf1adde29ea5d92ff5659f2}
+\hypertarget{classfeed_item_ad32ea468e670ec4226661e1983116495}{
+\index{feedItem@{feedItem}!GotItAll@{GotItAll}}
+\index{GotItAll@{GotItAll}!feedItem@{feedItem}}
+\subsubsection[{GotItAll}]{\setlength{\rightskip}{0pt plus 5cm}int feedItem::GotItAll ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_ad32ea468e670ec4226661e1983116495}
+\hypertarget{classfeed_item_ae08d4c420b75b14c595dab525f96dd9d}{
+\index{feedItem@{feedItem}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!feedItem@{feedItem}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ae08d4c420b75b14c595dab525f96dd9d}
+
+
+Reimplemented from \hyperlink{classlive_matter_ab14efacc07e048507a6c3dd8d2942101}{liveMatter}.\hypertarget{classfeed_item_ab2bb86c4db1650dac95b927ce96f45c5}{
+\index{feedItem@{feedItem}!operator+@{operator+}}
+\index{operator+@{operator+}!feedItem@{feedItem}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& feedItem::operator+ (const {\bf product} \& {\em someFeedItem})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_ab2bb86c4db1650dac95b927ce96f45c5}
+
+
+Reimplemented from \hyperlink{classlive_matter_ae7a333e94f166a448a4b8f8b70ebe9fe}{liveMatter}.\hypertarget{classfeed_item_aa3d93bb82d9d41b25214375a88ee36f8}{
+\index{feedItem@{feedItem}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!feedItem@{feedItem}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& feedItem::operator-\/ (const {\bf product} \& {\em someFeedItem})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_aa3d93bb82d9d41b25214375a88ee36f8}
+
+
+Reimplemented from \hyperlink{classlive_matter_a6b8311a516ba78a7caacc80a28ec143e}{liveMatter}.\hypertarget{classfeed_item_aff5b258f8da3b96282898cb9fa685c2f}{
+\index{feedItem@{feedItem}!operator=@{operator=}}
+\index{operator=@{operator=}!feedItem@{feedItem}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& feedItem::operator= (const {\bf product} \& {\em someFeedItem})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfeed_item_aff5b258f8da3b96282898cb9fa685c2f}
+
+
+Reimplemented from \hyperlink{classlive_matter_a3b1eb79d0f248a4459874db44c335cac}{liveMatter}.
+
+Reimplemented in \hyperlink{classfeed__resource_af85c55e18f378ff9f64c962450237989}{feed\_\-resource}.\hypertarget{classfeed_item_ae5e9716346904aac836c5c3c2f49de3c}{
+\index{feedItem@{feedItem}!ReadParams@{ReadParams}}
+\index{ReadParams@{ReadParams}!feedItem@{feedItem}}
+\subsubsection[{ReadParams}]{\setlength{\rightskip}{0pt plus 5cm}bool feedItem::ReadParams (fstream $\ast$ {\em file})}}
+\label{classfeed_item_ae5e9716346904aac836c5c3c2f49de3c}
+\hypertarget{classfeed_item_a5383fd234b023fc02524e43f6120b7f1}{
+\index{feedItem@{feedItem}!Setaat@{Setaat}}
+\index{Setaat@{Setaat}!feedItem@{feedItem}}
+\subsubsection[{Setaat}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setaat (double {\em aaat})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a5383fd234b023fc02524e43f6120b7f1}
+\hypertarget{classfeed_item_a2d486d396496328acb2e582f893ec4de}{
+\index{feedItem@{feedItem}!SetCa\_\-content@{SetCa\_\-content}}
+\index{SetCa\_\-content@{SetCa\_\-content}!feedItem@{feedItem}}
+\subsubsection[{SetCa\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetCa\_\-content (double {\em aCa\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a2d486d396496328acb2e582f893ec4de}
+\hypertarget{classfeed_item_abbdbf6ffa1e77cd9fb8b4ba313caae2c}{
+\index{feedItem@{feedItem}!Setcell@{Setcell}}
+\index{Setcell@{Setcell}!feedItem@{feedItem}}
+\subsubsection[{Setcell}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setcell (double {\em acell})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_abbdbf6ffa1e77cd9fb8b4ba313caae2c}
+\hypertarget{classfeed_item_a4e2a499cdafc37014f23df3f07dcad23}{
+\index{feedItem@{feedItem}!Setchew@{Setchew}}
+\index{Setchew@{Setchew}!feedItem@{feedItem}}
+\subsubsection[{Setchew}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setchew (double {\em achew})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a4e2a499cdafc37014f23df3f07dcad23}
+\hypertarget{classfeed_item_aa50c44b1683a7dfb89f4af3b89cc8a84}{
+\index{feedItem@{feedItem}!SetCHO\_\-content@{SetCHO\_\-content}}
+\index{SetCHO\_\-content@{SetCHO\_\-content}!feedItem@{feedItem}}
+\subsubsection[{SetCHO\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetCHO\_\-content (double {\em aCHO\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_aa50c44b1683a7dfb89f4af3b89cc8a84}
+\hypertarget{classfeed_item_a7c18d24c378e42878f02a9176d50d602}{
+\index{feedItem@{feedItem}!SetCu\_\-content@{SetCu\_\-content}}
+\index{SetCu\_\-content@{SetCu\_\-content}!feedItem@{feedItem}}
+\subsubsection[{SetCu\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetCu\_\-content (double {\em aCu\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a7c18d24c378e42878f02a9176d50d602}
+\hypertarget{classfeed_item_a07bd81603f69ad7327240ed4cbe8d5dd}{
+\index{feedItem@{feedItem}!Setfat@{Setfat}}
+\index{Setfat@{Setfat}!feedItem@{feedItem}}
+\subsubsection[{Setfat}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setfat (double {\em afat})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a07bd81603f69ad7327240ed4cbe8d5dd}
+\hypertarget{classfeed_item_aba08642a5aff1cc7222aaba9eb36f49a}{
+\index{feedItem@{feedItem}!SetfeedCategory@{SetfeedCategory}}
+\index{SetfeedCategory@{SetfeedCategory}!feedItem@{feedItem}}
+\subsubsection[{SetfeedCategory}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetfeedCategory (int {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_aba08642a5aff1cc7222aaba9eb36f49a}
+\hypertarget{classfeed_item_a8ccb6b7516b1700a77e743ea15d778be}{
+\index{feedItem@{feedItem}!Setfill@{Setfill}}
+\index{Setfill@{Setfill}!feedItem@{feedItem}}
+\subsubsection[{Setfill}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setfill (double {\em afill})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a8ccb6b7516b1700a77e743ea15d778be}
+\hypertarget{classfeed_item_af6ad7e93e9036dfb34a73c3232546d72}{
+\index{feedItem@{feedItem}!SetfillU@{SetfillU}}
+\index{SetfillU@{SetfillU}!feedItem@{feedItem}}
+\subsubsection[{SetfillU}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetfillU (double {\em afillU})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_af6ad7e93e9036dfb34a73c3232546d72}
+\hypertarget{classfeed_item_a8dd468e3cf1562e32c18f31363d4c3ea}{
+\index{feedItem@{feedItem}!SetLysin@{SetLysin}}
+\index{SetLysin@{SetLysin}!feedItem@{feedItem}}
+\subsubsection[{SetLysin}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetLysin (double {\em alysin})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a8dd468e3cf1562e32c18f31363d4c3ea}
+\hypertarget{classfeed_item_aef50d0ad2fdb85bd962dfe5ee4fc5c4b}{
+\index{feedItem@{feedItem}!SetMaxPercentage@{SetMaxPercentage}}
+\index{SetMaxPercentage@{SetMaxPercentage}!feedItem@{feedItem}}
+\subsubsection[{SetMaxPercentage}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetMaxPercentage (double {\em aMaxPercentage})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_aef50d0ad2fdb85bd962dfe5ee4fc5c4b}
+\hypertarget{classfeed_item_a524a9bf0c873bd9a420c3d66f837d005}{
+\index{feedItem@{feedItem}!SetME@{SetME}}
+\index{SetME@{SetME}!feedItem@{feedItem}}
+\subsubsection[{SetME}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetME (double {\em anME})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a524a9bf0c873bd9a420c3d66f837d005}
+\hypertarget{classfeed_item_a460189522e05438ac2c087df40434cd5}{
+\index{feedItem@{feedItem}!SetMethionin@{SetMethionin}}
+\index{SetMethionin@{SetMethionin}!feedItem@{feedItem}}
+\subsubsection[{SetMethionin}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetMethionin (double {\em aMethionin})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a460189522e05438ac2c087df40434cd5}
+\hypertarget{classfeed_item_a95db87077d1b12a093660122ce24fabc}{
+\index{feedItem@{feedItem}!SetMg\_\-content@{SetMg\_\-content}}
+\index{SetMg\_\-content@{SetMg\_\-content}!feedItem@{feedItem}}
+\subsubsection[{SetMg\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetMg\_\-content (double {\em aMg\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a95db87077d1b12a093660122ce24fabc}
+\hypertarget{classfeed_item_ab31be1d8bbd2be4fc1b96824e093306e}{
+\index{feedItem@{feedItem}!SetmicroAAFactor@{SetmicroAAFactor}}
+\index{SetmicroAAFactor@{SetmicroAAFactor}!feedItem@{feedItem}}
+\subsubsection[{SetmicroAAFactor}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetmicroAAFactor (double {\em amicroAAFactor})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ab31be1d8bbd2be4fc1b96824e093306e}
+\hypertarget{classfeed_item_af185439c6c0da32fc712bf9a35fda6c9}{
+\index{feedItem@{feedItem}!SetNa\_\-content@{SetNa\_\-content}}
+\index{SetNa\_\-content@{SetNa\_\-content}!feedItem@{feedItem}}
+\subsubsection[{SetNa\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetNa\_\-content (double {\em aNa\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_af185439c6c0da32fc712bf9a35fda6c9}
+\hypertarget{classfeed_item_a18ed185e5691256001dbe832b2acea08}{
+\index{feedItem@{feedItem}!SetOMD@{SetOMD}}
+\index{SetOMD@{SetOMD}!feedItem@{feedItem}}
+\subsubsection[{SetOMD}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetOMD (double {\em aOMD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a18ed185e5691256001dbe832b2acea08}
+\hypertarget{classfeed_item_a8f08fb0fa5aa998baec8cc09dda96f3e}{
+\index{feedItem@{feedItem}!SetP\_\-digest@{SetP\_\-digest}}
+\index{SetP\_\-digest@{SetP\_\-digest}!feedItem@{feedItem}}
+\subsubsection[{SetP\_\-digest}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetP\_\-digest (double {\em aP\_\-digest})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a8f08fb0fa5aa998baec8cc09dda96f3e}
+\hypertarget{classfeed_item_a8bec4685c5f70384fc3801c6c77dfc5a}{
+\index{feedItem@{feedItem}!Setpbv@{Setpbv}}
+\index{Setpbv@{Setpbv}!feedItem@{feedItem}}
+\subsubsection[{Setpbv}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setpbv (double {\em apbv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a8bec4685c5f70384fc3801c6c77dfc5a}
+\hypertarget{classfeed_item_ab1d2af37391e40833af70b55b1ca6daf}{
+\index{feedItem@{feedItem}!SetpigFeedUnitsPerItemUnit\_\-pregnant@{SetpigFeedUnitsPerItemUnit\_\-pregnant}}
+\index{SetpigFeedUnitsPerItemUnit\_\-pregnant@{SetpigFeedUnitsPerItemUnit\_\-pregnant}!feedItem@{feedItem}}
+\subsubsection[{SetpigFeedUnitsPerItemUnit\_\-pregnant}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetpigFeedUnitsPerItemUnit\_\-pregnant (double {\em apigFeedUnitsPerItemUnit})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ab1d2af37391e40833af70b55b1ca6daf}
+\hypertarget{classfeed_item_a09e4df6c141127dba83ca18d0878e0d3}{
+\index{feedItem@{feedItem}!SetPlantName@{SetPlantName}}
+\index{SetPlantName@{SetPlantName}!feedItem@{feedItem}}
+\subsubsection[{SetPlantName}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetPlantName (char {\em aplantName}\mbox{[}MAX\_\-TXT\mbox{]})}}
+\label{classfeed_item_a09e4df6c141127dba83ca18d0878e0d3}
+\hypertarget{classfeed_item_a5cf127a6895d93e2a0ad370211693762}{
+\index{feedItem@{feedItem}!SetpropAAinUDP@{SetpropAAinUDP}}
+\index{SetpropAAinUDP@{SetpropAAinUDP}!feedItem@{feedItem}}
+\subsubsection[{SetpropAAinUDP}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetpropAAinUDP (double {\em apropAAinUDP})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a5cf127a6895d93e2a0ad370211693762}
+\hypertarget{classfeed_item_a402e160cb67531d01d55621e7fab8c9b}{
+\index{feedItem@{feedItem}!SetpropDigestCHO@{SetpropDigestCHO}}
+\index{SetpropDigestCHO@{SetpropDigestCHO}!feedItem@{feedItem}}
+\subsubsection[{SetpropDigestCHO}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetpropDigestCHO (double {\em apropDigestCHO})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a402e160cb67531d01d55621e7fab8c9b}
+\hypertarget{classfeed_item_a2d4b61ce89e7e04f22c4454a63c0ed40}{
+\index{feedItem@{feedItem}!SetpropRDP@{SetpropRDP}}
+\index{SetpropRDP@{SetpropRDP}!feedItem@{feedItem}}
+\subsubsection[{SetpropRDP}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetpropRDP (double {\em aprop})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a2d4b61ce89e7e04f22c4454a63c0ed40}
+\hypertarget{classfeed_item_ab36494c4378cdf496b70c9e92a5aeb40}{
+\index{feedItem@{feedItem}!SetpropUDPdigestible@{SetpropUDPdigestible}}
+\index{SetpropUDPdigestible@{SetpropUDPdigestible}!feedItem@{feedItem}}
+\subsubsection[{SetpropUDPdigestible}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetpropUDPdigestible (double {\em apropUDPdigestible})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_ab36494c4378cdf496b70c9e92a5aeb40}
+\hypertarget{classfeed_item_a6cea7c9bd1b2134a9714675e01b0c9f8}{
+\index{feedItem@{feedItem}!SetproteinN\_\-digestibility@{SetproteinN\_\-digestibility}}
+\index{SetproteinN\_\-digestibility@{SetproteinN\_\-digestibility}!feedItem@{feedItem}}
+\subsubsection[{SetproteinN\_\-digestibility}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetproteinN\_\-digestibility (double {\em aproteinN\_\-digestibility})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a6cea7c9bd1b2134a9714675e01b0c9f8}
+\hypertarget{classfeed_item_aa8bab3d84660829128f91b2ae3dd0b80}{
+\index{feedItem@{feedItem}!Setstarch@{Setstarch}}
+\index{Setstarch@{Setstarch}!feedItem@{feedItem}}
+\subsubsection[{Setstarch}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setstarch (double {\em astarch})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_aa8bab3d84660829128f91b2ae3dd0b80}
+\hypertarget{classfeed_item_a4a4100a9156246db8cfc71f3afb53ead}{
+\index{feedItem@{feedItem}!Setsugar@{Setsugar}}
+\index{Setsugar@{Setsugar}!feedItem@{feedItem}}
+\subsubsection[{Setsugar}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::Setsugar (double {\em asugar})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a4a4100a9156246db8cfc71f3afb53ead}
+\hypertarget{classfeed_item_a66652abe6fd0ac478fc8f8fa62afb3b1}{
+\index{feedItem@{feedItem}!SetThreonin@{SetThreonin}}
+\index{SetThreonin@{SetThreonin}!feedItem@{feedItem}}
+\subsubsection[{SetThreonin}]{\setlength{\rightskip}{0pt plus 5cm}void feedItem::SetThreonin (double {\em aThreonin})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfeed_item_a66652abe6fd0ac478fc8f8fa62afb3b1}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classfeed_item_ab4c308e0864a941e9652ae997df1142c}{
+\index{feedItem@{feedItem}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!feedItem@{feedItem}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf feedItem} \& {\em afeedItem})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classfeed_item_ab4c308e0864a941e9652ae997df1142c}
+
+
+Reimplemented from \hyperlink{classlive_matter_a694b548b571c88f71f2c7cc75b47d0fb}{liveMatter}.
+
+Reimplemented in \hyperlink{classfeed__resource_aac858c94a22c316b401e81352546407e}{feed\_\-resource}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classfeed_item_a68a4482387c13fa8cddaae7b6f57eb41}{
+\index{feedItem@{feedItem}!aat@{aat}}
+\index{aat@{aat}!feedItem@{feedItem}}
+\subsubsection[{aat}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::aat}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a68a4482387c13fa8cddaae7b6f57eb41}
+\hypertarget{classfeed_item_ac788c820b5c7d3312930d93c26dad5b0}{
+\index{feedItem@{feedItem}!Ca\_\-content@{Ca\_\-content}}
+\index{Ca\_\-content@{Ca\_\-content}!feedItem@{feedItem}}
+\subsubsection[{Ca\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Ca\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ac788c820b5c7d3312930d93c26dad5b0}
+\hypertarget{classfeed_item_a533e749e1e0a2dea338621c1a3b926dd}{
+\index{feedItem@{feedItem}!cell@{cell}}
+\index{cell@{cell}!feedItem@{feedItem}}
+\subsubsection[{cell}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::cell}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a533e749e1e0a2dea338621c1a3b926dd}
+\hypertarget{classfeed_item_a7f5463568597590e951205e68bec8d86}{
+\index{feedItem@{feedItem}!chew@{chew}}
+\index{chew@{chew}!feedItem@{feedItem}}
+\subsubsection[{chew}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::chew}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a7f5463568597590e951205e68bec8d86}
+\hypertarget{classfeed_item_ad57f1616cff410de8e833da22378d416}{
+\index{feedItem@{feedItem}!CHO\_\-content@{CHO\_\-content}}
+\index{CHO\_\-content@{CHO\_\-content}!feedItem@{feedItem}}
+\subsubsection[{CHO\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::CHO\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ad57f1616cff410de8e833da22378d416}
+\hypertarget{classfeed_item_a765c2b8d1d72ca2b57d0c2a798ef1741}{
+\index{feedItem@{feedItem}!Cu\_\-content@{Cu\_\-content}}
+\index{Cu\_\-content@{Cu\_\-content}!feedItem@{feedItem}}
+\subsubsection[{Cu\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Cu\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a765c2b8d1d72ca2b57d0c2a798ef1741}
+\hypertarget{classfeed_item_a8bb7f5be1c2a911ce61015c4e2a2fdb4}{
+\index{feedItem@{feedItem}!fat@{fat}}
+\index{fat@{fat}!feedItem@{feedItem}}
+\subsubsection[{fat}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::fat}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a8bb7f5be1c2a911ce61015c4e2a2fdb4}
+\hypertarget{classfeed_item_a369939a9ed0763db7c8da0c17ee28faf}{
+\index{feedItem@{feedItem}!feedCategory@{feedCategory}}
+\index{feedCategory@{feedCategory}!feedItem@{feedItem}}
+\subsubsection[{feedCategory}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf feedItem::feedCategory}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a369939a9ed0763db7c8da0c17ee28faf}
+\hypertarget{classfeed_item_a0824c3a72ff1a705827a76d358d7648c}{
+\index{feedItem@{feedItem}!feedUnitsPerItemUnit@{feedUnitsPerItemUnit}}
+\index{feedUnitsPerItemUnit@{feedUnitsPerItemUnit}!feedItem@{feedItem}}
+\subsubsection[{feedUnitsPerItemUnit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::feedUnitsPerItemUnit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a0824c3a72ff1a705827a76d358d7648c}
+\hypertarget{classfeed_item_a3210be35981756a25d53371ed71867e0}{
+\index{feedItem@{feedItem}!fill@{fill}}
+\index{fill@{fill}!feedItem@{feedItem}}
+\subsubsection[{fill}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::fill}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a3210be35981756a25d53371ed71867e0}
+\hypertarget{classfeed_item_a856e7c00740acebd3daadfadcd87054f}{
+\index{feedItem@{feedItem}!fillU@{fillU}}
+\index{fillU@{fillU}!feedItem@{feedItem}}
+\subsubsection[{fillU}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::fillU}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a856e7c00740acebd3daadfadcd87054f}
+\hypertarget{classfeed_item_ab969699325da0b1d3c5a24418d979d64}{
+\index{feedItem@{feedItem}!Lysin@{Lysin}}
+\index{Lysin@{Lysin}!feedItem@{feedItem}}
+\subsubsection[{Lysin}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Lysin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ab969699325da0b1d3c5a24418d979d64}
+\hypertarget{classfeed_item_ad14c160732a996add59bcd5982f85ae0}{
+\index{feedItem@{feedItem}!MaxPercentage@{MaxPercentage}}
+\index{MaxPercentage@{MaxPercentage}!feedItem@{feedItem}}
+\subsubsection[{MaxPercentage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::MaxPercentage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ad14c160732a996add59bcd5982f85ae0}
+\hypertarget{classfeed_item_a4d57dea3c603dd66f10ff41a60454f7a}{
+\index{feedItem@{feedItem}!ME@{ME}}
+\index{ME@{ME}!feedItem@{feedItem}}
+\subsubsection[{ME}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::ME}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a4d57dea3c603dd66f10ff41a60454f7a}
+\hypertarget{classfeed_item_a056337f342f7ce38f626edaee5b289b4}{
+\index{feedItem@{feedItem}!Methionin@{Methionin}}
+\index{Methionin@{Methionin}!feedItem@{feedItem}}
+\subsubsection[{Methionin}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Methionin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a056337f342f7ce38f626edaee5b289b4}
+\hypertarget{classfeed_item_ac47eaa252e721c423a64258bf42feecd}{
+\index{feedItem@{feedItem}!Mg\_\-content@{Mg\_\-content}}
+\index{Mg\_\-content@{Mg\_\-content}!feedItem@{feedItem}}
+\subsubsection[{Mg\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Mg\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ac47eaa252e721c423a64258bf42feecd}
+\hypertarget{classfeed_item_aee79c71dcce27b38af7153777916bf46}{
+\index{feedItem@{feedItem}!microAAFactor@{microAAFactor}}
+\index{microAAFactor@{microAAFactor}!feedItem@{feedItem}}
+\subsubsection[{microAAFactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::microAAFactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_aee79c71dcce27b38af7153777916bf46}
+\hypertarget{classfeed_item_a502f94112d21a2ce72fa9236f627453c}{
+\index{feedItem@{feedItem}!Na\_\-content@{Na\_\-content}}
+\index{Na\_\-content@{Na\_\-content}!feedItem@{feedItem}}
+\subsubsection[{Na\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Na\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a502f94112d21a2ce72fa9236f627453c}
+\hypertarget{classfeed_item_a6ad62b61a9aafd6e7b11e42747e06a6f}{
+\index{feedItem@{feedItem}!OMD@{OMD}}
+\index{OMD@{OMD}!feedItem@{feedItem}}
+\subsubsection[{OMD}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::OMD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a6ad62b61a9aafd6e7b11e42747e06a6f}
+\hypertarget{classfeed_item_a1c4362b35420029a919106eefaf07812}{
+\index{feedItem@{feedItem}!P\_\-digest@{P\_\-digest}}
+\index{P\_\-digest@{P\_\-digest}!feedItem@{feedItem}}
+\subsubsection[{P\_\-digest}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::P\_\-digest}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a1c4362b35420029a919106eefaf07812}
+\hypertarget{classfeed_item_aaf7dbc38398df3f6d73927d6a797b417}{
+\index{feedItem@{feedItem}!pbv@{pbv}}
+\index{pbv@{pbv}!feedItem@{feedItem}}
+\subsubsection[{pbv}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::pbv}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_aaf7dbc38398df3f6d73927d6a797b417}
+\hypertarget{classfeed_item_a6fbec7b5517fc40ec79d2025a8a4c5f3}{
+\index{feedItem@{feedItem}!pigFeedUnitsPerItemUnit@{pigFeedUnitsPerItemUnit}}
+\index{pigFeedUnitsPerItemUnit@{pigFeedUnitsPerItemUnit}!feedItem@{feedItem}}
+\subsubsection[{pigFeedUnitsPerItemUnit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::pigFeedUnitsPerItemUnit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a6fbec7b5517fc40ec79d2025a8a4c5f3}
+\hypertarget{classfeed_item_ad12c641f632a932c6123782c6a135db3}{
+\index{feedItem@{feedItem}!plantName@{plantName}}
+\index{plantName@{plantName}!feedItem@{feedItem}}
+\subsubsection[{plantName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf feedItem::plantName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ad12c641f632a932c6123782c6a135db3}
+\hypertarget{classfeed_item_ab36221fe47963d288d641657c5db3acb}{
+\index{feedItem@{feedItem}!propAAinUDP@{propAAinUDP}}
+\index{propAAinUDP@{propAAinUDP}!feedItem@{feedItem}}
+\subsubsection[{propAAinUDP}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::propAAinUDP}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_ab36221fe47963d288d641657c5db3acb}
+\hypertarget{classfeed_item_a8ffe7ae013e011d4bede05e2e39039e0}{
+\index{feedItem@{feedItem}!propDigestCHO@{propDigestCHO}}
+\index{propDigestCHO@{propDigestCHO}!feedItem@{feedItem}}
+\subsubsection[{propDigestCHO}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::propDigestCHO}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a8ffe7ae013e011d4bede05e2e39039e0}
+\hypertarget{classfeed_item_a7631eb60bc61ffe1747e2d7905074354}{
+\index{feedItem@{feedItem}!propRDP@{propRDP}}
+\index{propRDP@{propRDP}!feedItem@{feedItem}}
+\subsubsection[{propRDP}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::propRDP}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a7631eb60bc61ffe1747e2d7905074354}
+\hypertarget{classfeed_item_a9890859fae7f6b709f9842dcc1c3d11b}{
+\index{feedItem@{feedItem}!propUDPdigestible@{propUDPdigestible}}
+\index{propUDPdigestible@{propUDPdigestible}!feedItem@{feedItem}}
+\subsubsection[{propUDPdigestible}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::propUDPdigestible}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a9890859fae7f6b709f9842dcc1c3d11b}
+\hypertarget{classfeed_item_aa01fdfb8e58ecf8c93596a5ace9465db}{
+\index{feedItem@{feedItem}!proteinN\_\-digestibility@{proteinN\_\-digestibility}}
+\index{proteinN\_\-digestibility@{proteinN\_\-digestibility}!feedItem@{feedItem}}
+\subsubsection[{proteinN\_\-digestibility}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::proteinN\_\-digestibility}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_aa01fdfb8e58ecf8c93596a5ace9465db}
+\hypertarget{classfeed_item_aab4b5a23a38d01c1494923072e5b3991}{
+\index{feedItem@{feedItem}!starch@{starch}}
+\index{starch@{starch}!feedItem@{feedItem}}
+\subsubsection[{starch}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::starch}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_aab4b5a23a38d01c1494923072e5b3991}
+\hypertarget{classfeed_item_a0c724ea2e335d283f04a717de7f3eb4d}{
+\index{feedItem@{feedItem}!sugar@{sugar}}
+\index{sugar@{sugar}!feedItem@{feedItem}}
+\subsubsection[{sugar}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::sugar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a0c724ea2e335d283f04a717de7f3eb4d}
+\hypertarget{classfeed_item_a1e32708aa4bf0d21ef5a3f7e913164d8}{
+\index{feedItem@{feedItem}!Threonin@{Threonin}}
+\index{Threonin@{Threonin}!feedItem@{feedItem}}
+\subsubsection[{Threonin}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf feedItem::Threonin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfeed_item_a1e32708aa4bf0d21ef5a3f7e913164d8}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{feed_item_8h}{feedItem.h}\item 
+C:/main/trunk/src/products/\hyperlink{feed_item_8cpp}{feedItem.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+[Maize]
+TS0	50          // Sowing to emergence
+TS1       600              // Emergence to anthesis   
+TS2       700              // Anthesis to end of grainfilling
+TS3       200              // End of grainfilling to ripeness From MARKVAND (Sf4)
+TB0       5                // Corresponds to TS0
+TB1       8                // Corresponds to TS1
+TB2       5                // Corresponds to TS2
+TB3       8                // Corresponds to TS3
+[end]

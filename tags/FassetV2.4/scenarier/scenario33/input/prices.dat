@@ -1,0 +1,546 @@
+[price(1)]
+pricename      SEEDWNWHT
+rightrange       0
+leftrange        0
+basebuyprice     2.0
+alpha            1.0
+lambda           0.0
+
+[price(2)]
+pricename      SEEDWNRPE
+rightrange       0
+leftrange        0
+basebuyprice     47.42
+alpha            1.0
+lambda           0.0
+
+[price(3)]
+pricename      SEEDSPBARL
+rightrange       0
+leftrange        0
+basebuyprice     2.45
+alpha            1.0
+lambda           0.0
+
+[price(4)]
+pricename      SEEDRYEGRASS
+rightrange       0
+leftrange        0
+basebuyprice     15.71
+alpha            1.0
+lambda           0.0
+
+[price(5)]
+pricename      SEEDPEA
+rightrange       0
+leftrange        0
+basebuyprice     2.68
+alpha            1.0
+lambda           0.0
+
+[price(6)]
+pricename      WNWHT
+rightrange       0
+leftrange        0
+basesellprice    1003.0     
+basebuyprice     1086.0      
+alpha            1.0
+lambda           0.0
+
+[price(7)]
+pricename      WNRPE
+rightrange       0
+leftrange        0
+basesellprice    1442.0
+basebuyprice     1790.0      // check!
+alpha            1.0
+lambda           0.0
+
+[price(8)]
+pricename      BARLEY
+rightrange       0
+leftrange        0
+basesellprice    965.8
+basebuyprice     1087.7      
+alpha            1.0
+lambda           0.0
+
+[price(9)]
+pricename        PEA
+rightrange       0
+leftrange        0
+basesellprice    920.1
+basebuyprice     1170.0      // check!
+alpha            1.0
+lambda           0.0
+
+[price(10)]
+pricename      MINERAL-N
+rightrange       0
+leftrange        0
+basebuyprice     1.449
+alpha            1.0
+lambda           0.0
+
+[price(11)]
+pricename      MINERAL-P
+rightrange       0
+leftrange        0
+basebuyprice     3.12
+alpha            1.0
+lambda           0.0
+
+[price(12)]
+pricename      MINERAL-K
+rightrange       0
+leftrange        0
+basebuyprice     1.092
+alpha            1.0
+lambda           0.0
+
+[price(13)]
+pricename      TiltTop
+rightrange       0
+leftrange        0
+basebuyprice     300.0
+alpha            1.0
+lambda           0.0
+
+[price(14)]
+pricename      Express
+rightrange       0
+leftrange        0
+basebuyprice     55.0
+alpha            1.0
+lambda           0.0
+
+[price(15)]
+pricename      Manganchelate
+rightrange       0
+leftrange        0
+basebuyprice     5.0
+alpha            1.0
+lambda           0.0
+
+[price(16)]
+pricename      Oxitril
+rightrange       0
+leftrange        0
+basebuyprice     20.0
+alpha            1.0
+lambda           0.0
+
+[price(17)]
+pricename      Starane-180
+rightrange       0
+leftrange        0
+basebuyprice     200.0
+alpha            1.0
+lambda           0.0
+
+[price(18)]
+pricename      Stomp-SC
+rightrange       0
+leftrange        0
+basebuyprice     85.0
+alpha            1.0
+lambda           0.0
+
+[price(19)]
+pricename      Arelon
+rightrange       0
+leftrange        0
+basebuyprice     40.0
+alpha            1.0
+lambda           0.0
+
+[price(20)]
+pricename      Pirimor-G
+rightrange       0
+leftrange        0
+basebuyprice     404.0
+alpha            1.0
+lambda           0.0
+
+[price(21)]
+pricename      Treflan
+rightrange       0
+leftrange        0
+basebuyprice     60.0
+alpha            1.0
+lambda           0.0
+
+[price(22)]
+pricename      Kerb-F
+rightrange       0
+leftrange        0
+basebuyprice     20.0
+alpha            1.0
+lambda           0.0
+
+[price(23)]
+pricename      Fastac
+rightrange       0
+leftrange        0
+basebuyprice     200.0
+alpha            1.0
+lambda           0.0
+
+[price(24)]
+pricename      Tilt-250-EC
+rightrange       0
+leftrange        0
+basebuyprice     300.0
+alpha            1.0
+lambda           0.0
+
+[price(25)]
+pricename      Basagran-480
+rightrange       0
+leftrange        0
+basebuyprice     190.0
+alpha            1.0
+lambda           0.0
+
+[price(26)]
+pricename      WATER
+rightrange       0
+leftrange        0
+basebuyprice     0.0
+alpha            1.0
+lambda           0.0
+
+[price(27)]
+pricename      DIESEL
+rightrange       0
+leftrange        0
+basebuyprice     1.57
+alpha            1.0
+lambda           0.0
+
+[price(28)]
+pricename      ELECTRICITY
+rightrange       0
+leftrange        0
+basebuyprice     0.4312
+alpha            1.0
+lambda           0.0
+
+[price(29)]
+pricename      WHEAT
+rightrange       0
+leftrange        0
+basebuyprice     1086.0      
+alpha            1.0
+lambda           0.0
+
+[price(30)]
+pricename      SOYSRW
+rightrange       0
+leftrange        0
+basebuyprice     1328.0
+alpha            1.0
+lambda           0.0
+
+[price(31)]
+pricename      FEEDBRL
+rightrange       0
+leftrange        0
+basesellprice    965.8
+basebuyprice     1087.7      
+alpha            1.0
+lambda           0.0
+
+[price(32)]
+pricename      LYSIN
+rightrange       0
+leftrange        0
+basebuyprice     37905
+alpha            1.0
+lambda           0.0
+
+[price(33)]
+pricename      THREO
+rightrange       0
+leftrange        0
+basebuyprice     60952
+alpha            1.0
+lambda           0.0
+
+[price(34)]
+pricename      METH
+rightrange       0
+leftrange        0
+basebuyprice     40286
+alpha            1.0
+lambda           0.0
+
+[price(35)]
+pricename      K-MNL
+rightrange       0
+leftrange        0
+basebuyprice     810.0	
+alpha            1.0
+lambda           0.0
+
+[price(36)]
+pricename      CaMNL
+rightrange       0
+leftrange        0
+basebuyprice     810.0	
+alpha            1.0
+lambda           0.0
+
+[price(37)]
+pricename      PEAS
+rightrange       0
+leftrange        0
+basebuyprice     1170.0      // check!
+alpha            1.0
+lambda           0.0
+
+[price(38)]
+pricename      RAPST
+rightrange       0
+leftrange        0
+basebuyprice     1000.0	// temp
+alpha            1.0
+lambda           0.0
+
+[price(39)]
+pricename      FISHM
+rightrange       0
+leftrange        0
+basebuyprice     3775.1
+alpha            1.0
+lambda           0.0
+
+[price(40)]
+pricename      FAT
+rightrange       0
+leftrange        0
+basebuyprice     2000.0	// ?
+alpha            1.0
+lambda           0.0
+
+[price(41)]
+pricename      MINP
+rightrange       0
+leftrange        0
+basebuyprice     2000.0	// ?
+alpha            1.0
+lambda           0.0
+
+[price(42)]
+pricename     SWINEMEAT
+rightrange       0
+leftrange        0
+basesellprice    948.4
+alpha            1.0
+lambda           0.0
+
+[price(43)]
+pricename     VET
+rightrange       0
+leftrange        0
+basebuyprice     1.0	// check
+alpha            1.0
+lambda           0.0
+
+[price(44)]
+pricename      SEEDWNBRL
+rightrange       0
+leftrange        0
+basebuyprice     2.45
+alpha            1.0
+lambda           0.0
+
+[price(45)]
+pricename      WNBRL
+rightrange       0
+leftrange        0
+basesellprice    965.8
+basebuyprice     1087.7      
+alpha            1.0
+lambda           0.0
+
+[price(46)]
+pricename     	 BACONERS
+rightrange       0
+leftrange        0
+basebuyprice     313.0	// 95 priser
+basesellprice    948.35  // 95 priser
+alpha            1.0
+lambda           0.0
+
+[price(47)]
+pricename     	 SOWS
+rightrange       0
+leftrange        0
+basebuyprice     2177.0	 // ? taget fra plp fil
+basesellprice    788.1   // ? taget fra plp fil
+alpha            1.0
+lambda           0.0
+
+[price(48)]
+pricename     	 PIGLETS
+rightrange       0
+leftrange        0
+basebuyprice     375.0	// ? taget fra plp fil
+basesellprice    313.0  // ? taget fra plp fil
+alpha            1.0
+lambda           0.0
+
+[price(49)]
+pricename     	 COWS
+rightrange       0
+leftrange        0
+basebuyprice     0.0	// ? taget fra plp fil
+basesellprice    0.0  // ? taget fra plp fil
+alpha            1.0
+lambda           0.0
+
+[price(50)]
+pricename     	 HEIFERS
+rightrange       0
+leftrange        0
+basebuyprice     1034.0	// ? taget fra plp fil
+basesellprice    7650.0  // ? taget fra plp fil
+alpha            1.0
+lambda           0.0
+
+[price(51)]
+pricename     	 YBULLS
+rightrange       0
+leftrange        0
+basebuyprice     1034.0	// ? taget fra plp fil
+basesellprice    4320.0  // ? taget fra plp fil
+alpha            1.0
+lambda           0.0
+
+[price(52)]
+pricename     	 premi_WNWHT
+rightrange       0
+leftrange        0
+basesellprice    2196.0
+alpha            1.0
+lambda           0.0
+
+[price(53)]
+pricename     	 premi_WNRPE
+rightrange       0
+leftrange        0
+basesellprice    3685.0  
+alpha            1.0
+lambda           0.0
+
+[price(54)]
+pricename     	 premi_SPBARL
+rightrange       0
+leftrange        0
+basesellprice    2196.0
+alpha            1.0
+lambda           0.0
+
+[price(55)]
+pricename     	 premi_FLLW
+rightrange       0
+leftrange        0
+basesellprice    2781
+alpha            1.0
+lambda           0.0
+
+[price(56)]
+pricename     	 premi_WNBRL
+rightrange       0
+leftrange        0
+basesellprice    2196.0
+alpha            1.0
+lambda           0.0
+
+[price(57)]
+pricename     	 premi_PEA
+rightrange       0
+leftrange        0
+basesellprice    3172.0
+alpha            1.0
+lambda           0.0
+
+[price(58)]
+pricename     	 hiredHours
+rightrange       0
+leftrange        0
+basebuyprice    94.0
+alpha            1.0
+lambda           0.0
+
+[price(59)]
+pricename     	 machinePoolCost
+rightrange       0
+leftrange        0
+basebuyprice     1.0                   // the amount equals the cost
+alpha            1.0
+lambda           0.0
+
+[price(60)]				// No price on ryegrass
+pricename        RYEGRASS
+rightrange       0
+leftrange        0
+basesellprice    0.
+basebuyprice     0.0      
+alpha            1.0
+lambda           0.0
+
+[price(61)]
+pricename      SEEDRYE
+rightrange       0
+leftrange        0
+basebuyprice     2.0        ???
+alpha            1.0
+lambda           0.0
+
+[price(62)]
+pricename      SEEDOAT
+rightrange       0
+leftrange        0
+basebuyprice     2.0        ???
+alpha            1.0
+lambda           0.0
+
+[price(63)]
+pricename      RYE
+rightrange       0
+leftrange        0
+basesellprice    1003.0     ???
+basebuyprice     1086.0     ??? 
+alpha            1.0
+lambda           0.0
+
+[price(64)]
+pricename      OAT
+rightrange       0
+leftrange        0
+basesellprice    965.8      ???
+basebuyprice     1087.7     ??? 
+alpha            1.0
+lambda           0.0
+
+[price(65)]
+pricename      MAIZE
+rightrange       0
+leftrange        0
+basesellprice    0      ???
+basebuyprice     0     ??? 
+alpha            1.0
+lambda           0.0
+
+[price(66)]
+pricename      POTATO
+rightrange       0
+leftrange        0
+basesellprice    1000     ???
+basebuyprice     1050     ??? 
+alpha            1.0
+lambda           0.0
+
+[end]

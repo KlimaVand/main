@@ -1,0 +1,100 @@
+\hypertarget{class_tech_asset}{
+\section{TechAsset Class Reference}
+\label{class_tech_asset}\index{TechAsset@{TechAsset}}
+}
+
+
+{\ttfamily \#include $<$TechAsse.h$>$}Inheritance diagram for TechAsset::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11cm]{class_tech_asset}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tech_asset_a277fa3ff667feeaa41375ad0bedb37b1}{TechAsset} ()
+\item 
+\hyperlink{class_tech_asset_adc6ae9ac2d36b7e37ade4c4035f9a595}{$\sim$TechAsset} ()
+\item 
+double \hyperlink{class_tech_asset_acd60c183245533ce575098c7061f2d7b}{getLifeTimeHours} ()
+\item 
+virtual double \hyperlink{class_tech_asset_af2cd10df95cbd8d5095098e0c6c16722}{getHoursUsed} ()=0
+\item 
+void \hyperlink{class_tech_asset_ae6c2ae6c41c902723223012950f88467}{setLifeTimeHours} (double aLifeTime)
+\item 
+virtual double \hyperlink{class_tech_asset_a72e1db80b26fc920318a3f98ec814b06}{getMaintenanceValue} ()
+\item 
+virtual double \hyperlink{class_tech_asset_ac855fd27bd197ef63d91588fcd7416c5}{getDepreciationValue} ()
+\item 
+virtual void \hyperlink{class_tech_asset_a405c511686ff6c8051ee748db53cd045}{initEconomy} (\hyperlink{classbase}{base} $\ast$aBase)
+\item 
+virtual void \hyperlink{class_tech_asset_ac7681ccf18e41a30b518f27cbde6a160}{GiveEconomicIndicators} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tech_asset_a277fa3ff667feeaa41375ad0bedb37b1}{
+\index{TechAsset@{TechAsset}!TechAsset@{TechAsset}}
+\index{TechAsset@{TechAsset}!TechAsset@{TechAsset}}
+\subsubsection[{TechAsset}]{\setlength{\rightskip}{0pt plus 5cm}TechAsset::TechAsset ()}}
+\label{class_tech_asset_a277fa3ff667feeaa41375ad0bedb37b1}
+\hypertarget{class_tech_asset_adc6ae9ac2d36b7e37ade4c4035f9a595}{
+\index{TechAsset@{TechAsset}!$\sim$TechAsset@{$\sim$TechAsset}}
+\index{$\sim$TechAsset@{$\sim$TechAsset}!TechAsset@{TechAsset}}
+\subsubsection[{$\sim$TechAsset}]{\setlength{\rightskip}{0pt plus 5cm}TechAsset::$\sim$TechAsset ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_tech_asset_adc6ae9ac2d36b7e37ade4c4035f9a595}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tech_asset_ac855fd27bd197ef63d91588fcd7416c5}{
+\index{TechAsset@{TechAsset}!getDepreciationValue@{getDepreciationValue}}
+\index{getDepreciationValue@{getDepreciationValue}!TechAsset@{TechAsset}}
+\subsubsection[{getDepreciationValue}]{\setlength{\rightskip}{0pt plus 5cm}double TechAsset::getDepreciationValue ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_tech_asset_ac855fd27bd197ef63d91588fcd7416c5}
+
+
+Reimplemented from \hyperlink{class_gen_asset_abb1f15e982bee528c0be96e78764ec6b}{GenAsset}.\hypertarget{class_tech_asset_af2cd10df95cbd8d5095098e0c6c16722}{
+\index{TechAsset@{TechAsset}!getHoursUsed@{getHoursUsed}}
+\index{getHoursUsed@{getHoursUsed}!TechAsset@{TechAsset}}
+\subsubsection[{getHoursUsed}]{\setlength{\rightskip}{0pt plus 5cm}virtual double TechAsset::getHoursUsed ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_tech_asset_af2cd10df95cbd8d5095098e0c6c16722}
+
+
+Implemented in \hyperlink{classtech_equip_ad9c0cb0fabe3820710f162991bcd7e9a}{techEquip}.\hypertarget{class_tech_asset_acd60c183245533ce575098c7061f2d7b}{
+\index{TechAsset@{TechAsset}!getLifeTimeHours@{getLifeTimeHours}}
+\index{getLifeTimeHours@{getLifeTimeHours}!TechAsset@{TechAsset}}
+\subsubsection[{getLifeTimeHours}]{\setlength{\rightskip}{0pt plus 5cm}double TechAsset::getLifeTimeHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_tech_asset_acd60c183245533ce575098c7061f2d7b}
+\hypertarget{class_tech_asset_a72e1db80b26fc920318a3f98ec814b06}{
+\index{TechAsset@{TechAsset}!getMaintenanceValue@{getMaintenanceValue}}
+\index{getMaintenanceValue@{getMaintenanceValue}!TechAsset@{TechAsset}}
+\subsubsection[{getMaintenanceValue}]{\setlength{\rightskip}{0pt plus 5cm}virtual double TechAsset::getMaintenanceValue ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_tech_asset_a72e1db80b26fc920318a3f98ec814b06}
+
+
+Reimplemented from \hyperlink{class_gen_asset_a702f6a8396de589c119a24aede39a930}{GenAsset}.\hypertarget{class_tech_asset_ac7681ccf18e41a30b518f27cbde6a160}{
+\index{TechAsset@{TechAsset}!GiveEconomicIndicators@{GiveEconomicIndicators}}
+\index{GiveEconomicIndicators@{GiveEconomicIndicators}!TechAsset@{TechAsset}}
+\subsubsection[{GiveEconomicIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void TechAsset::GiveEconomicIndicators (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_tech_asset_ac7681ccf18e41a30b518f27cbde6a160}
+Give Economic indicators This should be called by the actual object 
+
+Reimplemented from \hyperlink{class_gen_asset_a278eca323c1cf1bace458cda1103ac15}{GenAsset}.\hypertarget{class_tech_asset_a405c511686ff6c8051ee748db53cd045}{
+\index{TechAsset@{TechAsset}!initEconomy@{initEconomy}}
+\index{initEconomy@{initEconomy}!TechAsset@{TechAsset}}
+\subsubsection[{initEconomy}]{\setlength{\rightskip}{0pt plus 5cm}void TechAsset::initEconomy ({\bf base} $\ast$ {\em aBase})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_tech_asset_a405c511686ff6c8051ee748db53cd045}
+Loads the user defines values into fasset 
+
+Reimplemented from \hyperlink{class_gen_asset_a061638306e81bee77e8dfef34fe84a93}{GenAsset}.\hypertarget{class_tech_asset_ae6c2ae6c41c902723223012950f88467}{
+\index{TechAsset@{TechAsset}!setLifeTimeHours@{setLifeTimeHours}}
+\index{setLifeTimeHours@{setLifeTimeHours}!TechAsset@{TechAsset}}
+\subsubsection[{setLifeTimeHours}]{\setlength{\rightskip}{0pt plus 5cm}void TechAsset::setLifeTimeHours (double {\em aLifeTime})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_tech_asset_ae6c2ae6c41c902723223012950f88467}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/economy/\hyperlink{_tech_asse_8h}{TechAsse.h}\item 
+C:/main/trunk/src/economy/\hyperlink{_tech_asse_8cpp}{TechAsse.cpp}\end{DoxyCompactItemize}

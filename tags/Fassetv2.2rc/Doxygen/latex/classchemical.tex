@@ -1,0 +1,220 @@
+\hypertarget{classchemical}{
+\section{chemical Class Reference}
+\label{classchemical}\index{chemical@{chemical}}
+}
+
+
+{\ttfamily \#include $<$chemical.h$>$}Inheritance diagram for chemical::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classchemical}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classchemical_af734c449b8e918db03241008b6571743}{chemical} ()
+\item 
+\hyperlink{classchemical_a2d697470e1e62aee94b221d27dc6ab7f}{chemical} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classchemical_a3e96e0469b288d962307fc6a89801262}{chemical} (const \hyperlink{classchemical}{chemical} \&achemical)
+\item 
+virtual \hyperlink{classchemical_ae60ef5faf85286058349de11ae1c7a5a}{$\sim$chemical} ()
+\item 
+void \hyperlink{classchemical_ad86d720d3a4f1a2d8afa1ef4d53c566b}{Settype} (const int atype)
+\item 
+void \hyperlink{classchemical_a3e09b6a3cbd7afe01c1bcd730270d8e1}{SetactiveSubstancePerUnit} (const double aactiveSubstancePerUnit)
+\item 
+void \hyperlink{classchemical_a501dcbea3e3489ec64c4b2f2b998da14}{SetamountPerTFI} (const double aamountPerTFI)
+\item 
+int \hyperlink{classchemical_ae66c160476435100ad1596cf55553073}{Gettype} (void) const 
+\item 
+double \hyperlink{classchemical_a084ecbb27d06ec9559e4c3592f99f2d6}{GetactiveSubstancePerUnit} (void) const 
+\item 
+double \hyperlink{classchemical_aefba936b8096f1c54f497d743befa4bf}{GetAmountPerTFI} (void) const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classchemical_a2fb689080661790a2900f7000425e848}{operator=} (const \hyperlink{classproduct}{product} \&someChemical)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classchemical_afd86e5c4798e2eb77e9705a36aa3f5f9}{operator+} (const \hyperlink{classproduct}{product} \&someChemical)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classchemical_a1ec6784955496e6b0b9199c20bbeb12b}{operator-\/} (const \hyperlink{classproduct}{product} \&someChemical)
+\item 
+void \hyperlink{classchemical_abad5f5665261d29f099d3defdac9364d}{showstats} (ostream $\ast$os)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classchemical_aee0689e71b3bfe7f7dbd91009b707fd5}{clone} () const 
+\item 
+double \hyperlink{classchemical_aa62a63c584384fa781c473897889ee05}{GetByTFI} (void)
+\item 
+void \hyperlink{classchemical_a433a3abccb92ef058848eb9e6799934c}{SetByTFI} (double aTFI)
+\item 
+virtual void \hyperlink{classchemical_acfdd25cd02bb7b5cd41e2daf5e890f7d}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classchemical_a8bb531b70e8d9c2270b2f9464d22069a}{InitVariables} ()
+\item 
+int \hyperlink{classchemical_a15170334ac60dc36dc9d94c6463f3874}{GetChemType} (string aChemType)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classchemical_a01dc27d1131089e1bd40e712f2db707c}{type}
+\item 
+double \hyperlink{classchemical_ade159c0dbe449923483c0f6c764d2a92}{activeSubstancePerUnit}
+\item 
+double \hyperlink{classchemical_a6bbe39833c0a3e01b8db20353213ebfd}{amountPerTFI}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classchemical_aa56b071bc2d38852ba56f7b6c9e10b81}{operator$<$$<$} (ostream \&os, const \hyperlink{classchemical}{chemical} \&achemical)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classchemical_af734c449b8e918db03241008b6571743}{
+\index{chemical@{chemical}!chemical@{chemical}}
+\index{chemical@{chemical}!chemical@{chemical}}
+\subsubsection[{chemical}]{\setlength{\rightskip}{0pt plus 5cm}chemical::chemical ()}}
+\label{classchemical_af734c449b8e918db03241008b6571743}
+\hypertarget{classchemical_a2d697470e1e62aee94b221d27dc6ab7f}{
+\index{chemical@{chemical}!chemical@{chemical}}
+\index{chemical@{chemical}!chemical@{chemical}}
+\subsubsection[{chemical}]{\setlength{\rightskip}{0pt plus 5cm}chemical::chemical (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classchemical_a2d697470e1e62aee94b221d27dc6ab7f}
+\hypertarget{classchemical_a3e96e0469b288d962307fc6a89801262}{
+\index{chemical@{chemical}!chemical@{chemical}}
+\index{chemical@{chemical}!chemical@{chemical}}
+\subsubsection[{chemical}]{\setlength{\rightskip}{0pt plus 5cm}chemical::chemical (const {\bf chemical} \& {\em achemical})}}
+\label{classchemical_a3e96e0469b288d962307fc6a89801262}
+\hypertarget{classchemical_ae60ef5faf85286058349de11ae1c7a5a}{
+\index{chemical@{chemical}!$\sim$chemical@{$\sim$chemical}}
+\index{$\sim$chemical@{$\sim$chemical}!chemical@{chemical}}
+\subsubsection[{$\sim$chemical}]{\setlength{\rightskip}{0pt plus 5cm}chemical::$\sim$chemical ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_ae60ef5faf85286058349de11ae1c7a5a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classchemical_aee0689e71b3bfe7f7dbd91009b707fd5}{
+\index{chemical@{chemical}!clone@{clone}}
+\index{clone@{clone}!chemical@{chemical}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ chemical::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_aee0689e71b3bfe7f7dbd91009b707fd5}
+
+
+Reimplemented from \hyperlink{classproduct_a18a1df87f3400774db21d1e8c573f04a}{product}.\hypertarget{classchemical_a084ecbb27d06ec9559e4c3592f99f2d6}{
+\index{chemical@{chemical}!GetactiveSubstancePerUnit@{GetactiveSubstancePerUnit}}
+\index{GetactiveSubstancePerUnit@{GetactiveSubstancePerUnit}!chemical@{chemical}}
+\subsubsection[{GetactiveSubstancePerUnit}]{\setlength{\rightskip}{0pt plus 5cm}double chemical::GetactiveSubstancePerUnit (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classchemical_a084ecbb27d06ec9559e4c3592f99f2d6}
+\hypertarget{classchemical_aefba936b8096f1c54f497d743befa4bf}{
+\index{chemical@{chemical}!GetAmountPerTFI@{GetAmountPerTFI}}
+\index{GetAmountPerTFI@{GetAmountPerTFI}!chemical@{chemical}}
+\subsubsection[{GetAmountPerTFI}]{\setlength{\rightskip}{0pt plus 5cm}double chemical::GetAmountPerTFI (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classchemical_aefba936b8096f1c54f497d743befa4bf}
+\hypertarget{classchemical_aa62a63c584384fa781c473897889ee05}{
+\index{chemical@{chemical}!GetByTFI@{GetByTFI}}
+\index{GetByTFI@{GetByTFI}!chemical@{chemical}}
+\subsubsection[{GetByTFI}]{\setlength{\rightskip}{0pt plus 5cm}double chemical::GetByTFI (void)}}
+\label{classchemical_aa62a63c584384fa781c473897889ee05}
+\hypertarget{classchemical_a15170334ac60dc36dc9d94c6463f3874}{
+\index{chemical@{chemical}!GetChemType@{GetChemType}}
+\index{GetChemType@{GetChemType}!chemical@{chemical}}
+\subsubsection[{GetChemType}]{\setlength{\rightskip}{0pt plus 5cm}int chemical::GetChemType (string {\em aChemType})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classchemical_a15170334ac60dc36dc9d94c6463f3874}
+\hypertarget{classchemical_ae66c160476435100ad1596cf55553073}{
+\index{chemical@{chemical}!Gettype@{Gettype}}
+\index{Gettype@{Gettype}!chemical@{chemical}}
+\subsubsection[{Gettype}]{\setlength{\rightskip}{0pt plus 5cm}int chemical::Gettype (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classchemical_ae66c160476435100ad1596cf55553073}
+\hypertarget{classchemical_a8bb531b70e8d9c2270b2f9464d22069a}{
+\index{chemical@{chemical}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!chemical@{chemical}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classchemical_a8bb531b70e8d9c2270b2f9464d22069a}
+
+
+Reimplemented from \hyperlink{classproduct_afcbfb1feadfd4ed057845eab47e37ff5}{product}.\hypertarget{classchemical_afd86e5c4798e2eb77e9705a36aa3f5f9}{
+\index{chemical@{chemical}!operator+@{operator+}}
+\index{operator+@{operator+}!chemical@{chemical}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& chemical::operator+ (const {\bf product} \& {\em someChemical})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_afd86e5c4798e2eb77e9705a36aa3f5f9}
+\hypertarget{classchemical_a1ec6784955496e6b0b9199c20bbeb12b}{
+\index{chemical@{chemical}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!chemical@{chemical}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& chemical::operator-\/ (const {\bf product} \& {\em someChemical})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_a1ec6784955496e6b0b9199c20bbeb12b}
+\hypertarget{classchemical_a2fb689080661790a2900f7000425e848}{
+\index{chemical@{chemical}!operator=@{operator=}}
+\index{operator=@{operator=}!chemical@{chemical}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& chemical::operator= (const {\bf product} \& {\em someChemical})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_a2fb689080661790a2900f7000425e848}
+\hypertarget{classchemical_acfdd25cd02bb7b5cd41e2daf5e890f7d}{
+\index{chemical@{chemical}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!chemical@{chemical}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_acfdd25cd02bb7b5cd41e2daf5e890f7d}
+
+
+Reimplemented from \hyperlink{classproduct_a1edb3e3d0619a2db8b8f1c95fed582ce}{product}.\hypertarget{classchemical_a3e09b6a3cbd7afe01c1bcd730270d8e1}{
+\index{chemical@{chemical}!SetactiveSubstancePerUnit@{SetactiveSubstancePerUnit}}
+\index{SetactiveSubstancePerUnit@{SetactiveSubstancePerUnit}!chemical@{chemical}}
+\subsubsection[{SetactiveSubstancePerUnit}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::SetactiveSubstancePerUnit (const double {\em aactiveSubstancePerUnit})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classchemical_a3e09b6a3cbd7afe01c1bcd730270d8e1}
+\hypertarget{classchemical_a501dcbea3e3489ec64c4b2f2b998da14}{
+\index{chemical@{chemical}!SetamountPerTFI@{SetamountPerTFI}}
+\index{SetamountPerTFI@{SetamountPerTFI}!chemical@{chemical}}
+\subsubsection[{SetamountPerTFI}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::SetamountPerTFI (const double {\em aamountPerTFI})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classchemical_a501dcbea3e3489ec64c4b2f2b998da14}
+\hypertarget{classchemical_a433a3abccb92ef058848eb9e6799934c}{
+\index{chemical@{chemical}!SetByTFI@{SetByTFI}}
+\index{SetByTFI@{SetByTFI}!chemical@{chemical}}
+\subsubsection[{SetByTFI}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::SetByTFI (double {\em aTFI})}}
+\label{classchemical_a433a3abccb92ef058848eb9e6799934c}
+\hypertarget{classchemical_ad86d720d3a4f1a2d8afa1ef4d53c566b}{
+\index{chemical@{chemical}!Settype@{Settype}}
+\index{Settype@{Settype}!chemical@{chemical}}
+\subsubsection[{Settype}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::Settype (const int {\em atype})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classchemical_ad86d720d3a4f1a2d8afa1ef4d53c566b}
+\hypertarget{classchemical_abad5f5665261d29f099d3defdac9364d}{
+\index{chemical@{chemical}!showstats@{showstats}}
+\index{showstats@{showstats}!chemical@{chemical}}
+\subsubsection[{showstats}]{\setlength{\rightskip}{0pt plus 5cm}void chemical::showstats (ostream $\ast$ {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classchemical_abad5f5665261d29f099d3defdac9364d}
+
+
+Reimplemented from \hyperlink{classproduct_a1151ea416ab90047f8d087be57a6d7b1}{product}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classchemical_aa56b071bc2d38852ba56f7b6c9e10b81}{
+\index{chemical@{chemical}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!chemical@{chemical}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf chemical} \& {\em achemical})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classchemical_aa56b071bc2d38852ba56f7b6c9e10b81}
+
+
+Reimplemented from \hyperlink{classproduct_a1b6bf2f2c82a18a17907ee1192fd94bb}{product}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classchemical_ade159c0dbe449923483c0f6c764d2a92}{
+\index{chemical@{chemical}!activeSubstancePerUnit@{activeSubstancePerUnit}}
+\index{activeSubstancePerUnit@{activeSubstancePerUnit}!chemical@{chemical}}
+\subsubsection[{activeSubstancePerUnit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf chemical::activeSubstancePerUnit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classchemical_ade159c0dbe449923483c0f6c764d2a92}
+\hypertarget{classchemical_a6bbe39833c0a3e01b8db20353213ebfd}{
+\index{chemical@{chemical}!amountPerTFI@{amountPerTFI}}
+\index{amountPerTFI@{amountPerTFI}!chemical@{chemical}}
+\subsubsection[{amountPerTFI}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf chemical::amountPerTFI}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classchemical_a6bbe39833c0a3e01b8db20353213ebfd}
+\hypertarget{classchemical_a01dc27d1131089e1bd40e712f2db707c}{
+\index{chemical@{chemical}!type@{type}}
+\index{type@{type}!chemical@{chemical}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf chemical::type}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classchemical_a01dc27d1131089e1bd40e712f2db707c}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{chemical_8h}{chemical.h}\item 
+C:/main/trunk/src/products/\hyperlink{chemical_8cpp}{chemical.cpp}\end{DoxyCompactItemize}

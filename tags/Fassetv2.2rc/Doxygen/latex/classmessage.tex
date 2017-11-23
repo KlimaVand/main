@@ -1,0 +1,210 @@
+\hypertarget{classmessage}{
+\section{message Class Reference}
+\label{classmessage}\index{message@{message}}
+}
+
+
+{\ttfamily \#include $<$message.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmessage_a6aefe31fa8ce580fdf7d6c8224a5e445}{message} ()
+\item 
+\hyperlink{classmessage_a3e20db9559213f6eb3dd15cd83af62be}{$\sim$message} ()
+\item 
+void \hyperlink{classmessage_ab54d58e7ae577d16bfae5b0f7d97cecb}{InitMessage} (char $\ast$WarnFN, char $\ast$LogFN, char $\ast$DebugFN, char $\ast$FieldFile1FN, char $\ast$FieldFile2FN)
+\item 
+void \hyperlink{classmessage_a5c0c99587c4270077b545d7b17823051}{ChangeLogfilename} (char $\ast$cp)
+\item 
+void \hyperlink{classmessage_aacaa1466698a349689502491cf089f72}{Warning} (const char $\ast$cp1, const char $\ast$cp2=\char`\"{}\char`\"{}, const char $\ast$cp3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_a085906fc256d250ccff79ea965c076cb}{Warning} (const string st1, const string st2=\char`\"{}\char`\"{}, const string st3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_a0ba3b49320345b5056b1321fe4f6f65e}{Warning} (const string st1, int anint)
+\item 
+void \hyperlink{classmessage_aa10e99e4b4f6aef0c00f0c5021142042}{Warning} (const char $\ast$cp1, const double aNumber, const char $\ast$cp3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_afed66d0552f90b4385c5169cf5929907}{WarningWithDisplay} (const char $\ast$cp1, const char $\ast$cp2=\char`\"{}\char`\"{}, const char $\ast$cp3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_ae2bc870036a86a3301ccc6232f1e424d}{WarningWithDisplay} (const string st1, const string st2=\char`\"{}\char`\"{}, const string st3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_a1b81970a0e394e69f98825fcc48a0cf7}{WarningWithDisplay} (const char $\ast$cp1, const double aNumber, const char $\ast$cp3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_a858cde36543e084d30fcb2693ee08fdc}{FatalError} (const char $\ast$cp1=\char`\"{}\char`\"{}, const char $\ast$cp2=\char`\"{}\char`\"{}, const char $\ast$cp3=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classmessage_acd59708da958867b53d2fc740f5607fb}{LogEvent} (const char $\ast$cp1)
+\item 
+void \hyperlink{classmessage_ae578234ff0b329aa475c379a15aa2777}{LogEvent} (const char $\ast$cp, const double number)
+\item 
+int \hyperlink{classmessage_ad3c7bd4317ab5c92d1d9d822540ff72a}{NumOfWarnings} ()
+\item 
+ofstream $\ast$ \hyperlink{classmessage_a9c4d08163cff8ee8dba9eb8b6317a8b9}{GiveHandle} ()
+\item 
+void \hyperlink{classmessage_a8353517a95f66390d9e9add3276da11e}{CloseHandle} ()
+\item 
+ofstream $\ast$ \hyperlink{classmessage_a176f7e9a4dfa77ef53b3cf98e8ab77d6}{GiveDebugHandle} ()
+\item 
+void \hyperlink{classmessage_a5fa5bc2bad4c10edc4fa24527259a961}{CloseDebugHandle} ()
+\item 
+void \hyperlink{classmessage_a498bc2c5d2fb315b339f12ac47a702fb}{LogEvent} (const char $\ast$cp1, int anint, const char $\ast$cp2, double number)
+\item 
+void \hyperlink{classmessage_adbb11c1e5f2d24e132ed20812e67fadb}{LogEventWithTime} (const char $\ast$cp1, int anint, const char $\ast$cp2, double number)
+\item 
+void \hyperlink{classmessage_a9292720e75bec37fc568dfffbb02a68f}{LogEventWithTime} (const char $\ast$cp1)
+\item 
+void \hyperlink{classmessage_a5e553d7905bef50a91b8318445139033}{LogEventWithTime} (const char $\ast$cp, const double number)
+\item 
+ofstream $\ast$ \hyperlink{classmessage_a453ef3576d87c4927a6afc1f8f111d5e}{GiveFF1Handle} ()
+\item 
+void \hyperlink{classmessage_af45d625ae43381ebd81c13b0462fc7af}{CloseFF1Handle} ()
+\item 
+ofstream $\ast$ \hyperlink{classmessage_a4e0e2e4816d10ba57486c618e844d45c}{GiveFF2Handle} ()
+\item 
+void \hyperlink{classmessage_a19548e1e18c484e155ec7e91f6b647c6}{CloseFF2Handle} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmessage_a6aefe31fa8ce580fdf7d6c8224a5e445}{
+\index{message@{message}!message@{message}}
+\index{message@{message}!message@{message}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}message::message ()}}
+\label{classmessage_a6aefe31fa8ce580fdf7d6c8224a5e445}
+\hypertarget{classmessage_a3e20db9559213f6eb3dd15cd83af62be}{
+\index{message@{message}!$\sim$message@{$\sim$message}}
+\index{$\sim$message@{$\sim$message}!message@{message}}
+\subsubsection[{$\sim$message}]{\setlength{\rightskip}{0pt plus 5cm}message::$\sim$message ()}}
+\label{classmessage_a3e20db9559213f6eb3dd15cd83af62be}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmessage_a5c0c99587c4270077b545d7b17823051}{
+\index{message@{message}!ChangeLogfilename@{ChangeLogfilename}}
+\index{ChangeLogfilename@{ChangeLogfilename}!message@{message}}
+\subsubsection[{ChangeLogfilename}]{\setlength{\rightskip}{0pt plus 5cm}void message::ChangeLogfilename (char $\ast$ {\em cp})}}
+\label{classmessage_a5c0c99587c4270077b545d7b17823051}
+\hypertarget{classmessage_a5fa5bc2bad4c10edc4fa24527259a961}{
+\index{message@{message}!CloseDebugHandle@{CloseDebugHandle}}
+\index{CloseDebugHandle@{CloseDebugHandle}!message@{message}}
+\subsubsection[{CloseDebugHandle}]{\setlength{\rightskip}{0pt plus 5cm}void message::CloseDebugHandle ()}}
+\label{classmessage_a5fa5bc2bad4c10edc4fa24527259a961}
+\hypertarget{classmessage_af45d625ae43381ebd81c13b0462fc7af}{
+\index{message@{message}!CloseFF1Handle@{CloseFF1Handle}}
+\index{CloseFF1Handle@{CloseFF1Handle}!message@{message}}
+\subsubsection[{CloseFF1Handle}]{\setlength{\rightskip}{0pt plus 5cm}void message::CloseFF1Handle ()}}
+\label{classmessage_af45d625ae43381ebd81c13b0462fc7af}
+\hypertarget{classmessage_a19548e1e18c484e155ec7e91f6b647c6}{
+\index{message@{message}!CloseFF2Handle@{CloseFF2Handle}}
+\index{CloseFF2Handle@{CloseFF2Handle}!message@{message}}
+\subsubsection[{CloseFF2Handle}]{\setlength{\rightskip}{0pt plus 5cm}void message::CloseFF2Handle ()}}
+\label{classmessage_a19548e1e18c484e155ec7e91f6b647c6}
+\hypertarget{classmessage_a8353517a95f66390d9e9add3276da11e}{
+\index{message@{message}!CloseHandle@{CloseHandle}}
+\index{CloseHandle@{CloseHandle}!message@{message}}
+\subsubsection[{CloseHandle}]{\setlength{\rightskip}{0pt plus 5cm}void message::CloseHandle ()}}
+\label{classmessage_a8353517a95f66390d9e9add3276da11e}
+\hypertarget{classmessage_a858cde36543e084d30fcb2693ee08fdc}{
+\index{message@{message}!FatalError@{FatalError}}
+\index{FatalError@{FatalError}!message@{message}}
+\subsubsection[{FatalError}]{\setlength{\rightskip}{0pt plus 5cm}void message::FatalError (const char $\ast$ {\em cp1} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em cp2} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em cp3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_a858cde36543e084d30fcb2693ee08fdc}
+\hypertarget{classmessage_a176f7e9a4dfa77ef53b3cf98e8ab77d6}{
+\index{message@{message}!GiveDebugHandle@{GiveDebugHandle}}
+\index{GiveDebugHandle@{GiveDebugHandle}!message@{message}}
+\subsubsection[{GiveDebugHandle}]{\setlength{\rightskip}{0pt plus 5cm}ofstream $\ast$ message::GiveDebugHandle ()}}
+\label{classmessage_a176f7e9a4dfa77ef53b3cf98e8ab77d6}
+\hypertarget{classmessage_a453ef3576d87c4927a6afc1f8f111d5e}{
+\index{message@{message}!GiveFF1Handle@{GiveFF1Handle}}
+\index{GiveFF1Handle@{GiveFF1Handle}!message@{message}}
+\subsubsection[{GiveFF1Handle}]{\setlength{\rightskip}{0pt plus 5cm}ofstream $\ast$ message::GiveFF1Handle ()}}
+\label{classmessage_a453ef3576d87c4927a6afc1f8f111d5e}
+\hypertarget{classmessage_a4e0e2e4816d10ba57486c618e844d45c}{
+\index{message@{message}!GiveFF2Handle@{GiveFF2Handle}}
+\index{GiveFF2Handle@{GiveFF2Handle}!message@{message}}
+\subsubsection[{GiveFF2Handle}]{\setlength{\rightskip}{0pt plus 5cm}ofstream $\ast$ message::GiveFF2Handle ()}}
+\label{classmessage_a4e0e2e4816d10ba57486c618e844d45c}
+\hypertarget{classmessage_a9c4d08163cff8ee8dba9eb8b6317a8b9}{
+\index{message@{message}!GiveHandle@{GiveHandle}}
+\index{GiveHandle@{GiveHandle}!message@{message}}
+\subsubsection[{GiveHandle}]{\setlength{\rightskip}{0pt plus 5cm}ofstream $\ast$ message::GiveHandle ()}}
+\label{classmessage_a9c4d08163cff8ee8dba9eb8b6317a8b9}
+\hypertarget{classmessage_ab54d58e7ae577d16bfae5b0f7d97cecb}{
+\index{message@{message}!InitMessage@{InitMessage}}
+\index{InitMessage@{InitMessage}!message@{message}}
+\subsubsection[{InitMessage}]{\setlength{\rightskip}{0pt plus 5cm}void message::InitMessage (char $\ast$ {\em WarnFN}, \/  char $\ast$ {\em LogFN}, \/  char $\ast$ {\em DebugFN}, \/  char $\ast$ {\em FieldFile1FN}, \/  char $\ast$ {\em FieldFile2FN})}}
+\label{classmessage_ab54d58e7ae577d16bfae5b0f7d97cecb}
+\hypertarget{classmessage_a498bc2c5d2fb315b339f12ac47a702fb}{
+\index{message@{message}!LogEvent@{LogEvent}}
+\index{LogEvent@{LogEvent}!message@{message}}
+\subsubsection[{LogEvent}]{\setlength{\rightskip}{0pt plus 5cm}void message::LogEvent (const char $\ast$ {\em cp1}, \/  int {\em anint}, \/  const char $\ast$ {\em cp2}, \/  double {\em number})}}
+\label{classmessage_a498bc2c5d2fb315b339f12ac47a702fb}
+\hypertarget{classmessage_ae578234ff0b329aa475c379a15aa2777}{
+\index{message@{message}!LogEvent@{LogEvent}}
+\index{LogEvent@{LogEvent}!message@{message}}
+\subsubsection[{LogEvent}]{\setlength{\rightskip}{0pt plus 5cm}void message::LogEvent (const char $\ast$ {\em cp}, \/  const double {\em number})}}
+\label{classmessage_ae578234ff0b329aa475c379a15aa2777}
+\hypertarget{classmessage_acd59708da958867b53d2fc740f5607fb}{
+\index{message@{message}!LogEvent@{LogEvent}}
+\index{LogEvent@{LogEvent}!message@{message}}
+\subsubsection[{LogEvent}]{\setlength{\rightskip}{0pt plus 5cm}void message::LogEvent (const char $\ast$ {\em cp1})}}
+\label{classmessage_acd59708da958867b53d2fc740f5607fb}
+\hypertarget{classmessage_a5e553d7905bef50a91b8318445139033}{
+\index{message@{message}!LogEventWithTime@{LogEventWithTime}}
+\index{LogEventWithTime@{LogEventWithTime}!message@{message}}
+\subsubsection[{LogEventWithTime}]{\setlength{\rightskip}{0pt plus 5cm}void message::LogEventWithTime (const char $\ast$ {\em cp}, \/  const double {\em number})}}
+\label{classmessage_a5e553d7905bef50a91b8318445139033}
+\hypertarget{classmessage_a9292720e75bec37fc568dfffbb02a68f}{
+\index{message@{message}!LogEventWithTime@{LogEventWithTime}}
+\index{LogEventWithTime@{LogEventWithTime}!message@{message}}
+\subsubsection[{LogEventWithTime}]{\setlength{\rightskip}{0pt plus 5cm}void message::LogEventWithTime (const char $\ast$ {\em cp1})}}
+\label{classmessage_a9292720e75bec37fc568dfffbb02a68f}
+\hypertarget{classmessage_adbb11c1e5f2d24e132ed20812e67fadb}{
+\index{message@{message}!LogEventWithTime@{LogEventWithTime}}
+\index{LogEventWithTime@{LogEventWithTime}!message@{message}}
+\subsubsection[{LogEventWithTime}]{\setlength{\rightskip}{0pt plus 5cm}void message::LogEventWithTime (const char $\ast$ {\em cp1}, \/  int {\em anint}, \/  const char $\ast$ {\em cp2}, \/  double {\em number})}}
+\label{classmessage_adbb11c1e5f2d24e132ed20812e67fadb}
+\hypertarget{classmessage_ad3c7bd4317ab5c92d1d9d822540ff72a}{
+\index{message@{message}!NumOfWarnings@{NumOfWarnings}}
+\index{NumOfWarnings@{NumOfWarnings}!message@{message}}
+\subsubsection[{NumOfWarnings}]{\setlength{\rightskip}{0pt plus 5cm}int message::NumOfWarnings ()}}
+\label{classmessage_ad3c7bd4317ab5c92d1d9d822540ff72a}
+\hypertarget{classmessage_aa10e99e4b4f6aef0c00f0c5021142042}{
+\index{message@{message}!Warning@{Warning}}
+\index{Warning@{Warning}!message@{message}}
+\subsubsection[{Warning}]{\setlength{\rightskip}{0pt plus 5cm}void message::Warning (const char $\ast$ {\em cp1}, \/  const double {\em aNumber}, \/  const char $\ast$ {\em cp3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_aa10e99e4b4f6aef0c00f0c5021142042}
+\hypertarget{classmessage_a0ba3b49320345b5056b1321fe4f6f65e}{
+\index{message@{message}!Warning@{Warning}}
+\index{Warning@{Warning}!message@{message}}
+\subsubsection[{Warning}]{\setlength{\rightskip}{0pt plus 5cm}void message::Warning (const string {\em st1}, \/  int {\em anint})}}
+\label{classmessage_a0ba3b49320345b5056b1321fe4f6f65e}
+\hypertarget{classmessage_a085906fc256d250ccff79ea965c076cb}{
+\index{message@{message}!Warning@{Warning}}
+\index{Warning@{Warning}!message@{message}}
+\subsubsection[{Warning}]{\setlength{\rightskip}{0pt plus 5cm}void message::Warning (const string {\em st1}, \/  const string {\em st2} = {\ttfamily \char`\"{}\char`\"{}}, \/  const string {\em st3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_a085906fc256d250ccff79ea965c076cb}
+\hypertarget{classmessage_aacaa1466698a349689502491cf089f72}{
+\index{message@{message}!Warning@{Warning}}
+\index{Warning@{Warning}!message@{message}}
+\subsubsection[{Warning}]{\setlength{\rightskip}{0pt plus 5cm}void message::Warning (const char $\ast$ {\em cp1}, \/  const char $\ast$ {\em cp2} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em cp3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_aacaa1466698a349689502491cf089f72}
+\hypertarget{classmessage_a1b81970a0e394e69f98825fcc48a0cf7}{
+\index{message@{message}!WarningWithDisplay@{WarningWithDisplay}}
+\index{WarningWithDisplay@{WarningWithDisplay}!message@{message}}
+\subsubsection[{WarningWithDisplay}]{\setlength{\rightskip}{0pt plus 5cm}void message::WarningWithDisplay (const char $\ast$ {\em cp1}, \/  const double {\em aNumber}, \/  const char $\ast$ {\em cp3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_a1b81970a0e394e69f98825fcc48a0cf7}
+\hypertarget{classmessage_ae2bc870036a86a3301ccc6232f1e424d}{
+\index{message@{message}!WarningWithDisplay@{WarningWithDisplay}}
+\index{WarningWithDisplay@{WarningWithDisplay}!message@{message}}
+\subsubsection[{WarningWithDisplay}]{\setlength{\rightskip}{0pt plus 5cm}void message::WarningWithDisplay (const string {\em st1}, \/  const string {\em st2} = {\ttfamily \char`\"{}\char`\"{}}, \/  const string {\em st3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_ae2bc870036a86a3301ccc6232f1e424d}
+\hypertarget{classmessage_afed66d0552f90b4385c5169cf5929907}{
+\index{message@{message}!WarningWithDisplay@{WarningWithDisplay}}
+\index{WarningWithDisplay@{WarningWithDisplay}!message@{message}}
+\subsubsection[{WarningWithDisplay}]{\setlength{\rightskip}{0pt plus 5cm}void message::WarningWithDisplay (const char $\ast$ {\em cp1}, \/  const char $\ast$ {\em cp2} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em cp3} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classmessage_afed66d0552f90b4385c5169cf5929907}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{message_8h}{message.h}\item 
+C:/main/trunk/src/base/\hyperlink{message_8cpp}{message.cpp}\end{DoxyCompactItemize}

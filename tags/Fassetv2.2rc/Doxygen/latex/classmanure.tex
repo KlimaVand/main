@@ -1,0 +1,429 @@
+\hypertarget{classmanure}{
+\section{manure Class Reference}
+\label{classmanure}\index{manure@{manure}}
+}
+
+
+{\ttfamily \#include $<$manure.h$>$}Inheritance diagram for manure::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{classmanure}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmanure_a169ecc5b27034bb777db79053f571c6e}{manure} ()
+\item 
+\hyperlink{classmanure_a38f96dbe471887e6846f2435209bce64}{manure} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classmanure_afbb8c5beb0e7ac02c565f8d754a05558}{manure} (const \hyperlink{classmanure}{manure} \&amanure)
+\item 
+\hyperlink{classmanure_a46c220944c99cbd781019f206233bf32}{manure} (const \hyperlink{classdecomposable}{decomposable} \&aDecomp)
+\item 
+virtual \hyperlink{classmanure_ac1beb68437856daf80d130aa4714cf66}{$\sim$manure} ()
+\item 
+void \hyperlink{classmanure_add39b3db240608cc79de01d322e01a7a}{SetfromAnimal} (string afromAnimal)
+\item 
+void \hyperlink{classmanure_ab92a739f5a35221e48c8923af884e3a4}{SetMg\_\-content} (double aMg\_\-content)
+\item 
+void \hyperlink{classmanure_aa979cd914677628162bbabecb00a292d}{SetCu\_\-content} (double aCu\_\-content)
+\item 
+void \hyperlink{classmanure_a7fb7695584fe22855f7b1183a97d26d2}{SetRt\_\-content} (double aRt\_\-content)
+\item 
+void \hyperlink{classmanure_a3a698b8d4b52c4fd14b7731ce20ad57d}{Setsand} (double asand)
+\item 
+void \hyperlink{classmanure_adefe5e150b1de5ae3c4af36c0c6dcada}{Setvolatisation} (double aVol)
+\item 
+void \hyperlink{classmanure_a6d4583c874bb537909cfe6c110a59041}{SetpH} (double apH)
+\item 
+void \hyperlink{classmanure_a4b2a248f98de1f072d5b25d85e0a6641}{SetinfiltFactor} (double factor)
+\item 
+string \hyperlink{classmanure_ac8976e36d43ce2b5ad75407ce036a317}{GetfromAnimal} (void) const 
+\item 
+double \hyperlink{classmanure_a33d61ff2bca9b2344ca013d284176395}{GetMg\_\-content} (void) const 
+\item 
+double \hyperlink{classmanure_af7b3d4f63546db980e899016faeeb500}{GetCu\_\-content} (void) const 
+\item 
+double \hyperlink{classmanure_af02a1de2138e4c9e2aa182a2891e5182}{GetRt\_\-content} (void) const 
+\item 
+double \hyperlink{classmanure_aae99257f7fb59e92b218339362b9cb4b}{Getsand} (void) const 
+\item 
+double \hyperlink{classmanure_a2e85d960cb09d2a21943c7968402f23a}{Getvolatisation} (void) const 
+\item 
+double \hyperlink{classmanure_aeb6b9f64e829c8f799cd771c6090cdcf}{GetpH} (void) const 
+\item 
+double \hyperlink{classmanure_a7b77b90caee4bc5fcf2dea610ffdd321}{GetQ} (double temp) const 
+\item 
+double \hyperlink{classmanure_a9ef6ec705107f1162883332a05f5cd87}{GetinfiltFactor} () const 
+\item 
+double \hyperlink{classmanure_aa608bf6f9be6d1d02c6788dfb8a6eadf}{GetmaxDeg} ()
+\item 
+double \hyperlink{classmanure_a17370a1b9fb3505d4dfd2d33430bd7e6}{GetdegRateConst} ()
+\item 
+double \hyperlink{classmanure_ade6dc43e945016f901ced6a54527ea80}{GetdegradableOM} ()
+\item 
+void \hyperlink{classmanure_ac45a5d29b499ebe4f93a8473dc2cf821}{InitVariables} ()
+\item 
+virtual double \hyperlink{classmanure_ad759c54bfd7b7656f5601b39efee16a4}{VolatAmmonia} (double temperature, double evap, double infiltration, double precipitation, double area, double resistance, double duration, double $\ast$volEvap, \hyperlink{classmanure}{manure} $\ast$toSoil)
+\item 
+virtual double \hyperlink{classmanure_ab9836c0cde19119bae96ee2602c75f95}{VolatNitrogen} (double emissionFactor)
+\item 
+virtual void \hyperlink{classmanure_abf7e3e8410ff6ec04010568c204f9ca6}{VolatAndMinNitrogen} (double NH3EF, double N2EF, double N2OEF, double MinF, double $\ast$NH3vol, double $\ast$N2vol, double $\ast$N2Ovol, double $\ast$MinN)
+\item 
+virtual void \hyperlink{classmanure_a28d72550be1b4392ebabfdbbb8c36e39}{VolatNitrogen} (double temperature, double area, double resistance, double duration, double $\ast$volatAmmonia, double $\ast$N2Emission, double $\ast$N2OEmission)
+\item 
+virtual double \hyperlink{classmanure_a6aba3f146ff412c234583f5f1c805000}{GetWaterEvap} (double temperature, double relHumidity, double area, double resistance, double duration)
+\item 
+virtual double \hyperlink{classmanure_a1bfcf202c765d99c51fb8ed6850e21a2}{SubtractWater} (double waterToSubtract)
+\item 
+virtual void \hyperlink{classmanure_aad5e7bf3c405be74990b85a5d4fd4b49}{AddWater} (double waterToAdd)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classmanure_aefa4f7856537616586ae73e8a34cdf97}{operator=} (const \hyperlink{classproduct}{product} \&someManure)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classmanure_a021351fd3857778590b48842dfd8fd5f}{operator+} (const \hyperlink{classproduct}{product} \&someManure)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classmanure_a78dc3bbc39591aeb4ac6b3b722d66a0d}{operator-\/} (const \hyperlink{classproduct}{product} \&someManure)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classmanure_af2915d37963e5f4d3a4b0c0d91fab188}{clone} () const 
+\item 
+virtual void \hyperlink{classmanure_a0bf5e3b02282ec2a7d265e04e2c3f561}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual double \hyperlink{classmanure_aa8504fd1f545f75b143d76c8991b2b87}{GiveInfiltrationReduction} ()
+\item 
+virtual double \hyperlink{classmanure_a25045c87941e46b757c706e7fd179a37}{GetWater\_\-content} ()
+\item 
+virtual double \hyperlink{classmanure_a0f2eab386e559113dba56d6d8cfb55e7}{GiveInfiltrationResistance} ()
+\item 
+virtual double \hyperlink{classmanure_aa5a3178bfb7d4f5f87fe41d1d8221ed5}{GetcanopyStorageParameter} ()
+\item 
+virtual void \hyperlink{classmanure_ae3f89476810dce15bb0e4d4a8d176bd5}{SetcanopyStorageParameter} (double aValue)
+\item 
+virtual double \hyperlink{classmanure_a88f9fce0227f2bac1dfa448c1d149b9d}{InstantaneousVolatAmmonia} (double temperature, double area, double resistance, double duration)
+\item 
+virtual double \hyperlink{classmanure_a6ecbd94610934e7ee281c62ea8d2fcde}{GetMethaneEmission} (double temperature, double duration)
+\item 
+virtual double \hyperlink{classmanure_ac9206359d7b5dcdcf7c1dba31f490342}{GetCarbonDioxideEmission} (double temperature, double duration)
+\item 
+virtual double \hyperlink{classmanure_a9005bcd6e277a3f993b1c67b90edfb35}{doDenitrification} (double temperature, double duration, double $\ast$N2, double $\ast$N2O)
+\item 
+virtual void \hyperlink{classmanure_a8262006c9db5b1e7fcdb0b73e8f23260}{CalcOMdegradation} (double temperature, double duration, double degRateConst, double $\ast$CO2, double $\ast$CH4, double $\ast$NH4)
+\item 
+virtual double \hyperlink{classmanure_ad293bc0666ccc034fe1f15a1df2a4010}{GetOrgMatterConc} ()
+\item 
+virtual double \hyperlink{classmanure_a8c330c3c3c05dc44b7c75eae581b717c}{CalcDryMatterConc} ()
+\item 
+virtual double \hyperlink{classmanure_ae63202774deb8721397a915d15679dba}{VolatCarbon} (double emissionFactor)
+\item 
+virtual double \hyperlink{classmanure_a1a9772a5fe0cdc749b004b175abcfa3c}{mesoTemperatureFunc} (double temperature)
+\item 
+virtual double \hyperlink{classmanure_a3e7121336d2d986fcd06766902ebc1e4}{MoistureFunc} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classmanure_a88bca29dfcbb79bbe0a8a0ea33186fcc}{operator$<$$<$} (ostream \&os, const \hyperlink{classmanure}{manure} \&amanure)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmanure_a169ecc5b27034bb777db79053f571c6e}{
+\index{manure@{manure}!manure@{manure}}
+\index{manure@{manure}!manure@{manure}}
+\subsubsection[{manure}]{\setlength{\rightskip}{0pt plus 5cm}manure::manure ()}}
+\label{classmanure_a169ecc5b27034bb777db79053f571c6e}
+\hypertarget{classmanure_a38f96dbe471887e6846f2435209bce64}{
+\index{manure@{manure}!manure@{manure}}
+\index{manure@{manure}!manure@{manure}}
+\subsubsection[{manure}]{\setlength{\rightskip}{0pt plus 5cm}manure::manure (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classmanure_a38f96dbe471887e6846f2435209bce64}
+\hypertarget{classmanure_afbb8c5beb0e7ac02c565f8d754a05558}{
+\index{manure@{manure}!manure@{manure}}
+\index{manure@{manure}!manure@{manure}}
+\subsubsection[{manure}]{\setlength{\rightskip}{0pt plus 5cm}manure::manure (const {\bf manure} \& {\em amanure})}}
+\label{classmanure_afbb8c5beb0e7ac02c565f8d754a05558}
+\hypertarget{classmanure_a46c220944c99cbd781019f206233bf32}{
+\index{manure@{manure}!manure@{manure}}
+\index{manure@{manure}!manure@{manure}}
+\subsubsection[{manure}]{\setlength{\rightskip}{0pt plus 5cm}manure::manure (const {\bf decomposable} \& {\em aDecomp})}}
+\label{classmanure_a46c220944c99cbd781019f206233bf32}
+\hypertarget{classmanure_ac1beb68437856daf80d130aa4714cf66}{
+\index{manure@{manure}!$\sim$manure@{$\sim$manure}}
+\index{$\sim$manure@{$\sim$manure}!manure@{manure}}
+\subsubsection[{$\sim$manure}]{\setlength{\rightskip}{0pt plus 5cm}manure::$\sim$manure ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_ac1beb68437856daf80d130aa4714cf66}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmanure_aad5e7bf3c405be74990b85a5d4fd4b49}{
+\index{manure@{manure}!AddWater@{AddWater}}
+\index{AddWater@{AddWater}!manure@{manure}}
+\subsubsection[{AddWater}]{\setlength{\rightskip}{0pt plus 5cm}void manure::AddWater (double {\em waterToAdd})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_aad5e7bf3c405be74990b85a5d4fd4b49}
+
+
+Reimplemented from \hyperlink{classlive_matter_af84f48b8ee8f67cea63b35d033cefe3b}{liveMatter}.\hypertarget{classmanure_a8c330c3c3c05dc44b7c75eae581b717c}{
+\index{manure@{manure}!CalcDryMatterConc@{CalcDryMatterConc}}
+\index{CalcDryMatterConc@{CalcDryMatterConc}!manure@{manure}}
+\subsubsection[{CalcDryMatterConc}]{\setlength{\rightskip}{0pt plus 5cm}double manure::CalcDryMatterConc ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a8c330c3c3c05dc44b7c75eae581b717c}
+\hypertarget{classmanure_a8262006c9db5b1e7fcdb0b73e8f23260}{
+\index{manure@{manure}!CalcOMdegradation@{CalcOMdegradation}}
+\index{CalcOMdegradation@{CalcOMdegradation}!manure@{manure}}
+\subsubsection[{CalcOMdegradation}]{\setlength{\rightskip}{0pt plus 5cm}void manure::CalcOMdegradation (double {\em temperature}, \/  double {\em duration}, \/  double {\em degRateConst}, \/  double $\ast$ {\em CO2}, \/  double $\ast$ {\em CH4}, \/  double $\ast$ {\em NH4})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a8262006c9db5b1e7fcdb0b73e8f23260}
+\hypertarget{classmanure_af2915d37963e5f4d3a4b0c0d91fab188}{
+\index{manure@{manure}!clone@{clone}}
+\index{clone@{clone}!manure@{manure}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ manure::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_af2915d37963e5f4d3a4b0c0d91fab188}
+
+
+Reimplemented from \hyperlink{classdecomposable_ab15f1f4e93e58810887029648be0ec31}{decomposable}.\hypertarget{classmanure_a9005bcd6e277a3f993b1c67b90edfb35}{
+\index{manure@{manure}!doDenitrification@{doDenitrification}}
+\index{doDenitrification@{doDenitrification}!manure@{manure}}
+\subsubsection[{doDenitrification}]{\setlength{\rightskip}{0pt plus 5cm}double manure::doDenitrification (double {\em temperature}, \/  double {\em duration}, \/  double $\ast$ {\em N2}, \/  double $\ast$ {\em N2O})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a9005bcd6e277a3f993b1c67b90edfb35}
+calculate N2 and N2O. It does also update NH4 \hypertarget{classmanure_aa5a3178bfb7d4f5f87fe41d1d8221ed5}{
+\index{manure@{manure}!GetcanopyStorageParameter@{GetcanopyStorageParameter}}
+\index{GetcanopyStorageParameter@{GetcanopyStorageParameter}!manure@{manure}}
+\subsubsection[{GetcanopyStorageParameter}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manure::GetcanopyStorageParameter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanure_aa5a3178bfb7d4f5f87fe41d1d8221ed5}
+\hypertarget{classmanure_ac9206359d7b5dcdcf7c1dba31f490342}{
+\index{manure@{manure}!GetCarbonDioxideEmission@{GetCarbonDioxideEmission}}
+\index{GetCarbonDioxideEmission@{GetCarbonDioxideEmission}!manure@{manure}}
+\subsubsection[{GetCarbonDioxideEmission}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetCarbonDioxideEmission (double {\em temperature}, \/  double {\em duration})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_ac9206359d7b5dcdcf7c1dba31f490342}
+\hypertarget{classmanure_af7b3d4f63546db980e899016faeeb500}{
+\index{manure@{manure}!GetCu\_\-content@{GetCu\_\-content}}
+\index{GetCu\_\-content@{GetCu\_\-content}!manure@{manure}}
+\subsubsection[{GetCu\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetCu\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_af7b3d4f63546db980e899016faeeb500}
+\hypertarget{classmanure_ade6dc43e945016f901ced6a54527ea80}{
+\index{manure@{manure}!GetdegradableOM@{GetdegradableOM}}
+\index{GetdegradableOM@{GetdegradableOM}!manure@{manure}}
+\subsubsection[{GetdegradableOM}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetdegradableOM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_ade6dc43e945016f901ced6a54527ea80}
+\hypertarget{classmanure_a17370a1b9fb3505d4dfd2d33430bd7e6}{
+\index{manure@{manure}!GetdegRateConst@{GetdegRateConst}}
+\index{GetdegRateConst@{GetdegRateConst}!manure@{manure}}
+\subsubsection[{GetdegRateConst}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetdegRateConst ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a17370a1b9fb3505d4dfd2d33430bd7e6}
+\hypertarget{classmanure_ac8976e36d43ce2b5ad75407ce036a317}{
+\index{manure@{manure}!GetfromAnimal@{GetfromAnimal}}
+\index{GetfromAnimal@{GetfromAnimal}!manure@{manure}}
+\subsubsection[{GetfromAnimal}]{\setlength{\rightskip}{0pt plus 5cm}string manure::GetfromAnimal (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_ac8976e36d43ce2b5ad75407ce036a317}
+\hypertarget{classmanure_a9ef6ec705107f1162883332a05f5cd87}{
+\index{manure@{manure}!GetinfiltFactor@{GetinfiltFactor}}
+\index{GetinfiltFactor@{GetinfiltFactor}!manure@{manure}}
+\subsubsection[{GetinfiltFactor}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetinfiltFactor () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a9ef6ec705107f1162883332a05f5cd87}
+\hypertarget{classmanure_aa608bf6f9be6d1d02c6788dfb8a6eadf}{
+\index{manure@{manure}!GetmaxDeg@{GetmaxDeg}}
+\index{GetmaxDeg@{GetmaxDeg}!manure@{manure}}
+\subsubsection[{GetmaxDeg}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetmaxDeg ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_aa608bf6f9be6d1d02c6788dfb8a6eadf}
+\hypertarget{classmanure_a6ecbd94610934e7ee281c62ea8d2fcde}{
+\index{manure@{manure}!GetMethaneEmission@{GetMethaneEmission}}
+\index{GetMethaneEmission@{GetMethaneEmission}!manure@{manure}}
+\subsubsection[{GetMethaneEmission}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetMethaneEmission (double {\em temperature}, \/  double {\em duration})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a6ecbd94610934e7ee281c62ea8d2fcde}
+\hypertarget{classmanure_a33d61ff2bca9b2344ca013d284176395}{
+\index{manure@{manure}!GetMg\_\-content@{GetMg\_\-content}}
+\index{GetMg\_\-content@{GetMg\_\-content}!manure@{manure}}
+\subsubsection[{GetMg\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetMg\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a33d61ff2bca9b2344ca013d284176395}
+\hypertarget{classmanure_ad293bc0666ccc034fe1f15a1df2a4010}{
+\index{manure@{manure}!GetOrgMatterConc@{GetOrgMatterConc}}
+\index{GetOrgMatterConc@{GetOrgMatterConc}!manure@{manure}}
+\subsubsection[{GetOrgMatterConc}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manure::GetOrgMatterConc ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanure_ad293bc0666ccc034fe1f15a1df2a4010}
+\hypertarget{classmanure_aeb6b9f64e829c8f799cd771c6090cdcf}{
+\index{manure@{manure}!GetpH@{GetpH}}
+\index{GetpH@{GetpH}!manure@{manure}}
+\subsubsection[{GetpH}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetpH (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_aeb6b9f64e829c8f799cd771c6090cdcf}
+\hypertarget{classmanure_a7b77b90caee4bc5fcf2dea610ffdd321}{
+\index{manure@{manure}!GetQ@{GetQ}}
+\index{GetQ@{GetQ}!manure@{manure}}
+\subsubsection[{GetQ}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetQ (double {\em temp}) const}}
+\label{classmanure_a7b77b90caee4bc5fcf2dea610ffdd321}
+\hypertarget{classmanure_af02a1de2138e4c9e2aa182a2891e5182}{
+\index{manure@{manure}!GetRt\_\-content@{GetRt\_\-content}}
+\index{GetRt\_\-content@{GetRt\_\-content}!manure@{manure}}
+\subsubsection[{GetRt\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetRt\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_af02a1de2138e4c9e2aa182a2891e5182}
+\hypertarget{classmanure_aae99257f7fb59e92b218339362b9cb4b}{
+\index{manure@{manure}!Getsand@{Getsand}}
+\index{Getsand@{Getsand}!manure@{manure}}
+\subsubsection[{Getsand}]{\setlength{\rightskip}{0pt plus 5cm}double manure::Getsand (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_aae99257f7fb59e92b218339362b9cb4b}
+\hypertarget{classmanure_a2e85d960cb09d2a21943c7968402f23a}{
+\index{manure@{manure}!Getvolatisation@{Getvolatisation}}
+\index{Getvolatisation@{Getvolatisation}!manure@{manure}}
+\subsubsection[{Getvolatisation}]{\setlength{\rightskip}{0pt plus 5cm}double manure::Getvolatisation (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a2e85d960cb09d2a21943c7968402f23a}
+\hypertarget{classmanure_a25045c87941e46b757c706e7fd179a37}{
+\index{manure@{manure}!GetWater\_\-content@{GetWater\_\-content}}
+\index{GetWater\_\-content@{GetWater\_\-content}!manure@{manure}}
+\subsubsection[{GetWater\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manure::GetWater\_\-content ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanure_a25045c87941e46b757c706e7fd179a37}
+\hypertarget{classmanure_a6aba3f146ff412c234583f5f1c805000}{
+\index{manure@{manure}!GetWaterEvap@{GetWaterEvap}}
+\index{GetWaterEvap@{GetWaterEvap}!manure@{manure}}
+\subsubsection[{GetWaterEvap}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GetWaterEvap (double {\em temperature}, \/  double {\em relHumidity}, \/  double {\em area}, \/  double {\em resistance}, \/  double {\em duration})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a6aba3f146ff412c234583f5f1c805000}
+Calculating \hyperlink{classwater}{water} Evapulation . Currently returning 0 because it dos not work \hypertarget{classmanure_aa8504fd1f545f75b143d76c8991b2b87}{
+\index{manure@{manure}!GiveInfiltrationReduction@{GiveInfiltrationReduction}}
+\index{GiveInfiltrationReduction@{GiveInfiltrationReduction}!manure@{manure}}
+\subsubsection[{GiveInfiltrationReduction}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GiveInfiltrationReduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_aa8504fd1f545f75b143d76c8991b2b87}
+\hypertarget{classmanure_a0f2eab386e559113dba56d6d8cfb55e7}{
+\index{manure@{manure}!GiveInfiltrationResistance@{GiveInfiltrationResistance}}
+\index{GiveInfiltrationResistance@{GiveInfiltrationResistance}!manure@{manure}}
+\subsubsection[{GiveInfiltrationResistance}]{\setlength{\rightskip}{0pt plus 5cm}double manure::GiveInfiltrationResistance ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a0f2eab386e559113dba56d6d8cfb55e7}
+\hypertarget{classmanure_ac45a5d29b499ebe4f93a8473dc2cf821}{
+\index{manure@{manure}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!manure@{manure}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void manure::InitVariables ()}}
+\label{classmanure_ac45a5d29b499ebe4f93a8473dc2cf821}
+
+
+Reimplemented from \hyperlink{classdecomposable_aabfa1610321f138dff27b27e074cf9ea}{decomposable}.\hypertarget{classmanure_a88f9fce0227f2bac1dfa448c1d149b9d}{
+\index{manure@{manure}!InstantaneousVolatAmmonia@{InstantaneousVolatAmmonia}}
+\index{InstantaneousVolatAmmonia@{InstantaneousVolatAmmonia}!manure@{manure}}
+\subsubsection[{InstantaneousVolatAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double manure::InstantaneousVolatAmmonia (double {\em temperature}, \/  double {\em area}, \/  double {\em resistance}, \/  double {\em duration})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a88f9fce0227f2bac1dfa448c1d149b9d}
+\hypertarget{classmanure_a1a9772a5fe0cdc749b004b175abcfa3c}{
+\index{manure@{manure}!mesoTemperatureFunc@{mesoTemperatureFunc}}
+\index{mesoTemperatureFunc@{mesoTemperatureFunc}!manure@{manure}}
+\subsubsection[{mesoTemperatureFunc}]{\setlength{\rightskip}{0pt plus 5cm}double manure::mesoTemperatureFunc (double {\em temperature})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a1a9772a5fe0cdc749b004b175abcfa3c}
+\hypertarget{classmanure_a3e7121336d2d986fcd06766902ebc1e4}{
+\index{manure@{manure}!MoistureFunc@{MoistureFunc}}
+\index{MoistureFunc@{MoistureFunc}!manure@{manure}}
+\subsubsection[{MoistureFunc}]{\setlength{\rightskip}{0pt plus 5cm}double manure::MoistureFunc ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a3e7121336d2d986fcd06766902ebc1e4}
+\hypertarget{classmanure_a021351fd3857778590b48842dfd8fd5f}{
+\index{manure@{manure}!operator+@{operator+}}
+\index{operator+@{operator+}!manure@{manure}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& manure::operator+ (const {\bf product} \& {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a021351fd3857778590b48842dfd8fd5f}
+
+
+Reimplemented from \hyperlink{classdecomposable_a3ce2092217848b27b52fc54327c8ad53}{decomposable}.\hypertarget{classmanure_a78dc3bbc39591aeb4ac6b3b722d66a0d}{
+\index{manure@{manure}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!manure@{manure}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& manure::operator-\/ (const {\bf product} \& {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a78dc3bbc39591aeb4ac6b3b722d66a0d}
+
+
+Reimplemented from \hyperlink{classdecomposable_a2af3d9d773f8cdf8d84ce51ed5c470ff}{decomposable}.\hypertarget{classmanure_aefa4f7856537616586ae73e8a34cdf97}{
+\index{manure@{manure}!operator=@{operator=}}
+\index{operator=@{operator=}!manure@{manure}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& manure::operator= (const {\bf product} \& {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_aefa4f7856537616586ae73e8a34cdf97}
+
+
+Reimplemented from \hyperlink{classdecomposable_a296f63c98dd6712bfc375287c6123ea7}{decomposable}.\hypertarget{classmanure_a0bf5e3b02282ec2a7d265e04e2c3f561}{
+\index{manure@{manure}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!manure@{manure}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void manure::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a0bf5e3b02282ec2a7d265e04e2c3f561}
+
+
+Reimplemented from \hyperlink{classdecomposable_a79e5c1092b6c8f3e9f233a26ed308c63}{decomposable}.\hypertarget{classmanure_ae3f89476810dce15bb0e4d4a8d176bd5}{
+\index{manure@{manure}!SetcanopyStorageParameter@{SetcanopyStorageParameter}}
+\index{SetcanopyStorageParameter@{SetcanopyStorageParameter}!manure@{manure}}
+\subsubsection[{SetcanopyStorageParameter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manure::SetcanopyStorageParameter (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanure_ae3f89476810dce15bb0e4d4a8d176bd5}
+\hypertarget{classmanure_aa979cd914677628162bbabecb00a292d}{
+\index{manure@{manure}!SetCu\_\-content@{SetCu\_\-content}}
+\index{SetCu\_\-content@{SetCu\_\-content}!manure@{manure}}
+\subsubsection[{SetCu\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void manure::SetCu\_\-content (double {\em aCu\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_aa979cd914677628162bbabecb00a292d}
+\hypertarget{classmanure_add39b3db240608cc79de01d322e01a7a}{
+\index{manure@{manure}!SetfromAnimal@{SetfromAnimal}}
+\index{SetfromAnimal@{SetfromAnimal}!manure@{manure}}
+\subsubsection[{SetfromAnimal}]{\setlength{\rightskip}{0pt plus 5cm}void manure::SetfromAnimal (string {\em afromAnimal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_add39b3db240608cc79de01d322e01a7a}
+\hypertarget{classmanure_a4b2a248f98de1f072d5b25d85e0a6641}{
+\index{manure@{manure}!SetinfiltFactor@{SetinfiltFactor}}
+\index{SetinfiltFactor@{SetinfiltFactor}!manure@{manure}}
+\subsubsection[{SetinfiltFactor}]{\setlength{\rightskip}{0pt plus 5cm}void manure::SetinfiltFactor (double {\em factor})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a4b2a248f98de1f072d5b25d85e0a6641}
+\hypertarget{classmanure_ab92a739f5a35221e48c8923af884e3a4}{
+\index{manure@{manure}!SetMg\_\-content@{SetMg\_\-content}}
+\index{SetMg\_\-content@{SetMg\_\-content}!manure@{manure}}
+\subsubsection[{SetMg\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void manure::SetMg\_\-content (double {\em aMg\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_ab92a739f5a35221e48c8923af884e3a4}
+\hypertarget{classmanure_a6d4583c874bb537909cfe6c110a59041}{
+\index{manure@{manure}!SetpH@{SetpH}}
+\index{SetpH@{SetpH}!manure@{manure}}
+\subsubsection[{SetpH}]{\setlength{\rightskip}{0pt plus 5cm}void manure::SetpH (double {\em apH})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a6d4583c874bb537909cfe6c110a59041}
+\hypertarget{classmanure_a7fb7695584fe22855f7b1183a97d26d2}{
+\index{manure@{manure}!SetRt\_\-content@{SetRt\_\-content}}
+\index{SetRt\_\-content@{SetRt\_\-content}!manure@{manure}}
+\subsubsection[{SetRt\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void manure::SetRt\_\-content (double {\em aRt\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a7fb7695584fe22855f7b1183a97d26d2}
+\hypertarget{classmanure_a3a698b8d4b52c4fd14b7731ce20ad57d}{
+\index{manure@{manure}!Setsand@{Setsand}}
+\index{Setsand@{Setsand}!manure@{manure}}
+\subsubsection[{Setsand}]{\setlength{\rightskip}{0pt plus 5cm}void manure::Setsand (double {\em asand})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_a3a698b8d4b52c4fd14b7731ce20ad57d}
+\hypertarget{classmanure_adefe5e150b1de5ae3c4af36c0c6dcada}{
+\index{manure@{manure}!Setvolatisation@{Setvolatisation}}
+\index{Setvolatisation@{Setvolatisation}!manure@{manure}}
+\subsubsection[{Setvolatisation}]{\setlength{\rightskip}{0pt plus 5cm}void manure::Setvolatisation (double {\em aVol})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanure_adefe5e150b1de5ae3c4af36c0c6dcada}
+\hypertarget{classmanure_a1bfcf202c765d99c51fb8ed6850e21a2}{
+\index{manure@{manure}!SubtractWater@{SubtractWater}}
+\index{SubtractWater@{SubtractWater}!manure@{manure}}
+\subsubsection[{SubtractWater}]{\setlength{\rightskip}{0pt plus 5cm}double manure::SubtractWater (double {\em waterToSubtract})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a1bfcf202c765d99c51fb8ed6850e21a2}
+
+
+Reimplemented from \hyperlink{classlive_matter_ac03a44e7ff2177c9ab7dc63876b0a6fc}{liveMatter}.\hypertarget{classmanure_ad759c54bfd7b7656f5601b39efee16a4}{
+\index{manure@{manure}!VolatAmmonia@{VolatAmmonia}}
+\index{VolatAmmonia@{VolatAmmonia}!manure@{manure}}
+\subsubsection[{VolatAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double manure::VolatAmmonia (double {\em temperature}, \/  double {\em evap}, \/  double {\em infiltration}, \/  double {\em precipitation}, \/  double {\em area}, \/  double {\em resistance}, \/  double {\em duration}, \/  double $\ast$ {\em volEvap}, \/  {\bf manure} $\ast$ {\em toSoil})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_ad759c54bfd7b7656f5601b39efee16a4}
+\hypertarget{classmanure_abf7e3e8410ff6ec04010568c204f9ca6}{
+\index{manure@{manure}!VolatAndMinNitrogen@{VolatAndMinNitrogen}}
+\index{VolatAndMinNitrogen@{VolatAndMinNitrogen}!manure@{manure}}
+\subsubsection[{VolatAndMinNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void manure::VolatAndMinNitrogen (double {\em NH3EF}, \/  double {\em N2EF}, \/  double {\em N2OEF}, \/  double {\em MinF}, \/  double $\ast$ {\em NH3vol}, \/  double $\ast$ {\em N2vol}, \/  double $\ast$ {\em N2Ovol}, \/  double $\ast$ {\em MinN})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_abf7e3e8410ff6ec04010568c204f9ca6}
+calculate how much NH3, N2,N2O and N there is evaporate. Those value is return in NH3vol, N2vol, N2Ovol, MinN NH3EF, N2EF, N2OEF, MinF is the fraction of NH4 that is transformed in the process. It is then removed from the \hyperlink{classmanure}{manure} \hypertarget{classmanure_ae63202774deb8721397a915d15679dba}{
+\index{manure@{manure}!VolatCarbon@{VolatCarbon}}
+\index{VolatCarbon@{VolatCarbon}!manure@{manure}}
+\subsubsection[{VolatCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double manure::VolatCarbon (double {\em emissionFactor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_ae63202774deb8721397a915d15679dba}
+Calculated how much carbon is evaporated. emissionFactor is the factor of carbon. The missing carbon is removed from the \hyperlink{classmanure}{manure} \hypertarget{classmanure_a28d72550be1b4392ebabfdbbb8c36e39}{
+\index{manure@{manure}!VolatNitrogen@{VolatNitrogen}}
+\index{VolatNitrogen@{VolatNitrogen}!manure@{manure}}
+\subsubsection[{VolatNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void manure::VolatNitrogen (double {\em temperature}, \/  double {\em area}, \/  double {\em resistance}, \/  double {\em duration}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_a28d72550be1b4392ebabfdbbb8c36e39}
+\hypertarget{classmanure_ab9836c0cde19119bae96ee2602c75f95}{
+\index{manure@{manure}!VolatNitrogen@{VolatNitrogen}}
+\index{VolatNitrogen@{VolatNitrogen}!manure@{manure}}
+\subsubsection[{VolatNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}double manure::VolatNitrogen (double {\em emissionFactor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanure_ab9836c0cde19119bae96ee2602c75f95}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmanure_a88bca29dfcbb79bbe0a8a0ea33186fcc}{
+\index{manure@{manure}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!manure@{manure}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf manure} \& {\em amanure})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmanure_a88bca29dfcbb79bbe0a8a0ea33186fcc}
+
+
+Reimplemented from \hyperlink{classdecomposable_a44e65cd8ff15e859dba4d1bfd1003c98}{decomposable}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{manure_8h}{manure.h}\item 
+C:/main/trunk/src/products/\hyperlink{manure_8cpp}{manure.cpp}\end{DoxyCompactItemize}

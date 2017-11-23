@@ -1,0 +1,106 @@
+\hypertarget{sniptype_8h}{
+\section{C:/main/trunk/src/base/sniptype.h File Reference}
+\label{sniptype_8h}\index{C:/main/trunk/src/base/sniptype.h@{C:/main/trunk/src/base/sniptype.h}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sniptype_8h_af19d48b9f61047a668649a2f9dc317ff}{NUL}~'$\backslash$0'
+\item 
+\#define \hyperlink{sniptype_8h_a25991665c8917da761bf50b4ed90d3bf}{LAST\_\-CHAR}(s)~(((char $\ast$)s)\mbox{[}strlen(s) -\/ 1\mbox{]})
+\item 
+\#define \hyperlink{sniptype_8h_af240b9a33571ffca6ad1d3fc02ecf0ad}{TOBOOL}(x)~(!(!(x)))
+\item 
+\#define \hyperlink{sniptype_8h_a02048bf846e8bc87e3ce188e4957ef06}{FREE}(p)~(free(p),(p)=NULL)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{sniptype_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}
+\item 
+typedef unsigned long \hyperlink{sniptype_8h_ad342ac907eb044443153a22f964bf0af}{DWORD}
+\item 
+typedef unsigned short \hyperlink{sniptype_8h_a197942eefa7db30960ae396d68339b97}{WORD}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95}{Boolean\_\-T} \{ \hyperlink{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95a29ee28f9735df7dfdb9429042d37f7a4}{Error\_\-} =  -\/1, 
+\hyperlink{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95ab052a38afdaf6f10ab779e5be6c90fcf}{Success\_\-}, 
+\hyperlink{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95add1769e71637acf2d31f47af82fddc21}{False\_\-} =  0, 
+\hyperlink{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95ae8703ac45bd553a7096c035b7032c90c}{True\_\-}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{sniptype_8h_a02048bf846e8bc87e3ce188e4957ef06}{
+\index{sniptype.h@{sniptype.h}!FREE@{FREE}}
+\index{FREE@{FREE}!sniptype.h@{sniptype.h}}
+\subsubsection[{FREE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FREE(p)~(free(p),(p)=NULL)}}
+\label{sniptype_8h_a02048bf846e8bc87e3ce188e4957ef06}
+\hypertarget{sniptype_8h_a25991665c8917da761bf50b4ed90d3bf}{
+\index{sniptype.h@{sniptype.h}!LAST\_\-CHAR@{LAST\_\-CHAR}}
+\index{LAST\_\-CHAR@{LAST\_\-CHAR}!sniptype.h@{sniptype.h}}
+\subsubsection[{LAST\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define LAST\_\-CHAR(s)~(((char $\ast$)s)\mbox{[}strlen(s) -\/ 1\mbox{]})}}
+\label{sniptype_8h_a25991665c8917da761bf50b4ed90d3bf}
+\hypertarget{sniptype_8h_af19d48b9f61047a668649a2f9dc317ff}{
+\index{sniptype.h@{sniptype.h}!NUL@{NUL}}
+\index{NUL@{NUL}!sniptype.h@{sniptype.h}}
+\subsubsection[{NUL}]{\setlength{\rightskip}{0pt plus 5cm}\#define NUL~'$\backslash$0'}}
+\label{sniptype_8h_af19d48b9f61047a668649a2f9dc317ff}
+\hypertarget{sniptype_8h_af240b9a33571ffca6ad1d3fc02ecf0ad}{
+\index{sniptype.h@{sniptype.h}!TOBOOL@{TOBOOL}}
+\index{TOBOOL@{TOBOOL}!sniptype.h@{sniptype.h}}
+\subsubsection[{TOBOOL}]{\setlength{\rightskip}{0pt plus 5cm}\#define TOBOOL(x)~(!(!(x)))}}
+\label{sniptype_8h_af240b9a33571ffca6ad1d3fc02ecf0ad}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{sniptype_8h_a4ae1dab0fb4b072a66584546209e7d58}{
+\index{sniptype.h@{sniptype.h}!BYTE@{BYTE}}
+\index{BYTE@{BYTE}!sniptype.h@{sniptype.h}}
+\subsubsection[{BYTE}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf BYTE}}}
+\label{sniptype_8h_a4ae1dab0fb4b072a66584546209e7d58}
+\hypertarget{sniptype_8h_ad342ac907eb044443153a22f964bf0af}{
+\index{sniptype.h@{sniptype.h}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!sniptype.h@{sniptype.h}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf DWORD}}}
+\label{sniptype_8h_ad342ac907eb044443153a22f964bf0af}
+\hypertarget{sniptype_8h_a197942eefa7db30960ae396d68339b97}{
+\index{sniptype.h@{sniptype.h}!WORD@{WORD}}
+\index{WORD@{WORD}!sniptype.h@{sniptype.h}}
+\subsubsection[{WORD}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf WORD}}}
+\label{sniptype_8h_a197942eefa7db30960ae396d68339b97}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95}{
+\index{sniptype.h@{sniptype.h}!Boolean\_\-T@{Boolean\_\-T}}
+\index{Boolean\_\-T@{Boolean\_\-T}!sniptype.h@{sniptype.h}}
+\subsubsection[{Boolean\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Boolean\_\-T}}}
+\label{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Error\_\-@{Error\_\-}!sniptype.h@{sniptype.h}}\index{sniptype.h@{sniptype.h}!Error\_\-@{Error\_\-}}\item[{\em 
+\hypertarget{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95a29ee28f9735df7dfdb9429042d37f7a4}{
+Error\_\-}
+\label{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95a29ee28f9735df7dfdb9429042d37f7a4}
+}]\index{Success\_\-@{Success\_\-}!sniptype.h@{sniptype.h}}\index{sniptype.h@{sniptype.h}!Success\_\-@{Success\_\-}}\item[{\em 
+\hypertarget{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95ab052a38afdaf6f10ab779e5be6c90fcf}{
+Success\_\-}
+\label{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95ab052a38afdaf6f10ab779e5be6c90fcf}
+}]\index{False\_\-@{False\_\-}!sniptype.h@{sniptype.h}}\index{sniptype.h@{sniptype.h}!False\_\-@{False\_\-}}\item[{\em 
+\hypertarget{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95add1769e71637acf2d31f47af82fddc21}{
+False\_\-}
+\label{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95add1769e71637acf2d31f47af82fddc21}
+}]\index{True\_\-@{True\_\-}!sniptype.h@{sniptype.h}}\index{sniptype.h@{sniptype.h}!True\_\-@{True\_\-}}\item[{\em 
+\hypertarget{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95ae8703ac45bd553a7096c035b7032c90c}{
+True\_\-}
+\label{sniptype_8h_a23b15dfcddd1e92bf88e5a88338d3d95ae8703ac45bd553a7096c035b7032c90c}
+}]\end{description}
+\end{Desc}
+

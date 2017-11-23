@@ -1,0 +1,143 @@
+\hypertarget{classtax_legislation}{
+\section{taxLegislation Class Reference}
+\label{classtax_legislation}\index{taxLegislation@{taxLegislation}}
+}
+
+
+{\ttfamily \#include $<$taxLegislation.h$>$}Inheritance diagram for taxLegislation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classtax_legislation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtax_legislation_a09b089449e25316b4b5df7984fc5a98e}{taxLegislation} ()
+\item 
+\hyperlink{classtax_legislation_a19c5e1bdde3d7eed93124fab88b4f8da}{taxLegislation} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classtax_legislation_a6308fd276172e291d3510cc8435ab27e}{taxLegislation} (int aType, double \hyperlink{classtax_legislation_adb4fa60260aacf3c1a45a70bd3ae04bc}{tax}, int \hyperlink{classtax_legislation_adbbadff2de7874d7791a8b49184efa20}{startYear}, int \hyperlink{classtax_legislation_af30a4ad86468d2d3e2e5916f8fec7c70}{stopYear}, const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classtax_legislation_aea929ad962a5f32bb4d67fdbd72eddba}{$\sim$taxLegislation} ()
+\item 
+bool \hyperlink{classtax_legislation_ae011ae3ec63f87d1b67fcb5a51821f81}{taxThisYear} (int simulationYear)
+\item 
+double \hyperlink{classtax_legislation_a4996538fc577797ff1774d716fcb65d9}{getTax} ()
+\item 
+double \hyperlink{classtax_legislation_ae5d6de8995fc279d67c8a99ab669f839}{getLevel} ()
+\item 
+int \hyperlink{classtax_legislation_ad4433eef048eef886850174f7d799ae5}{getType} ()
+\item 
+void \hyperlink{classtax_legislation_a36da77119116d76049ca5055659720d7}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtax_legislation_a7779a3f675f559f66cbfaf62f73bf746}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classtax_legislation_a0a6871fcffb1f92c0d5b8ae779c44513}{type}
+\item 
+double \hyperlink{classtax_legislation_adb4fa60260aacf3c1a45a70bd3ae04bc}{tax}
+\item 
+double \hyperlink{classtax_legislation_a6a3416e30e2b2a7ee0053792a688f21c}{level}
+\item 
+int \hyperlink{classtax_legislation_adbbadff2de7874d7791a8b49184efa20}{startYear}
+\item 
+int \hyperlink{classtax_legislation_af30a4ad86468d2d3e2e5916f8fec7c70}{stopYear}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtax_legislation_a09b089449e25316b4b5df7984fc5a98e}{
+\index{taxLegislation@{taxLegislation}!taxLegislation@{taxLegislation}}
+\index{taxLegislation@{taxLegislation}!taxLegislation@{taxLegislation}}
+\subsubsection[{taxLegislation}]{\setlength{\rightskip}{0pt plus 5cm}taxLegislation::taxLegislation ()}}
+\label{classtax_legislation_a09b089449e25316b4b5df7984fc5a98e}
+\hypertarget{classtax_legislation_a19c5e1bdde3d7eed93124fab88b4f8da}{
+\index{taxLegislation@{taxLegislation}!taxLegislation@{taxLegislation}}
+\index{taxLegislation@{taxLegislation}!taxLegislation@{taxLegislation}}
+\subsubsection[{taxLegislation}]{\setlength{\rightskip}{0pt plus 5cm}taxLegislation::taxLegislation (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classtax_legislation_a19c5e1bdde3d7eed93124fab88b4f8da}
+\hypertarget{classtax_legislation_a6308fd276172e291d3510cc8435ab27e}{
+\index{taxLegislation@{taxLegislation}!taxLegislation@{taxLegislation}}
+\index{taxLegislation@{taxLegislation}!taxLegislation@{taxLegislation}}
+\subsubsection[{taxLegislation}]{\setlength{\rightskip}{0pt plus 5cm}taxLegislation::taxLegislation (int {\em aType}, \/  double {\em tax}, \/  int {\em startYear}, \/  int {\em stopYear}, \/  const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classtax_legislation_a6308fd276172e291d3510cc8435ab27e}
+\hypertarget{classtax_legislation_aea929ad962a5f32bb4d67fdbd72eddba}{
+\index{taxLegislation@{taxLegislation}!$\sim$taxLegislation@{$\sim$taxLegislation}}
+\index{$\sim$taxLegislation@{$\sim$taxLegislation}!taxLegislation@{taxLegislation}}
+\subsubsection[{$\sim$taxLegislation}]{\setlength{\rightskip}{0pt plus 5cm}taxLegislation::$\sim$taxLegislation ()}}
+\label{classtax_legislation_aea929ad962a5f32bb4d67fdbd72eddba}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtax_legislation_ae5d6de8995fc279d67c8a99ab669f839}{
+\index{taxLegislation@{taxLegislation}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!taxLegislation@{taxLegislation}}
+\subsubsection[{getLevel}]{\setlength{\rightskip}{0pt plus 5cm}double taxLegislation::getLevel ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtax_legislation_ae5d6de8995fc279d67c8a99ab669f839}
+\hypertarget{classtax_legislation_a4996538fc577797ff1774d716fcb65d9}{
+\index{taxLegislation@{taxLegislation}!getTax@{getTax}}
+\index{getTax@{getTax}!taxLegislation@{taxLegislation}}
+\subsubsection[{getTax}]{\setlength{\rightskip}{0pt plus 5cm}double taxLegislation::getTax ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtax_legislation_a4996538fc577797ff1774d716fcb65d9}
+\hypertarget{classtax_legislation_ad4433eef048eef886850174f7d799ae5}{
+\index{taxLegislation@{taxLegislation}!getType@{getType}}
+\index{getType@{getType}!taxLegislation@{taxLegislation}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}int taxLegislation::getType ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtax_legislation_ad4433eef048eef886850174f7d799ae5}
+\hypertarget{classtax_legislation_a7779a3f675f559f66cbfaf62f73bf746}{
+\index{taxLegislation@{taxLegislation}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!taxLegislation@{taxLegislation}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void taxLegislation::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtax_legislation_a7779a3f675f559f66cbfaf62f73bf746}
+
+
+Reimplemented from \hyperlink{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{base}.\hypertarget{classtax_legislation_a36da77119116d76049ca5055659720d7}{
+\index{taxLegislation@{taxLegislation}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!taxLegislation@{taxLegislation}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void taxLegislation::ReadParameters (fstream $\ast$ {\em file})}}
+\label{classtax_legislation_a36da77119116d76049ca5055659720d7}
+\hypertarget{classtax_legislation_ae011ae3ec63f87d1b67fcb5a51821f81}{
+\index{taxLegislation@{taxLegislation}!taxThisYear@{taxThisYear}}
+\index{taxThisYear@{taxThisYear}!taxLegislation@{taxLegislation}}
+\subsubsection[{taxThisYear}]{\setlength{\rightskip}{0pt plus 5cm}bool taxLegislation::taxThisYear (int {\em simulationYear})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtax_legislation_ae011ae3ec63f87d1b67fcb5a51821f81}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtax_legislation_a6a3416e30e2b2a7ee0053792a688f21c}{
+\index{taxLegislation@{taxLegislation}!level@{level}}
+\index{level@{level}!taxLegislation@{taxLegislation}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf taxLegislation::level}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtax_legislation_a6a3416e30e2b2a7ee0053792a688f21c}
+\hypertarget{classtax_legislation_adbbadff2de7874d7791a8b49184efa20}{
+\index{taxLegislation@{taxLegislation}!startYear@{startYear}}
+\index{startYear@{startYear}!taxLegislation@{taxLegislation}}
+\subsubsection[{startYear}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf taxLegislation::startYear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtax_legislation_adbbadff2de7874d7791a8b49184efa20}
+\hypertarget{classtax_legislation_af30a4ad86468d2d3e2e5916f8fec7c70}{
+\index{taxLegislation@{taxLegislation}!stopYear@{stopYear}}
+\index{stopYear@{stopYear}!taxLegislation@{taxLegislation}}
+\subsubsection[{stopYear}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf taxLegislation::stopYear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtax_legislation_af30a4ad86468d2d3e2e5916f8fec7c70}
+\hypertarget{classtax_legislation_adb4fa60260aacf3c1a45a70bd3ae04bc}{
+\index{taxLegislation@{taxLegislation}!tax@{tax}}
+\index{tax@{tax}!taxLegislation@{taxLegislation}}
+\subsubsection[{tax}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf taxLegislation::tax}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtax_legislation_adb4fa60260aacf3c1a45a70bd3ae04bc}
+\hypertarget{classtax_legislation_a0a6871fcffb1f92c0d5b8ae779c44513}{
+\index{taxLegislation@{taxLegislation}!type@{type}}
+\index{type@{type}!taxLegislation@{taxLegislation}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf taxLegislation::type}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtax_legislation_a0a6871fcffb1f92c0d5b8ae779c44513}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/legislation/\hyperlink{tax_legislation_8h}{taxLegislation.h}\item 
+C:/main/trunk/src/legislation/\hyperlink{tax_legislation_8cpp}{taxLegislation.cpp}\end{DoxyCompactItemize}

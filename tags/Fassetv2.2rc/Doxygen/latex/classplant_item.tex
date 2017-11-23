@@ -1,0 +1,184 @@
+\hypertarget{classplant_item}{
+\section{plantItem Class Reference}
+\label{classplant_item}\index{plantItem@{plantItem}}
+}
+
+
+{\ttfamily \#include $<$plantItem.h$>$}Inheritance diagram for plantItem::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{classplant_item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classplant_item_ac93fe7d6cc8d879ed9d646769023c09e}{plantItem} ()
+\item 
+\hyperlink{classplant_item_a968d1e08695684a7e8a030a358ac6207}{plantItem} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classplant_item_af4f30aea1be38af35207388520405d9b}{plantItem} (const \hyperlink{classplant_item}{plantItem} \&aplantItem)
+\item 
+virtual \hyperlink{classplant_item_a4e87de98904bd879da41009e546009fa}{$\sim$plantItem} ()
+\item 
+string \hyperlink{classplant_item_a13e0fffda4f4b06bf2227812e810197e}{GetTradeName} (void) const 
+\item 
+int \hyperlink{classplant_item_a699f90b4fdbccc1f533ebe40b6865c10}{GetTradeable} (void) const 
+\item 
+int \hyperlink{classplant_item_a0bce13899dbeeb3eb5be82d42ea9cf93}{GetPrimaryProduct} (void) const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classplant_item_a8f1788f9c6299d63ad1fa4add42c0fe2}{operator=} (const \hyperlink{classproduct}{product} \&somePlantItem)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classplant_item_aee9a9da7f6a40551ff0e172561d6a881}{operator+} (const \hyperlink{classproduct}{product} \&somePlantItem)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classplant_item_a3ca74628fd07b229a871ac0f80e31a41}{operator-\/} (const \hyperlink{classproduct}{product} \&somePlantItem)
+\item 
+virtual void \hyperlink{classplant_item_af4591feee9c292842152a6451d392d33}{showstats} (ostream $\ast$os)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classplant_item_ae9aec44d433339eca078b4277801717a}{clone} () const 
+\item 
+virtual void \hyperlink{classplant_item_a6ed5a9408b471bb44246e5c50e93b72f}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classplant_item_a68b971164b0ea870d6d14c5b53ad8223}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classplant_item_a8591ebca83e9a76f496ed8fdb70dd36c}{tradeName}
+\item 
+int \hyperlink{classplant_item_ad5daab88f181729c18eb9141d819ed69}{tradeable}
+\item 
+int \hyperlink{classplant_item_af54e9c26d0a6b3c7a4f899dd591634c0}{primaryProduct}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classplant_item_a57bdf6a52f37049686a779f3c93ecc73}{operator$<$$<$} (ostream \&os, const \hyperlink{classplant_item}{plantItem} \&aplantItem)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classplant_item_ac93fe7d6cc8d879ed9d646769023c09e}{
+\index{plantItem@{plantItem}!plantItem@{plantItem}}
+\index{plantItem@{plantItem}!plantItem@{plantItem}}
+\subsubsection[{plantItem}]{\setlength{\rightskip}{0pt plus 5cm}plantItem::plantItem ()}}
+\label{classplant_item_ac93fe7d6cc8d879ed9d646769023c09e}
+\hypertarget{classplant_item_a968d1e08695684a7e8a030a358ac6207}{
+\index{plantItem@{plantItem}!plantItem@{plantItem}}
+\index{plantItem@{plantItem}!plantItem@{plantItem}}
+\subsubsection[{plantItem}]{\setlength{\rightskip}{0pt plus 5cm}plantItem::plantItem (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classplant_item_a968d1e08695684a7e8a030a358ac6207}
+\hypertarget{classplant_item_af4f30aea1be38af35207388520405d9b}{
+\index{plantItem@{plantItem}!plantItem@{plantItem}}
+\index{plantItem@{plantItem}!plantItem@{plantItem}}
+\subsubsection[{plantItem}]{\setlength{\rightskip}{0pt plus 5cm}plantItem::plantItem (const {\bf plantItem} \& {\em aplantItem})}}
+\label{classplant_item_af4f30aea1be38af35207388520405d9b}
+\hypertarget{classplant_item_a4e87de98904bd879da41009e546009fa}{
+\index{plantItem@{plantItem}!$\sim$plantItem@{$\sim$plantItem}}
+\index{$\sim$plantItem@{$\sim$plantItem}!plantItem@{plantItem}}
+\subsubsection[{$\sim$plantItem}]{\setlength{\rightskip}{0pt plus 5cm}plantItem::$\sim$plantItem ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_a4e87de98904bd879da41009e546009fa}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classplant_item_ae9aec44d433339eca078b4277801717a}{
+\index{plantItem@{plantItem}!clone@{clone}}
+\index{clone@{clone}!plantItem@{plantItem}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ plantItem::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_ae9aec44d433339eca078b4277801717a}
+
+
+Reimplemented from \hyperlink{classdecomposable_ab15f1f4e93e58810887029648be0ec31}{decomposable}.\hypertarget{classplant_item_a0bce13899dbeeb3eb5be82d42ea9cf93}{
+\index{plantItem@{plantItem}!GetPrimaryProduct@{GetPrimaryProduct}}
+\index{GetPrimaryProduct@{GetPrimaryProduct}!plantItem@{plantItem}}
+\subsubsection[{GetPrimaryProduct}]{\setlength{\rightskip}{0pt plus 5cm}int plantItem::GetPrimaryProduct (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_item_a0bce13899dbeeb3eb5be82d42ea9cf93}
+\hypertarget{classplant_item_a699f90b4fdbccc1f533ebe40b6865c10}{
+\index{plantItem@{plantItem}!GetTradeable@{GetTradeable}}
+\index{GetTradeable@{GetTradeable}!plantItem@{plantItem}}
+\subsubsection[{GetTradeable}]{\setlength{\rightskip}{0pt plus 5cm}int plantItem::GetTradeable (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_item_a699f90b4fdbccc1f533ebe40b6865c10}
+\hypertarget{classplant_item_a13e0fffda4f4b06bf2227812e810197e}{
+\index{plantItem@{plantItem}!GetTradeName@{GetTradeName}}
+\index{GetTradeName@{GetTradeName}!plantItem@{plantItem}}
+\subsubsection[{GetTradeName}]{\setlength{\rightskip}{0pt plus 5cm}string plantItem::GetTradeName (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_item_a13e0fffda4f4b06bf2227812e810197e}
+\hypertarget{classplant_item_a68b971164b0ea870d6d14c5b53ad8223}{
+\index{plantItem@{plantItem}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!plantItem@{plantItem}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void plantItem::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_item_a68b971164b0ea870d6d14c5b53ad8223}
+
+
+Reimplemented from \hyperlink{classdecomposable_aabfa1610321f138dff27b27e074cf9ea}{decomposable}.\hypertarget{classplant_item_aee9a9da7f6a40551ff0e172561d6a881}{
+\index{plantItem@{plantItem}!operator+@{operator+}}
+\index{operator+@{operator+}!plantItem@{plantItem}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& plantItem::operator+ (const {\bf product} \& {\em somePlantItem})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_aee9a9da7f6a40551ff0e172561d6a881}
+
+
+Reimplemented from \hyperlink{classdecomposable_a3ce2092217848b27b52fc54327c8ad53}{decomposable}.\hypertarget{classplant_item_a3ca74628fd07b229a871ac0f80e31a41}{
+\index{plantItem@{plantItem}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!plantItem@{plantItem}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& plantItem::operator-\/ (const {\bf product} \& {\em somePlantItem})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_a3ca74628fd07b229a871ac0f80e31a41}
+
+
+Reimplemented from \hyperlink{classdecomposable_a2af3d9d773f8cdf8d84ce51ed5c470ff}{decomposable}.\hypertarget{classplant_item_a8f1788f9c6299d63ad1fa4add42c0fe2}{
+\index{plantItem@{plantItem}!operator=@{operator=}}
+\index{operator=@{operator=}!plantItem@{plantItem}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& plantItem::operator= (const {\bf product} \& {\em somePlantItem})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_a8f1788f9c6299d63ad1fa4add42c0fe2}
+
+
+Reimplemented from \hyperlink{classdecomposable_a296f63c98dd6712bfc375287c6123ea7}{decomposable}.\hypertarget{classplant_item_a6ed5a9408b471bb44246e5c50e93b72f}{
+\index{plantItem@{plantItem}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!plantItem@{plantItem}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void plantItem::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_a6ed5a9408b471bb44246e5c50e93b72f}
+
+
+Reimplemented from \hyperlink{classdecomposable_a79e5c1092b6c8f3e9f233a26ed308c63}{decomposable}.\hypertarget{classplant_item_af4591feee9c292842152a6451d392d33}{
+\index{plantItem@{plantItem}!showstats@{showstats}}
+\index{showstats@{showstats}!plantItem@{plantItem}}
+\subsubsection[{showstats}]{\setlength{\rightskip}{0pt plus 5cm}void plantItem::showstats (ostream $\ast$ {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_item_af4591feee9c292842152a6451d392d33}
+
+
+Reimplemented from \hyperlink{classproduct_a1151ea416ab90047f8d087be57a6d7b1}{product}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classplant_item_a57bdf6a52f37049686a779f3c93ecc73}{
+\index{plantItem@{plantItem}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!plantItem@{plantItem}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf plantItem} \& {\em aplantItem})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classplant_item_a57bdf6a52f37049686a779f3c93ecc73}
+
+
+Reimplemented from \hyperlink{classdecomposable_a44e65cd8ff15e859dba4d1bfd1003c98}{decomposable}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classplant_item_af54e9c26d0a6b3c7a4f899dd591634c0}{
+\index{plantItem@{plantItem}!primaryProduct@{primaryProduct}}
+\index{primaryProduct@{primaryProduct}!plantItem@{plantItem}}
+\subsubsection[{primaryProduct}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf plantItem::primaryProduct}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_item_af54e9c26d0a6b3c7a4f899dd591634c0}
+\hypertarget{classplant_item_ad5daab88f181729c18eb9141d819ed69}{
+\index{plantItem@{plantItem}!tradeable@{tradeable}}
+\index{tradeable@{tradeable}!plantItem@{plantItem}}
+\subsubsection[{tradeable}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf plantItem::tradeable}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_item_ad5daab88f181729c18eb9141d819ed69}
+\hypertarget{classplant_item_a8591ebca83e9a76f496ed8fdb70dd36c}{
+\index{plantItem@{plantItem}!tradeName@{tradeName}}
+\index{tradeName@{tradeName}!plantItem@{plantItem}}
+\subsubsection[{tradeName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf plantItem::tradeName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_item_a8591ebca83e9a76f496ed8fdb70dd36c}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{plant_item_8h}{plantItem.h}\item 
+C:/main/trunk/src/products/\hyperlink{plant_item_8cpp}{plantItem.cpp}\end{DoxyCompactItemize}

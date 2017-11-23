@@ -1,0 +1,679 @@
+\hypertarget{classmatter}{
+\section{matter Class Reference}
+\label{classmatter}\index{matter@{matter}}
+}
+
+
+{\ttfamily \#include $<$matter.h$>$}Inheritance diagram for matter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classmatter}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmatter_1_1connection}{connection}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmatter_acb99722e3f542cfcdcc658e1276f9027}{matter} (const char $\ast$Pname, const int \hyperlink{classbase_afa59aaa1a0201700640234eb13a03aae}{Index}, const \hyperlink{classbase}{base} $\ast$owner)
+\item 
+\hyperlink{classmatter_a0b5df9f5426e3b2fc39b3cf1fa220b11}{matter} (const \hyperlink{classmatter}{matter} \&source)
+\item 
+virtual \hyperlink{classmatter_aa3c8c1d5f9fd9db9dba4afb72acd94a1}{$\sim$matter} ()
+\item 
+virtual \hyperlink{classmatter}{matter} $\ast$ \hyperlink{classmatter_afca594a86c75c8f40856bc5c8711266c}{clone} () const 
+\item 
+virtual void \hyperlink{classmatter_a5cda91bc9eb0bfbc1fd1003cf574e39c}{Add} (\hyperlink{classmatter}{matter} $\ast$source, double fraction)
+\item 
+virtual void \hyperlink{classmatter_adeae5b9c4239d6c02c19e04d346e6d10}{Initialize} (double \hyperlink{classmatter_a1da4af6772cb60316fe1152209eb2835}{clayEffect1}, double \hyperlink{classmatter_a79e544386cdb596986c6bf1396a6d79b}{clayEffect2}, int clayResp)
+\item 
+virtual void \hyperlink{classmatter_a8418c63bc2206df9cb0de19aa195eeac}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classmatter_a284c87f3ce437b9e71f32ec14d9fab64}{Import} (\hyperlink{classcn_matter}{cnMatter} c)
+\item 
+virtual void \hyperlink{classmatter_a3fe12afab8b3df24433e64de80f81e81}{Export} (\hyperlink{classcn_matter}{cnMatter} c)
+\item 
+virtual void \hyperlink{classmatter_a2b3dd492a18a139790bd227e2b4e0a70}{Update} (double environmentEffect, int mode)
+\item 
+virtual void \hyperlink{classmatter_a5ad9b7b66c194958cdf58ec47024c0c9}{CatchInflux} (\hyperlink{classcn_matter}{cnMatter} \&content, int mode)
+\item 
+virtual void \hyperlink{classmatter_ac17664d421545b45ef91061b17ae6c7b}{TestAddProduct} (\hyperlink{classorganic_product}{organicProduct} $\ast$prod, double $\ast$check, double $\ast$CN, int $\ast$num, bool forAOM)
+\item 
+virtual void \hyperlink{classmatter_a7c9d44152352900088849c198d6495ce}{AddOrganicProduct} (\hyperlink{classorganic_product}{organicProduct} $\ast$prod, int fractionNumber, double $\ast$check)
+\item 
+virtual void \hyperlink{classmatter_aa5d1ab3edc35b1ade3f0714af81e3ab1}{Decay14C} (double HalfTime)
+\item 
+virtual void \hyperlink{classmatter_a3ef43a1976efeced60e639fb1ec6579a}{SetConnectionFraction} (int nr, double frC, double frN=-\/1.0)
+\item 
+virtual double \hyperlink{classmatter_a97573040212b5ac7047a2cba344346d1}{GetConnectionFraction} (string \hyperlink{classmatter_aa5a52c9da8fc5f18e214c66c92bf3759}{poolName})
+\item 
+virtual void \hyperlink{classmatter_a69825448805e58acc5418362a11eac2b}{WriteSelf} (iostream $\ast$s)
+\item 
+virtual void \hyperlink{classmatter_aea177bcb159721bb1d4fe4bc8b5ec451}{SetDecompositionRate} (double d)
+\item 
+virtual void \hyperlink{classmatter_a2969cf8d4330d010ce8b2d7c9f989364}{SetDeathRate} (double d)
+\item 
+virtual void \hyperlink{classmatter_aa6ecf5e0a7bf435208005c087e2f5afa}{SetMaintenanceRate} (double m)
+\item 
+virtual double \hyperlink{classmatter_a3abae42a1209403e4c6b31521cb4a847}{GetDeathRate} ()
+\item 
+virtual double \hyperlink{classmatter_addcaacf93fd6c24eceada787a2bac3fe}{GetMaintenanceRate} ()
+\item 
+virtual void \hyperlink{classmatter_a6ede9887bd438658b4833d1242d8e2a7}{SetCarbon} (\hyperlink{classcn_matter}{cnMatter} cn)
+\item 
+virtual void \hyperlink{classmatter_a76a28967ecac20950fef8b4a875c0eaa}{AddCarbon} (\hyperlink{classcn_matter}{cnMatter} cn)
+\item 
+virtual \hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_ae85f8f64ea546c5cbe056c641304b514}{GetCarbon} ()
+\item 
+virtual double \hyperlink{classmatter_abf19fbb793ab04234294f9afca07a337}{GetDecompositionRate} ()
+\item 
+virtual string \hyperlink{classmatter_ac2484214a3aecdc577de7dab86f0e48b}{GetPoolName} ()
+\item 
+virtual void \hyperlink{classmatter_a56ffe81f49ab5d79f47cc71ece13a48a}{SetIsotope} (int i)
+\item 
+virtual bool \hyperlink{classmatter_a2795dedbc608b20bc713a17981e181af}{GetExponentialDecay} ()
+\item 
+virtual void \hyperlink{classmatter_a211b0d822211f4f202803e72b902db0f}{SetExponentialDecay} (bool ed)
+\item 
+virtual bool \hyperlink{classmatter_a4476cba25191cb4f52471675ae270c04}{SetParameterByName} (string parmName, double val)
+\item 
+virtual void \hyperlink{classmatter_a850135c585ac81915cac266f0d8e04df}{SetStepFactor} (double sf)
+\item 
+virtual double \hyperlink{classmatter_a1c97017b5f16dd256b99961f8b50a946}{GetCNratio} ()
+\item 
+virtual double \hyperlink{classmatter_a96b0fe568fcecda260abc0a5d32ca3da}{GetDefaultCNratio} ()
+\item 
+virtual double \hyperlink{classmatter_a111bf6b7c88f61e75ed50eac1fc8c3b7}{GetCNcrit} ()
+\item 
+virtual void \hyperlink{classmatter_a63dd0c869dd3a37857fd9bbaf714cb99}{Scale} (double fraction)
+\item 
+virtual double \hyperlink{classmatter_abaf880e3b1efd04eae0db055caed9b12}{ResidualCarbon} ()
+\item 
+virtual void \hyperlink{classmatter_a36bd225841eda2240009df17d239cfa1}{FinalExport} (double ratio)
+\item 
+virtual void \hyperlink{classmatter_af6764fccc5304bb9832879c40e7c7cba}{CatchInfluxIfNotHungry} (\hyperlink{classcn_matter}{cnMatter} \&content, int mode)
+\item 
+virtual void \hyperlink{classmatter_abbc0846a0f37653351fbae149fbb91ce}{CatchInfluxIfHungry} (\hyperlink{classcn_matter}{cnMatter} \&content, int mode)
+\item 
+virtual void \hyperlink{classmatter_a5f04a9ddefede46fd82848148a5fbab8}{FinalDecayIfHungry} (double ratio)
+\item 
+virtual double \hyperlink{classmatter_a59fa9a6e0ff21bac9ab9fb5b4de9392f}{PotentialNitrogenMineralisation} ()
+\item 
+virtual double \hyperlink{classmatter_a302a5c72c1cbe1c3d62f01d07f25cd4c}{PotentialNitrogenImmobilisation} ()
+\item 
+virtual bool \hyperlink{classmatter_a59b4566b93dd22923b97976c752783ef}{Hungry} ()
+\item 
+virtual double \hyperlink{classmatter_a1af8fc74ce3aed8d761a4a3cd0b98ca0}{GetMicrobialPoolNdesire} ()
+\item 
+virtual void \hyperlink{classmatter_ad4e8182423face98b556a4620437ade7}{GiveMicrobialPoolExtraN} (double r)
+\item 
+virtual bool \hyperlink{classmatter_af64df31f0243674868c26be217d8decf}{IsBiomass} ()
+\item 
+virtual bool \hyperlink{classmatter_a838d402c6b41deb9d9c20eeabecd94a8}{IsAOM} () const 
+\item 
+virtual double \hyperlink{classmatter_ad8531740a6494ac68f0223cd49d272eb}{PotentialCarbonTurnover} ()
+\item 
+virtual void \hyperlink{classmatter_a2c4adc457cfb867ea5abd7e8a3489c48}{CycleNitrogen} (double nCycling, double environmentEffect)
+\item 
+virtual void \hyperlink{classmatter_a9fe8f4ee934f280c9964dacc27d42611}{ReleaseReduceTurnover} ()
+\item 
+virtual bool \hyperlink{classmatter_a3e3b834e7187ad3447eda29a2703377a}{ExtraTurnover} (double Fraction)
+\item 
+virtual bool \hyperlink{classmatter_a2c91964d566a29807648e62548c6b159}{CloneAndModify} (double Fraction, double TurnoverFactor)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classmatter_a7dbeb62589b018c950f7025b93a2f75ca34d772285f7fb06e6efb36d78b928b93}{maxConnections} = 20
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmatter_aadaebd447a949f40f20753ae3b6163a1}{matter} ()
+\item 
+\hyperlink{classmatter}{matter} \& \hyperlink{classmatter_a7e74962a5eb9280b2a259c9b908ded79}{operator=} (const \hyperlink{classmatter}{matter} \&m)
+\item 
+void \hyperlink{classmatter_a8d0cc1e4c20dfb20cbb9eceaa4ad7c67}{DirectOutFlux} (double flux)
+\item 
+double \hyperlink{classmatter_af3b6b437f85e529623fdb3a93adbe4ad}{CNcrit} ()
+\item 
+void \hyperlink{classmatter_a163ce999b80e53c044fb9d948da510e3}{TestState} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classmatter_ad8689f25569a1686e00d30c19c3d3cd5}{useClayEffect}
+\item 
+bool \hyperlink{classmatter_a37d97592f65bb759756fbc1e725bfc40}{expDecay}
+\item 
+double \hyperlink{classmatter_a469812ff5f5548cc57e8aaf905422d59}{cnRatio}
+\item 
+double \hyperlink{classmatter_a04cfcfcbd4523bfbcb6ae73808f1796b}{stepFactor}
+\item 
+double \hyperlink{classmatter_a2b043f2c674031ceb99a1ac1451a715e}{decompositionRate}
+\item 
+double \hyperlink{classmatter_a1da4af6772cb60316fe1152209eb2835}{clayEffect1}
+\item 
+double \hyperlink{classmatter_a79e544386cdb596986c6bf1396a6d79b}{clayEffect2}
+\item 
+int \hyperlink{classmatter_aa5542096a167bed6ed8eafd696816599}{TAG}
+\item 
+int \hyperlink{classmatter_a66af6caaa54804a6bcd353f587994a51}{Isotope}
+\item 
+int \hyperlink{classmatter_a6b25cecac355a09e902930ef2138041f}{clayResponseType}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_ac47ac49f037d82b8d1cdc16275f341e4}{carbon}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_abdf3e98bc03005e58bd57df3e9bbd988}{influx}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_a1dd0c9ddeb3e81f74812a24221c4132a}{intermed}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_accdb39d94bfbf28e30c45c063c31c630}{added}
+\item 
+double \hyperlink{classmatter_aa9674ae514deddbaccbad950ef1da56f}{CNC}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_aee9a37b271a52658a03a7350a173afae}{carbonDerivative} \mbox{[}6\mbox{]}
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classmatter_aee1bc7ca345e58bd4e203af721b0c8d7}{outfluxDerivative} \mbox{[}5\mbox{]}
+\item 
+int \hyperlink{classmatter_a4a8f7cc7089b86f9e401424f648ccdf3}{connections}
+\item 
+string \hyperlink{classmatter_aa5a52c9da8fc5f18e214c66c92bf3759}{poolName}
+\item 
+\hyperlink{structmatter_1_1connection}{connection} \hyperlink{classmatter_ac73565a1dbd68219dbcb7e4199cffb12}{connectionList} \mbox{[}maxConnections\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classmatter_a7dbeb62589b018c950f7025b93a2f75c}{
+\subsubsection[{"@32}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a7dbeb62589b018c950f7025b93a2f75c}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{maxConnections@{maxConnections}!matter@{matter}}\index{matter@{matter}!maxConnections@{maxConnections}}\item[{\em 
+\hypertarget{classmatter_a7dbeb62589b018c950f7025b93a2f75ca34d772285f7fb06e6efb36d78b928b93}{
+maxConnections}
+\label{classmatter_a7dbeb62589b018c950f7025b93a2f75ca34d772285f7fb06e6efb36d78b928b93}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmatter_aadaebd447a949f40f20753ae3b6163a1}{
+\index{matter@{matter}!matter@{matter}}
+\index{matter@{matter}!matter@{matter}}
+\subsubsection[{matter}]{\setlength{\rightskip}{0pt plus 5cm}matter::matter ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_aadaebd447a949f40f20753ae3b6163a1}
+\hypertarget{classmatter_acb99722e3f542cfcdcc658e1276f9027}{
+\index{matter@{matter}!matter@{matter}}
+\index{matter@{matter}!matter@{matter}}
+\subsubsection[{matter}]{\setlength{\rightskip}{0pt plus 5cm}matter::matter (const char $\ast$ {\em Pname}, \/  const int {\em Index}, \/  const {\bf base} $\ast$ {\em owner})}}
+\label{classmatter_acb99722e3f542cfcdcc658e1276f9027}
+\hypertarget{classmatter_a0b5df9f5426e3b2fc39b3cf1fa220b11}{
+\index{matter@{matter}!matter@{matter}}
+\index{matter@{matter}!matter@{matter}}
+\subsubsection[{matter}]{\setlength{\rightskip}{0pt plus 5cm}matter::matter (const {\bf matter} \& {\em source})}}
+\label{classmatter_a0b5df9f5426e3b2fc39b3cf1fa220b11}
+\hypertarget{classmatter_aa3c8c1d5f9fd9db9dba4afb72acd94a1}{
+\index{matter@{matter}!$\sim$matter@{$\sim$matter}}
+\index{$\sim$matter@{$\sim$matter}!matter@{matter}}
+\subsubsection[{$\sim$matter}]{\setlength{\rightskip}{0pt plus 5cm}virtual matter::$\sim$matter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_aa3c8c1d5f9fd9db9dba4afb72acd94a1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmatter_a5cda91bc9eb0bfbc1fd1003cf574e39c}{
+\index{matter@{matter}!Add@{Add}}
+\index{Add@{Add}!matter@{matter}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Add ({\bf matter} $\ast$ {\em source}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a5cda91bc9eb0bfbc1fd1003cf574e39c}
+\hypertarget{classmatter_a76a28967ecac20950fef8b4a875c0eaa}{
+\index{matter@{matter}!AddCarbon@{AddCarbon}}
+\index{AddCarbon@{AddCarbon}!matter@{matter}}
+\subsubsection[{AddCarbon}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::AddCarbon ({\bf cnMatter} {\em cn})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a76a28967ecac20950fef8b4a875c0eaa}
+\hypertarget{classmatter_a7c9d44152352900088849c198d6495ce}{
+\index{matter@{matter}!AddOrganicProduct@{AddOrganicProduct}}
+\index{AddOrganicProduct@{AddOrganicProduct}!matter@{matter}}
+\subsubsection[{AddOrganicProduct}]{\setlength{\rightskip}{0pt plus 5cm}void matter::AddOrganicProduct ({\bf organicProduct} $\ast$ {\em prod}, \/  int {\em fractionNumber}, \/  double $\ast$ {\em check})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a7c9d44152352900088849c198d6495ce}
+\hypertarget{classmatter_a5ad9b7b66c194958cdf58ec47024c0c9}{
+\index{matter@{matter}!CatchInflux@{CatchInflux}}
+\index{CatchInflux@{CatchInflux}!matter@{matter}}
+\subsubsection[{CatchInflux}]{\setlength{\rightskip}{0pt plus 5cm}void matter::CatchInflux ({\bf cnMatter} \& {\em content}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a5ad9b7b66c194958cdf58ec47024c0c9}
+
+
+Reimplemented in \hyperlink{classadded_matter_a453f802edd746aeb213c26c823678517}{addedMatter}, \hyperlink{classadded_pool_a67faed29b7b9d747de144920d7299a71}{addedPool}, and \hyperlink{classbio_matter_a5b83f540f697e51fcb235d252493675d}{bioMatter}.\hypertarget{classmatter_abbc0846a0f37653351fbae149fbb91ce}{
+\index{matter@{matter}!CatchInfluxIfHungry@{CatchInfluxIfHungry}}
+\index{CatchInfluxIfHungry@{CatchInfluxIfHungry}!matter@{matter}}
+\subsubsection[{CatchInfluxIfHungry}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::CatchInfluxIfHungry ({\bf cnMatter} \& {\em content}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_abbc0846a0f37653351fbae149fbb91ce}
+
+
+Reimplemented in \hyperlink{classadded_matter_a82ac9bf0ca59c436d6f393467b3bb70a}{addedMatter}, and \hyperlink{classadded_pool_afbd54d1de5f10317e091a58e46be0ce3}{addedPool}.\hypertarget{classmatter_af6764fccc5304bb9832879c40e7c7cba}{
+\index{matter@{matter}!CatchInfluxIfNotHungry@{CatchInfluxIfNotHungry}}
+\index{CatchInfluxIfNotHungry@{CatchInfluxIfNotHungry}!matter@{matter}}
+\subsubsection[{CatchInfluxIfNotHungry}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::CatchInfluxIfNotHungry ({\bf cnMatter} \& {\em content}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_af6764fccc5304bb9832879c40e7c7cba}
+
+
+Reimplemented in \hyperlink{classadded_matter_a23ebccf4a6eeb768a053a6c8c8190111}{addedMatter}, and \hyperlink{classadded_pool_abe54b048d58a11fda014be4710031f56}{addedPool}.\hypertarget{classmatter_afca594a86c75c8f40856bc5c8711266c}{
+\index{matter@{matter}!clone@{clone}}
+\index{clone@{clone}!matter@{matter}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matter} $\ast$ matter::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_afca594a86c75c8f40856bc5c8711266c}
+
+
+Reimplemented in \hyperlink{classadded_matter_ad211e0c8e46f87b030a5101560f0c6a0}{addedMatter}, \hyperlink{classadded_pool_a6841609f3de8ac7a775bbd915eeaefdb}{addedPool}, and \hyperlink{classbio_matter_ab60f7bac01ff6e5de8c0be13d28c91b5}{bioMatter}.\hypertarget{classmatter_a2c91964d566a29807648e62548c6b159}{
+\index{matter@{matter}!CloneAndModify@{CloneAndModify}}
+\index{CloneAndModify@{CloneAndModify}!matter@{matter}}
+\subsubsection[{CloneAndModify}]{\setlength{\rightskip}{0pt plus 5cm}bool matter::CloneAndModify (double {\em Fraction}, \/  double {\em TurnoverFactor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a2c91964d566a29807648e62548c6b159}
+
+
+Reimplemented in \hyperlink{classadded_matter_a8032c019960cff02dc5cb38ef2c2614e}{addedMatter}.\hypertarget{classmatter_af3b6b437f85e529623fdb3a93adbe4ad}{
+\index{matter@{matter}!CNcrit@{CNcrit}}
+\index{CNcrit@{CNcrit}!matter@{matter}}
+\subsubsection[{CNcrit}]{\setlength{\rightskip}{0pt plus 5cm}double matter::CNcrit ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_af3b6b437f85e529623fdb3a93adbe4ad}
+\hypertarget{classmatter_a2c4adc457cfb867ea5abd7e8a3489c48}{
+\index{matter@{matter}!CycleNitrogen@{CycleNitrogen}}
+\index{CycleNitrogen@{CycleNitrogen}!matter@{matter}}
+\subsubsection[{CycleNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::CycleNitrogen (double {\em nCycling}, \/  double {\em environmentEffect})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a2c4adc457cfb867ea5abd7e8a3489c48}
+
+
+Reimplemented in \hyperlink{classbio_matter_a9257d95bfb49081c8dc1f2515f1a9d13}{bioMatter}.\hypertarget{classmatter_aa5d1ab3edc35b1ade3f0714af81e3ab1}{
+\index{matter@{matter}!Decay14C@{Decay14C}}
+\index{Decay14C@{Decay14C}!matter@{matter}}
+\subsubsection[{Decay14C}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Decay14C (double {\em HalfTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_aa5d1ab3edc35b1ade3f0714af81e3ab1}
+
+
+Reimplemented in \hyperlink{classadded_matter_ac3f88e4d8ae94d0b7f0fe1b06e33d345}{addedMatter}.\hypertarget{classmatter_a8d0cc1e4c20dfb20cbb9eceaa4ad7c67}{
+\index{matter@{matter}!DirectOutFlux@{DirectOutFlux}}
+\index{DirectOutFlux@{DirectOutFlux}!matter@{matter}}
+\subsubsection[{DirectOutFlux}]{\setlength{\rightskip}{0pt plus 5cm}void matter::DirectOutFlux (double {\em flux})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a8d0cc1e4c20dfb20cbb9eceaa4ad7c67}
+\hypertarget{classmatter_a3fe12afab8b3df24433e64de80f81e81}{
+\index{matter@{matter}!Export@{Export}}
+\index{Export@{Export}!matter@{matter}}
+\subsubsection[{Export}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Export ({\bf cnMatter} {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a3fe12afab8b3df24433e64de80f81e81}
+
+
+!!!!!!!!!!!!!!!!!!!!! \hypertarget{classmatter_a3e3b834e7187ad3447eda29a2703377a}{
+\index{matter@{matter}!ExtraTurnover@{ExtraTurnover}}
+\index{ExtraTurnover@{ExtraTurnover}!matter@{matter}}
+\subsubsection[{ExtraTurnover}]{\setlength{\rightskip}{0pt plus 5cm}bool matter::ExtraTurnover (double {\em Fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a3e3b834e7187ad3447eda29a2703377a}
+
+
+Reimplemented in \hyperlink{classbio_matter_aaa093e840d976d780d9601562709c044}{bioMatter}.\hypertarget{classmatter_a5f04a9ddefede46fd82848148a5fbab8}{
+\index{matter@{matter}!FinalDecayIfHungry@{FinalDecayIfHungry}}
+\index{FinalDecayIfHungry@{FinalDecayIfHungry}!matter@{matter}}
+\subsubsection[{FinalDecayIfHungry}]{\setlength{\rightskip}{0pt plus 5cm}void matter::FinalDecayIfHungry (double {\em ratio})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a5f04a9ddefede46fd82848148a5fbab8}
+
+
+Reimplemented in \hyperlink{classadded_matter_a40c4a27c09387b87f804e1c3a48cf908}{addedMatter}, and \hyperlink{classbio_matter_adbafa5aac0c673f8659adec82a4cc99f}{bioMatter}.\hypertarget{classmatter_a36bd225841eda2240009df17d239cfa1}{
+\index{matter@{matter}!FinalExport@{FinalExport}}
+\index{FinalExport@{FinalExport}!matter@{matter}}
+\subsubsection[{FinalExport}]{\setlength{\rightskip}{0pt plus 5cm}void matter::FinalExport (double {\em ratio})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a36bd225841eda2240009df17d239cfa1}
+
+
+Reimplemented in \hyperlink{classadded_matter_a6c6bab5a53ecb7358459d44d29681c95}{addedMatter}, and \hyperlink{classbio_matter_ae738d8197ededa18e73f8640ce52d1ab}{bioMatter}.\hypertarget{classmatter_ae85f8f64ea546c5cbe056c641304b514}{
+\index{matter@{matter}!GetCarbon@{GetCarbon}}
+\index{GetCarbon@{GetCarbon}!matter@{matter}}
+\subsubsection[{GetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} matter::GetCarbon ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_ae85f8f64ea546c5cbe056c641304b514}
+
+
+Reimplemented in \hyperlink{classadded_matter_aa0c64a25840e1a117b686bb779403147}{addedMatter}, and \hyperlink{classbio_matter_a5e053f03d4be2b04f8e5f633f4181af1}{bioMatter}.\hypertarget{classmatter_a111bf6b7c88f61e75ed50eac1fc8c3b7}{
+\index{matter@{matter}!GetCNcrit@{GetCNcrit}}
+\index{GetCNcrit@{GetCNcrit}!matter@{matter}}
+\subsubsection[{GetCNcrit}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetCNcrit ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a111bf6b7c88f61e75ed50eac1fc8c3b7}
+
+
+Reimplemented in \hyperlink{classadded_matter_ac2d053d776783effa120e93de55c41ea}{addedMatter}, and \hyperlink{classbio_matter_ac8e514d722c9605efcf653fdc46b1d65}{bioMatter}.\hypertarget{classmatter_a1c97017b5f16dd256b99961f8b50a946}{
+\index{matter@{matter}!GetCNratio@{GetCNratio}}
+\index{GetCNratio@{GetCNratio}!matter@{matter}}
+\subsubsection[{GetCNratio}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetCNratio ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a1c97017b5f16dd256b99961f8b50a946}
+\hypertarget{classmatter_a97573040212b5ac7047a2cba344346d1}{
+\index{matter@{matter}!GetConnectionFraction@{GetConnectionFraction}}
+\index{GetConnectionFraction@{GetConnectionFraction}!matter@{matter}}
+\subsubsection[{GetConnectionFraction}]{\setlength{\rightskip}{0pt plus 5cm}double matter::GetConnectionFraction (string {\em poolName})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a97573040212b5ac7047a2cba344346d1}
+\hypertarget{classmatter_a3abae42a1209403e4c6b31521cb4a847}{
+\index{matter@{matter}!GetDeathRate@{GetDeathRate}}
+\index{GetDeathRate@{GetDeathRate}!matter@{matter}}
+\subsubsection[{GetDeathRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetDeathRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a3abae42a1209403e4c6b31521cb4a847}
+
+
+Reimplemented in \hyperlink{classbio_matter_a78a7ead491fa0a5b799e672309dfca3e}{bioMatter}.\hypertarget{classmatter_abf19fbb793ab04234294f9afca07a337}{
+\index{matter@{matter}!GetDecompositionRate@{GetDecompositionRate}}
+\index{GetDecompositionRate@{GetDecompositionRate}!matter@{matter}}
+\subsubsection[{GetDecompositionRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetDecompositionRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_abf19fbb793ab04234294f9afca07a337}
+\hypertarget{classmatter_a96b0fe568fcecda260abc0a5d32ca3da}{
+\index{matter@{matter}!GetDefaultCNratio@{GetDefaultCNratio}}
+\index{GetDefaultCNratio@{GetDefaultCNratio}!matter@{matter}}
+\subsubsection[{GetDefaultCNratio}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetDefaultCNratio ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a96b0fe568fcecda260abc0a5d32ca3da}
+
+
+Reimplemented in \hyperlink{classbio_matter_aee0b5cbabdff3103df0fb634c131a8a1}{bioMatter}.\hypertarget{classmatter_a2795dedbc608b20bc713a17981e181af}{
+\index{matter@{matter}!GetExponentialDecay@{GetExponentialDecay}}
+\index{GetExponentialDecay@{GetExponentialDecay}!matter@{matter}}
+\subsubsection[{GetExponentialDecay}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool matter::GetExponentialDecay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a2795dedbc608b20bc713a17981e181af}
+\hypertarget{classmatter_addcaacf93fd6c24eceada787a2bac3fe}{
+\index{matter@{matter}!GetMaintenanceRate@{GetMaintenanceRate}}
+\index{GetMaintenanceRate@{GetMaintenanceRate}!matter@{matter}}
+\subsubsection[{GetMaintenanceRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetMaintenanceRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_addcaacf93fd6c24eceada787a2bac3fe}
+
+
+Reimplemented in \hyperlink{classbio_matter_af20366c312adfce4ae986a512043cfe7}{bioMatter}.\hypertarget{classmatter_a1af8fc74ce3aed8d761a4a3cd0b98ca0}{
+\index{matter@{matter}!GetMicrobialPoolNdesire@{GetMicrobialPoolNdesire}}
+\index{GetMicrobialPoolNdesire@{GetMicrobialPoolNdesire}!matter@{matter}}
+\subsubsection[{GetMicrobialPoolNdesire}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::GetMicrobialPoolNdesire ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a1af8fc74ce3aed8d761a4a3cd0b98ca0}
+
+
+Reimplemented in \hyperlink{classbio_matter_ab581ae32f84e6396b6c1057f70989333}{bioMatter}.\hypertarget{classmatter_ac2484214a3aecdc577de7dab86f0e48b}{
+\index{matter@{matter}!GetPoolName@{GetPoolName}}
+\index{GetPoolName@{GetPoolName}!matter@{matter}}
+\subsubsection[{GetPoolName}]{\setlength{\rightskip}{0pt plus 5cm}virtual string matter::GetPoolName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_ac2484214a3aecdc577de7dab86f0e48b}
+\hypertarget{classmatter_ad4e8182423face98b556a4620437ade7}{
+\index{matter@{matter}!GiveMicrobialPoolExtraN@{GiveMicrobialPoolExtraN}}
+\index{GiveMicrobialPoolExtraN@{GiveMicrobialPoolExtraN}!matter@{matter}}
+\subsubsection[{GiveMicrobialPoolExtraN}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::GiveMicrobialPoolExtraN (double {\em r})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_ad4e8182423face98b556a4620437ade7}
+
+
+Reimplemented in \hyperlink{classbio_matter_aa3c39ebe46dac6e354b127c53bf94cb3}{bioMatter}.\hypertarget{classmatter_a59b4566b93dd22923b97976c752783ef}{
+\index{matter@{matter}!Hungry@{Hungry}}
+\index{Hungry@{Hungry}!matter@{matter}}
+\subsubsection[{Hungry}]{\setlength{\rightskip}{0pt plus 5cm}bool matter::Hungry ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a59b4566b93dd22923b97976c752783ef}
+
+
+Reimplemented in \hyperlink{classadded_pool_afec00b85b540b1d368dd51e1528e6aba}{addedPool}, and \hyperlink{classbio_matter_a35a43ac5963539bf7a22c28084ae4ff6}{bioMatter}.\hypertarget{classmatter_a284c87f3ce437b9e71f32ec14d9fab64}{
+\index{matter@{matter}!Import@{Import}}
+\index{Import@{Import}!matter@{matter}}
+\subsubsection[{Import}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Import ({\bf cnMatter} {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a284c87f3ce437b9e71f32ec14d9fab64}
+\hypertarget{classmatter_adeae5b9c4239d6c02c19e04d346e6d10}{
+\index{matter@{matter}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!matter@{matter}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Initialize (double {\em clayEffect1}, \/  double {\em clayEffect2}, \/  int {\em clayResp})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_adeae5b9c4239d6c02c19e04d346e6d10}
+
+
+Reimplemented in \hyperlink{classadded_matter_a8b9b2332722afe8a6ad0a3b833d095dd}{addedMatter}, and \hyperlink{classbio_matter_a6d9aa5ce1a57e75f81c034f98bef428a}{bioMatter}.\hypertarget{classmatter_a838d402c6b41deb9d9c20eeabecd94a8}{
+\index{matter@{matter}!IsAOM@{IsAOM}}
+\index{IsAOM@{IsAOM}!matter@{matter}}
+\subsubsection[{IsAOM}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool matter::IsAOM () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a838d402c6b41deb9d9c20eeabecd94a8}
+
+
+Reimplemented in \hyperlink{classadded_matter_a124a49cad0765fff9147d7cb3e3f768e}{addedMatter}, and \hyperlink{classadded_pool_afdb519f965dcf836634edfa30752d888}{addedPool}.\hypertarget{classmatter_af64df31f0243674868c26be217d8decf}{
+\index{matter@{matter}!IsBiomass@{IsBiomass}}
+\index{IsBiomass@{IsBiomass}!matter@{matter}}
+\subsubsection[{IsBiomass}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool matter::IsBiomass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_af64df31f0243674868c26be217d8decf}
+\hypertarget{classmatter_a7e74962a5eb9280b2a259c9b908ded79}{
+\index{matter@{matter}!operator=@{operator=}}
+\index{operator=@{operator=}!matter@{matter}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matter}\& matter::operator= (const {\bf matter} \& {\em m})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a7e74962a5eb9280b2a259c9b908ded79}
+
+
+Reimplemented from \hyperlink{classbase_abd18e2130f975aacfde1833ad137e3c5}{base}.\hypertarget{classmatter_ad8531740a6494ac68f0223cd49d272eb}{
+\index{matter@{matter}!PotentialCarbonTurnover@{PotentialCarbonTurnover}}
+\index{PotentialCarbonTurnover@{PotentialCarbonTurnover}!matter@{matter}}
+\subsubsection[{PotentialCarbonTurnover}]{\setlength{\rightskip}{0pt plus 5cm}virtual double matter::PotentialCarbonTurnover ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_ad8531740a6494ac68f0223cd49d272eb}
+
+
+Reimplemented in \hyperlink{classadded_matter_ac3cf951aba3e5001b9e7d582084863bf}{addedMatter}, and \hyperlink{classbio_matter_a3aed8f9e9d66c1c12491ace5f15439f5}{bioMatter}.\hypertarget{classmatter_a302a5c72c1cbe1c3d62f01d07f25cd4c}{
+\index{matter@{matter}!PotentialNitrogenImmobilisation@{PotentialNitrogenImmobilisation}}
+\index{PotentialNitrogenImmobilisation@{PotentialNitrogenImmobilisation}!matter@{matter}}
+\subsubsection[{PotentialNitrogenImmobilisation}]{\setlength{\rightskip}{0pt plus 5cm}double matter::PotentialNitrogenImmobilisation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a302a5c72c1cbe1c3d62f01d07f25cd4c}
+
+
+Reimplemented in \hyperlink{classadded_matter_a68f5728f82221029360bb31ba2fc1673}{addedMatter}, and \hyperlink{classbio_matter_a313cea693a2fb094b2e9bf591439ad3a}{bioMatter}.\hypertarget{classmatter_a59fa9a6e0ff21bac9ab9fb5b4de9392f}{
+\index{matter@{matter}!PotentialNitrogenMineralisation@{PotentialNitrogenMineralisation}}
+\index{PotentialNitrogenMineralisation@{PotentialNitrogenMineralisation}!matter@{matter}}
+\subsubsection[{PotentialNitrogenMineralisation}]{\setlength{\rightskip}{0pt plus 5cm}double matter::PotentialNitrogenMineralisation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a59fa9a6e0ff21bac9ab9fb5b4de9392f}
+
+
+Reimplemented in \hyperlink{classadded_matter_a972a4d0ee6fbd8ca8c48be2162c85646}{addedMatter}, and \hyperlink{classbio_matter_a10072a4f5ed6d3462c9872e4836f4adc}{bioMatter}.\hypertarget{classmatter_a8418c63bc2206df9cb0de19aa195eeac}{
+\index{matter@{matter}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!matter@{matter}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void matter::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a8418c63bc2206df9cb0de19aa195eeac}
+
+
+Reimplemented in \hyperlink{classbio_matter_aa792422d773ba544fe0e70ea8d5b061e}{bioMatter}.\hypertarget{classmatter_a9fe8f4ee934f280c9964dacc27d42611}{
+\index{matter@{matter}!ReleaseReduceTurnover@{ReleaseReduceTurnover}}
+\index{ReleaseReduceTurnover@{ReleaseReduceTurnover}!matter@{matter}}
+\subsubsection[{ReleaseReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::ReleaseReduceTurnover ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a9fe8f4ee934f280c9964dacc27d42611}
+
+
+Reimplemented in \hyperlink{classadded_matter_a899b9d029676aa6711339be2479b29d3}{addedMatter}, and \hyperlink{classadded_pool_a53baccaba22ddacc656b75d90d32fa15}{addedPool}.\hypertarget{classmatter_abaf880e3b1efd04eae0db055caed9b12}{
+\index{matter@{matter}!ResidualCarbon@{ResidualCarbon}}
+\index{ResidualCarbon@{ResidualCarbon}!matter@{matter}}
+\subsubsection[{ResidualCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double matter::ResidualCarbon ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_abaf880e3b1efd04eae0db055caed9b12}
+
+
+Reimplemented in \hyperlink{classadded_matter_a17298527be7046b6035a163e1f558f84}{addedMatter}, and \hyperlink{classbio_matter_aa432cb13da2d6c6a800e45bfcad5654b}{bioMatter}.\hypertarget{classmatter_a63dd0c869dd3a37857fd9bbaf714cb99}{
+\index{matter@{matter}!Scale@{Scale}}
+\index{Scale@{Scale}!matter@{matter}}
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Scale (double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a63dd0c869dd3a37857fd9bbaf714cb99}
+\hypertarget{classmatter_a6ede9887bd438658b4833d1242d8e2a7}{
+\index{matter@{matter}!SetCarbon@{SetCarbon}}
+\index{SetCarbon@{SetCarbon}!matter@{matter}}
+\subsubsection[{SetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetCarbon ({\bf cnMatter} {\em cn})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a6ede9887bd438658b4833d1242d8e2a7}
+
+
+Reimplemented in \hyperlink{classbio_matter_ab5e10fda0c8137df57be8baade98d27c}{bioMatter}.\hypertarget{classmatter_a3ef43a1976efeced60e639fb1ec6579a}{
+\index{matter@{matter}!SetConnectionFraction@{SetConnectionFraction}}
+\index{SetConnectionFraction@{SetConnectionFraction}!matter@{matter}}
+\subsubsection[{SetConnectionFraction}]{\setlength{\rightskip}{0pt plus 5cm}void matter::SetConnectionFraction (int {\em nr}, \/  double {\em frC}, \/  double {\em frN} = {\ttfamily -\/1.0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a3ef43a1976efeced60e639fb1ec6579a}
+\hypertarget{classmatter_a2969cf8d4330d010ce8b2d7c9f989364}{
+\index{matter@{matter}!SetDeathRate@{SetDeathRate}}
+\index{SetDeathRate@{SetDeathRate}!matter@{matter}}
+\subsubsection[{SetDeathRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetDeathRate (double {\em d})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a2969cf8d4330d010ce8b2d7c9f989364}
+
+
+Reimplemented in \hyperlink{classbio_matter_a506d0acd5dfdf32d7742b90961c1cf6d}{bioMatter}.\hypertarget{classmatter_aea177bcb159721bb1d4fe4bc8b5ec451}{
+\index{matter@{matter}!SetDecompositionRate@{SetDecompositionRate}}
+\index{SetDecompositionRate@{SetDecompositionRate}!matter@{matter}}
+\subsubsection[{SetDecompositionRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetDecompositionRate (double {\em d})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_aea177bcb159721bb1d4fe4bc8b5ec451}
+\hypertarget{classmatter_a211b0d822211f4f202803e72b902db0f}{
+\index{matter@{matter}!SetExponentialDecay@{SetExponentialDecay}}
+\index{SetExponentialDecay@{SetExponentialDecay}!matter@{matter}}
+\subsubsection[{SetExponentialDecay}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetExponentialDecay (bool {\em ed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a211b0d822211f4f202803e72b902db0f}
+\hypertarget{classmatter_a56ffe81f49ab5d79f47cc71ece13a48a}{
+\index{matter@{matter}!SetIsotope@{SetIsotope}}
+\index{SetIsotope@{SetIsotope}!matter@{matter}}
+\subsubsection[{SetIsotope}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetIsotope (int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a56ffe81f49ab5d79f47cc71ece13a48a}
+\hypertarget{classmatter_aa6ecf5e0a7bf435208005c087e2f5afa}{
+\index{matter@{matter}!SetMaintenanceRate@{SetMaintenanceRate}}
+\index{SetMaintenanceRate@{SetMaintenanceRate}!matter@{matter}}
+\subsubsection[{SetMaintenanceRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetMaintenanceRate (double {\em m})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_aa6ecf5e0a7bf435208005c087e2f5afa}
+
+
+Reimplemented in \hyperlink{classbio_matter_adfb5f616faed3698fa71b8a29b091014}{bioMatter}.\hypertarget{classmatter_a4476cba25191cb4f52471675ae270c04}{
+\index{matter@{matter}!SetParameterByName@{SetParameterByName}}
+\index{SetParameterByName@{SetParameterByName}!matter@{matter}}
+\subsubsection[{SetParameterByName}]{\setlength{\rightskip}{0pt plus 5cm}bool matter::SetParameterByName (string {\em parmName}, \/  double {\em val})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a4476cba25191cb4f52471675ae270c04}
+
+
+Reimplemented in \hyperlink{classbio_matter_a1ade505ad2c176aedbcf4b3e937eb412}{bioMatter}.\hypertarget{classmatter_a850135c585ac81915cac266f0d8e04df}{
+\index{matter@{matter}!SetStepFactor@{SetStepFactor}}
+\index{SetStepFactor@{SetStepFactor}!matter@{matter}}
+\subsubsection[{SetStepFactor}]{\setlength{\rightskip}{0pt plus 5cm}virtual void matter::SetStepFactor (double {\em sf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmatter_a850135c585ac81915cac266f0d8e04df}
+\hypertarget{classmatter_ac17664d421545b45ef91061b17ae6c7b}{
+\index{matter@{matter}!TestAddProduct@{TestAddProduct}}
+\index{TestAddProduct@{TestAddProduct}!matter@{matter}}
+\subsubsection[{TestAddProduct}]{\setlength{\rightskip}{0pt plus 5cm}void matter::TestAddProduct ({\bf organicProduct} $\ast$ {\em prod}, \/  double $\ast$ {\em check}, \/  double $\ast$ {\em CN}, \/  int $\ast$ {\em num}, \/  bool {\em forAOM})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_ac17664d421545b45ef91061b17ae6c7b}
+
+
+Reimplemented in \hyperlink{classadded_matter_a3627f9e81c355df213e783f1ba4a53b2}{addedMatter}.\hypertarget{classmatter_a163ce999b80e53c044fb9d948da510e3}{
+\index{matter@{matter}!TestState@{TestState}}
+\index{TestState@{TestState}!matter@{matter}}
+\subsubsection[{TestState}]{\setlength{\rightskip}{0pt plus 5cm}void matter::TestState ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a163ce999b80e53c044fb9d948da510e3}
+\hypertarget{classmatter_a2b3dd492a18a139790bd227e2b4e0a70}{
+\index{matter@{matter}!Update@{Update}}
+\index{Update@{Update}!matter@{matter}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void matter::Update (double {\em environmentEffect}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a2b3dd492a18a139790bd227e2b4e0a70}
+
+
+Reimplemented in \hyperlink{classadded_matter_af259408e737a8605b710842d67f72ad7}{addedMatter}, and \hyperlink{classbio_matter_a8ed040ad0f1ef141ae9e5507f33c924a}{bioMatter}.\hypertarget{classmatter_a69825448805e58acc5418362a11eac2b}{
+\index{matter@{matter}!WriteSelf@{WriteSelf}}
+\index{WriteSelf@{WriteSelf}!matter@{matter}}
+\subsubsection[{WriteSelf}]{\setlength{\rightskip}{0pt plus 5cm}void matter::WriteSelf (iostream $\ast$ {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmatter_a69825448805e58acc5418362a11eac2b}
+
+
+Reimplemented in \hyperlink{classadded_matter_a288683b6f62f782a4cd1706d48dc1c0e}{addedMatter}, and \hyperlink{classbio_matter_aa8e3723aef3ce483763e621543d4104c}{bioMatter}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classmatter_accdb39d94bfbf28e30c45c063c31c630}{
+\index{matter@{matter}!added@{added}}
+\index{added@{added}!matter@{matter}}
+\subsubsection[{added}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf matter::added}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_accdb39d94bfbf28e30c45c063c31c630}
+\hypertarget{classmatter_ac47ac49f037d82b8d1cdc16275f341e4}{
+\index{matter@{matter}!carbon@{carbon}}
+\index{carbon@{carbon}!matter@{matter}}
+\subsubsection[{carbon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf matter::carbon}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_ac47ac49f037d82b8d1cdc16275f341e4}
+\hypertarget{classmatter_aee9a37b271a52658a03a7350a173afae}{
+\index{matter@{matter}!carbonDerivative@{carbonDerivative}}
+\index{carbonDerivative@{carbonDerivative}!matter@{matter}}
+\subsubsection[{carbonDerivative}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf matter::carbonDerivative}\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_aee9a37b271a52658a03a7350a173afae}
+\hypertarget{classmatter_a1da4af6772cb60316fe1152209eb2835}{
+\index{matter@{matter}!clayEffect1@{clayEffect1}}
+\index{clayEffect1@{clayEffect1}!matter@{matter}}
+\subsubsection[{clayEffect1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf matter::clayEffect1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a1da4af6772cb60316fe1152209eb2835}
+\hypertarget{classmatter_a79e544386cdb596986c6bf1396a6d79b}{
+\index{matter@{matter}!clayEffect2@{clayEffect2}}
+\index{clayEffect2@{clayEffect2}!matter@{matter}}
+\subsubsection[{clayEffect2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf matter::clayEffect2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a79e544386cdb596986c6bf1396a6d79b}
+\hypertarget{classmatter_a6b25cecac355a09e902930ef2138041f}{
+\index{matter@{matter}!clayResponseType@{clayResponseType}}
+\index{clayResponseType@{clayResponseType}!matter@{matter}}
+\subsubsection[{clayResponseType}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf matter::clayResponseType}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a6b25cecac355a09e902930ef2138041f}
+\hypertarget{classmatter_aa9674ae514deddbaccbad950ef1da56f}{
+\index{matter@{matter}!CNC@{CNC}}
+\index{CNC@{CNC}!matter@{matter}}
+\subsubsection[{CNC}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf matter::CNC}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_aa9674ae514deddbaccbad950ef1da56f}
+\hypertarget{classmatter_a469812ff5f5548cc57e8aaf905422d59}{
+\index{matter@{matter}!cnRatio@{cnRatio}}
+\index{cnRatio@{cnRatio}!matter@{matter}}
+\subsubsection[{cnRatio}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf matter::cnRatio}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a469812ff5f5548cc57e8aaf905422d59}
+\hypertarget{classmatter_ac73565a1dbd68219dbcb7e4199cffb12}{
+\index{matter@{matter}!connectionList@{connectionList}}
+\index{connectionList@{connectionList}!matter@{matter}}
+\subsubsection[{connectionList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf connection} {\bf matter::connectionList}\mbox{[}maxConnections\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_ac73565a1dbd68219dbcb7e4199cffb12}
+\hypertarget{classmatter_a4a8f7cc7089b86f9e401424f648ccdf3}{
+\index{matter@{matter}!connections@{connections}}
+\index{connections@{connections}!matter@{matter}}
+\subsubsection[{connections}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf matter::connections}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a4a8f7cc7089b86f9e401424f648ccdf3}
+\hypertarget{classmatter_a2b043f2c674031ceb99a1ac1451a715e}{
+\index{matter@{matter}!decompositionRate@{decompositionRate}}
+\index{decompositionRate@{decompositionRate}!matter@{matter}}
+\subsubsection[{decompositionRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf matter::decompositionRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a2b043f2c674031ceb99a1ac1451a715e}
+\hypertarget{classmatter_a37d97592f65bb759756fbc1e725bfc40}{
+\index{matter@{matter}!expDecay@{expDecay}}
+\index{expDecay@{expDecay}!matter@{matter}}
+\subsubsection[{expDecay}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf matter::expDecay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a37d97592f65bb759756fbc1e725bfc40}
+\hypertarget{classmatter_abdf3e98bc03005e58bd57df3e9bbd988}{
+\index{matter@{matter}!influx@{influx}}
+\index{influx@{influx}!matter@{matter}}
+\subsubsection[{influx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf matter::influx}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_abdf3e98bc03005e58bd57df3e9bbd988}
+\hypertarget{classmatter_a1dd0c9ddeb3e81f74812a24221c4132a}{
+\index{matter@{matter}!intermed@{intermed}}
+\index{intermed@{intermed}!matter@{matter}}
+\subsubsection[{intermed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf matter::intermed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a1dd0c9ddeb3e81f74812a24221c4132a}
+\hypertarget{classmatter_a66af6caaa54804a6bcd353f587994a51}{
+\index{matter@{matter}!Isotope@{Isotope}}
+\index{Isotope@{Isotope}!matter@{matter}}
+\subsubsection[{Isotope}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf matter::Isotope}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a66af6caaa54804a6bcd353f587994a51}
+\hypertarget{classmatter_aee1bc7ca345e58bd4e203af721b0c8d7}{
+\index{matter@{matter}!outfluxDerivative@{outfluxDerivative}}
+\index{outfluxDerivative@{outfluxDerivative}!matter@{matter}}
+\subsubsection[{outfluxDerivative}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} {\bf matter::outfluxDerivative}\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_aee1bc7ca345e58bd4e203af721b0c8d7}
+\hypertarget{classmatter_aa5a52c9da8fc5f18e214c66c92bf3759}{
+\index{matter@{matter}!poolName@{poolName}}
+\index{poolName@{poolName}!matter@{matter}}
+\subsubsection[{poolName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf matter::poolName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_aa5a52c9da8fc5f18e214c66c92bf3759}
+\hypertarget{classmatter_a04cfcfcbd4523bfbcb6ae73808f1796b}{
+\index{matter@{matter}!stepFactor@{stepFactor}}
+\index{stepFactor@{stepFactor}!matter@{matter}}
+\subsubsection[{stepFactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf matter::stepFactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_a04cfcfcbd4523bfbcb6ae73808f1796b}
+\hypertarget{classmatter_aa5542096a167bed6ed8eafd696816599}{
+\index{matter@{matter}!TAG@{TAG}}
+\index{TAG@{TAG}!matter@{matter}}
+\subsubsection[{TAG}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf matter::TAG}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_aa5542096a167bed6ed8eafd696816599}
+\hypertarget{classmatter_ad8689f25569a1686e00d30c19c3d3cd5}{
+\index{matter@{matter}!useClayEffect@{useClayEffect}}
+\index{useClayEffect@{useClayEffect}!matter@{matter}}
+\subsubsection[{useClayEffect}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf matter::useClayEffect}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmatter_ad8689f25569a1686e00d30c19c3d3cd5}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{matter_8h}{matter.h}\item 
+C:/main/trunk/src/soil/\hyperlink{matter_8cpp}{matter.cpp}\end{DoxyCompactItemize}

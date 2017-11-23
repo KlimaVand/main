@@ -1,0 +1,414 @@
+\hypertarget{classstatic_crop}{
+\section{staticCrop Class Reference}
+\label{classstatic_crop}\index{staticCrop@{staticCrop}}
+}
+
+
+{\ttfamily \#include $<$staticCrop.h$>$}Inheritance diagram for staticCrop::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{classstatic_crop}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_crop_ab27f8e19e723919d605c420136dc4b7c}{staticCrop} ()
+\item 
+virtual \hyperlink{classstatic_crop_a34f95010a196160c9e70f9156f25ad0d}{$\sim$staticCrop} ()
+\item 
+void \hyperlink{classstatic_crop_af589db4595808f2315dc1ab459b591d8}{SetAdjustArea} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$OP, \hyperlink{classfield_order}{fieldOrder} $\ast$PP)
+\item 
+char $\ast$ \hyperlink{classstatic_crop_a80471fa52dae39350ec58e3301df3790}{GetSeedName} (char $\ast$crop\_\-id)
+\item 
+virtual int \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual int \hyperlink{classstatic_crop_a9e8458d1bb0bab4c9a7d05f47fe24537}{ImplementationDoesGiveStraw} ()
+\item 
+char $\ast$ \hyperlink{classstatic_crop_adfd949dba4aef73e87a04bbcb9bf3429}{GetCropName} ()
+\item 
+virtual void \hyperlink{classstatic_crop_af985797e339d5fe9a653f683b55c125a}{SetGatheringStraw} (bool gS)
+\item 
+virtual void \hyperlink{classstatic_crop_a695a960ba205046a899afa6e7f9fcee7}{InitCrop} (int convent, int irrigt)
+\item 
+virtual double \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual void \hyperlink{classstatic_crop_a13c426c5863e78c744dbdee99c17f7a0}{ResetOpList} ()
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual void \hyperlink{classstatic_crop_abfd60fc40149362ff07872a4258f39ec}{ShowOpList} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$OP)
+\item 
+virtual int \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{NitrogenLevels\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_crop_ac8b14325e2ab05247e9b61e3af331f24}{FallowCrop} ()
+\item 
+virtual double \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{NitrogenAmount} (int JB\_\-NO, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{ExpectedYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{ExpectedStrawYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{ExtraNRelease\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{NUseSlurrySpring} ()
+\item 
+virtual double \hyperlink{classstatic_crop_a6b89d7839db435c7ceafa2755312182e}{NUseSlurryAutumn} ()
+\item 
+virtual int \hyperlink{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{SlyrryPossibleThisPeriod} (\hyperlink{classperiod}{period} $\ast$p)
+\item 
+virtual void \hyperlink{classstatic_crop_ad41ac9fc010354e58bdb6c40aac4a598}{CorrectCropId} (char $\ast$crop\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classstatic_crop_aa6a248194baae477b06a0e234693e3c6}{SetSorting} (int year, int \hyperlink{classstatic_crop_a2c8bc8fdbc9824534c54f9f74a17623e}{month}, int \hyperlink{classstatic_crop_a5f633c8fed33e9051eb776b9781c36ac}{day})
+\item 
+static int \hyperlink{classstatic_crop_a19f3113e54899e6b0e31fa47a40877e5}{SortFunc} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$PP)
+\item 
+static void \hyperlink{classstatic_crop_acd932ec9d52178e685bc647d7a66a038}{Show} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$PP)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2a412a7b7b0c631dbf3ede94aacf201764}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2aab7503994ded0fb6f244911e20134c65}{Nitrogen\_\-levels} = 12, 
+\hyperlink{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2a253ef968e3b54314a7da77fade0b48bf}{id\_\-len} = 9, 
+\hyperlink{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2ae5fefade0ea78f802eee11cfe0c3d1ad}{max\_\-list\_\-len} = 80
+ \}
+\item 
+typedef \hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$ \hyperlink{classstatic_crop_a6eb8fb6c3d2353627729635751b7ea27}{FOPT}
+\item 
+typedef char \hyperlink{classstatic_crop_a78a95a86fbeacaf0b89d6a1e06e505f0}{str} \mbox{[}20\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classstatic_crop_a2496f37ddd62d263ec98d0b5868dbc5e}{AddOpList} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$action)
+\item 
+virtual void \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_crop_a83abe813b3873bdca7b373a9c2061071}{LP}
+\item 
+int \hyperlink{classstatic_crop_a5f633c8fed33e9051eb776b9781c36ac}{day}
+\item 
+int \hyperlink{classstatic_crop_a2c8bc8fdbc9824534c54f9f74a17623e}{month}
+\item 
+int \hyperlink{classstatic_crop_af151e77db389d19489ee9d10f6a73628}{OpListItems}
+\item 
+int \hyperlink{classstatic_crop_a3da7e9ce6f6b3df3817e550994be66f1}{irrigation}
+\item 
+int \hyperlink{classstatic_crop_ae8459ed32ec510851565bdbe4ed8e286}{conventional}
+\item 
+bool \hyperlink{classstatic_crop_adcb2111f089cff49f8df033e5e77e425}{gatheringStraw}
+\item 
+\hyperlink{classstatic_crop_a78a95a86fbeacaf0b89d6a1e06e505f0}{str} \hyperlink{classstatic_crop_a75caaff99a291829f060f468a9f141d5}{cropName}
+\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classstatic_crop_ae7226eaa52819aa9c2d663a6cd7b86d2}{aPlantItem1}
+\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classstatic_crop_ac802684f900defee8a00dff8e907127e}{aPlantItem2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classstatic_crop_a6eb8fb6c3d2353627729635751b7ea27}{
+\index{staticCrop@{staticCrop}!FOPT@{FOPT}}
+\index{FOPT@{FOPT}!staticCrop@{staticCrop}}
+\subsubsection[{FOPT}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf fieldOperationFields}$\ast$ {\bf staticCrop::FOPT}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a6eb8fb6c3d2353627729635751b7ea27}
+\hypertarget{classstatic_crop_a78a95a86fbeacaf0b89d6a1e06e505f0}{
+\index{staticCrop@{staticCrop}!str@{str}}
+\index{str@{str}!staticCrop@{staticCrop}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf staticCrop::str}\mbox{[}20\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a78a95a86fbeacaf0b89d6a1e06e505f0}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2}{
+\subsubsection[{"@18}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticCrop@{staticCrop}}\index{staticCrop@{staticCrop}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2a412a7b7b0c631dbf3ede94aacf201764}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2a412a7b7b0c631dbf3ede94aacf201764}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticCrop@{staticCrop}}\index{staticCrop@{staticCrop}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2aab7503994ded0fb6f244911e20134c65}{
+Nitrogen\_\-levels}
+\label{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2aab7503994ded0fb6f244911e20134c65}
+}]\index{id\_\-len@{id\_\-len}!staticCrop@{staticCrop}}\index{staticCrop@{staticCrop}!id\_\-len@{id\_\-len}}\item[{\em 
+\hypertarget{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2a253ef968e3b54314a7da77fade0b48bf}{
+id\_\-len}
+\label{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2a253ef968e3b54314a7da77fade0b48bf}
+}]\index{max\_\-list\_\-len@{max\_\-list\_\-len}!staticCrop@{staticCrop}}\index{staticCrop@{staticCrop}!max\_\-list\_\-len@{max\_\-list\_\-len}}\item[{\em 
+\hypertarget{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2ae5fefade0ea78f802eee11cfe0c3d1ad}{
+max\_\-list\_\-len}
+\label{classstatic_crop_af520b767faa0ce7e6a94316f33a240f2ae5fefade0ea78f802eee11cfe0c3d1ad}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_crop_ab27f8e19e723919d605c420136dc4b7c}{
+\index{staticCrop@{staticCrop}!staticCrop@{staticCrop}}
+\index{staticCrop@{staticCrop}!staticCrop@{staticCrop}}
+\subsubsection[{staticCrop}]{\setlength{\rightskip}{0pt plus 5cm}staticCrop::staticCrop ()}}
+\label{classstatic_crop_ab27f8e19e723919d605c420136dc4b7c}
+\hypertarget{classstatic_crop_a34f95010a196160c9e70f9156f25ad0d}{
+\index{staticCrop@{staticCrop}!$\sim$staticCrop@{$\sim$staticCrop}}
+\index{$\sim$staticCrop@{$\sim$staticCrop}!staticCrop@{staticCrop}}
+\subsubsection[{$\sim$staticCrop}]{\setlength{\rightskip}{0pt plus 5cm}virtual staticCrop::$\sim$staticCrop ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_a34f95010a196160c9e70f9156f25ad0d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_crop_a2496f37ddd62d263ec98d0b5868dbc5e}{
+\index{staticCrop@{staticCrop}!AddOpList@{AddOpList}}
+\index{AddOpList@{AddOpList}!staticCrop@{staticCrop}}
+\subsubsection[{AddOpList}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::AddOpList ({\bf fieldOperationFields} $\ast$ {\em action})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_crop_a2496f37ddd62d263ec98d0b5868dbc5e}
+\hypertarget{classstatic_crop_ad41ac9fc010354e58bdb6c40aac4a598}{
+\index{staticCrop@{staticCrop}!CorrectCropId@{CorrectCropId}}
+\index{CorrectCropId@{CorrectCropId}!staticCrop@{staticCrop}}
+\subsubsection[{CorrectCropId}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::CorrectCropId (char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_ad41ac9fc010354e58bdb6c40aac4a598}
+\hypertarget{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{
+\index{staticCrop@{staticCrop}!ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}}
+\index{ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{ExpectedStrawYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::ExpectedStrawYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}
+
+
+Reimplemented in \hyperlink{classstatic_maize_a4aa3fc3917c90262a603de13f0fb4c67}{staticMaize}, \hyperlink{classstatic_oat_aec202e3df8d88cde3e5705d6569bdc9c}{staticOat}, \hyperlink{classstatic_rye_a7e9c9e6226d2311ae3b621b79753bdf9}{staticRye}, \hyperlink{classstatic_sbarley_af3f013e0672eacf54def3f0733e9f724}{staticSbarley}, \hyperlink{classstatic_wbarley_a6393940adf0cf43b69854fc2050e5eda}{staticWbarley}, and \hyperlink{classstatic_wwheat_aca3709bba8050b2888a4f1d7f034309d}{staticWwheat}.\hypertarget{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{
+\index{staticCrop@{staticCrop}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::ExpectedYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a49038b3b4434096d4cf1e64c241ac214}{staticBarleyPea}, \hyperlink{classstatic_beet_abfb3ec226a41b76f49b28240cd9e1aaf}{staticBeet}, \hyperlink{classstatic_clover_ad1701ce4c0fa8f637da0443beb1d1dfe}{staticClover}, \hyperlink{classstatic_clover_grass_a17e80290c27da7304243f8ac3211631f}{staticCloverGrass}, \hyperlink{classstatic_maize_ac5efafeda6da275fff56a9bf1fa1c2a6}{staticMaize}, \hyperlink{classstatic_oat_a640e2c2320b000a47ea5ab306fa2cd2f}{staticOat}, \hyperlink{classstatic_pea_ade12e48b5d12ee356da9c38908cc8e07}{staticPea}, \hyperlink{classstatic_potato_a6e59765e958566c544bc53669160f6d7}{staticPotato}, \hyperlink{classstatic_rye_a6c6bedff00773f73edc12bba9702b27a}{staticRye}, \hyperlink{classstatic_sbarley_ae99475c54df7437405ebe7152dc78763}{staticSbarley}, \hyperlink{classstatic_seed_grass_a193ffe602d2fe2f7169956688bb06fdb}{staticSeedGrass}, \hyperlink{classstatic_srape_af0a091d0bfdacd5ff9dafb1a4f3fa062}{staticSrape}, \hyperlink{classstatic_swheat_a7d5411d6ee08e7fbada0e6a1b2ea2971}{staticSwheat}, \hyperlink{classstatic_wbarley_a247a23ce822b41692fb07633cd332423}{staticWbarley}, \hyperlink{classstatic_wrape_a50f665a89f57eaafd331b4b47f453b94}{staticWrape}, and \hyperlink{classstatic_wwheat_a2a711b3d2779a34f6b8b95d12e8166fd}{staticWwheat}.\hypertarget{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{
+\index{staticCrop@{staticCrop}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a8c7afa184fb792692e23bfa854214c9b}{staticBarleyPea}, \hyperlink{classstatic_beet_a22b6ff9f461a6c77c5d6f09b8f28ed89}{staticBeet}, \hyperlink{classstatic_clover_af756e8a21b3a7b13335c64dac64b321a}{staticClover}, \hyperlink{classstatic_clover_grass_adc4ac213c2bf4b59ad590a634d13ff4a}{staticCloverGrass}, \hyperlink{classstatic_fallow_abcf18f6c7d1ad76d2b0ab04c35f193d9}{staticFallow}, \hyperlink{classstatic_grass_aba65c94317d6a5a3c2414edf4e242453}{staticGrass}, \hyperlink{classstatic_grass_established_ace876335a825ca2710ab2adfbab12a44}{staticGrassEstablished}, \hyperlink{classstatic_grass_permanent_a9f31a10c51ef98d46230e6a9a74816ba}{staticGrassPermanent}, \hyperlink{classstatic_grazing_grass_adc616d1e28cd7c5257b7a80405d07abc}{staticGrazingGrass}, \hyperlink{classstatic_lucerne_established_adfaea4391ee1981284ea351c5dbd0b6d}{staticLucerneEstablished}, \hyperlink{classstatic_maize_a251634ed082e4b2cdbe0d16bb53b54cd}{staticMaize}, \hyperlink{classstatic_oat_ae8bd647d11c451e57a4d195061520529}{staticOat}, \hyperlink{classstatic_pea_afff094d1caf8424d869bb8623284b536}{staticPea}, \hyperlink{classstatic_potato_a7c404064c9e42ef804e9d4cf795f2759}{staticPotato}, \hyperlink{classstatic_rye_a62343c8b7153985ed21866d7d64e5b40}{staticRye}, \hyperlink{classstatic_sbarley_a400c4a118f22704806f91b1a44ea3aea}{staticSbarley}, \hyperlink{classstatic_srape_a2fbf9178adfebf89d2699559a9b7fd42}{staticSrape}, \hyperlink{classstatic_swheat_a3aca2b91246f9dfac75822518a37f705}{staticSwheat}, \hyperlink{classstatic_wbarley_a7d37987b485ea121e57e3fdacb015673}{staticWbarley}, \hyperlink{classstatic_wrape_a104ee6695eb00810ebffd99b45c4bdd0}{staticWrape}, and \hyperlink{classstatic_wwheat_a96c132fcd9b33934b75c887329d9c09c}{staticWwheat}.\hypertarget{classstatic_crop_ac8b14325e2ab05247e9b61e3af331f24}{
+\index{staticCrop@{staticCrop}!FallowCrop@{FallowCrop}}
+\index{FallowCrop@{FallowCrop}!staticCrop@{staticCrop}}
+\subsubsection[{FallowCrop}]{\setlength{\rightskip}{0pt plus 5cm}int staticCrop::FallowCrop ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_ac8b14325e2ab05247e9b61e3af331f24}
+
+
+Reimplemented in \hyperlink{classstatic_fallow_a85c882ab7f143ed8fbb4e6a8d2463bfb}{staticFallow}, \hyperlink{classstatic_fallow_permanent_aa5f6b0e6960c0c3cf2c3c235e772d7f6}{staticFallowPermanent}, \hyperlink{classstatic_grass_a493499c1294dcfcd85a9b019978e085f}{staticGrass}, \hyperlink{classstatic_grass_established_a40f7a2c745566b2a31813dd597fcdce4}{staticGrassEstablished}, \hyperlink{classstatic_grass_permanent_a0c8521795691964d29dbb11d78c45ef9}{staticGrassPermanent}, \hyperlink{classstatic_grazing_grass_ab33f2f00cf6f094fb387bef72443d5d4}{staticGrazingGrass}, and \hyperlink{classstatic_lucerne_established_a011b54874a78edb25be05c3ab4d4d641}{staticLucerneEstablished}.\hypertarget{classstatic_crop_adfd949dba4aef73e87a04bbcb9bf3429}{
+\index{staticCrop@{staticCrop}!GetCropName@{GetCropName}}
+\index{GetCropName@{GetCropName}!staticCrop@{staticCrop}}
+\subsubsection[{GetCropName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ staticCrop::GetCropName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstatic_crop_adfd949dba4aef73e87a04bbcb9bf3429}
+\hypertarget{classstatic_crop_a80471fa52dae39350ec58e3301df3790}{
+\index{staticCrop@{staticCrop}!GetSeedName@{GetSeedName}}
+\index{GetSeedName@{GetSeedName}!staticCrop@{staticCrop}}
+\subsubsection[{GetSeedName}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ staticCrop::GetSeedName (char $\ast$ {\em crop\_\-id})}}
+\label{classstatic_crop_a80471fa52dae39350ec58e3301df3790}
+\hypertarget{classstatic_crop_a9e8458d1bb0bab4c9a7d05f47fe24537}{
+\index{staticCrop@{staticCrop}!ImplementationDoesGiveStraw@{ImplementationDoesGiveStraw}}
+\index{ImplementationDoesGiveStraw@{ImplementationDoesGiveStraw}!staticCrop@{staticCrop}}
+\subsubsection[{ImplementationDoesGiveStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticCrop::ImplementationDoesGiveStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_a9e8458d1bb0bab4c9a7d05f47fe24537}
+
+
+Reimplemented in \hyperlink{classstatic_maize_a4b48acc64147a6c46ee154570c65b2fe}{staticMaize}, \hyperlink{classstatic_oat_a75f86a415aa54352870606818273fd94}{staticOat}, and \hyperlink{classstatic_sbarley_a0d32acc147f8af10e83d0292396db1d2}{staticSbarley}.\hypertarget{classstatic_crop_a695a960ba205046a899afa6e7f9fcee7}{
+\index{staticCrop@{staticCrop}!InitCrop@{InitCrop}}
+\index{InitCrop@{InitCrop}!staticCrop@{staticCrop}}
+\subsubsection[{InitCrop}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::InitCrop (int {\em convent}, \/  int {\em irrigt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a695a960ba205046a899afa6e7f9fcee7}
+\hypertarget{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{
+\index{staticCrop@{staticCrop}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticCrop@{staticCrop}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticCrop::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a5bdd249b2d75283a8bd007bf338525a6}{staticBarleyPea}, \hyperlink{classstatic_beet_afb13dbf6327c15857a6d9f1b1822b766}{staticBeet}, \hyperlink{classstatic_clover_aaa25687193bfade734dd6f0aff3df02c}{staticClover}, \hyperlink{classstatic_clover_grass_a109415e46a73076fa9b573f273aab284}{staticCloverGrass}, \hyperlink{classstatic_fallow_a7aae02eeba095d55e80cd0e71217d4d6}{staticFallow}, \hyperlink{classstatic_fallow_permanent_a29f8a19c2c136b8b2c0d4d0cca1f0522}{staticFallowPermanent}, \hyperlink{classstatic_grass_af46c3861ac733cc63192ab16d2f83696}{staticGrass}, \hyperlink{classstatic_grass_established_a65912caac93f0e92f34542f28585c5ce}{staticGrassEstablished}, \hyperlink{classstatic_grass_permanent_a382ae95421ef703e3d710a792c1604c7}{staticGrassPermanent}, \hyperlink{classstatic_grazing_grass_ae65c2c9e795f4aa3c7d0f52703e4064a}{staticGrazingGrass}, \hyperlink{classstatic_italian_rye_grass_ad26f7e4790a4eb3235a8d6f56840c826}{staticItalianRyeGrass}, \hyperlink{classstatic_lucerne_established_a155fbfb890d5167c27a18f05517ab6fb}{staticLucerneEstablished}, \hyperlink{classstatic_maize_a57e27a95b36604807c2eed91446df668}{staticMaize}, \hyperlink{classstatic_oat_a974ca1626880bafebc0c040c2ac2d84d}{staticOat}, \hyperlink{classstatic_pea_a4e65ffc0e08921e18f95be49b3e12422}{staticPea}, \hyperlink{classstatic_potato_ad9c39d522caf3253ba0e10b240c9ede8}{staticPotato}, \hyperlink{classstatic_rye_a0532c6cd87e39116de39436d5b47c7e8}{staticRye}, \hyperlink{classstatic_sbarley_a2494676d7dc13d8cc4f860b7f245ca9e}{staticSbarley}, \hyperlink{classstatic_seed_grass_a33e78ba847a76de09f30b7eb4ff88a68}{staticSeedGrass}, \hyperlink{classstatic_srape_a7db3ea6c58117111c9d21a07a6b83a00}{staticSrape}, \hyperlink{classstatic_swheat_abfbd2f77fd397b2f07e9455af578c1fc}{staticSwheat}, \hyperlink{classstatic_wbarley_a6bfa41145c475ecf8c8dba2e4956f07b}{staticWbarley}, \hyperlink{classstatic_wrape_a5d54894462f4539795ccfaaf89296327}{staticWrape}, and \hyperlink{classstatic_wwheat_a7ad6be729608506d81e911675dc9ae1f}{staticWwheat}.\hypertarget{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{
+\index{staticCrop@{staticCrop}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticCrop@{staticCrop}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::NitrogenAmount (int {\em JB\_\-NO}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a8b1a6d68f92bbd24b79e8a3aaafc9cb1}{staticBarleyPea}, \hyperlink{classstatic_beet_a98d8ce60295b7390603ce557a7f47fb3}{staticBeet}, \hyperlink{classstatic_clover_ae9dc15ee27633df963bc99fe8f3a0ec9}{staticClover}, \hyperlink{classstatic_clover_grass_a751ba37577ff9a5fe44fb4cd0c3b62f2}{staticCloverGrass}, \hyperlink{classstatic_maize_adafefb969922559e085bbe97b7406eb9}{staticMaize}, \hyperlink{classstatic_oat_a1f0a5175033091c837dea7ccb66dfef9}{staticOat}, \hyperlink{classstatic_pea_a617c3f2666334b3e86ad4ca3e105afc8}{staticPea}, \hyperlink{classstatic_potato_a31f9e7eda42f5d73982b2704728d7c1c}{staticPotato}, \hyperlink{classstatic_rye_aec49ed18f9cc96318e71ca20d9caaddf}{staticRye}, \hyperlink{classstatic_sbarley_adc52f0655ebee0391877abcacffc3084}{staticSbarley}, \hyperlink{classstatic_srape_ab7b04b4747f7bb609d41f76d578e2d45}{staticSrape}, \hyperlink{classstatic_swheat_aacbf9a07881d316f9d3313e611be6b0a}{staticSwheat}, \hyperlink{classstatic_wbarley_a8a889b049e3d78285a74ccf0bb0145a2}{staticWbarley}, \hyperlink{classstatic_wrape_a91d0074f8628913cbc19368d40ba3d38}{staticWrape}, and \hyperlink{classstatic_wwheat_a5ef5878549be7108d8fda9ef63b2bc34}{staticWwheat}.\hypertarget{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{
+\index{staticCrop@{staticCrop}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticCrop::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a1e2e6e28ebc8e1a001aa2dfd7de96204}{staticBarleyPea}, \hyperlink{classstatic_beet_a399a5b014205aaa03ddb6ea0eeecd122}{staticBeet}, \hyperlink{classstatic_clover_a50bfb95def66e3d974d8096e64851a94}{staticClover}, \hyperlink{classstatic_clover_grass_a847d7d5346d43b21712110c1f73f5b4d}{staticCloverGrass}, \hyperlink{classstatic_fallow_a35f2275e8346d89412b542bb335fc2dc}{staticFallow}, \hyperlink{classstatic_fallow_permanent_a41d25045659c5c692f9e7da40ba1cea6}{staticFallowPermanent}, \hyperlink{classstatic_grass_ab09bdebca7ebadbbe87286e7bfff149d}{staticGrass}, \hyperlink{classstatic_grass_established_a958b6f586cb695976b5ed8c07ad82459}{staticGrassEstablished}, \hyperlink{classstatic_grass_permanent_a4e133fb5bd5133df57babfd2852fb466}{staticGrassPermanent}, \hyperlink{classstatic_grazing_grass_a0bb3e51f30d7b787e285f5a630a6ea47}{staticGrazingGrass}, \hyperlink{classstatic_lucerne_established_ac7b10e73130036adeb73de6d771ec814}{staticLucerneEstablished}, \hyperlink{classstatic_maize_aa09f67751bfbfe9a3e7e414cffaab133}{staticMaize}, \hyperlink{classstatic_oat_aea9ffb5d23d2bfe402b16172598e359b}{staticOat}, \hyperlink{classstatic_pea_ac4186d94b140bb10e0817f4273ae4f9d}{staticPea}, \hyperlink{classstatic_potato_a7471a5c80f252c89ca3fc9cb0d12c619}{staticPotato}, \hyperlink{classstatic_rye_a22cb837905cefab1cb8491b216a4eaa7}{staticRye}, \hyperlink{classstatic_sbarley_acc37bda353d9d226c71e088d237c7bc7}{staticSbarley}, \hyperlink{classstatic_srape_ae0044ad5311c8ba1baf926ff76bb250d}{staticSrape}, \hyperlink{classstatic_swheat_aed632f688474e1cf25a80080783fda87}{staticSwheat}, \hyperlink{classstatic_wbarley_a77ecffa309df198f3479313e7aabfb27}{staticWbarley}, \hyperlink{classstatic_wrape_a69e388d2e7b1fdafb864ea94277c546a}{staticWrape}, and \hyperlink{classstatic_wwheat_ab6756889c263146d276fe9e5f09469ca}{staticWwheat}.\hypertarget{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{
+\index{staticCrop@{staticCrop}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticCrop::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_ac33dd31e35056a4816bb1bec4613550d}{staticBarleyPea}, \hyperlink{classstatic_beet_afce21aaadaf9e47e51b613bedf0aeca1}{staticBeet}, \hyperlink{classstatic_clover_a23f68f39a4766a3cb79ef780545f7fc2}{staticClover}, \hyperlink{classstatic_clover_grass_a2361fc85251a91cf8f1d1c7930392323}{staticCloverGrass}, \hyperlink{classstatic_fallow_a76bf31d045ba244e30de88a7c248d1e4}{staticFallow}, \hyperlink{classstatic_fallow_permanent_ae8cd1ab1cae0d7aef49a95ce57e4c7bc}{staticFallowPermanent}, \hyperlink{classstatic_grass_a83a8c218eab33bd04ab8599486beb5ae}{staticGrass}, \hyperlink{classstatic_grass_established_ac1096e7e84a6224a87d127949c25b163}{staticGrassEstablished}, \hyperlink{classstatic_grass_permanent_a5af2b1a01c23e599e7391e972c15cbba}{staticGrassPermanent}, \hyperlink{classstatic_grazing_grass_a07b29d7ed9e20b7ca1f2fbb82a851458}{staticGrazingGrass}, \hyperlink{classstatic_lucerne_established_a312ee9177d791b69210a96d09b738a14}{staticLucerneEstablished}, \hyperlink{classstatic_maize_afc493353ee7d925a708506e8738eea5f}{staticMaize}, \hyperlink{classstatic_oat_a4f743cca9e48390571d709c2f8fbbb31}{staticOat}, \hyperlink{classstatic_pea_a9ce174ccebfdb6f1494b5cbc8ed26e65}{staticPea}, \hyperlink{classstatic_potato_a04dc5840220a6ecc1bac5688a80821ae}{staticPotato}, \hyperlink{classstatic_rye_ac293d50ad067e382400530df8bcead56}{staticRye}, \hyperlink{classstatic_sbarley_a905a55ee29cf26d04bd127f4bb683a5a}{staticSbarley}, \hyperlink{classstatic_srape_a9e7908806107ebe3c9e2d48bfa141740}{staticSrape}, \hyperlink{classstatic_swheat_ad30778a7f2840d0a3dde131d745c4cdd}{staticSwheat}, \hyperlink{classstatic_wbarley_a2c42b2ae215233e89c866bdf9bb8b395}{staticWbarley}, \hyperlink{classstatic_wrape_afc484a4521f9840417ed6e2b5033b022}{staticWrape}, and \hyperlink{classstatic_wwheat_ab3b506b81bbf6bee0b5993a5d1e82e0f}{staticWwheat}.\hypertarget{classstatic_crop_a6b89d7839db435c7ceafa2755312182e}{
+\index{staticCrop@{staticCrop}!NUseSlurryAutumn@{NUseSlurryAutumn}}
+\index{NUseSlurryAutumn@{NUseSlurryAutumn}!staticCrop@{staticCrop}}
+\subsubsection[{NUseSlurryAutumn}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticCrop::NUseSlurryAutumn ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_a6b89d7839db435c7ceafa2755312182e}
+
+
+Reimplemented in \hyperlink{classstatic_beet_a3f8cb12e397cc68f0a2232f962c4ae08}{staticBeet}, \hyperlink{classstatic_potato_ad28100ca6e12fc541684b794fea058d2}{staticPotato}, \hyperlink{classstatic_srape_ac2055f4e715fd46e0334b739cadbe538}{staticSrape}, and \hyperlink{classstatic_wrape_a20762299252b95a5d750f27bbf56dc66}{staticWrape}.\hypertarget{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{
+\index{staticCrop@{staticCrop}!NUseSlurrySpring@{NUseSlurrySpring}}
+\index{NUseSlurrySpring@{NUseSlurrySpring}!staticCrop@{staticCrop}}
+\subsubsection[{NUseSlurrySpring}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticCrop::NUseSlurrySpring ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}
+
+
+Reimplemented in \hyperlink{classstatic_beet_a9a9f897edecad06aaa42d1f1875fd111}{staticBeet}, \hyperlink{classstatic_maize_a4054559a82f50ce5bb73091de2aed6f6}{staticMaize}, \hyperlink{classstatic_oat_a85e86ff37c0620aaa290f77a7599271d}{staticOat}, \hyperlink{classstatic_potato_aff8cbc0d6e8ffba511cc2ed8ca63dc6e}{staticPotato}, \hyperlink{classstatic_rye_af3bbe1562e3361dbfa02b186d11a810a}{staticRye}, \hyperlink{classstatic_sbarley_aefb0e706003fefdaab30b1c25d56191b}{staticSbarley}, \hyperlink{classstatic_srape_a1f6da756880c654f33ca67d83aea2a3a}{staticSrape}, \hyperlink{classstatic_swheat_a78a69c67a091608009a1024631d814d6}{staticSwheat}, \hyperlink{classstatic_wbarley_a13213cb1959283fc557cb0ff49e8c587}{staticWbarley}, \hyperlink{classstatic_wrape_a12cfad03bdf4d12b10f6c2a35329e7f9}{staticWrape}, and \hyperlink{classstatic_wwheat_a5376e77c08e26a7a57ee1a1ba02095e2}{staticWwheat}.\hypertarget{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{
+\index{staticCrop@{staticCrop}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a67ba0f94cf104e0a3d547f776399062f}{staticBarleyPea}, \hyperlink{classstatic_beet_afe8f6891ceee71739788e01393a13bec}{staticBeet}, \hyperlink{classstatic_clover_ac88cfc779dbd01681bc3f5a86195a8fe}{staticClover}, \hyperlink{classstatic_clover_grass_a3ab4d1c458661d02bc92b991ce2e4c15}{staticCloverGrass}, \hyperlink{classstatic_maize_a521e65129a55f99bc810e26bdf7041ce}{staticMaize}, \hyperlink{classstatic_oat_a2cc3d18305c05a76da8163e80ced73b8}{staticOat}, \hyperlink{classstatic_pea_a8142c951a5471b430813637a7a21e7d7}{staticPea}, \hyperlink{classstatic_potato_a8b19a738a31bc248a422ea7f8b3246f2}{staticPotato}, \hyperlink{classstatic_rye_a29a2a89b2cb2d8e47ee6b7881560b0f4}{staticRye}, \hyperlink{classstatic_sbarley_af16a33276428ac2eae69040b31af01a2}{staticSbarley}, \hyperlink{classstatic_srape_ad364cf81c5e8888cd2c7efcf32a18d49}{staticSrape}, \hyperlink{classstatic_swheat_a310150b4bfa8f472085d7ff8397291c2}{staticSwheat}, \hyperlink{classstatic_wbarley_a35b376e9216edc2f8ac37916e657308f}{staticWbarley}, \hyperlink{classstatic_wrape_acd42c532d438b9f9ed0a57bf83bdf2bc}{staticWrape}, and \hyperlink{classstatic_wwheat_a01fccbd4041ab0eb454ec7df73f3d87c}{staticWwheat}.\hypertarget{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{
+\index{staticCrop@{staticCrop}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticCrop@{staticCrop}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a0d36ad23dbbf416950d11a5c933bc029}{staticBarleyPea}, \hyperlink{classstatic_beet_a4f19a0d8935d02ca200825d92df403d9}{staticBeet}, \hyperlink{classstatic_clover_acda5feff98054d16c5a29d5c283ae14d}{staticClover}, \hyperlink{classstatic_clover_grass_a4503f83751d06364054bc14d0b7221db}{staticCloverGrass}, \hyperlink{classstatic_maize_a3b0031d7c36e7f11f4ca81ece845c63c}{staticMaize}, \hyperlink{classstatic_oat_ac51205b35024c79cd19f50baf6bbb803}{staticOat}, \hyperlink{classstatic_pea_a6e42e1210858f6b85749979418a4c0ad}{staticPea}, \hyperlink{classstatic_potato_a0eed9f043dcf8b89cb95e62b8bdd533b}{staticPotato}, \hyperlink{classstatic_rye_a48f4563a6399ff40bafcb87e53b2d4a1}{staticRye}, \hyperlink{classstatic_sbarley_a90c55ed5dad4e783985c2f7bdbcba872}{staticSbarley}, \hyperlink{classstatic_srape_a277f6842674f253537e81c07e60f5cc6}{staticSrape}, \hyperlink{classstatic_swheat_a5fb83e39f6c31dfb736198f0327bad40}{staticSwheat}, \hyperlink{classstatic_wbarley_ac92789d3d8a25132f60546b85f92400b}{staticWbarley}, \hyperlink{classstatic_wrape_a403c34aa6870748b3357f3f69b183824}{staticWrape}, and \hyperlink{classstatic_wwheat_ac3e69e6aea659a75d0db30841c82ca6d}{staticWwheat}.\hypertarget{classstatic_crop_ae4f07498c1616eab212386faf352d348}{
+\index{staticCrop@{staticCrop}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticCrop@{staticCrop}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticCrop::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_ae4f07498c1616eab212386faf352d348}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a34661b51fa85b70f7178d9fc63739139}{staticBarleyPea}, \hyperlink{classstatic_beet_a70822a52271755f931ac0ae449e1f339}{staticBeet}, \hyperlink{classstatic_clover_grass_a2eb39c57d3165893587edade1a470342}{staticCloverGrass}, \hyperlink{classstatic_maize_a8a64240f6fed1b843e9d9521dad59231}{staticMaize}, \hyperlink{classstatic_oat_af4d6207a79cfdb61327d060e5045078e}{staticOat}, \hyperlink{classstatic_pea_adaf16829a2d0bece8f22018377a89fd9}{staticPea}, \hyperlink{classstatic_potato_a4ffc6382bc93ee2d70ca6007548d5501}{staticPotato}, \hyperlink{classstatic_rye_a2a8f5a4738e856f635722ea48bf1ea04}{staticRye}, \hyperlink{classstatic_sbarley_ab3d8d74e997acbb7ef86b2edd96deaba}{staticSbarley}, \hyperlink{classstatic_srape_a30c92b0c5720bfdaf6c52bbb6648ca2f}{staticSrape}, \hyperlink{classstatic_swheat_a0f81ccbd84f84be80a118cb3cee1cfd5}{staticSwheat}, \hyperlink{classstatic_wbarley_a2d54e7d2ac7b1ca840dcb5d3780543b2}{staticWbarley}, \hyperlink{classstatic_wrape_a33e17fbd72287a058011486c611abdf8}{staticWrape}, and \hyperlink{classstatic_wwheat_ab8772fd418b602cc729945fdaebf695e}{staticWwheat}.\hypertarget{classstatic_crop_a13c426c5863e78c744dbdee99c17f7a0}{
+\index{staticCrop@{staticCrop}!ResetOpList@{ResetOpList}}
+\index{ResetOpList@{ResetOpList}!staticCrop@{staticCrop}}
+\subsubsection[{ResetOpList}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::ResetOpList ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_a13c426c5863e78c744dbdee99c17f7a0}
+\hypertarget{classstatic_crop_af589db4595808f2315dc1ab459b591d8}{
+\index{staticCrop@{staticCrop}!SetAdjustArea@{SetAdjustArea}}
+\index{SetAdjustArea@{SetAdjustArea}!staticCrop@{staticCrop}}
+\subsubsection[{SetAdjustArea}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::SetAdjustArea ({\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ {\em OP}, \/  {\bf fieldOrder} $\ast$ {\em PP})}}
+\label{classstatic_crop_af589db4595808f2315dc1ab459b591d8}
+\hypertarget{classstatic_crop_af985797e339d5fe9a653f683b55c125a}{
+\index{staticCrop@{staticCrop}!SetGatheringStraw@{SetGatheringStraw}}
+\index{SetGatheringStraw@{SetGatheringStraw}!staticCrop@{staticCrop}}
+\subsubsection[{SetGatheringStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void staticCrop::SetGatheringStraw (bool {\em gS})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_af985797e339d5fe9a653f683b55c125a}
+\hypertarget{classstatic_crop_aa6a248194baae477b06a0e234693e3c6}{
+\index{staticCrop@{staticCrop}!SetSorting@{SetSorting}}
+\index{SetSorting@{SetSorting}!staticCrop@{staticCrop}}
+\subsubsection[{SetSorting}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::SetSorting (int {\em year}, \/  int {\em month}, \/  int {\em day})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classstatic_crop_aa6a248194baae477b06a0e234693e3c6}
+\hypertarget{classstatic_crop_acd932ec9d52178e685bc647d7a66a038}{
+\index{staticCrop@{staticCrop}!Show@{Show}}
+\index{Show@{Show}!staticCrop@{staticCrop}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::Show ({\bf fieldOperationFields} $\ast$ {\em PP})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classstatic_crop_acd932ec9d52178e685bc647d7a66a038}
+\hypertarget{classstatic_crop_abfd60fc40149362ff07872a4258f39ec}{
+\index{staticCrop@{staticCrop}!ShowOpList@{ShowOpList}}
+\index{ShowOpList@{ShowOpList}!staticCrop@{staticCrop}}
+\subsubsection[{ShowOpList}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::ShowOpList ({\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ {\em OP})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_crop_abfd60fc40149362ff07872a4258f39ec}
+\hypertarget{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{
+\index{staticCrop@{staticCrop}!SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}}
+\index{SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}!staticCrop@{staticCrop}}
+\subsubsection[{SlyrryPossibleThisPeriod}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticCrop::SlyrryPossibleThisPeriod ({\bf period} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}
+
+
+Reimplemented in \hyperlink{classstatic_beet_ac4c74287080f0312d824b0f0bc493b70}{staticBeet}, \hyperlink{classstatic_maize_ac7221669f33010383e88c2cc74d02c57}{staticMaize}, \hyperlink{classstatic_oat_af1a87e97ec3a1521096e94b530bd4ac0}{staticOat}, \hyperlink{classstatic_potato_aca4f659ad1d189547df0b8336e8abcf6}{staticPotato}, \hyperlink{classstatic_rye_a8e23a3afa6cba94afd57049287748c99}{staticRye}, \hyperlink{classstatic_sbarley_a7895b12b75f7fc2b9ddb3299ba6a21d1}{staticSbarley}, \hyperlink{classstatic_srape_a1af4f87d4fb9f95534a1c9ca78e4c523}{staticSrape}, \hyperlink{classstatic_swheat_abd1a6a43b0037471d91dd22e5a30af3f}{staticSwheat}, \hyperlink{classstatic_wbarley_a800178fb5dca9585040d0b9abd92d6b9}{staticWbarley}, \hyperlink{classstatic_wrape_aa71a6c10b4067dacffa833af07a04d8f}{staticWrape}, and \hyperlink{classstatic_wwheat_a9c50241cdc2ca7f9bf8a05813415eb3e}{staticWwheat}.\hypertarget{classstatic_crop_a19f3113e54899e6b0e31fa47a40877e5}{
+\index{staticCrop@{staticCrop}!SortFunc@{SortFunc}}
+\index{SortFunc@{SortFunc}!staticCrop@{staticCrop}}
+\subsubsection[{SortFunc}]{\setlength{\rightskip}{0pt plus 5cm}int staticCrop::SortFunc ({\bf fieldOperationFields} $\ast$ {\em PP})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classstatic_crop_a19f3113e54899e6b0e31fa47a40877e5}
+\hypertarget{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{
+\index{staticCrop@{staticCrop}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticCrop@{staticCrop}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticCrop::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_a98daf5a43966b97910b34fea072f5260}{staticBarleyPea}, \hyperlink{classstatic_clover_grass_aaaa2e0c87530fc75182dbdcd2dac4571}{staticCloverGrass}, \hyperlink{classstatic_italian_rye_grass_a9d5e2ec0dc3a216104a37343dd69cc75}{staticItalianRyeGrass}, \hyperlink{classstatic_maize_a7d5badef27f557d91fe682c764f1b27a}{staticMaize}, \hyperlink{classstatic_oat_ab66ee7686d5a79a84ad38d01652910ac}{staticOat}, \hyperlink{classstatic_pea_a368cb5d2d6f10edb9d8aecde2e2d7b9b}{staticPea}, \hyperlink{classstatic_rye_ad0e64c4bdab814efbe44b1ffbaf9a322}{staticRye}, \hyperlink{classstatic_sbarley_a86fd8e85e5317a14915db5787a772bbe}{staticSbarley}, \hyperlink{classstatic_swheat_a5828fc22617cabf3988ca16ec7a315d1}{staticSwheat}, \hyperlink{classstatic_wbarley_a6abd8574805399b475df1488198bdd0f}{staticWbarley}, and \hyperlink{classstatic_wwheat_a51961674d4896c3f4c69bec9a4e47ee0}{staticWwheat}.\hypertarget{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{
+\index{staticCrop@{staticCrop}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticCrop@{staticCrop}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticCrop::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}
+
+
+Reimplemented in \hyperlink{classstatic_barley_pea_ae0050aa14a078ae8fe7b047cd1f22465}{staticBarleyPea}, \hyperlink{classstatic_beet_a5ee0ed20286108fd34901d74099de424}{staticBeet}, \hyperlink{classstatic_clover_a947279b029c4cbd26ba1e11efbefe0fc}{staticClover}, \hyperlink{classstatic_clover_grass_a737916e73dc4466b5bc7c53013a4895e}{staticCloverGrass}, \hyperlink{classstatic_fallow_a26c900c35a0962d6779bdb87e8c1aa98}{staticFallow}, \hyperlink{classstatic_fallow_permanent_a1309e7e71b87b0264265c015250b0ea0}{staticFallowPermanent}, \hyperlink{classstatic_grass_a5a251ce2e9a3de9af455b09b3eb9efee}{staticGrass}, \hyperlink{classstatic_grass_established_af5cde9b824bca1b7ffef27ecb92d4b8b}{staticGrassEstablished}, \hyperlink{classstatic_grazing_grass_ae3ecb060781dcf828d748bba9212e48b}{staticGrazingGrass}, \hyperlink{classstatic_italian_rye_grass_a059473a7b43838cbd8c0d125f0533e32}{staticItalianRyeGrass}, \hyperlink{classstatic_lucerne_established_adf4e2439ff973bd63859965a8fb64d77}{staticLucerneEstablished}, \hyperlink{classstatic_maize_ae29df9ec33e841c6fd482c96f330b41c}{staticMaize}, \hyperlink{classstatic_oat_a9d47d1105b60fba4f7c96764bf6229d2}{staticOat}, \hyperlink{classstatic_pea_aa4d8917d0c11523a65c5abd929a9bd7c}{staticPea}, \hyperlink{classstatic_potato_aa6aed82be9c7c1e9e678bae6fdd7422c}{staticPotato}, \hyperlink{classstatic_rye_a9842ed0a85f8e721762a72f0d2252587}{staticRye}, \hyperlink{classstatic_seed_grass_a816b9db700be83fb80b143e80c63286e}{staticSeedGrass}, \hyperlink{classstatic_swheat_aed34827923084a78c1f9e448460f8ba3}{staticSwheat}, \hyperlink{classstatic_wbarley_a27f5a783e0d40a5114a80da6d68649ef}{staticWbarley}, and \hyperlink{classstatic_wwheat_adad91fcc0de2a252030e17e25fdc97e4}{staticWwheat}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classstatic_crop_ae7226eaa52819aa9c2d663a6cd7b86d2}{
+\index{staticCrop@{staticCrop}!aPlantItem1@{aPlantItem1}}
+\index{aPlantItem1@{aPlantItem1}!staticCrop@{staticCrop}}
+\subsubsection[{aPlantItem1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem}$\ast$ {\bf staticCrop::aPlantItem1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_ae7226eaa52819aa9c2d663a6cd7b86d2}
+\hypertarget{classstatic_crop_ac802684f900defee8a00dff8e907127e}{
+\index{staticCrop@{staticCrop}!aPlantItem2@{aPlantItem2}}
+\index{aPlantItem2@{aPlantItem2}!staticCrop@{staticCrop}}
+\subsubsection[{aPlantItem2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem}$\ast$ {\bf staticCrop::aPlantItem2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_ac802684f900defee8a00dff8e907127e}
+\hypertarget{classstatic_crop_ae8459ed32ec510851565bdbe4ed8e286}{
+\index{staticCrop@{staticCrop}!conventional@{conventional}}
+\index{conventional@{conventional}!staticCrop@{staticCrop}}
+\subsubsection[{conventional}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staticCrop::conventional}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_ae8459ed32ec510851565bdbe4ed8e286}
+\hypertarget{classstatic_crop_a75caaff99a291829f060f468a9f141d5}{
+\index{staticCrop@{staticCrop}!cropName@{cropName}}
+\index{cropName@{cropName}!staticCrop@{staticCrop}}
+\subsubsection[{cropName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf str} {\bf staticCrop::cropName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a75caaff99a291829f060f468a9f141d5}
+\hypertarget{classstatic_crop_a5f633c8fed33e9051eb776b9781c36ac}{
+\index{staticCrop@{staticCrop}!day@{day}}
+\index{day@{day}!staticCrop@{staticCrop}}
+\subsubsection[{day}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staticCrop::day}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a5f633c8fed33e9051eb776b9781c36ac}
+\hypertarget{classstatic_crop_adcb2111f089cff49f8df033e5e77e425}{
+\index{staticCrop@{staticCrop}!gatheringStraw@{gatheringStraw}}
+\index{gatheringStraw@{gatheringStraw}!staticCrop@{staticCrop}}
+\subsubsection[{gatheringStraw}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf staticCrop::gatheringStraw}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_adcb2111f089cff49f8df033e5e77e425}
+\hypertarget{classstatic_crop_a3da7e9ce6f6b3df3817e550994be66f1}{
+\index{staticCrop@{staticCrop}!irrigation@{irrigation}}
+\index{irrigation@{irrigation}!staticCrop@{staticCrop}}
+\subsubsection[{irrigation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staticCrop::irrigation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a3da7e9ce6f6b3df3817e550994be66f1}
+\hypertarget{classstatic_crop_a83abe813b3873bdca7b373a9c2061071}{
+\index{staticCrop@{staticCrop}!LP@{LP}}
+\index{LP@{LP}!staticCrop@{staticCrop}}
+\subsubsection[{LP}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf fieldOperationFields}$>$$\ast$ {\bf staticCrop::LP}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a83abe813b3873bdca7b373a9c2061071}
+\hypertarget{classstatic_crop_a2c8bc8fdbc9824534c54f9f74a17623e}{
+\index{staticCrop@{staticCrop}!month@{month}}
+\index{month@{month}!staticCrop@{staticCrop}}
+\subsubsection[{month}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staticCrop::month}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_a2c8bc8fdbc9824534c54f9f74a17623e}
+\hypertarget{classstatic_crop_af151e77db389d19489ee9d10f6a73628}{
+\index{staticCrop@{staticCrop}!OpListItems@{OpListItems}}
+\index{OpListItems@{OpListItems}!staticCrop@{staticCrop}}
+\subsubsection[{OpListItems}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staticCrop::OpListItems}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_crop_af151e77db389d19489ee9d10f6a73628}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_crop_8h}{staticCrop.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_crop_8cpp}{staticCrop.cpp}\end{DoxyCompactItemize}

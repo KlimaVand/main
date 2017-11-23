@@ -1,0 +1,157 @@
+\hypertarget{classenergy}{
+\section{energy Class Reference}
+\label{classenergy}\index{energy@{energy}}
+}
+
+
+{\ttfamily \#include $<$energy.h$>$}Inheritance diagram for energy::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classenergy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classenergy_adb9b3923c92c41cba7ac1928d85ed713}{energy} ()
+\item 
+\hyperlink{classenergy_a86a3f0b749467778796dd2b68fe54b5c}{energy} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classenergy_a2bc4d056b6f3f07f3f3fec1c6240d464}{energy} (const \hyperlink{classenergy}{energy} \&aenergy)
+\item 
+virtual \hyperlink{classenergy_a96e29d339fe11ddb48d8e17e0d52c0d3}{$\sim$energy} ()
+\item 
+void \hyperlink{classenergy_a9e9bf5c07d0b8455dcbbd45912533a12}{SetkWhPerUnit} (double \&akWhPerUnit)
+\item 
+double \hyperlink{classenergy_a61157b46f4f7115eb34238d944a33fe4}{GetkWhPerUnit} (void) const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classenergy_aaaba546a4978621479e3e26042463638}{operator=} (const \hyperlink{classproduct}{product} \&someEnergy)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classenergy_acd0d43ec7777b3f63658b7b1f430e579}{operator+} (const \hyperlink{classproduct}{product} \&someEnergy)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classenergy_ac3d1fa3eb361e25b316e3cc53c2590e4}{operator-\/} (const \hyperlink{classproduct}{product} \&someEnergy)
+\item 
+virtual void \hyperlink{classenergy_af421b83f011aca4bc2ee21df490e9326}{showstats} (ostream $\ast$os)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classenergy_a42dce7e281e54a333e65e3ca826c90ac}{clone} () const 
+\item 
+virtual void \hyperlink{classenergy_a96a835d94c0efef55af5279f533c0b77}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classenergy_aa993052d14ca60cbce1b89ff2e312d16}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classenergy_a019d21c451c9235ae6e999308c48c05d}{kWhPerUnit}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classenergy_a2dc316263ecd43c6bc3bafcffda896f9}{operator$<$$<$} (ostream \&os, const \hyperlink{classenergy}{energy} \&aenergy)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classenergy_adb9b3923c92c41cba7ac1928d85ed713}{
+\index{energy@{energy}!energy@{energy}}
+\index{energy@{energy}!energy@{energy}}
+\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}energy::energy ()}}
+\label{classenergy_adb9b3923c92c41cba7ac1928d85ed713}
+\hypertarget{classenergy_a86a3f0b749467778796dd2b68fe54b5c}{
+\index{energy@{energy}!energy@{energy}}
+\index{energy@{energy}!energy@{energy}}
+\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}energy::energy (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classenergy_a86a3f0b749467778796dd2b68fe54b5c}
+\hypertarget{classenergy_a2bc4d056b6f3f07f3f3fec1c6240d464}{
+\index{energy@{energy}!energy@{energy}}
+\index{energy@{energy}!energy@{energy}}
+\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}energy::energy (const {\bf energy} \& {\em aenergy})}}
+\label{classenergy_a2bc4d056b6f3f07f3f3fec1c6240d464}
+\hypertarget{classenergy_a96e29d339fe11ddb48d8e17e0d52c0d3}{
+\index{energy@{energy}!$\sim$energy@{$\sim$energy}}
+\index{$\sim$energy@{$\sim$energy}!energy@{energy}}
+\subsubsection[{$\sim$energy}]{\setlength{\rightskip}{0pt plus 5cm}energy::$\sim$energy ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_a96e29d339fe11ddb48d8e17e0d52c0d3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classenergy_a42dce7e281e54a333e65e3ca826c90ac}{
+\index{energy@{energy}!clone@{clone}}
+\index{clone@{clone}!energy@{energy}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ energy::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_a42dce7e281e54a333e65e3ca826c90ac}
+
+
+Reimplemented from \hyperlink{classproduct_a18a1df87f3400774db21d1e8c573f04a}{product}.\hypertarget{classenergy_a61157b46f4f7115eb34238d944a33fe4}{
+\index{energy@{energy}!GetkWhPerUnit@{GetkWhPerUnit}}
+\index{GetkWhPerUnit@{GetkWhPerUnit}!energy@{energy}}
+\subsubsection[{GetkWhPerUnit}]{\setlength{\rightskip}{0pt plus 5cm}double energy::GetkWhPerUnit (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classenergy_a61157b46f4f7115eb34238d944a33fe4}
+\hypertarget{classenergy_aa993052d14ca60cbce1b89ff2e312d16}{
+\index{energy@{energy}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!energy@{energy}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void energy::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classenergy_aa993052d14ca60cbce1b89ff2e312d16}
+
+
+Reimplemented from \hyperlink{classproduct_afcbfb1feadfd4ed057845eab47e37ff5}{product}.\hypertarget{classenergy_acd0d43ec7777b3f63658b7b1f430e579}{
+\index{energy@{energy}!operator+@{operator+}}
+\index{operator+@{operator+}!energy@{energy}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& energy::operator+ (const {\bf product} \& {\em someEnergy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_acd0d43ec7777b3f63658b7b1f430e579}
+\hypertarget{classenergy_ac3d1fa3eb361e25b316e3cc53c2590e4}{
+\index{energy@{energy}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!energy@{energy}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& energy::operator-\/ (const {\bf product} \& {\em someEnergy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_ac3d1fa3eb361e25b316e3cc53c2590e4}
+\hypertarget{classenergy_aaaba546a4978621479e3e26042463638}{
+\index{energy@{energy}!operator=@{operator=}}
+\index{operator=@{operator=}!energy@{energy}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& energy::operator= (const {\bf product} \& {\em someEnergy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_aaaba546a4978621479e3e26042463638}
+\hypertarget{classenergy_a96a835d94c0efef55af5279f533c0b77}{
+\index{energy@{energy}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!energy@{energy}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void energy::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_a96a835d94c0efef55af5279f533c0b77}
+
+
+Reimplemented from \hyperlink{classproduct_a1edb3e3d0619a2db8b8f1c95fed582ce}{product}.\hypertarget{classenergy_a9e9bf5c07d0b8455dcbbd45912533a12}{
+\index{energy@{energy}!SetkWhPerUnit@{SetkWhPerUnit}}
+\index{SetkWhPerUnit@{SetkWhPerUnit}!energy@{energy}}
+\subsubsection[{SetkWhPerUnit}]{\setlength{\rightskip}{0pt plus 5cm}void energy::SetkWhPerUnit (double \& {\em akWhPerUnit})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classenergy_a9e9bf5c07d0b8455dcbbd45912533a12}
+\hypertarget{classenergy_af421b83f011aca4bc2ee21df490e9326}{
+\index{energy@{energy}!showstats@{showstats}}
+\index{showstats@{showstats}!energy@{energy}}
+\subsubsection[{showstats}]{\setlength{\rightskip}{0pt plus 5cm}void energy::showstats (ostream $\ast$ {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classenergy_af421b83f011aca4bc2ee21df490e9326}
+
+
+Reimplemented from \hyperlink{classproduct_a1151ea416ab90047f8d087be57a6d7b1}{product}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classenergy_a2dc316263ecd43c6bc3bafcffda896f9}{
+\index{energy@{energy}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!energy@{energy}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf energy} \& {\em aenergy})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classenergy_a2dc316263ecd43c6bc3bafcffda896f9}
+
+
+Reimplemented from \hyperlink{classproduct_a1b6bf2f2c82a18a17907ee1192fd94bb}{product}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classenergy_a019d21c451c9235ae6e999308c48c05d}{
+\index{energy@{energy}!kWhPerUnit@{kWhPerUnit}}
+\index{kWhPerUnit@{kWhPerUnit}!energy@{energy}}
+\subsubsection[{kWhPerUnit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf energy::kWhPerUnit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classenergy_a019d21c451c9235ae6e999308c48c05d}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{energy_8h}{energy.h}\item 
+C:/main/trunk/src/products/\hyperlink{energy_8cpp}{energy.cpp}\end{DoxyCompactItemize}

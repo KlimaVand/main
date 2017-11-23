@@ -1,0 +1,221 @@
+\hypertarget{classoperation}{
+\section{operation Class Reference}
+\label{classoperation}\index{operation@{operation}}
+}
+
+
+{\ttfamily \#include $<$operation.h$>$}Inheritance diagram for operation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11cm]{classoperation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classoperation_abc9c1aa7fb9f6b9afed39b2ca05db3ca}{operation} (const char $\ast$aName, const int, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classoperation_ae41fe8b80fc92676e15e3ea25f09bea7}{$\sim$operation} ()
+\item 
+void \hyperlink{classoperation_a17112149ad62968d66e8beb3eaf22dee}{SetoperationName} (const string \&aoperationName)
+\item 
+string \hyperlink{classoperation_a55cc50507e466f2756681d2aaf7d93eb}{GetoperationName} ()
+\item 
+int \hyperlink{classoperation_a55c7762316a031a5be1dfc922548d2aa}{GetoperationNumber} ()
+\item 
+double \hyperlink{classoperation_ab1f5a26ae7907bdc4c093a99982aa8db}{Getcost} ()
+\item 
+double \hyperlink{classoperation_affa6a1e90c4e64ffc68b9a1d45fd26d4}{GetOldCost} ()
+\item 
+virtual void \hyperlink{classoperation_a239af45379b638fcb53c10873ef8bb16}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+int \hyperlink{classoperation_a43f0d435816474a618d0167b56a575c4}{CreateGang} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList)
+\item 
+void \hyperlink{classoperation_aee961be0d29d8cd2f78b94b813a26578}{DeleteGang} ()
+\item 
+virtual void \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{CalcGangHours} ()
+\item 
+virtual void \hyperlink{classoperation_ab311cc421c3cc2a37dee5f2fc4e4c296}{CalcGangFuel} ()
+\item 
+virtual void \hyperlink{classoperation_a056348509e5e2da6c1cc03360a587df8}{CalcGangElectricity} ()
+\item 
+void \hyperlink{classoperation_af63de51c89b366f91ddd6b4597ff34e4}{Update} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classoperation_a7b792e8cf800cf57e5911bc9b88709fe}{Setcost} (double acost)
+\item 
+void \hyperlink{classoperation_ab3b3f3d4b1b02e1928e25704f49ba92d}{SetaGang} (\hyperlink{classgang}{gang} $\ast$aaGang)
+\item 
+void \hyperlink{classoperation_a073d712fe9226371dc494e21312eb5c9}{CalcGangMaintenance} ()
+\item 
+void \hyperlink{classoperation_a55df704ee7403e66bb470954a758bdac}{UpdateFarmList} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList)
+\item 
+virtual void \hyperlink{classoperation_a3f18f5e71dd6bdfdf304ed1a24e7ac2f}{UpdateProducts} (bool contractor=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classoperation_ab4ae27405ba51acde05bd0b0a109edde}{operationName}
+\item 
+int \hyperlink{classoperation_a0dfdfa94be6ba40de784c3bf2be860f6}{operationNumber}
+\item 
+double \hyperlink{classoperation_a428131322ca543144396026161f70d51}{cost}
+\item 
+double \hyperlink{classoperation_abc0d99e0dba88ebc3d46fcb9fba77083}{oldCost}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ string $>$ $\ast$ \hyperlink{classoperation_a4924dc23ecc7f5f2cdd46fd37a4477b2}{techEquipList}
+\item 
+\hyperlink{classgang}{gang} $\ast$ \hyperlink{classoperation_a5e8e50f58117ebd6c4706c7051dba7a5}{aGang}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classoperation_abc9c1aa7fb9f6b9afed39b2ca05db3ca}{
+\index{operation@{operation}!operation@{operation}}
+\index{operation@{operation}!operation@{operation}}
+\subsubsection[{operation}]{\setlength{\rightskip}{0pt plus 5cm}operation::operation (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classoperation_abc9c1aa7fb9f6b9afed39b2ca05db3ca}
+\hypertarget{classoperation_ae41fe8b80fc92676e15e3ea25f09bea7}{
+\index{operation@{operation}!$\sim$operation@{$\sim$operation}}
+\index{$\sim$operation@{$\sim$operation}!operation@{operation}}
+\subsubsection[{$\sim$operation}]{\setlength{\rightskip}{0pt plus 5cm}operation::$\sim$operation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classoperation_ae41fe8b80fc92676e15e3ea25f09bea7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classoperation_a056348509e5e2da6c1cc03360a587df8}{
+\index{operation@{operation}!CalcGangElectricity@{CalcGangElectricity}}
+\index{CalcGangElectricity@{CalcGangElectricity}!operation@{operation}}
+\subsubsection[{CalcGangElectricity}]{\setlength{\rightskip}{0pt plus 5cm}void operation::CalcGangElectricity ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classoperation_a056348509e5e2da6c1cc03360a587df8}
+
+
+Reimplemented in \hyperlink{classirrigate_tech_aff9f1aa84dc7255d893012191ac232f4}{irrigateTech}.\hypertarget{classoperation_ab311cc421c3cc2a37dee5f2fc4e4c296}{
+\index{operation@{operation}!CalcGangFuel@{CalcGangFuel}}
+\index{CalcGangFuel@{CalcGangFuel}!operation@{operation}}
+\subsubsection[{CalcGangFuel}]{\setlength{\rightskip}{0pt plus 5cm}virtual void operation::CalcGangFuel ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classoperation_ab311cc421c3cc2a37dee5f2fc4e4c296}
+
+
+Reimplemented in \hyperlink{classanimal_fert_tech_a3847a22b473b9a09f5e524c165ae0484}{animalFertTech}, \hyperlink{classfield_operation_tech_a530d49b4cf06668121b80eba679b7e98}{fieldOperationTech}, and \hyperlink{classharvest_tech_a7da76cf91a1af094816d27b373e7f913}{harvestTech}.\hypertarget{classoperation_a51c5612f29519bc82050ffccf089bc07}{
+\index{operation@{operation}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!operation@{operation}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}virtual void operation::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classoperation_a51c5612f29519bc82050ffccf089bc07}
+
+
+Reimplemented in \hyperlink{classanimal_fert_tech_a44124a413ec4871546323878c2782380}{animalFertTech}, \hyperlink{classharvest_tech_a76ab6bbf21dabdf2dccc36bb5a632f9e}{harvestTech}, \hyperlink{classirrigate_tech_a936cb4d45c7ae68deaa04ce5d9397dbe}{irrigateTech}, \hyperlink{classmanual_labour_tech_a4947c755580db30ddaf817a7f7238600}{manualLabourTech}, \hyperlink{classmineral_fert_tech_a60aff267f8d7906833524bbd0edcc39b}{mineralFertTech}, \hyperlink{classplant_care_tech_a3d5338d71d9ef7b80859ac1576084d7f}{plantCareTech}, \hyperlink{classsoil_treat_tech_a8cb69be7b91ff19c7ced98d10d8a3ff5}{soilTreatTech}, and \hyperlink{classsow_tech_aec37925c5aa7d1ea82df758921c8fdc3}{sowTech}.\hypertarget{classoperation_a073d712fe9226371dc494e21312eb5c9}{
+\index{operation@{operation}!CalcGangMaintenance@{CalcGangMaintenance}}
+\index{CalcGangMaintenance@{CalcGangMaintenance}!operation@{operation}}
+\subsubsection[{CalcGangMaintenance}]{\setlength{\rightskip}{0pt plus 5cm}void operation::CalcGangMaintenance ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_a073d712fe9226371dc494e21312eb5c9}
+\hypertarget{classoperation_a43f0d435816474a618d0167b56a575c4}{
+\index{operation@{operation}!CreateGang@{CreateGang}}
+\index{CreateGang@{CreateGang}!operation@{operation}}
+\subsubsection[{CreateGang}]{\setlength{\rightskip}{0pt plus 5cm}int operation::CreateGang ({\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList})}}
+\label{classoperation_a43f0d435816474a618d0167b56a575c4}
+\hypertarget{classoperation_aee961be0d29d8cd2f78b94b813a26578}{
+\index{operation@{operation}!DeleteGang@{DeleteGang}}
+\index{DeleteGang@{DeleteGang}!operation@{operation}}
+\subsubsection[{DeleteGang}]{\setlength{\rightskip}{0pt plus 5cm}void operation::DeleteGang ()}}
+\label{classoperation_aee961be0d29d8cd2f78b94b813a26578}
+\hypertarget{classoperation_ab1f5a26ae7907bdc4c093a99982aa8db}{
+\index{operation@{operation}!Getcost@{Getcost}}
+\index{Getcost@{Getcost}!operation@{operation}}
+\subsubsection[{Getcost}]{\setlength{\rightskip}{0pt plus 5cm}double operation::Getcost ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classoperation_ab1f5a26ae7907bdc4c093a99982aa8db}
+\hypertarget{classoperation_affa6a1e90c4e64ffc68b9a1d45fd26d4}{
+\index{operation@{operation}!GetOldCost@{GetOldCost}}
+\index{GetOldCost@{GetOldCost}!operation@{operation}}
+\subsubsection[{GetOldCost}]{\setlength{\rightskip}{0pt plus 5cm}double operation::GetOldCost ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classoperation_affa6a1e90c4e64ffc68b9a1d45fd26d4}
+\hypertarget{classoperation_a55cc50507e466f2756681d2aaf7d93eb}{
+\index{operation@{operation}!GetoperationName@{GetoperationName}}
+\index{GetoperationName@{GetoperationName}!operation@{operation}}
+\subsubsection[{GetoperationName}]{\setlength{\rightskip}{0pt plus 5cm}string operation::GetoperationName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classoperation_a55cc50507e466f2756681d2aaf7d93eb}
+\hypertarget{classoperation_a55c7762316a031a5be1dfc922548d2aa}{
+\index{operation@{operation}!GetoperationNumber@{GetoperationNumber}}
+\index{GetoperationNumber@{GetoperationNumber}!operation@{operation}}
+\subsubsection[{GetoperationNumber}]{\setlength{\rightskip}{0pt plus 5cm}int operation::GetoperationNumber ()}}
+\label{classoperation_a55c7762316a031a5be1dfc922548d2aa}
+\hypertarget{classoperation_a239af45379b638fcb53c10873ef8bb16}{
+\index{operation@{operation}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!operation@{operation}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void operation::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classoperation_a239af45379b638fcb53c10873ef8bb16}
+
+
+Reimplemented in \hyperlink{classanimal_fert_tech_ace0ed6c38236d05cd521f98624431767}{animalFertTech}, \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}, \hyperlink{classharvest_tech_a8b2a5efa11d4ee3355c75cec9a080b27}{harvestTech}, \hyperlink{classirrigate_tech_a8c7f11f2ce9cb7e19851c81c69c91d0a}{irrigateTech}, \hyperlink{classmanual_labour_tech_a1b03a5bb1d552a3bacaeb5bb758a1e17}{manualLabourTech}, \hyperlink{classmineral_fert_tech_a25acfef0b5b6f2a6463fe9249d13cb9a}{mineralFertTech}, \hyperlink{classplant_care_tech_ac699023786b1759775d57e80b5817096}{plantCareTech}, \hyperlink{classsoil_treat_tech_a43342c7563137af6f07fd4b031f3c599}{soilTreatTech}, and \hyperlink{classsow_tech_aa606f377adfc0cf3fd80d96ba2576fcc}{sowTech}.\hypertarget{classoperation_ab3b3f3d4b1b02e1928e25704f49ba92d}{
+\index{operation@{operation}!SetaGang@{SetaGang}}
+\index{SetaGang@{SetaGang}!operation@{operation}}
+\subsubsection[{SetaGang}]{\setlength{\rightskip}{0pt plus 5cm}void operation::SetaGang ({\bf gang} $\ast$ {\em aaGang})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classoperation_ab3b3f3d4b1b02e1928e25704f49ba92d}
+\hypertarget{classoperation_a7b792e8cf800cf57e5911bc9b88709fe}{
+\index{operation@{operation}!Setcost@{Setcost}}
+\index{Setcost@{Setcost}!operation@{operation}}
+\subsubsection[{Setcost}]{\setlength{\rightskip}{0pt plus 5cm}void operation::Setcost (double {\em acost})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classoperation_a7b792e8cf800cf57e5911bc9b88709fe}
+\hypertarget{classoperation_a17112149ad62968d66e8beb3eaf22dee}{
+\index{operation@{operation}!SetoperationName@{SetoperationName}}
+\index{SetoperationName@{SetoperationName}!operation@{operation}}
+\subsubsection[{SetoperationName}]{\setlength{\rightskip}{0pt plus 5cm}void operation::SetoperationName (const string \& {\em aoperationName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classoperation_a17112149ad62968d66e8beb3eaf22dee}
+\hypertarget{classoperation_af63de51c89b366f91ddd6b4597ff34e4}{
+\index{operation@{operation}!Update@{Update}}
+\index{Update@{Update}!operation@{operation}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void operation::Update ({\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList})}}
+\label{classoperation_af63de51c89b366f91ddd6b4597ff34e4}
+\hypertarget{classoperation_a55df704ee7403e66bb470954a758bdac}{
+\index{operation@{operation}!UpdateFarmList@{UpdateFarmList}}
+\index{UpdateFarmList@{UpdateFarmList}!operation@{operation}}
+\subsubsection[{UpdateFarmList}]{\setlength{\rightskip}{0pt plus 5cm}void operation::UpdateFarmList ({\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_a55df704ee7403e66bb470954a758bdac}
+\hypertarget{classoperation_a3f18f5e71dd6bdfdf304ed1a24e7ac2f}{
+\index{operation@{operation}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!operation@{operation}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}virtual void operation::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classoperation_a3f18f5e71dd6bdfdf304ed1a24e7ac2f}
+
+
+Reimplemented in \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}, \hyperlink{classharvest_tech_a80aa806fd5fa0f652b8ead63fb8976a4}{harvestTech}, \hyperlink{classirrigate_tech_a5a125198ead652bcf1c8307fbc8ef3b5}{irrigateTech}, \hyperlink{classmineral_fert_tech_aeaae651d9f15846abd36be1a03e782db}{mineralFertTech}, \hyperlink{classplant_care_tech_a877ed4e1f3d84637783c1ac0474a6bc6}{plantCareTech}, \hyperlink{classsoil_treat_tech_aea3565eebbd55354cbee50d13c1c892a}{soilTreatTech}, and \hyperlink{classsow_tech_a0cfbd371272aa15a18bca486a2926464}{sowTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classoperation_a5e8e50f58117ebd6c4706c7051dba7a5}{
+\index{operation@{operation}!aGang@{aGang}}
+\index{aGang@{aGang}!operation@{operation}}
+\subsubsection[{aGang}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gang}$\ast$ {\bf operation::aGang}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_a5e8e50f58117ebd6c4706c7051dba7a5}
+\hypertarget{classoperation_a428131322ca543144396026161f70d51}{
+\index{operation@{operation}!cost@{cost}}
+\index{cost@{cost}!operation@{operation}}
+\subsubsection[{cost}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf operation::cost}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_a428131322ca543144396026161f70d51}
+\hypertarget{classoperation_abc0d99e0dba88ebc3d46fcb9fba77083}{
+\index{operation@{operation}!oldCost@{oldCost}}
+\index{oldCost@{oldCost}!operation@{operation}}
+\subsubsection[{oldCost}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf operation::oldCost}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_abc0d99e0dba88ebc3d46fcb9fba77083}
+\hypertarget{classoperation_ab4ae27405ba51acde05bd0b0a109edde}{
+\index{operation@{operation}!operationName@{operationName}}
+\index{operationName@{operationName}!operation@{operation}}
+\subsubsection[{operationName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf operation::operationName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_ab4ae27405ba51acde05bd0b0a109edde}
+\hypertarget{classoperation_a0dfdfa94be6ba40de784c3bf2be860f6}{
+\index{operation@{operation}!operationNumber@{operationNumber}}
+\index{operationNumber@{operationNumber}!operation@{operation}}
+\subsubsection[{operationNumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf operation::operationNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_a0dfdfa94be6ba40de784c3bf2be860f6}
+\hypertarget{classoperation_a4924dc23ecc7f5f2cdd46fd37a4477b2}{
+\index{operation@{operation}!techEquipList@{techEquipList}}
+\index{techEquipList@{techEquipList}!operation@{operation}}
+\subsubsection[{techEquipList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$string$>$$\ast$ {\bf operation::techEquipList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classoperation_a4924dc23ecc7f5f2cdd46fd37a4477b2}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{operation_8h}{operation.h}\item 
+C:/main/trunk/src/technics/\hyperlink{operation_8cpp}{operation.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,357 @@
+\hypertarget{classfield_operation_fields}{
+\section{fieldOperationFields Class Reference}
+\label{classfield_operation_fields}\index{fieldOperationFields@{fieldOperationFields}}
+}
+
+
+{\ttfamily \#include $<$fieldOperationFields.h$>$}Inheritance diagram for fieldOperationFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11cm]{classfield_operation_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfield_operation_fields_aad9cd8f2eed136e9c879015c9448ea7c}{fieldOperationFields} ()
+\item 
+\hyperlink{classfield_operation_fields_a0d657942c622b9cf5557d65323749d19}{fieldOperationFields} (const \hyperlink{classfield_operation_fields}{fieldOperationFields} \&f)
+\item 
+virtual \hyperlink{classfield_operation_fields_ad37661d4c850cbebe5361edac85ff361}{$\sim$fieldOperationFields} ()
+\item 
+virtual \hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$ \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{clone} () const =0
+\item 
+virtual void \hyperlink{classfield_operation_fields_a5bc5560caa7ecd638172f5a7f74ffe10}{DefineOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, string \hyperlink{classcrop}{crop}, string cropNm, int yr, int mon, int d, double ar, int fieldn, double dist)
+\item 
+virtual bool \hyperlink{classfield_operation_fields_ad9bda8d7d67001b38bc34e82fa344fca}{IsHarvestOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classfield_operation_fields_adc42e16ecf40bc87b2b073e7aa3e42b4}{IsForageHarvestOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classfield_operation_fields_ae21a07b4ab147829465e5b79418708f7}{IsFertilizingOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classfield_operation_fields_a223d85319e913d2337715db404a47c4f}{IsSowingOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classfield_operation_fields_aad34a4f52c734a152ad3768fca005b6e}{HarvestAndForced} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classfield_operation_fields_acc173f03d2190f694c9bef2fd1e5a314}{IsIrrigationOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classfield_operation_fields_a46acdf3a83fd93634ecc8f97d44a2f81}{AutomaticIrrigation} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classfield_operation_fields_afbf28b06e95ccb00f99383765e080c29}{GetYear} ()
+\item 
+virtual int \hyperlink{classfield_operation_fields_ab99d866323e83c4c7399b59cbe6d51f3}{GetMonth} ()
+\item 
+virtual int \hyperlink{classfield_operation_fields_a6d75fd7b82f12f62bc14e1682c0fb978}{GetDay} ()
+\item 
+virtual int \hyperlink{classfield_operation_fields_a21e5e7cabdbbbecd0e7bb0adcca04740}{GetFieldNumber} ()
+\item 
+virtual double \hyperlink{classfield_operation_fields_a5f64c374904b49db06079a0ebc50f315}{GetArea} ()
+\item 
+virtual double \hyperlink{classfield_operation_fields_ad905821b48e7765eb58b13fc6fc53f57}{GetDistance} ()
+\item 
+virtual int \hyperlink{classfield_operation_fields_a8981c417041bf7188a41df2881b244fb}{GetOperationId} ()
+\item 
+virtual const char $\ast$ \hyperlink{classfield_operation_fields_a8b64bc71d98bb102539aad5e2c6aea93}{GetCropId} ()
+\item 
+virtual const char $\ast$ \hyperlink{classfield_operation_fields_a97cc7b523640a81790e9d147331c67da}{GetCropName} ()
+\item 
+virtual \hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classfield_operation_fields_a31ce7910466fadb0a560eb7e56b001e8}{GetOpTime} ()
+\item 
+virtual void \hyperlink{classfield_operation_fields_a8dff595b832bca540dda946639f7f47a}{Output} (ofstream $\ast$fs)
+\item 
+virtual bool \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classfield_operation_tech}{fieldOperationTech} $\ast$ \hyperlink{classfield_operation_fields_a0b7b1a0da8d7bbc651bf9256fc3eef9f}{GetfieldOperationTech} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList)
+\item 
+virtual void \hyperlink{classfield_operation_fields_a29c2d6912bf930809a3922350b8adad6}{DelayOneDay} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \mbox{[}20\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfield_operation_fields}{fieldOperationFields} \& \hyperlink{classfield_operation_fields_aef84e67b95aeff732e28cbd2b197648a}{operator=} (const \hyperlink{classfield_operation_fields}{fieldOperationFields} \&f)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classfield_operation_fields_abe9be7ea30f4ebbe53f17b8f07fffdb5}{fieldno}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classfield}{field} that need this \hyperlink{classoperation}{operation}. \item\end{DoxyCompactList}\item 
+double \hyperlink{classfield_operation_fields_a0026d9c6100052d4a1dab5ba43bdf2e0}{area}
+\begin{DoxyCompactList}\small\item\em The area of the \hyperlink{classfield}{field} that need this \hyperlink{classoperation}{operation}. \item\end{DoxyCompactList}\item 
+double \hyperlink{classfield_operation_fields_a7bf06392f169a4392394ee8696932d8b}{distance}
+\begin{DoxyCompactList}\small\item\em The distance to the \hyperlink{classfield}{field} that need this \hyperlink{classoperation}{operation}. \item\end{DoxyCompactList}\item 
+\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} \hyperlink{classfield_operation_fields_aebeb02a0325a6eed1778f051ff09a9a3}{op\_\-id}
+\begin{DoxyCompactList}\small\item\em the name of the \hyperlink{classoperation}{operation} \item\end{DoxyCompactList}\item 
+\hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classfield_operation_fields_a23e6b29f125bb7fefbb966eeaf8763fb}{crop\_\-id}
+\begin{DoxyCompactList}\small\item\em Detail information about name of the \hyperlink{classcrop}{crop}. \item\end{DoxyCompactList}\item 
+\hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classfield_operation_fields_a2820c03f420902fdaeb3d8b5a798c444}{cropName}
+\begin{DoxyCompactList}\small\item\em Name of the \hyperlink{classcrop}{crop}. \item\end{DoxyCompactList}\item 
+\hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classfield_operation_fields_a45add696631149bbc8f7f9ace6529ad3}{opTime}
+\begin{DoxyCompactList}\small\item\em time it takes for the operarion \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classfield_operation_fields_a24dfd201a1faafc49dab9678977b12e3}{operator$<$$<$} (ostream \&os, const \hyperlink{classfield_operation_fields}{fieldOperationFields} \&aFieldOp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Field \hyperlink{classoperation}{operation} is things that you can do on any \hyperlink{classfield}{field} such as irrigate and harvest 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{
+\index{fieldOperationFields@{fieldOperationFields}!id\_\-string@{id\_\-string}}
+\index{id\_\-string@{id\_\-string}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{id\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf fieldOperationFields::id\_\-string}\mbox{[}20\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfield_operation_fields_aad9cd8f2eed136e9c879015c9448ea7c}{
+\index{fieldOperationFields@{fieldOperationFields}!fieldOperationFields@{fieldOperationFields}}
+\index{fieldOperationFields@{fieldOperationFields}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{fieldOperationFields}]{\setlength{\rightskip}{0pt plus 5cm}fieldOperationFields::fieldOperationFields ()}}
+\label{classfield_operation_fields_aad9cd8f2eed136e9c879015c9448ea7c}
+\hypertarget{classfield_operation_fields_a0d657942c622b9cf5557d65323749d19}{
+\index{fieldOperationFields@{fieldOperationFields}!fieldOperationFields@{fieldOperationFields}}
+\index{fieldOperationFields@{fieldOperationFields}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{fieldOperationFields}]{\setlength{\rightskip}{0pt plus 5cm}fieldOperationFields::fieldOperationFields (const {\bf fieldOperationFields} \& {\em f})}}
+\label{classfield_operation_fields_a0d657942c622b9cf5557d65323749d19}
+\hypertarget{classfield_operation_fields_ad37661d4c850cbebe5361edac85ff361}{
+\index{fieldOperationFields@{fieldOperationFields}!$\sim$fieldOperationFields@{$\sim$fieldOperationFields}}
+\index{$\sim$fieldOperationFields@{$\sim$fieldOperationFields}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{$\sim$fieldOperationFields}]{\setlength{\rightskip}{0pt plus 5cm}fieldOperationFields::$\sim$fieldOperationFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfield_operation_fields_ad37661d4c850cbebe5361edac85ff361}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfield_operation_fields_a46acdf3a83fd93634ecc8f97d44a2f81}{
+\index{fieldOperationFields@{fieldOperationFields}!AutomaticIrrigation@{AutomaticIrrigation}}
+\index{AutomaticIrrigation@{AutomaticIrrigation}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{AutomaticIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::AutomaticIrrigation ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a46acdf3a83fd93634ecc8f97d44a2f81}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classirrigate_fields_a288149c6a4e9bc3d60cf8f3494aa274f}{irrigateFields}.\hypertarget{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{
+\index{fieldOperationFields@{fieldOperationFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classanimal_fert_fields_a45dd2c78a88e638206b14b82616c8e90}{animalFertFields}, \hyperlink{classharvest_fields_a9fcfd4121d8290708c8db3da63a56d78}{harvestFields}, \hyperlink{classirrigate_fields_a2180e7648439e025e85c304388260f14}{irrigateFields}, \hyperlink{classmake_grazable_ae09405366070332941b95c92b334c6c1}{makeGrazable}, \hyperlink{classmanual_labour_fields_a1baebed54c58272b5127e0fe713b1eea}{manualLabourFields}, \hyperlink{classmineral_fert_fields_a9d71379448708130be77ca7166bb99dc}{mineralFertFields}, \hyperlink{classplant_care_fields_a14bb648891c128209ae40889534b4257}{plantCareFields}, \hyperlink{classsilage_fields_a5ae420a0878bc7f89c3a6fe03f585163}{silageFields}, \hyperlink{classsoil_treat_fields_a1b486e3dcf8ea9e3c0e8c58ec801a3e9}{soilTreatFields}, and \hyperlink{classsow_fields_a7834909587530be2801797f19d3fa242}{sowFields}.\hypertarget{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{
+\index{fieldOperationFields@{fieldOperationFields}!clone@{clone}}
+\index{clone@{clone}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf fieldOperationFields}$\ast$ fieldOperationFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}
+
+
+Implemented in \hyperlink{classanimal_fert_fields_a086028dc45ec7c9624e80ddbb59b5271}{animalFertFields}, \hyperlink{classgrazing_fields_a512df2449aac5ed1621dd4c543857712}{grazingFields}, \hyperlink{classharvest_fields_aa252f8782663a14d3ccefff889279b36}{harvestFields}, \hyperlink{classirrigate_fields_a162b39c6de0effa998c14fa4516da08b}{irrigateFields}, \hyperlink{classmake_grazable_a52ff627730636a7a71b975a203edbf5f}{makeGrazable}, \hyperlink{classmanual_labour_fields_acbf577ca188715bf0e4413f08e6d2861}{manualLabourFields}, \hyperlink{classmineral_fert_fields_a29eb4d8ad0e09942f75f531c8b7c44b6}{mineralFertFields}, \hyperlink{classplant_care_fields_a9fc0efabe5abf7359f56514c889ca743}{plantCareFields}, \hyperlink{classsilage_fields_a143ee0ad2ae333fe8f9b8b6c119bf46d}{silageFields}, \hyperlink{classsoil_treat_fields_ac7a0bac794823169aaa85319842ce4d9}{soilTreatFields}, and \hyperlink{classsow_fields_a0feeb92725f01a4e58784ca0d7a7d98e}{sowFields}.\hypertarget{classfield_operation_fields_a5bc5560caa7ecd638172f5a7f74ffe10}{
+\index{fieldOperationFields@{fieldOperationFields}!DefineOp@{DefineOp}}
+\index{DefineOp@{DefineOp}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{DefineOp}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationFields::DefineOp ({\bf operationNames} {\em op}, \/  string {\em crop}, \/  string {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfield_operation_fields_a5bc5560caa7ecd638172f5a7f74ffe10}
+Define the \hyperlink{classoperation}{operation}. Should this be a constructor? \hypertarget{classfield_operation_fields_a29c2d6912bf930809a3922350b8adad6}{
+\index{fieldOperationFields@{fieldOperationFields}!DelayOneDay@{DelayOneDay}}
+\index{DelayOneDay@{DelayOneDay}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{DelayOneDay}]{\setlength{\rightskip}{0pt plus 5cm}virtual void fieldOperationFields::DelayOneDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a29c2d6912bf930809a3922350b8adad6}
+\hypertarget{classfield_operation_fields_a5f64c374904b49db06079a0ebc50f315}{
+\index{fieldOperationFields@{fieldOperationFields}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}virtual double fieldOperationFields::GetArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a5f64c374904b49db06079a0ebc50f315}
+\hypertarget{classfield_operation_fields_a8b64bc71d98bb102539aad5e2c6aea93}{
+\index{fieldOperationFields@{fieldOperationFields}!GetCropId@{GetCropId}}
+\index{GetCropId@{GetCropId}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetCropId}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ fieldOperationFields::GetCropId ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a8b64bc71d98bb102539aad5e2c6aea93}
+\hypertarget{classfield_operation_fields_a97cc7b523640a81790e9d147331c67da}{
+\index{fieldOperationFields@{fieldOperationFields}!GetCropName@{GetCropName}}
+\index{GetCropName@{GetCropName}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetCropName}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ fieldOperationFields::GetCropName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a97cc7b523640a81790e9d147331c67da}
+\hypertarget{classfield_operation_fields_a6d75fd7b82f12f62bc14e1682c0fb978}{
+\index{fieldOperationFields@{fieldOperationFields}!GetDay@{GetDay}}
+\index{GetDay@{GetDay}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetDay}]{\setlength{\rightskip}{0pt plus 5cm}virtual int fieldOperationFields::GetDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a6d75fd7b82f12f62bc14e1682c0fb978}
+\hypertarget{classfield_operation_fields_ad905821b48e7765eb58b13fc6fc53f57}{
+\index{fieldOperationFields@{fieldOperationFields}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetDistance}]{\setlength{\rightskip}{0pt plus 5cm}virtual double fieldOperationFields::GetDistance ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_ad905821b48e7765eb58b13fc6fc53f57}
+\hypertarget{classfield_operation_fields_a21e5e7cabdbbbecd0e7bb0adcca04740}{
+\index{fieldOperationFields@{fieldOperationFields}!GetFieldNumber@{GetFieldNumber}}
+\index{GetFieldNumber@{GetFieldNumber}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetFieldNumber}]{\setlength{\rightskip}{0pt plus 5cm}virtual int fieldOperationFields::GetFieldNumber ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a21e5e7cabdbbbecd0e7bb0adcca04740}
+\hypertarget{classfield_operation_fields_a0b7b1a0da8d7bbc651bf9256fc3eef9f}{
+\index{fieldOperationFields@{fieldOperationFields}!GetfieldOperationTech@{GetfieldOperationTech}}
+\index{GetfieldOperationTech@{GetfieldOperationTech}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetfieldOperationTech}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf fieldOperationTech}$\ast$ fieldOperationFields::GetfieldOperationTech ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a0b7b1a0da8d7bbc651bf9256fc3eef9f}
+
+
+Reimplemented in \hyperlink{classanimal_fert_fields_a92bb741105761340a580dba156326c93}{animalFertFields}.\hypertarget{classfield_operation_fields_ab99d866323e83c4c7399b59cbe6d51f3}{
+\index{fieldOperationFields@{fieldOperationFields}!GetMonth@{GetMonth}}
+\index{GetMonth@{GetMonth}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetMonth}]{\setlength{\rightskip}{0pt plus 5cm}virtual int fieldOperationFields::GetMonth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_ab99d866323e83c4c7399b59cbe6d51f3}
+\hypertarget{classfield_operation_fields_a8981c417041bf7188a41df2881b244fb}{
+\index{fieldOperationFields@{fieldOperationFields}!GetOperationId@{GetOperationId}}
+\index{GetOperationId@{GetOperationId}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetOperationId}]{\setlength{\rightskip}{0pt plus 5cm}virtual int fieldOperationFields::GetOperationId ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a8981c417041bf7188a41df2881b244fb}
+\hypertarget{classfield_operation_fields_a31ce7910466fadb0a560eb7e56b001e8}{
+\index{fieldOperationFields@{fieldOperationFields}!GetOpTime@{GetOpTime}}
+\index{GetOpTime@{GetOpTime}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetOpTime}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bsTime}$\ast$ fieldOperationFields::GetOpTime ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a31ce7910466fadb0a560eb7e56b001e8}
+\hypertarget{classfield_operation_fields_afbf28b06e95ccb00f99383765e080c29}{
+\index{fieldOperationFields@{fieldOperationFields}!GetYear@{GetYear}}
+\index{GetYear@{GetYear}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{GetYear}]{\setlength{\rightskip}{0pt plus 5cm}virtual int fieldOperationFields::GetYear ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_afbf28b06e95ccb00f99383765e080c29}
+\hypertarget{classfield_operation_fields_aad34a4f52c734a152ad3768fca005b6e}{
+\index{fieldOperationFields@{fieldOperationFields}!HarvestAndForced@{HarvestAndForced}}
+\index{HarvestAndForced@{HarvestAndForced}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{HarvestAndForced}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::HarvestAndForced ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_aad34a4f52c734a152ad3768fca005b6e}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classharvest_fields_a3928ef45dc41fa069fcde4ff23f69d54}{harvestFields}.\hypertarget{classfield_operation_fields_ae21a07b4ab147829465e5b79418708f7}{
+\index{fieldOperationFields@{fieldOperationFields}!IsFertilizingOp@{IsFertilizingOp}}
+\index{IsFertilizingOp@{IsFertilizingOp}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{IsFertilizingOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::IsFertilizingOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_ae21a07b4ab147829465e5b79418708f7}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classanimal_fert_fields_a793fca221cb66cef70bbfcb1cf124680}{animalFertFields}, and \hyperlink{classmineral_fert_fields_a73b4d9ac6b06da725809f785a88edff1}{mineralFertFields}.\hypertarget{classfield_operation_fields_adc42e16ecf40bc87b2b073e7aa3e42b4}{
+\index{fieldOperationFields@{fieldOperationFields}!IsForageHarvestOp@{IsForageHarvestOp}}
+\index{IsForageHarvestOp@{IsForageHarvestOp}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{IsForageHarvestOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::IsForageHarvestOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_adc42e16ecf40bc87b2b073e7aa3e42b4}
+
+
+returning false \hypertarget{classfield_operation_fields_ad9bda8d7d67001b38bc34e82fa344fca}{
+\index{fieldOperationFields@{fieldOperationFields}!IsHarvestOp@{IsHarvestOp}}
+\index{IsHarvestOp@{IsHarvestOp}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{IsHarvestOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::IsHarvestOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_ad9bda8d7d67001b38bc34e82fa344fca}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classharvest_fields_ab50f128112be82518c06028ecb470cb7}{harvestFields}, and \hyperlink{classmake_grazable_a0c637b243ff0bc8232d121553f417573}{makeGrazable}.\hypertarget{classfield_operation_fields_acc173f03d2190f694c9bef2fd1e5a314}{
+\index{fieldOperationFields@{fieldOperationFields}!IsIrrigationOp@{IsIrrigationOp}}
+\index{IsIrrigationOp@{IsIrrigationOp}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{IsIrrigationOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::IsIrrigationOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_acc173f03d2190f694c9bef2fd1e5a314}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classirrigate_fields_a5ec3ea58a4f844b81c394155e332829c}{irrigateFields}.\hypertarget{classfield_operation_fields_a223d85319e913d2337715db404a47c4f}{
+\index{fieldOperationFields@{fieldOperationFields}!IsSowingOp@{IsSowingOp}}
+\index{IsSowingOp@{IsSowingOp}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{IsSowingOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool fieldOperationFields::IsSowingOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_fields_a223d85319e913d2337715db404a47c4f}
+
+
+returning false 
+
+Reimplemented in \hyperlink{classsow_fields_ac2784f943d1fc9ffd9f831ed792da834}{sowFields}.\hypertarget{classfield_operation_fields_aef84e67b95aeff732e28cbd2b197648a}{
+\index{fieldOperationFields@{fieldOperationFields}!operator=@{operator=}}
+\index{operator=@{operator=}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fieldOperationFields}\& fieldOperationFields::operator= (const {\bf fieldOperationFields} \& {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_aef84e67b95aeff732e28cbd2b197648a}
+
+
+Reimplemented in \hyperlink{classsow_fields_abc76f0e726ab2388e9f9be21d6c0b8be}{sowFields}.\hypertarget{classfield_operation_fields_a8dff595b832bca540dda946639f7f47a}{
+\index{fieldOperationFields@{fieldOperationFields}!Output@{Output}}
+\index{Output@{Output}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{Output}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationFields::Output (ofstream $\ast$ {\em fs})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfield_operation_fields_a8dff595b832bca540dda946639f7f47a}
+Write down the Operation, the area of the \hyperlink{classfield}{field} and the time 
+
+Reimplemented in \hyperlink{classanimal_fert_fields_a486ecb469147fbfd89dc4461c202ca36}{animalFertFields}, \hyperlink{classmineral_fert_fields_abbb016beaa3ec35d35a9ea0001c7b96c}{mineralFertFields}, and \hyperlink{classsow_fields_ad522bac768458cd78dfd8766545556bb}{sowFields}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classfield_operation_fields_a24dfd201a1faafc49dab9678977b12e3}{
+\index{fieldOperationFields@{fieldOperationFields}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf fieldOperationFields} \& {\em aFieldOp})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classfield_operation_fields_a24dfd201a1faafc49dab9678977b12e3}
+
+
+Reimplemented in \hyperlink{classharvest_fields_a0aea28a5f5ab32df57a2204cce6cd04b}{harvestFields}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classfield_operation_fields_a0026d9c6100052d4a1dab5ba43bdf2e0}{
+\index{fieldOperationFields@{fieldOperationFields}!area@{area}}
+\index{area@{area}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationFields::area}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_a0026d9c6100052d4a1dab5ba43bdf2e0}
+
+
+The area of the \hyperlink{classfield}{field} that need this \hyperlink{classoperation}{operation}. \hypertarget{classfield_operation_fields_a23e6b29f125bb7fefbb966eeaf8763fb}{
+\index{fieldOperationFields@{fieldOperationFields}!crop\_\-id@{crop\_\-id}}
+\index{crop\_\-id@{crop\_\-id}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{crop\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf id\_\-string} {\bf fieldOperationFields::crop\_\-id}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_a23e6b29f125bb7fefbb966eeaf8763fb}
+
+
+Detail information about name of the \hyperlink{classcrop}{crop}. \hypertarget{classfield_operation_fields_a2820c03f420902fdaeb3d8b5a798c444}{
+\index{fieldOperationFields@{fieldOperationFields}!cropName@{cropName}}
+\index{cropName@{cropName}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{cropName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf id\_\-string} {\bf fieldOperationFields::cropName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_a2820c03f420902fdaeb3d8b5a798c444}
+
+
+Name of the \hyperlink{classcrop}{crop}. \hypertarget{classfield_operation_fields_a7bf06392f169a4392394ee8696932d8b}{
+\index{fieldOperationFields@{fieldOperationFields}!distance@{distance}}
+\index{distance@{distance}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationFields::distance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_a7bf06392f169a4392394ee8696932d8b}
+
+
+The distance to the \hyperlink{classfield}{field} that need this \hyperlink{classoperation}{operation}. \hypertarget{classfield_operation_fields_abe9be7ea30f4ebbe53f17b8f07fffdb5}{
+\index{fieldOperationFields@{fieldOperationFields}!fieldno@{fieldno}}
+\index{fieldno@{fieldno}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{fieldno}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf fieldOperationFields::fieldno}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_abe9be7ea30f4ebbe53f17b8f07fffdb5}
+
+
+The \hyperlink{classfield}{field} that need this \hyperlink{classoperation}{operation}. \hypertarget{classfield_operation_fields_aebeb02a0325a6eed1778f051ff09a9a3}{
+\index{fieldOperationFields@{fieldOperationFields}!op\_\-id@{op\_\-id}}
+\index{op\_\-id@{op\_\-id}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{op\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf operationNames} {\bf fieldOperationFields::op\_\-id}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_aebeb02a0325a6eed1778f051ff09a9a3}
+
+
+the name of the \hyperlink{classoperation}{operation} \hypertarget{classfield_operation_fields_a45add696631149bbc8f7f9ace6529ad3}{
+\index{fieldOperationFields@{fieldOperationFields}!opTime@{opTime}}
+\index{opTime@{opTime}!fieldOperationFields@{fieldOperationFields}}
+\subsubsection[{opTime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bsTime}$\ast$ {\bf fieldOperationFields::opTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_fields_a45add696631149bbc8f7f9ace6529ad3}
+
+
+time it takes for the operarion 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{field_operation_fields_8h}{fieldOperationFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{field_operation_fields_8cpp}{fieldOperationFields.cpp}\end{DoxyCompactItemize}

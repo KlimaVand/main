@@ -1,0 +1,10 @@
+[run(0)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        \typebedr\Input\
+OutputDirectory       \typebedr\output\
+ClimateFileName       \climate\aarslev.clm
+ForcedOperations        1
+AirToSoilTemperature        1 
+[end]

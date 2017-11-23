@@ -1,0 +1,179 @@
+\hypertarget{classcrop_rotation}{
+\section{cropRotation Class Reference}
+\label{classcrop_rotation}\index{cropRotation@{cropRotation}}
+}
+
+
+{\ttfamily \#include $<$cropRotation.h$>$}Inheritance diagram for cropRotation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classcrop_rotation}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Cropstruct}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_rotation_ae7b86becd93c7b2683959a9761544e26}{cropRotation} ()
+\item 
+\hyperlink{classcrop_rotation_a10e666b20669411f733598b1cb945a9a}{$\sim$cropRotation} ()
+\item 
+void \hyperlink{classcrop_rotation_ab81177f47739f25b3c8e398659eb4f5a}{Initialize} (int convent, int irrigat, int daysBetweenIrrigation, int irrigationDelay, int FingerFlow, int cattl, double MinArea)
+\item 
+void \hyperlink{classcrop_rotation_ab7b6db261a0972935ec1b84205495421}{DailyUpdate} ()
+\item 
+void \hyperlink{classcrop_rotation_ae3c3bc02c3b5c919ff640390297094f4}{CalcLP} (int seasons)
+\item 
+void \hyperlink{classcrop_rotation_a2789db66978b9330b357d5835d3b5b5e}{ReceivePlan} (char $\ast$filename)
+\item 
+int \hyperlink{classcrop_rotation_a4f700ca77df824f98c51144e4e00de2f}{NumOfFields} ()
+\item 
+double \hyperlink{classcrop_rotation_a8e06fe96e9ec89ad59170385960e026f}{FieldArea} (int field\_\-no)
+\item 
+int \hyperlink{classcrop_rotation_ae99cf520b3808fbcd2265743a8273e0e}{FieldJBNo} (int field\_\-no)
+\item 
+double \hyperlink{classcrop_rotation_ac947882c31389e5b1673829b4d7a47de}{GetTotalPremium} ()
+\item 
+double \hyperlink{classcrop_rotation_aed118395469c41fb634fc0d214b1a2ac}{GetDiversePlant} ()
+\item 
+double \hyperlink{classcrop_rotation_a9c59bb9848b03b283c1cca5bdad30a10}{GetTotalArea} ()
+\item 
+double \hyperlink{classcrop_rotation_a66d145fb7cd7bcf7e94298704b2702d7}{GetValueofLand} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfield}{field} $>$ $\ast$ \hyperlink{classcrop_rotation_ad85aaa3c1694c992e1a92fad544194b4}{GetFields} ()
+\item 
+void \hyperlink{classcrop_rotation_a84652568c0c22bd83cf89d4971666d52}{InsertGhostField} ()
+\item 
+void \hyperlink{classcrop_rotation_a231ad3ce0e69340a712d65159216e5d0}{ReplaceField} (\hyperlink{classfield}{field} $\ast$fP)
+\item 
+void \hyperlink{classcrop_rotation_a53e0e2576f3abb04384ac5cb76e86653}{ShowAllCurrentPlans} (char $\ast$filename)
+\item 
+void \hyperlink{classcrop_rotation_ab81d66407197d16d96b35c5150e1198f}{ShowAllFuturePlans} (char $\ast$filename)
+\item 
+void \hyperlink{classcrop_rotation_a646c61e2c4d60b8883e8a18dc4ad51ca}{ShowHist} ()
+\item 
+void \hyperlink{classcrop_rotation_a487968cb6691bf0a24568bcb14078a50}{GiveIndicators} ()
+\item 
+void \hyperlink{classcrop_rotation_a8e10518d55c693afca303214eb909f8a}{EndBudget} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_rotation_ae7b86becd93c7b2683959a9761544e26}{
+\index{cropRotation@{cropRotation}!cropRotation@{cropRotation}}
+\index{cropRotation@{cropRotation}!cropRotation@{cropRotation}}
+\subsubsection[{cropRotation}]{\setlength{\rightskip}{0pt plus 5cm}cropRotation::cropRotation ()}}
+\label{classcrop_rotation_ae7b86becd93c7b2683959a9761544e26}
+\hypertarget{classcrop_rotation_a10e666b20669411f733598b1cb945a9a}{
+\index{cropRotation@{cropRotation}!$\sim$cropRotation@{$\sim$cropRotation}}
+\index{$\sim$cropRotation@{$\sim$cropRotation}!cropRotation@{cropRotation}}
+\subsubsection[{$\sim$cropRotation}]{\setlength{\rightskip}{0pt plus 5cm}cropRotation::$\sim$cropRotation ()}}
+\label{classcrop_rotation_a10e666b20669411f733598b1cb945a9a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_rotation_ae3c3bc02c3b5c919ff640390297094f4}{
+\index{cropRotation@{cropRotation}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!cropRotation@{cropRotation}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::CalcLP (int {\em seasons})}}
+\label{classcrop_rotation_ae3c3bc02c3b5c919ff640390297094f4}
+\hypertarget{classcrop_rotation_ab7b6db261a0972935ec1b84205495421}{
+\index{cropRotation@{cropRotation}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!cropRotation@{cropRotation}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::DailyUpdate ()}}
+\label{classcrop_rotation_ab7b6db261a0972935ec1b84205495421}
+\hypertarget{classcrop_rotation_a8e10518d55c693afca303214eb909f8a}{
+\index{cropRotation@{cropRotation}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!cropRotation@{cropRotation}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::EndBudget ()}}
+\label{classcrop_rotation_a8e10518d55c693afca303214eb909f8a}
+\hypertarget{classcrop_rotation_a8e06fe96e9ec89ad59170385960e026f}{
+\index{cropRotation@{cropRotation}!FieldArea@{FieldArea}}
+\index{FieldArea@{FieldArea}!cropRotation@{cropRotation}}
+\subsubsection[{FieldArea}]{\setlength{\rightskip}{0pt plus 5cm}double cropRotation::FieldArea (int {\em field\_\-no})}}
+\label{classcrop_rotation_a8e06fe96e9ec89ad59170385960e026f}
+\hypertarget{classcrop_rotation_ae99cf520b3808fbcd2265743a8273e0e}{
+\index{cropRotation@{cropRotation}!FieldJBNo@{FieldJBNo}}
+\index{FieldJBNo@{FieldJBNo}!cropRotation@{cropRotation}}
+\subsubsection[{FieldJBNo}]{\setlength{\rightskip}{0pt plus 5cm}int cropRotation::FieldJBNo (int {\em field\_\-no})}}
+\label{classcrop_rotation_ae99cf520b3808fbcd2265743a8273e0e}
+\hypertarget{classcrop_rotation_aed118395469c41fb634fc0d214b1a2ac}{
+\index{cropRotation@{cropRotation}!GetDiversePlant@{GetDiversePlant}}
+\index{GetDiversePlant@{GetDiversePlant}!cropRotation@{cropRotation}}
+\subsubsection[{GetDiversePlant}]{\setlength{\rightskip}{0pt plus 5cm}double cropRotation::GetDiversePlant ()}}
+\label{classcrop_rotation_aed118395469c41fb634fc0d214b1a2ac}
+\hypertarget{classcrop_rotation_ad85aaa3c1694c992e1a92fad544194b4}{
+\index{cropRotation@{cropRotation}!GetFields@{GetFields}}
+\index{GetFields@{GetFields}!cropRotation@{cropRotation}}
+\subsubsection[{GetFields}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf field}$>$$\ast$ cropRotation::GetFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcrop_rotation_ad85aaa3c1694c992e1a92fad544194b4}
+\hypertarget{classcrop_rotation_a9c59bb9848b03b283c1cca5bdad30a10}{
+\index{cropRotation@{cropRotation}!GetTotalArea@{GetTotalArea}}
+\index{GetTotalArea@{GetTotalArea}!cropRotation@{cropRotation}}
+\subsubsection[{GetTotalArea}]{\setlength{\rightskip}{0pt plus 5cm}double cropRotation::GetTotalArea ()}}
+\label{classcrop_rotation_a9c59bb9848b03b283c1cca5bdad30a10}
+\hypertarget{classcrop_rotation_ac947882c31389e5b1673829b4d7a47de}{
+\index{cropRotation@{cropRotation}!GetTotalPremium@{GetTotalPremium}}
+\index{GetTotalPremium@{GetTotalPremium}!cropRotation@{cropRotation}}
+\subsubsection[{GetTotalPremium}]{\setlength{\rightskip}{0pt plus 5cm}double cropRotation::GetTotalPremium ()}}
+\label{classcrop_rotation_ac947882c31389e5b1673829b4d7a47de}
+\hypertarget{classcrop_rotation_a66d145fb7cd7bcf7e94298704b2702d7}{
+\index{cropRotation@{cropRotation}!GetValueofLand@{GetValueofLand}}
+\index{GetValueofLand@{GetValueofLand}!cropRotation@{cropRotation}}
+\subsubsection[{GetValueofLand}]{\setlength{\rightskip}{0pt plus 5cm}double cropRotation::GetValueofLand ()}}
+\label{classcrop_rotation_a66d145fb7cd7bcf7e94298704b2702d7}
+\hypertarget{classcrop_rotation_a487968cb6691bf0a24568bcb14078a50}{
+\index{cropRotation@{cropRotation}!GiveIndicators@{GiveIndicators}}
+\index{GiveIndicators@{GiveIndicators}!cropRotation@{cropRotation}}
+\subsubsection[{GiveIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::GiveIndicators ()}}
+\label{classcrop_rotation_a487968cb6691bf0a24568bcb14078a50}
+\hypertarget{classcrop_rotation_ab81177f47739f25b3c8e398659eb4f5a}{
+\index{cropRotation@{cropRotation}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!cropRotation@{cropRotation}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::Initialize (int {\em convent}, \/  int {\em irrigat}, \/  int {\em daysBetweenIrrigation}, \/  int {\em irrigationDelay}, \/  int {\em FingerFlow}, \/  int {\em cattl}, \/  double {\em MinArea})}}
+\label{classcrop_rotation_ab81177f47739f25b3c8e398659eb4f5a}
+\hypertarget{classcrop_rotation_a84652568c0c22bd83cf89d4971666d52}{
+\index{cropRotation@{cropRotation}!InsertGhostField@{InsertGhostField}}
+\index{InsertGhostField@{InsertGhostField}!cropRotation@{cropRotation}}
+\subsubsection[{InsertGhostField}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::InsertGhostField ()}}
+\label{classcrop_rotation_a84652568c0c22bd83cf89d4971666d52}
+\hypertarget{classcrop_rotation_a4f700ca77df824f98c51144e4e00de2f}{
+\index{cropRotation@{cropRotation}!NumOfFields@{NumOfFields}}
+\index{NumOfFields@{NumOfFields}!cropRotation@{cropRotation}}
+\subsubsection[{NumOfFields}]{\setlength{\rightskip}{0pt plus 5cm}int cropRotation::NumOfFields ()}}
+\label{classcrop_rotation_a4f700ca77df824f98c51144e4e00de2f}
+\hypertarget{classcrop_rotation_a2789db66978b9330b357d5835d3b5b5e}{
+\index{cropRotation@{cropRotation}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!cropRotation@{cropRotation}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::ReceivePlan (char $\ast$ {\em filename})}}
+\label{classcrop_rotation_a2789db66978b9330b357d5835d3b5b5e}
+\hypertarget{classcrop_rotation_a231ad3ce0e69340a712d65159216e5d0}{
+\index{cropRotation@{cropRotation}!ReplaceField@{ReplaceField}}
+\index{ReplaceField@{ReplaceField}!cropRotation@{cropRotation}}
+\subsubsection[{ReplaceField}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::ReplaceField ({\bf field} $\ast$ {\em fP})}}
+\label{classcrop_rotation_a231ad3ce0e69340a712d65159216e5d0}
+\hypertarget{classcrop_rotation_a53e0e2576f3abb04384ac5cb76e86653}{
+\index{cropRotation@{cropRotation}!ShowAllCurrentPlans@{ShowAllCurrentPlans}}
+\index{ShowAllCurrentPlans@{ShowAllCurrentPlans}!cropRotation@{cropRotation}}
+\subsubsection[{ShowAllCurrentPlans}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::ShowAllCurrentPlans (char $\ast$ {\em filename})}}
+\label{classcrop_rotation_a53e0e2576f3abb04384ac5cb76e86653}
+\hypertarget{classcrop_rotation_ab81d66407197d16d96b35c5150e1198f}{
+\index{cropRotation@{cropRotation}!ShowAllFuturePlans@{ShowAllFuturePlans}}
+\index{ShowAllFuturePlans@{ShowAllFuturePlans}!cropRotation@{cropRotation}}
+\subsubsection[{ShowAllFuturePlans}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::ShowAllFuturePlans (char $\ast$ {\em filename})}}
+\label{classcrop_rotation_ab81d66407197d16d96b35c5150e1198f}
+\hypertarget{classcrop_rotation_a646c61e2c4d60b8883e8a18dc4ad51ca}{
+\index{cropRotation@{cropRotation}!ShowHist@{ShowHist}}
+\index{ShowHist@{ShowHist}!cropRotation@{cropRotation}}
+\subsubsection[{ShowHist}]{\setlength{\rightskip}{0pt plus 5cm}void cropRotation::ShowHist ()}}
+\label{classcrop_rotation_a646c61e2c4d60b8883e8a18dc4ad51ca}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/\hyperlink{crop_rotation_8h}{cropRotation.h}\item 
+C:/main/trunk/src/fields/\hyperlink{crop_rotation_8cpp}{cropRotation.cpp}\end{DoxyCompactItemize}

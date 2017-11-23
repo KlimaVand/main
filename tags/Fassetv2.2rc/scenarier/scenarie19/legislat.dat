@@ -1,0 +1,17 @@
+[general]
+GreenPrecent      0.65
+Fallow            0.05
+Nmax              99999            // maximum N surplus
+Nprice           -5.0              // price on nitrogen
+Pprice           -8.0              // price on hosphor
+Kprice           -3.0              // price on kalium
+
+[legislat(0)]
+type              4
+tax               0
+startYear         0
+stopYear          1000
+level             0
+
+[end]
+

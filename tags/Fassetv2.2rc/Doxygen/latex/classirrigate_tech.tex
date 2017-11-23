@@ -1,0 +1,144 @@
+\hypertarget{classirrigate_tech}{
+\section{irrigateTech Class Reference}
+\label{classirrigate_tech}\index{irrigateTech@{irrigateTech}}
+}
+
+
+{\ttfamily \#include $<$irrigateTech.h$>$}Inheritance diagram for irrigateTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classirrigate_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classirrigate_tech_a2a3114ef17127272f1b30d7e50404f34}{irrigateTech} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classirrigate_tech_a54d46070621b3e40e31c8737626b9ba7}{$\sim$irrigateTech} ()
+\item 
+virtual void \hyperlink{classirrigate_tech_a8c7f11f2ce9cb7e19851c81c69c91d0a}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classirrigate_tech_a762110b6144118044760d998985175f0}{SetTheWater} (\hyperlink{classwater}{water} $\ast$aWater)
+\item 
+void \hyperlink{classirrigate_tech_a9daf92a6cfd801082fd3201fd7e4e572}{ClearTheWater} ()
+\item 
+virtual void \hyperlink{classirrigate_tech_a68212d5382845e1cf877f0c2b1ab1019}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+virtual void \hyperlink{classirrigate_tech_a5a125198ead652bcf1c8307fbc8ef3b5}{UpdateProducts} (bool contractor=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classirrigate_tech_a936cb4d45c7ae68deaa04ce5d9397dbe}{CalcGangHours} ()
+\item 
+virtual void \hyperlink{classirrigate_tech_aff9f1aa84dc7255d893012191ac232f4}{CalcGangElectricity} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classirrigate_tech_ada1989252be32c06c3f61e5413012efd}{workingLength}
+\item 
+double \hyperlink{classirrigate_tech_ac0791878396871b90eea5fdcc5c8b9f8}{constantPerShift}
+\item 
+double \hyperlink{classirrigate_tech_a52efb2478036767847d634779f039c9d}{variablePerLength}
+\item 
+double \hyperlink{classirrigate_tech_aee8b8e08f7b55f4961240de7f5735b08}{hoursPerDay}
+\item 
+\hyperlink{classwater}{water} $\ast$ \hyperlink{classirrigate_tech_a8b2c236b29c9694cfc58c119dcc3466b}{theWater}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirrigate_tech_a2a3114ef17127272f1b30d7e50404f34}{
+\index{irrigateTech@{irrigateTech}!irrigateTech@{irrigateTech}}
+\index{irrigateTech@{irrigateTech}!irrigateTech@{irrigateTech}}
+\subsubsection[{irrigateTech}]{\setlength{\rightskip}{0pt plus 5cm}irrigateTech::irrigateTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classirrigate_tech_a2a3114ef17127272f1b30d7e50404f34}
+\hypertarget{classirrigate_tech_a54d46070621b3e40e31c8737626b9ba7}{
+\index{irrigateTech@{irrigateTech}!$\sim$irrigateTech@{$\sim$irrigateTech}}
+\index{$\sim$irrigateTech@{$\sim$irrigateTech}!irrigateTech@{irrigateTech}}
+\subsubsection[{$\sim$irrigateTech}]{\setlength{\rightskip}{0pt plus 5cm}irrigateTech::$\sim$irrigateTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_tech_a54d46070621b3e40e31c8737626b9ba7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classirrigate_tech_a68212d5382845e1cf877f0c2b1ab1019}{
+\index{irrigateTech@{irrigateTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!irrigateTech@{irrigateTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_tech_a68212d5382845e1cf877f0c2b1ab1019}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classirrigate_tech_aff9f1aa84dc7255d893012191ac232f4}{
+\index{irrigateTech@{irrigateTech}!CalcGangElectricity@{CalcGangElectricity}}
+\index{CalcGangElectricity@{CalcGangElectricity}!irrigateTech@{irrigateTech}}
+\subsubsection[{CalcGangElectricity}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::CalcGangElectricity ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classirrigate_tech_aff9f1aa84dc7255d893012191ac232f4}
+
+
+Reimplemented from \hyperlink{classoperation_a056348509e5e2da6c1cc03360a587df8}{operation}.\hypertarget{classirrigate_tech_a936cb4d45c7ae68deaa04ce5d9397dbe}{
+\index{irrigateTech@{irrigateTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!irrigateTech@{irrigateTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classirrigate_tech_a936cb4d45c7ae68deaa04ce5d9397dbe}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classirrigate_tech_a9daf92a6cfd801082fd3201fd7e4e572}{
+\index{irrigateTech@{irrigateTech}!ClearTheWater@{ClearTheWater}}
+\index{ClearTheWater@{ClearTheWater}!irrigateTech@{irrigateTech}}
+\subsubsection[{ClearTheWater}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::ClearTheWater ()}}
+\label{classirrigate_tech_a9daf92a6cfd801082fd3201fd7e4e572}
+\hypertarget{classirrigate_tech_a8c7f11f2ce9cb7e19851c81c69c91d0a}{
+\index{irrigateTech@{irrigateTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!irrigateTech@{irrigateTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_tech_a8c7f11f2ce9cb7e19851c81c69c91d0a}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classirrigate_tech_a762110b6144118044760d998985175f0}{
+\index{irrigateTech@{irrigateTech}!SetTheWater@{SetTheWater}}
+\index{SetTheWater@{SetTheWater}!irrigateTech@{irrigateTech}}
+\subsubsection[{SetTheWater}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::SetTheWater ({\bf water} $\ast$ {\em aWater})}}
+\label{classirrigate_tech_a762110b6144118044760d998985175f0}
+\hypertarget{classirrigate_tech_a5a125198ead652bcf1c8307fbc8ef3b5}{
+\index{irrigateTech@{irrigateTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!irrigateTech@{irrigateTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_tech_a5a125198ead652bcf1c8307fbc8ef3b5}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classirrigate_tech_ac0791878396871b90eea5fdcc5c8b9f8}{
+\index{irrigateTech@{irrigateTech}!constantPerShift@{constantPerShift}}
+\index{constantPerShift@{constantPerShift}!irrigateTech@{irrigateTech}}
+\subsubsection[{constantPerShift}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf irrigateTech::constantPerShift}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classirrigate_tech_ac0791878396871b90eea5fdcc5c8b9f8}
+\hypertarget{classirrigate_tech_aee8b8e08f7b55f4961240de7f5735b08}{
+\index{irrigateTech@{irrigateTech}!hoursPerDay@{hoursPerDay}}
+\index{hoursPerDay@{hoursPerDay}!irrigateTech@{irrigateTech}}
+\subsubsection[{hoursPerDay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf irrigateTech::hoursPerDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classirrigate_tech_aee8b8e08f7b55f4961240de7f5735b08}
+\hypertarget{classirrigate_tech_a8b2c236b29c9694cfc58c119dcc3466b}{
+\index{irrigateTech@{irrigateTech}!theWater@{theWater}}
+\index{theWater@{theWater}!irrigateTech@{irrigateTech}}
+\subsubsection[{theWater}]{\setlength{\rightskip}{0pt plus 5cm}{\bf water}$\ast$ {\bf irrigateTech::theWater}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classirrigate_tech_a8b2c236b29c9694cfc58c119dcc3466b}
+\hypertarget{classirrigate_tech_a52efb2478036767847d634779f039c9d}{
+\index{irrigateTech@{irrigateTech}!variablePerLength@{variablePerLength}}
+\index{variablePerLength@{variablePerLength}!irrigateTech@{irrigateTech}}
+\subsubsection[{variablePerLength}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf irrigateTech::variablePerLength}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classirrigate_tech_a52efb2478036767847d634779f039c9d}
+\hypertarget{classirrigate_tech_ada1989252be32c06c3f61e5413012efd}{
+\index{irrigateTech@{irrigateTech}!workingLength@{workingLength}}
+\index{workingLength@{workingLength}!irrigateTech@{irrigateTech}}
+\subsubsection[{workingLength}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf irrigateTech::workingLength}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classirrigate_tech_ada1989252be32c06c3f61e5413012efd}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{irrigate_tech_8h}{irrigateTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{irrigate_tech_8cpp}{irrigateTech.cpp}\end{DoxyCompactItemize}

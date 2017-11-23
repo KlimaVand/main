@@ -1,0 +1,529 @@
+\hypertarget{classpatch_interface_class}{
+\section{patchInterfaceClass Class Reference}
+\label{classpatch_interface_class}\index{patchInterfaceClass@{patchInterfaceClass}}
+}
+
+
+Stores the data describing a. the status of the \hyperlink{classecosystem}{ecosystem} model liked to the \hyperlink{classpatch}{patch} and b. the details of the operations to be performed by that \hyperlink{classecosystem}{ecosystem}.  
+
+
+{\ttfamily \#include $<$patchinterface.h$>$}Inheritance diagram for patchInterfaceClass::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpatch_interface_class}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpatch_interface_class_a04b02c1b6c3c98fb1d1d85a3b7d3a566}{patchInterfaceClass} ()
+\item 
+\hyperlink{classpatch_interface_class_a2bee0718790d4edd769f1dab8df3ebf5}{patchInterfaceClass} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em constructor with arguments \item\end{DoxyCompactList}\item 
+\hyperlink{classpatch_interface_class_ad2e74958a38f300d12258ca63549e1db}{$\sim$patchInterfaceClass} ()
+\item 
+bool \hyperlink{classpatch_interface_class_a57fdc5494b65c610a3d3a29f8b8cfb85}{GetReadyForHarvestOrLater} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_ad7871fad5ade318db9122ee3b6069ea0}{SetReadyForHarvestOrLater} (bool aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_aaf208063e24dc0db976319ed6c69ff61}{SetIrrigationDemand} (double aVal)
+\item 
+void \hyperlink{classpatch_interface_class_ac5e85fb7be801cc2a3cb14da479164c0}{SetNH3Emission} (double aVal)
+\item 
+double \hyperlink{classpatch_interface_class_ac1b0a6001b03d5d2868f997417ffb00e}{GetIrrigationDemand} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a4f9fe24cb768ecc904cef91dd332f93f}{KillAllCrops} ()
+\item 
+double \hyperlink{classpatch_interface_class_a9af6335434ca1be9ad6ea50bb4a91530}{GetStandingDMdensity} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_aeed4d997725c93a172c2bf3e12916ce7}{GetAvailableStandingDM} (double height)
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a209ae68a78f632e7724dc8aba7c30959}{GetpropGrainHarvested} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_aa1f55cbaf1895b13dd8a7902e90f9714}{SetpropGrainHarvested} (double aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_ae34dc1ee39f2f8d66fc540fb17c01fe3}{GetpropStrawHarvested} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_ad84c3cc82cc633329f55e47a1f14b9e7}{SetpropStrawHarvested} (double aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+int \hyperlink{classpatch_interface_class_a84224ea36bd61be5e8c25c4fcdc2d350}{GetthecropID} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a49a343736a61c4f719aee6285086726c}{GetamountSeedDM} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a265236cfd0782d2d4bc3284a6ad95ba9}{SetamountSeedDM} (double aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a94ec9c977c97d369b6538a7f7fd2efa5}{GetseedN} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+int \hyperlink{classpatch_interface_class_aa464d78a4163d8dde5b7deccd01079df}{GettheType} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a2be7164993aef326ceb9678a0363dc4a}{SettheType} (int aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a96efba308b79b05eee8d2545a5e446b4}{GettheDepth} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_acb566078fd5c753aff6631b9a7dd5b63}{GettheFractionIncorporated} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_aaf06ccc28f2da0305c55612a1014a7a7}{GetMaxPatchHeight} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a1c3b47083e9d253938866de196e4a32f}{GetdecompType} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_acf19842fe4f4e22afeef2f9311f80844}{GetdecompAmount} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_aa50f7e747e12b3b2aceff2ceacbf0fd6}{GetdecompNH4\_\-N} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a004f7335353f2dee7762fd7b6eb70d94}{GetdecompNO3\_\-N} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a3a675bc14d9ac52b29a852209b591c5f}{GetdecompOrg\_\-N} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a77ece4c3fefc61b3582f209a6972e145}{GetdecompC} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_ab314c250c27ab656c14cba03ec23a642}{GetdecompPercentDM} ()
+\item 
+void \hyperlink{classpatch_interface_class_aa9d2da459f2fc40f4a9cae8dbe41cba6}{SetdecompAmount} (double aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a90d39b2fb7130f2631285a362fffe5b4}{GettheNitrate} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a322c770b108657a636cc2e06b73963e9}{GettheAmmonium} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+int \hyperlink{classpatch_interface_class_afced3ff48390bad8f8867247f36b6d0d}{GetharvestCode} ()
+\begin{DoxyCompactList}\small\item\em retrieve value \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a789ced4ff646d1424b7771a51d86d69f}{SetharvestCode} (int aVal)
+\begin{DoxyCompactList}\small\item\em set value \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a7c3316485cc5ee1ec04c3e5f89c6792c}{GetNH3Emission} ()
+\item 
+void \hyperlink{classpatch_interface_class_ae1a9d662c855a6ffd6988c5274af35f0}{HarvestOperations} (\hyperlink{classharvest_fields}{harvestFields} $\ast$hrv)
+\begin{DoxyCompactList}\small\item\em performs a harvest \hyperlink{classoperation}{operation} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a5477552c0a1821f3f40e0bb3c96c7f8a}{AddDecomposable} (\hyperlink{classdecomposable}{decomposable} $\ast$produc)
+\begin{DoxyCompactList}\small\item\em adds \hyperlink{classmanure}{manure} or plant material to the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a9d183a51a7e9855ea13223c52b2ea3da}{AddNutrient} (double surfNitrate, double surfAmmonium, double soilNitrate, double soilAmmonium)
+\begin{DoxyCompactList}\small\item\em adds fertiliser \hyperlink{classnitrogen}{nitrogen} to the \hyperlink{classsoil}{soil}. Currently all \hyperlink{classnitrogen}{nitrogen} is added to the surface \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a5f6d5f6deb20dd2acc8b39f581312541}{SetirrigationWater} (double amountWater, double amountN)
+\begin{DoxyCompactList}\small\item\em sets the amount of \hyperlink{classwater}{water} and \hyperlink{classnitrogen}{nitrogen} to be applied via irrigation \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a1d4ab5a278d6663260d75d2c3c7ddb6b}{Sow} (char $\ast$cropID, char $\ast$cropName, double SeedDensDryMatt, double RelativeDensity, double NitrogenInSeed)
+\begin{DoxyCompactList}\small\item\em sows a \hyperlink{classcrop}{crop} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_aa66072c455d76167fca0bc714f870997}{Tillage} (\hyperlink{classsoil_treat_fields}{soilTreatFields} $\ast$TillageOp)
+\begin{DoxyCompactList}\small\item\em performs a tillage \hyperlink{classoperation}{operation} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a631b4c8068483aa35e1e84012b1d5a99}{Incorporate} (double depth, double frac, bool tillage, char $\ast$tillagetype)
+\begin{DoxyCompactList}\small\item\em incorporates organic \hyperlink{classmatter}{matter} on the \hyperlink{classsoil}{soil} surface into the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a7fc64cbacbd920e5dceea2cb2f4d0169}{GetFeedResource} (\hyperlink{classfeed_item}{feedItem} $\ast$my\_\-resource, double grazing\_\-height, double min\_\-stubble\_\-ht, int animalType)
+\begin{DoxyCompactList}\small\item\em returns the quantity and quality of herbage from a \hyperlink{classpatch}{patch}. requires updating \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a1bafa05b047f34929b265ff063237ef8}{SetGrazed} (double grazing\_\-height, double DMGrazed)
+\begin{DoxyCompactList}\small\item\em sets the height and amount of dry \hyperlink{classmatter}{matter} grazed \item\end{DoxyCompactList}\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classpatch_interface_class_a5c6deeeba41629b53acc8a1b990854db}{createHarvestProduct} (char $\ast$aName, double amountDM, double amountN, double amountC)
+\begin{DoxyCompactList}\small\item\em creates a harvest \hyperlink{classproduct}{product} \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a6c21218372f6dcc9a1e447af1f3afe22}{SetHarvestProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aProduct, int code)
+\begin{DoxyCompactList}\small\item\em allocate a \hyperlink{classproduct}{product} to a particular type \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a277f24bc24c945c48b8bd0982c74bdcd}{SetEcoStatus} (int theReadyForHarvestOrLater, double theIrrigationDemand, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classharv_info_class}{harvInfoClass} $>$ $\ast$theHarvestProducts)
+\begin{DoxyCompactList}\small\item\em logs the status of an \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+double \hyperlink{classpatch_interface_class_a14e6aed7da3189e045f0ed4e6b0afbad}{GetAbovegroundCropN} ()
+\begin{DoxyCompactList}\small\item\em returns the amount of above ground \hyperlink{classcrop}{crop} \hyperlink{classnitrogen}{nitrogen} (grams per metre squared). Not currently used. \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_ae02323c3035b9b3e282b937a77771862}{AllocateCrop} (char $\ast$crop\_\-id, char $\ast$cropName)
+\begin{DoxyCompactList}\small\item\em allocates a \hyperlink{classcrop}{crop} name on the basis of the \hyperlink{classcrop}{crop} identifier \item\end{DoxyCompactList}\item 
+void \hyperlink{classpatch_interface_class_a5ba5cbe194b9e76f7dab382e1504be39}{zeroOutputVariables} ()
+\begin{DoxyCompactList}\small\item\em zeros all output variables \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores the data describing a. the status of the \hyperlink{classecosystem}{ecosystem} model liked to the \hyperlink{classpatch}{patch} and b. the details of the operations to be performed by that \hyperlink{classecosystem}{ecosystem}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpatch_interface_class_a04b02c1b6c3c98fb1d1d85a3b7d3a566}{
+\index{patchInterfaceClass@{patchInterfaceClass}!patchInterfaceClass@{patchInterfaceClass}}
+\index{patchInterfaceClass@{patchInterfaceClass}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{patchInterfaceClass}]{\setlength{\rightskip}{0pt plus 5cm}patchInterfaceClass::patchInterfaceClass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a04b02c1b6c3c98fb1d1d85a3b7d3a566}
+\hypertarget{classpatch_interface_class_a2bee0718790d4edd769f1dab8df3ebf5}{
+\index{patchInterfaceClass@{patchInterfaceClass}!patchInterfaceClass@{patchInterfaceClass}}
+\index{patchInterfaceClass@{patchInterfaceClass}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{patchInterfaceClass}]{\setlength{\rightskip}{0pt plus 5cm}patchInterfaceClass::patchInterfaceClass (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classpatch_interface_class_a2bee0718790d4edd769f1dab8df3ebf5}
+
+
+constructor with arguments 
+\begin{DoxyParams}{Parameters}
+\item[{\em aName}]optional name \item[{\em aIndex}]contains the identifier number of the \hyperlink{classpatch}{patch} \item[{\em pointer}]to the \hyperlink{classpatch}{patch} owning interface instance \end{DoxyParams}
+\hypertarget{classpatch_interface_class_ad2e74958a38f300d12258ca63549e1db}{
+\index{patchInterfaceClass@{patchInterfaceClass}!$\sim$patchInterfaceClass@{$\sim$patchInterfaceClass}}
+\index{$\sim$patchInterfaceClass@{$\sim$patchInterfaceClass}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{$\sim$patchInterfaceClass}]{\setlength{\rightskip}{0pt plus 5cm}patchInterfaceClass::$\sim$patchInterfaceClass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ad2e74958a38f300d12258ca63549e1db}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpatch_interface_class_a5477552c0a1821f3f40e0bb3c96c7f8a}{
+\index{patchInterfaceClass@{patchInterfaceClass}!AddDecomposable@{AddDecomposable}}
+\index{AddDecomposable@{AddDecomposable}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{AddDecomposable}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::AddDecomposable ({\bf decomposable} $\ast$ {\em produc})}}
+\label{classpatch_interface_class_a5477552c0a1821f3f40e0bb3c96c7f8a}
+
+
+adds \hyperlink{classmanure}{manure} or plant material to the \hyperlink{classsoil}{soil} 
+\begin{DoxyParams}{Parameters}
+\item[{\em produc}]pointer to an object containing details of the organic \hyperlink{classmatter}{matter} added \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a9d183a51a7e9855ea13223c52b2ea3da}{
+\index{patchInterfaceClass@{patchInterfaceClass}!AddNutrient@{AddNutrient}}
+\index{AddNutrient@{AddNutrient}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{AddNutrient}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::AddNutrient (double {\em surfNitrate}, \/  double {\em surfAmmonium}, \/  double {\em soilNitrate}, \/  double {\em soilAmmonium})}}
+\label{classpatch_interface_class_a9d183a51a7e9855ea13223c52b2ea3da}
+
+
+adds fertiliser \hyperlink{classnitrogen}{nitrogen} to the \hyperlink{classsoil}{soil}. Currently all \hyperlink{classnitrogen}{nitrogen} is added to the surface 
+\begin{DoxyParams}{Parameters}
+\item[{\em surfNitrate}]nitrate \hyperlink{classnitrogen}{nitrogen} added to the surface (kg per ha) \item[{\em surfAmmonium}]ammonia \hyperlink{classnitrogen}{nitrogen} added to the surface (kg per ha) \item[{\em soilNitrate}]nitrate \hyperlink{classnitrogen}{nitrogen} added to the \hyperlink{classsoil}{soil} (kg per ha) \item[{\em soilAmmonium}]ammonia \hyperlink{classnitrogen}{nitrogen} added to the \hyperlink{classsoil}{soil} (kg per ha) \end{DoxyParams}
+\hypertarget{classpatch_interface_class_ae02323c3035b9b3e282b937a77771862}{
+\index{patchInterfaceClass@{patchInterfaceClass}!AllocateCrop@{AllocateCrop}}
+\index{AllocateCrop@{AllocateCrop}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{AllocateCrop}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::AllocateCrop (char $\ast$ {\em crop\_\-id}, \/  char $\ast$ {\em cropName})}}
+\label{classpatch_interface_class_ae02323c3035b9b3e282b937a77771862}
+
+
+allocates a \hyperlink{classcrop}{crop} name on the basis of the \hyperlink{classcrop}{crop} identifier 
+\begin{DoxyParams}{Parameters}
+\item[{\em crop\_\-id}]identifier of the \hyperlink{classcrop}{crop} \item[{\em cropName}]on exiting the routine, contains the name of the \hyperlink{classcrop}{crop} \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a5c6deeeba41629b53acc8a1b990854db}{
+\index{patchInterfaceClass@{patchInterfaceClass}!createHarvestProduct@{createHarvestProduct}}
+\index{createHarvestProduct@{createHarvestProduct}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{createHarvestProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem} $\ast$ patchInterfaceClass::createHarvestProduct (char $\ast$ {\em aName}, \/  double {\em amountDM}, \/  double {\em amountN}, \/  double {\em amountC})}}
+\label{classpatch_interface_class_a5c6deeeba41629b53acc8a1b990854db}
+
+
+creates a harvest \hyperlink{classproduct}{product} 
+\begin{DoxyParams}{Parameters}
+\item[{\em aName}]name to be given to the \hyperlink{classproduct}{product} \item[{\em amountDM}]amount of dry \hyperlink{classmatter}{matter} in the \hyperlink{classproduct}{product} (kilograms) \item[{\em amountN}]amount of \hyperlink{classnitrogen}{nitrogen} in the product(kilograms) \item[{\em amountC}]amount of carbon in the \hyperlink{classproduct}{product} (kilograms) \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a14e6aed7da3189e045f0ed4e6b0afbad}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetAbovegroundCropN@{GetAbovegroundCropN}}
+\index{GetAbovegroundCropN@{GetAbovegroundCropN}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetAbovegroundCropN}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetAbovegroundCropN ()}}
+\label{classpatch_interface_class_a14e6aed7da3189e045f0ed4e6b0afbad}
+
+
+returns the amount of above ground \hyperlink{classcrop}{crop} \hyperlink{classnitrogen}{nitrogen} (grams per metre squared). Not currently used. \hypertarget{classpatch_interface_class_a49a343736a61c4f719aee6285086726c}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetamountSeedDM@{GetamountSeedDM}}
+\index{GetamountSeedDM@{GetamountSeedDM}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetamountSeedDM}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetamountSeedDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a49a343736a61c4f719aee6285086726c}
+
+
+retrieve value \hypertarget{classpatch_interface_class_aeed4d997725c93a172c2bf3e12916ce7}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetAvailableStandingDM@{GetAvailableStandingDM}}
+\index{GetAvailableStandingDM@{GetAvailableStandingDM}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetAvailableStandingDM}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetAvailableStandingDM (double {\em height})}}
+\label{classpatch_interface_class_aeed4d997725c93a172c2bf3e12916ce7}
+
+
+retrieve value \hypertarget{classpatch_interface_class_acf19842fe4f4e22afeef2f9311f80844}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompAmount@{GetdecompAmount}}
+\index{GetdecompAmount@{GetdecompAmount}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompAmount}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompAmount ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_acf19842fe4f4e22afeef2f9311f80844}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a77ece4c3fefc61b3582f209a6972e145}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompC@{GetdecompC}}
+\index{GetdecompC@{GetdecompC}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompC}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompC ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a77ece4c3fefc61b3582f209a6972e145}
+
+
+retrieve value \hypertarget{classpatch_interface_class_aa50f7e747e12b3b2aceff2ceacbf0fd6}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompNH4\_\-N@{GetdecompNH4\_\-N}}
+\index{GetdecompNH4\_\-N@{GetdecompNH4\_\-N}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompNH4\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompNH4\_\-N ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_aa50f7e747e12b3b2aceff2ceacbf0fd6}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a004f7335353f2dee7762fd7b6eb70d94}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompNO3\_\-N@{GetdecompNO3\_\-N}}
+\index{GetdecompNO3\_\-N@{GetdecompNO3\_\-N}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompNO3\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompNO3\_\-N ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a004f7335353f2dee7762fd7b6eb70d94}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a3a675bc14d9ac52b29a852209b591c5f}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompOrg\_\-N@{GetdecompOrg\_\-N}}
+\index{GetdecompOrg\_\-N@{GetdecompOrg\_\-N}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompOrg\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompOrg\_\-N ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a3a675bc14d9ac52b29a852209b591c5f}
+
+
+retrieve value \hypertarget{classpatch_interface_class_ab314c250c27ab656c14cba03ec23a642}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompPercentDM@{GetdecompPercentDM}}
+\index{GetdecompPercentDM@{GetdecompPercentDM}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompPercentDM}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompPercentDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ab314c250c27ab656c14cba03ec23a642}
+\hypertarget{classpatch_interface_class_a1c3b47083e9d253938866de196e4a32f}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetdecompType@{GetdecompType}}
+\index{GetdecompType@{GetdecompType}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetdecompType}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetdecompType ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a1c3b47083e9d253938866de196e4a32f}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a7fc64cbacbd920e5dceea2cb2f4d0169}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetFeedResource@{GetFeedResource}}
+\index{GetFeedResource@{GetFeedResource}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetFeedResource}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::GetFeedResource ({\bf feedItem} $\ast$ {\em my\_\-resource}, \/  double {\em grazing\_\-height}, \/  double {\em min\_\-stubble\_\-ht}, \/  int {\em animalType})}}
+\label{classpatch_interface_class_a7fc64cbacbd920e5dceea2cb2f4d0169}
+
+
+returns the quantity and quality of herbage from a \hyperlink{classpatch}{patch}. requires updating 
+\begin{DoxyParams}{Parameters}
+\item[{\em my\_\-resource}]pointer to a class describing the quantity and quality of material available \item[{\em grazing\_\-height}]height to which the herbage is grazed (millimetres) \item[{\em min\_\-stubble\_\-ht}]minimum height to which herbage may be grazed(millimetres) \item[{\em animalType}]identifier of the \hyperlink{classanimal}{animal} that is grazing \end{DoxyParams}
+\hypertarget{classpatch_interface_class_afced3ff48390bad8f8867247f36b6d0d}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetharvestCode@{GetharvestCode}}
+\index{GetharvestCode@{GetharvestCode}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetharvestCode}]{\setlength{\rightskip}{0pt plus 5cm}int patchInterfaceClass::GetharvestCode ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_afced3ff48390bad8f8867247f36b6d0d}
+
+
+retrieve value \hypertarget{classpatch_interface_class_ac1b0a6001b03d5d2868f997417ffb00e}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetIrrigationDemand@{GetIrrigationDemand}}
+\index{GetIrrigationDemand@{GetIrrigationDemand}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetIrrigationDemand}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetIrrigationDemand ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ac1b0a6001b03d5d2868f997417ffb00e}
+
+
+retrieve value \hypertarget{classpatch_interface_class_aaf06ccc28f2da0305c55612a1014a7a7}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetMaxPatchHeight@{GetMaxPatchHeight}}
+\index{GetMaxPatchHeight@{GetMaxPatchHeight}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetMaxPatchHeight}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetMaxPatchHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_aaf06ccc28f2da0305c55612a1014a7a7}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a7c3316485cc5ee1ec04c3e5f89c6792c}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetNH3Emission@{GetNH3Emission}}
+\index{GetNH3Emission@{GetNH3Emission}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetNH3Emission}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetNH3Emission ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a7c3316485cc5ee1ec04c3e5f89c6792c}
+\hypertarget{classpatch_interface_class_a209ae68a78f632e7724dc8aba7c30959}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetpropGrainHarvested@{GetpropGrainHarvested}}
+\index{GetpropGrainHarvested@{GetpropGrainHarvested}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetpropGrainHarvested}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetpropGrainHarvested ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a209ae68a78f632e7724dc8aba7c30959}
+
+
+retrieve value \hypertarget{classpatch_interface_class_ae34dc1ee39f2f8d66fc540fb17c01fe3}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetpropStrawHarvested@{GetpropStrawHarvested}}
+\index{GetpropStrawHarvested@{GetpropStrawHarvested}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetpropStrawHarvested}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetpropStrawHarvested ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ae34dc1ee39f2f8d66fc540fb17c01fe3}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a57fdc5494b65c610a3d3a29f8b8cfb85}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetReadyForHarvestOrLater@{GetReadyForHarvestOrLater}}
+\index{GetReadyForHarvestOrLater@{GetReadyForHarvestOrLater}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetReadyForHarvestOrLater}]{\setlength{\rightskip}{0pt plus 5cm}bool patchInterfaceClass::GetReadyForHarvestOrLater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a57fdc5494b65c610a3d3a29f8b8cfb85}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a94ec9c977c97d369b6538a7f7fd2efa5}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetseedN@{GetseedN}}
+\index{GetseedN@{GetseedN}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetseedN}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetseedN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a94ec9c977c97d369b6538a7f7fd2efa5}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a9af6335434ca1be9ad6ea50bb4a91530}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetStandingDMdensity@{GetStandingDMdensity}}
+\index{GetStandingDMdensity@{GetStandingDMdensity}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetStandingDMdensity}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GetStandingDMdensity ()}}
+\label{classpatch_interface_class_a9af6335434ca1be9ad6ea50bb4a91530}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a322c770b108657a636cc2e06b73963e9}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GettheAmmonium@{GettheAmmonium}}
+\index{GettheAmmonium@{GettheAmmonium}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GettheAmmonium}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GettheAmmonium ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a322c770b108657a636cc2e06b73963e9}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a84224ea36bd61be5e8c25c4fcdc2d350}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GetthecropID@{GetthecropID}}
+\index{GetthecropID@{GetthecropID}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GetthecropID}]{\setlength{\rightskip}{0pt plus 5cm}int patchInterfaceClass::GetthecropID ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a84224ea36bd61be5e8c25c4fcdc2d350}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a96efba308b79b05eee8d2545a5e446b4}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GettheDepth@{GettheDepth}}
+\index{GettheDepth@{GettheDepth}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GettheDepth}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GettheDepth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a96efba308b79b05eee8d2545a5e446b4}
+
+
+retrieve value \hypertarget{classpatch_interface_class_acb566078fd5c753aff6631b9a7dd5b63}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GettheFractionIncorporated@{GettheFractionIncorporated}}
+\index{GettheFractionIncorporated@{GettheFractionIncorporated}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GettheFractionIncorporated}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GettheFractionIncorporated ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_acb566078fd5c753aff6631b9a7dd5b63}
+
+
+retrieve value \hypertarget{classpatch_interface_class_a90d39b2fb7130f2631285a362fffe5b4}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GettheNitrate@{GettheNitrate}}
+\index{GettheNitrate@{GettheNitrate}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GettheNitrate}]{\setlength{\rightskip}{0pt plus 5cm}double patchInterfaceClass::GettheNitrate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a90d39b2fb7130f2631285a362fffe5b4}
+
+
+retrieve value \hypertarget{classpatch_interface_class_aa464d78a4163d8dde5b7deccd01079df}{
+\index{patchInterfaceClass@{patchInterfaceClass}!GettheType@{GettheType}}
+\index{GettheType@{GettheType}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{GettheType}]{\setlength{\rightskip}{0pt plus 5cm}int patchInterfaceClass::GettheType ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_aa464d78a4163d8dde5b7deccd01079df}
+
+
+retrieve value \hypertarget{classpatch_interface_class_ae1a9d662c855a6ffd6988c5274af35f0}{
+\index{patchInterfaceClass@{patchInterfaceClass}!HarvestOperations@{HarvestOperations}}
+\index{HarvestOperations@{HarvestOperations}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{HarvestOperations}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::HarvestOperations ({\bf harvestFields} $\ast$ {\em hrv})}}
+\label{classpatch_interface_class_ae1a9d662c855a6ffd6988c5274af35f0}
+
+
+performs a harvest \hyperlink{classoperation}{operation} 
+\begin{DoxyParams}{Parameters}
+\item[{\em hrv}]pointer to an object containing the details of the harvest \hyperlink{classoperation}{operation} \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a631b4c8068483aa35e1e84012b1d5a99}{
+\index{patchInterfaceClass@{patchInterfaceClass}!Incorporate@{Incorporate}}
+\index{Incorporate@{Incorporate}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{Incorporate}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::Incorporate (double {\em depth}, \/  double {\em frac}, \/  bool {\em tillage}, \/  char $\ast$ {\em tillagetype})}}
+\label{classpatch_interface_class_a631b4c8068483aa35e1e84012b1d5a99}
+
+
+incorporates organic \hyperlink{classmatter}{matter} on the \hyperlink{classsoil}{soil} surface into the \hyperlink{classsoil}{soil} 
+\begin{DoxyParams}{Parameters}
+\item[{\em depth}]depths to which the organic \hyperlink{classmatter}{matter} should be incorporated (millimetres) \item[{\em frac}]fraction of the material on the \hyperlink{classsoil}{soil} surface that should be incorporated \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a4f9fe24cb768ecc904cef91dd332f93f}{
+\index{patchInterfaceClass@{patchInterfaceClass}!KillAllCrops@{KillAllCrops}}
+\index{KillAllCrops@{KillAllCrops}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{KillAllCrops}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::KillAllCrops ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a4f9fe24cb768ecc904cef91dd332f93f}
+\hypertarget{classpatch_interface_class_a265236cfd0782d2d4bc3284a6ad95ba9}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetamountSeedDM@{SetamountSeedDM}}
+\index{SetamountSeedDM@{SetamountSeedDM}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetamountSeedDM}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetamountSeedDM (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a265236cfd0782d2d4bc3284a6ad95ba9}
+
+
+set value \hypertarget{classpatch_interface_class_aa9d2da459f2fc40f4a9cae8dbe41cba6}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetdecompAmount@{SetdecompAmount}}
+\index{SetdecompAmount@{SetdecompAmount}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetdecompAmount}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetdecompAmount (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_aa9d2da459f2fc40f4a9cae8dbe41cba6}
+
+
+set value \hypertarget{classpatch_interface_class_a277f24bc24c945c48b8bd0982c74bdcd}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetEcoStatus@{SetEcoStatus}}
+\index{SetEcoStatus@{SetEcoStatus}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetEcoStatus}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetEcoStatus (int {\em theReadyForHarvestOrLater}, \/  double {\em theIrrigationDemand}, \/  {\bf linkList}$<$ {\bf harvInfoClass} $>$ $\ast$ {\em theHarvestProducts})}}
+\label{classpatch_interface_class_a277f24bc24c945c48b8bd0982c74bdcd}
+
+
+logs the status of an \hyperlink{classecosystem}{ecosystem} 
+\begin{DoxyParams}{Parameters}
+\item[{\em ReadyForHarvestOrLater}]is greater than zero if any \hyperlink{classcrop}{crop} present is ready for harvesting  IrrigationDemand the amount of \hyperlink{classwater}{water} necessary (in millimetres) to return the \hyperlink{classsoil}{soil} to \hyperlink{classfield}{field} capacity \item[{\em theHarvestProducts}]linked list of pointers to the class containing information about the harvestable \hyperlink{classcrop}{crop} \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a1bafa05b047f34929b265ff063237ef8}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetGrazed@{SetGrazed}}
+\index{SetGrazed@{SetGrazed}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetGrazed (double {\em grazing\_\-height}, \/  double {\em DMGrazed})}}
+\label{classpatch_interface_class_a1bafa05b047f34929b265ff063237ef8}
+
+
+sets the height and amount of dry \hyperlink{classmatter}{matter} grazed 
+\begin{DoxyParams}{Parameters}
+\item[{\em grazing\_\-height}]heights to which the grazing occurred (millimetres) \item[{\em DMGrazed}]amount of dry \hyperlink{classmatter}{matter} grazed (grams per metre squared) \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a789ced4ff646d1424b7771a51d86d69f}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetharvestCode@{SetharvestCode}}
+\index{SetharvestCode@{SetharvestCode}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetharvestCode}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetharvestCode (int {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a789ced4ff646d1424b7771a51d86d69f}
+
+
+set value \hypertarget{classpatch_interface_class_a6c21218372f6dcc9a1e447af1f3afe22}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetHarvestProduct@{SetHarvestProduct}}
+\index{SetHarvestProduct@{SetHarvestProduct}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetHarvestProduct}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetHarvestProduct ({\bf plantItem} $\ast$ {\em aProduct}, \/  int {\em code})}}
+\label{classpatch_interface_class_a6c21218372f6dcc9a1e447af1f3afe22}
+
+
+allocate a \hyperlink{classproduct}{product} to a particular type 
+\begin{DoxyParams}{Parameters}
+\item[{\em aProduct}]pointer to the class describing the \hyperlink{classproduct}{product} \item[{\em code}]\hyperlink{classproduct}{product} identifying code (1 = grain,tuber etc, 2 = straw) \end{DoxyParams}
+\hypertarget{classpatch_interface_class_aaf208063e24dc0db976319ed6c69ff61}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetIrrigationDemand@{SetIrrigationDemand}}
+\index{SetIrrigationDemand@{SetIrrigationDemand}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetIrrigationDemand}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetIrrigationDemand (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_aaf208063e24dc0db976319ed6c69ff61}
+\hypertarget{classpatch_interface_class_a5f6d5f6deb20dd2acc8b39f581312541}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetirrigationWater@{SetirrigationWater}}
+\index{SetirrigationWater@{SetirrigationWater}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetirrigationWater}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetirrigationWater (double {\em amountWater}, \/  double {\em amountN})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a5f6d5f6deb20dd2acc8b39f581312541}
+
+
+sets the amount of \hyperlink{classwater}{water} and \hyperlink{classnitrogen}{nitrogen} to be applied via irrigation 
+\begin{DoxyParams}{Parameters}
+\item[{\em amountWater}]amount of \hyperlink{classwater}{water} to be applied (millimetres) \item[{\em amountN}]amount of \hyperlink{classnitrogen}{nitrogen} to be applied \end{DoxyParams}
+\hypertarget{classpatch_interface_class_ac5e85fb7be801cc2a3cb14da479164c0}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetNH3Emission@{SetNH3Emission}}
+\index{SetNH3Emission@{SetNH3Emission}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetNH3Emission}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetNH3Emission (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ac5e85fb7be801cc2a3cb14da479164c0}
+\hypertarget{classpatch_interface_class_aa1f55cbaf1895b13dd8a7902e90f9714}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetpropGrainHarvested@{SetpropGrainHarvested}}
+\index{SetpropGrainHarvested@{SetpropGrainHarvested}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetpropGrainHarvested}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetpropGrainHarvested (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_aa1f55cbaf1895b13dd8a7902e90f9714}
+
+
+set value \hypertarget{classpatch_interface_class_ad84c3cc82cc633329f55e47a1f14b9e7}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetpropStrawHarvested@{SetpropStrawHarvested}}
+\index{SetpropStrawHarvested@{SetpropStrawHarvested}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetpropStrawHarvested}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetpropStrawHarvested (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ad84c3cc82cc633329f55e47a1f14b9e7}
+
+
+set value \hypertarget{classpatch_interface_class_ad7871fad5ade318db9122ee3b6069ea0}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SetReadyForHarvestOrLater@{SetReadyForHarvestOrLater}}
+\index{SetReadyForHarvestOrLater@{SetReadyForHarvestOrLater}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SetReadyForHarvestOrLater}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SetReadyForHarvestOrLater (bool {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_ad7871fad5ade318db9122ee3b6069ea0}
+
+
+set value \hypertarget{classpatch_interface_class_a2be7164993aef326ceb9678a0363dc4a}{
+\index{patchInterfaceClass@{patchInterfaceClass}!SettheType@{SettheType}}
+\index{SettheType@{SettheType}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{SettheType}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::SettheType (int {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpatch_interface_class_a2be7164993aef326ceb9678a0363dc4a}
+
+
+set value \hypertarget{classpatch_interface_class_a1d4ab5a278d6663260d75d2c3c7ddb6b}{
+\index{patchInterfaceClass@{patchInterfaceClass}!Sow@{Sow}}
+\index{Sow@{Sow}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{Sow}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::Sow (char $\ast$ {\em cropID}, \/  char $\ast$ {\em cropName}, \/  double {\em SeedDensDryMatt}, \/  double {\em RelativeDensity}, \/  double {\em NitrogenInSeed})}}
+\label{classpatch_interface_class_a1d4ab5a278d6663260d75d2c3c7ddb6b}
+
+
+sows a \hyperlink{classcrop}{crop} 
+\begin{DoxyParams}{Parameters}
+\item[{\em cropID}]\hyperlink{classcrop}{crop} identifier code \item[{\em cropName}]full name of the \hyperlink{classcrop}{crop} \item[{\em SeedDensDryMatt}]amount of \hyperlink{classseed}{seed} applied(grams per meter squared) \item[{\em RelativeDensity}]the standard sowing density \item[{\em NitrogenInSeed}]the \hyperlink{classnitrogen}{nitrogen} applied in the \hyperlink{classseed}{seed} (grams per metre squared) \end{DoxyParams}
+\hypertarget{classpatch_interface_class_aa66072c455d76167fca0bc714f870997}{
+\index{patchInterfaceClass@{patchInterfaceClass}!Tillage@{Tillage}}
+\index{Tillage@{Tillage}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{Tillage}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::Tillage ({\bf soilTreatFields} $\ast$ {\em TillageOp})}}
+\label{classpatch_interface_class_aa66072c455d76167fca0bc714f870997}
+
+
+performs a tillage \hyperlink{classoperation}{operation} 
+\begin{DoxyParams}{Parameters}
+\item[{\em TillageOp}]pointer to the class describing the tillage \hyperlink{classoperation}{operation} \end{DoxyParams}
+\hypertarget{classpatch_interface_class_a5ba5cbe194b9e76f7dab382e1504be39}{
+\index{patchInterfaceClass@{patchInterfaceClass}!zeroOutputVariables@{zeroOutputVariables}}
+\index{zeroOutputVariables@{zeroOutputVariables}!patchInterfaceClass@{patchInterfaceClass}}
+\subsubsection[{zeroOutputVariables}]{\setlength{\rightskip}{0pt plus 5cm}void patchInterfaceClass::zeroOutputVariables ()}}
+\label{classpatch_interface_class_a5ba5cbe194b9e76f7dab382e1504be39}
+
+
+zeros all output variables 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/Nitroscape/\hyperlink{patchinterface_8h}{patchinterface.h}\item 
+C:/main/trunk/src/Nitroscape/\hyperlink{patchinterface_8cpp}{patchinterface.cpp}\end{DoxyCompactItemize}

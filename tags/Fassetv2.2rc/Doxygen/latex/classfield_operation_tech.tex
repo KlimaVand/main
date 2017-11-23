@@ -1,0 +1,197 @@
+\hypertarget{classfield_operation_tech}{
+\section{fieldOperationTech Class Reference}
+\label{classfield_operation_tech}\index{fieldOperationTech@{fieldOperationTech}}
+}
+
+
+{\ttfamily \#include $<$fieldOperationTech.h$>$}Inheritance diagram for fieldOperationTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11cm]{classfield_operation_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfield_operation_tech_a55967c049d29aae8062f19b6c8541596}{fieldOperationTech} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classfield_operation_tech_a5ba3ad6f9dd43c2b7d740c24a528907a}{$\sim$fieldOperationTech} ()
+\item 
+void \hyperlink{classfield_operation_tech_a9efae05c7ed6af7c42c37a84f0c81e11}{Setarea} (double aarea)
+\item 
+void \hyperlink{classfield_operation_tech_a23e8464a61b31d7d6047627b0eda44df}{SetcropName} (const string \&acropName)
+\item 
+void \hyperlink{classfield_operation_tech_a4830e2b43c699fb767cc85242a59e875}{Setdistance} (double adistance)
+\item 
+virtual void \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+virtual void \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{UpdateProducts} (bool contractor=false)
+\item 
+double \hyperlink{classfield_operation_tech_a8d61005df70d41e8c1ddcdcf418ee65e}{GetMachinePoolPrice} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classfield_operation_tech_a530d49b4cf06668121b80eba679b7e98}{CalcGangFuel} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classfield_operation_tech_a4577ac12831e5d317301920b7e26de69}{area}
+\item 
+double \hyperlink{classfield_operation_tech_a632ea22d4eb656dc9a2e44a2e5b0864c}{distance}
+\item 
+double \hyperlink{classfield_operation_tech_a3ef8f98df6df78861bce7bd026575820}{oldArea}
+\item 
+double \hyperlink{classfield_operation_tech_abd718cb5d60f2a2034b4fbc53f54b3db}{oldDistance}
+\item 
+string \hyperlink{classfield_operation_tech_ab89a76987f03b1e7ae02d7ecca19c944}{cropName}
+\item 
+double \hyperlink{classfield_operation_tech_a644ed10b38595f50750e1a2da1aa3447}{workingSpeed}
+\item 
+double \hyperlink{classfield_operation_tech_aa0bcc31af0160f8615ff3c8b1d24c8c7}{turningTime}
+\item 
+double \hyperlink{classfield_operation_tech_a071eaea7399b6fc4e405735bf5b5ed0a}{turningHeadland}
+\item 
+double \hyperlink{classfield_operation_tech_a8d8b0c38c97ad38b9b3a595e4faf6a1f}{disturbanceAllowance}
+\item 
+double \hyperlink{classfield_operation_tech_ae917aae3110936d50cbd7ed3ea7c9ae1}{relaxationAllowance}
+\item 
+double \hyperlink{classfield_operation_tech_ac23c94553226b6c0d71dbe09485e8989}{machinePoolPrice}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfield_operation_tech_a55967c049d29aae8062f19b6c8541596}{
+\index{fieldOperationTech@{fieldOperationTech}!fieldOperationTech@{fieldOperationTech}}
+\index{fieldOperationTech@{fieldOperationTech}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{fieldOperationTech}]{\setlength{\rightskip}{0pt plus 5cm}fieldOperationTech::fieldOperationTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classfield_operation_tech_a55967c049d29aae8062f19b6c8541596}
+\hypertarget{classfield_operation_tech_a5ba3ad6f9dd43c2b7d740c24a528907a}{
+\index{fieldOperationTech@{fieldOperationTech}!$\sim$fieldOperationTech@{$\sim$fieldOperationTech}}
+\index{$\sim$fieldOperationTech@{$\sim$fieldOperationTech}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{$\sim$fieldOperationTech}]{\setlength{\rightskip}{0pt plus 5cm}fieldOperationTech::$\sim$fieldOperationTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfield_operation_tech_a5ba3ad6f9dd43c2b7d740c24a528907a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{
+\index{fieldOperationTech@{fieldOperationTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}virtual void fieldOperationTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}
+
+
+Reimplemented in \hyperlink{classanimal_fert_tech_ab2e8f130cf259ed4c7669e92ff1bfebe}{animalFertTech}, \hyperlink{classharvest_tech_a9cbac27e3242c6ac08e0cbcebfdb13b3}{harvestTech}, \hyperlink{classirrigate_tech_a68212d5382845e1cf877f0c2b1ab1019}{irrigateTech}, \hyperlink{classmanual_labour_tech_a672922b49eac69b5ebf765e66bdcb3ef}{manualLabourTech}, \hyperlink{classmineral_fert_tech_a0b0d6226496238a9c11637a3c70429ee}{mineralFertTech}, \hyperlink{classplant_care_tech_aafaa089fe218f4a9edb91842404160e5}{plantCareTech}, \hyperlink{classsoil_treat_tech_a988dd9310b22be5d36a28cdaa1dcc805}{soilTreatTech}, and \hyperlink{classsow_tech_a044008a71f40c31f0bd3469476c70e97}{sowTech}.\hypertarget{classfield_operation_tech_a530d49b4cf06668121b80eba679b7e98}{
+\index{fieldOperationTech@{fieldOperationTech}!CalcGangFuel@{CalcGangFuel}}
+\index{CalcGangFuel@{CalcGangFuel}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{CalcGangFuel}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationTech::CalcGangFuel ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classfield_operation_tech_a530d49b4cf06668121b80eba679b7e98}
+
+
+Reimplemented from \hyperlink{classoperation_ab311cc421c3cc2a37dee5f2fc4e4c296}{operation}.
+
+Reimplemented in \hyperlink{classanimal_fert_tech_a3847a22b473b9a09f5e524c165ae0484}{animalFertTech}, and \hyperlink{classharvest_tech_a7da76cf91a1af094816d27b373e7f913}{harvestTech}.\hypertarget{classfield_operation_tech_a8d61005df70d41e8c1ddcdcf418ee65e}{
+\index{fieldOperationTech@{fieldOperationTech}!GetMachinePoolPrice@{GetMachinePoolPrice}}
+\index{GetMachinePoolPrice@{GetMachinePoolPrice}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{GetMachinePoolPrice}]{\setlength{\rightskip}{0pt plus 5cm}double fieldOperationTech::GetMachinePoolPrice ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_operation_tech_a8d61005df70d41e8c1ddcdcf418ee65e}
+\hypertarget{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{
+\index{fieldOperationTech@{fieldOperationTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}
+
+
+Reimplemented from \hyperlink{classoperation_a239af45379b638fcb53c10873ef8bb16}{operation}.
+
+Reimplemented in \hyperlink{classanimal_fert_tech_ace0ed6c38236d05cd521f98624431767}{animalFertTech}, \hyperlink{classharvest_tech_a8b2a5efa11d4ee3355c75cec9a080b27}{harvestTech}, \hyperlink{classirrigate_tech_a8c7f11f2ce9cb7e19851c81c69c91d0a}{irrigateTech}, \hyperlink{classmanual_labour_tech_a1b03a5bb1d552a3bacaeb5bb758a1e17}{manualLabourTech}, \hyperlink{classmineral_fert_tech_a25acfef0b5b6f2a6463fe9249d13cb9a}{mineralFertTech}, \hyperlink{classplant_care_tech_ac699023786b1759775d57e80b5817096}{plantCareTech}, \hyperlink{classsoil_treat_tech_a43342c7563137af6f07fd4b031f3c599}{soilTreatTech}, and \hyperlink{classsow_tech_aa606f377adfc0cf3fd80d96ba2576fcc}{sowTech}.\hypertarget{classfield_operation_tech_a9efae05c7ed6af7c42c37a84f0c81e11}{
+\index{fieldOperationTech@{fieldOperationTech}!Setarea@{Setarea}}
+\index{Setarea@{Setarea}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{Setarea}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationTech::Setarea (double {\em aarea})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_operation_tech_a9efae05c7ed6af7c42c37a84f0c81e11}
+\hypertarget{classfield_operation_tech_a23e8464a61b31d7d6047627b0eda44df}{
+\index{fieldOperationTech@{fieldOperationTech}!SetcropName@{SetcropName}}
+\index{SetcropName@{SetcropName}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{SetcropName}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationTech::SetcropName (const string \& {\em acropName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_operation_tech_a23e8464a61b31d7d6047627b0eda44df}
+\hypertarget{classfield_operation_tech_a4830e2b43c699fb767cc85242a59e875}{
+\index{fieldOperationTech@{fieldOperationTech}!Setdistance@{Setdistance}}
+\index{Setdistance@{Setdistance}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{Setdistance}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationTech::Setdistance (double {\em adistance})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_operation_tech_a4830e2b43c699fb767cc85242a59e875}
+\hypertarget{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{
+\index{fieldOperationTech@{fieldOperationTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void fieldOperationTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}
+
+
+Reimplemented from \hyperlink{classoperation_a3f18f5e71dd6bdfdf304ed1a24e7ac2f}{operation}.
+
+Reimplemented in \hyperlink{classharvest_tech_a80aa806fd5fa0f652b8ead63fb8976a4}{harvestTech}, \hyperlink{classirrigate_tech_a5a125198ead652bcf1c8307fbc8ef3b5}{irrigateTech}, \hyperlink{classmineral_fert_tech_aeaae651d9f15846abd36be1a03e782db}{mineralFertTech}, \hyperlink{classplant_care_tech_a877ed4e1f3d84637783c1ac0474a6bc6}{plantCareTech}, \hyperlink{classsoil_treat_tech_aea3565eebbd55354cbee50d13c1c892a}{soilTreatTech}, and \hyperlink{classsow_tech_a0cfbd371272aa15a18bca486a2926464}{sowTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classfield_operation_tech_a4577ac12831e5d317301920b7e26de69}{
+\index{fieldOperationTech@{fieldOperationTech}!area@{area}}
+\index{area@{area}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::area}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_a4577ac12831e5d317301920b7e26de69}
+\hypertarget{classfield_operation_tech_ab89a76987f03b1e7ae02d7ecca19c944}{
+\index{fieldOperationTech@{fieldOperationTech}!cropName@{cropName}}
+\index{cropName@{cropName}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{cropName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf fieldOperationTech::cropName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_ab89a76987f03b1e7ae02d7ecca19c944}
+\hypertarget{classfield_operation_tech_a632ea22d4eb656dc9a2e44a2e5b0864c}{
+\index{fieldOperationTech@{fieldOperationTech}!distance@{distance}}
+\index{distance@{distance}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::distance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_a632ea22d4eb656dc9a2e44a2e5b0864c}
+\hypertarget{classfield_operation_tech_a8d8b0c38c97ad38b9b3a595e4faf6a1f}{
+\index{fieldOperationTech@{fieldOperationTech}!disturbanceAllowance@{disturbanceAllowance}}
+\index{disturbanceAllowance@{disturbanceAllowance}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{disturbanceAllowance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::disturbanceAllowance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_a8d8b0c38c97ad38b9b3a595e4faf6a1f}
+\hypertarget{classfield_operation_tech_ac23c94553226b6c0d71dbe09485e8989}{
+\index{fieldOperationTech@{fieldOperationTech}!machinePoolPrice@{machinePoolPrice}}
+\index{machinePoolPrice@{machinePoolPrice}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{machinePoolPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::machinePoolPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_ac23c94553226b6c0d71dbe09485e8989}
+\hypertarget{classfield_operation_tech_a3ef8f98df6df78861bce7bd026575820}{
+\index{fieldOperationTech@{fieldOperationTech}!oldArea@{oldArea}}
+\index{oldArea@{oldArea}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{oldArea}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::oldArea}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_a3ef8f98df6df78861bce7bd026575820}
+\hypertarget{classfield_operation_tech_abd718cb5d60f2a2034b4fbc53f54b3db}{
+\index{fieldOperationTech@{fieldOperationTech}!oldDistance@{oldDistance}}
+\index{oldDistance@{oldDistance}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{oldDistance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::oldDistance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_abd718cb5d60f2a2034b4fbc53f54b3db}
+\hypertarget{classfield_operation_tech_ae917aae3110936d50cbd7ed3ea7c9ae1}{
+\index{fieldOperationTech@{fieldOperationTech}!relaxationAllowance@{relaxationAllowance}}
+\index{relaxationAllowance@{relaxationAllowance}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{relaxationAllowance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::relaxationAllowance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_ae917aae3110936d50cbd7ed3ea7c9ae1}
+\hypertarget{classfield_operation_tech_a071eaea7399b6fc4e405735bf5b5ed0a}{
+\index{fieldOperationTech@{fieldOperationTech}!turningHeadland@{turningHeadland}}
+\index{turningHeadland@{turningHeadland}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{turningHeadland}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::turningHeadland}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_a071eaea7399b6fc4e405735bf5b5ed0a}
+\hypertarget{classfield_operation_tech_aa0bcc31af0160f8615ff3c8b1d24c8c7}{
+\index{fieldOperationTech@{fieldOperationTech}!turningTime@{turningTime}}
+\index{turningTime@{turningTime}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{turningTime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::turningTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_aa0bcc31af0160f8615ff3c8b1d24c8c7}
+\hypertarget{classfield_operation_tech_a644ed10b38595f50750e1a2da1aa3447}{
+\index{fieldOperationTech@{fieldOperationTech}!workingSpeed@{workingSpeed}}
+\index{workingSpeed@{workingSpeed}!fieldOperationTech@{fieldOperationTech}}
+\subsubsection[{workingSpeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fieldOperationTech::workingSpeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_operation_tech_a644ed10b38595f50750e1a2da1aa3447}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{field_operation_tech_8h}{fieldOperationTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{field_operation_tech_8cpp}{fieldOperationTech.cpp}\end{DoxyCompactItemize}

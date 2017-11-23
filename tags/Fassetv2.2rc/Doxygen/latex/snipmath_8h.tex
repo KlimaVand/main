@@ -1,0 +1,242 @@
+\hypertarget{snipmath_8h}{
+\section{C:/main/trunk/src/base/snipmath.h File Reference}
+\label{snipmath_8h}\index{C:/main/trunk/src/base/snipmath.h@{C:/main/trunk/src/base/snipmath.h}}
+}
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include \char`\"{}sniptype.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}round.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}pi.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structint__sqrt}{int\_\-sqrt}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{snipmath_8h_abce2ea6e28abeb38878295c84e020a42}{log10P}(n, r)~(log10factorial(n)-\/log10factorial((n)-\/(r)))
+\item 
+\#define \hyperlink{snipmath_8h_ada83a0fcc64d12fdfe4fcaec12c24c73}{log10C}(n, r)~(log10P((n),(r))-\/log10factorial(r))
+\item 
+\#define \hyperlink{snipmath_8h_a2203853edabc3de5f785e54b55eb5e3c}{PHI}~((1.0+sqrt(5.0))/2.0)
+\item 
+\#define \hyperlink{snipmath_8h_a47d80a344f442ae13919424d7357e68f}{INV\_\-PHI}~(1.0/PHI)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{snipmath_8h_a2b66b964c1c46f8b8292bc85a4946c50}{SetBCDLen} (int n)
+\item 
+long \hyperlink{snipmath_8h_a9eac685591088a2084f7a7da097712d6}{BCDtoLong} (char $\ast$BCDNum)
+\item 
+void \hyperlink{snipmath_8h_afc402baab1e68edc4bd49fa46f093dda}{LongtoBCD} (long num, char BCDNum\mbox{[}$\,$\mbox{]})
+\item 
+double \hyperlink{snipmath_8h_a654f85db1723db5dbf2f7b8c768aa690}{bcd\_\-to\_\-double} (void $\ast$buf, size\_\-t len, int digits)
+\item 
+int \hyperlink{snipmath_8h_acf33fce0b547baba1a2f0090475a4f2b}{double\_\-to\_\-bcd} (double arg, char $\ast$buf, size\_\-t length, size\_\-t digits)
+\item 
+\hyperlink{sniptype_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{snipmath_8h_a174f9740a35e1e412c35ae5b68ae4d94}{ncomb1} (int n, int m)
+\item 
+\hyperlink{sniptype_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{snipmath_8h_a8238a1dcf294ed474df561d659bc58a8}{ncomb2} (int n, int m)
+\item 
+void \hyperlink{snipmath_8h_a3bddd4c4d86e33b396ca290a73511246}{SolveCubic} (double a, double b, double c, double d, int $\ast$solutions, double $\ast$x)
+\item 
+\hyperlink{sniptype_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{snipmath_8h_ad02f135bec1619a30d9fd5e37c38c000}{dbl2ulong} (double t)
+\item 
+long \hyperlink{snipmath_8h_ae87a047e7176f2ed034502de92e27d5b}{dbl2long} (double t)
+\item 
+double \hyperlink{snipmath_8h_ac110bac59d287179e3c5436056a083aa}{dround} (double x)
+\item 
+double \hyperlink{snipmath_8h_a9ed1c50f85d1478af2e5cefe98775c01}{log10factorial} (double N)
+\item 
+double \hyperlink{snipmath_8h_a9801db158318bc62e78c2f9aa1c21a27}{fibo} (unsigned short term)
+\item 
+double \hyperlink{snipmath_8h_a01651716bc568c2144847552d10fd0e2}{frandom} (int n)
+\item 
+double \hyperlink{snipmath_8h_a6bda7243d9d6427acdcf175555f631f6}{ipow} (double x, int n)
+\item 
+int \hyperlink{snipmath_8h_a590caa7de661941a226e5daabbae1ae3}{ispow2} (int x)
+\item 
+long double \hyperlink{snipmath_8h_a9e0c3b6b9362d68cc86c55930458228e}{ldfloor} (long double a)
+\item 
+int \hyperlink{snipmath_8h_a39c7de5f40682802838b2a6a4085e3e5}{initlogscale} (long dmax, long rmax)
+\item 
+long \hyperlink{snipmath_8h_ad116f8f32dcfd3c6a74192001e5ca92d}{logscale} (long d)
+\item 
+float \hyperlink{snipmath_8h_a282cd316bc94d73321641adda4eb2b89}{MSBINToIEEE} (float f)
+\item 
+float \hyperlink{snipmath_8h_acd8cbb1d4485a78cc3aacd675198e264}{IEEEToMSBIN} (float f)
+\item 
+int \hyperlink{snipmath_8h_aca535b1c52bce0310b986cea9f07548d}{perm\_\-index} (char pit\mbox{[}$\,$\mbox{]}, int size)
+\item 
+int \hyperlink{snipmath_8h_a58fb7e2086f8ab0ed1ac6aab8c02967b}{round\_\-div} (int n, int d)
+\item 
+long \hyperlink{snipmath_8h_a6bfa0114ba28d617f9cbf659a2294c21}{round\_\-ldiv} (long n, long d)
+\item 
+double \hyperlink{snipmath_8h_ad71ec851896bb003290612760ae0c451}{rad2deg} (double rad)
+\item 
+double \hyperlink{snipmath_8h_a8012f8bd66798ffbdd27462c9f593a54}{deg2rad} (double deg)
+\item 
+void \hyperlink{snipmath_8h_a532ddcac8a64e97bd18f6082b30a6952}{usqrt} (unsigned long x, struct \hyperlink{structint__sqrt}{int\_\-sqrt} $\ast$q)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{snipmath_8h_a47d80a344f442ae13919424d7357e68f}{
+\index{snipmath.h@{snipmath.h}!INV\_\-PHI@{INV\_\-PHI}}
+\index{INV\_\-PHI@{INV\_\-PHI}!snipmath.h@{snipmath.h}}
+\subsubsection[{INV\_\-PHI}]{\setlength{\rightskip}{0pt plus 5cm}\#define INV\_\-PHI~(1.0/PHI)}}
+\label{snipmath_8h_a47d80a344f442ae13919424d7357e68f}
+\hypertarget{snipmath_8h_ada83a0fcc64d12fdfe4fcaec12c24c73}{
+\index{snipmath.h@{snipmath.h}!log10C@{log10C}}
+\index{log10C@{log10C}!snipmath.h@{snipmath.h}}
+\subsubsection[{log10C}]{\setlength{\rightskip}{0pt plus 5cm}\#define log10C(n, \/  r)~(log10P((n),(r))-\/log10factorial(r))}}
+\label{snipmath_8h_ada83a0fcc64d12fdfe4fcaec12c24c73}
+\hypertarget{snipmath_8h_abce2ea6e28abeb38878295c84e020a42}{
+\index{snipmath.h@{snipmath.h}!log10P@{log10P}}
+\index{log10P@{log10P}!snipmath.h@{snipmath.h}}
+\subsubsection[{log10P}]{\setlength{\rightskip}{0pt plus 5cm}\#define log10P(n, \/  r)~(log10factorial(n)-\/log10factorial((n)-\/(r)))}}
+\label{snipmath_8h_abce2ea6e28abeb38878295c84e020a42}
+\hypertarget{snipmath_8h_a2203853edabc3de5f785e54b55eb5e3c}{
+\index{snipmath.h@{snipmath.h}!PHI@{PHI}}
+\index{PHI@{PHI}!snipmath.h@{snipmath.h}}
+\subsubsection[{PHI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PHI~((1.0+sqrt(5.0))/2.0)}}
+\label{snipmath_8h_a2203853edabc3de5f785e54b55eb5e3c}
+
+
+\subsection{Function Documentation}
+\hypertarget{snipmath_8h_a654f85db1723db5dbf2f7b8c768aa690}{
+\index{snipmath.h@{snipmath.h}!bcd\_\-to\_\-double@{bcd\_\-to\_\-double}}
+\index{bcd\_\-to\_\-double@{bcd\_\-to\_\-double}!snipmath.h@{snipmath.h}}
+\subsubsection[{bcd\_\-to\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}double bcd\_\-to\_\-double (void $\ast$ {\em buf}, \/  size\_\-t {\em len}, \/  int {\em digits})}}
+\label{snipmath_8h_a654f85db1723db5dbf2f7b8c768aa690}
+\hypertarget{snipmath_8h_a9eac685591088a2084f7a7da097712d6}{
+\index{snipmath.h@{snipmath.h}!BCDtoLong@{BCDtoLong}}
+\index{BCDtoLong@{BCDtoLong}!snipmath.h@{snipmath.h}}
+\subsubsection[{BCDtoLong}]{\setlength{\rightskip}{0pt plus 5cm}long BCDtoLong (char $\ast$ {\em BCDNum})}}
+\label{snipmath_8h_a9eac685591088a2084f7a7da097712d6}
+\hypertarget{snipmath_8h_ae87a047e7176f2ed034502de92e27d5b}{
+\index{snipmath.h@{snipmath.h}!dbl2long@{dbl2long}}
+\index{dbl2long@{dbl2long}!snipmath.h@{snipmath.h}}
+\subsubsection[{dbl2long}]{\setlength{\rightskip}{0pt plus 5cm}long dbl2long (double {\em t})}}
+\label{snipmath_8h_ae87a047e7176f2ed034502de92e27d5b}
+\hypertarget{snipmath_8h_ad02f135bec1619a30d9fd5e37c38c000}{
+\index{snipmath.h@{snipmath.h}!dbl2ulong@{dbl2ulong}}
+\index{dbl2ulong@{dbl2ulong}!snipmath.h@{snipmath.h}}
+\subsubsection[{dbl2ulong}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} dbl2ulong (double {\em t})}}
+\label{snipmath_8h_ad02f135bec1619a30d9fd5e37c38c000}
+\hypertarget{snipmath_8h_a8012f8bd66798ffbdd27462c9f593a54}{
+\index{snipmath.h@{snipmath.h}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!snipmath.h@{snipmath.h}}
+\subsubsection[{deg2rad}]{\setlength{\rightskip}{0pt plus 5cm}double deg2rad (double {\em deg})}}
+\label{snipmath_8h_a8012f8bd66798ffbdd27462c9f593a54}
+\hypertarget{snipmath_8h_acf33fce0b547baba1a2f0090475a4f2b}{
+\index{snipmath.h@{snipmath.h}!double\_\-to\_\-bcd@{double\_\-to\_\-bcd}}
+\index{double\_\-to\_\-bcd@{double\_\-to\_\-bcd}!snipmath.h@{snipmath.h}}
+\subsubsection[{double\_\-to\_\-bcd}]{\setlength{\rightskip}{0pt plus 5cm}int double\_\-to\_\-bcd (double {\em arg}, \/  char $\ast$ {\em buf}, \/  size\_\-t {\em length}, \/  size\_\-t {\em digits})}}
+\label{snipmath_8h_acf33fce0b547baba1a2f0090475a4f2b}
+\hypertarget{snipmath_8h_ac110bac59d287179e3c5436056a083aa}{
+\index{snipmath.h@{snipmath.h}!dround@{dround}}
+\index{dround@{dround}!snipmath.h@{snipmath.h}}
+\subsubsection[{dround}]{\setlength{\rightskip}{0pt plus 5cm}double dround (double {\em x})}}
+\label{snipmath_8h_ac110bac59d287179e3c5436056a083aa}
+\hypertarget{snipmath_8h_a9801db158318bc62e78c2f9aa1c21a27}{
+\index{snipmath.h@{snipmath.h}!fibo@{fibo}}
+\index{fibo@{fibo}!snipmath.h@{snipmath.h}}
+\subsubsection[{fibo}]{\setlength{\rightskip}{0pt plus 5cm}double fibo (unsigned short {\em term})}}
+\label{snipmath_8h_a9801db158318bc62e78c2f9aa1c21a27}
+\hypertarget{snipmath_8h_a01651716bc568c2144847552d10fd0e2}{
+\index{snipmath.h@{snipmath.h}!frandom@{frandom}}
+\index{frandom@{frandom}!snipmath.h@{snipmath.h}}
+\subsubsection[{frandom}]{\setlength{\rightskip}{0pt plus 5cm}double frandom (int {\em n})}}
+\label{snipmath_8h_a01651716bc568c2144847552d10fd0e2}
+\hypertarget{snipmath_8h_acd8cbb1d4485a78cc3aacd675198e264}{
+\index{snipmath.h@{snipmath.h}!IEEEToMSBIN@{IEEEToMSBIN}}
+\index{IEEEToMSBIN@{IEEEToMSBIN}!snipmath.h@{snipmath.h}}
+\subsubsection[{IEEEToMSBIN}]{\setlength{\rightskip}{0pt plus 5cm}float IEEEToMSBIN (float {\em f})}}
+\label{snipmath_8h_acd8cbb1d4485a78cc3aacd675198e264}
+\hypertarget{snipmath_8h_a39c7de5f40682802838b2a6a4085e3e5}{
+\index{snipmath.h@{snipmath.h}!initlogscale@{initlogscale}}
+\index{initlogscale@{initlogscale}!snipmath.h@{snipmath.h}}
+\subsubsection[{initlogscale}]{\setlength{\rightskip}{0pt plus 5cm}int initlogscale (long {\em dmax}, \/  long {\em rmax})}}
+\label{snipmath_8h_a39c7de5f40682802838b2a6a4085e3e5}
+\hypertarget{snipmath_8h_a6bda7243d9d6427acdcf175555f631f6}{
+\index{snipmath.h@{snipmath.h}!ipow@{ipow}}
+\index{ipow@{ipow}!snipmath.h@{snipmath.h}}
+\subsubsection[{ipow}]{\setlength{\rightskip}{0pt plus 5cm}double ipow (double {\em x}, \/  int {\em n})}}
+\label{snipmath_8h_a6bda7243d9d6427acdcf175555f631f6}
+\hypertarget{snipmath_8h_a590caa7de661941a226e5daabbae1ae3}{
+\index{snipmath.h@{snipmath.h}!ispow2@{ispow2}}
+\index{ispow2@{ispow2}!snipmath.h@{snipmath.h}}
+\subsubsection[{ispow2}]{\setlength{\rightskip}{0pt plus 5cm}int ispow2 (int {\em x})}}
+\label{snipmath_8h_a590caa7de661941a226e5daabbae1ae3}
+\hypertarget{snipmath_8h_a9e0c3b6b9362d68cc86c55930458228e}{
+\index{snipmath.h@{snipmath.h}!ldfloor@{ldfloor}}
+\index{ldfloor@{ldfloor}!snipmath.h@{snipmath.h}}
+\subsubsection[{ldfloor}]{\setlength{\rightskip}{0pt plus 5cm}long double ldfloor (long double {\em a})}}
+\label{snipmath_8h_a9e0c3b6b9362d68cc86c55930458228e}
+\hypertarget{snipmath_8h_a9ed1c50f85d1478af2e5cefe98775c01}{
+\index{snipmath.h@{snipmath.h}!log10factorial@{log10factorial}}
+\index{log10factorial@{log10factorial}!snipmath.h@{snipmath.h}}
+\subsubsection[{log10factorial}]{\setlength{\rightskip}{0pt plus 5cm}double log10factorial (double {\em N})}}
+\label{snipmath_8h_a9ed1c50f85d1478af2e5cefe98775c01}
+\hypertarget{snipmath_8h_ad116f8f32dcfd3c6a74192001e5ca92d}{
+\index{snipmath.h@{snipmath.h}!logscale@{logscale}}
+\index{logscale@{logscale}!snipmath.h@{snipmath.h}}
+\subsubsection[{logscale}]{\setlength{\rightskip}{0pt plus 5cm}long logscale (long {\em d})}}
+\label{snipmath_8h_ad116f8f32dcfd3c6a74192001e5ca92d}
+\hypertarget{snipmath_8h_afc402baab1e68edc4bd49fa46f093dda}{
+\index{snipmath.h@{snipmath.h}!LongtoBCD@{LongtoBCD}}
+\index{LongtoBCD@{LongtoBCD}!snipmath.h@{snipmath.h}}
+\subsubsection[{LongtoBCD}]{\setlength{\rightskip}{0pt plus 5cm}void LongtoBCD (long {\em num}, \/  char {\em BCDNum}\mbox{[}$\,$\mbox{]})}}
+\label{snipmath_8h_afc402baab1e68edc4bd49fa46f093dda}
+\hypertarget{snipmath_8h_a282cd316bc94d73321641adda4eb2b89}{
+\index{snipmath.h@{snipmath.h}!MSBINToIEEE@{MSBINToIEEE}}
+\index{MSBINToIEEE@{MSBINToIEEE}!snipmath.h@{snipmath.h}}
+\subsubsection[{MSBINToIEEE}]{\setlength{\rightskip}{0pt plus 5cm}float MSBINToIEEE (float {\em f})}}
+\label{snipmath_8h_a282cd316bc94d73321641adda4eb2b89}
+\hypertarget{snipmath_8h_a174f9740a35e1e412c35ae5b68ae4d94}{
+\index{snipmath.h@{snipmath.h}!ncomb1@{ncomb1}}
+\index{ncomb1@{ncomb1}!snipmath.h@{snipmath.h}}
+\subsubsection[{ncomb1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} ncomb1 (int {\em n}, \/  int {\em m})}}
+\label{snipmath_8h_a174f9740a35e1e412c35ae5b68ae4d94}
+\hypertarget{snipmath_8h_a8238a1dcf294ed474df561d659bc58a8}{
+\index{snipmath.h@{snipmath.h}!ncomb2@{ncomb2}}
+\index{ncomb2@{ncomb2}!snipmath.h@{snipmath.h}}
+\subsubsection[{ncomb2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} ncomb2 (int {\em n}, \/  int {\em m})}}
+\label{snipmath_8h_a8238a1dcf294ed474df561d659bc58a8}
+\hypertarget{snipmath_8h_aca535b1c52bce0310b986cea9f07548d}{
+\index{snipmath.h@{snipmath.h}!perm\_\-index@{perm\_\-index}}
+\index{perm\_\-index@{perm\_\-index}!snipmath.h@{snipmath.h}}
+\subsubsection[{perm\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}int perm\_\-index (char {\em pit}\mbox{[}$\,$\mbox{]}, \/  int {\em size})}}
+\label{snipmath_8h_aca535b1c52bce0310b986cea9f07548d}
+\hypertarget{snipmath_8h_ad71ec851896bb003290612760ae0c451}{
+\index{snipmath.h@{snipmath.h}!rad2deg@{rad2deg}}
+\index{rad2deg@{rad2deg}!snipmath.h@{snipmath.h}}
+\subsubsection[{rad2deg}]{\setlength{\rightskip}{0pt plus 5cm}double rad2deg (double {\em rad})}}
+\label{snipmath_8h_ad71ec851896bb003290612760ae0c451}
+\hypertarget{snipmath_8h_a58fb7e2086f8ab0ed1ac6aab8c02967b}{
+\index{snipmath.h@{snipmath.h}!round\_\-div@{round\_\-div}}
+\index{round\_\-div@{round\_\-div}!snipmath.h@{snipmath.h}}
+\subsubsection[{round\_\-div}]{\setlength{\rightskip}{0pt plus 5cm}int round\_\-div (int {\em n}, \/  int {\em d})}}
+\label{snipmath_8h_a58fb7e2086f8ab0ed1ac6aab8c02967b}
+\hypertarget{snipmath_8h_a6bfa0114ba28d617f9cbf659a2294c21}{
+\index{snipmath.h@{snipmath.h}!round\_\-ldiv@{round\_\-ldiv}}
+\index{round\_\-ldiv@{round\_\-ldiv}!snipmath.h@{snipmath.h}}
+\subsubsection[{round\_\-ldiv}]{\setlength{\rightskip}{0pt plus 5cm}long round\_\-ldiv (long {\em n}, \/  long {\em d})}}
+\label{snipmath_8h_a6bfa0114ba28d617f9cbf659a2294c21}
+\hypertarget{snipmath_8h_a2b66b964c1c46f8b8292bc85a4946c50}{
+\index{snipmath.h@{snipmath.h}!SetBCDLen@{SetBCDLen}}
+\index{SetBCDLen@{SetBCDLen}!snipmath.h@{snipmath.h}}
+\subsubsection[{SetBCDLen}]{\setlength{\rightskip}{0pt plus 5cm}void SetBCDLen (int {\em n})}}
+\label{snipmath_8h_a2b66b964c1c46f8b8292bc85a4946c50}
+\hypertarget{snipmath_8h_a3bddd4c4d86e33b396ca290a73511246}{
+\index{snipmath.h@{snipmath.h}!SolveCubic@{SolveCubic}}
+\index{SolveCubic@{SolveCubic}!snipmath.h@{snipmath.h}}
+\subsubsection[{SolveCubic}]{\setlength{\rightskip}{0pt plus 5cm}void SolveCubic (double {\em a}, \/  double {\em b}, \/  double {\em c}, \/  double {\em d}, \/  int $\ast$ {\em solutions}, \/  double $\ast$ {\em x})}}
+\label{snipmath_8h_a3bddd4c4d86e33b396ca290a73511246}
+\hypertarget{snipmath_8h_a532ddcac8a64e97bd18f6082b30a6952}{
+\index{snipmath.h@{snipmath.h}!usqrt@{usqrt}}
+\index{usqrt@{usqrt}!snipmath.h@{snipmath.h}}
+\subsubsection[{usqrt}]{\setlength{\rightskip}{0pt plus 5cm}void usqrt (unsigned long {\em x}, \/  struct {\bf int\_\-sqrt} $\ast$ {\em q})}}
+\label{snipmath_8h_a532ddcac8a64e97bd18f6082b30a6952}

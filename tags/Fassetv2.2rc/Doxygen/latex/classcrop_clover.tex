@@ -1,0 +1,143 @@
+\hypertarget{classcrop_clover}{
+\section{cropClover Class Reference}
+\label{classcrop_clover}\index{cropClover@{cropClover}}
+}
+
+
+{\ttfamily \#include $<$cropClover.h$>$}Inheritance diagram for cropClover::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_clover}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_clover_ae780963421392a4e2c5fb05a54c8fb29}{cropClover} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_clover_af45dd76dec2da31cb7910dfbc93965d2}{cropClover} (const \hyperlink{classcrop_clover}{cropClover} \&acrop)
+\item 
+virtual \hyperlink{classcrop_clover}{cropClover} $\ast$ \hyperlink{classcrop_clover_afe134102e033bd1326eb955327b4d902}{clone} ()
+\item 
+void \hyperlink{classcrop_clover_ab0d1a2a7eb7738bac0cb6456a95cf90c}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual void \hyperlink{classcrop_clover_a93d5dff1cdb5018b42f38cac6dc1de13}{NitrogenAndTranspiration} (\hyperlink{classnitrogen}{nitrogen} aNitrogenUptake, double aTranspirationRatio)
+\item 
+virtual void \hyperlink{classcrop_clover_a3a424244e4f17a802bbf8b52effdbd14}{ReadParameters} (char $\ast$filename)
+\item 
+virtual void \hyperlink{classcrop_clover_a1440530239e8b4754faefd889e56c83a}{TransferDryMatterToRoot} (double $\ast$dDryMatt)
+\item 
+virtual double \hyperlink{classcrop_clover_a59fd79a6a70369bb7bae83417641ddef}{GetNFixationThisDay} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classcrop_clover_a5747ba184ba2174f4ace80757d75f9a5}{CalcPotentialNFixation} (double dDryMatt)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_clover_a1d9dbe99654e2faa451ab20ff6653683}{MaxFixPerDM}
+\item 
+double \hyperlink{classcrop_clover_a9b3c11041d71e6050fe2831c22318ed3}{DMCostPerN}
+\item 
+double \hyperlink{classcrop_clover_a86608517e507f0b9cb914ca4ae9e9293}{NFixationThisDay}
+\item 
+double \hyperlink{classcrop_clover_a0a358b6c4673755725925ab5cb959059}{PotNFix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_clover_ae780963421392a4e2c5fb05a54c8fb29}{
+\index{cropClover@{cropClover}!cropClover@{cropClover}}
+\index{cropClover@{cropClover}!cropClover@{cropClover}}
+\subsubsection[{cropClover}]{\setlength{\rightskip}{0pt plus 5cm}cropClover::cropClover (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_clover_ae780963421392a4e2c5fb05a54c8fb29}
+\hypertarget{classcrop_clover_af45dd76dec2da31cb7910dfbc93965d2}{
+\index{cropClover@{cropClover}!cropClover@{cropClover}}
+\index{cropClover@{cropClover}!cropClover@{cropClover}}
+\subsubsection[{cropClover}]{\setlength{\rightskip}{0pt plus 5cm}cropClover::cropClover (const {\bf cropClover} \& {\em acrop})}}
+\label{classcrop_clover_af45dd76dec2da31cb7910dfbc93965d2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_clover_ab0d1a2a7eb7738bac0cb6456a95cf90c}{
+\index{cropClover@{cropClover}!Add@{Add}}
+\index{Add@{Add}!cropClover@{cropClover}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cropClover::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_clover_ab0d1a2a7eb7738bac0cb6456a95cf90c}
+
+
+Reimplemented from \hyperlink{classcrop_ryegrass_a3ee92e29d981a5bcae487e10f5aa18d4}{cropRyegrass}.\hypertarget{classcrop_clover_a5747ba184ba2174f4ace80757d75f9a5}{
+\index{cropClover@{cropClover}!CalcPotentialNFixation@{CalcPotentialNFixation}}
+\index{CalcPotentialNFixation@{CalcPotentialNFixation}!cropClover@{cropClover}}
+\subsubsection[{CalcPotentialNFixation}]{\setlength{\rightskip}{0pt plus 5cm}double cropClover::CalcPotentialNFixation (double {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_clover_a5747ba184ba2174f4ace80757d75f9a5}
+\hypertarget{classcrop_clover_afe134102e033bd1326eb955327b4d902}{
+\index{cropClover@{cropClover}!clone@{clone}}
+\index{clone@{clone}!cropClover@{cropClover}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cropClover}$\ast$ cropClover::clone ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_clover_afe134102e033bd1326eb955327b4d902}
+
+
+Reimplemented from \hyperlink{classcrop_ryegrass_af7eb9cc81f755e89fc1486cc242b8b84}{cropRyegrass}.\hypertarget{classcrop_clover_a59fd79a6a70369bb7bae83417641ddef}{
+\index{cropClover@{cropClover}!GetNFixationThisDay@{GetNFixationThisDay}}
+\index{GetNFixationThisDay@{GetNFixationThisDay}!cropClover@{cropClover}}
+\subsubsection[{GetNFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cropClover::GetNFixationThisDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_clover_a59fd79a6a70369bb7bae83417641ddef}
+
+
+Reimplemented from \hyperlink{classcrop_aec045be7b4c6fd112b48ead6ee68dcd9}{crop}.\hypertarget{classcrop_clover_a93d5dff1cdb5018b42f38cac6dc1de13}{
+\index{cropClover@{cropClover}!NitrogenAndTranspiration@{NitrogenAndTranspiration}}
+\index{NitrogenAndTranspiration@{NitrogenAndTranspiration}!cropClover@{cropClover}}
+\subsubsection[{NitrogenAndTranspiration}]{\setlength{\rightskip}{0pt plus 5cm}void cropClover::NitrogenAndTranspiration ({\bf nitrogen} {\em aNitrogenUptake}, \/  double {\em aTranspirationRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_clover_a93d5dff1cdb5018b42f38cac6dc1de13}
+New Version for \hyperlink{classnitrogen}{nitrogen} fixation, MEL 2009 
+
+Reimplemented from \hyperlink{classcrop_a4ed6aaf98890015fb52d4d8957313166}{crop}.\hypertarget{classcrop_clover_a3a424244e4f17a802bbf8b52effdbd14}{
+\index{cropClover@{cropClover}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropClover@{cropClover}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropClover::ReadParameters (char $\ast$ {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_clover_a3a424244e4f17a802bbf8b52effdbd14}
+
+
+Reimplemented from \hyperlink{classcrop_ryegrass_a0bcd3f5b23b82810d40e2bf089755447}{cropRyegrass}.\hypertarget{classcrop_clover_a1440530239e8b4754faefd889e56c83a}{
+\index{cropClover@{cropClover}!TransferDryMatterToRoot@{TransferDryMatterToRoot}}
+\index{TransferDryMatterToRoot@{TransferDryMatterToRoot}!cropClover@{cropClover}}
+\subsubsection[{TransferDryMatterToRoot}]{\setlength{\rightskip}{0pt plus 5cm}void cropClover::TransferDryMatterToRoot (double $\ast$ {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_clover_a1440530239e8b4754faefd889e56c83a}
+
+
+Reimplemented from \hyperlink{classcrop_aeb0993f2a6d2f21d30a5c24bbd46833e}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_clover_a9b3c11041d71e6050fe2831c22318ed3}{
+\index{cropClover@{cropClover}!DMCostPerN@{DMCostPerN}}
+\index{DMCostPerN@{DMCostPerN}!cropClover@{cropClover}}
+\subsubsection[{DMCostPerN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropClover::DMCostPerN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_clover_a9b3c11041d71e6050fe2831c22318ed3}
+
+
+Reimplemented from \hyperlink{classcrop_af06dc09d391a57692b440c7c492dbc41}{crop}.\hypertarget{classcrop_clover_a1d9dbe99654e2faa451ab20ff6653683}{
+\index{cropClover@{cropClover}!MaxFixPerDM@{MaxFixPerDM}}
+\index{MaxFixPerDM@{MaxFixPerDM}!cropClover@{cropClover}}
+\subsubsection[{MaxFixPerDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropClover::MaxFixPerDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_clover_a1d9dbe99654e2faa451ab20ff6653683}
+
+
+Reimplemented from \hyperlink{classcrop_acd7a9182db99895de016c87785b58cc9}{crop}.\hypertarget{classcrop_clover_a86608517e507f0b9cb914ca4ae9e9293}{
+\index{cropClover@{cropClover}!NFixationThisDay@{NFixationThisDay}}
+\index{NFixationThisDay@{NFixationThisDay}!cropClover@{cropClover}}
+\subsubsection[{NFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropClover::NFixationThisDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_clover_a86608517e507f0b9cb914ca4ae9e9293}
+\hypertarget{classcrop_clover_a0a358b6c4673755725925ab5cb959059}{
+\index{cropClover@{cropClover}!PotNFix@{PotNFix}}
+\index{PotNFix@{PotNFix}!cropClover@{cropClover}}
+\subsubsection[{PotNFix}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropClover::PotNFix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_clover_a0a358b6c4673755725925ab5cb959059}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_clover_8h}{cropClover.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_clover_8cpp}{cropClover.cpp}\end{DoxyCompactItemize}

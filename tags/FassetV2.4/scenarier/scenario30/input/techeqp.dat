@@ -1,0 +1,42 @@
+[installation(1)]	
+techEquipName	IrrigationMachine
+size	65.0
+electricityConsumption	0.55
+carryCapacity	0
+[installation(2)]	
+techEquipName	WaterPump
+capacity	45
+carryCapacity	0
+[manureApplicator(1)]	
+techEquipName	BroadcastSpreader
+size	55.0
+carryCapacity	0
+propBuried	0.0
+propAreaWetted	1.0
+cropContamination	1
+NH3emissionFactor	0.40
+[manureApplicator(2)]	
+techEquipName	ManureSpreader
+size	55.0
+carryCapacity	0
+propBuried	0.0
+propAreaWetted	1.0
+cropContamination	1
+NH3emissionFactor	0.50
+[manureApplicator(3)]	//parameters
+techEquipName	TrailingHose
+size	55.0
+carryCapacity	0
+propBuried	0.0
+propAreaWetted	0.2
+cropContamination	1
+NH3emissionFactor	0.20
+[manureApplicator(4)]	
+techEquipName	Injector
+size	55.0
+carryCapacity	0
+propBuried	0.9
+propAreaWetted	0.1
+cropContamination	0
+NH3emissionFactor	0.05
+[end]

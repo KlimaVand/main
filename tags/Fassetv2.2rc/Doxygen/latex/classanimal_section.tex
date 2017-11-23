@@ -1,0 +1,523 @@
+\hypertarget{classanimal_section}{
+\section{animalSection Class Reference}
+\label{classanimal_section}\index{animalSection@{animalSection}}
+}
+
+
+Section of an \hyperlink{classanimal}{animal} house that contains \hyperlink{classlivestock}{livestock}.  
+
+
+{\ttfamily \#include $<$animalSection.h$>$}Inheritance diagram for animalSection::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classanimal_section}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_section_ad2bba0c526d7ebf4b5b7f7f70c9c330a}{animalSection} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classanimal_section_a5d0ec0377589de7afd16ae207e5a172e}{$\sim$animalSection} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classanimal_section_afeb3c65b7f3a7e96d71294a84ac68651}{setNrOfAnimals} (double aNr)
+\begin{DoxyCompactList}\small\item\em set number of animals \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a89807aacadf08b582db9e9d6bc40fa16}{SetanimalHeatOp} (double aValue)
+\begin{DoxyCompactList}\small\item\em Set the production by animals. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a97192665631325ed05570268d9a332d3}{SetfaecesPerYear} (double someFaeces)
+\begin{DoxyCompactList}\small\item\em Set annual faeces production by animals in kilograms fresh weight. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_ab571a85500e0c5454cd77b7787739d5f}{SeturinePerYear} (double someUrine)
+\begin{DoxyCompactList}\small\item\em Said annual murine production by animals in kilograms fresh weight. \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_a724eda30485b354884e11a3c762b54c0}{GetNrOfAnimals} ()
+\begin{DoxyCompactList}\small\item\em Return number of animals present. \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_a87002a34cbfb681aea527998573ae3bd}{GetAreaUsed} ()
+\begin{DoxyCompactList}\small\item\em Return area used by animals. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classanimal_section_a263b40a7d973437e37ab791bb394dc1d}{GetPlaces} ()
+\begin{DoxyCompactList}\small\item\em Return number of places available. \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classanimal_section_a8273d771612eb157505ecacc6677c29f}{GetAlias} ()
+\begin{DoxyCompactList}\small\item\em Returned name of \hyperlink{classanimal}{animal} section. \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classanimal_section_a3373b12f97678e5c8f99e0d75a501438}{GetContains} ()
+\begin{DoxyCompactList}\small\item\em Return name of animals housed in section. \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_ab0b8b5f3e6b25020195e24cd71d56309}{GetManureAmount} ()
+\begin{DoxyCompactList}\small\item\em Return amount of \hyperlink{classmanure}{manure} stored within the section. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_a785811ba65d4822e7c3b284ce77cb67f}{GetElectricityUse} ()
+\begin{DoxyCompactList}\small\item\em Returned total amount of electricity used. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_ac5e69d491872dc3b57cba2b59ba36cc2}{GetDailyElectricityUse} ()
+\begin{DoxyCompactList}\small\item\em Return day the electricity use. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_ac576524a422ea47bf04918c40d125695}{GetanimalHeatOp} ()
+\begin{DoxyCompactList}\small\item\em Return total into production by animals that. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_afe24791a22d2cbdb189332e1b468f059}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Function for reading input parameters from textile. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a6d35029ed226599d557f1bf61b9100c3}{Volatize} (double airVelocity, double humidity, double temperature, double $\ast$volatAmmonia, double $\ast$waterEvap, double $\ast$N2Emission, double $\ast$N2OEmission, double $\ast$CH4Emission, double $\ast$CO2Emission)
+\begin{DoxyCompactList}\small\item\em Function of dynamically calculating ammonia volatilisation and other gaseous losses. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a71d57784567fc97647e2b7d4c98bb6d6}{Volatize} (double $\ast$volatAmmonia, double $\ast$N2Emission, double $\ast$N2OEmission, double $\ast$CH4Emission, double $\ast$CO2Emission)
+\begin{DoxyCompactList}\small\item\em Function of statically calculating ammonia volatilisation and other gaseous losses. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classmanure}{manure} $\ast$ \hyperlink{classanimal_section_a0e933a3e74bf07c42c444dd7dec4747e}{CleanSection} (string forceIt)
+\begin{DoxyCompactList}\small\item\em Clean \hyperlink{classmanure}{manure} from section. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a37bd72c4e77137793f050339384e9486}{RcvManure} (\hyperlink{classmanure}{manure} $\ast$aUrine, \hyperlink{classmanure}{manure} $\ast$aFaeces)
+\begin{DoxyCompactList}\small\item\em Received \hyperlink{classmanure}{manure} from somewhere else. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_afc851db54dc233202416093ecc3049a5}{LinkManureStores} (\hyperlink{classmanurestore}{manurestore} $\ast$aManureStore)
+\begin{DoxyCompactList}\small\item\em Links \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} from section to recipient \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a4d179a53e1e930f22e3038edbc8087df}{CheckLinks} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if or \hyperlink{classmanure}{manure} stores have a recipient. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_afeb7aebaaa99c762e3d1fc61bb47f03b}{EndBudget} (bool show=false)
+\begin{DoxyCompactList}\small\item\em Checks if nutrient budgets are closed. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_ab67599c405210473dd2db71f28982318}{GetStoredN} ()
+\begin{DoxyCompactList}\small\item\em Returned the amount of \hyperlink{classnitrogen}{nitrogen} stored. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_ad17932a2af90cbb6b9b90ddb4c23ecd5}{GetStoredC} ()
+\begin{DoxyCompactList}\small\item\em Return amount of carbon stored. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_a789377838a3e4c5e1eb8739f15014a3f}{GetStoredDM} ()
+\begin{DoxyCompactList}\small\item\em Return amount of dry \hyperlink{classmatter}{matter} of stored. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_a72672d9b6cef359ce6506826483858ed}{GetNInput} ()
+\begin{DoxyCompactList}\small\item\em Return amount of \hyperlink{classnitrogen}{nitrogen} input to the \hyperlink{classanimal}{animal} section so far. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_a3c7dd42cc4cc52620e5aee9fe458d823}{GetNOutput} ()
+\begin{DoxyCompactList}\small\item\em Return the amount of \hyperlink{classnitrogen}{nitrogen} output from the \hyperlink{classanimal}{animal} section so far. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classanimal_section_a6fe2d73802cbac7f72ba723de24f5db4}{GetFromManureStore} (double RequestedAmount, \hyperlink{classproduct}{product} $\ast$p, bool checkAccess=false)
+\begin{DoxyCompactList}\small\item\em Requests an amount of \hyperlink{classmanure}{manure} from \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classanimal_section_aadfcafebdfc59ced126788f1425e3780}{DailyUpdate} ()
+\begin{DoxyCompactList}\small\item\em Daily update function. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a30e3588926513981f209862ca76980cc}{ScaleSize} ()
+\begin{DoxyCompactList}\small\item\em Scaled the \hyperlink{classanimal}{animal} section to the number of animals present. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_acedfd121b961e1b77669efc3104c125d}{GetAreaPrAnimal} ()
+\begin{DoxyCompactList}\small\item\em Return the area in square metres per \hyperlink{classanimal}{animal}. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_a38e74942f2a9a7d767da7d8f209dc7ca}{GetTotalArea} ()
+\begin{DoxyCompactList}\small\item\em Returned the total area of the \hyperlink{classanimal}{animal} section. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classanimal_section_acbe4ee2baee5364b2dbada0196449ebe}{GetLabour} ()
+\begin{DoxyCompactList}\small\item\em Return Labour used. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a725e52db97d2127b775e259cc21e954e}{AddanimalHeatOp} (double aValue)
+\begin{DoxyCompactList}\small\item\em Add amount to \hyperlink{classanimal}{animal} heat production. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_section_a8266d11321ed09220ff65d4b2f765714}{SetAnimalParameters} (double numberOfAnimals, double \hyperlink{classanimal_section_ab764a9e7261c89469543c202df1aff2a}{faecesPerYear}, double \hyperlink{classanimal_section_ae3f2a70dd57961b9b98842622b6ebcd2}{urinePerYear}, double heatOP=0.0)
+\begin{DoxyCompactList}\small\item\em Initialise \hyperlink{classanimal}{animal} parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classanimal_section_a1911235adfd2f409e78b671cf8df0c8a}{NrOfAnimals}
+\begin{DoxyCompactList}\small\item\em Number of animals present. \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_a6dec38054e731fa71041f934f12897b7}{Places}
+\begin{DoxyCompactList}\small\item\em Maximum number of places for animals. \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_ab89ee53e426cd797b752f65669b2bde2}{SpiltDrinkingWater}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classwater}{water} input per \hyperlink{classanimal}{animal} per day (kg) \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_a0af16539b92229327a050cce9372f4cc}{ElectricityUse}
+\begin{DoxyCompactList}\small\item\em kW per \hyperlink{classanimal}{animal} per year \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_ab764a9e7261c89469543c202df1aff2a}{faecesPerYear}
+\begin{DoxyCompactList}\small\item\em total input of faeces to this section in a year (estimated on startup) \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_ae3f2a70dd57961b9b98842622b6ebcd2}{urinePerYear}
+\item 
+string \hyperlink{classanimal_section_ae78e07631b9b3eec8795a89357456417}{Alias}
+\item 
+string \hyperlink{classanimal_section_a683d78feb642fb9c47b7c6ca04fa06fb}{Contains}
+\begin{DoxyCompactList}\small\item\em name of \hyperlink{classanimal}{animal} housed \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_a5c7d055ab1ea44cca81097b797c14f52}{VariableFeeding}
+\item 
+double \hyperlink{classanimal_section_adf379500a581d415c1dfee5d7a9dfdff}{VariableCleaning}
+\item 
+double \hyperlink{classanimal_section_a9c8c6bf7c47686872e99fc5e0978aa40}{ConstantFeeding}
+\item 
+double \hyperlink{classanimal_section_a0b615eac60c7a1da2c0ed2ad06e344aa}{ConstantCleaning}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfloorstore}{floorstore} $>$ $\ast$ \hyperlink{classanimal_section_aa0266aef51887e64de19e50263deb01f}{flooring}
+\begin{DoxyCompactList}\small\item\em Pointer to a list of objects describing the flooring in the \hyperlink{classanimal}{animal} section. \item\end{DoxyCompactList}\item 
+\hyperlink{classbudget}{budget} \hyperlink{classanimal_section_a9da1ddf7bdd6360f4595a020aa2ab5e7}{Nbudget}
+\begin{DoxyCompactList}\small\item\em Nitrogen \hyperlink{classbudget}{budget} class. \item\end{DoxyCompactList}\item 
+\hyperlink{classbudget}{budget} \hyperlink{classanimal_section_a6b36f885be582b5d2c9c32bbe8792cc8}{Cbudget}
+\begin{DoxyCompactList}\small\item\em carbon \hyperlink{classbudget}{budget} last \item\end{DoxyCompactList}\item 
+double \hyperlink{classanimal_section_aa615ab24431c87f4f728294d797cff06}{animalHeatOp}
+\begin{DoxyCompactList}\small\item\em Total the production of the \hyperlink{classlivestock}{livestock} present. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classanimal_section_afc0c5d745b4e8cb42de23c61aa1e2738}{operator$<$$<$} (ostream \&os, const \hyperlink{classanimal_section}{animalSection} \&s)
+\begin{DoxyCompactList}\small\item\em Streaming operator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Section of an \hyperlink{classanimal}{animal} house that contains \hyperlink{classlivestock}{livestock}. This class described as a part of the \hyperlink{classanimal}{animal} housing that contains \hyperlink{classlivestock}{livestock}. Such a section would contain one or two floor types and would normally contain one type of \hyperlink{classlivestock}{livestock}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classanimal_section_ad2bba0c526d7ebf4b5b7f7f70c9c330a}{
+\index{animalSection@{animalSection}!animalSection@{animalSection}}
+\index{animalSection@{animalSection}!animalSection@{animalSection}}
+\subsubsection[{animalSection}]{\setlength{\rightskip}{0pt plus 5cm}animalSection::animalSection (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classanimal_section_ad2bba0c526d7ebf4b5b7f7f70c9c330a}
+
+
+Constructor with arguments. \hypertarget{classanimal_section_a5d0ec0377589de7afd16ae207e5a172e}{
+\index{animalSection@{animalSection}!$\sim$animalSection@{$\sim$animalSection}}
+\index{$\sim$animalSection@{$\sim$animalSection}!animalSection@{animalSection}}
+\subsubsection[{$\sim$animalSection}]{\setlength{\rightskip}{0pt plus 5cm}animalSection::$\sim$animalSection ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a5d0ec0377589de7afd16ae207e5a172e}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classanimal_section_a725e52db97d2127b775e259cc21e954e}{
+\index{animalSection@{animalSection}!AddanimalHeatOp@{AddanimalHeatOp}}
+\index{AddanimalHeatOp@{AddanimalHeatOp}!animalSection@{animalSection}}
+\subsubsection[{AddanimalHeatOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalSection::AddanimalHeatOp (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a725e52db97d2127b775e259cc21e954e}
+
+
+Add amount to \hyperlink{classanimal}{animal} heat production. \hypertarget{classanimal_section_a4d179a53e1e930f22e3038edbc8087df}{
+\index{animalSection@{animalSection}!CheckLinks@{CheckLinks}}
+\index{CheckLinks@{CheckLinks}!animalSection@{animalSection}}
+\subsubsection[{CheckLinks}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::CheckLinks ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a4d179a53e1e930f22e3038edbc8087df}
+
+
+Checks to see if or \hyperlink{classmanure}{manure} stores have a recipient. Check that floors link to stores etc -\/ NJH Nov 99 \hypertarget{classanimal_section_a0e933a3e74bf07c42c444dd7dec4747e}{
+\index{animalSection@{animalSection}!CleanSection@{CleanSection}}
+\index{CleanSection@{CleanSection}!animalSection@{animalSection}}
+\subsubsection[{CleanSection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure} $\ast$ animalSection::CleanSection (string {\em forceIt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a0e933a3e74bf07c42c444dd7dec4747e}
+
+
+Clean \hyperlink{classmanure}{manure} from section. 
+\begin{DoxyParams}{Parameters}
+\item[{\em forceIt}]is set to true to force cleaning\end{DoxyParams}
+Cleans the section. Manure is sent to appropriate store by \hyperlink{classfloorstore}{floorstore} class. More than one floor possible Can force cleaning of all floors (whether scheduled or not) by setting forceIt to \char`\"{}force cleaning\char`\"{} \hypertarget{classanimal_section_aadfcafebdfc59ced126788f1425e3780}{
+\index{animalSection@{animalSection}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!animalSection@{animalSection}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::DailyUpdate ()}}
+\label{classanimal_section_aadfcafebdfc59ced126788f1425e3780}
+
+
+Daily update function. Calculate \hyperlink{classmanure}{manure} that is washed away each day. Calculate how much WHEATSTRAW that is used for bedding. That straw is removed from theProducts. Nbudget and Cbudget is updated with the n and content from the strew The C and N conent is added to the indicator file \hypertarget{classanimal_section_afeb7aebaaa99c762e3d1fc61bb47f03b}{
+\index{animalSection@{animalSection}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!animalSection@{animalSection}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::EndBudget (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_afeb7aebaaa99c762e3d1fc61bb47f03b}
+
+
+Checks if nutrient budgets are closed. Check N \hyperlink{classbudget}{budget} \hypertarget{classanimal_section_a8273d771612eb157505ecacc6677c29f}{
+\index{animalSection@{animalSection}!GetAlias@{GetAlias}}
+\index{GetAlias@{GetAlias}!animalSection@{animalSection}}
+\subsubsection[{GetAlias}]{\setlength{\rightskip}{0pt plus 5cm}virtual string animalSection::GetAlias ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a8273d771612eb157505ecacc6677c29f}
+
+
+Returned name of \hyperlink{classanimal}{animal} section. \hypertarget{classanimal_section_ac576524a422ea47bf04918c40d125695}{
+\index{animalSection@{animalSection}!GetanimalHeatOp@{GetanimalHeatOp}}
+\index{GetanimalHeatOp@{GetanimalHeatOp}!animalSection@{animalSection}}
+\subsubsection[{GetanimalHeatOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalSection::GetanimalHeatOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_ac576524a422ea47bf04918c40d125695}
+
+
+Return total into production by animals that. \hypertarget{classanimal_section_acedfd121b961e1b77669efc3104c125d}{
+\index{animalSection@{animalSection}!GetAreaPrAnimal@{GetAreaPrAnimal}}
+\index{GetAreaPrAnimal@{GetAreaPrAnimal}!animalSection@{animalSection}}
+\subsubsection[{GetAreaPrAnimal}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetAreaPrAnimal ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_acedfd121b961e1b77669efc3104c125d}
+
+
+Return the area in square metres per \hyperlink{classanimal}{animal}. Ask floors how much space is allocated to each \hyperlink{classanimal}{animal} \hypertarget{classanimal_section_a87002a34cbfb681aea527998573ae3bd}{
+\index{animalSection@{animalSection}!GetAreaUsed@{GetAreaUsed}}
+\index{GetAreaUsed@{GetAreaUsed}!animalSection@{animalSection}}
+\subsubsection[{GetAreaUsed}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetAreaUsed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_section_a87002a34cbfb681aea527998573ae3bd}
+
+
+Return area used by animals. \hypertarget{classanimal_section_a3373b12f97678e5c8f99e0d75a501438}{
+\index{animalSection@{animalSection}!GetContains@{GetContains}}
+\index{GetContains@{GetContains}!animalSection@{animalSection}}
+\subsubsection[{GetContains}]{\setlength{\rightskip}{0pt plus 5cm}virtual string animalSection::GetContains ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a3373b12f97678e5c8f99e0d75a501438}
+
+
+Return name of animals housed in section. \hypertarget{classanimal_section_ac5e69d491872dc3b57cba2b59ba36cc2}{
+\index{animalSection@{animalSection}!GetDailyElectricityUse@{GetDailyElectricityUse}}
+\index{GetDailyElectricityUse@{GetDailyElectricityUse}!animalSection@{animalSection}}
+\subsubsection[{GetDailyElectricityUse}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalSection::GetDailyElectricityUse ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_ac5e69d491872dc3b57cba2b59ba36cc2}
+
+
+Return day the electricity use. \hypertarget{classanimal_section_a785811ba65d4822e7c3b284ce77cb67f}{
+\index{animalSection@{animalSection}!GetElectricityUse@{GetElectricityUse}}
+\index{GetElectricityUse@{GetElectricityUse}!animalSection@{animalSection}}
+\subsubsection[{GetElectricityUse}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalSection::GetElectricityUse ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a785811ba65d4822e7c3b284ce77cb67f}
+
+
+Returned total amount of electricity used. \hypertarget{classanimal_section_a6fe2d73802cbac7f72ba723de24f5db4}{
+\index{animalSection@{animalSection}!GetFromManureStore@{GetFromManureStore}}
+\index{GetFromManureStore@{GetFromManureStore}!animalSection@{animalSection}}
+\subsubsection[{GetFromManureStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ animalSection::GetFromManureStore (double {\em RequestedAmount}, \/  {\bf product} $\ast$ {\em p}, \/  bool {\em checkAccess} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a6fe2d73802cbac7f72ba723de24f5db4}
+
+
+Requests an amount of \hyperlink{classmanure}{manure} from \hyperlink{classstorage}{storage}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em RequestedAmount}]is the wet weight of \hyperlink{classmanure}{manure} requested \item[{\em p}]points to the type of \hyperlink{classmanure}{manure} requested \item[{\em checkAccess}]is set true if one wants to check to see if the \hyperlink{classmanure}{manure} is accessible\end{DoxyParams}
+Get \hyperlink{classmanure}{manure} from store Returns a new \hyperlink{classmanure}{manure} object \hypertarget{classanimal_section_acbe4ee2baee5364b2dbada0196449ebe}{
+\index{animalSection@{animalSection}!GetLabour@{GetLabour}}
+\index{GetLabour@{GetLabour}!animalSection@{animalSection}}
+\subsubsection[{GetLabour}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalSection::GetLabour ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_acbe4ee2baee5364b2dbada0196449ebe}
+
+
+Return Labour used. 
+
+Reimplemented in \hyperlink{classpigstysection_a1a6111cae83f84e265366223576617c1}{pigstysection}.\hypertarget{classanimal_section_ab0b8b5f3e6b25020195e24cd71d56309}{
+\index{animalSection@{animalSection}!GetManureAmount@{GetManureAmount}}
+\index{GetManureAmount@{GetManureAmount}!animalSection@{animalSection}}
+\subsubsection[{GetManureAmount}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetManureAmount ()}}
+\label{classanimal_section_ab0b8b5f3e6b25020195e24cd71d56309}
+
+
+Return amount of \hyperlink{classmanure}{manure} stored within the section. Get \hyperlink{classmanure}{manure} available \hypertarget{classanimal_section_a72672d9b6cef359ce6506826483858ed}{
+\index{animalSection@{animalSection}!GetNInput@{GetNInput}}
+\index{GetNInput@{GetNInput}!animalSection@{animalSection}}
+\subsubsection[{GetNInput}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalSection::GetNInput ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a72672d9b6cef359ce6506826483858ed}
+
+
+Return amount of \hyperlink{classnitrogen}{nitrogen} input to the \hyperlink{classanimal}{animal} section so far. \hypertarget{classanimal_section_a3c7dd42cc4cc52620e5aee9fe458d823}{
+\index{animalSection@{animalSection}!GetNOutput@{GetNOutput}}
+\index{GetNOutput@{GetNOutput}!animalSection@{animalSection}}
+\subsubsection[{GetNOutput}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalSection::GetNOutput ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a3c7dd42cc4cc52620e5aee9fe458d823}
+
+
+Return the amount of \hyperlink{classnitrogen}{nitrogen} output from the \hyperlink{classanimal}{animal} section so far. \hypertarget{classanimal_section_a724eda30485b354884e11a3c762b54c0}{
+\index{animalSection@{animalSection}!GetNrOfAnimals@{GetNrOfAnimals}}
+\index{GetNrOfAnimals@{GetNrOfAnimals}!animalSection@{animalSection}}
+\subsubsection[{GetNrOfAnimals}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetNrOfAnimals ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_section_a724eda30485b354884e11a3c762b54c0}
+
+
+Return number of animals present. \hypertarget{classanimal_section_a263b40a7d973437e37ab791bb394dc1d}{
+\index{animalSection@{animalSection}!GetPlaces@{GetPlaces}}
+\index{GetPlaces@{GetPlaces}!animalSection@{animalSection}}
+\subsubsection[{GetPlaces}]{\setlength{\rightskip}{0pt plus 5cm}bool animalSection::GetPlaces ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_section_a263b40a7d973437e37ab791bb394dc1d}
+
+
+Return number of places available. \hypertarget{classanimal_section_ad17932a2af90cbb6b9b90ddb4c23ecd5}{
+\index{animalSection@{animalSection}!GetStoredC@{GetStoredC}}
+\index{GetStoredC@{GetStoredC}!animalSection@{animalSection}}
+\subsubsection[{GetStoredC}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetStoredC ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_ad17932a2af90cbb6b9b90ddb4c23ecd5}
+
+
+Return amount of carbon stored. Get total \hyperlink{classmanure}{manure} C \hypertarget{classanimal_section_a789377838a3e4c5e1eb8739f15014a3f}{
+\index{animalSection@{animalSection}!GetStoredDM@{GetStoredDM}}
+\index{GetStoredDM@{GetStoredDM}!animalSection@{animalSection}}
+\subsubsection[{GetStoredDM}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetStoredDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a789377838a3e4c5e1eb8739f15014a3f}
+
+
+Return amount of dry \hyperlink{classmatter}{matter} of stored. Get total \hyperlink{classmanure}{manure} DM \hypertarget{classanimal_section_ab67599c405210473dd2db71f28982318}{
+\index{animalSection@{animalSection}!GetStoredN@{GetStoredN}}
+\index{GetStoredN@{GetStoredN}!animalSection@{animalSection}}
+\subsubsection[{GetStoredN}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetStoredN ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_ab67599c405210473dd2db71f28982318}
+
+
+Returned the amount of \hyperlink{classnitrogen}{nitrogen} stored. Get total \hyperlink{classmanure}{manure} N \hypertarget{classanimal_section_a38e74942f2a9a7d767da7d8f209dc7ca}{
+\index{animalSection@{animalSection}!GetTotalArea@{GetTotalArea}}
+\index{GetTotalArea@{GetTotalArea}!animalSection@{animalSection}}
+\subsubsection[{GetTotalArea}]{\setlength{\rightskip}{0pt plus 5cm}double animalSection::GetTotalArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a38e74942f2a9a7d767da7d8f209dc7ca}
+
+
+Returned the total area of the \hyperlink{classanimal}{animal} section. Get total area of section \hypertarget{classanimal_section_afc851db54dc233202416093ecc3049a5}{
+\index{animalSection@{animalSection}!LinkManureStores@{LinkManureStores}}
+\index{LinkManureStores@{LinkManureStores}!animalSection@{animalSection}}
+\subsubsection[{LinkManureStores}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::LinkManureStores ({\bf manurestore} $\ast$ {\em aManureStore})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_afc851db54dc233202416093ecc3049a5}
+
+
+Links \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} from section to recipient \hyperlink{classstorage}{storage}. Link up flooring to the \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} named in the input file -\/ NJH Nov 99 \hypertarget{classanimal_section_a37bd72c4e77137793f050339384e9486}{
+\index{animalSection@{animalSection}!RcvManure@{RcvManure}}
+\index{RcvManure@{RcvManure}!animalSection@{animalSection}}
+\subsubsection[{RcvManure}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::RcvManure ({\bf manure} $\ast$ {\em aUrine}, \/  {\bf manure} $\ast$ {\em aFaeces})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a37bd72c4e77137793f050339384e9486}
+
+
+Received \hyperlink{classmanure}{manure} from somewhere else. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aUrine}]contains amount of urine \item[{\em aFaeces}]contains an amount of faeces\end{DoxyParams}
+Receive \hyperlink{classmanure}{manure} from animals in the housing -\/ is called by the animals -\/ NJH Nov 99 Modified June 2001 -\/ simple volatilization occurs when \hyperlink{classmanure}{manure} is added -\/ does not enter \hyperlink{classbuilding}{building} at all \hypertarget{classanimal_section_afe24791a22d2cbdb189332e1b468f059}{
+\index{animalSection@{animalSection}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!animalSection@{animalSection}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_afe24791a22d2cbdb189332e1b468f059}
+
+
+Function for reading input parameters from textile. read the input file for the animals. Does also initialize the floor store. If floor stores is to great or small Fasset will with this error: Stable:: cumulative excreta partitioning to flooring not equal to 1.0 
+
+Reimplemented in \hyperlink{classpigstysection_acce45c15afb18b52d83a351643d03b57}{pigstysection}.\hypertarget{classanimal_section_a30e3588926513981f209862ca76980cc}{
+\index{animalSection@{animalSection}!ScaleSize@{ScaleSize}}
+\index{ScaleSize@{ScaleSize}!animalSection@{animalSection}}
+\subsubsection[{ScaleSize}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::ScaleSize ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a30e3588926513981f209862ca76980cc}
+
+
+Scaled the \hyperlink{classanimal}{animal} section to the number of animals present. Scale \hyperlink{classanimal}{animal} section according to the number of animals present \hypertarget{classanimal_section_a89807aacadf08b582db9e9d6bc40fa16}{
+\index{animalSection@{animalSection}!SetanimalHeatOp@{SetanimalHeatOp}}
+\index{SetanimalHeatOp@{SetanimalHeatOp}!animalSection@{animalSection}}
+\subsubsection[{SetanimalHeatOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalSection::SetanimalHeatOp (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a89807aacadf08b582db9e9d6bc40fa16}
+
+
+Set the production by animals. \hypertarget{classanimal_section_a8266d11321ed09220ff65d4b2f765714}{
+\index{animalSection@{animalSection}!SetAnimalParameters@{SetAnimalParameters}}
+\index{SetAnimalParameters@{SetAnimalParameters}!animalSection@{animalSection}}
+\subsubsection[{SetAnimalParameters}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::SetAnimalParameters (double {\em numberOfAnimals}, \/  double {\em faecesPerYear}, \/  double {\em urinePerYear}, \/  double {\em heatOp} = {\ttfamily 0.0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a8266d11321ed09220ff65d4b2f765714}
+
+
+Initialise \hyperlink{classanimal}{animal} parameters. Set the \hyperlink{classanimal}{animal} parameters for the section. Called by grazing manager or swinestock \hypertarget{classanimal_section_a97192665631325ed05570268d9a332d3}{
+\index{animalSection@{animalSection}!SetfaecesPerYear@{SetfaecesPerYear}}
+\index{SetfaecesPerYear@{SetfaecesPerYear}!animalSection@{animalSection}}
+\subsubsection[{SetfaecesPerYear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalSection::SetfaecesPerYear (double {\em someFaeces})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_a97192665631325ed05570268d9a332d3}
+
+
+Set annual faeces production by animals in kilograms fresh weight. \hypertarget{classanimal_section_afeb3c65b7f3a7e96d71294a84ac68651}{
+\index{animalSection@{animalSection}!setNrOfAnimals@{setNrOfAnimals}}
+\index{setNrOfAnimals@{setNrOfAnimals}!animalSection@{animalSection}}
+\subsubsection[{setNrOfAnimals}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::setNrOfAnimals (double {\em aNr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_section_afeb3c65b7f3a7e96d71294a84ac68651}
+
+
+set number of animals \hypertarget{classanimal_section_ab571a85500e0c5454cd77b7787739d5f}{
+\index{animalSection@{animalSection}!SeturinePerYear@{SeturinePerYear}}
+\index{SeturinePerYear@{SeturinePerYear}!animalSection@{animalSection}}
+\subsubsection[{SeturinePerYear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalSection::SeturinePerYear (double {\em someUrine})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_section_ab571a85500e0c5454cd77b7787739d5f}
+
+
+Said annual murine production by animals in kilograms fresh weight. \hypertarget{classanimal_section_a71d57784567fc97647e2b7d4c98bb6d6}{
+\index{animalSection@{animalSection}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!animalSection@{animalSection}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::Volatize (double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a71d57784567fc97647e2b7d4c98bb6d6}
+
+
+Function of statically calculating ammonia volatilisation and other gaseous losses. \hypertarget{classanimal_section_a6d35029ed226599d557f1bf61b9100c3}{
+\index{animalSection@{animalSection}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!animalSection@{animalSection}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void animalSection::Volatize (double {\em airVelocity}, \/  double {\em humidity}, \/  double {\em temperature}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em waterEvap}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_section_a6d35029ed226599d557f1bf61b9100c3}
+
+
+Function of dynamically calculating ammonia volatilisation and other gaseous losses. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classanimal_section_afc0c5d745b4e8cb42de23c61aa1e2738}{
+\index{animalSection@{animalSection}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!animalSection@{animalSection}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf animalSection} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classanimal_section_afc0c5d745b4e8cb42de23c61aa1e2738}
+
+
+Streaming operator. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classanimal_section_ae78e07631b9b3eec8795a89357456417}{
+\index{animalSection@{animalSection}!Alias@{Alias}}
+\index{Alias@{Alias}!animalSection@{animalSection}}
+\subsubsection[{Alias}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf animalSection::Alias}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_ae78e07631b9b3eec8795a89357456417}
+\hypertarget{classanimal_section_aa615ab24431c87f4f728294d797cff06}{
+\index{animalSection@{animalSection}!animalHeatOp@{animalHeatOp}}
+\index{animalHeatOp@{animalHeatOp}!animalSection@{animalSection}}
+\subsubsection[{animalHeatOp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::animalHeatOp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_aa615ab24431c87f4f728294d797cff06}
+
+
+Total the production of the \hyperlink{classlivestock}{livestock} present. \hypertarget{classanimal_section_a6b36f885be582b5d2c9c32bbe8792cc8}{
+\index{animalSection@{animalSection}!Cbudget@{Cbudget}}
+\index{Cbudget@{Cbudget}!animalSection@{animalSection}}
+\subsubsection[{Cbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf animalSection::Cbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a6b36f885be582b5d2c9c32bbe8792cc8}
+
+
+carbon \hyperlink{classbudget}{budget} last \hypertarget{classanimal_section_a0b615eac60c7a1da2c0ed2ad06e344aa}{
+\index{animalSection@{animalSection}!ConstantCleaning@{ConstantCleaning}}
+\index{ConstantCleaning@{ConstantCleaning}!animalSection@{animalSection}}
+\subsubsection[{ConstantCleaning}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::ConstantCleaning}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a0b615eac60c7a1da2c0ed2ad06e344aa}
+\hypertarget{classanimal_section_a9c8c6bf7c47686872e99fc5e0978aa40}{
+\index{animalSection@{animalSection}!ConstantFeeding@{ConstantFeeding}}
+\index{ConstantFeeding@{ConstantFeeding}!animalSection@{animalSection}}
+\subsubsection[{ConstantFeeding}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::ConstantFeeding}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a9c8c6bf7c47686872e99fc5e0978aa40}
+\hypertarget{classanimal_section_a683d78feb642fb9c47b7c6ca04fa06fb}{
+\index{animalSection@{animalSection}!Contains@{Contains}}
+\index{Contains@{Contains}!animalSection@{animalSection}}
+\subsubsection[{Contains}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf animalSection::Contains}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a683d78feb642fb9c47b7c6ca04fa06fb}
+
+
+name of \hyperlink{classanimal}{animal} housed \hypertarget{classanimal_section_a0af16539b92229327a050cce9372f4cc}{
+\index{animalSection@{animalSection}!ElectricityUse@{ElectricityUse}}
+\index{ElectricityUse@{ElectricityUse}!animalSection@{animalSection}}
+\subsubsection[{ElectricityUse}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::ElectricityUse}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a0af16539b92229327a050cce9372f4cc}
+
+
+kW per \hyperlink{classanimal}{animal} per year \hypertarget{classanimal_section_ab764a9e7261c89469543c202df1aff2a}{
+\index{animalSection@{animalSection}!faecesPerYear@{faecesPerYear}}
+\index{faecesPerYear@{faecesPerYear}!animalSection@{animalSection}}
+\subsubsection[{faecesPerYear}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::faecesPerYear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_ab764a9e7261c89469543c202df1aff2a}
+
+
+total input of faeces to this section in a year (estimated on startup) \hypertarget{classanimal_section_aa0266aef51887e64de19e50263deb01f}{
+\index{animalSection@{animalSection}!flooring@{flooring}}
+\index{flooring@{flooring}!animalSection@{animalSection}}
+\subsubsection[{flooring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf floorstore}$>$$\ast$ {\bf animalSection::flooring}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_aa0266aef51887e64de19e50263deb01f}
+
+
+Pointer to a list of objects describing the flooring in the \hyperlink{classanimal}{animal} section. \hypertarget{classanimal_section_a9da1ddf7bdd6360f4595a020aa2ab5e7}{
+\index{animalSection@{animalSection}!Nbudget@{Nbudget}}
+\index{Nbudget@{Nbudget}!animalSection@{animalSection}}
+\subsubsection[{Nbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf animalSection::Nbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a9da1ddf7bdd6360f4595a020aa2ab5e7}
+
+
+Nitrogen \hyperlink{classbudget}{budget} class. \hypertarget{classanimal_section_a1911235adfd2f409e78b671cf8df0c8a}{
+\index{animalSection@{animalSection}!NrOfAnimals@{NrOfAnimals}}
+\index{NrOfAnimals@{NrOfAnimals}!animalSection@{animalSection}}
+\subsubsection[{NrOfAnimals}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::NrOfAnimals}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a1911235adfd2f409e78b671cf8df0c8a}
+
+
+Number of animals present. \hypertarget{classanimal_section_a6dec38054e731fa71041f934f12897b7}{
+\index{animalSection@{animalSection}!Places@{Places}}
+\index{Places@{Places}!animalSection@{animalSection}}
+\subsubsection[{Places}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::Places}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a6dec38054e731fa71041f934f12897b7}
+
+
+Maximum number of places for animals. \hypertarget{classanimal_section_ab89ee53e426cd797b752f65669b2bde2}{
+\index{animalSection@{animalSection}!SpiltDrinkingWater@{SpiltDrinkingWater}}
+\index{SpiltDrinkingWater@{SpiltDrinkingWater}!animalSection@{animalSection}}
+\subsubsection[{SpiltDrinkingWater}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::SpiltDrinkingWater}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_ab89ee53e426cd797b752f65669b2bde2}
+
+
+\hyperlink{classwater}{water} input per \hyperlink{classanimal}{animal} per day (kg) \hypertarget{classanimal_section_ae3f2a70dd57961b9b98842622b6ebcd2}{
+\index{animalSection@{animalSection}!urinePerYear@{urinePerYear}}
+\index{urinePerYear@{urinePerYear}!animalSection@{animalSection}}
+\subsubsection[{urinePerYear}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::urinePerYear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_ae3f2a70dd57961b9b98842622b6ebcd2}
+\hypertarget{classanimal_section_adf379500a581d415c1dfee5d7a9dfdff}{
+\index{animalSection@{animalSection}!VariableCleaning@{VariableCleaning}}
+\index{VariableCleaning@{VariableCleaning}!animalSection@{animalSection}}
+\subsubsection[{VariableCleaning}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::VariableCleaning}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_adf379500a581d415c1dfee5d7a9dfdff}
+\hypertarget{classanimal_section_a5c7d055ab1ea44cca81097b797c14f52}{
+\index{animalSection@{animalSection}!VariableFeeding@{VariableFeeding}}
+\index{VariableFeeding@{VariableFeeding}!animalSection@{animalSection}}
+\subsubsection[{VariableFeeding}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalSection::VariableFeeding}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_section_a5c7d055ab1ea44cca81097b797c14f52}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{animal_section_8h}{animalSection.h}\item 
+C:/main/trunk/src/building/\hyperlink{animal_section_8cpp}{animalSection.cpp}\end{DoxyCompactItemize}

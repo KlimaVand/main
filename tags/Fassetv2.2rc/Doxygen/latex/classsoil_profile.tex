@@ -1,0 +1,489 @@
+\hypertarget{classsoil_profile}{
+\section{soilProfile Class Reference}
+\label{classsoil_profile}\index{soilProfile@{soilProfile}}
+}
+
+
+{\ttfamily \#include $<$soilProfile.h$>$}Inheritance diagram for soilProfile::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classsoil_profile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsoil_profile_a189f609ac4771c844111fd994bc6fdd4}{soilProfile} (const char $\ast$Pname, const int \hyperlink{classbase_afa59aaa1a0201700640234eb13a03aae}{Index}, const \hyperlink{classbase}{base} $\ast$owner)
+\item 
+\hyperlink{classsoil_profile_a4047f818afa5dc48f8d7abdeb85658b9}{soilProfile} (const \hyperlink{classsoil_profile}{soilProfile} \&Profile)
+\item 
+\hyperlink{classsoil_profile_a1af23872681bafd0ed93e666646e5f2d}{$\sim$soilProfile} ()
+\item 
+void \hyperlink{classsoil_profile_a720227a11c5b7d42ff847bca13ea9ed2}{CheckCoherence} (int checkpoint)
+\item 
+virtual void \hyperlink{classsoil_profile_af06cdd8163adae8f60c89365e242f189}{Initialize} (fstream $\ast$f)
+\item 
+virtual void \hyperlink{classsoil_profile_a7fd5e793b56ea8fbc1aeb79e1927565e}{Add} (\hyperlink{classsoil_profile}{soilProfile} $\ast$Profile, double fraction)
+\item 
+virtual void \hyperlink{classsoil_profile_a92dfd951458d1d150e642f35e135f4b3}{AddItem} (\hyperlink{classsoil_layer}{soilLayer} $\ast$data)
+\item 
+virtual void \hyperlink{classsoil_profile_aabd57b1bc75b4960731ed99fb01adba5}{AddNutrient} (\hyperlink{classnitrogen}{nitrogen} soilNitrate, \hyperlink{classnitrogen}{nitrogen} soilAmmonium)
+\item 
+virtual void \hyperlink{classsoil_profile_a5631b093b7853056cc794818132aa4f5}{UpdateTemperature} (double temp, double snowContent)
+\item 
+virtual void \hyperlink{classsoil_profile_a11708c4ea232e4ba78ba3b7cf425853c}{UpdateFinDiffTemperature} (double temp, double snowContent)
+\item 
+virtual void \hyperlink{classsoil_profile_a63e938ce16657be6fbff5eb6a6b63791}{Terminate} (string c)
+\item 
+virtual void \hyperlink{classsoil_profile_a97afe4fe7935e3f3fa732f8fe20f6730}{Tridag} (double a\mbox{[}$\,$\mbox{]}, double b\mbox{[}$\,$\mbox{]}, double c\mbox{[}$\,$\mbox{]}, double r\mbox{[}$\,$\mbox{]}, double u\mbox{[}$\,$\mbox{]}, unsigned long n)
+\item 
+virtual double \hyperlink{classsoil_profile_a9928340939c7a139c0e708be2e7d4ca0}{UpdateOrganicMatter} ()
+\item 
+virtual double \hyperlink{classsoil_profile_a92e15c837353821cbb06c51bb3fd542b}{MaxTranspiration} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{structroot_structure}{rootStructure} $>$ $\ast$rootList)
+\item 
+virtual double \hyperlink{classsoil_profile_acfcd258f5c2c0914b13a39d6772e0f5c}{GetMaximumEvaporation} ()
+\item 
+virtual void \hyperlink{classsoil_profile_a2338366aa1f67cfeefb60ed5be15d65a}{UpdateInfiltration} (double $\ast$surplus, \hyperlink{classnitrogen}{nitrogen} $\ast$surfaceNitrate, \hyperlink{classnitrogen}{nitrogen} $\ast$surfaceAmmonium, \hyperlink{classnitrogen}{nitrogen} $\ast$NitrateLeached, \hyperlink{classnitrogen}{nitrogen} $\ast$AmmoniumLeached, double Chloride)
+\item 
+virtual void \hyperlink{classsoil_profile_a942247912493da600aafecfa845d2d9c}{UpdateInfiltrationSWAT} (double $\ast$surplus, \hyperlink{classnitrogen}{nitrogen} $\ast$surfaceNitrate, \hyperlink{classnitrogen}{nitrogen} $\ast$surfaceAmmonium, \hyperlink{classnitrogen}{nitrogen} $\ast$NitrateLeached, \hyperlink{classnitrogen}{nitrogen} $\ast$AmmoniumLeached, double Chloride)
+\item 
+virtual void \hyperlink{classsoil_profile_a276eab1d6e61326093e214a89a9af7db}{SubtractTranspiration} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{structroot_structure}{rootStructure} $>$ $\ast$rootList)
+\item 
+virtual void \hyperlink{classsoil_profile_a4edb42ee540e88473200024afd61b232}{SubtractEvaporation} (double soilEvaporation)
+\item 
+\hyperlink{classnitrogen}{nitrogen} $\ast$ \hyperlink{classsoil_profile_af357c8e8608de267646daf715ca1a125}{SubtractNitrogenUptake} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{structroot_structure}{rootStructure} $>$ $\ast$rootList)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a4a0d204ede21c28dc81b117813781ee1}{UpdateNitrification} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_abd4b5dd658a93bc311fcd9a1233eaa1f}{UpdateDenitrification} (double TotalCO2Emission)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_aee00c88c701f2ef848b9c96a3013e294}{GetOrganicNitrogen} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a4fc437a3643651526cdba9cb737d81bb}{GetOrganicNitrogen} (double startDep, double thick)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a7cde7a4168ab9a8188fb4f6f18d79388}{GetPoolNitrogen} (const char $\ast$\hyperlink{classbase_abd8f99d007cb1914c0837488829974ec}{Name})
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a928dcc3f93130bf5bff194453a36d4f8}{GetPoolNitrogen} (const char $\ast$\hyperlink{classbase_abd8f99d007cb1914c0837488829974ec}{Name}, double startDep, double thick)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a5714479e1a3ca3d9c0669dbdfedf3b57}{GetAmmoniumLeaching} (double depth)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_aaed7e24507f4b6af78401c985ab1cc12}{GetTotalNitrogen} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_aefe1b8475041b54e5f0a1fd6cdebff2a}{GetNitrateLeaching} (double depth)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_ae08f75a5b3b0af43054c75f7c6b0867e}{GetAmmonium} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a753455cef3dae233090a481b833e25c6}{GetNitrate} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_ae5719e1e82452eefb240900a9e62e27d}{GetAmmonium} (double startDep, double thick)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a52af6d32aff7208063bd86a2a8b3c25b}{GetNitrate} (double startDep, double thick)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a1a70449a5466f3a625a9b393ee18112f}{GetN2OFromNitrification} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_profile_a9be3f4ec8fe381095d2f9a15f1b7d77d}{GetN2OFromDenitrification} ()
+\item 
+double \hyperlink{classsoil_profile_a51f252742a43f831953d0ea34e273530}{GetChloride} (double startDep, double thick)
+\item 
+virtual double \hyperlink{classsoil_profile_a92895ed75f2779eb7a9468a4e5662f4e}{GetDiscreteDepth} (double depth)
+\item 
+\hyperlink{classsoil_layer}{soilLayer} $\ast$ \hyperlink{classsoil_profile_aa91d669a4d9cc0755e7a277ae09dd7cd}{GetLayer} (int i)
+\item 
+virtual void \hyperlink{classsoil_profile_a746e2b78952a19280ace39d3518dc109}{UpdateT} (double $\ast$soilTemperature, double airTemperature, double depth, double meanAirTemperature)
+\item 
+virtual void \hyperlink{classsoil_profile_ab754bbc57f8cc220f59f9695d6de51e7}{UpdateTemperature} (const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual double \hyperlink{classsoil_profile_a0ce7a0cacb136fae92fac737f23fe46f}{GetTemperature} (double depth)
+\item 
+virtual double \hyperlink{classsoil_profile_a2991385a93a7624c9aaa7bb395464943}{GetPressurePotential} (double depth)
+\item 
+virtual double \hyperlink{classsoil_profile_a25cf83f98b4a58017331dbf78ee31824}{GetTotalWater} ()
+\item 
+virtual double \hyperlink{classsoil_profile_a3a8791cd9244ae7c70246be2e5a27b02}{GetTotalWater} (double startDepth, double thickness)
+\item 
+virtual double \hyperlink{classsoil_profile_a51f57a7397df5853e8899f34ada2d374}{GetAvailWater} (double startDepth, double thickness)
+\item 
+virtual double \hyperlink{classsoil_profile_adc7003b312a9bcc2fffdd45acfc65f28}{GetAvailCapacity} (double startDepth, double thickness)
+\item 
+virtual double \hyperlink{classsoil_profile_a6c154b0cb0b3ab611efde6f50d53cbc7}{GetFieldCapacity} (double startDepth, double thickness)
+\item 
+virtual double \hyperlink{classsoil_profile_a1ff69f03ceffe60204f25f0fd73b2e07}{GetWiltCapacity} (double startDepth, double thickness)
+\item 
+int \hyperlink{classsoil_profile_acd5861b315e18288325accc522e42918}{GetLayers} ()
+\item 
+double \hyperlink{classsoil_profile_aa28fc2eb898f40cec10a9e57906b36de}{GetMaximumDepth} ()
+\item 
+double \hyperlink{classsoil_profile_a44e267969da21ed965b66e06fe40a618}{GetLayerStartDepth} (int No)
+\item 
+double \hyperlink{classsoil_profile_a062bc6b13eb0debe7a8a8c1e31c53b4e}{GetLayerThickness} (int No)
+\item 
+double \hyperlink{classsoil_profile_afb39b89d67044da69b0258915c5eed1e}{GetCarbon} ()
+\item 
+double \hyperlink{classsoil_profile_ac3acd0216f995cbda5b47d393c5d6e98}{GetOrganicCarbon} (double startDep, double thick)
+\item 
+double \hyperlink{classsoil_profile_a268e490e7919d3e50abd2c25372f6c87}{GetPoolCarbon} (const char $\ast$\hyperlink{classbase_abd8f99d007cb1914c0837488829974ec}{Name})
+\item 
+double \hyperlink{classsoil_profile_a46a43c1164e3fb8bbed604653f908561}{GetPoolCarbon} (const char $\ast$\hyperlink{classbase_abd8f99d007cb1914c0837488829974ec}{Name}, double startDep, double thick)
+\item 
+double \hyperlink{classsoil_profile_ad28b9757b77fa71db68254995c254cf2}{GetSMB} (int numOfLayers)
+\item 
+double \hyperlink{classsoil_profile_a3f6845a54d38bc96d3c746c3e1875415}{GetSoilMass} (double startDep, double thick)
+\item 
+double \hyperlink{classsoil_profile_a46d21083a35260e54710785e8b9b8249}{GetDrainage} (double depth)
+\item 
+double \hyperlink{classsoil_profile_a1804fcac2fb377b4c1a783b033b1ef7a}{GetDrainageBottom} ()
+\item 
+double \hyperlink{classsoil_profile_a839de879376f19c2408171cfb82c71e1}{GetEvaporationContent} ()
+\item 
+double \hyperlink{classsoil_profile_a55999aeb778e13ce54f304630a393091}{GetMaxRootDepth} ()
+\item 
+double \hyperlink{classsoil_profile_a27959c28ab4031f581b0e17142a45b7f}{GetClayContent} (double startdepth, double thick)
+\item 
+void \hyperlink{classsoil_profile_a626f77b25f2ebf34e48b46fbc4c27088}{AddProduct} (const \hyperlink{classorganic_product}{organicProduct} \&\hyperlink{classproduct}{product}, double $\ast$rootLengthList)
+\item 
+void \hyperlink{classsoil_profile_ac0825115659eefb3cdf0d25bc385b594}{StartBudget} ()
+\item 
+void \hyperlink{classsoil_profile_af7441e5aa2d37028f2d8539bffba3580}{EndBudget} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsoil_profile_a189f609ac4771c844111fd994bc6fdd4}{
+\index{soilProfile@{soilProfile}!soilProfile@{soilProfile}}
+\index{soilProfile@{soilProfile}!soilProfile@{soilProfile}}
+\subsubsection[{soilProfile}]{\setlength{\rightskip}{0pt plus 5cm}soilProfile::soilProfile (const char $\ast$ {\em Pname}, \/  const int {\em Index}, \/  const {\bf base} $\ast$ {\em owner})}}
+\label{classsoil_profile_a189f609ac4771c844111fd994bc6fdd4}
+\hypertarget{classsoil_profile_a4047f818afa5dc48f8d7abdeb85658b9}{
+\index{soilProfile@{soilProfile}!soilProfile@{soilProfile}}
+\index{soilProfile@{soilProfile}!soilProfile@{soilProfile}}
+\subsubsection[{soilProfile}]{\setlength{\rightskip}{0pt plus 5cm}soilProfile::soilProfile (const {\bf soilProfile} \& {\em Profile})}}
+\label{classsoil_profile_a4047f818afa5dc48f8d7abdeb85658b9}
+\hypertarget{classsoil_profile_a1af23872681bafd0ed93e666646e5f2d}{
+\index{soilProfile@{soilProfile}!$\sim$soilProfile@{$\sim$soilProfile}}
+\index{$\sim$soilProfile@{$\sim$soilProfile}!soilProfile@{soilProfile}}
+\subsubsection[{$\sim$soilProfile}]{\setlength{\rightskip}{0pt plus 5cm}soilProfile::$\sim$soilProfile ()}}
+\label{classsoil_profile_a1af23872681bafd0ed93e666646e5f2d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsoil_profile_a7fd5e793b56ea8fbc1aeb79e1927565e}{
+\index{soilProfile@{soilProfile}!Add@{Add}}
+\index{Add@{Add}!soilProfile@{soilProfile}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::Add ({\bf soilProfile} $\ast$ {\em Profile}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a7fd5e793b56ea8fbc1aeb79e1927565e}
+\hypertarget{classsoil_profile_a92dfd951458d1d150e642f35e135f4b3}{
+\index{soilProfile@{soilProfile}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!soilProfile@{soilProfile}}
+\subsubsection[{AddItem}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::AddItem ({\bf soilLayer} $\ast$ {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a92dfd951458d1d150e642f35e135f4b3}
+\hypertarget{classsoil_profile_aabd57b1bc75b4960731ed99fb01adba5}{
+\index{soilProfile@{soilProfile}!AddNutrient@{AddNutrient}}
+\index{AddNutrient@{AddNutrient}!soilProfile@{soilProfile}}
+\subsubsection[{AddNutrient}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::AddNutrient ({\bf nitrogen} {\em soilNitrate}, \/  {\bf nitrogen} {\em soilAmmonium})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_aabd57b1bc75b4960731ed99fb01adba5}
+\hypertarget{classsoil_profile_a626f77b25f2ebf34e48b46fbc4c27088}{
+\index{soilProfile@{soilProfile}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!soilProfile@{soilProfile}}
+\subsubsection[{AddProduct}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::AddProduct (const {\bf organicProduct} \& {\em product}, \/  double $\ast$ {\em rootLengthList})}}
+\label{classsoil_profile_a626f77b25f2ebf34e48b46fbc4c27088}
+\hypertarget{classsoil_profile_a720227a11c5b7d42ff847bca13ea9ed2}{
+\index{soilProfile@{soilProfile}!CheckCoherence@{CheckCoherence}}
+\index{CheckCoherence@{CheckCoherence}!soilProfile@{soilProfile}}
+\subsubsection[{CheckCoherence}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::CheckCoherence (int {\em checkpoint})}}
+\label{classsoil_profile_a720227a11c5b7d42ff847bca13ea9ed2}
+\hypertarget{classsoil_profile_af7441e5aa2d37028f2d8539bffba3580}{
+\index{soilProfile@{soilProfile}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!soilProfile@{soilProfile}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::EndBudget ()}}
+\label{classsoil_profile_af7441e5aa2d37028f2d8539bffba3580}
+\hypertarget{classsoil_profile_ae5719e1e82452eefb240900a9e62e27d}{
+\index{soilProfile@{soilProfile}!GetAmmonium@{GetAmmonium}}
+\index{GetAmmonium@{GetAmmonium}!soilProfile@{soilProfile}}
+\subsubsection[{GetAmmonium}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetAmmonium (double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_ae5719e1e82452eefb240900a9e62e27d}
+\hypertarget{classsoil_profile_ae08f75a5b3b0af43054c75f7c6b0867e}{
+\index{soilProfile@{soilProfile}!GetAmmonium@{GetAmmonium}}
+\index{GetAmmonium@{GetAmmonium}!soilProfile@{soilProfile}}
+\subsubsection[{GetAmmonium}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetAmmonium ()}}
+\label{classsoil_profile_ae08f75a5b3b0af43054c75f7c6b0867e}
+\hypertarget{classsoil_profile_a5714479e1a3ca3d9c0669dbdfedf3b57}{
+\index{soilProfile@{soilProfile}!GetAmmoniumLeaching@{GetAmmoniumLeaching}}
+\index{GetAmmoniumLeaching@{GetAmmoniumLeaching}!soilProfile@{soilProfile}}
+\subsubsection[{GetAmmoniumLeaching}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetAmmoniumLeaching (double {\em depth})}}
+\label{classsoil_profile_a5714479e1a3ca3d9c0669dbdfedf3b57}
+\hypertarget{classsoil_profile_adc7003b312a9bcc2fffdd45acfc65f28}{
+\index{soilProfile@{soilProfile}!GetAvailCapacity@{GetAvailCapacity}}
+\index{GetAvailCapacity@{GetAvailCapacity}!soilProfile@{soilProfile}}
+\subsubsection[{GetAvailCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetAvailCapacity (double {\em startDepth}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_adc7003b312a9bcc2fffdd45acfc65f28}
+\hypertarget{classsoil_profile_a51f57a7397df5853e8899f34ada2d374}{
+\index{soilProfile@{soilProfile}!GetAvailWater@{GetAvailWater}}
+\index{GetAvailWater@{GetAvailWater}!soilProfile@{soilProfile}}
+\subsubsection[{GetAvailWater}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetAvailWater (double {\em startDepth}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a51f57a7397df5853e8899f34ada2d374}
+\hypertarget{classsoil_profile_afb39b89d67044da69b0258915c5eed1e}{
+\index{soilProfile@{soilProfile}!GetCarbon@{GetCarbon}}
+\index{GetCarbon@{GetCarbon}!soilProfile@{soilProfile}}
+\subsubsection[{GetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetCarbon ()}}
+\label{classsoil_profile_afb39b89d67044da69b0258915c5eed1e}
+\hypertarget{classsoil_profile_a51f252742a43f831953d0ea34e273530}{
+\index{soilProfile@{soilProfile}!GetChloride@{GetChloride}}
+\index{GetChloride@{GetChloride}!soilProfile@{soilProfile}}
+\subsubsection[{GetChloride}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetChloride (double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_a51f252742a43f831953d0ea34e273530}
+\hypertarget{classsoil_profile_a27959c28ab4031f581b0e17142a45b7f}{
+\index{soilProfile@{soilProfile}!GetClayContent@{GetClayContent}}
+\index{GetClayContent@{GetClayContent}!soilProfile@{soilProfile}}
+\subsubsection[{GetClayContent}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetClayContent (double {\em startdepth}, \/  double {\em thick})}}
+\label{classsoil_profile_a27959c28ab4031f581b0e17142a45b7f}
+\hypertarget{classsoil_profile_a92895ed75f2779eb7a9468a4e5662f4e}{
+\index{soilProfile@{soilProfile}!GetDiscreteDepth@{GetDiscreteDepth}}
+\index{GetDiscreteDepth@{GetDiscreteDepth}!soilProfile@{soilProfile}}
+\subsubsection[{GetDiscreteDepth}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetDiscreteDepth (double {\em depth})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a92895ed75f2779eb7a9468a4e5662f4e}
+\hypertarget{classsoil_profile_a46d21083a35260e54710785e8b9b8249}{
+\index{soilProfile@{soilProfile}!GetDrainage@{GetDrainage}}
+\index{GetDrainage@{GetDrainage}!soilProfile@{soilProfile}}
+\subsubsection[{GetDrainage}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetDrainage (double {\em depth})}}
+\label{classsoil_profile_a46d21083a35260e54710785e8b9b8249}
+\hypertarget{classsoil_profile_a1804fcac2fb377b4c1a783b033b1ef7a}{
+\index{soilProfile@{soilProfile}!GetDrainageBottom@{GetDrainageBottom}}
+\index{GetDrainageBottom@{GetDrainageBottom}!soilProfile@{soilProfile}}
+\subsubsection[{GetDrainageBottom}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetDrainageBottom ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_profile_a1804fcac2fb377b4c1a783b033b1ef7a}
+\hypertarget{classsoil_profile_a839de879376f19c2408171cfb82c71e1}{
+\index{soilProfile@{soilProfile}!GetEvaporationContent@{GetEvaporationContent}}
+\index{GetEvaporationContent@{GetEvaporationContent}!soilProfile@{soilProfile}}
+\subsubsection[{GetEvaporationContent}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetEvaporationContent ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_profile_a839de879376f19c2408171cfb82c71e1}
+\hypertarget{classsoil_profile_a6c154b0cb0b3ab611efde6f50d53cbc7}{
+\index{soilProfile@{soilProfile}!GetFieldCapacity@{GetFieldCapacity}}
+\index{GetFieldCapacity@{GetFieldCapacity}!soilProfile@{soilProfile}}
+\subsubsection[{GetFieldCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetFieldCapacity (double {\em startDepth}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a6c154b0cb0b3ab611efde6f50d53cbc7}
+\hypertarget{classsoil_profile_aa91d669a4d9cc0755e7a277ae09dd7cd}{
+\index{soilProfile@{soilProfile}!GetLayer@{GetLayer}}
+\index{GetLayer@{GetLayer}!soilProfile@{soilProfile}}
+\subsubsection[{GetLayer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soilLayer}$\ast$ soilProfile::GetLayer (int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_profile_aa91d669a4d9cc0755e7a277ae09dd7cd}
+\hypertarget{classsoil_profile_acd5861b315e18288325accc522e42918}{
+\index{soilProfile@{soilProfile}!GetLayers@{GetLayers}}
+\index{GetLayers@{GetLayers}!soilProfile@{soilProfile}}
+\subsubsection[{GetLayers}]{\setlength{\rightskip}{0pt plus 5cm}int soilProfile::GetLayers ()}}
+\label{classsoil_profile_acd5861b315e18288325accc522e42918}
+\hypertarget{classsoil_profile_a44e267969da21ed965b66e06fe40a618}{
+\index{soilProfile@{soilProfile}!GetLayerStartDepth@{GetLayerStartDepth}}
+\index{GetLayerStartDepth@{GetLayerStartDepth}!soilProfile@{soilProfile}}
+\subsubsection[{GetLayerStartDepth}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetLayerStartDepth (int {\em No})}}
+\label{classsoil_profile_a44e267969da21ed965b66e06fe40a618}
+\hypertarget{classsoil_profile_a062bc6b13eb0debe7a8a8c1e31c53b4e}{
+\index{soilProfile@{soilProfile}!GetLayerThickness@{GetLayerThickness}}
+\index{GetLayerThickness@{GetLayerThickness}!soilProfile@{soilProfile}}
+\subsubsection[{GetLayerThickness}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetLayerThickness (int {\em No})}}
+\label{classsoil_profile_a062bc6b13eb0debe7a8a8c1e31c53b4e}
+\hypertarget{classsoil_profile_aa28fc2eb898f40cec10a9e57906b36de}{
+\index{soilProfile@{soilProfile}!GetMaximumDepth@{GetMaximumDepth}}
+\index{GetMaximumDepth@{GetMaximumDepth}!soilProfile@{soilProfile}}
+\subsubsection[{GetMaximumDepth}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetMaximumDepth ()}}
+\label{classsoil_profile_aa28fc2eb898f40cec10a9e57906b36de}
+\hypertarget{classsoil_profile_acfcd258f5c2c0914b13a39d6772e0f5c}{
+\index{soilProfile@{soilProfile}!GetMaximumEvaporation@{GetMaximumEvaporation}}
+\index{GetMaximumEvaporation@{GetMaximumEvaporation}!soilProfile@{soilProfile}}
+\subsubsection[{GetMaximumEvaporation}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetMaximumEvaporation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_acfcd258f5c2c0914b13a39d6772e0f5c}
+\hypertarget{classsoil_profile_a55999aeb778e13ce54f304630a393091}{
+\index{soilProfile@{soilProfile}!GetMaxRootDepth@{GetMaxRootDepth}}
+\index{GetMaxRootDepth@{GetMaxRootDepth}!soilProfile@{soilProfile}}
+\subsubsection[{GetMaxRootDepth}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetMaxRootDepth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_profile_a55999aeb778e13ce54f304630a393091}
+\hypertarget{classsoil_profile_a9be3f4ec8fe381095d2f9a15f1b7d77d}{
+\index{soilProfile@{soilProfile}!GetN2OFromDenitrification@{GetN2OFromDenitrification}}
+\index{GetN2OFromDenitrification@{GetN2OFromDenitrification}!soilProfile@{soilProfile}}
+\subsubsection[{GetN2OFromDenitrification}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetN2OFromDenitrification ()}}
+\label{classsoil_profile_a9be3f4ec8fe381095d2f9a15f1b7d77d}
+\hypertarget{classsoil_profile_a1a70449a5466f3a625a9b393ee18112f}{
+\index{soilProfile@{soilProfile}!GetN2OFromNitrification@{GetN2OFromNitrification}}
+\index{GetN2OFromNitrification@{GetN2OFromNitrification}!soilProfile@{soilProfile}}
+\subsubsection[{GetN2OFromNitrification}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetN2OFromNitrification ()}}
+\label{classsoil_profile_a1a70449a5466f3a625a9b393ee18112f}
+\hypertarget{classsoil_profile_a52af6d32aff7208063bd86a2a8b3c25b}{
+\index{soilProfile@{soilProfile}!GetNitrate@{GetNitrate}}
+\index{GetNitrate@{GetNitrate}!soilProfile@{soilProfile}}
+\subsubsection[{GetNitrate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetNitrate (double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_a52af6d32aff7208063bd86a2a8b3c25b}
+\hypertarget{classsoil_profile_a753455cef3dae233090a481b833e25c6}{
+\index{soilProfile@{soilProfile}!GetNitrate@{GetNitrate}}
+\index{GetNitrate@{GetNitrate}!soilProfile@{soilProfile}}
+\subsubsection[{GetNitrate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetNitrate ()}}
+\label{classsoil_profile_a753455cef3dae233090a481b833e25c6}
+\hypertarget{classsoil_profile_aefe1b8475041b54e5f0a1fd6cdebff2a}{
+\index{soilProfile@{soilProfile}!GetNitrateLeaching@{GetNitrateLeaching}}
+\index{GetNitrateLeaching@{GetNitrateLeaching}!soilProfile@{soilProfile}}
+\subsubsection[{GetNitrateLeaching}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetNitrateLeaching (double {\em depth})}}
+\label{classsoil_profile_aefe1b8475041b54e5f0a1fd6cdebff2a}
+\hypertarget{classsoil_profile_ac3acd0216f995cbda5b47d393c5d6e98}{
+\index{soilProfile@{soilProfile}!GetOrganicCarbon@{GetOrganicCarbon}}
+\index{GetOrganicCarbon@{GetOrganicCarbon}!soilProfile@{soilProfile}}
+\subsubsection[{GetOrganicCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetOrganicCarbon (double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_ac3acd0216f995cbda5b47d393c5d6e98}
+\hypertarget{classsoil_profile_a4fc437a3643651526cdba9cb737d81bb}{
+\index{soilProfile@{soilProfile}!GetOrganicNitrogen@{GetOrganicNitrogen}}
+\index{GetOrganicNitrogen@{GetOrganicNitrogen}!soilProfile@{soilProfile}}
+\subsubsection[{GetOrganicNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetOrganicNitrogen (double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_a4fc437a3643651526cdba9cb737d81bb}
+\hypertarget{classsoil_profile_aee00c88c701f2ef848b9c96a3013e294}{
+\index{soilProfile@{soilProfile}!GetOrganicNitrogen@{GetOrganicNitrogen}}
+\index{GetOrganicNitrogen@{GetOrganicNitrogen}!soilProfile@{soilProfile}}
+\subsubsection[{GetOrganicNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetOrganicNitrogen ()}}
+\label{classsoil_profile_aee00c88c701f2ef848b9c96a3013e294}
+\hypertarget{classsoil_profile_a46a43c1164e3fb8bbed604653f908561}{
+\index{soilProfile@{soilProfile}!GetPoolCarbon@{GetPoolCarbon}}
+\index{GetPoolCarbon@{GetPoolCarbon}!soilProfile@{soilProfile}}
+\subsubsection[{GetPoolCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetPoolCarbon (const char $\ast$ {\em Name}, \/  double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_a46a43c1164e3fb8bbed604653f908561}
+\hypertarget{classsoil_profile_a268e490e7919d3e50abd2c25372f6c87}{
+\index{soilProfile@{soilProfile}!GetPoolCarbon@{GetPoolCarbon}}
+\index{GetPoolCarbon@{GetPoolCarbon}!soilProfile@{soilProfile}}
+\subsubsection[{GetPoolCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetPoolCarbon (const char $\ast$ {\em Name})}}
+\label{classsoil_profile_a268e490e7919d3e50abd2c25372f6c87}
+\hypertarget{classsoil_profile_a928dcc3f93130bf5bff194453a36d4f8}{
+\index{soilProfile@{soilProfile}!GetPoolNitrogen@{GetPoolNitrogen}}
+\index{GetPoolNitrogen@{GetPoolNitrogen}!soilProfile@{soilProfile}}
+\subsubsection[{GetPoolNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetPoolNitrogen (const char $\ast$ {\em Name}, \/  double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_a928dcc3f93130bf5bff194453a36d4f8}
+\hypertarget{classsoil_profile_a7cde7a4168ab9a8188fb4f6f18d79388}{
+\index{soilProfile@{soilProfile}!GetPoolNitrogen@{GetPoolNitrogen}}
+\index{GetPoolNitrogen@{GetPoolNitrogen}!soilProfile@{soilProfile}}
+\subsubsection[{GetPoolNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetPoolNitrogen (const char $\ast$ {\em Name})}}
+\label{classsoil_profile_a7cde7a4168ab9a8188fb4f6f18d79388}
+\hypertarget{classsoil_profile_a2991385a93a7624c9aaa7bb395464943}{
+\index{soilProfile@{soilProfile}!GetPressurePotential@{GetPressurePotential}}
+\index{GetPressurePotential@{GetPressurePotential}!soilProfile@{soilProfile}}
+\subsubsection[{GetPressurePotential}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetPressurePotential (double {\em depth})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a2991385a93a7624c9aaa7bb395464943}
+\hypertarget{classsoil_profile_ad28b9757b77fa71db68254995c254cf2}{
+\index{soilProfile@{soilProfile}!GetSMB@{GetSMB}}
+\index{GetSMB@{GetSMB}!soilProfile@{soilProfile}}
+\subsubsection[{GetSMB}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetSMB (int {\em numOfLayers})}}
+\label{classsoil_profile_ad28b9757b77fa71db68254995c254cf2}
+\hypertarget{classsoil_profile_a3f6845a54d38bc96d3c746c3e1875415}{
+\index{soilProfile@{soilProfile}!GetSoilMass@{GetSoilMass}}
+\index{GetSoilMass@{GetSoilMass}!soilProfile@{soilProfile}}
+\subsubsection[{GetSoilMass}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetSoilMass (double {\em startDep}, \/  double {\em thick})}}
+\label{classsoil_profile_a3f6845a54d38bc96d3c746c3e1875415}
+\hypertarget{classsoil_profile_a0ce7a0cacb136fae92fac737f23fe46f}{
+\index{soilProfile@{soilProfile}!GetTemperature@{GetTemperature}}
+\index{GetTemperature@{GetTemperature}!soilProfile@{soilProfile}}
+\subsubsection[{GetTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetTemperature (double {\em depth})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a0ce7a0cacb136fae92fac737f23fe46f}
+\hypertarget{classsoil_profile_aaed7e24507f4b6af78401c985ab1cc12}{
+\index{soilProfile@{soilProfile}!GetTotalNitrogen@{GetTotalNitrogen}}
+\index{GetTotalNitrogen@{GetTotalNitrogen}!soilProfile@{soilProfile}}
+\subsubsection[{GetTotalNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::GetTotalNitrogen ()}}
+\label{classsoil_profile_aaed7e24507f4b6af78401c985ab1cc12}
+\hypertarget{classsoil_profile_a3a8791cd9244ae7c70246be2e5a27b02}{
+\index{soilProfile@{soilProfile}!GetTotalWater@{GetTotalWater}}
+\index{GetTotalWater@{GetTotalWater}!soilProfile@{soilProfile}}
+\subsubsection[{GetTotalWater}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetTotalWater (double {\em startDepth}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a3a8791cd9244ae7c70246be2e5a27b02}
+\hypertarget{classsoil_profile_a25cf83f98b4a58017331dbf78ee31824}{
+\index{soilProfile@{soilProfile}!GetTotalWater@{GetTotalWater}}
+\index{GetTotalWater@{GetTotalWater}!soilProfile@{soilProfile}}
+\subsubsection[{GetTotalWater}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetTotalWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a25cf83f98b4a58017331dbf78ee31824}
+\hypertarget{classsoil_profile_a1ff69f03ceffe60204f25f0fd73b2e07}{
+\index{soilProfile@{soilProfile}!GetWiltCapacity@{GetWiltCapacity}}
+\index{GetWiltCapacity@{GetWiltCapacity}!soilProfile@{soilProfile}}
+\subsubsection[{GetWiltCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::GetWiltCapacity (double {\em startDepth}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a1ff69f03ceffe60204f25f0fd73b2e07}
+\hypertarget{classsoil_profile_af06cdd8163adae8f60c89365e242f189}{
+\index{soilProfile@{soilProfile}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!soilProfile@{soilProfile}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::Initialize (fstream $\ast$ {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_af06cdd8163adae8f60c89365e242f189}
+\hypertarget{classsoil_profile_a92e15c837353821cbb06c51bb3fd542b}{
+\index{soilProfile@{soilProfile}!MaxTranspiration@{MaxTranspiration}}
+\index{MaxTranspiration@{MaxTranspiration}!soilProfile@{soilProfile}}
+\subsubsection[{MaxTranspiration}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::MaxTranspiration ({\bf linkList}$<$ {\bf rootStructure} $>$ $\ast$ {\em rootList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a92e15c837353821cbb06c51bb3fd542b}
+\hypertarget{classsoil_profile_ac0825115659eefb3cdf0d25bc385b594}{
+\index{soilProfile@{soilProfile}!StartBudget@{StartBudget}}
+\index{StartBudget@{StartBudget}!soilProfile@{soilProfile}}
+\subsubsection[{StartBudget}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::StartBudget ()}}
+\label{classsoil_profile_ac0825115659eefb3cdf0d25bc385b594}
+\hypertarget{classsoil_profile_a4edb42ee540e88473200024afd61b232}{
+\index{soilProfile@{soilProfile}!SubtractEvaporation@{SubtractEvaporation}}
+\index{SubtractEvaporation@{SubtractEvaporation}!soilProfile@{soilProfile}}
+\subsubsection[{SubtractEvaporation}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::SubtractEvaporation (double {\em soilEvaporation})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a4edb42ee540e88473200024afd61b232}
+\hypertarget{classsoil_profile_af357c8e8608de267646daf715ca1a125}{
+\index{soilProfile@{soilProfile}!SubtractNitrogenUptake@{SubtractNitrogenUptake}}
+\index{SubtractNitrogenUptake@{SubtractNitrogenUptake}!soilProfile@{soilProfile}}
+\subsubsection[{SubtractNitrogenUptake}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} $\ast$ soilProfile::SubtractNitrogenUptake ({\bf linkList}$<$ {\bf rootStructure} $>$ $\ast$ {\em rootList})}}
+\label{classsoil_profile_af357c8e8608de267646daf715ca1a125}
+\hypertarget{classsoil_profile_a276eab1d6e61326093e214a89a9af7db}{
+\index{soilProfile@{soilProfile}!SubtractTranspiration@{SubtractTranspiration}}
+\index{SubtractTranspiration@{SubtractTranspiration}!soilProfile@{soilProfile}}
+\subsubsection[{SubtractTranspiration}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::SubtractTranspiration ({\bf linkList}$<$ {\bf rootStructure} $>$ $\ast$ {\em rootList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a276eab1d6e61326093e214a89a9af7db}
+\hypertarget{classsoil_profile_a63e938ce16657be6fbff5eb6a6b63791}{
+\index{soilProfile@{soilProfile}!Terminate@{Terminate}}
+\index{Terminate@{Terminate}!soilProfile@{soilProfile}}
+\subsubsection[{Terminate}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::Terminate (string {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a63e938ce16657be6fbff5eb6a6b63791}
+\hypertarget{classsoil_profile_a97afe4fe7935e3f3fa732f8fe20f6730}{
+\index{soilProfile@{soilProfile}!Tridag@{Tridag}}
+\index{Tridag@{Tridag}!soilProfile@{soilProfile}}
+\subsubsection[{Tridag}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::Tridag (double {\em a}\mbox{[}$\,$\mbox{]}, \/  double {\em b}\mbox{[}$\,$\mbox{]}, \/  double {\em c}\mbox{[}$\,$\mbox{]}, \/  double {\em r}\mbox{[}$\,$\mbox{]}, \/  double {\em u}\mbox{[}$\,$\mbox{]}, \/  unsigned long {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a97afe4fe7935e3f3fa732f8fe20f6730}
+\hypertarget{classsoil_profile_abd4b5dd658a93bc311fcd9a1233eaa1f}{
+\index{soilProfile@{soilProfile}!UpdateDenitrification@{UpdateDenitrification}}
+\index{UpdateDenitrification@{UpdateDenitrification}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateDenitrification}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::UpdateDenitrification (double {\em TotalCO2Emission})}}
+\label{classsoil_profile_abd4b5dd658a93bc311fcd9a1233eaa1f}
+\hypertarget{classsoil_profile_a11708c4ea232e4ba78ba3b7cf425853c}{
+\index{soilProfile@{soilProfile}!UpdateFinDiffTemperature@{UpdateFinDiffTemperature}}
+\index{UpdateFinDiffTemperature@{UpdateFinDiffTemperature}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateFinDiffTemperature}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::UpdateFinDiffTemperature (double {\em temp}, \/  double {\em snowContent})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a11708c4ea232e4ba78ba3b7cf425853c}
+\hypertarget{classsoil_profile_a2338366aa1f67cfeefb60ed5be15d65a}{
+\index{soilProfile@{soilProfile}!UpdateInfiltration@{UpdateInfiltration}}
+\index{UpdateInfiltration@{UpdateInfiltration}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateInfiltration}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::UpdateInfiltration (double $\ast$ {\em surplus}, \/  {\bf nitrogen} $\ast$ {\em surfaceNitrate}, \/  {\bf nitrogen} $\ast$ {\em surfaceAmmonium}, \/  {\bf nitrogen} $\ast$ {\em NitrateLeached}, \/  {\bf nitrogen} $\ast$ {\em AmmoniumLeached}, \/  double {\em Chloride})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a2338366aa1f67cfeefb60ed5be15d65a}
+\hypertarget{classsoil_profile_a942247912493da600aafecfa845d2d9c}{
+\index{soilProfile@{soilProfile}!UpdateInfiltrationSWAT@{UpdateInfiltrationSWAT}}
+\index{UpdateInfiltrationSWAT@{UpdateInfiltrationSWAT}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateInfiltrationSWAT}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::UpdateInfiltrationSWAT (double $\ast$ {\em surplus}, \/  {\bf nitrogen} $\ast$ {\em surfaceNitrate}, \/  {\bf nitrogen} $\ast$ {\em surfaceAmmonium}, \/  {\bf nitrogen} $\ast$ {\em NitrateLeached}, \/  {\bf nitrogen} $\ast$ {\em AmmoniumLeached}, \/  double {\em Chloride})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a942247912493da600aafecfa845d2d9c}
+\hypertarget{classsoil_profile_a4a0d204ede21c28dc81b117813781ee1}{
+\index{soilProfile@{soilProfile}!UpdateNitrification@{UpdateNitrification}}
+\index{UpdateNitrification@{UpdateNitrification}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateNitrification}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilProfile::UpdateNitrification ()}}
+\label{classsoil_profile_a4a0d204ede21c28dc81b117813781ee1}
+\hypertarget{classsoil_profile_a9928340939c7a139c0e708be2e7d4ca0}{
+\index{soilProfile@{soilProfile}!UpdateOrganicMatter@{UpdateOrganicMatter}}
+\index{UpdateOrganicMatter@{UpdateOrganicMatter}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateOrganicMatter}]{\setlength{\rightskip}{0pt plus 5cm}double soilProfile::UpdateOrganicMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a9928340939c7a139c0e708be2e7d4ca0}
+\hypertarget{classsoil_profile_a746e2b78952a19280ace39d3518dc109}{
+\index{soilProfile@{soilProfile}!UpdateT@{UpdateT}}
+\index{UpdateT@{UpdateT}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateT}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::UpdateT (double $\ast$ {\em soilTemperature}, \/  double {\em airTemperature}, \/  double {\em depth}, \/  double {\em meanAirTemperature})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a746e2b78952a19280ace39d3518dc109}
+\hypertarget{classsoil_profile_ab754bbc57f8cc220f59f9695d6de51e7}{
+\index{soilProfile@{soilProfile}!UpdateTemperature@{UpdateTemperature}}
+\index{UpdateTemperature@{UpdateTemperature}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateTemperature}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::UpdateTemperature (const {\bf base} $\ast$ {\em aOwner})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_ab754bbc57f8cc220f59f9695d6de51e7}
+\hypertarget{classsoil_profile_a5631b093b7853056cc794818132aa4f5}{
+\index{soilProfile@{soilProfile}!UpdateTemperature@{UpdateTemperature}}
+\index{UpdateTemperature@{UpdateTemperature}!soilProfile@{soilProfile}}
+\subsubsection[{UpdateTemperature}]{\setlength{\rightskip}{0pt plus 5cm}void soilProfile::UpdateTemperature (double {\em temp}, \/  double {\em snowContent})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_profile_a5631b093b7853056cc794818132aa4f5}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{soil_profile_8h}{soilProfile.h}\item 
+C:/main/trunk/src/soil/\hyperlink{soil_profile_8cpp}{soilProfile.cpp}\end{DoxyCompactItemize}

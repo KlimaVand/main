@@ -1,0 +1,276 @@
+\hypertarget{classlink_list}{
+\section{linkList$<$ T $>$ Class Template Reference}
+\label{classlink_list}\index{linkList@{linkList}}
+}
+
+
+Utility link list class.  
+
+
+{\ttfamily \#include $<$linklist.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlink_list_1_1_snode}{Snode}
+\begin{DoxyCompactList}\small\item\em Node contains a pointer to some class and to the next node in the list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structlink_list_1_1_snode}{Snode} $\ast$ \hyperlink{classlink_list_a03208c95c5a7c4e6d620673a45fdd75b}{PS}
+\begin{DoxyCompactList}\small\item\em Define a pointer to a node. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list_a2b2193978ecc7fa7a28d194239402fcc}{linkList} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classlink_list_a0b120ae1c3c93e3d0d3fe32b704bb6a1}{$\sim$linkList} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a7a7cc9e8690c7e9c73d5b406cae066d3}{PeekHead} (\hyperlink{structlink_list_1_1_snode}{PS} \&P)
+\begin{DoxyCompactList}\small\item\em Returned a pointer to the first node. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a54c57c0f1491cca11b810c658d386c3a}{PeekTail} (\hyperlink{structlink_list_1_1_snode}{PS} \&P)
+\begin{DoxyCompactList}\small\item\em Return a pointer to the last node. \item\end{DoxyCompactList}\item 
+int \hyperlink{classlink_list_aee3f890e4e8f48db1518e5114d5bcca8}{NumOfNodes} ()
+\begin{DoxyCompactList}\small\item\em Returned total number of nodes. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a2b549aa4a51e457cb8e0ef19e35978f3}{OneStep} (\hyperlink{structlink_list_1_1_snode}{PS} \&P)
+\begin{DoxyCompactList}\small\item\em Move one step in list. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a037a6302399829af84930668eedd6f71}{Remove} (\hyperlink{structlink_list_1_1_snode}{PS} \&R)
+\begin{DoxyCompactList}\small\item\em Remove this node and delete the instance of the class held. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a24a989f008cb02dd4e452f4e5479d5cb}{Release} (\hyperlink{structlink_list_1_1_snode}{PS} \&R)
+\begin{DoxyCompactList}\small\item\em Remove this node but do not delete the instance of the class held. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a1084a4290ce03f2d192ba834a9bfb624}{InsertBefore} (\hyperlink{structlink_list_1_1_snode}{PS} \&S, \hyperlink{structlink_list_1_1_snode}{PS} \&P, T $\ast$E)
+\begin{DoxyCompactList}\small\item\em Insert a new node before a specified node. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a098f769c818a9a5f5b9946861bd7199e}{InsertAfter} (\hyperlink{structlink_list_1_1_snode}{PS} \&S, \hyperlink{structlink_list_1_1_snode}{PS} \&P, T $\ast$E)
+\begin{DoxyCompactList}\small\item\em Insert a new node after a specified node. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a5ef6013a096b9065c2c362fcd5113413}{InsertLast} (T $\ast$E)
+\begin{DoxyCompactList}\small\item\em Inserts a new node at the end of the list. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a4cfd6a668f25493621d5c2e9db192359}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Removal all nodes from the list, deleting all elements. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_aa6f33a7774747239eff96ae4c55b4b68}{ForEach} (void($\ast$funcp)(T $\ast$))
+\begin{DoxyCompactList}\small\item\em Perform a given function on each element in the list. \item\end{DoxyCompactList}\item 
+double \hyperlink{classlink_list_a8e4653b41b17f8b5be54c8875740fd03}{AddForEach} (double($\ast$funcp)(T $\ast$))
+\begin{DoxyCompactList}\small\item\em uncertain \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_ad83267f2c76e7bda04cdd0dd340d9b4f}{FirstThat} (\hyperlink{structlink_list_1_1_snode}{PS} \&FT, int($\ast$funcp)(T $\ast$))
+\begin{DoxyCompactList}\small\item\em uncertain \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a297739d8d57857ea4e689ab3d41a10a3}{LastThat} (\hyperlink{structlink_list_1_1_snode}{PS} \&FT, int($\ast$funcp)(T $\ast$))
+\begin{DoxyCompactList}\small\item\em uncertain \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_aa954023a6cb312bec80507a3191cc367}{SearchByNumber} (\hyperlink{structlink_list_1_1_snode}{PS} \&FT, int num)
+\begin{DoxyCompactList}\small\item\em Return the location of a given node (I think). \item\end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{classlink_list_a5735a6e54a2eed841bdf1fdb52aed03f}{ElementAtNumber} (int num)
+\begin{DoxyCompactList}\small\item\em Return the address of the node with a given logical number in the list. \item\end{DoxyCompactList}\item 
+void \hyperlink{classlink_list_a8005163404c8378ebb3b34d0e21da338}{ForgetAll} ()
+\begin{DoxyCompactList}\small\item\em Delete all notes without deleting the elements. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classlink_list_a9e5426ee4036b2eb07b4ce2f20ad07fb}{MakeFirstNode} (\hyperlink{structlink_list_1_1_snode}{PS} \&P, T $\ast$E)
+\begin{DoxyCompactList}\small\item\em Make the first node. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structlink_list_1_1_snode}{PS} \hyperlink{classlink_list_a9a8d0e93011c492561e5bba4ae95499c}{Head}
+\begin{DoxyCompactList}\small\item\em First node in list. \item\end{DoxyCompactList}\item 
+\hyperlink{structlink_list_1_1_snode}{PS} \hyperlink{classlink_list_ad289602de02c0ccdd7fe1b88c987b810}{Tail}
+\begin{DoxyCompactList}\small\item\em Last node in list. \item\end{DoxyCompactList}\item 
+int \hyperlink{classlink_list_acf1c40918d12e12d58088ea7377c51e8}{numOfNodes}
+\begin{DoxyCompactList}\small\item\em Number of nodes in the list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class linkList$<$ T $>$}
+
+Utility link list class. Utility link list class. Each node contains a pointer to some class and to the next node in the list 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classlink_list_a03208c95c5a7c4e6d620673a45fdd75b}{
+\index{linkList@{linkList}!PS@{PS}}
+\index{PS@{PS}!linkList@{linkList}}
+\subsubsection[{PS}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ typedef {\bf Snode}$\ast$ {\bf linkList}$<$ T $>$::{\bf PS}}}
+\label{classlink_list_a03208c95c5a7c4e6d620673a45fdd75b}
+
+
+Define a pointer to a node. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlink_list_a2b2193978ecc7fa7a28d194239402fcc}{
+\index{linkList@{linkList}!linkList@{linkList}}
+\index{linkList@{linkList}!linkList@{linkList}}
+\subsubsection[{linkList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf linkList}$<$ T $>$::{\bf linkList} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a2b2193978ecc7fa7a28d194239402fcc}
+
+
+Constructor. \hypertarget{classlink_list_a0b120ae1c3c93e3d0d3fe32b704bb6a1}{
+\index{linkList@{linkList}!$\sim$linkList@{$\sim$linkList}}
+\index{$\sim$linkList@{$\sim$linkList}!linkList@{linkList}}
+\subsubsection[{$\sim$linkList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf linkList}$<$ T $>$::$\sim${\bf linkList} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a0b120ae1c3c93e3d0d3fe32b704bb6a1}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlink_list_a8e4653b41b17f8b5be54c8875740fd03}{
+\index{linkList@{linkList}!AddForEach@{AddForEach}}
+\index{AddForEach@{AddForEach}!linkList@{linkList}}
+\subsubsection[{AddForEach}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ double {\bf linkList}$<$ T $>$::AddForEach (double($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a8e4653b41b17f8b5be54c8875740fd03}
+
+
+uncertain \hypertarget{classlink_list_a5735a6e54a2eed841bdf1fdb52aed03f}{
+\index{linkList@{linkList}!ElementAtNumber@{ElementAtNumber}}
+\index{ElementAtNumber@{ElementAtNumber}!linkList@{linkList}}
+\subsubsection[{ElementAtNumber}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T $\ast$ {\bf linkList}$<$ T $>$::ElementAtNumber (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a5735a6e54a2eed841bdf1fdb52aed03f}
+
+
+Return the address of the node with a given logical number in the list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em num}]logical number of the node in the list \end{DoxyParams}
+\hypertarget{classlink_list_ad83267f2c76e7bda04cdd0dd340d9b4f}{
+\index{linkList@{linkList}!FirstThat@{FirstThat}}
+\index{FirstThat@{FirstThat}!linkList@{linkList}}
+\subsubsection[{FirstThat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::FirstThat ({\bf PS} \& {\em FT}, \/  int($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_ad83267f2c76e7bda04cdd0dd340d9b4f}
+
+
+uncertain \hypertarget{classlink_list_aa6f33a7774747239eff96ae4c55b4b68}{
+\index{linkList@{linkList}!ForEach@{ForEach}}
+\index{ForEach@{ForEach}!linkList@{linkList}}
+\subsubsection[{ForEach}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::ForEach (void($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_aa6f33a7774747239eff96ae4c55b4b68}
+
+
+Perform a given function on each element in the list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em funcp}]address of the function to be performed \end{DoxyParams}
+\hypertarget{classlink_list_a8005163404c8378ebb3b34d0e21da338}{
+\index{linkList@{linkList}!ForgetAll@{ForgetAll}}
+\index{ForgetAll@{ForgetAll}!linkList@{linkList}}
+\subsubsection[{ForgetAll}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::ForgetAll ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a8005163404c8378ebb3b34d0e21da338}
+
+
+Delete all notes without deleting the elements. \hypertarget{classlink_list_a098f769c818a9a5f5b9946861bd7199e}{
+\index{linkList@{linkList}!InsertAfter@{InsertAfter}}
+\index{InsertAfter@{InsertAfter}!linkList@{linkList}}
+\subsubsection[{InsertAfter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::InsertAfter ({\bf PS} \& {\em S}, \/  {\bf PS} \& {\em P}, \/  T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a098f769c818a9a5f5b9946861bd7199e}
+
+
+Insert a new node after a specified node. 
+\begin{DoxyParams}{Parameters}
+\item[{\em S}]specified node \item[{\em P}]node created (I think) \item[{\em E}]pointer to the class that should be added \end{DoxyParams}
+\hypertarget{classlink_list_a1084a4290ce03f2d192ba834a9bfb624}{
+\index{linkList@{linkList}!InsertBefore@{InsertBefore}}
+\index{InsertBefore@{InsertBefore}!linkList@{linkList}}
+\subsubsection[{InsertBefore}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::InsertBefore ({\bf PS} \& {\em S}, \/  {\bf PS} \& {\em P}, \/  T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a1084a4290ce03f2d192ba834a9bfb624}
+
+
+Insert a new node before a specified node. 
+\begin{DoxyParams}{Parameters}
+\item[{\em S}]specified node \item[{\em P}]node created (I think) \item[{\em E}]pointer to the class that should be added \end{DoxyParams}
+\hypertarget{classlink_list_a5ef6013a096b9065c2c362fcd5113413}{
+\index{linkList@{linkList}!InsertLast@{InsertLast}}
+\index{InsertLast@{InsertLast}!linkList@{linkList}}
+\subsubsection[{InsertLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::InsertLast (T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a5ef6013a096b9065c2c362fcd5113413}
+
+
+Inserts a new node at the end of the list. \hypertarget{classlink_list_a297739d8d57857ea4e689ab3d41a10a3}{
+\index{linkList@{linkList}!LastThat@{LastThat}}
+\index{LastThat@{LastThat}!linkList@{linkList}}
+\subsubsection[{LastThat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::LastThat ({\bf PS} \& {\em FT}, \/  int($\ast$)(T $\ast$) {\em funcp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a297739d8d57857ea4e689ab3d41a10a3}
+
+
+uncertain \hypertarget{classlink_list_a9e5426ee4036b2eb07b4ce2f20ad07fb}{
+\index{linkList@{linkList}!MakeFirstNode@{MakeFirstNode}}
+\index{MakeFirstNode@{MakeFirstNode}!linkList@{linkList}}
+\subsubsection[{MakeFirstNode}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf linkList}$<$ T $>$::MakeFirstNode ({\bf PS} \& {\em P}, \/  T $\ast$ {\em E})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classlink_list_a9e5426ee4036b2eb07b4ce2f20ad07fb}
+
+
+Make the first node. \hypertarget{classlink_list_aee3f890e4e8f48db1518e5114d5bcca8}{
+\index{linkList@{linkList}!NumOfNodes@{NumOfNodes}}
+\index{NumOfNodes@{NumOfNodes}!linkList@{linkList}}
+\subsubsection[{NumOfNodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int {\bf linkList}$<$ T $>$::NumOfNodes ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_aee3f890e4e8f48db1518e5114d5bcca8}
+
+
+Returned total number of nodes. \hypertarget{classlink_list_a2b549aa4a51e457cb8e0ef19e35978f3}{
+\index{linkList@{linkList}!OneStep@{OneStep}}
+\index{OneStep@{OneStep}!linkList@{linkList}}
+\subsubsection[{OneStep}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::OneStep ({\bf PS} \& {\em P})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a2b549aa4a51e457cb8e0ef19e35978f3}
+
+
+Move one step in list. \hypertarget{classlink_list_a7a7cc9e8690c7e9c73d5b406cae066d3}{
+\index{linkList@{linkList}!PeekHead@{PeekHead}}
+\index{PeekHead@{PeekHead}!linkList@{linkList}}
+\subsubsection[{PeekHead}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::PeekHead ({\bf PS} \& {\em P})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a7a7cc9e8690c7e9c73d5b406cae066d3}
+
+
+Returned a pointer to the first node. \hypertarget{classlink_list_a54c57c0f1491cca11b810c658d386c3a}{
+\index{linkList@{linkList}!PeekTail@{PeekTail}}
+\index{PeekTail@{PeekTail}!linkList@{linkList}}
+\subsubsection[{PeekTail}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::PeekTail ({\bf PS} \& {\em P})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a54c57c0f1491cca11b810c658d386c3a}
+
+
+Return a pointer to the last node. \hypertarget{classlink_list_a24a989f008cb02dd4e452f4e5479d5cb}{
+\index{linkList@{linkList}!Release@{Release}}
+\index{Release@{Release}!linkList@{linkList}}
+\subsubsection[{Release}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::Release ({\bf PS} \& {\em R})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a24a989f008cb02dd4e452f4e5479d5cb}
+
+
+Remove this node but do not delete the instance of the class held. \hypertarget{classlink_list_a037a6302399829af84930668eedd6f71}{
+\index{linkList@{linkList}!Remove@{Remove}}
+\index{Remove@{Remove}!linkList@{linkList}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::Remove ({\bf PS} \& {\em R})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a037a6302399829af84930668eedd6f71}
+
+
+Remove this node and delete the instance of the class held. \hypertarget{classlink_list_a4cfd6a668f25493621d5c2e9db192359}{
+\index{linkList@{linkList}!Reset@{Reset}}
+\index{Reset@{Reset}!linkList@{linkList}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::Reset ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_a4cfd6a668f25493621d5c2e9db192359}
+
+
+Removal all nodes from the list, deleting all elements. \hypertarget{classlink_list_aa954023a6cb312bec80507a3191cc367}{
+\index{linkList@{linkList}!SearchByNumber@{SearchByNumber}}
+\index{SearchByNumber@{SearchByNumber}!linkList@{linkList}}
+\subsubsection[{SearchByNumber}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf linkList}$<$ T $>$::SearchByNumber ({\bf PS} \& {\em FT}, \/  int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlink_list_aa954023a6cb312bec80507a3191cc367}
+
+
+Return the location of a given node (I think). 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlink_list_a9a8d0e93011c492561e5bba4ae95499c}{
+\index{linkList@{linkList}!Head@{Head}}
+\index{Head@{Head}!linkList@{linkList}}
+\subsubsection[{Head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf PS} {\bf linkList}$<$ T $>$::{\bf Head}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlink_list_a9a8d0e93011c492561e5bba4ae95499c}
+
+
+First node in list. \hypertarget{classlink_list_acf1c40918d12e12d58088ea7377c51e8}{
+\index{linkList@{linkList}!numOfNodes@{numOfNodes}}
+\index{numOfNodes@{numOfNodes}!linkList@{linkList}}
+\subsubsection[{numOfNodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf linkList}$<$ T $>$::{\bf numOfNodes}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlink_list_acf1c40918d12e12d58088ea7377c51e8}
+
+
+Number of nodes in the list. \hypertarget{classlink_list_ad289602de02c0ccdd7fe1b88c987b810}{
+\index{linkList@{linkList}!Tail@{Tail}}
+\index{Tail@{Tail}!linkList@{linkList}}
+\subsubsection[{Tail}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf PS} {\bf linkList}$<$ T $>$::{\bf Tail}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlink_list_ad289602de02c0ccdd7fe1b88c987b810}
+
+
+Last node in list. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{linklist_8h}{linklist.h}\end{DoxyCompactItemize}

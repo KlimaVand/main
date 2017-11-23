@@ -1,0 +1,336 @@
+\hypertarget{nixcbits_8cpp}{
+\section{C:/main/trunk/src/base/nixcbits.cpp File Reference}
+\label{nixcbits_8cpp}\index{C:/main/trunk/src/base/nixcbits.cpp@{C:/main/trunk/src/base/nixcbits.cpp}}
+}
+{\ttfamily \#include \char`\"{}nixcbits.h\char`\"{}}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{nixcbits_8cpp_a78d622f5d46cb1a8b27b3b353f8012b2}{GetvonKarman} ()
+\item 
+double const \hyperlink{nixcbits_8cpp_a2ea878dfbe195112a4eb66ca7e322184}{N\_\-to\_\-protein} ()
+\item 
+double const \hyperlink{nixcbits_8cpp_aaf13aa1d4e7645743152ab8ddaebeab0}{GetstandardAirPressure} ()
+\item 
+double const \hyperlink{nixcbits_8cpp_a3c94e4ee43ee8ed4277d574dff41c6c0}{GetgravitationalAcceleration} ()
+\item 
+double const \hyperlink{nixcbits_8cpp_a2f150a9196bd9efcf0fba596c98bcb5d}{GetdynamicViscosityAir} ()
+\item 
+double const \hyperlink{nixcbits_8cpp_a31724b95e80e2e2b81209000b1f268ce}{GetGasConstant} ()
+\item 
+double const \hyperlink{nixcbits_8cpp_a0ed6c686bb82dcfb923f908a3d45d337}{GetCconcInOrgmatter} ()
+\item 
+double \hyperlink{nixcbits_8cpp_aea527b1650f8e436adc11f19bc338cfb}{GetFrictionVelocity} (double height, double displacementHt, double zeroPlane, double windVelocity)
+\item 
+void \hyperlink{nixcbits_8cpp_ac99fbfe3b8a0922e3748ec227333955a}{swapint} (int \&a, int \&b)
+\item 
+void \hyperlink{nixcbits_8cpp_a5b1707c24a5c1febe92faab93a5bd6aa}{swapdoub} (double \&a, double \&b)
+\item 
+void \hyperlink{nixcbits_8cpp_aae278dc53386aaaac227a5737fa3549c}{swappoint} (void $\ast$\&a, void $\ast$\&b)
+\item 
+int \hyperlink{nixcbits_8cpp_a9b91b3b755e282f04ae6de2e0f2ffca8}{partition} (\hyperlink{nixcbits_8h_a68ab5d5d2952c9fb1dda8c9c933238c8}{temp\_\-double\_\-array} a, \hyperlink{nixcbits_8h_ac3bd144a4df91e677832d6d157d87378}{temp\_\-int\_\-array} b, int left, int right)
+\item 
+void \hyperlink{nixcbits_8cpp_aaa65e681c0c8ef02bb4ba7602dd7b802}{quicksort2} (\hyperlink{nixcbits_8h_a68ab5d5d2952c9fb1dda8c9c933238c8}{temp\_\-double\_\-array} a, \hyperlink{nixcbits_8h_ac3bd144a4df91e677832d6d157d87378}{temp\_\-int\_\-array} b, int left, int right)
+\item 
+int \hyperlink{nixcbits_8cpp_a791fd583486ca26cc3a5dcf7c0d429bb}{partition} (\hyperlink{nixcbits_8h_a68ab5d5d2952c9fb1dda8c9c933238c8}{temp\_\-double\_\-array} a, \hyperlink{nixcbits_8h_a9591c51efe1722a99382057dd6042cce}{temp\_\-ptr\_\-array} b, int left, int right)
+\item 
+void \hyperlink{nixcbits_8cpp_af37b7651936493166c846a830293075f}{quicksort2} (\hyperlink{nixcbits_8h_a68ab5d5d2952c9fb1dda8c9c933238c8}{temp\_\-double\_\-array} a, \hyperlink{nixcbits_8h_a9591c51efe1722a99382057dd6042cce}{temp\_\-ptr\_\-array} b, int left, int right)
+\item 
+void \hyperlink{nixcbits_8cpp_a17c32bec37b9ae92ae2f47bbb54b41ec}{Spline} (double $\ast$x, double $\ast$y, int n, double $\ast$y2)
+\item 
+double \hyperlink{nixcbits_8cpp_ae20c372ef5df9dd52a1b83ab17c9edc1}{Splint} (double $\ast$xa, double $\ast$ya, double $\ast$y2a, int n, double x)
+\item 
+double \hyperlink{nixcbits_8cpp_abbb5543f6eab8843cb5587a825e35407}{LinearInterpolation} (double $\ast$x, double $\ast$y, int n, double x0)
+\item 
+void \hyperlink{nixcbits_8cpp_a3bddd4c4d86e33b396ca290a73511246}{SolveCubic} (double a, double b, double c, double d, int $\ast$solutions, double $\ast$x)
+\item 
+double \hyperlink{nixcbits_8cpp_a06710e070d298af2cc9ce23331875b33}{GetAirPressure} (double altitude, double temperature)
+\item 
+double \hyperlink{nixcbits_8cpp_ad2872a740b9b2105f07fbdeaa0fcc3cc}{GetspecificHeatCapAir} ()
+\item 
+double \hyperlink{nixcbits_8cpp_a74a5b5feb51c507ccd38794ede7a2868}{GetdensityDryAir} (double airPressure, double temperature)
+\item 
+double \hyperlink{nixcbits_8cpp_a59c603b4e9d55a18eb04ff71fde2160c}{GetdensityAir} (double airPressure, double temperature, double vapourPressure)
+\item 
+double \hyperlink{nixcbits_8cpp_a12e9114494298b99995f417e2b6c0830}{GetsaturatedWaterVapourPressure} (double airTemperature)
+\item 
+double \hyperlink{nixcbits_8cpp_aa2161bcf13b2cfec2f67b3639cb02a90}{GetlongWaveDown} (double airTemp)
+\item 
+double \hyperlink{nixcbits_8cpp_a38257bdc195b6096dfb5823765eb1942}{GetlongWaveUp} (double emissivity, double aTemperature)
+\item 
+double \hyperlink{nixcbits_8cpp_a862918a47f2d57fbc1a21b2e0c7cb8b3}{GetKHenry} (double temperature)
+\item 
+double \hyperlink{nixcbits_8cpp_ae1585e38dbb3ebb4aee8b16c6224cc65}{GetDissociationConst} (double temperature)
+\item 
+double \hyperlink{nixcbits_8cpp_a9c68310dadae3ac0ea24fd68e4c5dc1a}{GetdayLength} (double latitude, int dayNo)
+\item 
+double \hyperlink{nixcbits_8cpp_a7ec8fb23e8a150c6f3c7a606c637c287}{GettimeFromDarkness} (double latitude, int dayNo, int hour, int mins, double offset)
+\item 
+double \hyperlink{nixcbits_8cpp_a65bcd7f7f0b183bf5ae060f3d27e6142}{GettimeFromNoon} (double latitude, int dayNo, int hour, int mins, double offset)
+\item 
+double \hyperlink{nixcbits_8cpp_a8e78569181501e880329ba1210023103}{GetDeclination} (int dayNo)
+\item 
+double \hyperlink{nixcbits_8cpp_aeb0e5d0e71336df2fc85b5aecb3e7624}{GetzenithAngel} (double declination, double latitude, double timeToNoon)
+\item 
+double \hyperlink{nixcbits_8cpp_a3fbd81da75948abec333aaf81aa418bc}{GetMaxSolar} (double latitude, int dayNo, int hour, int mins, double offset)
+\item 
+bool \hyperlink{nixcbits_8cpp_a30c3844fec2cf0ff67a2bb07db73b558}{SolveQuadratic} (bool posRoot, double a, double b, double c, double $\ast$x)
+\item 
+double \hyperlink{nixcbits_8cpp_aef8fe892f5d6d74aecd494c82a84d20f}{GetLatentHeatVaporisationWater} (double temperature)
+\item 
+double \hyperlink{nixcbits_8cpp_a231bc033dcb30cecad341789f17211b3}{GetSpecificHumidity} (double airPressure, double waterVapourPressure)
+\item 
+int \hyperlink{nixcbits_8cpp_a3620bce76a0e407dcd3c2e50017103cd}{newGap} (int gap)
+\item 
+void \hyperlink{nixcbits_8cpp_ae4db44782fbd1eb57b8a6e355c721deb}{Comsort} (\hyperlink{nixcbits_8h_a68ab5d5d2952c9fb1dda8c9c933238c8}{temp\_\-double\_\-array} double\_\-array, \hyperlink{nixcbits_8h_a9591c51efe1722a99382057dd6042cce}{temp\_\-ptr\_\-array} ptr\_\-array, int Hi)
+\item 
+double \hyperlink{nixcbits_8cpp_a7f982a8e545dc43b732c54de10fdfba1}{N\_\-to\_\-FE} (double orgNcontent)
+\item 
+double \hyperlink{nixcbits_8cpp_a761696357b39a8aaf42b517fdcfeeb1f}{GetWindAtHeight} (double origHt, double origWind, double newHt, double roughnessLength)
+\item 
+double \hyperlink{nixcbits_8cpp_aab1baa1344e0572394e597df151122a9}{GetGrossEnergyinDryMatter} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{nixcbits_8cpp_a145c0d0962925a02af90adec3817c55f}{StephanBoltzmann} = 5.67E-\/8
+\item 
+const double \hyperlink{nixcbits_8cpp_ab6ea2187f39a0e2d85a4cf309dedc1f2}{vonKarman} = 0.41
+\item 
+const double \hyperlink{nixcbits_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI} = 3.1415926
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{nixcbits_8cpp_ae4db44782fbd1eb57b8a6e355c721deb}{
+\index{nixcbits.cpp@{nixcbits.cpp}!Comsort@{Comsort}}
+\index{Comsort@{Comsort}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{Comsort}]{\setlength{\rightskip}{0pt plus 5cm}void Comsort ({\bf temp\_\-double\_\-array} {\em double\_\-array}, \/  {\bf temp\_\-ptr\_\-array} {\em ptr\_\-array}, \/  int {\em Hi})}}
+\label{nixcbits_8cpp_ae4db44782fbd1eb57b8a6e355c721deb}
+\hypertarget{nixcbits_8cpp_a06710e070d298af2cc9ce23331875b33}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetAirPressure@{GetAirPressure}}
+\index{GetAirPressure@{GetAirPressure}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetAirPressure}]{\setlength{\rightskip}{0pt plus 5cm}double GetAirPressure (double {\em altitude}, \/  double {\em temperature})}}
+\label{nixcbits_8cpp_a06710e070d298af2cc9ce23331875b33}
+\hypertarget{nixcbits_8cpp_a0ed6c686bb82dcfb923f908a3d45d337}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetCconcInOrgmatter@{GetCconcInOrgmatter}}
+\index{GetCconcInOrgmatter@{GetCconcInOrgmatter}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetCconcInOrgmatter}]{\setlength{\rightskip}{0pt plus 5cm}double const GetCconcInOrgmatter ()}}
+\label{nixcbits_8cpp_a0ed6c686bb82dcfb923f908a3d45d337}
+\hypertarget{nixcbits_8cpp_a9c68310dadae3ac0ea24fd68e4c5dc1a}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetdayLength@{GetdayLength}}
+\index{GetdayLength@{GetdayLength}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetdayLength}]{\setlength{\rightskip}{0pt plus 5cm}double GetdayLength (double {\em latitude}, \/  int {\em dayNo})}}
+\label{nixcbits_8cpp_a9c68310dadae3ac0ea24fd68e4c5dc1a}
+\hypertarget{nixcbits_8cpp_a8e78569181501e880329ba1210023103}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetDeclination@{GetDeclination}}
+\index{GetDeclination@{GetDeclination}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetDeclination}]{\setlength{\rightskip}{0pt plus 5cm}double GetDeclination (int {\em dayNo})}}
+\label{nixcbits_8cpp_a8e78569181501e880329ba1210023103}
+\hypertarget{nixcbits_8cpp_a59c603b4e9d55a18eb04ff71fde2160c}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetdensityAir@{GetdensityAir}}
+\index{GetdensityAir@{GetdensityAir}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetdensityAir}]{\setlength{\rightskip}{0pt plus 5cm}double GetdensityAir (double {\em airPressure}, \/  double {\em temperature}, \/  double {\em vapourPressure})}}
+\label{nixcbits_8cpp_a59c603b4e9d55a18eb04ff71fde2160c}
+\hypertarget{nixcbits_8cpp_a74a5b5feb51c507ccd38794ede7a2868}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetdensityDryAir@{GetdensityDryAir}}
+\index{GetdensityDryAir@{GetdensityDryAir}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetdensityDryAir}]{\setlength{\rightskip}{0pt plus 5cm}double GetdensityDryAir (double {\em airPressure}, \/  double {\em temperature})}}
+\label{nixcbits_8cpp_a74a5b5feb51c507ccd38794ede7a2868}
+\hypertarget{nixcbits_8cpp_ae1585e38dbb3ebb4aee8b16c6224cc65}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetDissociationConst@{GetDissociationConst}}
+\index{GetDissociationConst@{GetDissociationConst}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetDissociationConst}]{\setlength{\rightskip}{0pt plus 5cm}double GetDissociationConst (double {\em temperature})}}
+\label{nixcbits_8cpp_ae1585e38dbb3ebb4aee8b16c6224cc65}
+\hypertarget{nixcbits_8cpp_a2f150a9196bd9efcf0fba596c98bcb5d}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetdynamicViscosityAir@{GetdynamicViscosityAir}}
+\index{GetdynamicViscosityAir@{GetdynamicViscosityAir}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetdynamicViscosityAir}]{\setlength{\rightskip}{0pt plus 5cm}double const GetdynamicViscosityAir ()}}
+\label{nixcbits_8cpp_a2f150a9196bd9efcf0fba596c98bcb5d}
+\hypertarget{nixcbits_8cpp_aea527b1650f8e436adc11f19bc338cfb}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetFrictionVelocity@{GetFrictionVelocity}}
+\index{GetFrictionVelocity@{GetFrictionVelocity}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetFrictionVelocity}]{\setlength{\rightskip}{0pt plus 5cm}double GetFrictionVelocity (double {\em height}, \/  double {\em displacementHt}, \/  double {\em zeroPlane}, \/  double {\em windVelocity})}}
+\label{nixcbits_8cpp_aea527b1650f8e436adc11f19bc338cfb}
+\hypertarget{nixcbits_8cpp_a31724b95e80e2e2b81209000b1f268ce}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetGasConstant@{GetGasConstant}}
+\index{GetGasConstant@{GetGasConstant}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetGasConstant}]{\setlength{\rightskip}{0pt plus 5cm}double const GetGasConstant ()}}
+\label{nixcbits_8cpp_a31724b95e80e2e2b81209000b1f268ce}
+\hypertarget{nixcbits_8cpp_a3c94e4ee43ee8ed4277d574dff41c6c0}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetgravitationalAcceleration@{GetgravitationalAcceleration}}
+\index{GetgravitationalAcceleration@{GetgravitationalAcceleration}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetgravitationalAcceleration}]{\setlength{\rightskip}{0pt plus 5cm}double const GetgravitationalAcceleration ()}}
+\label{nixcbits_8cpp_a3c94e4ee43ee8ed4277d574dff41c6c0}
+\hypertarget{nixcbits_8cpp_aab1baa1344e0572394e597df151122a9}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetGrossEnergyinDryMatter@{GetGrossEnergyinDryMatter}}
+\index{GetGrossEnergyinDryMatter@{GetGrossEnergyinDryMatter}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetGrossEnergyinDryMatter}]{\setlength{\rightskip}{0pt plus 5cm}double GetGrossEnergyinDryMatter ()}}
+\label{nixcbits_8cpp_aab1baa1344e0572394e597df151122a9}
+\hypertarget{nixcbits_8cpp_a862918a47f2d57fbc1a21b2e0c7cb8b3}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetKHenry@{GetKHenry}}
+\index{GetKHenry@{GetKHenry}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetKHenry}]{\setlength{\rightskip}{0pt plus 5cm}double GetKHenry (double {\em temperature})}}
+\label{nixcbits_8cpp_a862918a47f2d57fbc1a21b2e0c7cb8b3}
+\hypertarget{nixcbits_8cpp_aef8fe892f5d6d74aecd494c82a84d20f}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetLatentHeatVaporisationWater@{GetLatentHeatVaporisationWater}}
+\index{GetLatentHeatVaporisationWater@{GetLatentHeatVaporisationWater}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetLatentHeatVaporisationWater}]{\setlength{\rightskip}{0pt plus 5cm}double GetLatentHeatVaporisationWater (double {\em temperature})}}
+\label{nixcbits_8cpp_aef8fe892f5d6d74aecd494c82a84d20f}
+\hypertarget{nixcbits_8cpp_aa2161bcf13b2cfec2f67b3639cb02a90}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetlongWaveDown@{GetlongWaveDown}}
+\index{GetlongWaveDown@{GetlongWaveDown}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetlongWaveDown}]{\setlength{\rightskip}{0pt plus 5cm}double GetlongWaveDown (double {\em airTemp})}}
+\label{nixcbits_8cpp_aa2161bcf13b2cfec2f67b3639cb02a90}
+\hypertarget{nixcbits_8cpp_a38257bdc195b6096dfb5823765eb1942}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetlongWaveUp@{GetlongWaveUp}}
+\index{GetlongWaveUp@{GetlongWaveUp}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetlongWaveUp}]{\setlength{\rightskip}{0pt plus 5cm}double GetlongWaveUp (double {\em emissivity}, \/  double {\em aTemperature})}}
+\label{nixcbits_8cpp_a38257bdc195b6096dfb5823765eb1942}
+\hypertarget{nixcbits_8cpp_a3fbd81da75948abec333aaf81aa418bc}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetMaxSolar@{GetMaxSolar}}
+\index{GetMaxSolar@{GetMaxSolar}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetMaxSolar}]{\setlength{\rightskip}{0pt plus 5cm}double GetMaxSolar (double {\em latitude}, \/  int {\em dayNo}, \/  int {\em hour}, \/  int {\em mins}, \/  double {\em offset})}}
+\label{nixcbits_8cpp_a3fbd81da75948abec333aaf81aa418bc}
+\hypertarget{nixcbits_8cpp_a12e9114494298b99995f417e2b6c0830}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetsaturatedWaterVapourPressure@{GetsaturatedWaterVapourPressure}}
+\index{GetsaturatedWaterVapourPressure@{GetsaturatedWaterVapourPressure}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetsaturatedWaterVapourPressure}]{\setlength{\rightskip}{0pt plus 5cm}double GetsaturatedWaterVapourPressure (double {\em airTemperature})}}
+\label{nixcbits_8cpp_a12e9114494298b99995f417e2b6c0830}
+\hypertarget{nixcbits_8cpp_ad2872a740b9b2105f07fbdeaa0fcc3cc}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetspecificHeatCapAir@{GetspecificHeatCapAir}}
+\index{GetspecificHeatCapAir@{GetspecificHeatCapAir}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetspecificHeatCapAir}]{\setlength{\rightskip}{0pt plus 5cm}double GetspecificHeatCapAir ()}}
+\label{nixcbits_8cpp_ad2872a740b9b2105f07fbdeaa0fcc3cc}
+\hypertarget{nixcbits_8cpp_a231bc033dcb30cecad341789f17211b3}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetSpecificHumidity@{GetSpecificHumidity}}
+\index{GetSpecificHumidity@{GetSpecificHumidity}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetSpecificHumidity}]{\setlength{\rightskip}{0pt plus 5cm}double GetSpecificHumidity (double {\em airPressure}, \/  double {\em waterVapourPressure})}}
+\label{nixcbits_8cpp_a231bc033dcb30cecad341789f17211b3}
+\hypertarget{nixcbits_8cpp_aaf13aa1d4e7645743152ab8ddaebeab0}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetstandardAirPressure@{GetstandardAirPressure}}
+\index{GetstandardAirPressure@{GetstandardAirPressure}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetstandardAirPressure}]{\setlength{\rightskip}{0pt plus 5cm}double const GetstandardAirPressure ()}}
+\label{nixcbits_8cpp_aaf13aa1d4e7645743152ab8ddaebeab0}
+\hypertarget{nixcbits_8cpp_a7ec8fb23e8a150c6f3c7a606c637c287}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GettimeFromDarkness@{GettimeFromDarkness}}
+\index{GettimeFromDarkness@{GettimeFromDarkness}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GettimeFromDarkness}]{\setlength{\rightskip}{0pt plus 5cm}double GettimeFromDarkness (double {\em latitude}, \/  int {\em dayNo}, \/  int {\em hour}, \/  int {\em mins}, \/  double {\em offset})}}
+\label{nixcbits_8cpp_a7ec8fb23e8a150c6f3c7a606c637c287}
+\hypertarget{nixcbits_8cpp_a65bcd7f7f0b183bf5ae060f3d27e6142}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GettimeFromNoon@{GettimeFromNoon}}
+\index{GettimeFromNoon@{GettimeFromNoon}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GettimeFromNoon}]{\setlength{\rightskip}{0pt plus 5cm}double GettimeFromNoon (double {\em latitude}, \/  int {\em dayNo}, \/  int {\em hour}, \/  int {\em mins}, \/  double {\em offset})}}
+\label{nixcbits_8cpp_a65bcd7f7f0b183bf5ae060f3d27e6142}
+\hypertarget{nixcbits_8cpp_a78d622f5d46cb1a8b27b3b353f8012b2}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetvonKarman@{GetvonKarman}}
+\index{GetvonKarman@{GetvonKarman}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetvonKarman}]{\setlength{\rightskip}{0pt plus 5cm}double GetvonKarman ()}}
+\label{nixcbits_8cpp_a78d622f5d46cb1a8b27b3b353f8012b2}
+\hypertarget{nixcbits_8cpp_a761696357b39a8aaf42b517fdcfeeb1f}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetWindAtHeight@{GetWindAtHeight}}
+\index{GetWindAtHeight@{GetWindAtHeight}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetWindAtHeight}]{\setlength{\rightskip}{0pt plus 5cm}double GetWindAtHeight (double {\em origHt}, \/  double {\em origWind}, \/  double {\em newHt}, \/  double {\em roughnessLength})}}
+\label{nixcbits_8cpp_a761696357b39a8aaf42b517fdcfeeb1f}
+\hypertarget{nixcbits_8cpp_aeb0e5d0e71336df2fc85b5aecb3e7624}{
+\index{nixcbits.cpp@{nixcbits.cpp}!GetzenithAngel@{GetzenithAngel}}
+\index{GetzenithAngel@{GetzenithAngel}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{GetzenithAngel}]{\setlength{\rightskip}{0pt plus 5cm}double GetzenithAngel (double {\em declination}, \/  double {\em latitude}, \/  double {\em timeToNoon})}}
+\label{nixcbits_8cpp_aeb0e5d0e71336df2fc85b5aecb3e7624}
+\hypertarget{nixcbits_8cpp_abbb5543f6eab8843cb5587a825e35407}{
+\index{nixcbits.cpp@{nixcbits.cpp}!LinearInterpolation@{LinearInterpolation}}
+\index{LinearInterpolation@{LinearInterpolation}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{LinearInterpolation}]{\setlength{\rightskip}{0pt plus 5cm}double LinearInterpolation (double $\ast$ {\em x}, \/  double $\ast$ {\em y}, \/  int {\em n}, \/  double {\em x0})}}
+\label{nixcbits_8cpp_abbb5543f6eab8843cb5587a825e35407}
+\hypertarget{nixcbits_8cpp_a7f982a8e545dc43b732c54de10fdfba1}{
+\index{nixcbits.cpp@{nixcbits.cpp}!N\_\-to\_\-FE@{N\_\-to\_\-FE}}
+\index{N\_\-to\_\-FE@{N\_\-to\_\-FE}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{N\_\-to\_\-FE}]{\setlength{\rightskip}{0pt plus 5cm}double N\_\-to\_\-FE (double {\em orgNcontent})}}
+\label{nixcbits_8cpp_a7f982a8e545dc43b732c54de10fdfba1}
+\hypertarget{nixcbits_8cpp_a2ea878dfbe195112a4eb66ca7e322184}{
+\index{nixcbits.cpp@{nixcbits.cpp}!N\_\-to\_\-protein@{N\_\-to\_\-protein}}
+\index{N\_\-to\_\-protein@{N\_\-to\_\-protein}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{N\_\-to\_\-protein}]{\setlength{\rightskip}{0pt plus 5cm}double const N\_\-to\_\-protein ()}}
+\label{nixcbits_8cpp_a2ea878dfbe195112a4eb66ca7e322184}
+\hypertarget{nixcbits_8cpp_a3620bce76a0e407dcd3c2e50017103cd}{
+\index{nixcbits.cpp@{nixcbits.cpp}!newGap@{newGap}}
+\index{newGap@{newGap}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{newGap}]{\setlength{\rightskip}{0pt plus 5cm}int newGap (int {\em gap})}}
+\label{nixcbits_8cpp_a3620bce76a0e407dcd3c2e50017103cd}
+\hypertarget{nixcbits_8cpp_a791fd583486ca26cc3a5dcf7c0d429bb}{
+\index{nixcbits.cpp@{nixcbits.cpp}!partition@{partition}}
+\index{partition@{partition}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{partition}]{\setlength{\rightskip}{0pt plus 5cm}int partition ({\bf temp\_\-double\_\-array} {\em a}, \/  {\bf temp\_\-ptr\_\-array} {\em b}, \/  int {\em left}, \/  int {\em right})}}
+\label{nixcbits_8cpp_a791fd583486ca26cc3a5dcf7c0d429bb}
+\hypertarget{nixcbits_8cpp_a9b91b3b755e282f04ae6de2e0f2ffca8}{
+\index{nixcbits.cpp@{nixcbits.cpp}!partition@{partition}}
+\index{partition@{partition}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{partition}]{\setlength{\rightskip}{0pt plus 5cm}int partition ({\bf temp\_\-double\_\-array} {\em a}, \/  {\bf temp\_\-int\_\-array} {\em b}, \/  int {\em left}, \/  int {\em right})}}
+\label{nixcbits_8cpp_a9b91b3b755e282f04ae6de2e0f2ffca8}
+\hypertarget{nixcbits_8cpp_af37b7651936493166c846a830293075f}{
+\index{nixcbits.cpp@{nixcbits.cpp}!quicksort2@{quicksort2}}
+\index{quicksort2@{quicksort2}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{quicksort2}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort2 ({\bf temp\_\-double\_\-array} {\em a}, \/  {\bf temp\_\-ptr\_\-array} {\em b}, \/  int {\em left}, \/  int {\em right})}}
+\label{nixcbits_8cpp_af37b7651936493166c846a830293075f}
+\hypertarget{nixcbits_8cpp_aaa65e681c0c8ef02bb4ba7602dd7b802}{
+\index{nixcbits.cpp@{nixcbits.cpp}!quicksort2@{quicksort2}}
+\index{quicksort2@{quicksort2}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{quicksort2}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort2 ({\bf temp\_\-double\_\-array} {\em a}, \/  {\bf temp\_\-int\_\-array} {\em b}, \/  int {\em left}, \/  int {\em right})}}
+\label{nixcbits_8cpp_aaa65e681c0c8ef02bb4ba7602dd7b802}
+\hypertarget{nixcbits_8cpp_a3bddd4c4d86e33b396ca290a73511246}{
+\index{nixcbits.cpp@{nixcbits.cpp}!SolveCubic@{SolveCubic}}
+\index{SolveCubic@{SolveCubic}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{SolveCubic}]{\setlength{\rightskip}{0pt plus 5cm}void SolveCubic (double {\em a}, \/  double {\em b}, \/  double {\em c}, \/  double {\em d}, \/  int $\ast$ {\em solutions}, \/  double $\ast$ {\em x})}}
+\label{nixcbits_8cpp_a3bddd4c4d86e33b396ca290a73511246}
+\hypertarget{nixcbits_8cpp_a30c3844fec2cf0ff67a2bb07db73b558}{
+\index{nixcbits.cpp@{nixcbits.cpp}!SolveQuadratic@{SolveQuadratic}}
+\index{SolveQuadratic@{SolveQuadratic}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{SolveQuadratic}]{\setlength{\rightskip}{0pt plus 5cm}bool SolveQuadratic (bool {\em posRoot}, \/  double {\em a}, \/  double {\em b}, \/  double {\em c}, \/  double $\ast$ {\em x})}}
+\label{nixcbits_8cpp_a30c3844fec2cf0ff67a2bb07db73b558}
+\hypertarget{nixcbits_8cpp_a17c32bec37b9ae92ae2f47bbb54b41ec}{
+\index{nixcbits.cpp@{nixcbits.cpp}!Spline@{Spline}}
+\index{Spline@{Spline}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{Spline}]{\setlength{\rightskip}{0pt plus 5cm}void Spline (double $\ast$ {\em x}, \/  double $\ast$ {\em y}, \/  int {\em n}, \/  double $\ast$ {\em y2})}}
+\label{nixcbits_8cpp_a17c32bec37b9ae92ae2f47bbb54b41ec}
+\hypertarget{nixcbits_8cpp_ae20c372ef5df9dd52a1b83ab17c9edc1}{
+\index{nixcbits.cpp@{nixcbits.cpp}!Splint@{Splint}}
+\index{Splint@{Splint}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{Splint}]{\setlength{\rightskip}{0pt plus 5cm}double Splint (double $\ast$ {\em xa}, \/  double $\ast$ {\em ya}, \/  double $\ast$ {\em y2a}, \/  int {\em n}, \/  double {\em x})}}
+\label{nixcbits_8cpp_ae20c372ef5df9dd52a1b83ab17c9edc1}
+\hypertarget{nixcbits_8cpp_a5b1707c24a5c1febe92faab93a5bd6aa}{
+\index{nixcbits.cpp@{nixcbits.cpp}!swapdoub@{swapdoub}}
+\index{swapdoub@{swapdoub}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{swapdoub}]{\setlength{\rightskip}{0pt plus 5cm}void swapdoub (double \& {\em a}, \/  double \& {\em b})}}
+\label{nixcbits_8cpp_a5b1707c24a5c1febe92faab93a5bd6aa}
+\hypertarget{nixcbits_8cpp_ac99fbfe3b8a0922e3748ec227333955a}{
+\index{nixcbits.cpp@{nixcbits.cpp}!swapint@{swapint}}
+\index{swapint@{swapint}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{swapint}]{\setlength{\rightskip}{0pt plus 5cm}void swapint (int \& {\em a}, \/  int \& {\em b})}}
+\label{nixcbits_8cpp_ac99fbfe3b8a0922e3748ec227333955a}
+\hypertarget{nixcbits_8cpp_aae278dc53386aaaac227a5737fa3549c}{
+\index{nixcbits.cpp@{nixcbits.cpp}!swappoint@{swappoint}}
+\index{swappoint@{swappoint}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{swappoint}]{\setlength{\rightskip}{0pt plus 5cm}void swappoint (void $\ast$\& {\em a}, \/  void $\ast$\& {\em b})}}
+\label{nixcbits_8cpp_aae278dc53386aaaac227a5737fa3549c}
+
+
+\subsection{Variable Documentation}
+\hypertarget{nixcbits_8cpp_a952eac791b596a61bba0a133a3bb439f}{
+\index{nixcbits.cpp@{nixcbits.cpp}!PI@{PI}}
+\index{PI@{PI}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf PI} = 3.1415926}}
+\label{nixcbits_8cpp_a952eac791b596a61bba0a133a3bb439f}
+\hypertarget{nixcbits_8cpp_a145c0d0962925a02af90adec3817c55f}{
+\index{nixcbits.cpp@{nixcbits.cpp}!StephanBoltzmann@{StephanBoltzmann}}
+\index{StephanBoltzmann@{StephanBoltzmann}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{StephanBoltzmann}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf StephanBoltzmann} = 5.67E-\/8}}
+\label{nixcbits_8cpp_a145c0d0962925a02af90adec3817c55f}
+\hypertarget{nixcbits_8cpp_ab6ea2187f39a0e2d85a4cf309dedc1f2}{
+\index{nixcbits.cpp@{nixcbits.cpp}!vonKarman@{vonKarman}}
+\index{vonKarman@{vonKarman}!nixcbits.cpp@{nixcbits.cpp}}
+\subsubsection[{vonKarman}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf vonKarman} = 0.41}}
+\label{nixcbits_8cpp_ab6ea2187f39a0e2d85a4cf309dedc1f2}

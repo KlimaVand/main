@@ -1,0 +1,240 @@
+\hypertarget{classstatic_maize}{
+\section{staticMaize Class Reference}
+\label{classstatic_maize}\index{staticMaize@{staticMaize}}
+}
+
+
+{\ttfamily \#include $<$staticMaize.h$>$}Inheritance diagram for staticMaize::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_maize}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_maize_a20270eacb7bcfd32722a00ba5b7cc8d3}{staticMaize} ()
+\item 
+virtual int \hyperlink{classstatic_maize_a4b48acc64147a6c46ee154570c65b2fe}{ImplementationDoesGiveStraw} ()
+\item 
+virtual void \hyperlink{classstatic_maize_a63e7d361f819155d45d3df7a67a7813d}{SetUnderSown} (bool uS)
+\item 
+virtual int \hyperlink{classstatic_maize_a7d5badef27f557d91fe682c764f1b27a}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_maize_a8a64240f6fed1b843e9d9521dad59231}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_maize_a57e27a95b36604807c2eed91446df668}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_maize_afc493353ee7d925a708506e8738eea5f}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_maize_aa09f67751bfbfe9a3e7e414cffaab133}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_maize_adafefb969922559e085bbe97b7406eb9}{NitrogenAmount} (int JB\_\-NO, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_maize_ac5efafeda6da275fff56a9bf1fa1c2a6}{ExpectedYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_maize_a4aa3fc3917c90262a603de13f0fb4c67}{ExpectedStrawYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_maize_a521e65129a55f99bc810e26bdf7041ce}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_maize_a3b0031d7c36e7f11f4ca81ece845c63c}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_maize_a251634ed082e4b2cdbe0d16bb53b54cd}{ExtraNRelease\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_maize_a4054559a82f50ce5bb73091de2aed6f6}{NUseSlurrySpring} ()
+\item 
+virtual int \hyperlink{classstatic_maize_ac7221669f33010383e88c2cc74d02c57}{SlyrryPossibleThisPeriod} (\hyperlink{classperiod}{period} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_maize_aba311191464184758a2c2b2eb819a558a6c12b1b6b3c696ced0209428169b25e8}{Num\_\-of\_\-pr\_\-str} = 2, 
+\hyperlink{classstatic_maize_aba311191464184758a2c2b2eb819a558a2106fe747427a927e52573ab3db6fc46}{Nitrogen\_\-levels} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classstatic_maize_a8ec3a9f8b30656d537fa8b44a8905be7}{Nopt} (int JB\_\-NO)
+\item 
+virtual double \hyperlink{classstatic_maize_a3eaafefd01df095524580ac1fb026697}{Ymin} (int JB\_\-NO)
+\item 
+virtual double \hyperlink{classstatic_maize_a1f3847a4d1509dc568d21405de42afb5}{Ymax} (int JB\_\-NO)
+\item 
+virtual void \hyperlink{classstatic_maize_ae29df9ec33e841c6fd482c96f330b41c}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classstatic_maize_a741540de20c7cd002125e391bbd272ef}{underSown}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_maize_aba311191464184758a2c2b2eb819a558}{
+\subsubsection[{"@19}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_maize_aba311191464184758a2c2b2eb819a558}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticMaize@{staticMaize}}\index{staticMaize@{staticMaize}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_maize_aba311191464184758a2c2b2eb819a558a6c12b1b6b3c696ced0209428169b25e8}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_maize_aba311191464184758a2c2b2eb819a558a6c12b1b6b3c696ced0209428169b25e8}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticMaize@{staticMaize}}\index{staticMaize@{staticMaize}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_maize_aba311191464184758a2c2b2eb819a558a2106fe747427a927e52573ab3db6fc46}{
+Nitrogen\_\-levels}
+\label{classstatic_maize_aba311191464184758a2c2b2eb819a558a2106fe747427a927e52573ab3db6fc46}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_maize_a20270eacb7bcfd32722a00ba5b7cc8d3}{
+\index{staticMaize@{staticMaize}!staticMaize@{staticMaize}}
+\index{staticMaize@{staticMaize}!staticMaize@{staticMaize}}
+\subsubsection[{staticMaize}]{\setlength{\rightskip}{0pt plus 5cm}staticMaize::staticMaize ()}}
+\label{classstatic_maize_a20270eacb7bcfd32722a00ba5b7cc8d3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_maize_a4aa3fc3917c90262a603de13f0fb4c67}{
+\index{staticMaize@{staticMaize}!ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}}
+\index{ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{ExpectedStrawYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::ExpectedStrawYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_a4aa3fc3917c90262a603de13f0fb4c67}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{staticCrop}.\hypertarget{classstatic_maize_ac5efafeda6da275fff56a9bf1fa1c2a6}{
+\index{staticMaize@{staticMaize}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::ExpectedYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_ac5efafeda6da275fff56a9bf1fa1c2a6}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_maize_a251634ed082e4b2cdbe0d16bb53b54cd}{
+\index{staticMaize@{staticMaize}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_a251634ed082e4b2cdbe0d16bb53b54cd}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_maize_a4b48acc64147a6c46ee154570c65b2fe}{
+\index{staticMaize@{staticMaize}!ImplementationDoesGiveStraw@{ImplementationDoesGiveStraw}}
+\index{ImplementationDoesGiveStraw@{ImplementationDoesGiveStraw}!staticMaize@{staticMaize}}
+\subsubsection[{ImplementationDoesGiveStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticMaize::ImplementationDoesGiveStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_maize_a4b48acc64147a6c46ee154570c65b2fe}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9e8458d1bb0bab4c9a7d05f47fe24537}{staticCrop}.\hypertarget{classstatic_maize_a57e27a95b36604807c2eed91446df668}{
+\index{staticMaize@{staticMaize}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticMaize@{staticMaize}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticMaize::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_a57e27a95b36604807c2eed91446df668}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_maize_adafefb969922559e085bbe97b7406eb9}{
+\index{staticMaize@{staticMaize}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticMaize@{staticMaize}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::NitrogenAmount (int {\em JB\_\-NO}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_adafefb969922559e085bbe97b7406eb9}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_maize_aa09f67751bfbfe9a3e7e414cffaab133}{
+\index{staticMaize@{staticMaize}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticMaize::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_aa09f67751bfbfe9a3e7e414cffaab133}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_maize_a8ec3a9f8b30656d537fa8b44a8905be7}{
+\index{staticMaize@{staticMaize}!Nopt@{Nopt}}
+\index{Nopt@{Nopt}!staticMaize@{staticMaize}}
+\subsubsection[{Nopt}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::Nopt (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_maize_a8ec3a9f8b30656d537fa8b44a8905be7}
+\hypertarget{classstatic_maize_afc493353ee7d925a708506e8738eea5f}{
+\index{staticMaize@{staticMaize}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticMaize::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_afc493353ee7d925a708506e8738eea5f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_maize_a4054559a82f50ce5bb73091de2aed6f6}{
+\index{staticMaize@{staticMaize}!NUseSlurrySpring@{NUseSlurrySpring}}
+\index{NUseSlurrySpring@{NUseSlurrySpring}!staticMaize@{staticMaize}}
+\subsubsection[{NUseSlurrySpring}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticMaize::NUseSlurrySpring ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_maize_a4054559a82f50ce5bb73091de2aed6f6}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{staticCrop}.\hypertarget{classstatic_maize_a521e65129a55f99bc810e26bdf7041ce}{
+\index{staticMaize@{staticMaize}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_a521e65129a55f99bc810e26bdf7041ce}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_maize_a3b0031d7c36e7f11f4ca81ece845c63c}{
+\index{staticMaize@{staticMaize}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticMaize@{staticMaize}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_a3b0031d7c36e7f11f4ca81ece845c63c}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_maize_a8a64240f6fed1b843e9d9521dad59231}{
+\index{staticMaize@{staticMaize}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticMaize@{staticMaize}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_a8a64240f6fed1b843e9d9521dad59231}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_maize_a63e7d361f819155d45d3df7a67a7813d}{
+\index{staticMaize@{staticMaize}!SetUnderSown@{SetUnderSown}}
+\index{SetUnderSown@{SetUnderSown}!staticMaize@{staticMaize}}
+\subsubsection[{SetUnderSown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void staticMaize::SetUnderSown (bool {\em uS})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_maize_a63e7d361f819155d45d3df7a67a7813d}
+\hypertarget{classstatic_maize_ac7221669f33010383e88c2cc74d02c57}{
+\index{staticMaize@{staticMaize}!SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}}
+\index{SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}!staticMaize@{staticMaize}}
+\subsubsection[{SlyrryPossibleThisPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int staticMaize::SlyrryPossibleThisPeriod ({\bf period} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_maize_ac7221669f33010383e88c2cc74d02c57}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{staticCrop}.\hypertarget{classstatic_maize_a7d5badef27f557d91fe682c764f1b27a}{
+\index{staticMaize@{staticMaize}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticMaize@{staticMaize}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticMaize::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_maize_a7d5badef27f557d91fe682c764f1b27a}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_maize_ae29df9ec33e841c6fd482c96f330b41c}{
+\index{staticMaize@{staticMaize}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticMaize@{staticMaize}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticMaize::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_maize_ae29df9ec33e841c6fd482c96f330b41c}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.\hypertarget{classstatic_maize_a1f3847a4d1509dc568d21405de42afb5}{
+\index{staticMaize@{staticMaize}!Ymax@{Ymax}}
+\index{Ymax@{Ymax}!staticMaize@{staticMaize}}
+\subsubsection[{Ymax}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::Ymax (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_maize_a1f3847a4d1509dc568d21405de42afb5}
+\hypertarget{classstatic_maize_a3eaafefd01df095524580ac1fb026697}{
+\index{staticMaize@{staticMaize}!Ymin@{Ymin}}
+\index{Ymin@{Ymin}!staticMaize@{staticMaize}}
+\subsubsection[{Ymin}]{\setlength{\rightskip}{0pt plus 5cm}double staticMaize::Ymin (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_maize_a3eaafefd01df095524580ac1fb026697}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classstatic_maize_a741540de20c7cd002125e391bbd272ef}{
+\index{staticMaize@{staticMaize}!underSown@{underSown}}
+\index{underSown@{underSown}!staticMaize@{staticMaize}}
+\subsubsection[{underSown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf staticMaize::underSown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_maize_a741540de20c7cd002125e391bbd272ef}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_maize_8h}{staticMaize.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_maize_8cpp}{staticMaize.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,240 @@
+\hypertarget{classstatic_oat}{
+\section{staticOat Class Reference}
+\label{classstatic_oat}\index{staticOat@{staticOat}}
+}
+
+
+{\ttfamily \#include $<$staticOat.h$>$}Inheritance diagram for staticOat::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_oat}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_oat_afcf04a462cdd16c42cc6aad49eb2b06e}{staticOat} ()
+\item 
+virtual int \hyperlink{classstatic_oat_a75f86a415aa54352870606818273fd94}{ImplementationDoesGiveStraw} ()
+\item 
+virtual void \hyperlink{classstatic_oat_a6f91239da2b953258084806375b60516}{SetUnderSown} (bool uS)
+\item 
+virtual int \hyperlink{classstatic_oat_ab66ee7686d5a79a84ad38d01652910ac}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_oat_af4d6207a79cfdb61327d060e5045078e}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_oat_a974ca1626880bafebc0c040c2ac2d84d}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_oat_a4f743cca9e48390571d709c2f8fbbb31}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_oat_aea9ffb5d23d2bfe402b16172598e359b}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_oat_a1f0a5175033091c837dea7ccb66dfef9}{NitrogenAmount} (int JB\_\-NO, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_oat_a640e2c2320b000a47ea5ab306fa2cd2f}{ExpectedYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_oat_aec202e3df8d88cde3e5705d6569bdc9c}{ExpectedStrawYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_oat_a2cc3d18305c05a76da8163e80ced73b8}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_oat_ac51205b35024c79cd19f50baf6bbb803}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_oat_ae8bd647d11c451e57a4d195061520529}{ExtraNRelease\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_oat_a85e86ff37c0620aaa290f77a7599271d}{NUseSlurrySpring} ()
+\item 
+virtual int \hyperlink{classstatic_oat_af1a87e97ec3a1521096e94b530bd4ac0}{SlyrryPossibleThisPeriod} (\hyperlink{classperiod}{period} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144bae5b4b14454be7e35979e97c3f11ea3d6}{Num\_\-of\_\-pr\_\-str} = 2, 
+\hyperlink{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144ba89ce7fa90d4e02bcda8a9408cca76e2c}{Nitrogen\_\-levels} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classstatic_oat_a070016c89c425653b34ae9bb6cc55739}{Nopt} (int JB\_\-NO)
+\item 
+virtual double \hyperlink{classstatic_oat_aff0b5a68a133cbd31864cab9cb6df147}{Ymin} (int JB\_\-NO)
+\item 
+virtual double \hyperlink{classstatic_oat_afcb9f339277f591080a6b5b250072ddf}{Ymax} (int JB\_\-NO)
+\item 
+virtual void \hyperlink{classstatic_oat_a9d47d1105b60fba4f7c96764bf6229d2}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classstatic_oat_a09face4bc9d635b749592908aab7b5a8}{underSown}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144b}{
+\subsubsection[{"@20}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticOat@{staticOat}}\index{staticOat@{staticOat}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144bae5b4b14454be7e35979e97c3f11ea3d6}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144bae5b4b14454be7e35979e97c3f11ea3d6}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticOat@{staticOat}}\index{staticOat@{staticOat}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144ba89ce7fa90d4e02bcda8a9408cca76e2c}{
+Nitrogen\_\-levels}
+\label{classstatic_oat_a808f6377ccb3b9c79bfcc29f9c59144ba89ce7fa90d4e02bcda8a9408cca76e2c}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_oat_afcf04a462cdd16c42cc6aad49eb2b06e}{
+\index{staticOat@{staticOat}!staticOat@{staticOat}}
+\index{staticOat@{staticOat}!staticOat@{staticOat}}
+\subsubsection[{staticOat}]{\setlength{\rightskip}{0pt plus 5cm}staticOat::staticOat ()}}
+\label{classstatic_oat_afcf04a462cdd16c42cc6aad49eb2b06e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_oat_aec202e3df8d88cde3e5705d6569bdc9c}{
+\index{staticOat@{staticOat}!ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}}
+\index{ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}!staticOat@{staticOat}}
+\subsubsection[{ExpectedStrawYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::ExpectedStrawYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_aec202e3df8d88cde3e5705d6569bdc9c}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{staticCrop}.\hypertarget{classstatic_oat_a640e2c2320b000a47ea5ab306fa2cd2f}{
+\index{staticOat@{staticOat}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticOat@{staticOat}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::ExpectedYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_a640e2c2320b000a47ea5ab306fa2cd2f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_oat_ae8bd647d11c451e57a4d195061520529}{
+\index{staticOat@{staticOat}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticOat@{staticOat}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_ae8bd647d11c451e57a4d195061520529}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_oat_a75f86a415aa54352870606818273fd94}{
+\index{staticOat@{staticOat}!ImplementationDoesGiveStraw@{ImplementationDoesGiveStraw}}
+\index{ImplementationDoesGiveStraw@{ImplementationDoesGiveStraw}!staticOat@{staticOat}}
+\subsubsection[{ImplementationDoesGiveStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticOat::ImplementationDoesGiveStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_oat_a75f86a415aa54352870606818273fd94}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9e8458d1bb0bab4c9a7d05f47fe24537}{staticCrop}.\hypertarget{classstatic_oat_a974ca1626880bafebc0c040c2ac2d84d}{
+\index{staticOat@{staticOat}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticOat@{staticOat}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticOat::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_a974ca1626880bafebc0c040c2ac2d84d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_oat_a1f0a5175033091c837dea7ccb66dfef9}{
+\index{staticOat@{staticOat}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticOat@{staticOat}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::NitrogenAmount (int {\em JB\_\-NO}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_a1f0a5175033091c837dea7ccb66dfef9}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_oat_aea9ffb5d23d2bfe402b16172598e359b}{
+\index{staticOat@{staticOat}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticOat@{staticOat}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticOat::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_aea9ffb5d23d2bfe402b16172598e359b}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_oat_a070016c89c425653b34ae9bb6cc55739}{
+\index{staticOat@{staticOat}!Nopt@{Nopt}}
+\index{Nopt@{Nopt}!staticOat@{staticOat}}
+\subsubsection[{Nopt}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::Nopt (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_oat_a070016c89c425653b34ae9bb6cc55739}
+\hypertarget{classstatic_oat_a4f743cca9e48390571d709c2f8fbbb31}{
+\index{staticOat@{staticOat}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticOat@{staticOat}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticOat::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_a4f743cca9e48390571d709c2f8fbbb31}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_oat_a85e86ff37c0620aaa290f77a7599271d}{
+\index{staticOat@{staticOat}!NUseSlurrySpring@{NUseSlurrySpring}}
+\index{NUseSlurrySpring@{NUseSlurrySpring}!staticOat@{staticOat}}
+\subsubsection[{NUseSlurrySpring}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticOat::NUseSlurrySpring ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_oat_a85e86ff37c0620aaa290f77a7599271d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{staticCrop}.\hypertarget{classstatic_oat_a2cc3d18305c05a76da8163e80ced73b8}{
+\index{staticOat@{staticOat}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticOat@{staticOat}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_a2cc3d18305c05a76da8163e80ced73b8}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_oat_ac51205b35024c79cd19f50baf6bbb803}{
+\index{staticOat@{staticOat}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticOat@{staticOat}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_ac51205b35024c79cd19f50baf6bbb803}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_oat_af4d6207a79cfdb61327d060e5045078e}{
+\index{staticOat@{staticOat}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticOat@{staticOat}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_af4d6207a79cfdb61327d060e5045078e}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_oat_a6f91239da2b953258084806375b60516}{
+\index{staticOat@{staticOat}!SetUnderSown@{SetUnderSown}}
+\index{SetUnderSown@{SetUnderSown}!staticOat@{staticOat}}
+\subsubsection[{SetUnderSown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void staticOat::SetUnderSown (bool {\em uS})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_oat_a6f91239da2b953258084806375b60516}
+\hypertarget{classstatic_oat_af1a87e97ec3a1521096e94b530bd4ac0}{
+\index{staticOat@{staticOat}!SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}}
+\index{SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}!staticOat@{staticOat}}
+\subsubsection[{SlyrryPossibleThisPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int staticOat::SlyrryPossibleThisPeriod ({\bf period} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_oat_af1a87e97ec3a1521096e94b530bd4ac0}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{staticCrop}.\hypertarget{classstatic_oat_ab66ee7686d5a79a84ad38d01652910ac}{
+\index{staticOat@{staticOat}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticOat@{staticOat}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticOat::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_oat_ab66ee7686d5a79a84ad38d01652910ac}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_oat_a9d47d1105b60fba4f7c96764bf6229d2}{
+\index{staticOat@{staticOat}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticOat@{staticOat}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticOat::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_oat_a9d47d1105b60fba4f7c96764bf6229d2}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.\hypertarget{classstatic_oat_afcb9f339277f591080a6b5b250072ddf}{
+\index{staticOat@{staticOat}!Ymax@{Ymax}}
+\index{Ymax@{Ymax}!staticOat@{staticOat}}
+\subsubsection[{Ymax}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::Ymax (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_oat_afcb9f339277f591080a6b5b250072ddf}
+\hypertarget{classstatic_oat_aff0b5a68a133cbd31864cab9cb6df147}{
+\index{staticOat@{staticOat}!Ymin@{Ymin}}
+\index{Ymin@{Ymin}!staticOat@{staticOat}}
+\subsubsection[{Ymin}]{\setlength{\rightskip}{0pt plus 5cm}double staticOat::Ymin (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_oat_aff0b5a68a133cbd31864cab9cb6df147}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classstatic_oat_a09face4bc9d635b749592908aab7b5a8}{
+\index{staticOat@{staticOat}!underSown@{underSown}}
+\index{underSown@{underSown}!staticOat@{staticOat}}
+\subsubsection[{underSown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf staticOat::underSown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_oat_a09face4bc9d635b749592908aab7b5a8}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_oat_8h}{staticOat.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_oat_8cpp}{staticOat.cpp}\end{DoxyCompactItemize}

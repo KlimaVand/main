@@ -1,0 +1,186 @@
+\hypertarget{classcrop_rye}{
+\section{cropRye Class Reference}
+\label{classcrop_rye}\index{cropRye@{cropRye}}
+}
+
+
+{\ttfamily \#include $<$cropRye.h$>$}Inheritance diagram for cropRye::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classcrop_rye}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_rye_a6f018fce527da6ab7f2100679d6e3077}{cropRye} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_rye_a236684be4b8b349bf2a1e5917ed6660b}{cropRye} (const \hyperlink{classcrop_rye}{cropRye} \&acrop)
+\item 
+virtual void \hyperlink{classcrop_rye_a0e583eca63fb8a2f609763d1a319d891}{Sow} (double SeedDensDryMatt, double \hyperlink{classcrop_aa4666fdd11920e05003bfeefc5518ddf}{RelativeDensity}, double NitrogenInSeed)
+\item 
+virtual double \hyperlink{classcrop_rye_a2781d1b924cb3e3f9fba021a5052c629}{fNitrogen} ()
+\item 
+virtual void \hyperlink{classcrop_rye_ad2996d19a34c3a800f1f356b522b4904}{UpdateHeight} ()
+\item 
+virtual void \hyperlink{classcrop_rye_aed534e2eb483b8bdd49bb3634492050c}{ReadParameters} (char $\ast$filename)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_rye_a56f613f23017934a4876c34bfb065e44}{HeightA}
+\item 
+double \hyperlink{classcrop_rye_a8fee56d92137c695ffbce9820d38eb9c}{HeightB}
+\item 
+double \hyperlink{classcrop_rye_a015253907d3cba599baf628f76a5bc89}{GrainNumber}
+\item 
+double \hyperlink{classcrop_rye_a4907c9d07c45b91e95bbfeea1838bcc3}{LeafNumber}
+\item 
+double \hyperlink{classcrop_rye_a3c7fdd1d8fa45ed6ba4ff5f62f31e2c9}{CritLeafNo}
+\item 
+double \hyperlink{classcrop_rye_a886db0739f0804924fc51569d26e5b7b}{FinalLeafNo}
+\item 
+double \hyperlink{classcrop_rye_a955145aa7baf3c94b732e46fcee08de0}{VernalIndex}
+\item 
+double \hyperlink{classcrop_rye_a2de0cde8d4ef4ff9721e57aa6fa016ae}{TSum}
+\item 
+bool \hyperlink{classcrop_rye_a3d5c385e415eb60ca33b00bafe5b3ce0}{Sown}
+\item 
+bool \hyperlink{classcrop_rye_a29d6500b13821a2b531611128a4f169e}{Germinated}
+\item 
+bool \hyperlink{classcrop_rye_af90c57ab4b93d1582316d3a56d3322fe}{Emerged}
+\item 
+bool \hyperlink{classcrop_rye_adf7f306b8c8ba27f5b9b10ba9648997e}{Vernalized}
+\item 
+bool \hyperlink{classcrop_rye_a875706750260242842d47798984fd748}{CommitFlag}
+\item 
+bool \hyperlink{classcrop_rye_a17362b421105a32ee37a63770e0a604b}{Extending}
+\item 
+bool \hyperlink{classcrop_rye_adb2fff10b6b8b877dd631ac43dd9d9f5}{Anthesis}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_rye_a6f018fce527da6ab7f2100679d6e3077}{
+\index{cropRye@{cropRye}!cropRye@{cropRye}}
+\index{cropRye@{cropRye}!cropRye@{cropRye}}
+\subsubsection[{cropRye}]{\setlength{\rightskip}{0pt plus 5cm}cropRye::cropRye (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_rye_a6f018fce527da6ab7f2100679d6e3077}
+\hypertarget{classcrop_rye_a236684be4b8b349bf2a1e5917ed6660b}{
+\index{cropRye@{cropRye}!cropRye@{cropRye}}
+\index{cropRye@{cropRye}!cropRye@{cropRye}}
+\subsubsection[{cropRye}]{\setlength{\rightskip}{0pt plus 5cm}cropRye::cropRye (const {\bf cropRye} \& {\em acrop})}}
+\label{classcrop_rye_a236684be4b8b349bf2a1e5917ed6660b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_rye_a2781d1b924cb3e3f9fba021a5052c629}{
+\index{cropRye@{cropRye}!fNitrogen@{fNitrogen}}
+\index{fNitrogen@{fNitrogen}!cropRye@{cropRye}}
+\subsubsection[{fNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}double cropRye::fNitrogen ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_rye_a2781d1b924cb3e3f9fba021a5052c629}
+returns a factor that describe how much N that are in each part of the plant (root, veg and store) 
+
+Reimplemented from \hyperlink{classcrop_a602622ac2c0de6432e6b9438dbbb646b}{crop}.\hypertarget{classcrop_rye_aed534e2eb483b8bdd49bb3634492050c}{
+\index{cropRye@{cropRye}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropRye@{cropRye}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropRye::ReadParameters (char $\ast$ {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_rye_aed534e2eb483b8bdd49bb3634492050c}
+\hypertarget{classcrop_rye_a0e583eca63fb8a2f609763d1a319d891}{
+\index{cropRye@{cropRye}!Sow@{Sow}}
+\index{Sow@{Sow}!cropRye@{cropRye}}
+\subsubsection[{Sow}]{\setlength{\rightskip}{0pt plus 5cm}void cropRye::Sow (double {\em SeedDensDryMatt}, \/  double {\em aRelativeDensity}, \/  double {\em NitrogenInSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_rye_a0e583eca63fb8a2f609763d1a319d891}
+An account of the DM lost via \char`\"{}GerminationConversion\char`\"{} must be added, in order to keep total balance of DM/carbon !!! 
+
+Reimplemented from \hyperlink{classcrop_a2c5df235a96a1daa3ab122baf17518d4}{crop}.\hypertarget{classcrop_rye_ad2996d19a34c3a800f1f356b522b4904}{
+\index{cropRye@{cropRye}!UpdateHeight@{UpdateHeight}}
+\index{UpdateHeight@{UpdateHeight}!cropRye@{cropRye}}
+\subsubsection[{UpdateHeight}]{\setlength{\rightskip}{0pt plus 5cm}void cropRye::UpdateHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_rye_ad2996d19a34c3a800f1f356b522b4904}
+updates the height of the plant 
+
+Reimplemented from \hyperlink{classcrop_aeccf3077c6ad647769145b8064ba426b}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_rye_adb2fff10b6b8b877dd631ac43dd9d9f5}{
+\index{cropRye@{cropRye}!Anthesis@{Anthesis}}
+\index{Anthesis@{Anthesis}!cropRye@{cropRye}}
+\subsubsection[{Anthesis}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::Anthesis}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_adb2fff10b6b8b877dd631ac43dd9d9f5}
+\hypertarget{classcrop_rye_a875706750260242842d47798984fd748}{
+\index{cropRye@{cropRye}!CommitFlag@{CommitFlag}}
+\index{CommitFlag@{CommitFlag}!cropRye@{cropRye}}
+\subsubsection[{CommitFlag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::CommitFlag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a875706750260242842d47798984fd748}
+\hypertarget{classcrop_rye_a3c7fdd1d8fa45ed6ba4ff5f62f31e2c9}{
+\index{cropRye@{cropRye}!CritLeafNo@{CritLeafNo}}
+\index{CritLeafNo@{CritLeafNo}!cropRye@{cropRye}}
+\subsubsection[{CritLeafNo}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::CritLeafNo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a3c7fdd1d8fa45ed6ba4ff5f62f31e2c9}
+\hypertarget{classcrop_rye_af90c57ab4b93d1582316d3a56d3322fe}{
+\index{cropRye@{cropRye}!Emerged@{Emerged}}
+\index{Emerged@{Emerged}!cropRye@{cropRye}}
+\subsubsection[{Emerged}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::Emerged}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_af90c57ab4b93d1582316d3a56d3322fe}
+\hypertarget{classcrop_rye_a17362b421105a32ee37a63770e0a604b}{
+\index{cropRye@{cropRye}!Extending@{Extending}}
+\index{Extending@{Extending}!cropRye@{cropRye}}
+\subsubsection[{Extending}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::Extending}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a17362b421105a32ee37a63770e0a604b}
+\hypertarget{classcrop_rye_a886db0739f0804924fc51569d26e5b7b}{
+\index{cropRye@{cropRye}!FinalLeafNo@{FinalLeafNo}}
+\index{FinalLeafNo@{FinalLeafNo}!cropRye@{cropRye}}
+\subsubsection[{FinalLeafNo}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::FinalLeafNo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a886db0739f0804924fc51569d26e5b7b}
+\hypertarget{classcrop_rye_a29d6500b13821a2b531611128a4f169e}{
+\index{cropRye@{cropRye}!Germinated@{Germinated}}
+\index{Germinated@{Germinated}!cropRye@{cropRye}}
+\subsubsection[{Germinated}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::Germinated}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a29d6500b13821a2b531611128a4f169e}
+\hypertarget{classcrop_rye_a015253907d3cba599baf628f76a5bc89}{
+\index{cropRye@{cropRye}!GrainNumber@{GrainNumber}}
+\index{GrainNumber@{GrainNumber}!cropRye@{cropRye}}
+\subsubsection[{GrainNumber}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::GrainNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a015253907d3cba599baf628f76a5bc89}
+\hypertarget{classcrop_rye_a56f613f23017934a4876c34bfb065e44}{
+\index{cropRye@{cropRye}!HeightA@{HeightA}}
+\index{HeightA@{HeightA}!cropRye@{cropRye}}
+\subsubsection[{HeightA}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::HeightA}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a56f613f23017934a4876c34bfb065e44}
+\hypertarget{classcrop_rye_a8fee56d92137c695ffbce9820d38eb9c}{
+\index{cropRye@{cropRye}!HeightB@{HeightB}}
+\index{HeightB@{HeightB}!cropRye@{cropRye}}
+\subsubsection[{HeightB}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::HeightB}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a8fee56d92137c695ffbce9820d38eb9c}
+\hypertarget{classcrop_rye_a4907c9d07c45b91e95bbfeea1838bcc3}{
+\index{cropRye@{cropRye}!LeafNumber@{LeafNumber}}
+\index{LeafNumber@{LeafNumber}!cropRye@{cropRye}}
+\subsubsection[{LeafNumber}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::LeafNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a4907c9d07c45b91e95bbfeea1838bcc3}
+\hypertarget{classcrop_rye_a3d5c385e415eb60ca33b00bafe5b3ce0}{
+\index{cropRye@{cropRye}!Sown@{Sown}}
+\index{Sown@{Sown}!cropRye@{cropRye}}
+\subsubsection[{Sown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::Sown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a3d5c385e415eb60ca33b00bafe5b3ce0}
+\hypertarget{classcrop_rye_a2de0cde8d4ef4ff9721e57aa6fa016ae}{
+\index{cropRye@{cropRye}!TSum@{TSum}}
+\index{TSum@{TSum}!cropRye@{cropRye}}
+\subsubsection[{TSum}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::TSum}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a2de0cde8d4ef4ff9721e57aa6fa016ae}
+\hypertarget{classcrop_rye_a955145aa7baf3c94b732e46fcee08de0}{
+\index{cropRye@{cropRye}!VernalIndex@{VernalIndex}}
+\index{VernalIndex@{VernalIndex}!cropRye@{cropRye}}
+\subsubsection[{VernalIndex}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRye::VernalIndex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_a955145aa7baf3c94b732e46fcee08de0}
+\hypertarget{classcrop_rye_adf7f306b8c8ba27f5b9b10ba9648997e}{
+\index{cropRye@{cropRye}!Vernalized@{Vernalized}}
+\index{Vernalized@{Vernalized}!cropRye@{cropRye}}
+\subsubsection[{Vernalized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRye::Vernalized}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_rye_adf7f306b8c8ba27f5b9b10ba9648997e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_rye_8h}{cropRye.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_rye_8cpp}{cropRye.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,219 @@
+\hypertarget{classstorage}{
+\section{storage Class Reference}
+\label{classstorage}\index{storage@{storage}}
+}
+
+
+Basic \hyperlink{classstorage}{storage} class.  
+
+
+{\ttfamily \#include $<$storage.h$>$}Inheritance diagram for storage::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstorage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstorage_a55f5297949ab4ab66c09563e1d3875ec}{storage} ()
+\begin{DoxyCompactList}\small\item\em Constructor without arguments. \item\end{DoxyCompactList}\item 
+\hyperlink{classstorage_a6d6ff9d76ac1bb57c7977c56d5e8b61f}{storage} (const char $\ast$aname, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner, double aCapacity)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. \item\end{DoxyCompactList}\item 
+\hyperlink{classstorage_adeb4f7de2055ed2a3384d6440df43c49}{storage} (\hyperlink{classstorage}{storage} \&aStore)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classstorage_ac7d5664e97625603e30f649d45231b06}{$\sim$storage} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstorage_ac6d321e217929cd9906adee777822dea}{GetCapacity} () const 
+\begin{DoxyCompactList}\small\item\em Return the capacity of the store. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstorage_ac943ca0d285591334ab8808d703aa106}{SetCapacity} (double aCapacity)
+\begin{DoxyCompactList}\small\item\em Set the capacity of the store. \item\end{DoxyCompactList}\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classstorage_a87cffa241a825ff4a09ee71f9d03e04a}{GetProductPointer} () const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \hyperlink{classproduct}{product} stored. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstorage_ad93983f9383bf81f369ed75f2e9fa1d2}{SetProductPointer} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the \hyperlink{classproduct}{product} stored. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstorage_ac5395de0a763ca3db522336339cd6dfb}{Getamountstored} ()
+\begin{DoxyCompactList}\small\item\em Return amount of \hyperlink{classproduct}{product} stored in the appropriate units. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classstorage_a505dd0940fa02ebab1ebb375bbd83c04}{ProductCompare} (const \hyperlink{classproduct}{product} $\ast$desiredProduct)
+\begin{DoxyCompactList}\small\item\em Return true if the stored \hyperlink{classproduct}{product} is the same as the desired \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstorage_aafe056e4218e1e93461e8d165dcb13ca}{AddToStore} (\hyperlink{classproduct}{product} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{classproduct}{product} to the store. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classstorage_a3ae7258ab926b5fb4771076bedac543a}{GetFromStore} (double RequestedAmount)
+\begin{DoxyCompactList}\small\item\em Returns an amount of \hyperlink{classproduct}{product} from the store. \item\end{DoxyCompactList}\item 
+string \hyperlink{classstorage_ae6dd348ff4165ddadea893d7f423dd9f}{GiveNameStoredProduct} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the stored \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstorage_a1dd69d2a46fa8359198d8c9d609ce50b}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Initialise \hyperlink{classstorage}{storage} details from a text file. \item\end{DoxyCompactList}\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classstorage_a37cba1ed5c394ab20eeb55d90ccbecc3}{GetCopyStoredFeedProduct} (int feedType)
+\begin{DoxyCompactList}\small\item\em Returned a copy of a stored feed \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classstorage_a1996eaa0b59046ab66d5be1713f90034}{GetCopyStoredFeedProduct} (const \hyperlink{classproduct}{product} $\ast$product1)
+\begin{DoxyCompactList}\small\item\em Returned a copy of a stored feed \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classstorage_a1753e116e718886f484ce173cefa652f}{GetStoredFeedProductPtr} (int feedType)
+\begin{DoxyCompactList}\small\item\em Returned a pointer to the stored feed \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classstorage_acb8dff690c7b169c45b30e4bf2dbe20a}{operator$<$$<$} (ostream \&os, const \hyperlink{classstorage}{storage} \&s)
+\begin{DoxyCompactList}\small\item\em Outputs streaming. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic \hyperlink{classstorage}{storage} class. Basic \hyperlink{classstorage}{storage} class. Should not be instanced except in inherited form. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstorage_a55f5297949ab4ab66c09563e1d3875ec}{
+\index{storage@{storage}!storage@{storage}}
+\index{storage@{storage}!storage@{storage}}
+\subsubsection[{storage}]{\setlength{\rightskip}{0pt plus 5cm}storage::storage ()}}
+\label{classstorage_a55f5297949ab4ab66c09563e1d3875ec}
+
+
+Constructor without arguments. \hypertarget{classstorage_a6d6ff9d76ac1bb57c7977c56d5e8b61f}{
+\index{storage@{storage}!storage@{storage}}
+\index{storage@{storage}!storage@{storage}}
+\subsubsection[{storage}]{\setlength{\rightskip}{0pt plus 5cm}storage::storage (const char $\ast$ {\em aname}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner}, \/  double {\em aCapacity})}}
+\label{classstorage_a6d6ff9d76ac1bb57c7977c56d5e8b61f}
+
+
+Constructor with arguments. \hypertarget{classstorage_adeb4f7de2055ed2a3384d6440df43c49}{
+\index{storage@{storage}!storage@{storage}}
+\index{storage@{storage}!storage@{storage}}
+\subsubsection[{storage}]{\setlength{\rightskip}{0pt plus 5cm}storage::storage ({\bf storage} \& {\em aStore})}}
+\label{classstorage_adeb4f7de2055ed2a3384d6440df43c49}
+
+
+Copy constructor. \hypertarget{classstorage_ac7d5664e97625603e30f649d45231b06}{
+\index{storage@{storage}!$\sim$storage@{$\sim$storage}}
+\index{$\sim$storage@{$\sim$storage}!storage@{storage}}
+\subsubsection[{$\sim$storage}]{\setlength{\rightskip}{0pt plus 5cm}storage::$\sim$storage ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstorage_ac7d5664e97625603e30f649d45231b06}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classstorage_aafe056e4218e1e93461e8d165dcb13ca}{
+\index{storage@{storage}!AddToStore@{AddToStore}}
+\index{AddToStore@{AddToStore}!storage@{storage}}
+\subsubsection[{AddToStore}]{\setlength{\rightskip}{0pt plus 5cm}void storage::AddToStore ({\bf product} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstorage_aafe056e4218e1e93461e8d165dcb13ca}
+
+
+Add a \hyperlink{classproduct}{product} to the store. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]the \hyperlink{classproduct}{product} to add \end{DoxyParams}
+\hypertarget{classstorage_ac5395de0a763ca3db522336339cd6dfb}{
+\index{storage@{storage}!Getamountstored@{Getamountstored}}
+\index{Getamountstored@{Getamountstored}!storage@{storage}}
+\subsubsection[{Getamountstored}]{\setlength{\rightskip}{0pt plus 5cm}double storage::Getamountstored ()}}
+\label{classstorage_ac5395de0a763ca3db522336339cd6dfb}
+
+
+Return amount of \hyperlink{classproduct}{product} stored in the appropriate units. \hypertarget{classstorage_ac6d321e217929cd9906adee777822dea}{
+\index{storage@{storage}!GetCapacity@{GetCapacity}}
+\index{GetCapacity@{GetCapacity}!storage@{storage}}
+\subsubsection[{GetCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double storage::GetCapacity () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstorage_ac6d321e217929cd9906adee777822dea}
+
+
+Return the capacity of the store. \hypertarget{classstorage_a1996eaa0b59046ab66d5be1713f90034}{
+\index{storage@{storage}!GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}}
+\index{GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}!storage@{storage}}
+\subsubsection[{GetCopyStoredFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ storage::GetCopyStoredFeedProduct (const {\bf product} $\ast$ {\em product1})}}
+\label{classstorage_a1996eaa0b59046ab66d5be1713f90034}
+
+
+Returned a copy of a stored feed \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em product1}]the feed \hyperlink{classproduct}{product} to be copied\end{DoxyParams}
+Returns a copy of what is stored if is the same as input. If someone accidently has stored a plantItemObj in this store fasset wil halt \hypertarget{classstorage_a37cba1ed5c394ab20eeb55d90ccbecc3}{
+\index{storage@{storage}!GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}}
+\index{GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}!storage@{storage}}
+\subsubsection[{GetCopyStoredFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ storage::GetCopyStoredFeedProduct (int {\em feedType})}}
+\label{classstorage_a37cba1ed5c394ab20eeb55d90ccbecc3}
+
+
+Returned a copy of a stored feed \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em feedType}]reference number of the feed \hyperlink{classproduct}{product}\end{DoxyParams}
+Makes a copy of what is stored if it is a feedItemObj, feedType and there is something stored. Else it returns NULL \hypertarget{classstorage_a3ae7258ab926b5fb4771076bedac543a}{
+\index{storage@{storage}!GetFromStore@{GetFromStore}}
+\index{GetFromStore@{GetFromStore}!storage@{storage}}
+\subsubsection[{GetFromStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ storage::GetFromStore (double {\em RequestedAmount})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstorage_a3ae7258ab926b5fb4771076bedac543a}
+
+
+Returns an amount of \hyperlink{classproduct}{product} from the store. 
+\begin{DoxyParams}{Parameters}
+\item[{\em RequestedAmount}]the amount requested \end{DoxyParams}
+\hypertarget{classstorage_a87cffa241a825ff4a09ee71f9d03e04a}{
+\index{storage@{storage}!GetProductPointer@{GetProductPointer}}
+\index{GetProductPointer@{GetProductPointer}!storage@{storage}}
+\subsubsection[{GetProductPointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product}$\ast$ storage::GetProductPointer () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstorage_a87cffa241a825ff4a09ee71f9d03e04a}
+
+
+Return a pointer to the \hyperlink{classproduct}{product} stored. \hypertarget{classstorage_a1753e116e718886f484ce173cefa652f}{
+\index{storage@{storage}!GetStoredFeedProductPtr@{GetStoredFeedProductPtr}}
+\index{GetStoredFeedProductPtr@{GetStoredFeedProductPtr}!storage@{storage}}
+\subsubsection[{GetStoredFeedProductPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ storage::GetStoredFeedProductPtr (int {\em feedType})}}
+\label{classstorage_a1753e116e718886f484ce173cefa652f}
+
+
+Returned a pointer to the stored feed \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em feedType}]reference number of the feed \hyperlink{classproduct}{product}\end{DoxyParams}
+returning a pointer to what is stored if it is a feedItemObj, feedType and there is something stored. Else it returns NULL \hypertarget{classstorage_ae6dd348ff4165ddadea893d7f423dd9f}{
+\index{storage@{storage}!GiveNameStoredProduct@{GiveNameStoredProduct}}
+\index{GiveNameStoredProduct@{GiveNameStoredProduct}!storage@{storage}}
+\subsubsection[{GiveNameStoredProduct}]{\setlength{\rightskip}{0pt plus 5cm}string storage::GiveNameStoredProduct ()}}
+\label{classstorage_ae6dd348ff4165ddadea893d7f423dd9f}
+
+
+Returns the name of the stored \hyperlink{classproduct}{product}. \hypertarget{classstorage_a505dd0940fa02ebab1ebb375bbd83c04}{
+\index{storage@{storage}!ProductCompare@{ProductCompare}}
+\index{ProductCompare@{ProductCompare}!storage@{storage}}
+\subsubsection[{ProductCompare}]{\setlength{\rightskip}{0pt plus 5cm}bool storage::ProductCompare (const {\bf product} $\ast$ {\em desiredProduct})}}
+\label{classstorage_a505dd0940fa02ebab1ebb375bbd83c04}
+
+
+Return true if the stored \hyperlink{classproduct}{product} is the same as the desired \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em desiredProduct}]the \hyperlink{classproduct}{product} desired\end{DoxyParams}
+returns true \hyperlink{classproduct}{product} if: a. the stored \hyperlink{classproduct}{product} name is the same as the desired \hyperlink{classproduct}{product} name b. the stored \hyperlink{classproduct}{product} trade name is the same as the desired \hyperlink{classproduct}{product} name c. the stored \hyperlink{classproduct}{product} trade name is the same as the desired \hyperlink{classproduct}{product} plant name \hypertarget{classstorage_a1dd69d2a46fa8359198d8c9d609ce50b}{
+\index{storage@{storage}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!storage@{storage}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void storage::ReadParameters (fstream $\ast$ {\em file})}}
+\label{classstorage_a1dd69d2a46fa8359198d8c9d609ce50b}
+
+
+Initialise \hyperlink{classstorage}{storage} details from a text file. \hypertarget{classstorage_ac943ca0d285591334ab8808d703aa106}{
+\index{storage@{storage}!SetCapacity@{SetCapacity}}
+\index{SetCapacity@{SetCapacity}!storage@{storage}}
+\subsubsection[{SetCapacity}]{\setlength{\rightskip}{0pt plus 5cm}void storage::SetCapacity (double {\em aCapacity})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstorage_ac943ca0d285591334ab8808d703aa106}
+
+
+Set the capacity of the store. \hypertarget{classstorage_ad93983f9383bf81f369ed75f2e9fa1d2}{
+\index{storage@{storage}!SetProductPointer@{SetProductPointer}}
+\index{SetProductPointer@{SetProductPointer}!storage@{storage}}
+\subsubsection[{SetProductPointer}]{\setlength{\rightskip}{0pt plus 5cm}void storage::SetProductPointer ({\bf product} $\ast$ {\em aProduct})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstorage_ad93983f9383bf81f369ed75f2e9fa1d2}
+
+
+Set the pointer to the \hyperlink{classproduct}{product} stored. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classstorage_acb8dff690c7b169c45b30e4bf2dbe20a}{
+\index{storage@{storage}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!storage@{storage}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf storage} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classstorage_acb8dff690c7b169c45b30e4bf2dbe20a}
+
+
+Outputs streaming. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{storage_8h}{storage.h}\item 
+C:/main/trunk/src/building/\hyperlink{storage_8cpp}{storage.cpp}\end{DoxyCompactItemize}

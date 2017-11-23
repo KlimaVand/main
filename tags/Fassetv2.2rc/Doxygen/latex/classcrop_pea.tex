@@ -1,0 +1,144 @@
+\hypertarget{classcrop_pea}{
+\section{cropPea Class Reference}
+\label{classcrop_pea}\index{cropPea@{cropPea}}
+}
+
+
+{\ttfamily \#include $<$cropPea.h$>$}Inheritance diagram for cropPea::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_pea}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_pea_a99687d96732363431a8f6bc474ac1773}{cropPea} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_pea_a00017b07f1e047f3af5e170497298180}{cropPea} (const \hyperlink{classcrop_pea}{cropPea} \&acrop)
+\item 
+virtual \hyperlink{classcrop_pea_aec7823ced622eb52b0de4e637ab03edd}{$\sim$cropPea} ()
+\item 
+void \hyperlink{classcrop_pea_ac56e0664c618ab5e8ead80d2259a02a8}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual void \hyperlink{classcrop_pea_a2e984c9df88d272f2caade355a36fff7}{NitrogenAndTranspiration} (\hyperlink{classnitrogen}{nitrogen} aNitrogenUptake, double aTranspirationRatio)
+\item 
+virtual void \hyperlink{classcrop_pea_a95c81e1e9ce7479013fac70b8e4cee86}{ReadParameters} (char $\ast$filename)
+\item 
+virtual void \hyperlink{classcrop_pea_acd369e049225726674bcc0091f2f9e54}{TransferDryMatterToRoot} (double $\ast$dDryMatt)
+\item 
+virtual double \hyperlink{classcrop_pea_ac337615ba724c897a369dd1ad85a951e}{GetNFixationThisDay} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classcrop_pea_a926468b50eb7ba88b6e3c9641377ae10}{CalcPotentialNFixation} (double dDryMatt)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_pea_a95d25dcf7dfa14e114de67a0029eab02}{fNitrogenAtFlowering}
+\item 
+double \hyperlink{classcrop_pea_a1852a7eb6965220c3bbd686504a87193}{MaxFixPerDM}
+\item 
+double \hyperlink{classcrop_pea_ad48e8faf29f08617f2206c2577af11ac}{PotNFix}
+\item 
+double \hyperlink{classcrop_pea_a0b2798f6476655b22c242207b3fb0d0f}{NFixationThisDay}
+\item 
+double \hyperlink{classcrop_pea_a74e2cc41cbccf0a208430b23a1267853}{DMCostPerN}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_pea_a99687d96732363431a8f6bc474ac1773}{
+\index{cropPea@{cropPea}!cropPea@{cropPea}}
+\index{cropPea@{cropPea}!cropPea@{cropPea}}
+\subsubsection[{cropPea}]{\setlength{\rightskip}{0pt plus 5cm}cropPea::cropPea (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_pea_a99687d96732363431a8f6bc474ac1773}
+\hypertarget{classcrop_pea_a00017b07f1e047f3af5e170497298180}{
+\index{cropPea@{cropPea}!cropPea@{cropPea}}
+\index{cropPea@{cropPea}!cropPea@{cropPea}}
+\subsubsection[{cropPea}]{\setlength{\rightskip}{0pt plus 5cm}cropPea::cropPea (const {\bf cropPea} \& {\em acrop})}}
+\label{classcrop_pea_a00017b07f1e047f3af5e170497298180}
+\hypertarget{classcrop_pea_aec7823ced622eb52b0de4e637ab03edd}{
+\index{cropPea@{cropPea}!$\sim$cropPea@{$\sim$cropPea}}
+\index{$\sim$cropPea@{$\sim$cropPea}!cropPea@{cropPea}}
+\subsubsection[{$\sim$cropPea}]{\setlength{\rightskip}{0pt plus 5cm}virtual cropPea::$\sim$cropPea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_pea_aec7823ced622eb52b0de4e637ab03edd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_pea_ac56e0664c618ab5e8ead80d2259a02a8}{
+\index{cropPea@{cropPea}!Add@{Add}}
+\index{Add@{Add}!cropPea@{cropPea}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cropPea::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})}}
+\label{classcrop_pea_ac56e0664c618ab5e8ead80d2259a02a8}
+\hypertarget{classcrop_pea_a926468b50eb7ba88b6e3c9641377ae10}{
+\index{cropPea@{cropPea}!CalcPotentialNFixation@{CalcPotentialNFixation}}
+\index{CalcPotentialNFixation@{CalcPotentialNFixation}!cropPea@{cropPea}}
+\subsubsection[{CalcPotentialNFixation}]{\setlength{\rightskip}{0pt plus 5cm}double cropPea::CalcPotentialNFixation (double {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_pea_a926468b50eb7ba88b6e3c9641377ae10}
+\hypertarget{classcrop_pea_ac337615ba724c897a369dd1ad85a951e}{
+\index{cropPea@{cropPea}!GetNFixationThisDay@{GetNFixationThisDay}}
+\index{GetNFixationThisDay@{GetNFixationThisDay}!cropPea@{cropPea}}
+\subsubsection[{GetNFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cropPea::GetNFixationThisDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_pea_ac337615ba724c897a369dd1ad85a951e}
+
+
+Reimplemented from \hyperlink{classcrop_aec045be7b4c6fd112b48ead6ee68dcd9}{crop}.\hypertarget{classcrop_pea_a2e984c9df88d272f2caade355a36fff7}{
+\index{cropPea@{cropPea}!NitrogenAndTranspiration@{NitrogenAndTranspiration}}
+\index{NitrogenAndTranspiration@{NitrogenAndTranspiration}!cropPea@{cropPea}}
+\subsubsection[{NitrogenAndTranspiration}]{\setlength{\rightskip}{0pt plus 5cm}void cropPea::NitrogenAndTranspiration ({\bf nitrogen} {\em aNitrogenUptake}, \/  double {\em aTranspirationRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_pea_a2e984c9df88d272f2caade355a36fff7}
+Adding Nitrogen uptake to the \hyperlink{classcrop}{crop} and replace Transpiration Ratio 
+
+Reimplemented from \hyperlink{classcrop_a4ed6aaf98890015fb52d4d8957313166}{crop}.\hypertarget{classcrop_pea_a95c81e1e9ce7479013fac70b8e4cee86}{
+\index{cropPea@{cropPea}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropPea@{cropPea}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropPea::ReadParameters (char $\ast$ {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_pea_a95c81e1e9ce7479013fac70b8e4cee86}
+\hypertarget{classcrop_pea_acd369e049225726674bcc0091f2f9e54}{
+\index{cropPea@{cropPea}!TransferDryMatterToRoot@{TransferDryMatterToRoot}}
+\index{TransferDryMatterToRoot@{TransferDryMatterToRoot}!cropPea@{cropPea}}
+\subsubsection[{TransferDryMatterToRoot}]{\setlength{\rightskip}{0pt plus 5cm}void cropPea::TransferDryMatterToRoot (double $\ast$ {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_pea_acd369e049225726674bcc0091f2f9e54}
+
+
+Reimplemented from \hyperlink{classcrop_aeb0993f2a6d2f21d30a5c24bbd46833e}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_pea_a74e2cc41cbccf0a208430b23a1267853}{
+\index{cropPea@{cropPea}!DMCostPerN@{DMCostPerN}}
+\index{DMCostPerN@{DMCostPerN}!cropPea@{cropPea}}
+\subsubsection[{DMCostPerN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropPea::DMCostPerN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_pea_a74e2cc41cbccf0a208430b23a1267853}
+
+
+Reimplemented from \hyperlink{classcrop_af06dc09d391a57692b440c7c492dbc41}{crop}.\hypertarget{classcrop_pea_a95d25dcf7dfa14e114de67a0029eab02}{
+\index{cropPea@{cropPea}!fNitrogenAtFlowering@{fNitrogenAtFlowering}}
+\index{fNitrogenAtFlowering@{fNitrogenAtFlowering}!cropPea@{cropPea}}
+\subsubsection[{fNitrogenAtFlowering}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropPea::fNitrogenAtFlowering}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_pea_a95d25dcf7dfa14e114de67a0029eab02}
+\hypertarget{classcrop_pea_a1852a7eb6965220c3bbd686504a87193}{
+\index{cropPea@{cropPea}!MaxFixPerDM@{MaxFixPerDM}}
+\index{MaxFixPerDM@{MaxFixPerDM}!cropPea@{cropPea}}
+\subsubsection[{MaxFixPerDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropPea::MaxFixPerDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_pea_a1852a7eb6965220c3bbd686504a87193}
+
+
+Reimplemented from \hyperlink{classcrop_acd7a9182db99895de016c87785b58cc9}{crop}.\hypertarget{classcrop_pea_a0b2798f6476655b22c242207b3fb0d0f}{
+\index{cropPea@{cropPea}!NFixationThisDay@{NFixationThisDay}}
+\index{NFixationThisDay@{NFixationThisDay}!cropPea@{cropPea}}
+\subsubsection[{NFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropPea::NFixationThisDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_pea_a0b2798f6476655b22c242207b3fb0d0f}
+\hypertarget{classcrop_pea_ad48e8faf29f08617f2206c2577af11ac}{
+\index{cropPea@{cropPea}!PotNFix@{PotNFix}}
+\index{PotNFix@{PotNFix}!cropPea@{cropPea}}
+\subsubsection[{PotNFix}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropPea::PotNFix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_pea_ad48e8faf29f08617f2206c2577af11ac}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_pea_8h}{cropPea.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_pea_8cpp}{cropPea.cpp}\end{DoxyCompactItemize}

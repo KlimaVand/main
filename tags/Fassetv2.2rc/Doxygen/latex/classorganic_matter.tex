@@ -1,0 +1,377 @@
+\hypertarget{classorganic_matter}{
+\section{organicMatter Class Reference}
+\label{classorganic_matter}\index{organicMatter@{organicMatter}}
+}
+
+
+{\ttfamily \#include $<$organicMatter.h$>$}Inheritance diagram for organicMatter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classorganic_matter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorganic_matter_ac425d01b777c572657394ead4c91657f}{organicMatter} (const char $\ast$Pname, const int \hyperlink{classbase_afa59aaa1a0201700640234eb13a03aae}{Index}, const \hyperlink{classbase}{base} $\ast$owner)
+\item 
+\hyperlink{classorganic_matter_ae373d5e017ff62f6fa3d3c3dc789d716}{organicMatter} (const \hyperlink{classorganic_matter}{organicMatter} \&source)
+\item 
+virtual \hyperlink{classorganic_matter_ad02ba3d5422d82ec8dd56b01e12c50fe}{$\sim$organicMatter} ()
+\item 
+void \hyperlink{classorganic_matter_af8e7ce68e31c09319d0b33d7f20a5100}{Add} (\hyperlink{classorganic_matter}{organicMatter} $\ast$source, double fraction)
+\item 
+void \hyperlink{classorganic_matter_af7bf4f5a06da9f6c4977c56d1bbb17ef}{Initialize} (double clay, double carbon, fstream $\ast$f, int index, char $\ast$modelFileName)
+\item 
+void \hyperlink{classorganic_matter_affa8ea4461d2badd187dc2fe9ef467d7}{AddProduct} (\hyperlink{classorganic_product}{organicProduct} $\ast$\hyperlink{classproduct}{product})
+\item 
+double \hyperlink{classorganic_matter_afe20379314e0eb234bd6b6c8684c41d4}{Update} (double temp, double pFValue, \hyperlink{classnitrogen}{nitrogen} $\ast$nitrate, \hyperlink{classnitrogen}{nitrogen} $\ast$ammonium)
+\item 
+double \hyperlink{classorganic_matter_a5b3f9588dde6550e0311a13cf5fe50f5}{GetCarbon} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_matter_a719b504d46e267423e58c37d1c1bc058}{GetNitrogen} ()
+\item 
+double \hyperlink{classorganic_matter_ae4953f5b42a97f95201b293633a89e17}{GetPoolCarbon} (const char $\ast$name)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classorganic_matter_a57c64ddc2f0aacaa27b4e2fb7e6c1713}{GetPoolNitrogen} (const char $\ast$name)
+\item 
+void \hyperlink{classorganic_matter_a571a15d4863954c5f1f2adbaca71e9bf}{InitStructure} (char $\ast$filename)
+\item 
+void \hyperlink{classorganic_matter_acf0fae55b68d6d0845d20fcfdd1638b4}{InitAddTypes} (char $\ast$filename)
+\item 
+\hyperlink{classmatter}{matter} $\ast$ \hyperlink{classorganic_matter_a1e25c88f7c63626ad89ee88973310171}{GetPoolPointer} (string poolName)
+\item 
+void \hyperlink{classorganic_matter_a43dda8881019ddfe13875940264505cb}{ExchangeNitrogen} (\hyperlink{classnitrogen}{nitrogen} $\ast$nit)
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_matter_aaa2442182b092b20547ea3cc422000de}{GetCarbonInPool} (string $\ast$s)
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_matter_a61c294edd237e70d07a33678a470f1dc}{GetCarbonInPool} (char $\ast$c)
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_matter_aa166dfa7baf76d5cf11baf2b65e9baf4}{GetAllSMBCarbon} ()
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_matter_ae19830c90a2f172ede6a81e778c98d32}{GetTotalCarbon} ()
+\item 
+void \hyperlink{classorganic_matter_af8da4028cf9d47ffff40198537947652}{CO2emmision} (\hyperlink{classcn_matter}{cnMatter} co2)
+\item 
+void \hyperlink{classorganic_matter_a471fa39b7f79ccae2ae020e5b9c1329f}{SetIsotopeType} (int i)
+\item 
+void \hyperlink{classorganic_matter_ad1d3b959079c019aee2164c8e32791ed}{SetNitrogenIsotope} (int i)
+\item 
+void \hyperlink{classorganic_matter_a78a87a55fb5d119b774c4f93d7994493}{SetCarbonInPool} (string $\ast$s, \hyperlink{classcn_matter}{cnMatter} c)
+\item 
+void \hyperlink{classorganic_matter_ad28011da0fd7454eaa1f9aed545bfdc6}{SetCarbonInPool} (char $\ast$ch, \hyperlink{classcn_matter}{cnMatter} c)
+\item 
+void \hyperlink{classorganic_matter_a0e64612ab5367f164ae298a50fde55c9}{SetPoolConnectionFraction} (string $\ast$s, int nr, double fracC, double fracN)
+\item 
+void \hyperlink{classorganic_matter_ad5c435634528672b927fbf347143afbe}{SetPoolConnectionFraction} (char $\ast$c, int nr, double fracC, double fracN)
+\item 
+void \hyperlink{classorganic_matter_ad3f7859dfff063a1c3f44054a7d4ecf5}{SetPoolDecompositionRate} (string $\ast$s, double r)
+\item 
+void \hyperlink{classorganic_matter_a463254cfa0a5995d1d4e902f66a9f3ca}{SetPoolDecompositionRate} (char $\ast$c, double r)
+\item 
+void \hyperlink{classorganic_matter_a4d0b7d6e7cf64fdfccff6d0f4004d6d1}{SetPoolMaintenanceRate} (string $\ast$s, double r)
+\item 
+void \hyperlink{classorganic_matter_a0e6a78d76c751e8d0f614938170cff20}{SetPoolMaintenanceRate} (char $\ast$c, double r)
+\item 
+void \hyperlink{classorganic_matter_a9570bf4f0f840b7d661575d7bf62a964}{SetPoolDeathRate} (string $\ast$s, double r)
+\item 
+void \hyperlink{classorganic_matter_a320614cdcedb30be5562a96164b6002b}{SetPoolDeathRate} (char $\ast$c, double r)
+\item 
+void \hyperlink{classorganic_matter_ad506c445be08af7d10c7173f2ea5fe9c}{SetPercentModern} (bool pm)
+\item 
+char $\ast$ \hyperlink{classorganic_matter_a87f6c16bf53e782fd3be862f2acc40ae}{GetIsotopeName} ()
+\item 
+double \hyperlink{classorganic_matter_a61d7bd102ae877658b15b6e186b4b250}{GetIsotopeValue} (\hyperlink{classcn_matter}{cnMatter} c)
+\item 
+void \hyperlink{classorganic_matter_aa36b3c3476900a2160aaefdaa9be75ce}{SetRzs} (double r)
+\item 
+void \hyperlink{classorganic_matter_a2173970ef85445737548b25b64a40cdd}{SetTAGPercent} (bool tp)
+\item 
+void \hyperlink{classorganic_matter_ade566ec0fc948e8215e30f12c4905259}{SetStepFactor} (double sf)
+\item 
+void \hyperlink{classorganic_matter_a2ca7d6028136a0f472893028928ca8a1}{SetExclusivePreferenceNH4} (bool ep)
+\item 
+void \hyperlink{classorganic_matter_a3dd11964f9c983b37c88328c80a978c1}{SetExchangeRate} (double e)
+\item 
+double \hyperlink{classorganic_matter_a7f207a5cc9b81af56393be25209e0bde}{GetTurnoverRatioSMB1} (double clayStandard)
+\item 
+double \hyperlink{classorganic_matter_a110fb0a083dc7ae8a1f955d699204bee}{GetCarbonAvailability} ()
+\item 
+bool \hyperlink{classorganic_matter_a6e5333276577c7e3df1edfd76cd079f9}{ExistsPool} (string $\ast$poolName)
+\item 
+\hyperlink{classcn_matter}{cnMatter} \hyperlink{classorganic_matter_a0796a73dd50dd9cf1d97bf8a5de3d3a4}{GetTotalSystem} ()
+\item 
+void \hyperlink{classorganic_matter_a72ff536fcbc069deadb4f136080becbb}{EquilibrateN15} (\hyperlink{classcn_matter}{cnMatter} \&c)
+\item 
+void \hyperlink{classorganic_matter_ab31c08dc89717cfc1d1e212c4076ff3c}{SetMineralNitrogen} (\hyperlink{classnitrogen}{nitrogen} nitrate, \hyperlink{classnitrogen}{nitrogen} ammonium)
+\item 
+void \hyperlink{classorganic_matter_a08fafc2497f2ef975d24ed944a7fe39d}{GetMineralNitrogen} (\hyperlink{classnitrogen}{nitrogen} \&nitrate, \hyperlink{classnitrogen}{nitrogen} \&ammonium)
+\item 
+void \hyperlink{classorganic_matter_acbad19492414d3cf2ce1553d87569415}{ReleaseReduceTurnover} ()
+\item 
+void \hyperlink{classorganic_matter_ae6148352b9c917d7c35e7452d4d62449}{KillSMB} (double Fraction)
+\item 
+void \hyperlink{classorganic_matter_a97b9ea17f175972db509425152e7f69a}{ModifyAOM} (double Fraction, double TurnoverFactor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorganic_matter_ac425d01b777c572657394ead4c91657f}{
+\index{organicMatter@{organicMatter}!organicMatter@{organicMatter}}
+\index{organicMatter@{organicMatter}!organicMatter@{organicMatter}}
+\subsubsection[{organicMatter}]{\setlength{\rightskip}{0pt plus 5cm}organicMatter::organicMatter (const char $\ast$ {\em Pname}, \/  const int {\em Index}, \/  const {\bf base} $\ast$ {\em owner})}}
+\label{classorganic_matter_ac425d01b777c572657394ead4c91657f}
+\hypertarget{classorganic_matter_ae373d5e017ff62f6fa3d3c3dc789d716}{
+\index{organicMatter@{organicMatter}!organicMatter@{organicMatter}}
+\index{organicMatter@{organicMatter}!organicMatter@{organicMatter}}
+\subsubsection[{organicMatter}]{\setlength{\rightskip}{0pt plus 5cm}organicMatter::organicMatter (const {\bf organicMatter} \& {\em source})}}
+\label{classorganic_matter_ae373d5e017ff62f6fa3d3c3dc789d716}
+\hypertarget{classorganic_matter_ad02ba3d5422d82ec8dd56b01e12c50fe}{
+\index{organicMatter@{organicMatter}!$\sim$organicMatter@{$\sim$organicMatter}}
+\index{$\sim$organicMatter@{$\sim$organicMatter}!organicMatter@{organicMatter}}
+\subsubsection[{$\sim$organicMatter}]{\setlength{\rightskip}{0pt plus 5cm}organicMatter::$\sim$organicMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classorganic_matter_ad02ba3d5422d82ec8dd56b01e12c50fe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorganic_matter_af8e7ce68e31c09319d0b33d7f20a5100}{
+\index{organicMatter@{organicMatter}!Add@{Add}}
+\index{Add@{Add}!organicMatter@{organicMatter}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::Add ({\bf organicMatter} $\ast$ {\em source}, \/  double {\em fraction})}}
+\label{classorganic_matter_af8e7ce68e31c09319d0b33d7f20a5100}
+\hypertarget{classorganic_matter_affa8ea4461d2badd187dc2fe9ef467d7}{
+\index{organicMatter@{organicMatter}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!organicMatter@{organicMatter}}
+\subsubsection[{AddProduct}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::AddProduct ({\bf organicProduct} $\ast$ {\em product})}}
+\label{classorganic_matter_affa8ea4461d2badd187dc2fe9ef467d7}
+\hypertarget{classorganic_matter_af8da4028cf9d47ffff40198537947652}{
+\index{organicMatter@{organicMatter}!CO2emmision@{CO2emmision}}
+\index{CO2emmision@{CO2emmision}!organicMatter@{organicMatter}}
+\subsubsection[{CO2emmision}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::CO2emmision ({\bf cnMatter} {\em co2})}}
+\label{classorganic_matter_af8da4028cf9d47ffff40198537947652}
+\hypertarget{classorganic_matter_a72ff536fcbc069deadb4f136080becbb}{
+\index{organicMatter@{organicMatter}!EquilibrateN15@{EquilibrateN15}}
+\index{EquilibrateN15@{EquilibrateN15}!organicMatter@{organicMatter}}
+\subsubsection[{EquilibrateN15}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::EquilibrateN15 ({\bf cnMatter} \& {\em c})}}
+\label{classorganic_matter_a72ff536fcbc069deadb4f136080becbb}
+\hypertarget{classorganic_matter_a43dda8881019ddfe13875940264505cb}{
+\index{organicMatter@{organicMatter}!ExchangeNitrogen@{ExchangeNitrogen}}
+\index{ExchangeNitrogen@{ExchangeNitrogen}!organicMatter@{organicMatter}}
+\subsubsection[{ExchangeNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::ExchangeNitrogen ({\bf nitrogen} $\ast$ {\em nit})}}
+\label{classorganic_matter_a43dda8881019ddfe13875940264505cb}
+\hypertarget{classorganic_matter_a6e5333276577c7e3df1edfd76cd079f9}{
+\index{organicMatter@{organicMatter}!ExistsPool@{ExistsPool}}
+\index{ExistsPool@{ExistsPool}!organicMatter@{organicMatter}}
+\subsubsection[{ExistsPool}]{\setlength{\rightskip}{0pt plus 5cm}bool organicMatter::ExistsPool (string $\ast$ {\em poolName})}}
+\label{classorganic_matter_a6e5333276577c7e3df1edfd76cd079f9}
+\hypertarget{classorganic_matter_aa166dfa7baf76d5cf11baf2b65e9baf4}{
+\index{organicMatter@{organicMatter}!GetAllSMBCarbon@{GetAllSMBCarbon}}
+\index{GetAllSMBCarbon@{GetAllSMBCarbon}!organicMatter@{organicMatter}}
+\subsubsection[{GetAllSMBCarbon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} organicMatter::GetAllSMBCarbon ()}}
+\label{classorganic_matter_aa166dfa7baf76d5cf11baf2b65e9baf4}
+\hypertarget{classorganic_matter_a5b3f9588dde6550e0311a13cf5fe50f5}{
+\index{organicMatter@{organicMatter}!GetCarbon@{GetCarbon}}
+\index{GetCarbon@{GetCarbon}!organicMatter@{organicMatter}}
+\subsubsection[{GetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double organicMatter::GetCarbon ()}}
+\label{classorganic_matter_a5b3f9588dde6550e0311a13cf5fe50f5}
+\hypertarget{classorganic_matter_a110fb0a083dc7ae8a1f955d699204bee}{
+\index{organicMatter@{organicMatter}!GetCarbonAvailability@{GetCarbonAvailability}}
+\index{GetCarbonAvailability@{GetCarbonAvailability}!organicMatter@{organicMatter}}
+\subsubsection[{GetCarbonAvailability}]{\setlength{\rightskip}{0pt plus 5cm}double organicMatter::GetCarbonAvailability ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a110fb0a083dc7ae8a1f955d699204bee}
+\hypertarget{classorganic_matter_a61c294edd237e70d07a33678a470f1dc}{
+\index{organicMatter@{organicMatter}!GetCarbonInPool@{GetCarbonInPool}}
+\index{GetCarbonInPool@{GetCarbonInPool}!organicMatter@{organicMatter}}
+\subsubsection[{GetCarbonInPool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} organicMatter::GetCarbonInPool (char $\ast$ {\em c})}}
+\label{classorganic_matter_a61c294edd237e70d07a33678a470f1dc}
+\hypertarget{classorganic_matter_aaa2442182b092b20547ea3cc422000de}{
+\index{organicMatter@{organicMatter}!GetCarbonInPool@{GetCarbonInPool}}
+\index{GetCarbonInPool@{GetCarbonInPool}!organicMatter@{organicMatter}}
+\subsubsection[{GetCarbonInPool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} organicMatter::GetCarbonInPool (string $\ast$ {\em s})}}
+\label{classorganic_matter_aaa2442182b092b20547ea3cc422000de}
+\hypertarget{classorganic_matter_a87f6c16bf53e782fd3be862f2acc40ae}{
+\index{organicMatter@{organicMatter}!GetIsotopeName@{GetIsotopeName}}
+\index{GetIsotopeName@{GetIsotopeName}!organicMatter@{organicMatter}}
+\subsubsection[{GetIsotopeName}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ organicMatter::GetIsotopeName ()}}
+\label{classorganic_matter_a87f6c16bf53e782fd3be862f2acc40ae}
+\hypertarget{classorganic_matter_a61d7bd102ae877658b15b6e186b4b250}{
+\index{organicMatter@{organicMatter}!GetIsotopeValue@{GetIsotopeValue}}
+\index{GetIsotopeValue@{GetIsotopeValue}!organicMatter@{organicMatter}}
+\subsubsection[{GetIsotopeValue}]{\setlength{\rightskip}{0pt plus 5cm}double organicMatter::GetIsotopeValue ({\bf cnMatter} {\em c})}}
+\label{classorganic_matter_a61d7bd102ae877658b15b6e186b4b250}
+\hypertarget{classorganic_matter_a08fafc2497f2ef975d24ed944a7fe39d}{
+\index{organicMatter@{organicMatter}!GetMineralNitrogen@{GetMineralNitrogen}}
+\index{GetMineralNitrogen@{GetMineralNitrogen}!organicMatter@{organicMatter}}
+\subsubsection[{GetMineralNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::GetMineralNitrogen ({\bf nitrogen} \& {\em nitrate}, \/  {\bf nitrogen} \& {\em ammonium})}}
+\label{classorganic_matter_a08fafc2497f2ef975d24ed944a7fe39d}
+\hypertarget{classorganic_matter_a719b504d46e267423e58c37d1c1bc058}{
+\index{organicMatter@{organicMatter}!GetNitrogen@{GetNitrogen}}
+\index{GetNitrogen@{GetNitrogen}!organicMatter@{organicMatter}}
+\subsubsection[{GetNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} organicMatter::GetNitrogen ()}}
+\label{classorganic_matter_a719b504d46e267423e58c37d1c1bc058}
+\hypertarget{classorganic_matter_ae4953f5b42a97f95201b293633a89e17}{
+\index{organicMatter@{organicMatter}!GetPoolCarbon@{GetPoolCarbon}}
+\index{GetPoolCarbon@{GetPoolCarbon}!organicMatter@{organicMatter}}
+\subsubsection[{GetPoolCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double organicMatter::GetPoolCarbon (const char $\ast$ {\em name})}}
+\label{classorganic_matter_ae4953f5b42a97f95201b293633a89e17}
+\hypertarget{classorganic_matter_a57c64ddc2f0aacaa27b4e2fb7e6c1713}{
+\index{organicMatter@{organicMatter}!GetPoolNitrogen@{GetPoolNitrogen}}
+\index{GetPoolNitrogen@{GetPoolNitrogen}!organicMatter@{organicMatter}}
+\subsubsection[{GetPoolNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} organicMatter::GetPoolNitrogen (const char $\ast$ {\em name})}}
+\label{classorganic_matter_a57c64ddc2f0aacaa27b4e2fb7e6c1713}
+\hypertarget{classorganic_matter_a1e25c88f7c63626ad89ee88973310171}{
+\index{organicMatter@{organicMatter}!GetPoolPointer@{GetPoolPointer}}
+\index{GetPoolPointer@{GetPoolPointer}!organicMatter@{organicMatter}}
+\subsubsection[{GetPoolPointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matter} $\ast$ organicMatter::GetPoolPointer (string {\em poolName})}}
+\label{classorganic_matter_a1e25c88f7c63626ad89ee88973310171}
+\hypertarget{classorganic_matter_ae19830c90a2f172ede6a81e778c98d32}{
+\index{organicMatter@{organicMatter}!GetTotalCarbon@{GetTotalCarbon}}
+\index{GetTotalCarbon@{GetTotalCarbon}!organicMatter@{organicMatter}}
+\subsubsection[{GetTotalCarbon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} organicMatter::GetTotalCarbon ()}}
+\label{classorganic_matter_ae19830c90a2f172ede6a81e778c98d32}
+\hypertarget{classorganic_matter_a0796a73dd50dd9cf1d97bf8a5de3d3a4}{
+\index{organicMatter@{organicMatter}!GetTotalSystem@{GetTotalSystem}}
+\index{GetTotalSystem@{GetTotalSystem}!organicMatter@{organicMatter}}
+\subsubsection[{GetTotalSystem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cnMatter} organicMatter::GetTotalSystem ()}}
+\label{classorganic_matter_a0796a73dd50dd9cf1d97bf8a5de3d3a4}
+\hypertarget{classorganic_matter_a7f207a5cc9b81af56393be25209e0bde}{
+\index{organicMatter@{organicMatter}!GetTurnoverRatioSMB1@{GetTurnoverRatioSMB1}}
+\index{GetTurnoverRatioSMB1@{GetTurnoverRatioSMB1}!organicMatter@{organicMatter}}
+\subsubsection[{GetTurnoverRatioSMB1}]{\setlength{\rightskip}{0pt plus 5cm}double organicMatter::GetTurnoverRatioSMB1 (double {\em clayStandard})}}
+\label{classorganic_matter_a7f207a5cc9b81af56393be25209e0bde}
+\hypertarget{classorganic_matter_acf0fae55b68d6d0845d20fcfdd1638b4}{
+\index{organicMatter@{organicMatter}!InitAddTypes@{InitAddTypes}}
+\index{InitAddTypes@{InitAddTypes}!organicMatter@{organicMatter}}
+\subsubsection[{InitAddTypes}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::InitAddTypes (char $\ast$ {\em filename})}}
+\label{classorganic_matter_acf0fae55b68d6d0845d20fcfdd1638b4}
+\hypertarget{classorganic_matter_af7bf4f5a06da9f6c4977c56d1bbb17ef}{
+\index{organicMatter@{organicMatter}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!organicMatter@{organicMatter}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::Initialize (double {\em clay}, \/  double {\em carbon}, \/  fstream $\ast$ {\em f}, \/  int {\em index}, \/  char $\ast$ {\em modelFileName})}}
+\label{classorganic_matter_af7bf4f5a06da9f6c4977c56d1bbb17ef}
+\hypertarget{classorganic_matter_a571a15d4863954c5f1f2adbaca71e9bf}{
+\index{organicMatter@{organicMatter}!InitStructure@{InitStructure}}
+\index{InitStructure@{InitStructure}!organicMatter@{organicMatter}}
+\subsubsection[{InitStructure}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::InitStructure (char $\ast$ {\em filename})}}
+\label{classorganic_matter_a571a15d4863954c5f1f2adbaca71e9bf}
+\hypertarget{classorganic_matter_ae6148352b9c917d7c35e7452d4d62449}{
+\index{organicMatter@{organicMatter}!KillSMB@{KillSMB}}
+\index{KillSMB@{KillSMB}!organicMatter@{organicMatter}}
+\subsubsection[{KillSMB}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::KillSMB (double {\em Fraction})}}
+\label{classorganic_matter_ae6148352b9c917d7c35e7452d4d62449}
+\hypertarget{classorganic_matter_a97b9ea17f175972db509425152e7f69a}{
+\index{organicMatter@{organicMatter}!ModifyAOM@{ModifyAOM}}
+\index{ModifyAOM@{ModifyAOM}!organicMatter@{organicMatter}}
+\subsubsection[{ModifyAOM}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::ModifyAOM (double {\em Fraction}, \/  double {\em TurnoverFactor})}}
+\label{classorganic_matter_a97b9ea17f175972db509425152e7f69a}
+\hypertarget{classorganic_matter_acbad19492414d3cf2ce1553d87569415}{
+\index{organicMatter@{organicMatter}!ReleaseReduceTurnover@{ReleaseReduceTurnover}}
+\index{ReleaseReduceTurnover@{ReleaseReduceTurnover}!organicMatter@{organicMatter}}
+\subsubsection[{ReleaseReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::ReleaseReduceTurnover ()}}
+\label{classorganic_matter_acbad19492414d3cf2ce1553d87569415}
+\hypertarget{classorganic_matter_ad28011da0fd7454eaa1f9aed545bfdc6}{
+\index{organicMatter@{organicMatter}!SetCarbonInPool@{SetCarbonInPool}}
+\index{SetCarbonInPool@{SetCarbonInPool}!organicMatter@{organicMatter}}
+\subsubsection[{SetCarbonInPool}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetCarbonInPool (char $\ast$ {\em ch}, \/  {\bf cnMatter} {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_ad28011da0fd7454eaa1f9aed545bfdc6}
+\hypertarget{classorganic_matter_a78a87a55fb5d119b774c4f93d7994493}{
+\index{organicMatter@{organicMatter}!SetCarbonInPool@{SetCarbonInPool}}
+\index{SetCarbonInPool@{SetCarbonInPool}!organicMatter@{organicMatter}}
+\subsubsection[{SetCarbonInPool}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetCarbonInPool (string $\ast$ {\em s}, \/  {\bf cnMatter} {\em c})}}
+\label{classorganic_matter_a78a87a55fb5d119b774c4f93d7994493}
+\hypertarget{classorganic_matter_a3dd11964f9c983b37c88328c80a978c1}{
+\index{organicMatter@{organicMatter}!SetExchangeRate@{SetExchangeRate}}
+\index{SetExchangeRate@{SetExchangeRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetExchangeRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetExchangeRate (double {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a3dd11964f9c983b37c88328c80a978c1}
+\hypertarget{classorganic_matter_a2ca7d6028136a0f472893028928ca8a1}{
+\index{organicMatter@{organicMatter}!SetExclusivePreferenceNH4@{SetExclusivePreferenceNH4}}
+\index{SetExclusivePreferenceNH4@{SetExclusivePreferenceNH4}!organicMatter@{organicMatter}}
+\subsubsection[{SetExclusivePreferenceNH4}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetExclusivePreferenceNH4 (bool {\em ep})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a2ca7d6028136a0f472893028928ca8a1}
+\hypertarget{classorganic_matter_a471fa39b7f79ccae2ae020e5b9c1329f}{
+\index{organicMatter@{organicMatter}!SetIsotopeType@{SetIsotopeType}}
+\index{SetIsotopeType@{SetIsotopeType}!organicMatter@{organicMatter}}
+\subsubsection[{SetIsotopeType}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetIsotopeType (int {\em i})}}
+\label{classorganic_matter_a471fa39b7f79ccae2ae020e5b9c1329f}
+\hypertarget{classorganic_matter_ab31c08dc89717cfc1d1e212c4076ff3c}{
+\index{organicMatter@{organicMatter}!SetMineralNitrogen@{SetMineralNitrogen}}
+\index{SetMineralNitrogen@{SetMineralNitrogen}!organicMatter@{organicMatter}}
+\subsubsection[{SetMineralNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetMineralNitrogen ({\bf nitrogen} {\em nitrate}, \/  {\bf nitrogen} {\em ammonium})}}
+\label{classorganic_matter_ab31c08dc89717cfc1d1e212c4076ff3c}
+\hypertarget{classorganic_matter_ad1d3b959079c019aee2164c8e32791ed}{
+\index{organicMatter@{organicMatter}!SetNitrogenIsotope@{SetNitrogenIsotope}}
+\index{SetNitrogenIsotope@{SetNitrogenIsotope}!organicMatter@{organicMatter}}
+\subsubsection[{SetNitrogenIsotope}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetNitrogenIsotope (int {\em i})}}
+\label{classorganic_matter_ad1d3b959079c019aee2164c8e32791ed}
+\hypertarget{classorganic_matter_ad506c445be08af7d10c7173f2ea5fe9c}{
+\index{organicMatter@{organicMatter}!SetPercentModern@{SetPercentModern}}
+\index{SetPercentModern@{SetPercentModern}!organicMatter@{organicMatter}}
+\subsubsection[{SetPercentModern}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPercentModern (bool {\em pm})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_ad506c445be08af7d10c7173f2ea5fe9c}
+\hypertarget{classorganic_matter_ad5c435634528672b927fbf347143afbe}{
+\index{organicMatter@{organicMatter}!SetPoolConnectionFraction@{SetPoolConnectionFraction}}
+\index{SetPoolConnectionFraction@{SetPoolConnectionFraction}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolConnectionFraction}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolConnectionFraction (char $\ast$ {\em c}, \/  int {\em nr}, \/  double {\em fracC}, \/  double {\em fracN})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_ad5c435634528672b927fbf347143afbe}
+\hypertarget{classorganic_matter_a0e64612ab5367f164ae298a50fde55c9}{
+\index{organicMatter@{organicMatter}!SetPoolConnectionFraction@{SetPoolConnectionFraction}}
+\index{SetPoolConnectionFraction@{SetPoolConnectionFraction}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolConnectionFraction}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolConnectionFraction (string $\ast$ {\em s}, \/  int {\em nr}, \/  double {\em fracC}, \/  double {\em fracN})}}
+\label{classorganic_matter_a0e64612ab5367f164ae298a50fde55c9}
+\hypertarget{classorganic_matter_a320614cdcedb30be5562a96164b6002b}{
+\index{organicMatter@{organicMatter}!SetPoolDeathRate@{SetPoolDeathRate}}
+\index{SetPoolDeathRate@{SetPoolDeathRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolDeathRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolDeathRate (char $\ast$ {\em c}, \/  double {\em r})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a320614cdcedb30be5562a96164b6002b}
+\hypertarget{classorganic_matter_a9570bf4f0f840b7d661575d7bf62a964}{
+\index{organicMatter@{organicMatter}!SetPoolDeathRate@{SetPoolDeathRate}}
+\index{SetPoolDeathRate@{SetPoolDeathRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolDeathRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolDeathRate (string $\ast$ {\em s}, \/  double {\em r})}}
+\label{classorganic_matter_a9570bf4f0f840b7d661575d7bf62a964}
+\hypertarget{classorganic_matter_a463254cfa0a5995d1d4e902f66a9f3ca}{
+\index{organicMatter@{organicMatter}!SetPoolDecompositionRate@{SetPoolDecompositionRate}}
+\index{SetPoolDecompositionRate@{SetPoolDecompositionRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolDecompositionRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolDecompositionRate (char $\ast$ {\em c}, \/  double {\em r})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a463254cfa0a5995d1d4e902f66a9f3ca}
+\hypertarget{classorganic_matter_ad3f7859dfff063a1c3f44054a7d4ecf5}{
+\index{organicMatter@{organicMatter}!SetPoolDecompositionRate@{SetPoolDecompositionRate}}
+\index{SetPoolDecompositionRate@{SetPoolDecompositionRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolDecompositionRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolDecompositionRate (string $\ast$ {\em s}, \/  double {\em r})}}
+\label{classorganic_matter_ad3f7859dfff063a1c3f44054a7d4ecf5}
+\hypertarget{classorganic_matter_a0e6a78d76c751e8d0f614938170cff20}{
+\index{organicMatter@{organicMatter}!SetPoolMaintenanceRate@{SetPoolMaintenanceRate}}
+\index{SetPoolMaintenanceRate@{SetPoolMaintenanceRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolMaintenanceRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolMaintenanceRate (char $\ast$ {\em c}, \/  double {\em r})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a0e6a78d76c751e8d0f614938170cff20}
+\hypertarget{classorganic_matter_a4d0b7d6e7cf64fdfccff6d0f4004d6d1}{
+\index{organicMatter@{organicMatter}!SetPoolMaintenanceRate@{SetPoolMaintenanceRate}}
+\index{SetPoolMaintenanceRate@{SetPoolMaintenanceRate}!organicMatter@{organicMatter}}
+\subsubsection[{SetPoolMaintenanceRate}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetPoolMaintenanceRate (string $\ast$ {\em s}, \/  double {\em r})}}
+\label{classorganic_matter_a4d0b7d6e7cf64fdfccff6d0f4004d6d1}
+\hypertarget{classorganic_matter_aa36b3c3476900a2160aaefdaa9be75ce}{
+\index{organicMatter@{organicMatter}!SetRzs@{SetRzs}}
+\index{SetRzs@{SetRzs}!organicMatter@{organicMatter}}
+\subsubsection[{SetRzs}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetRzs (double {\em r})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_aa36b3c3476900a2160aaefdaa9be75ce}
+\hypertarget{classorganic_matter_ade566ec0fc948e8215e30f12c4905259}{
+\index{organicMatter@{organicMatter}!SetStepFactor@{SetStepFactor}}
+\index{SetStepFactor@{SetStepFactor}!organicMatter@{organicMatter}}
+\subsubsection[{SetStepFactor}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetStepFactor (double {\em sf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_ade566ec0fc948e8215e30f12c4905259}
+\hypertarget{classorganic_matter_a2173970ef85445737548b25b64a40cdd}{
+\index{organicMatter@{organicMatter}!SetTAGPercent@{SetTAGPercent}}
+\index{SetTAGPercent@{SetTAGPercent}!organicMatter@{organicMatter}}
+\subsubsection[{SetTAGPercent}]{\setlength{\rightskip}{0pt plus 5cm}void organicMatter::SetTAGPercent (bool {\em tp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classorganic_matter_a2173970ef85445737548b25b64a40cdd}
+\hypertarget{classorganic_matter_afe20379314e0eb234bd6b6c8684c41d4}{
+\index{organicMatter@{organicMatter}!Update@{Update}}
+\index{Update@{Update}!organicMatter@{organicMatter}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}double organicMatter::Update (double {\em temp}, \/  double {\em pFValue}, \/  {\bf nitrogen} $\ast$ {\em nitrate}, \/  {\bf nitrogen} $\ast$ {\em ammonium})}}
+\label{classorganic_matter_afe20379314e0eb234bd6b6c8684c41d4}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{organic_matter_8h}{organicMatter.h}\item 
+C:/main/trunk/src/soil/\hyperlink{organic_matter_8cpp}{organicMatter.cpp}\end{DoxyCompactItemize}

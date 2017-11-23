@@ -1,0 +1,641 @@
+\hypertarget{classmanurestore}{
+\section{manurestore Class Reference}
+\label{classmanurestore}\index{manurestore@{manurestore}}
+}
+
+
+{\ttfamily \#include $<$manstore.h$>$}Inheritance diagram for manurestore::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classmanurestore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmanurestore_a02f7143140593b6bdcb8d78a0430eaae}{manurestore} ()
+\item 
+\hyperlink{classmanurestore_a4dd27dc7412d75d1b50441280aab6d88}{manurestore} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classmanurestore_a737792bf42c55f07092c3aed9f5330b6}{manurestore} (\hyperlink{classmanurestore}{manurestore} \&s)
+\item 
+virtual \hyperlink{classmanurestore_a02a248d96a0dd55d54926e44f51f253a}{$\sim$manurestore} ()
+\item 
+virtual \hyperlink{classmanurestore}{manurestore} $\ast$ \hyperlink{classmanurestore_a014f1b4f4dd098fc5152867eb2d7f053}{GetnextStore} ()
+\item 
+virtual void \hyperlink{classmanurestore_a17d1969c7d7f39b449da52d42155f342}{SetnextStore} (\hyperlink{classmanurestore}{manurestore} $\ast$aManureStore)
+\item 
+virtual void \hyperlink{classmanurestore_a91a0524f1b0d04fcb00e04a5d271050b}{SetManureToIndex} (int amanureToIndex)
+\item 
+virtual void \hyperlink{classmanurestore_a1059b3c5134aedbee070b852792a2208}{SetManureToName} (string amanureToName)
+\item 
+virtual void \hyperlink{classmanurestore_abffbe2e19e1d1ad114f35c532acc3f4c}{Setexternal} (bool isItExternal)
+\item 
+virtual void \hyperlink{classmanurestore_ad8bd234e6612ea15ea17795899615b41}{SetpostCleanDepth} (double apostCleanDepth)
+\item 
+virtual void \hyperlink{classmanurestore_ad6e7d11021d7b76a7f8682621403a653}{SetsurfaceArea} (double area)
+\item 
+virtual void \hyperlink{classmanurestore_a30eae0570a0fe584f7a4f395d96d0899}{Setdepth} (double aDepth)
+\item 
+void \hyperlink{classmanurestore_afad26ecb67219f60eeb0cd7c0aed89a3}{SetOMdegRateConst} (double aValue)
+\item 
+virtual const char $\ast$ \hyperlink{classmanurestore_a0b368f98abaed202859421df1705446c}{GetName} ()
+\item 
+virtual const int \hyperlink{classmanurestore_abd141ffb5bf592b32f75222527ea80a4}{GetIndex} ()
+\item 
+virtual const char $\ast$ \hyperlink{classmanurestore_abda404dea9d79e860e6ee86205c15114}{GetAlias} ()
+\item 
+virtual int \hyperlink{classmanurestore_a52c5f463ee4ec47a1972d23760805a16}{GetManureToIndex} ()
+\item 
+virtual string \hyperlink{classmanurestore_a5758b07658698cd9db4d0df2d6fa9a69}{GetManureToName} ()
+\item 
+virtual double \hyperlink{classmanurestore_a66e29b13faa30e08dc88df6ab7c561ad}{GetpostCleanDepth} ()
+\item 
+virtual double \hyperlink{classmanurestore_a7ddb69d1eb35b7d98fb9c301e24b1c8b}{GetsurfaceArea} ()
+\item 
+virtual double \hyperlink{classmanurestore_a40d306f5e212c2fd0a2163afdf5325ce}{Getdepth} ()
+\item 
+virtual void \hyperlink{classmanurestore_ae639f0ef3e9fee3416a2bfd2ab1ef496}{ReadParameters} (fstream $\ast$file)
+\item 
+virtual double \hyperlink{classmanurestore_a7f6972189e8c5c44887abaaad7b563ae}{GetAmountManure} ()
+\item 
+virtual double \hyperlink{classmanurestore_ac6e20f11b514cdf0794ea7d7cddcb438}{GetTotalNStored} ()
+\item 
+virtual double \hyperlink{classmanurestore_a1594e166fa24b3c783dd902f8e4d78bb}{GetTotalCStored} ()
+\item 
+virtual double \hyperlink{classmanurestore_a1c140a30a254928321fcbe43b7f15955}{GetTotalDMStored} ()
+\item 
+virtual void \hyperlink{classmanurestore_a6eb8d6bedf9b0732423bfbb98d5da453}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classmanurestore_a9305e9ead062b785f642bc3a8a5130d3}{DailyUpdate} (double \hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double \hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double \hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double \hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission}, double \hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission})
+\item 
+virtual void \hyperlink{classmanurestore_ab32685c2f4be9bb58269655cab7c96ee}{RcvManure} (const \hyperlink{classmanure}{manure} $\ast$someManure)
+\item 
+virtual void \hyperlink{classmanurestore_a806191a8259f6b81782af3fe3cb0301f}{SendManure} (const double amount, \hyperlink{classmanure}{manure} $\ast$aManure)
+\item 
+virtual bool \hyperlink{classmanurestore_ac9c341a4ec87983d1b44c9c4b05c93a2}{CleanStore} (\hyperlink{classmanure}{manure} $\ast$aManure)
+\item 
+virtual void \hyperlink{classmanurestore_a079653ec01b9b278a16e9f03eccd73e9}{FullyCleanStore} (\hyperlink{classmanure}{manure} $\ast$aManure)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classmanurestore_a0cf324021067f2433337600801c36a59}{GetFromManureStore} (double RequestedAmount, \hyperlink{classproduct}{product} $\ast$p, bool checkAccess=false)
+\item 
+virtual void \hyperlink{classmanurestore_a20c064bc22937610b638ba0a27c77e62}{Volatize} (double Ameantemp, double relHumidity, double precipitation, double \hyperlink{classmanurestore_a061d3a49dadcf3d8de36417c7cf125d3}{surfaceArea}, double resistance, double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$waterEvap, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission})
+\item 
+virtual double \hyperlink{classmanurestore_a2de53bf7077d84143c1014b1716c9bd8}{GetAvailableAmountOf} (const \hyperlink{classproduct}{product} $\ast$p)
+\item 
+virtual double \hyperlink{classmanurestore_a154c66c6ccb49a2b8f40554f9a9d24b5}{GetCapacity} ()
+\item 
+virtual void \hyperlink{classmanurestore_a613b4feef4fa58c5586b6d9e0dd2a723}{SetManure} (\hyperlink{classmanure}{manure} $\ast$aManure)
+\item 
+virtual \hyperlink{classmanure}{manure} $\ast$ \hyperlink{classmanurestore_a0ed157b3552bad31bf7a242eba189751}{GetManure} ()
+\item 
+virtual void \hyperlink{classmanurestore_aedd7bc72a5ce5d60612c29218cdc1753}{EndBudget} (bool show=false)
+\item 
+virtual double \hyperlink{classmanurestore_aa7e2c487fa0520a26a817a9a2dd904df}{GetNInput} ()
+\item 
+virtual double \hyperlink{classmanurestore_a7425c8a0bf3e94d8326f1fe9e091f422}{GetNOutput} ()
+\item 
+virtual void \hyperlink{classmanurestore_a848644e21710c45320e36e8121232e0f}{SetNOutput} (double aVal)
+\item 
+virtual void \hyperlink{classmanurestore_a0e71b577a0d53a31588784dd56c9b935}{GiveIndicator} (int indicatorType)
+\item 
+virtual void \hyperlink{classmanurestore_a4c5c76d30e639a9d791728d0e59e9cfa}{CalcLP} ()
+\item 
+virtual void \hyperlink{classmanurestore_a990ad099823ec82d8e2afd5a6379420b}{ReceiveBedding} (\hyperlink{classplant_item}{plantItem} $\ast$bedding)
+\item 
+virtual void \hyperlink{classmanurestore_a1efaaee1df384e1eb1705c104d8567c7}{Scale} (double annualAmount)
+\item 
+virtual void \hyperlink{classmanurestore_a0fb30db9d2c496a9234c53a1109c9415}{SetCapacity} (double aValue)
+\item 
+virtual double \hyperlink{classmanurestore_a6f665424507d6f813c0e955d3170ca66}{GetAmountInManureStore} ()
+\item 
+virtual void \hyperlink{classmanurestore_aa52a9cf95fe0bf10ce70efaea73a181c}{Volatize} (double $\ast$Nlost, double $\ast$Clost, double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission})
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classmanurestore_a5609cf626143da62c4043487d00f3354}{EmptyManureStore} ()
+\item 
+virtual void \hyperlink{classmanurestore_afa2fa1cefd539b876b5b92250d55f03d}{OpenDetailsFile} ()
+\item 
+virtual void \hyperlink{classmanurestore_aff10675b3036964476b06dbcac290c89}{CloseDetailsFile} ()
+\item 
+virtual void \hyperlink{classmanurestore_aa710a7d090423b9f29334e18db8788d2}{ShowManureStore} (fstream $\ast$afile, bool header)
+\item 
+virtual double \hyperlink{classmanurestore_a87790b2d408734bf0c3d800fb3ec9157}{GetvolatAmmonia} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbase}{base} $\ast$ \hyperlink{classmanurestore_ac06eabf69498124decf382a8a373fae3}{aBase}
+\item 
+double \hyperlink{classmanurestore_abf76a878ba843ac1a77dcfad7b413d37}{NH3Emissionfactor}
+\item 
+double \hyperlink{classmanurestore_a02b104f571b0cfa311217ba14f7981cc}{N2Emissionfactor}
+\item 
+double \hyperlink{classmanurestore_a44dc0cae704de2cd571445e1e2490bb1}{N2OEmissionfactor}
+\item 
+double \hyperlink{classmanurestore_a6ee1052f18936c909652548b28e2a66e}{CO2Emissionfactor}
+\item 
+double \hyperlink{classmanurestore_a9861c836c977df3bf4e245d099322e6b}{CH4Emissionfactor}
+\item 
+double \hyperlink{classmanurestore_a7326d58aaa8a595756ae61121708aa92}{CMinfactor}
+\item 
+double \hyperlink{classmanurestore_a75de8d810402cd1d65a1ce4ec9414480}{NMinfactor}
+\item 
+double \hyperlink{classmanurestore_ac2155ea6f170c51b86b20f809ead9502}{OMdegRateConst}
+\item 
+double \hyperlink{classmanurestore_a8e380412792126807f34460d47fca98b}{postCleanDepth}
+\item 
+\hyperlink{classstorage}{storage} $\ast$ \hyperlink{classmanurestore_a190469ebea4c87d3d641c73a1626c5e3}{theStore}
+\item 
+double \hyperlink{classmanurestore_a061d3a49dadcf3d8de36417c7cf125d3}{surfaceArea}
+\item 
+double \hyperlink{classmanurestore_a402560a3c76e913b8be315a6b87ee9fd}{depth}
+\item 
+\hyperlink{classmanurestore}{manurestore} $\ast$ \hyperlink{classmanurestore_a8898189fbaeb7e121a06d09288ff819b}{nextStore}
+\item 
+string \hyperlink{classmanurestore_a349304f98a8168e23da714f55c4afe6c}{manureToName}
+\item 
+int \hyperlink{classmanurestore_a47334161976431479652942c518c0bcf}{manureToIndex}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classmanurestore_a2f3e8e453b648c3a34c013fc7dc230b3}{Nbudget}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classmanurestore_a9bb652a6ec6a71e7bfcdb8a0cf73272b}{Cbudget}
+\item 
+double \hyperlink{classmanurestore_a83dff87ec3a864c3534ef4dd9103dd47}{cumvolat}
+\item 
+bool \hyperlink{classmanurestore_a9fc691bdb73d03bccf6ac813990670a1}{external}
+\item 
+double \hyperlink{classmanurestore_a56e78af8ef392eb99640c2c33812052d}{AreaPrAnimal}
+\item 
+string \hyperlink{classmanurestore_ad8a98a02aa12b2e52d5d7a78f27cc5e6}{ALFAMtype}
+\item 
+int \hyperlink{classmanurestore_ac61951ff08b90b86360c5719079944b1}{locked}
+\item 
+fstream $\ast$ \hyperlink{classmanurestore_a05652f923c77a13d673da07a22b3175e}{detailsFile}
+\item 
+double \hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission}
+\item 
+double \hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission}
+\item 
+double \hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}
+\item 
+double \hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}
+\item 
+double \hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classmanurestore_a8ac9597914271cef193878847c073724}{operator$<$$<$} (ostream \&os, const \hyperlink{classmanurestore}{manurestore} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmanurestore_a02f7143140593b6bdcb8d78a0430eaae}{
+\index{manurestore@{manurestore}!manurestore@{manurestore}}
+\index{manurestore@{manurestore}!manurestore@{manurestore}}
+\subsubsection[{manurestore}]{\setlength{\rightskip}{0pt plus 5cm}manurestore::manurestore ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanurestore_a02f7143140593b6bdcb8d78a0430eaae}
+\hypertarget{classmanurestore_a4dd27dc7412d75d1b50441280aab6d88}{
+\index{manurestore@{manurestore}!manurestore@{manurestore}}
+\index{manurestore@{manurestore}!manurestore@{manurestore}}
+\subsubsection[{manurestore}]{\setlength{\rightskip}{0pt plus 5cm}manurestore::manurestore (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classmanurestore_a4dd27dc7412d75d1b50441280aab6d88}
+\hypertarget{classmanurestore_a737792bf42c55f07092c3aed9f5330b6}{
+\index{manurestore@{manurestore}!manurestore@{manurestore}}
+\index{manurestore@{manurestore}!manurestore@{manurestore}}
+\subsubsection[{manurestore}]{\setlength{\rightskip}{0pt plus 5cm}manurestore::manurestore ({\bf manurestore} \& {\em s})}}
+\label{classmanurestore_a737792bf42c55f07092c3aed9f5330b6}
+Copy Constructor -\/ NOT IMPLEMENTED!!!!! \hypertarget{classmanurestore_a02a248d96a0dd55d54926e44f51f253a}{
+\index{manurestore@{manurestore}!$\sim$manurestore@{$\sim$manurestore}}
+\index{$\sim$manurestore@{$\sim$manurestore}!manurestore@{manurestore}}
+\subsubsection[{$\sim$manurestore}]{\setlength{\rightskip}{0pt plus 5cm}manurestore::$\sim$manurestore ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a02a248d96a0dd55d54926e44f51f253a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmanurestore_a4c5c76d30e639a9d791728d0e59e9cfa}{
+\index{manurestore@{manurestore}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!manurestore@{manurestore}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a4c5c76d30e639a9d791728d0e59e9cfa}
+
+
+Reimplemented in \hyperlink{classdungheap_af4b63f00620c98cefc7008b5bc6b2170}{dungheap}, and \hyperlink{classslurrystore_a307b2de3fb81bd7adfa90335f6371816}{slurrystore}.\hypertarget{classmanurestore_ac9c341a4ec87983d1b44c9c4b05c93a2}{
+\index{manurestore@{manurestore}!CleanStore@{CleanStore}}
+\index{CleanStore@{CleanStore}!manurestore@{manurestore}}
+\subsubsection[{CleanStore}]{\setlength{\rightskip}{0pt plus 5cm}bool manurestore::CleanStore ({\bf manure} $\ast$ {\em aManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_ac9c341a4ec87983d1b44c9c4b05c93a2}
+Empty the store of \hyperlink{classmanure}{manure}, leaving a residue -\/ \hyperlink{classmanure}{manure} sent to the relevant store \hypertarget{classmanurestore_aff10675b3036964476b06dbcac290c89}{
+\index{manurestore@{manurestore}!CloseDetailsFile@{CloseDetailsFile}}
+\index{CloseDetailsFile@{CloseDetailsFile}!manurestore@{manurestore}}
+\subsubsection[{CloseDetailsFile}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::CloseDetailsFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_aff10675b3036964476b06dbcac290c89}
+\hypertarget{classmanurestore_a9305e9ead062b785f642bc3a8a5130d3}{
+\index{manurestore@{manurestore}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!manurestore@{manurestore}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::DailyUpdate (double {\em volatAmmonia}, \/  double {\em N2Emission}, \/  double {\em N2OEmission}, \/  double {\em CO2Emission}, \/  double {\em CH4Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a9305e9ead062b785f642bc3a8a5130d3}
+Dailyactions \hypertarget{classmanurestore_a6eb8d6bedf9b0732423bfbb98d5da453}{
+\index{manurestore@{manurestore}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!manurestore@{manurestore}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a6eb8d6bedf9b0732423bfbb98d5da453}
+
+
+Reimplemented in \hyperlink{classbiogas_reactor_ae8242ee2ab7dd6495125af9720b54aa4}{biogasReactor}, \hyperlink{classdigestate_store_a209611f25ea14ad07c9de42fa46eea05}{digestateStore}, \hyperlink{classdungheap_ab901a0eba5e5cb9164042bbfad350435}{dungheap}, \hyperlink{classinstore_a3235daf3842bf6c4b1e30f56167e69c1}{instore}, and \hyperlink{classslurrystore_a0e660eb43b403bef8aaefb8188a73d4f}{slurrystore}.\hypertarget{classmanurestore_a5609cf626143da62c4043487d00f3354}{
+\index{manurestore@{manurestore}!EmptyManureStore@{EmptyManureStore}}
+\index{EmptyManureStore@{EmptyManureStore}!manurestore@{manurestore}}
+\subsubsection[{EmptyManureStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ manurestore::EmptyManureStore ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a5609cf626143da62c4043487d00f3354}
+remove everything from the \hyperlink{classmanurestore}{manurestore} \hypertarget{classmanurestore_aedd7bc72a5ce5d60612c29218cdc1753}{
+\index{manurestore@{manurestore}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!manurestore@{manurestore}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::EndBudget (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_aedd7bc72a5ce5d60612c29218cdc1753}
+Check for continuity in N \hypertarget{classmanurestore_a079653ec01b9b278a16e9f03eccd73e9}{
+\index{manurestore@{manurestore}!FullyCleanStore@{FullyCleanStore}}
+\index{FullyCleanStore@{FullyCleanStore}!manurestore@{manurestore}}
+\subsubsection[{FullyCleanStore}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::FullyCleanStore ({\bf manure} $\ast$ {\em aManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a079653ec01b9b278a16e9f03eccd73e9}
+Empty the store of all \hyperlink{classmanure}{manure} -\/ \hyperlink{classmanure}{manure} sent to the relevant store \hypertarget{classmanurestore_abda404dea9d79e860e6ee86205c15114}{
+\index{manurestore@{manurestore}!GetAlias@{GetAlias}}
+\index{GetAlias@{GetAlias}!manurestore@{manurestore}}
+\subsubsection[{GetAlias}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ manurestore::GetAlias ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_abda404dea9d79e860e6ee86205c15114}
+\hypertarget{classmanurestore_a6f665424507d6f813c0e955d3170ca66}{
+\index{manurestore@{manurestore}!GetAmountInManureStore@{GetAmountInManureStore}}
+\index{GetAmountInManureStore@{GetAmountInManureStore}!manurestore@{manurestore}}
+\subsubsection[{GetAmountInManureStore}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetAmountInManureStore ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a6f665424507d6f813c0e955d3170ca66}
+\hypertarget{classmanurestore_a7f6972189e8c5c44887abaaad7b563ae}{
+\index{manurestore@{manurestore}!GetAmountManure@{GetAmountManure}}
+\index{GetAmountManure@{GetAmountManure}!manurestore@{manurestore}}
+\subsubsection[{GetAmountManure}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetAmountManure ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a7f6972189e8c5c44887abaaad7b563ae}
+Get total amount stored. \hypertarget{classmanurestore_a2de53bf7077d84143c1014b1716c9bd8}{
+\index{manurestore@{manurestore}!GetAvailableAmountOf@{GetAvailableAmountOf}}
+\index{GetAvailableAmountOf@{GetAvailableAmountOf}!manurestore@{manurestore}}
+\subsubsection[{GetAvailableAmountOf}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetAvailableAmountOf (const {\bf product} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a2de53bf7077d84143c1014b1716c9bd8}
+Returns amount if the \hyperlink{classproduct}{product} p is a \hyperlink{classmanure}{manure} -\/ provided for compatibility with theBuild \hypertarget{classmanurestore_a154c66c6ccb49a2b8f40554f9a9d24b5}{
+\index{manurestore@{manurestore}!GetCapacity@{GetCapacity}}
+\index{GetCapacity@{GetCapacity}!manurestore@{manurestore}}
+\subsubsection[{GetCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetCapacity ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a154c66c6ccb49a2b8f40554f9a9d24b5}
+\hypertarget{classmanurestore_a40d306f5e212c2fd0a2163afdf5325ce}{
+\index{manurestore@{manurestore}!Getdepth@{Getdepth}}
+\index{Getdepth@{Getdepth}!manurestore@{manurestore}}
+\subsubsection[{Getdepth}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manurestore::Getdepth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a40d306f5e212c2fd0a2163afdf5325ce}
+\hypertarget{classmanurestore_a0cf324021067f2433337600801c36a59}{
+\index{manurestore@{manurestore}!GetFromManureStore@{GetFromManureStore}}
+\index{GetFromManureStore@{GetFromManureStore}!manurestore@{manurestore}}
+\subsubsection[{GetFromManureStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ manurestore::GetFromManureStore (double {\em RequestedAmount}, \/  {\bf product} $\ast$ {\em p}, \/  bool {\em checkAccess} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a0cf324021067f2433337600801c36a59}
+Extracts the requested \hyperlink{classproduct}{product} from the \hyperlink{classmanure}{manure} store \hypertarget{classmanurestore_abd141ffb5bf592b32f75222527ea80a4}{
+\index{manurestore@{manurestore}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!manurestore@{manurestore}}
+\subsubsection[{GetIndex}]{\setlength{\rightskip}{0pt plus 5cm}virtual const int manurestore::GetIndex ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_abd141ffb5bf592b32f75222527ea80a4}
+\hypertarget{classmanurestore_a0ed157b3552bad31bf7a242eba189751}{
+\index{manurestore@{manurestore}!GetManure@{GetManure}}
+\index{GetManure@{GetManure}!manurestore@{manurestore}}
+\subsubsection[{GetManure}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf manure}$\ast$ manurestore::GetManure ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a0ed157b3552bad31bf7a242eba189751}
+\hypertarget{classmanurestore_a52c5f463ee4ec47a1972d23760805a16}{
+\index{manurestore@{manurestore}!GetManureToIndex@{GetManureToIndex}}
+\index{GetManureToIndex@{GetManureToIndex}!manurestore@{manurestore}}
+\subsubsection[{GetManureToIndex}]{\setlength{\rightskip}{0pt plus 5cm}virtual int manurestore::GetManureToIndex ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a52c5f463ee4ec47a1972d23760805a16}
+\hypertarget{classmanurestore_a5758b07658698cd9db4d0df2d6fa9a69}{
+\index{manurestore@{manurestore}!GetManureToName@{GetManureToName}}
+\index{GetManureToName@{GetManureToName}!manurestore@{manurestore}}
+\subsubsection[{GetManureToName}]{\setlength{\rightskip}{0pt plus 5cm}virtual string manurestore::GetManureToName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a5758b07658698cd9db4d0df2d6fa9a69}
+\hypertarget{classmanurestore_a0b368f98abaed202859421df1705446c}{
+\index{manurestore@{manurestore}!GetName@{GetName}}
+\index{GetName@{GetName}!manurestore@{manurestore}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ manurestore::GetName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a0b368f98abaed202859421df1705446c}
+\hypertarget{classmanurestore_a014f1b4f4dd098fc5152867eb2d7f053}{
+\index{manurestore@{manurestore}!GetnextStore@{GetnextStore}}
+\index{GetnextStore@{GetnextStore}!manurestore@{manurestore}}
+\subsubsection[{GetnextStore}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf manurestore}$\ast$ manurestore::GetnextStore ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a014f1b4f4dd098fc5152867eb2d7f053}
+\hypertarget{classmanurestore_aa7e2c487fa0520a26a817a9a2dd904df}{
+\index{manurestore@{manurestore}!GetNInput@{GetNInput}}
+\index{GetNInput@{GetNInput}!manurestore@{manurestore}}
+\subsubsection[{GetNInput}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manurestore::GetNInput ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_aa7e2c487fa0520a26a817a9a2dd904df}
+\hypertarget{classmanurestore_a7425c8a0bf3e94d8326f1fe9e091f422}{
+\index{manurestore@{manurestore}!GetNOutput@{GetNOutput}}
+\index{GetNOutput@{GetNOutput}!manurestore@{manurestore}}
+\subsubsection[{GetNOutput}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manurestore::GetNOutput ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a7425c8a0bf3e94d8326f1fe9e091f422}
+\hypertarget{classmanurestore_a66e29b13faa30e08dc88df6ab7c561ad}{
+\index{manurestore@{manurestore}!GetpostCleanDepth@{GetpostCleanDepth}}
+\index{GetpostCleanDepth@{GetpostCleanDepth}!manurestore@{manurestore}}
+\subsubsection[{GetpostCleanDepth}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manurestore::GetpostCleanDepth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a66e29b13faa30e08dc88df6ab7c561ad}
+\hypertarget{classmanurestore_a7ddb69d1eb35b7d98fb9c301e24b1c8b}{
+\index{manurestore@{manurestore}!GetsurfaceArea@{GetsurfaceArea}}
+\index{GetsurfaceArea@{GetsurfaceArea}!manurestore@{manurestore}}
+\subsubsection[{GetsurfaceArea}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manurestore::GetsurfaceArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a7ddb69d1eb35b7d98fb9c301e24b1c8b}
+\hypertarget{classmanurestore_a1594e166fa24b3c783dd902f8e4d78bb}{
+\index{manurestore@{manurestore}!GetTotalCStored@{GetTotalCStored}}
+\index{GetTotalCStored@{GetTotalCStored}!manurestore@{manurestore}}
+\subsubsection[{GetTotalCStored}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetTotalCStored ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a1594e166fa24b3c783dd902f8e4d78bb}
+Get total C stored. \hypertarget{classmanurestore_a1c140a30a254928321fcbe43b7f15955}{
+\index{manurestore@{manurestore}!GetTotalDMStored@{GetTotalDMStored}}
+\index{GetTotalDMStored@{GetTotalDMStored}!manurestore@{manurestore}}
+\subsubsection[{GetTotalDMStored}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetTotalDMStored ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a1c140a30a254928321fcbe43b7f15955}
+Get total DryMatter stored. \hypertarget{classmanurestore_ac6e20f11b514cdf0794ea7d7cddcb438}{
+\index{manurestore@{manurestore}!GetTotalNStored@{GetTotalNStored}}
+\index{GetTotalNStored@{GetTotalNStored}!manurestore@{manurestore}}
+\subsubsection[{GetTotalNStored}]{\setlength{\rightskip}{0pt plus 5cm}double manurestore::GetTotalNStored ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_ac6e20f11b514cdf0794ea7d7cddcb438}
+Get total N stored. \hypertarget{classmanurestore_a87790b2d408734bf0c3d800fb3ec9157}{
+\index{manurestore@{manurestore}!GetvolatAmmonia@{GetvolatAmmonia}}
+\index{GetvolatAmmonia@{GetvolatAmmonia}!manurestore@{manurestore}}
+\subsubsection[{GetvolatAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}virtual double manurestore::GetvolatAmmonia ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a87790b2d408734bf0c3d800fb3ec9157}
+\hypertarget{classmanurestore_a0e71b577a0d53a31588784dd56c9b935}{
+\index{manurestore@{manurestore}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!manurestore@{manurestore}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a0e71b577a0d53a31588784dd56c9b935}
+
+
+Reimplemented in \hyperlink{classbiogas_reactor_ab2482d657ec9095da5aef508d0841e0e}{biogasReactor}, \hyperlink{classdigestate_store_ae1402687e7bf67b150bf01e97c4798b9}{digestateStore}, \hyperlink{classdungheap_ac8c6b260da69dabe3a0019f9a5d8d499}{dungheap}, \hyperlink{classinstore_afbd76ef97e35ef93c4945667e8341945}{instore}, and \hyperlink{classslurrystore_a982183d9d72019736bfdb792c4cb5d78}{slurrystore}.\hypertarget{classmanurestore_afa2fa1cefd539b876b5b92250d55f03d}{
+\index{manurestore@{manurestore}!OpenDetailsFile@{OpenDetailsFile}}
+\index{OpenDetailsFile@{OpenDetailsFile}!manurestore@{manurestore}}
+\subsubsection[{OpenDetailsFile}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::OpenDetailsFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_afa2fa1cefd539b876b5b92250d55f03d}
+\hypertarget{classmanurestore_ab32685c2f4be9bb58269655cab7c96ee}{
+\index{manurestore@{manurestore}!RcvManure@{RcvManure}}
+\index{RcvManure@{RcvManure}!manurestore@{manurestore}}
+\subsubsection[{RcvManure}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::RcvManure (const {\bf manure} $\ast$ {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_ab32685c2f4be9bb58269655cab7c96ee}
+Adding the \hyperlink{classmanure}{manure} to store. If the store already contain \char`\"{}SLURRY\char`\"{} the \hyperlink{classmanure}{manure} must be a following types FLUID-\/MANURE,SOLID-\/MANURE, WASHWATER, STRAW, WATER or SLURRY. If the store containing something else that SLURRY those manture can be added FLUID-\/MANURE FLUID-\/MANURE,SOLID-\/MANURE, WASHWATER, STRAW, WATER or CATTLE-\/FYM Nbuget and CBudget is updated 
+
+Reimplemented in \hyperlink{classdigestate_store_a840cf55a8a893f089c8c39a36cc3defe}{digestateStore}, \hyperlink{classdungheap_a852054912c04f101c0a3310e80d6d53b}{dungheap}, and \hyperlink{classslurrystore_af99a5bbcf35c6845fcf989809c5347fa}{slurrystore}.\hypertarget{classmanurestore_ae639f0ef3e9fee3416a2bfd2ab1ef496}{
+\index{manurestore@{manurestore}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!manurestore@{manurestore}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_ae639f0ef3e9fee3416a2bfd2ab1ef496}
+Init reads the relevant values from its owners file 
+
+Reimplemented in \hyperlink{classbiogas_reactor_aafc4e774b0d67a08d3f55c566e5a58b7}{biogasReactor}, \hyperlink{classdigestate_store_a93cdf55c94956f5e817ad386ea0c2a4b}{digestateStore}, \hyperlink{classdungheap_a369749ce14a7061f1c1f4e0c6973d68f}{dungheap}, \hyperlink{classinstore_a5f289ba185023e4b7c15d82e79d1ac7f}{instore}, and \hyperlink{classslurrystore_a20975780b58214d7a091cbc2573c910c}{slurrystore}.\hypertarget{classmanurestore_a990ad099823ec82d8e2afd5a6379420b}{
+\index{manurestore@{manurestore}!ReceiveBedding@{ReceiveBedding}}
+\index{ReceiveBedding@{ReceiveBedding}!manurestore@{manurestore}}
+\subsubsection[{ReceiveBedding}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::ReceiveBedding ({\bf plantItem} $\ast$ {\em bedding})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a990ad099823ec82d8e2afd5a6379420b}
+\hypertarget{classmanurestore_a1efaaee1df384e1eb1705c104d8567c7}{
+\index{manurestore@{manurestore}!Scale@{Scale}}
+\index{Scale@{Scale}!manurestore@{manurestore}}
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::Scale (double {\em annualAmount})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a1efaaee1df384e1eb1705c104d8567c7}
+Scale the \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} that receives material from this \hyperlink{classinstore}{instore} Note this sets capacity 
+
+Reimplemented in \hyperlink{classbiogas_reactor_a479439eabed31849643a005f9f6eb66d}{biogasReactor}, and \hyperlink{classslurrystore_a72711544587a5024eeaa072c43a4840a}{slurrystore}.\hypertarget{classmanurestore_a806191a8259f6b81782af3fe3cb0301f}{
+\index{manurestore@{manurestore}!SendManure@{SendManure}}
+\index{SendManure@{SendManure}!manurestore@{manurestore}}
+\subsubsection[{SendManure}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::SendManure (const double {\em amount}, \/  {\bf manure} $\ast$ {\em aManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a806191a8259f6b81782af3fe3cb0301f}
+Send \hyperlink{classmanure}{manure} to the next link in the \hyperlink{classmanure}{manure} handling chain \hypertarget{classmanurestore_a0fb30db9d2c496a9234c53a1109c9415}{
+\index{manurestore@{manurestore}!SetCapacity@{SetCapacity}}
+\index{SetCapacity@{SetCapacity}!manurestore@{manurestore}}
+\subsubsection[{SetCapacity}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetCapacity (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a0fb30db9d2c496a9234c53a1109c9415}
+\hypertarget{classmanurestore_a30eae0570a0fe584f7a4f395d96d0899}{
+\index{manurestore@{manurestore}!Setdepth@{Setdepth}}
+\index{Setdepth@{Setdepth}!manurestore@{manurestore}}
+\subsubsection[{Setdepth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::Setdepth (double {\em aDepth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a30eae0570a0fe584f7a4f395d96d0899}
+\hypertarget{classmanurestore_abffbe2e19e1d1ad114f35c532acc3f4c}{
+\index{manurestore@{manurestore}!Setexternal@{Setexternal}}
+\index{Setexternal@{Setexternal}!manurestore@{manurestore}}
+\subsubsection[{Setexternal}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::Setexternal (bool {\em isItExternal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_abffbe2e19e1d1ad114f35c532acc3f4c}
+\hypertarget{classmanurestore_a613b4feef4fa58c5586b6d9e0dd2a723}{
+\index{manurestore@{manurestore}!SetManure@{SetManure}}
+\index{SetManure@{SetManure}!manurestore@{manurestore}}
+\subsubsection[{SetManure}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::SetManure ({\bf manure} $\ast$ {\em aManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a613b4feef4fa58c5586b6d9e0dd2a723}
+Set \hyperlink{classmanure}{manure} not using init (used by flooring in \hyperlink{classanimal}{animal} housing) \hypertarget{classmanurestore_a91a0524f1b0d04fcb00e04a5d271050b}{
+\index{manurestore@{manurestore}!SetManureToIndex@{SetManureToIndex}}
+\index{SetManureToIndex@{SetManureToIndex}!manurestore@{manurestore}}
+\subsubsection[{SetManureToIndex}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetManureToIndex (int {\em amanureToIndex})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a91a0524f1b0d04fcb00e04a5d271050b}
+\hypertarget{classmanurestore_a1059b3c5134aedbee070b852792a2208}{
+\index{manurestore@{manurestore}!SetManureToName@{SetManureToName}}
+\index{SetManureToName@{SetManureToName}!manurestore@{manurestore}}
+\subsubsection[{SetManureToName}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetManureToName (string {\em amanureToName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a1059b3c5134aedbee070b852792a2208}
+\hypertarget{classmanurestore_a17d1969c7d7f39b449da52d42155f342}{
+\index{manurestore@{manurestore}!SetnextStore@{SetnextStore}}
+\index{SetnextStore@{SetnextStore}!manurestore@{manurestore}}
+\subsubsection[{SetnextStore}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetnextStore ({\bf manurestore} $\ast$ {\em aManureStore})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a17d1969c7d7f39b449da52d42155f342}
+\hypertarget{classmanurestore_a848644e21710c45320e36e8121232e0f}{
+\index{manurestore@{manurestore}!SetNOutput@{SetNOutput}}
+\index{SetNOutput@{SetNOutput}!manurestore@{manurestore}}
+\subsubsection[{SetNOutput}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetNOutput (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_a848644e21710c45320e36e8121232e0f}
+\hypertarget{classmanurestore_afad26ecb67219f60eeb0cd7c0aed89a3}{
+\index{manurestore@{manurestore}!SetOMdegRateConst@{SetOMdegRateConst}}
+\index{SetOMdegRateConst@{SetOMdegRateConst}!manurestore@{manurestore}}
+\subsubsection[{SetOMdegRateConst}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::SetOMdegRateConst (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanurestore_afad26ecb67219f60eeb0cd7c0aed89a3}
+\hypertarget{classmanurestore_ad8bd234e6612ea15ea17795899615b41}{
+\index{manurestore@{manurestore}!SetpostCleanDepth@{SetpostCleanDepth}}
+\index{SetpostCleanDepth@{SetpostCleanDepth}!manurestore@{manurestore}}
+\subsubsection[{SetpostCleanDepth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetpostCleanDepth (double {\em apostCleanDepth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_ad8bd234e6612ea15ea17795899615b41}
+\hypertarget{classmanurestore_ad6e7d11021d7b76a7f8682621403a653}{
+\index{manurestore@{manurestore}!SetsurfaceArea@{SetsurfaceArea}}
+\index{SetsurfaceArea@{SetsurfaceArea}!manurestore@{manurestore}}
+\subsubsection[{SetsurfaceArea}]{\setlength{\rightskip}{0pt plus 5cm}virtual void manurestore::SetsurfaceArea (double {\em area})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmanurestore_ad6e7d11021d7b76a7f8682621403a653}
+\hypertarget{classmanurestore_aa710a7d090423b9f29334e18db8788d2}{
+\index{manurestore@{manurestore}!ShowManureStore@{ShowManureStore}}
+\index{ShowManureStore@{ShowManureStore}!manurestore@{manurestore}}
+\subsubsection[{ShowManureStore}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::ShowManureStore (fstream $\ast$ {\em afile}, \/  bool {\em header})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_aa710a7d090423b9f29334e18db8788d2}
+\hypertarget{classmanurestore_aa52a9cf95fe0bf10ce70efaea73a181c}{
+\index{manurestore@{manurestore}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!manurestore@{manurestore}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::Volatize (double $\ast$ {\em Nlost}, \/  double $\ast$ {\em Clost}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_aa52a9cf95fe0bf10ce70efaea73a181c}
+calculate how much Ammonia(NH3), N2, double, N2O, CH4 that evaporate. Clost is the total amount of C that is evaporated and Clost is total amount of C that is evaporated \hypertarget{classmanurestore_a20c064bc22937610b638ba0a27c77e62}{
+\index{manurestore@{manurestore}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!manurestore@{manurestore}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void manurestore::Volatize (double {\em Ameantemp}, \/  double {\em relHumidity}, \/  double {\em precipitation}, \/  double {\em surfaceArea}, \/  double {\em resistance}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em waterEvap}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanurestore_a20c064bc22937610b638ba0a27c77e62}
+Volatize ammonia from the \hyperlink{classmanurestore}{manurestore} -\/ used for static (emission factor) ammonia modelling Volatize ammonia and other N gases from the \hyperlink{classmanurestore}{manurestore} -\/ used for dynamic modelling 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmanurestore_a8ac9597914271cef193878847c073724}{
+\index{manurestore@{manurestore}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!manurestore@{manurestore}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf manurestore} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmanurestore_a8ac9597914271cef193878847c073724}
+
+
+Reimplemented in \hyperlink{classinstore_a2ff66b6c5bc714a61ac6aeeebf9b2519}{instore}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classmanurestore_ac06eabf69498124decf382a8a373fae3}{
+\index{manurestore@{manurestore}!aBase@{aBase}}
+\index{aBase@{aBase}!manurestore@{manurestore}}
+\subsubsection[{aBase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base}$\ast$ {\bf manurestore::aBase}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_ac06eabf69498124decf382a8a373fae3}
+\hypertarget{classmanurestore_ad8a98a02aa12b2e52d5d7a78f27cc5e6}{
+\index{manurestore@{manurestore}!ALFAMtype@{ALFAMtype}}
+\index{ALFAMtype@{ALFAMtype}!manurestore@{manurestore}}
+\subsubsection[{ALFAMtype}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf manurestore::ALFAMtype}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_ad8a98a02aa12b2e52d5d7a78f27cc5e6}
+\hypertarget{classmanurestore_a56e78af8ef392eb99640c2c33812052d}{
+\index{manurestore@{manurestore}!AreaPrAnimal@{AreaPrAnimal}}
+\index{AreaPrAnimal@{AreaPrAnimal}!manurestore@{manurestore}}
+\subsubsection[{AreaPrAnimal}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::AreaPrAnimal}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a56e78af8ef392eb99640c2c33812052d}
+\hypertarget{classmanurestore_a9bb652a6ec6a71e7bfcdb8a0cf73272b}{
+\index{manurestore@{manurestore}!Cbudget@{Cbudget}}
+\index{Cbudget@{Cbudget}!manurestore@{manurestore}}
+\subsubsection[{Cbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf manurestore::Cbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a9bb652a6ec6a71e7bfcdb8a0cf73272b}
+\hypertarget{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{
+\index{manurestore@{manurestore}!CH4Emission@{CH4Emission}}
+\index{CH4Emission@{CH4Emission}!manurestore@{manurestore}}
+\subsubsection[{CH4Emission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::CH4Emission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}
+\hypertarget{classmanurestore_a9861c836c977df3bf4e245d099322e6b}{
+\index{manurestore@{manurestore}!CH4Emissionfactor@{CH4Emissionfactor}}
+\index{CH4Emissionfactor@{CH4Emissionfactor}!manurestore@{manurestore}}
+\subsubsection[{CH4Emissionfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::CH4Emissionfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a9861c836c977df3bf4e245d099322e6b}
+\hypertarget{classmanurestore_a7326d58aaa8a595756ae61121708aa92}{
+\index{manurestore@{manurestore}!CMinfactor@{CMinfactor}}
+\index{CMinfactor@{CMinfactor}!manurestore@{manurestore}}
+\subsubsection[{CMinfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::CMinfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a7326d58aaa8a595756ae61121708aa92}
+\hypertarget{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{
+\index{manurestore@{manurestore}!CO2Emission@{CO2Emission}}
+\index{CO2Emission@{CO2Emission}!manurestore@{manurestore}}
+\subsubsection[{CO2Emission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::CO2Emission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}
+\hypertarget{classmanurestore_a6ee1052f18936c909652548b28e2a66e}{
+\index{manurestore@{manurestore}!CO2Emissionfactor@{CO2Emissionfactor}}
+\index{CO2Emissionfactor@{CO2Emissionfactor}!manurestore@{manurestore}}
+\subsubsection[{CO2Emissionfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::CO2Emissionfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a6ee1052f18936c909652548b28e2a66e}
+\hypertarget{classmanurestore_a83dff87ec3a864c3534ef4dd9103dd47}{
+\index{manurestore@{manurestore}!cumvolat@{cumvolat}}
+\index{cumvolat@{cumvolat}!manurestore@{manurestore}}
+\subsubsection[{cumvolat}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::cumvolat}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a83dff87ec3a864c3534ef4dd9103dd47}
+\hypertarget{classmanurestore_a402560a3c76e913b8be315a6b87ee9fd}{
+\index{manurestore@{manurestore}!depth@{depth}}
+\index{depth@{depth}!manurestore@{manurestore}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::depth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a402560a3c76e913b8be315a6b87ee9fd}
+\hypertarget{classmanurestore_a05652f923c77a13d673da07a22b3175e}{
+\index{manurestore@{manurestore}!detailsFile@{detailsFile}}
+\index{detailsFile@{detailsFile}!manurestore@{manurestore}}
+\subsubsection[{detailsFile}]{\setlength{\rightskip}{0pt plus 5cm}fstream$\ast$ {\bf manurestore::detailsFile}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a05652f923c77a13d673da07a22b3175e}
+\hypertarget{classmanurestore_a9fc691bdb73d03bccf6ac813990670a1}{
+\index{manurestore@{manurestore}!external@{external}}
+\index{external@{external}!manurestore@{manurestore}}
+\subsubsection[{external}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf manurestore::external}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a9fc691bdb73d03bccf6ac813990670a1}
+\hypertarget{classmanurestore_ac61951ff08b90b86360c5719079944b1}{
+\index{manurestore@{manurestore}!locked@{locked}}
+\index{locked@{locked}!manurestore@{manurestore}}
+\subsubsection[{locked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf manurestore::locked}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_ac61951ff08b90b86360c5719079944b1}
+\hypertarget{classmanurestore_a47334161976431479652942c518c0bcf}{
+\index{manurestore@{manurestore}!manureToIndex@{manureToIndex}}
+\index{manureToIndex@{manureToIndex}!manurestore@{manurestore}}
+\subsubsection[{manureToIndex}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf manurestore::manureToIndex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a47334161976431479652942c518c0bcf}
+\hypertarget{classmanurestore_a349304f98a8168e23da714f55c4afe6c}{
+\index{manurestore@{manurestore}!manureToName@{manureToName}}
+\index{manureToName@{manureToName}!manurestore@{manurestore}}
+\subsubsection[{manureToName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf manurestore::manureToName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a349304f98a8168e23da714f55c4afe6c}
+\hypertarget{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{
+\index{manurestore@{manurestore}!N2Emission@{N2Emission}}
+\index{N2Emission@{N2Emission}!manurestore@{manurestore}}
+\subsubsection[{N2Emission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::N2Emission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}
+\hypertarget{classmanurestore_a02b104f571b0cfa311217ba14f7981cc}{
+\index{manurestore@{manurestore}!N2Emissionfactor@{N2Emissionfactor}}
+\index{N2Emissionfactor@{N2Emissionfactor}!manurestore@{manurestore}}
+\subsubsection[{N2Emissionfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::N2Emissionfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a02b104f571b0cfa311217ba14f7981cc}
+\hypertarget{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{
+\index{manurestore@{manurestore}!N2OEmission@{N2OEmission}}
+\index{N2OEmission@{N2OEmission}!manurestore@{manurestore}}
+\subsubsection[{N2OEmission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::N2OEmission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}
+\hypertarget{classmanurestore_a44dc0cae704de2cd571445e1e2490bb1}{
+\index{manurestore@{manurestore}!N2OEmissionfactor@{N2OEmissionfactor}}
+\index{N2OEmissionfactor@{N2OEmissionfactor}!manurestore@{manurestore}}
+\subsubsection[{N2OEmissionfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::N2OEmissionfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a44dc0cae704de2cd571445e1e2490bb1}
+\hypertarget{classmanurestore_a2f3e8e453b648c3a34c013fc7dc230b3}{
+\index{manurestore@{manurestore}!Nbudget@{Nbudget}}
+\index{Nbudget@{Nbudget}!manurestore@{manurestore}}
+\subsubsection[{Nbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf manurestore::Nbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a2f3e8e453b648c3a34c013fc7dc230b3}
+\hypertarget{classmanurestore_a8898189fbaeb7e121a06d09288ff819b}{
+\index{manurestore@{manurestore}!nextStore@{nextStore}}
+\index{nextStore@{nextStore}!manurestore@{manurestore}}
+\subsubsection[{nextStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manurestore}$\ast$ {\bf manurestore::nextStore}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a8898189fbaeb7e121a06d09288ff819b}
+\hypertarget{classmanurestore_abf76a878ba843ac1a77dcfad7b413d37}{
+\index{manurestore@{manurestore}!NH3Emissionfactor@{NH3Emissionfactor}}
+\index{NH3Emissionfactor@{NH3Emissionfactor}!manurestore@{manurestore}}
+\subsubsection[{NH3Emissionfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::NH3Emissionfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_abf76a878ba843ac1a77dcfad7b413d37}
+\hypertarget{classmanurestore_a75de8d810402cd1d65a1ce4ec9414480}{
+\index{manurestore@{manurestore}!NMinfactor@{NMinfactor}}
+\index{NMinfactor@{NMinfactor}!manurestore@{manurestore}}
+\subsubsection[{NMinfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::NMinfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a75de8d810402cd1d65a1ce4ec9414480}
+\hypertarget{classmanurestore_ac2155ea6f170c51b86b20f809ead9502}{
+\index{manurestore@{manurestore}!OMdegRateConst@{OMdegRateConst}}
+\index{OMdegRateConst@{OMdegRateConst}!manurestore@{manurestore}}
+\subsubsection[{OMdegRateConst}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::OMdegRateConst}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_ac2155ea6f170c51b86b20f809ead9502}
+\hypertarget{classmanurestore_a8e380412792126807f34460d47fca98b}{
+\index{manurestore@{manurestore}!postCleanDepth@{postCleanDepth}}
+\index{postCleanDepth@{postCleanDepth}!manurestore@{manurestore}}
+\subsubsection[{postCleanDepth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::postCleanDepth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a8e380412792126807f34460d47fca98b}
+\hypertarget{classmanurestore_a061d3a49dadcf3d8de36417c7cf125d3}{
+\index{manurestore@{manurestore}!surfaceArea@{surfaceArea}}
+\index{surfaceArea@{surfaceArea}!manurestore@{manurestore}}
+\subsubsection[{surfaceArea}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::surfaceArea}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a061d3a49dadcf3d8de36417c7cf125d3}
+\hypertarget{classmanurestore_a190469ebea4c87d3d641c73a1626c5e3}{
+\index{manurestore@{manurestore}!theStore@{theStore}}
+\index{theStore@{theStore}!manurestore@{manurestore}}
+\subsubsection[{theStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf storage}$\ast$ {\bf manurestore::theStore}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_a190469ebea4c87d3d641c73a1626c5e3}
+\hypertarget{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{
+\index{manurestore@{manurestore}!volatAmmonia@{volatAmmonia}}
+\index{volatAmmonia@{volatAmmonia}!manurestore@{manurestore}}
+\subsubsection[{volatAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manurestore::volatAmmonia}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{manstore_8h}{manstore.h}\item 
+C:/main/trunk/src/building/\hyperlink{manstore_8cpp}{manstore.cpp}\end{DoxyCompactItemize}

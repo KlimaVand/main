@@ -1,0 +1,80 @@
+[Group(0)]	
+Alias	PIGLETS
+[Group(0).Feed(0)]	
+FeedCode	203
+Amount	1.5
+[Group(0).Feed(1)]	
+FeedCode	155
+Amount	0.69
+[Group(0).Feed(2)]	
+FeedCode	908
+Amount	0.037
+[Group(0).Feed(3)]	
+FeedCode	345
+Amount	0.03
+[Group(1)]	
+Alias	BACONERS
+[Group(1).Feed(0)]	
+FeedCode	203
+Amount	2.0
+[Group(1).Feed(1)]	
+FeedCode	155
+Amount	0.5
+[Group(1).Feed(2)]	
+FeedCode	201
+Amount	0.5
+[Group(1).Feed(3)]	
+FeedCode	216
+Amount	0.111
+[Group(1).Feed(4)]	
+FeedCode	207
+Amount	0.089
+[Group(1).Feed(5)]	
+FeedCode	145
+Amount	0.089
+[Group(2)]	
+Alias	SOWS_MATING
+[Group(2).Feed(0)]	
+FeedCode	203
+Amount	1.482
+[Group(2).Feed(1)]	
+FeedCode	155
+Amount	0.578
+[Group(2).Feed(2)]	
+FeedCode	201
+Amount	1.482
+[Group(2).Feed(3)]	
+FeedCode	345
+Amount	0.057
+[Group(2).Feed(4)]	
+FeedCode	908
+Amount	0.076
+[Group(3)]	
+Alias	SOWS_LACTATING
+[Group(3).Feed(0)]	
+FeedCode	203
+Amount	2.028
+[Group(3).Feed(1)]	
+FeedCode	155
+Amount	0.790
+[Group(3).Feed(2)]	
+FeedCode	201
+Amount	2.028
+[Group(3).Feed(3)]	
+FeedCode	345
+Amount	0.078
+[Group(3).Feed(4)]	
+FeedCode	908
+Amount	0.104
+[Group(4)]	
+Alias	SOWS_PREGNANT
+[Group(4).Feed(0)]	
+FeedCode	203
+Amount	2.5
+[Group(4).Feed(1)]	
+FeedCode	155
+Amount	1.0
+[Group(4).Feed(2)]	
+FeedCode	201
+Amount	0.3
+[end]

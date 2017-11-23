@@ -1,0 +1,130 @@
+[SoilParameters]
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         1
+ConductivityFC  -8.8                 // log10(m/s) from O.H.Jacobsen p 60
+DryBulkDensity   1.57                     
+ClayContent      0.045
+SiltContent      0.024
+
+CarbonPct        1.17
+CNRatio          13.9
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.038912425
+IOM	0.405174
+IOM.N	0.029452978
+
+RelativeWater(0) 0.3315
+PFValue(0)       1.0
+RelativeWater(1) 0.1445
+PFValue(1)       2.0
+RelativeWater(2) 0.0895
+PFValue(2)       3.0
+RelativeWater(3) 0.0355
+PFValue(3)       4.2
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         1
+ConductivityFC  -9.1
+DryBulkDensity   1.51                     
+ClayContent      0.044
+SiltContent      0.013
+
+CarbonPct        0.62
+CNRatio          16.9
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.015967956
+IOM	0.7
+IOM.N	0.04140009
+
+RelativeWater(0) 0.376
+PFValue(0)       1.0
+RelativeWater(1) 0.114
+PFValue(1)       2.0
+RelativeWater(2) 0.078
+PFValue(2)       3.0
+RelativeWater(3) 0.03
+PFValue(3)       4.2
+
+[SoilLayer(3)]
+Thickness        250
+SoilType         1
+ConductivityFC  -10.0
+DryBulkDensity   1.56                    
+ClayContent      0.038
+SiltContent      0.007
+
+CarbonPct        0.25
+CNRatio          14.7
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.018432848
+IOM	0.7
+IOM.N	0.047790812
+
+RelativeWater(0) 0.332
+PFValue(0)       1.0
+RelativeWater(1) 0.05
+PFValue(1)       2.0
+RelativeWater(2) 0.033
+PFValue(2)       3.0
+RelativeWater(3) 0.03
+PFValue(3)       4.2
+
+[SoilLayer(4)]
+Thickness        1500
+SoilType         1
+ConductivityFC  -10.1
+DryBulkDensity   1.58                    
+ClayContent      0.043
+SiltContent      0.008
+
+CarbonPct        0.14
+CNRatio          8.8
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.031127807
+IOM	0.7
+IOM.N	0.080705006
+
+RelativeWater(0) 0.332
+PFValue(0)       1.0
+RelativeWater(1) 0.05
+PFValue(1)       2.0
+RelativeWater(2) 0.033
+PFValue(2)       3.0
+RelativeWater(3) 0.03
+PFValue(3)       4.2
+
+[end]

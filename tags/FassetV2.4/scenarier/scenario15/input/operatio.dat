@@ -1,0 +1,475 @@
+[soilTreatTech(1)]	
+operationName	Ploughing
+workingSpeed	7.0
+turningTime	0.35
+turningHeadland	12.01
+k	0
+firstFurrow	1
+markHeadland	1
+disturbanceAllowance	7.20
+relaxationAllowance	0.05
+machinePoolPrice	468
+[soilTreatTech(1).mainTechEquip(1)]	
+techEquipName	Plough
+[soilTreatTech(1).techEquip(1)]	
+techEquipName	Tractor3
+[soilTreatTech(2)]	
+operationName	StubHarrowing
+workingSpeed	8.5
+turningTime	0.13
+turningHeadland	2.54
+k	0
+firstFurrow	0
+markHeadland	0
+disturbanceAllowance	1.65
+relaxationAllowance	0.05
+machinePoolPrice	121
+[soilTreatTech(2).mainTechEquip(1)]	
+techEquipName	Harrow
+[soilTreatTech(2).techEquip(1)]	
+techEquipName	Tractor4
+[soilTreatTech(3)]	
+operationName	SeedbedHarrowing
+workingSpeed	8.5
+turningTime	0.13
+turningHeadland	1.69
+k	0
+firstFurrow	0
+markHeadland	0
+disturbanceAllowance	0.14
+relaxationAllowance	0.05
+machinePoolPrice	93
+[soilTreatTech(3).mainTechEquip(1)]	
+techEquipName	SeedbedHarrow
+[soilTreatTech(3).techEquip(1)]	
+techEquipName	Tractor4
+[soilTreatTech(4)]	
+operationName	WeedHarrowing
+workingSpeed	7.0
+turningTime	0.31
+turningHeadland	1.64
+k	0
+firstFurrow	0
+markHeadland	0
+disturbanceAllowance	2.06
+relaxationAllowance	0.05
+machinePoolPrice	100
+[soilTreatTech(4).mainTechEquip(1)]	
+techEquipName	WeedHarrow
+[soilTreatTech(4).techEquip(1)]	
+techEquipName	Tractor3
+[soilTreatTech(5)]	
+operationName	RowCultivating
+workingSpeed	4.5
+turningTime	0.41
+turningHeadland	6.00
+k	0
+firstFurrow	0
+markHeadland	0
+disturbanceAllowance	6.28
+relaxationAllowance	0.05
+[soilTreatTech(5).mainTechEquip(1)]	
+techEquipName	RowCultivator
+[soilTreatTech(5).techEquip(1)]	
+techEquipName	Tractor
+[animalFertTech(1)]	
+operationName	SpreadingLiquidManure
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	0.24
+prepForSpreading	0.50
+workingSpeed	10
+prepLoading	1.81
+j	1
+roadSpeed	18
+spreadingCapacity	3000
+f	0
+g	1
+relaxationAllowance	0.05
+machinePoolPrice	10
+[animalFertTech(1).mainTechEquip(1)]	
+techEquipName	BroadcastSpreader
+[animalFertTech(1).techEquip(1)]	
+techEquipName	Tractor4
+[animalFertTech(1).techEquip(2)]	
+techEquipName	SlurryPump
+[animalFertTech(2)]	
+operationName	SpreadingSolidManure
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	1.22
+prepForSpreading	0.05
+workingSpeed	10.0
+prepLoading	1.77
+j	0
+roadSpeed	18.0
+spreadingCapacity	1783
+loadingCapacity	733
+f	1
+g	0
+relaxationAllowance	0.05
+machinePoolPrice	26
+[animalFertTech(2).mainTechEquip(1)]	
+techEquipName	ManureSpreader
+[animalFertTech(2).techEquip(1)]	
+techEquipName	Tractor4
+[animalFertTech(2).techEquip(2)]	
+techEquipName	Loader
+[animalFertTech(3)]	
+operationName	OpenSlotInjectingLiquidManure
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	0.24
+prepForSpreading	0.50
+workingSpeed	10
+prepLoading	1.81
+j	1
+roadSpeed	18
+spreadingCapacity	3000
+f	0
+g	1
+relaxationAllowance	0.05
+machinePoolPrice	10
+[animalFertTech(3).mainTechEquip(1)]	
+techEquipName	SlurryInjector
+[animalFertTech(3).techEquip(1)]	
+techEquipName	Tractor4
+[animalFertTech(4)]	
+operationName	ClosedSlotInjectingLiquidManure
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	0.24
+prepForSpreading	0.50
+workingSpeed	10
+prepLoading	1.81
+j	1
+roadSpeed	18
+spreadingCapacity	3000
+f	0
+g	1
+relaxationAllowance	0.05
+machinePoolPrice	10
+[animalFertTech(4).mainTechEquip(1)]	
+techEquipName	SlurryInjector
+[animalFertTech(4).techEquip(1)]	
+techEquipName	Tractor4
+[animalFertTech(5)]	//copy
+operationName	TrailingHoseSpreadingLiquidManure
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	0.24
+prepForSpreading	0.50
+workingSpeed	10
+prepLoading	1.81
+j	1
+roadSpeed	18
+spreadingCapacity	3000
+f	0
+g	1
+relaxationAllowance	0.05
+machinePoolPrice	10
+[animalFertTech(5).mainTechEquip(1)]	
+techEquipName	SlurryInjector
+[animalFertTech(5).techEquip(1)]	
+techEquipName	Tractor4
+[animalFertTech(6)]	//copy
+operationName	TrailingShoeSpreadingLiquidManure
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	0.24
+prepForSpreading	0.50
+workingSpeed	10
+prepLoading	1.81
+j	1
+roadSpeed	18
+spreadingCapacity	3000
+f	0
+g	1
+relaxationAllowance	0.05
+machinePoolPrice	10
+[animalFertTech(6).mainTechEquip(1)]	
+techEquipName	SlurryInjector
+[animalFertTech(6).techEquip(1)]	
+techEquipName	Tractor4
+[sowTech(1)]	
+operationName	Sowing
+workingSpeed	9.0
+turningTime	0.23
+turningHeadland	4.90
+disturbanceAllowance	2.49
+prepFillSowing	2.81
+fillingTime1Sowing	1.37
+fillingTime2Sowing	0
+fillingAmount1	195
+fillingAmount2	0
+roadSpeed	15
+changingTrailer	4
+prepLoading	2.95
+loadingTime	0.26
+relaxationAllowance	0.05
+machinePoolPrice	226
+[sowTech(1).mainTechEquip(1)]	
+techEquipName	SeedDrill
+[sowTech(1).techEquip(1)]	
+techEquipName	Tractor2
+[sowTech(1).techEquip(2)]	
+techEquipName	Tractor1
+[sowTech(1).techEquip(3)]	
+techEquipName	Carriage3
+[sowTech(2)]	
+operationName	SowingBeets
+workingSpeed	5.5
+disturbanceAllowance	2.49
+prepFillSowing	0
+fillingTime1Sowing	0
+fillingTime2Sowing	0
+fillingAmount1	0
+fillingAmount2	0
+roadSpeed	0
+changingTrailer	0
+prepLoading	0
+loadingTime	0
+relaxationAllowance	0.05
+[sowTech(2).mainTechEquip(1)]	
+techEquipName	BeetSeeder
+[sowTech(2).techEquip(1)]	
+techEquipName	Tractor
+[mineralFertTech(1)]	
+operationName	MineralFertilizing
+workingSpeed	10
+turningTime	0.23
+turningHeadland	0.96
+disturbanceAllowance	0.42
+prepFilling	1.47
+fillingTimeSpreader	0.68
+prepLoading	1.51
+loadingTime	0.90
+roadSpeed	15
+changingTrailer	4
+relaxationAllowance	0.05
+vol	1500
+machinePoolPrice	110
+[mineralFertTech(1).mainTechEquip(1)]	
+techEquipName	FertilizerSpreader
+[mineralFertTech(1).techEquip(1)]	
+techEquipName	Tractor3
+[mineralFertTech(1).techEquip(2)]	
+techEquipName	Tractor4
+[mineralFertTech(1).techEquip(3)]	
+techEquipName	Carriage4
+[plantCareTech(1)]	
+operationName	Spraying
+workingSpeed	7.0
+turningTime	0.23
+turningHeadland	3.30
+disturbanceAllowance	1.54
+specificArea	15
+roadSpeed	15
+prepFillingTank	5.03
+fillingTime	2.00
+relaxationAllowance	0.05
+machinePoolPrice	106
+[plantCareTech(1).mainTechEquip(1)]	
+techEquipName	Spray
+[plantCareTech(1).techEquip(1)]	
+techEquipName	Tractor3
+[irrigateTech(1)]	
+operationName	Irrigating
+workingLength	300
+constantPerShift	34
+variablePerLength	1
+hoursPerDay	22
+relaxationAllowance	0.05
+[irrigateTech(1).mainTechEquip(1)]	
+techEquipName	IrrigationMachine
+[irrigateTech(1).techEquip(1)]	
+techEquipName	WaterPump
+[harvestTech(1)]	
+operationName	CombineHarvesting
+turningTime	0.47
+turningHeadland	2.24
+disturbanceAllowance	3.07
+relaxationAllowance	0.05
+unloadCapacity	0.083
+prepUnloadingStorage	1.51
+prepReloading	10.35
+prepReloadingHarvester	0.25
+workingSpeed	10
+roadSpeed	18
+machinePoolPrice	791
+[harvestTech(1).mainTechEquip(1)]	
+techEquipName	CombineHarvester
+[harvestTech(1).techEquip(1)]	
+techEquipName	Tractor4
+[harvestTech(1).techEquip(2)]	
+techEquipName	Carriage4
+[harvestTech(2)]	
+operationName	CombineHarvestingShred
+turningTime	0.47
+turningHeadland	2.24
+disturbanceAllowance	3.07
+relaxationAllowance	0.05
+unloadCapacity	0.083
+prepUnloadingStorage	1.51
+prepReloading	10.35
+prepReloadingHarvester	0.25
+workingSpeed	10
+roadSpeed	18
+machinePoolPrice	791
+[harvestTech(2).mainTechEquip(1)]	
+techEquipName	CombineHarvester
+[harvestTech(2).techEquip(1)]	
+techEquipName	Tractor3
+[harvestTech(2).techEquip(2)]	
+techEquipName	Carriage3
+[harvestTech(3)]	
+operationName	GatheringBales
+turningTime	0.31
+turningHeadland	2.88
+disturbanceAllowance	3.6
+relaxationAllowance	0.05
+prepReloadingHarvester	2.51
+prepReloading	2.30
+workingSpeed	10
+roadSpeed	20
+prepUnloadingStorage	2.52
+depositCapacity	3.12
+balesLoad	244
+balesLost	2.67
+loadCapacity	0.73
+reloading	1.45
+moweCarriage	1.23
+bindTime	0.73
+strawBalerCapacity	9.9
+unloadCapacity	0.69
+machinePoolPrice	775
+[harvestTech(3).mainTechEquip(1)]	
+techEquipName	Strawbaler
+[harvestTech(3).techEquip(1)]	
+techEquipName	Tractor3
+[harvestTech(3).techEquip(2)]	
+techEquipName	Carriage3
+[harvestTech(4)]	
+operationName	Mowing
+workingSpeed	12
+roadSpeed	18
+turningTime	0.20
+turningHeadland	7.26
+disturbanceAllowance	0.79
+relaxationAllowance	0.05
+machinePoolPrice	311
+[harvestTech(4).mainTechEquip(1)]	
+techEquipName	Mower
+[harvestTech(4).techEquip(1)]	
+techEquipName	Tractor3
+[harvestTech(5)]	
+operationName	CutSetAside
+workingSpeed	12
+roadSpeed	18
+turningTime	0.20
+turningHeadland	7.26
+disturbanceAllowance	0.79
+relaxationAllowance	0.05
+machinePoolPrice	218
+[harvestTech(5).mainTechEquip(1)]	
+techEquipName	Mower
+[harvestTech(5).techEquip(1)]	
+techEquipName	Tractor3
+[harvestTech(6)]	
+operationName	BeetHarvesting
+turningTime	0.43
+turningHeadland	17.44
+disturbanceAllowance	7.84
+relaxationAllowance	0.05
+prepReloadingHarvester	0.28
+reloadingCapacity	0.14
+roadSpeed	18
+prepUnloadingStorage	1.12
+unloadCapacity	0.18
+depositCapacity	0.00
+[harvestTech(6).mainTechEquip(1)]	
+techEquipName	BeetLifter
+[harvestTech(6).techEquip(1)]	
+techEquipName	Tractor
+[harvestTech(6).techEquip(2)]	
+techEquipName	Tractor
+[harvestTech(6).techEquip(3)]	
+techEquipName	Carriage
+[harvestTech(7)]	//
+operationName	ForageHarvesting
+workingSpeed	12
+roadSpeed	18
+turningTime	0.20
+turningHeadland	7.26
+disturbanceAllowance	0.79
+relaxationAllowance	0.05
+machinePoolPrice	218
+[harvestTech(7).mainTechEquip(1)]	
+techEquipName	Mower
+[harvestTech(7).techEquip(1)]	
+techEquipName	Tractor3
+[harvestTech(8)]	
+operationName	BeetTopChopping
+workingSpeed	12
+roadSpeed	18
+turningTime	0.20
+turningHeadland	7.26
+disturbanceAllowance	0.79
+relaxationAllowance	0.05
+machinePoolPrice	218
+[harvestTech(8).mainTechEquip(1)]	
+techEquipName	Mower
+[harvestTech(8).techEquip(1)]	
+techEquipName	Tractor3
+[harvestTech(9)]	
+operationName	GatheringCereal
+turningTime	0.47
+turningHeadland	2.24
+disturbanceAllowance	3.07
+relaxationAllowance	0.05
+unloadCapacity	0.083
+prepUnloadingStorage	1.51
+prepReloading	10.35
+prepReloadingHarvester	0.25
+workingSpeed	10
+roadSpeed	18
+machinePoolPrice	791
+[harvestTech(9).mainTechEquip(1)]	
+techEquipName	CombineHarvester
+[harvestTech(9).techEquip(1)]	
+techEquipName	Tractor4
+[harvestTech(9).techEquip(2)]	
+techEquipName	Carriage4
+[harvestTech(10)]	
+operationName	GatheringSilage
+turningTime	0.47
+turningHeadland	2.24
+disturbanceAllowance	3.07
+relaxationAllowance	0.05
+unloadCapacity	0.083
+prepUnloadingStorage	1.51
+prepReloading	10.35
+prepReloadingHarvester	0.25
+workingSpeed	10
+roadSpeed	18
+machinePoolPrice	791
+[harvestTech(10).mainTechEquip(1)]	
+techEquipName	CombineHarvester
+[harvestTech(10).techEquip(1)]	
+techEquipName	Tractor4
+[harvestTech(10).techEquip(2)]	
+techEquipName	Carriage4
+[harvestTech(11)]	//
+operationName	GatheringHay
+workingSpeed	12
+roadSpeed	18
+turningTime	0.20
+turningHeadland	7.26
+disturbanceAllowance	0.79
+relaxationAllowance	0.05
+machinePoolPrice	218
+[harvestTech(11).mainTechEquip(1)]	
+techEquipName	Mower
+[harvestTech(11).techEquip(1)]	
+techEquipName	Tractor3
+[end]

@@ -1,0 +1,164 @@
+\hypertarget{classpremium}{
+\section{premium Class Reference}
+\label{classpremium}\index{premium@{premium}}
+}
+
+
+{\ttfamily \#include $<$premium.h$>$}Inheritance diagram for premium::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classpremium}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpremium_ac3dd91ab23baa3f55dea02cbb3bb28cd}{premium} ()
+\item 
+\hyperlink{classpremium_a93afafdf2e443abb3375bb079a3791c8}{premium} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classpremium_a176e90d12b69d5ba258150b1acfacac4}{premium} (const \hyperlink{classpremium}{premium} \&aPremium)
+\item 
+virtual \hyperlink{classpremium_a09d27da0eddb03586f656c560545a15e}{$\sim$premium} ()
+\item 
+string \hyperlink{classpremium_a1995a83a73c5770b4ef3eb63ababb692}{GetPlantName} (void) const 
+\item 
+bool \hyperlink{classpremium_aec85213df0f2457aed457c3540956548}{GetGreen} () const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classpremium_af03bab06ac59b354df62a220f1052717}{operator=} (const \hyperlink{classproduct}{product} \&apremium)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classpremium_ad0ec34d64c73d308689635c5619a5dba}{operator+} (const \hyperlink{classproduct}{product} \&apremium)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classpremium_a2b0ea62d5e95b5655d461141e3702779}{operator-\/} (const \hyperlink{classproduct}{product} \&apremium)
+\item 
+void \hyperlink{classpremium_a69f4bbe9223ea34bddbe6db348670338}{showstats} (ostream $\ast$os)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classpremium_aa8167e20347089e9037fcba95f4fe435}{clone} () const 
+\item 
+virtual void \hyperlink{classpremium_a2c3bdadfb21fa893c4cd2e2f183edcd3}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpremium_a18e6e7832622598ea24cb385a78f3a50}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classpremium_a4f05a7a9d1c89cc711eaec81ba7c0065}{plantName}
+\item 
+bool \hyperlink{classpremium_a5a80b0f2ea4bb892c5022f40ec10f4cc}{green}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classpremium_ad40c91365d71deebcf91e1da3d66d78f}{operator$<$$<$} (ostream \&os, const \hyperlink{classpremium}{premium} \&apremium)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpremium_ac3dd91ab23baa3f55dea02cbb3bb28cd}{
+\index{premium@{premium}!premium@{premium}}
+\index{premium@{premium}!premium@{premium}}
+\subsubsection[{premium}]{\setlength{\rightskip}{0pt plus 5cm}premium::premium ()}}
+\label{classpremium_ac3dd91ab23baa3f55dea02cbb3bb28cd}
+\hypertarget{classpremium_a93afafdf2e443abb3375bb079a3791c8}{
+\index{premium@{premium}!premium@{premium}}
+\index{premium@{premium}!premium@{premium}}
+\subsubsection[{premium}]{\setlength{\rightskip}{0pt plus 5cm}premium::premium (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classpremium_a93afafdf2e443abb3375bb079a3791c8}
+\hypertarget{classpremium_a176e90d12b69d5ba258150b1acfacac4}{
+\index{premium@{premium}!premium@{premium}}
+\index{premium@{premium}!premium@{premium}}
+\subsubsection[{premium}]{\setlength{\rightskip}{0pt plus 5cm}premium::premium (const {\bf premium} \& {\em aPremium})}}
+\label{classpremium_a176e90d12b69d5ba258150b1acfacac4}
+\hypertarget{classpremium_a09d27da0eddb03586f656c560545a15e}{
+\index{premium@{premium}!$\sim$premium@{$\sim$premium}}
+\index{$\sim$premium@{$\sim$premium}!premium@{premium}}
+\subsubsection[{$\sim$premium}]{\setlength{\rightskip}{0pt plus 5cm}premium::$\sim$premium ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_a09d27da0eddb03586f656c560545a15e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpremium_aa8167e20347089e9037fcba95f4fe435}{
+\index{premium@{premium}!clone@{clone}}
+\index{clone@{clone}!premium@{premium}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ premium::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_aa8167e20347089e9037fcba95f4fe435}
+
+
+Reimplemented from \hyperlink{classproduct_a18a1df87f3400774db21d1e8c573f04a}{product}.\hypertarget{classpremium_aec85213df0f2457aed457c3540956548}{
+\index{premium@{premium}!GetGreen@{GetGreen}}
+\index{GetGreen@{GetGreen}!premium@{premium}}
+\subsubsection[{GetGreen}]{\setlength{\rightskip}{0pt plus 5cm}bool premium::GetGreen () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpremium_aec85213df0f2457aed457c3540956548}
+\hypertarget{classpremium_a1995a83a73c5770b4ef3eb63ababb692}{
+\index{premium@{premium}!GetPlantName@{GetPlantName}}
+\index{GetPlantName@{GetPlantName}!premium@{premium}}
+\subsubsection[{GetPlantName}]{\setlength{\rightskip}{0pt plus 5cm}string premium::GetPlantName (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpremium_a1995a83a73c5770b4ef3eb63ababb692}
+\hypertarget{classpremium_a18e6e7832622598ea24cb385a78f3a50}{
+\index{premium@{premium}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!premium@{premium}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void premium::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpremium_a18e6e7832622598ea24cb385a78f3a50}
+
+
+Reimplemented from \hyperlink{classproduct_afcbfb1feadfd4ed057845eab47e37ff5}{product}.\hypertarget{classpremium_ad0ec34d64c73d308689635c5619a5dba}{
+\index{premium@{premium}!operator+@{operator+}}
+\index{operator+@{operator+}!premium@{premium}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& premium::operator+ (const {\bf product} \& {\em apremium})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_ad0ec34d64c73d308689635c5619a5dba}
+\hypertarget{classpremium_a2b0ea62d5e95b5655d461141e3702779}{
+\index{premium@{premium}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!premium@{premium}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& premium::operator-\/ (const {\bf product} \& {\em apremium})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_a2b0ea62d5e95b5655d461141e3702779}
+\hypertarget{classpremium_af03bab06ac59b354df62a220f1052717}{
+\index{premium@{premium}!operator=@{operator=}}
+\index{operator=@{operator=}!premium@{premium}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& premium::operator= (const {\bf product} \& {\em apremium})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_af03bab06ac59b354df62a220f1052717}
+\hypertarget{classpremium_a2c3bdadfb21fa893c4cd2e2f183edcd3}{
+\index{premium@{premium}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!premium@{premium}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void premium::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_a2c3bdadfb21fa893c4cd2e2f183edcd3}
+
+
+Reimplemented from \hyperlink{classproduct_a1edb3e3d0619a2db8b8f1c95fed582ce}{product}.\hypertarget{classpremium_a69f4bbe9223ea34bddbe6db348670338}{
+\index{premium@{premium}!showstats@{showstats}}
+\index{showstats@{showstats}!premium@{premium}}
+\subsubsection[{showstats}]{\setlength{\rightskip}{0pt plus 5cm}void premium::showstats (ostream $\ast$ {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpremium_a69f4bbe9223ea34bddbe6db348670338}
+
+
+Reimplemented from \hyperlink{classproduct_a1151ea416ab90047f8d087be57a6d7b1}{product}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classpremium_ad40c91365d71deebcf91e1da3d66d78f}{
+\index{premium@{premium}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!premium@{premium}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf premium} \& {\em apremium})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classpremium_ad40c91365d71deebcf91e1da3d66d78f}
+
+
+Reimplemented from \hyperlink{classproduct_a1b6bf2f2c82a18a17907ee1192fd94bb}{product}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classpremium_a5a80b0f2ea4bb892c5022f40ec10f4cc}{
+\index{premium@{premium}!green@{green}}
+\index{green@{green}!premium@{premium}}
+\subsubsection[{green}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf premium::green}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpremium_a5a80b0f2ea4bb892c5022f40ec10f4cc}
+\hypertarget{classpremium_a4f05a7a9d1c89cc711eaec81ba7c0065}{
+\index{premium@{premium}!plantName@{plantName}}
+\index{plantName@{plantName}!premium@{premium}}
+\subsubsection[{plantName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf premium::plantName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpremium_a4f05a7a9d1c89cc711eaec81ba7c0065}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{premium_8h}{premium.h}\item 
+C:/main/trunk/src/products/\hyperlink{premium_8cpp}{premium.cpp}\end{DoxyCompactItemize}

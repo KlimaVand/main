@@ -1,0 +1,175 @@
+\hypertarget{classanimal_stock}{
+\section{animalStock Class Reference}
+\label{classanimal_stock}\index{animalStock@{animalStock}}
+}
+
+
+{\ttfamily \#include $<$animalStock.h$>$}Inheritance diagram for animalStock::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classanimal_stock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_stock_a28ef4328fb75f96b307966450326d947}{animalStock} ()
+\item 
+\hyperlink{classanimal_stock_adf6f3e6e99c71676689dbbdf5b6e1ba3}{animalStock} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual \hyperlink{classanimal_stock_a1b348cc4923dedf82ed04e3c65feb405}{$\sim$animalStock} ()
+\item 
+virtual void \hyperlink{classanimal_stock_ab95f31939d8d1cbc1bb2f567375995ae}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classanimal_stock_a6f4c6825f213b660f9c5cca109119a1c}{Initialize} ()
+\item 
+virtual void \hyperlink{classanimal_stock_a725a20b1ebac99314da9371c17aaad82}{ReceivePlan} (char $\ast$fileExtension)
+\item 
+virtual void \hyperlink{classanimal_stock_abc7609a0376b750c4d09918226ed60bf}{CalcLP1} ()
+\item 
+virtual void \hyperlink{classanimal_stock_a34875c064b430a79f94ab2b5aab34157}{CalcLP3} ()
+\item 
+void \hyperlink{classanimal_stock_a290892905be4b6f7e9efd445bdb37edd}{SetStable} (\hyperlink{classstable}{stable} $\ast$aaStable)
+\item 
+\hyperlink{classstable}{stable} $\ast$ \hyperlink{classanimal_stock_ac12cce9260301cb684af03c4d101d3ca}{GetStable} ()
+\item 
+double \hyperlink{classanimal_stock_af2cf60cd12ce0376947bb5e5adab751d}{GetNumber} ()
+\item 
+virtual double \hyperlink{classanimal_stock_a8bed676752d1e6414c9a73fe72e3cb85}{GetDE} ()
+\item 
+virtual void \hyperlink{classanimal_stock_aa52ee60094491bbcf82325fd5479f109}{checkBalances} (bool show=false)
+\item 
+virtual void \hyperlink{classanimal_stock_a7d6f9b68a88f2e5399f8dcdb3965a4f6}{GiveIndicator} (int indicatorType)
+\item 
+virtual void \hyperlink{classanimal_stock_a4801638201d8fa2c246eb4f9c28cf140}{FlushIndicator} (int indicatorType)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classanimal}{animal} $>$ $\ast$ \hyperlink{classanimal_stock_ad953b662fecba40e83dd04350ed2189f}{theStock}
+\item 
+\hyperlink{classstable}{stable} $\ast$ \hyperlink{classanimal_stock_a3f463dfdca4991f4555581e8d2a7e6c0}{aStable}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classanimal_stock_ae28046254cae05a55efe5dbe41baeeab}{Nbudget}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classanimal_stock_a28ef4328fb75f96b307966450326d947}{
+\index{animalStock@{animalStock}!animalStock@{animalStock}}
+\index{animalStock@{animalStock}!animalStock@{animalStock}}
+\subsubsection[{animalStock}]{\setlength{\rightskip}{0pt plus 5cm}animalStock::animalStock ()}}
+\label{classanimal_stock_a28ef4328fb75f96b307966450326d947}
+Default Constructor \hypertarget{classanimal_stock_adf6f3e6e99c71676689dbbdf5b6e1ba3}{
+\index{animalStock@{animalStock}!animalStock@{animalStock}}
+\index{animalStock@{animalStock}!animalStock@{animalStock}}
+\subsubsection[{animalStock}]{\setlength{\rightskip}{0pt plus 5cm}animalStock::animalStock (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classanimal_stock_adf6f3e6e99c71676689dbbdf5b6e1ba3}
+Constructor with arguments Also calles: \hyperlink{classbase}{base}(const char $\ast$ aName, const int aIndex = -\/1, const \hyperlink{classbase}{base} $\ast$ aOwner = NULL); \hypertarget{classanimal_stock_a1b348cc4923dedf82ed04e3c65feb405}{
+\index{animalStock@{animalStock}!$\sim$animalStock@{$\sim$animalStock}}
+\index{$\sim$animalStock@{$\sim$animalStock}!animalStock@{animalStock}}
+\subsubsection[{$\sim$animalStock}]{\setlength{\rightskip}{0pt plus 5cm}animalStock::$\sim$animalStock ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_stock_a1b348cc4923dedf82ed04e3c65feb405}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classanimal_stock_abc7609a0376b750c4d09918226ed60bf}{
+\index{animalStock@{animalStock}!CalcLP1@{CalcLP1}}
+\index{CalcLP1@{CalcLP1}!animalStock@{animalStock}}
+\subsubsection[{CalcLP1}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalStock::CalcLP1 ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_abc7609a0376b750c4d09918226ed60bf}
+\hypertarget{classanimal_stock_a34875c064b430a79f94ab2b5aab34157}{
+\index{animalStock@{animalStock}!CalcLP3@{CalcLP3}}
+\index{CalcLP3@{CalcLP3}!animalStock@{animalStock}}
+\subsubsection[{CalcLP3}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalStock::CalcLP3 ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_a34875c064b430a79f94ab2b5aab34157}
+\hypertarget{classanimal_stock_aa52ee60094491bbcf82325fd5479f109}{
+\index{animalStock@{animalStock}!checkBalances@{checkBalances}}
+\index{checkBalances@{checkBalances}!animalStock@{animalStock}}
+\subsubsection[{checkBalances}]{\setlength{\rightskip}{0pt plus 5cm}void animalStock::checkBalances (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_stock_aa52ee60094491bbcf82325fd5479f109}
+Call \hyperlink{classanimal_stock_aa52ee60094491bbcf82325fd5479f109}{checkBalances()} for each \hyperlink{classanimal}{animal} in theStock, Nice to know: why do we have this function sinec it is not used and is calling a function that just exit Fasset 
+
+Reimplemented in \hyperlink{classdairy_stock_a5bc23504c268f65736035b37b94af54a}{dairyStock}.\hypertarget{classanimal_stock_ab95f31939d8d1cbc1bb2f567375995ae}{
+\index{animalStock@{animalStock}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!animalStock@{animalStock}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalStock::DailyUpdate (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_ab95f31939d8d1cbc1bb2f567375995ae}
+
+
+Reimplemented in \hyperlink{classdairy_stock_a6650864514247ac49a701d3e40cdad9a}{dairyStock}, and \hyperlink{classswine_stock_ae8e9dfd9c03e9ba170c697f7376b82bd}{swineStock}.\hypertarget{classanimal_stock_a4801638201d8fa2c246eb4f9c28cf140}{
+\index{animalStock@{animalStock}!FlushIndicator@{FlushIndicator}}
+\index{FlushIndicator@{FlushIndicator}!animalStock@{animalStock}}
+\subsubsection[{FlushIndicator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalStock::FlushIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_a4801638201d8fa2c246eb4f9c28cf140}
+\hypertarget{classanimal_stock_a8bed676752d1e6414c9a73fe72e3cb85}{
+\index{animalStock@{animalStock}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!animalStock@{animalStock}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalStock::GetDE ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_a8bed676752d1e6414c9a73fe72e3cb85}
+
+
+Reimplemented in \hyperlink{classdairy_stock_aad94cb740f4ee70763adede5f4c4844c}{dairyStock}, and \hyperlink{classswine_stock_ac7b5455c4b474d3be67c17ce9d7f61ea}{swineStock}.\hypertarget{classanimal_stock_af2cf60cd12ce0376947bb5e5adab751d}{
+\index{animalStock@{animalStock}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!animalStock@{animalStock}}
+\subsubsection[{GetNumber}]{\setlength{\rightskip}{0pt plus 5cm}double animalStock::GetNumber ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_stock_af2cf60cd12ce0376947bb5e5adab751d}
+
+
+Reimplemented in \hyperlink{classswine_stock_a810cd4f4ffc068a42edf008b1288606d}{swineStock}.\hypertarget{classanimal_stock_ac12cce9260301cb684af03c4d101d3ca}{
+\index{animalStock@{animalStock}!GetStable@{GetStable}}
+\index{GetStable@{GetStable}!animalStock@{animalStock}}
+\subsubsection[{GetStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stable}$\ast$ animalStock::GetStable ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_stock_ac12cce9260301cb684af03c4d101d3ca}
+
+
+Reimplemented in \hyperlink{classswine_stock_af63160db1074a36becd0b5dfb0859945}{swineStock}.\hypertarget{classanimal_stock_a7d6f9b68a88f2e5399f8dcdb3965a4f6}{
+\index{animalStock@{animalStock}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!animalStock@{animalStock}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalStock::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_a7d6f9b68a88f2e5399f8dcdb3965a4f6}
+
+
+Reimplemented in \hyperlink{classdairy_stock_a3d06c27cd2651c99b1fdf1273d0f6289}{dairyStock}.\hypertarget{classanimal_stock_a6f4c6825f213b660f9c5cca109119a1c}{
+\index{animalStock@{animalStock}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!animalStock@{animalStock}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void animalStock::Initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_stock_a6f4c6825f213b660f9c5cca109119a1c}
+Nice to know: Why do we have it when it is empty? \hypertarget{classanimal_stock_a725a20b1ebac99314da9371c17aaad82}{
+\index{animalStock@{animalStock}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!animalStock@{animalStock}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}virtual void animalStock::ReceivePlan (char $\ast$ {\em fileExtension})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_stock_a725a20b1ebac99314da9371c17aaad82}
+
+
+Reimplemented in \hyperlink{classdairy_stock_aa06e97a86fe280ee6b23ea2985317b65}{dairyStock}, and \hyperlink{classswine_stock_acf5744db1aac193ee2af257c4554918d}{swineStock}.\hypertarget{classanimal_stock_a290892905be4b6f7e9efd445bdb37edd}{
+\index{animalStock@{animalStock}!SetStable@{SetStable}}
+\index{SetStable@{SetStable}!animalStock@{animalStock}}
+\subsubsection[{SetStable}]{\setlength{\rightskip}{0pt plus 5cm}void animalStock::SetStable ({\bf stable} $\ast$ {\em aaStable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classanimal_stock_a290892905be4b6f7e9efd445bdb37edd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classanimal_stock_a3f463dfdca4991f4555581e8d2a7e6c0}{
+\index{animalStock@{animalStock}!aStable@{aStable}}
+\index{aStable@{aStable}!animalStock@{animalStock}}
+\subsubsection[{aStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stable}$\ast$ {\bf animalStock::aStable}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_stock_a3f463dfdca4991f4555581e8d2a7e6c0}
+
+
+Reimplemented in \hyperlink{classswine_stock_a78239ce5b75f52957d37b09e3bb8fbb9}{swineStock}.\hypertarget{classanimal_stock_ae28046254cae05a55efe5dbe41baeeab}{
+\index{animalStock@{animalStock}!Nbudget@{Nbudget}}
+\index{Nbudget@{Nbudget}!animalStock@{animalStock}}
+\subsubsection[{Nbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf animalStock::Nbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_stock_ae28046254cae05a55efe5dbe41baeeab}
+\hypertarget{classanimal_stock_ad953b662fecba40e83dd04350ed2189f}{
+\index{animalStock@{animalStock}!theStock@{theStock}}
+\index{theStock@{theStock}!animalStock@{animalStock}}
+\subsubsection[{theStock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf animal}$>$$\ast$ {\bf animalStock::theStock}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_stock_ad953b662fecba40e83dd04350ed2189f}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{animal_stock_8h}{animalStock.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{animal_stock_8cpp}{animalStock.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,138 @@
+[SoilParameters]
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         6
+Ammonium         0
+Nitrate          0
+ConductivityFC   -8.3               ' log(m/s) at FC, taken from Kalø (O.H.Jacobsen p 46)
+DryBulkDensity   1.41		// corrected for dinorg uk
+ClayContent      0.20		// corrected for dinorg uk
+SiltContent      0.40
+MualemVanGenucten 1
+
+CarbonPct        4.84		// corrected for Jokioinen
+CNRatio          9.3
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.059166481
+IOM	0.405174
+IOM.N	0.044783358
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -8.4               ' log(m/s) at FC, taken from Kalø (O.H.Jacobsen p 46)
+DryBulkDensity   1.41		// corrected for dinorg uk
+ClayContent      0.20		// corrected for dinorg uk
+SiltContent      0.40
+MualemVanGenucten 1
+
+CarbonPct        1.5
+CNRatio          9.3		// corrected for Jokioinen
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.029427279
+IOM	0.7
+IOM.N	0.076296052
+
+[SoilLayer(3)]
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -9.5               ' log(m/s) at FC, taken from Kalø (O.H.Jacobsen p 46)
+DryBulkDensity   1.41		// corrected for dinorg uk
+ClayContent      0.20		// corrected for dinorg uk
+SiltContent      0.40
+MualemVanGenucten 1
+
+CarbonPct        0.3
+CNRatio          9.3		// corrected for Jokioinen
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.029427279
+IOM	0.7
+IOM.N	0.076296052
+
+[SoilLayer(4)]
+Thickness        250
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -9.5               ' log(m/s) at FC, taken from Kalø (O.H.Jacobsen p 46)
+DryBulkDensity   1.41		// corrected for dinorg uk
+ClayContent      0.20		// corrected for dinorg uk
+SiltContent      0.40
+MualemVanGenucten 1
+
+CarbonPct        0.1
+CNRatio          9.3		// corrected for Jokioinen
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.029427279
+IOM	0.7
+IOM.N	0.076296052
+
+RelativeWater(0) 0.47		// corrected for dinorg uk
+PFValue(0)       0.0
+RelativeWater(1) 0.26
+PFValue(1)       2.0
+RelativeWater(2) 0.13
+PFValue(2)       4.2
+
+[SoilLayer(5)]
+Thickness        1000
+SoilType         4
+Ammonium         0
+Nitrate          0
+ConductivityFC   -9.5               ' log(m/s) at FC, taken from Kalø (O.H.Jacobsen p 46)
+DryBulkDensity   1.41		// corrected for dinorg uk
+ClayContent      0.20		// corrected for dinorg uk
+SiltContent      0.40
+MualemVanGenucten 1
+
+CarbonPct        0.01
+CNRatio          9.3		// corrected for Jokioinen
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.029427279
+IOM	0.7
+IOM.N	0.076296052
+
+[end]

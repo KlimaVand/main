@@ -1,0 +1,362 @@
+\hypertarget{classsoil_surface}{
+\section{soilSurface Class Reference}
+\label{classsoil_surface}\index{soilSurface@{soilSurface}}
+}
+
+
+{\ttfamily \#include $<$soilSurface.h$>$}Inheritance diagram for soilSurface::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classsoil_surface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsoil_surface_a2a00df0b447ca767c659411db75ffaf4}{soilSurface} ()
+\item 
+\hyperlink{classsoil_surface_a972c99897a9210cabbc1d7c8403c91c7}{soilSurface} (const \hyperlink{classsoil_surface}{soilSurface} \&surface)
+\item 
+\hyperlink{classsoil_surface_a8bae6caa8bdbdd3893f861f72c15ea80}{$\sim$soilSurface} ()
+\item 
+void \hyperlink{classsoil_surface_a76aba92c277390cc78e28d056f0dbbaa}{Update} (double $\ast$surplus, double ePotToSoil, double relativeSurfaceWater, double maxEvaporation, double evaporationContent, double airTemperature)
+\item 
+void \hyperlink{classsoil_surface_aeb5d1da5eb1d80034c7293bf4442cbbd}{SurfaceRunOff} ()
+\item 
+void \hyperlink{classsoil_surface_a076f92fc689a98876883f657855fae06}{Add} (\hyperlink{classsoil_surface}{soilSurface} $\ast$surface, double fraction)
+\item 
+void \hyperlink{classsoil_surface_afef3d7ce9b27c8f12412031604133e9a}{AddSolidNitrogen} (\hyperlink{classnitrogen}{nitrogen} addNitrate, \hyperlink{classnitrogen}{nitrogen} addAmmonium)
+\item 
+void \hyperlink{classsoil_surface_a8ba8e112ccba970c09854d5abcc205b3}{AddDisolvedNitrogen} (\hyperlink{classnitrogen}{nitrogen} addNitrate, \hyperlink{classnitrogen}{nitrogen} addAmmonium)
+\item 
+void \hyperlink{classsoil_surface_af3935f9b1363a0eee0f46a5c26b7f115}{AddProduct} (const \hyperlink{classorganic_product}{organicProduct} $\ast$\hyperlink{classproduct}{product})
+\item 
+\hyperlink{classorganic_product}{organicProduct} $\ast$ \hyperlink{classsoil_surface_ab9ad1072ebafe753fdb342846877c8d7}{RemoveProduct} (int No, double frac)
+\item 
+int \hyperlink{classsoil_surface_a5945849d0991acc0b9d920659b681e21}{GetProducts} ()
+\item 
+double \hyperlink{classsoil_surface_a455a1094f28a710abb7fc1d88cae8c5d}{GetEvaporation} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_aa6d131103f0277db0b8111fdf285d2ce}{GetAmmoniaVolatilisation} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a4dac3a226167782d92048eab2e579abd}{GetAmmoniumSolid} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a11d7a697d6f5e5b101641bcd5801282d}{GetNitrateSolid} ()
+\item 
+void \hyperlink{classsoil_surface_aabff58a0f58d1f4ca7c0fccdc976fa77}{AddAmmoniumDissolved} (\hyperlink{classnitrogen}{nitrogen} ad)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a984469387e63e35357350cdfb35f294a}{GetAmmoniumDisolved} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a8142c8ab4d304c03b412bc1c28c8a40b}{ExtractAmmoniumDisolved} ()
+\item 
+void \hyperlink{classsoil_surface_a61a48f2de12c8e87039fdba220856439}{AddNitrateDissolved} (\hyperlink{classnitrogen}{nitrogen} nd)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a51dcb7eb6a1f8876beee1be1c85baa35}{GetNitrateDisolved} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_aa7fb1af3a01553e72ed3437291195eaf}{ExtractNitrateDisolved} ()
+\item 
+double \hyperlink{classsoil_surface_a58ffb9a0d3adac6295a53b08bde3d243}{ExtractChloride} ()
+\item 
+void \hyperlink{classsoil_surface_a0a10fcbaeb2dbd98a6098e6a97b6095e}{AddChloride} (double amount)
+\item 
+double \hyperlink{classsoil_surface_a681cb140bad888b90a1c4e7fb9e390c7}{GetCarbon} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a3ca5e5b204e106714b33fa6993f02af8}{GetOrganicNitrogen} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a5d93b4b66e26d8e638f67c297db44821}{GetTotalNitrogen} ()
+\item 
+double \hyperlink{classsoil_surface_a2b80b68cebbbefb18ff4a1cbd54bbb6c}{GetWater} ()
+\item 
+void \hyperlink{classsoil_surface_a3291ec8531a504e9b274588d3ccec28f}{ExtractWater} (double $\ast$ew)
+\item 
+double \hyperlink{classsoil_surface_a68d7c37ad7e711584848df35d7583910}{ExtractWater} ()
+\item 
+double \hyperlink{classsoil_surface_aa5fbf9e9f54d0dc0cd138033038213a5}{GetRunOff} ()
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_ad8cea52b7a9dc89b8a3999a6d79785ed}{GetRunOff\_\-N} ()
+\item 
+void \hyperlink{classsoil_surface_a5d6f8c4c397d6cf8269ddd588e3e37f8}{AddWater} (double aw)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorganic_product}{organicProduct} $\ast$ \hyperlink{classsoil_surface_a29f5c29354eff438ba89b62583f20d59}{firstProduct}
+\item 
+\hyperlink{classorganic_product}{organicProduct} $\ast$ \hyperlink{classsoil_surface_afcdda156747bc4d2381838a0f2336c68}{lastProduct}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a61be813dd41dd4b2f40fefee735696ce}{ammoniumSolid}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_ab566e777525777ad61c080bcfc3a8a62}{nitrateSolid}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_a47c649169e56864826b72feb3bd3e027}{ammoniumDisolved}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_ad273a42865ea12eba884c867538681b7}{nitrateDisolved}
+\item 
+double \hyperlink{classsoil_surface_a580e10604ee7303c0b980984f09ddb17}{Chloride}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_aba1c7551c02a4781195e57fbd6963c2f}{RunOff\_\-N}
+\item 
+double \hyperlink{classsoil_surface_ad980e7ed17d0b8284082728a87f95983}{water}
+\item 
+double \hyperlink{classsoil_surface_ae21ef0e0798775d3f47321665ba2d47b}{RunOff}
+\item 
+double \hyperlink{classsoil_surface_a443e3e96045eab940fad15b2148ca310}{nitrogenDisolvedConstant}
+\item 
+double \hyperlink{classsoil_surface_a201a944caf9676abee3aa5a74ec34f8c}{nitrogenLeachedConstant}
+\item 
+double \hyperlink{classsoil_surface_aba8dbb85f3f82bcb0d7d3493855f16b0}{evaporation}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classsoil_surface_ae27aef70d693762080a42a5a8b3542b7}{ammoniaVolatilisation}
+\item 
+double \hyperlink{classsoil_surface_a3b9e9759bccf43a4fb6a971c0cff4874}{temperature}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsoil_surface_a2a00df0b447ca767c659411db75ffaf4}{
+\index{soilSurface@{soilSurface}!soilSurface@{soilSurface}}
+\index{soilSurface@{soilSurface}!soilSurface@{soilSurface}}
+\subsubsection[{soilSurface}]{\setlength{\rightskip}{0pt plus 5cm}soilSurface::soilSurface ()}}
+\label{classsoil_surface_a2a00df0b447ca767c659411db75ffaf4}
+\hypertarget{classsoil_surface_a972c99897a9210cabbc1d7c8403c91c7}{
+\index{soilSurface@{soilSurface}!soilSurface@{soilSurface}}
+\index{soilSurface@{soilSurface}!soilSurface@{soilSurface}}
+\subsubsection[{soilSurface}]{\setlength{\rightskip}{0pt plus 5cm}soilSurface::soilSurface (const {\bf soilSurface} \& {\em surface})}}
+\label{classsoil_surface_a972c99897a9210cabbc1d7c8403c91c7}
+\hypertarget{classsoil_surface_a8bae6caa8bdbdd3893f861f72c15ea80}{
+\index{soilSurface@{soilSurface}!$\sim$soilSurface@{$\sim$soilSurface}}
+\index{$\sim$soilSurface@{$\sim$soilSurface}!soilSurface@{soilSurface}}
+\subsubsection[{$\sim$soilSurface}]{\setlength{\rightskip}{0pt plus 5cm}soilSurface::$\sim$soilSurface ()}}
+\label{classsoil_surface_a8bae6caa8bdbdd3893f861f72c15ea80}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsoil_surface_a076f92fc689a98876883f657855fae06}{
+\index{soilSurface@{soilSurface}!Add@{Add}}
+\index{Add@{Add}!soilSurface@{soilSurface}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::Add ({\bf soilSurface} $\ast$ {\em surface}, \/  double {\em fraction})}}
+\label{classsoil_surface_a076f92fc689a98876883f657855fae06}
+\hypertarget{classsoil_surface_aabff58a0f58d1f4ca7c0fccdc976fa77}{
+\index{soilSurface@{soilSurface}!AddAmmoniumDissolved@{AddAmmoniumDissolved}}
+\index{AddAmmoniumDissolved@{AddAmmoniumDissolved}!soilSurface@{soilSurface}}
+\subsubsection[{AddAmmoniumDissolved}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddAmmoniumDissolved ({\bf nitrogen} {\em ad})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_aabff58a0f58d1f4ca7c0fccdc976fa77}
+\hypertarget{classsoil_surface_a0a10fcbaeb2dbd98a6098e6a97b6095e}{
+\index{soilSurface@{soilSurface}!AddChloride@{AddChloride}}
+\index{AddChloride@{AddChloride}!soilSurface@{soilSurface}}
+\subsubsection[{AddChloride}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddChloride (double {\em amount})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a0a10fcbaeb2dbd98a6098e6a97b6095e}
+\hypertarget{classsoil_surface_a8ba8e112ccba970c09854d5abcc205b3}{
+\index{soilSurface@{soilSurface}!AddDisolvedNitrogen@{AddDisolvedNitrogen}}
+\index{AddDisolvedNitrogen@{AddDisolvedNitrogen}!soilSurface@{soilSurface}}
+\subsubsection[{AddDisolvedNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddDisolvedNitrogen ({\bf nitrogen} {\em addNitrate}, \/  {\bf nitrogen} {\em addAmmonium})}}
+\label{classsoil_surface_a8ba8e112ccba970c09854d5abcc205b3}
+\hypertarget{classsoil_surface_a61a48f2de12c8e87039fdba220856439}{
+\index{soilSurface@{soilSurface}!AddNitrateDissolved@{AddNitrateDissolved}}
+\index{AddNitrateDissolved@{AddNitrateDissolved}!soilSurface@{soilSurface}}
+\subsubsection[{AddNitrateDissolved}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddNitrateDissolved ({\bf nitrogen} {\em nd})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a61a48f2de12c8e87039fdba220856439}
+\hypertarget{classsoil_surface_af3935f9b1363a0eee0f46a5c26b7f115}{
+\index{soilSurface@{soilSurface}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!soilSurface@{soilSurface}}
+\subsubsection[{AddProduct}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddProduct (const {\bf organicProduct} $\ast$ {\em product})}}
+\label{classsoil_surface_af3935f9b1363a0eee0f46a5c26b7f115}
+\hypertarget{classsoil_surface_afef3d7ce9b27c8f12412031604133e9a}{
+\index{soilSurface@{soilSurface}!AddSolidNitrogen@{AddSolidNitrogen}}
+\index{AddSolidNitrogen@{AddSolidNitrogen}!soilSurface@{soilSurface}}
+\subsubsection[{AddSolidNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddSolidNitrogen ({\bf nitrogen} {\em addNitrate}, \/  {\bf nitrogen} {\em addAmmonium})}}
+\label{classsoil_surface_afef3d7ce9b27c8f12412031604133e9a}
+\hypertarget{classsoil_surface_a5d6f8c4c397d6cf8269ddd588e3e37f8}{
+\index{soilSurface@{soilSurface}!AddWater@{AddWater}}
+\index{AddWater@{AddWater}!soilSurface@{soilSurface}}
+\subsubsection[{AddWater}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::AddWater (double {\em aw})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a5d6f8c4c397d6cf8269ddd588e3e37f8}
+\hypertarget{classsoil_surface_a8142c8ab4d304c03b412bc1c28c8a40b}{
+\index{soilSurface@{soilSurface}!ExtractAmmoniumDisolved@{ExtractAmmoniumDisolved}}
+\index{ExtractAmmoniumDisolved@{ExtractAmmoniumDisolved}!soilSurface@{soilSurface}}
+\subsubsection[{ExtractAmmoniumDisolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::ExtractAmmoniumDisolved ()}}
+\label{classsoil_surface_a8142c8ab4d304c03b412bc1c28c8a40b}
+\hypertarget{classsoil_surface_a58ffb9a0d3adac6295a53b08bde3d243}{
+\index{soilSurface@{soilSurface}!ExtractChloride@{ExtractChloride}}
+\index{ExtractChloride@{ExtractChloride}!soilSurface@{soilSurface}}
+\subsubsection[{ExtractChloride}]{\setlength{\rightskip}{0pt plus 5cm}double soilSurface::ExtractChloride ()}}
+\label{classsoil_surface_a58ffb9a0d3adac6295a53b08bde3d243}
+\hypertarget{classsoil_surface_aa7fb1af3a01553e72ed3437291195eaf}{
+\index{soilSurface@{soilSurface}!ExtractNitrateDisolved@{ExtractNitrateDisolved}}
+\index{ExtractNitrateDisolved@{ExtractNitrateDisolved}!soilSurface@{soilSurface}}
+\subsubsection[{ExtractNitrateDisolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::ExtractNitrateDisolved ()}}
+\label{classsoil_surface_aa7fb1af3a01553e72ed3437291195eaf}
+\hypertarget{classsoil_surface_a68d7c37ad7e711584848df35d7583910}{
+\index{soilSurface@{soilSurface}!ExtractWater@{ExtractWater}}
+\index{ExtractWater@{ExtractWater}!soilSurface@{soilSurface}}
+\subsubsection[{ExtractWater}]{\setlength{\rightskip}{0pt plus 5cm}double soilSurface::ExtractWater ()}}
+\label{classsoil_surface_a68d7c37ad7e711584848df35d7583910}
+\hypertarget{classsoil_surface_a3291ec8531a504e9b274588d3ccec28f}{
+\index{soilSurface@{soilSurface}!ExtractWater@{ExtractWater}}
+\index{ExtractWater@{ExtractWater}!soilSurface@{soilSurface}}
+\subsubsection[{ExtractWater}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::ExtractWater (double $\ast$ {\em ew})}}
+\label{classsoil_surface_a3291ec8531a504e9b274588d3ccec28f}
+\hypertarget{classsoil_surface_aa6d131103f0277db0b8111fdf285d2ce}{
+\index{soilSurface@{soilSurface}!GetAmmoniaVolatilisation@{GetAmmoniaVolatilisation}}
+\index{GetAmmoniaVolatilisation@{GetAmmoniaVolatilisation}!soilSurface@{soilSurface}}
+\subsubsection[{GetAmmoniaVolatilisation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetAmmoniaVolatilisation ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_aa6d131103f0277db0b8111fdf285d2ce}
+\hypertarget{classsoil_surface_a984469387e63e35357350cdfb35f294a}{
+\index{soilSurface@{soilSurface}!GetAmmoniumDisolved@{GetAmmoniumDisolved}}
+\index{GetAmmoniumDisolved@{GetAmmoniumDisolved}!soilSurface@{soilSurface}}
+\subsubsection[{GetAmmoniumDisolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetAmmoniumDisolved ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a984469387e63e35357350cdfb35f294a}
+\hypertarget{classsoil_surface_a4dac3a226167782d92048eab2e579abd}{
+\index{soilSurface@{soilSurface}!GetAmmoniumSolid@{GetAmmoniumSolid}}
+\index{GetAmmoniumSolid@{GetAmmoniumSolid}!soilSurface@{soilSurface}}
+\subsubsection[{GetAmmoniumSolid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetAmmoniumSolid ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a4dac3a226167782d92048eab2e579abd}
+\hypertarget{classsoil_surface_a681cb140bad888b90a1c4e7fb9e390c7}{
+\index{soilSurface@{soilSurface}!GetCarbon@{GetCarbon}}
+\index{GetCarbon@{GetCarbon}!soilSurface@{soilSurface}}
+\subsubsection[{GetCarbon}]{\setlength{\rightskip}{0pt plus 5cm}double soilSurface::GetCarbon ()}}
+\label{classsoil_surface_a681cb140bad888b90a1c4e7fb9e390c7}
+\hypertarget{classsoil_surface_a455a1094f28a710abb7fc1d88cae8c5d}{
+\index{soilSurface@{soilSurface}!GetEvaporation@{GetEvaporation}}
+\index{GetEvaporation@{GetEvaporation}!soilSurface@{soilSurface}}
+\subsubsection[{GetEvaporation}]{\setlength{\rightskip}{0pt plus 5cm}double soilSurface::GetEvaporation ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a455a1094f28a710abb7fc1d88cae8c5d}
+\hypertarget{classsoil_surface_a51dcb7eb6a1f8876beee1be1c85baa35}{
+\index{soilSurface@{soilSurface}!GetNitrateDisolved@{GetNitrateDisolved}}
+\index{GetNitrateDisolved@{GetNitrateDisolved}!soilSurface@{soilSurface}}
+\subsubsection[{GetNitrateDisolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetNitrateDisolved ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a51dcb7eb6a1f8876beee1be1c85baa35}
+\hypertarget{classsoil_surface_a11d7a697d6f5e5b101641bcd5801282d}{
+\index{soilSurface@{soilSurface}!GetNitrateSolid@{GetNitrateSolid}}
+\index{GetNitrateSolid@{GetNitrateSolid}!soilSurface@{soilSurface}}
+\subsubsection[{GetNitrateSolid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetNitrateSolid ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a11d7a697d6f5e5b101641bcd5801282d}
+\hypertarget{classsoil_surface_a3ca5e5b204e106714b33fa6993f02af8}{
+\index{soilSurface@{soilSurface}!GetOrganicNitrogen@{GetOrganicNitrogen}}
+\index{GetOrganicNitrogen@{GetOrganicNitrogen}!soilSurface@{soilSurface}}
+\subsubsection[{GetOrganicNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetOrganicNitrogen ()}}
+\label{classsoil_surface_a3ca5e5b204e106714b33fa6993f02af8}
+\hypertarget{classsoil_surface_a5945849d0991acc0b9d920659b681e21}{
+\index{soilSurface@{soilSurface}!GetProducts@{GetProducts}}
+\index{GetProducts@{GetProducts}!soilSurface@{soilSurface}}
+\subsubsection[{GetProducts}]{\setlength{\rightskip}{0pt plus 5cm}int soilSurface::GetProducts ()}}
+\label{classsoil_surface_a5945849d0991acc0b9d920659b681e21}
+\hypertarget{classsoil_surface_aa5fbf9e9f54d0dc0cd138033038213a5}{
+\index{soilSurface@{soilSurface}!GetRunOff@{GetRunOff}}
+\index{GetRunOff@{GetRunOff}!soilSurface@{soilSurface}}
+\subsubsection[{GetRunOff}]{\setlength{\rightskip}{0pt plus 5cm}double soilSurface::GetRunOff ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_aa5fbf9e9f54d0dc0cd138033038213a5}
+\hypertarget{classsoil_surface_ad8cea52b7a9dc89b8a3999a6d79785ed}{
+\index{soilSurface@{soilSurface}!GetRunOff\_\-N@{GetRunOff\_\-N}}
+\index{GetRunOff\_\-N@{GetRunOff\_\-N}!soilSurface@{soilSurface}}
+\subsubsection[{GetRunOff\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetRunOff\_\-N ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_ad8cea52b7a9dc89b8a3999a6d79785ed}
+\hypertarget{classsoil_surface_a5d93b4b66e26d8e638f67c297db44821}{
+\index{soilSurface@{soilSurface}!GetTotalNitrogen@{GetTotalNitrogen}}
+\index{GetTotalNitrogen@{GetTotalNitrogen}!soilSurface@{soilSurface}}
+\subsubsection[{GetTotalNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} soilSurface::GetTotalNitrogen ()}}
+\label{classsoil_surface_a5d93b4b66e26d8e638f67c297db44821}
+\hypertarget{classsoil_surface_a2b80b68cebbbefb18ff4a1cbd54bbb6c}{
+\index{soilSurface@{soilSurface}!GetWater@{GetWater}}
+\index{GetWater@{GetWater}!soilSurface@{soilSurface}}
+\subsubsection[{GetWater}]{\setlength{\rightskip}{0pt plus 5cm}double soilSurface::GetWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_surface_a2b80b68cebbbefb18ff4a1cbd54bbb6c}
+\hypertarget{classsoil_surface_ab9ad1072ebafe753fdb342846877c8d7}{
+\index{soilSurface@{soilSurface}!RemoveProduct@{RemoveProduct}}
+\index{RemoveProduct@{RemoveProduct}!soilSurface@{soilSurface}}
+\subsubsection[{RemoveProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf organicProduct} $\ast$ soilSurface::RemoveProduct (int {\em No}, \/  double {\em frac})}}
+\label{classsoil_surface_ab9ad1072ebafe753fdb342846877c8d7}
+\hypertarget{classsoil_surface_aeb5d1da5eb1d80034c7293bf4442cbbd}{
+\index{soilSurface@{soilSurface}!SurfaceRunOff@{SurfaceRunOff}}
+\index{SurfaceRunOff@{SurfaceRunOff}!soilSurface@{soilSurface}}
+\subsubsection[{SurfaceRunOff}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::SurfaceRunOff ()}}
+\label{classsoil_surface_aeb5d1da5eb1d80034c7293bf4442cbbd}
+\hypertarget{classsoil_surface_a76aba92c277390cc78e28d056f0dbbaa}{
+\index{soilSurface@{soilSurface}!Update@{Update}}
+\index{Update@{Update}!soilSurface@{soilSurface}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void soilSurface::Update (double $\ast$ {\em surplus}, \/  double {\em ePotToSoil}, \/  double {\em relativeSurfaceWater}, \/  double {\em maxEvaporation}, \/  double {\em evaporationContent}, \/  double {\em airTemperature})}}
+\label{classsoil_surface_a76aba92c277390cc78e28d056f0dbbaa}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classsoil_surface_ae27aef70d693762080a42a5a8b3542b7}{
+\index{soilSurface@{soilSurface}!ammoniaVolatilisation@{ammoniaVolatilisation}}
+\index{ammoniaVolatilisation@{ammoniaVolatilisation}!soilSurface@{soilSurface}}
+\subsubsection[{ammoniaVolatilisation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf soilSurface::ammoniaVolatilisation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_ae27aef70d693762080a42a5a8b3542b7}
+\hypertarget{classsoil_surface_a47c649169e56864826b72feb3bd3e027}{
+\index{soilSurface@{soilSurface}!ammoniumDisolved@{ammoniumDisolved}}
+\index{ammoniumDisolved@{ammoniumDisolved}!soilSurface@{soilSurface}}
+\subsubsection[{ammoniumDisolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf soilSurface::ammoniumDisolved}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a47c649169e56864826b72feb3bd3e027}
+\hypertarget{classsoil_surface_a61be813dd41dd4b2f40fefee735696ce}{
+\index{soilSurface@{soilSurface}!ammoniumSolid@{ammoniumSolid}}
+\index{ammoniumSolid@{ammoniumSolid}!soilSurface@{soilSurface}}
+\subsubsection[{ammoniumSolid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf soilSurface::ammoniumSolid}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a61be813dd41dd4b2f40fefee735696ce}
+\hypertarget{classsoil_surface_a580e10604ee7303c0b980984f09ddb17}{
+\index{soilSurface@{soilSurface}!Chloride@{Chloride}}
+\index{Chloride@{Chloride}!soilSurface@{soilSurface}}
+\subsubsection[{Chloride}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::Chloride}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a580e10604ee7303c0b980984f09ddb17}
+\hypertarget{classsoil_surface_aba8dbb85f3f82bcb0d7d3493855f16b0}{
+\index{soilSurface@{soilSurface}!evaporation@{evaporation}}
+\index{evaporation@{evaporation}!soilSurface@{soilSurface}}
+\subsubsection[{evaporation}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::evaporation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_aba8dbb85f3f82bcb0d7d3493855f16b0}
+\hypertarget{classsoil_surface_a29f5c29354eff438ba89b62583f20d59}{
+\index{soilSurface@{soilSurface}!firstProduct@{firstProduct}}
+\index{firstProduct@{firstProduct}!soilSurface@{soilSurface}}
+\subsubsection[{firstProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf organicProduct}$\ast$ {\bf soilSurface::firstProduct}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a29f5c29354eff438ba89b62583f20d59}
+\hypertarget{classsoil_surface_afcdda156747bc4d2381838a0f2336c68}{
+\index{soilSurface@{soilSurface}!lastProduct@{lastProduct}}
+\index{lastProduct@{lastProduct}!soilSurface@{soilSurface}}
+\subsubsection[{lastProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf organicProduct}$\ast$ {\bf soilSurface::lastProduct}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_afcdda156747bc4d2381838a0f2336c68}
+\hypertarget{classsoil_surface_ad273a42865ea12eba884c867538681b7}{
+\index{soilSurface@{soilSurface}!nitrateDisolved@{nitrateDisolved}}
+\index{nitrateDisolved@{nitrateDisolved}!soilSurface@{soilSurface}}
+\subsubsection[{nitrateDisolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf soilSurface::nitrateDisolved}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_ad273a42865ea12eba884c867538681b7}
+\hypertarget{classsoil_surface_ab566e777525777ad61c080bcfc3a8a62}{
+\index{soilSurface@{soilSurface}!nitrateSolid@{nitrateSolid}}
+\index{nitrateSolid@{nitrateSolid}!soilSurface@{soilSurface}}
+\subsubsection[{nitrateSolid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf soilSurface::nitrateSolid}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_ab566e777525777ad61c080bcfc3a8a62}
+\hypertarget{classsoil_surface_a443e3e96045eab940fad15b2148ca310}{
+\index{soilSurface@{soilSurface}!nitrogenDisolvedConstant@{nitrogenDisolvedConstant}}
+\index{nitrogenDisolvedConstant@{nitrogenDisolvedConstant}!soilSurface@{soilSurface}}
+\subsubsection[{nitrogenDisolvedConstant}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::nitrogenDisolvedConstant}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a443e3e96045eab940fad15b2148ca310}
+\hypertarget{classsoil_surface_a201a944caf9676abee3aa5a74ec34f8c}{
+\index{soilSurface@{soilSurface}!nitrogenLeachedConstant@{nitrogenLeachedConstant}}
+\index{nitrogenLeachedConstant@{nitrogenLeachedConstant}!soilSurface@{soilSurface}}
+\subsubsection[{nitrogenLeachedConstant}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::nitrogenLeachedConstant}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a201a944caf9676abee3aa5a74ec34f8c}
+\hypertarget{classsoil_surface_ae21ef0e0798775d3f47321665ba2d47b}{
+\index{soilSurface@{soilSurface}!RunOff@{RunOff}}
+\index{RunOff@{RunOff}!soilSurface@{soilSurface}}
+\subsubsection[{RunOff}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::RunOff}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_ae21ef0e0798775d3f47321665ba2d47b}
+\hypertarget{classsoil_surface_aba1c7551c02a4781195e57fbd6963c2f}{
+\index{soilSurface@{soilSurface}!RunOff\_\-N@{RunOff\_\-N}}
+\index{RunOff\_\-N@{RunOff\_\-N}!soilSurface@{soilSurface}}
+\subsubsection[{RunOff\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf soilSurface::RunOff\_\-N}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_aba1c7551c02a4781195e57fbd6963c2f}
+\hypertarget{classsoil_surface_a3b9e9759bccf43a4fb6a971c0cff4874}{
+\index{soilSurface@{soilSurface}!temperature@{temperature}}
+\index{temperature@{temperature}!soilSurface@{soilSurface}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::temperature}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_a3b9e9759bccf43a4fb6a971c0cff4874}
+\hypertarget{classsoil_surface_ad980e7ed17d0b8284082728a87f95983}{
+\index{soilSurface@{soilSurface}!water@{water}}
+\index{water@{water}!soilSurface@{soilSurface}}
+\subsubsection[{water}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilSurface::water}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_surface_ad980e7ed17d0b8284082728a87f95983}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{soil_surface_8h}{soilSurface.h}\item 
+C:/main/trunk/src/soil/\hyperlink{soil_surface_8cpp}{soilSurface.cpp}\end{DoxyCompactItemize}

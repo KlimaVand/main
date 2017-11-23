@@ -1,0 +1,1810 @@
+[product(1)]
+productname      hiredHours
+mainunitname     hour
+amount           0
+
+[product(2)]
+productname      MachinePoolCost
+mainunitname     kr
+amount           0
+
+[product(3)]
+productname      VET
+mainunitname     kr
+amount           0
+
+[animal(1)]
+productname      SOWS
+mainunitname     pcs
+amount           0
+animalPrHa       1.7
+animalPrAnimUnit 3
+orgN_content     0.026           / t/t  check!
+startWeight      0.1             / check
+endWeight        0.3             / check
+
+[animal(2)]
+productname      PIGLETS
+mainunitname     pcs
+amount           0
+animalPrHa       1.7
+animalPrAnimUnit 3
+orgN_content     0.026            / t/t  check!
+startWeight      0.0              / check
+endWeight        0.025            / check
+
+[animal(3)]
+productname      BACONERS
+mainunitname     pcs
+amount           0
+animalPrHa       1.7
+animalPrAnimUnit 30
+orgN_content     0.026             / t pr pcs  check!
+startWeight      0.025             / check
+endWeight        0.1               / check
+
+[animal(19)]
+productname      COWS    
+mainunitname     pcs
+amount           0
+animalPrHa       2.3
+animalPrAnimUnit 1
+orgN_content     0.0027             // t pr pcs  check!
+startWeight      0.03               // check
+endWeight        0.3                // check
+
+[animal(20)]
+productname      HEIFERS 
+mainunitname     pcs
+amount           0
+animalPrHa       2.3
+animalPrAnimUnit 3
+orgN_content     0.0027             // t pr pcs  check!
+startWeight      0.03               // check
+endWeight        0.3                // check
+
+[animal(21)]
+productname      YBULLS  
+mainunitname     pcs
+amount           0
+animalPrHa       2.3
+animalPrAnimUnit 3
+orgN_content     0.0027             // t pr pcs  check!
+startWeight      0.03               // check
+endWeight        0.3                // check
+
+[energy(1)]
+productname      DIESEL
+mainunitname     l
+amount           0
+kWhPerUnit       300
+
+[energy(2)]
+productname      ELECTRICITY
+mainunitname     kwh
+amount           0
+kWhPerUnit       1
+
+[seed(1)]
+productname      SEEDWNWHT
+mainunitname     kg
+amount           0
+orgN_content        0.018
+dryMatter        0.85
+standardDensity  180.0         g/m2
+
+[seed(2)]
+productname      SEEDWNRPE
+mainunitname     kg
+amount           0
+orgN_content        0.034
+dryMatter        0.92                    
+standardDensity  5.0         g/m2
+
+[seed(3)]
+productname      SEEDSPBARL
+mainunitname     kg
+amount           0
+orgN_content        0.016
+dryMatter        0.85
+standardDensity  170.0         g/m2
+
+[seed(4)]
+productname      SEEDRYEGRASS
+mainunitname     kg
+amount           0
+orgN_content        0.02  
+dryMatter        0.87
+standardDensity  20.0         g/m2
+
+[seed(5)]
+productname      SEEDWNBRL
+mainunitname     kg
+amount           0
+orgN_content     0.016                      ?
+dryMatter        0.85                       ?
+standardDensity  160.0         g/m2
+
+
+[seed(6)]
+productname      SEEDPEA
+mainunitname     kg
+amount           0
+orgN_content     0.035                      ?
+dryMatter        0.85                       ?
+standardDensity  200.0         g/m2
+
+
+[seed(7)]
+productname      SEEDSPWHT
+mainunitname     kg
+amount           0
+orgN_content     0.018
+dryMatter        0.85
+standardDensity  180.0         g/m2
+
+
+[seed(8)]
+productname      SEEDBEET
+mainunitname     kg
+amount           0
+orgN_content        0.034                         ?
+dryMatter        0.92                    ?
+standardDensity  4.9         g/m2
+
+
+[seed(9)]
+productname      SEEDCLOVER
+mainunitname     kg
+amount           0
+orgN_content        0.02  
+dryMatter        0.87
+standardDensity  25.0         g/m2
+
+
+[seed(10)]
+productname      SEEDMAIZE
+mainunitname     kg
+amount           0
+orgN_content        0.02  		??   CHECK
+dryMatter        0.87		??	CHECK
+standardDensity  25.0         g/m2
+
+[seed(11)]
+productname      SEEDWEED
+mainunitname     kg
+amount           0
+orgN_content        0.02  
+dryMatter        0.87
+standardDensity  5.0         g/m2
+
+[seed(12)]
+productname      SEEDOAT
+mainunitname     kg
+amount           0
+orgN_content        0.014
+dryMatter        0.85
+standardDensity  170.0         ??? g/m2
+
+[seed(13)]
+productname      SEEDRYE
+mainunitname     kg
+amount           0
+orgN_content        0.012
+dryMatter        0.85
+standardDensity  180.0         ??? g/m2
+
+[seed(14)]
+productname      SEEDSPRPE
+mainunitname     kg
+amount           0
+orgN_content        0.034
+dryMatter        0.92                    
+standardDensity  5.0         g/m2
+
+[seed(15)]
+productname      SEEDOILRADISH
+mainunitname     kg
+amount           0
+orgN_content        0.034                         ?
+dryMatter        0.92                    ?
+standardDensity  4.9         g/m2
+
+[seed(16)]
+productname      SEEDPOTATO
+mainunitname     kg
+amount           0
+orgN_content        0.0035  
+dryMatter        0.24
+standardDensity  200.0         g/m2
+
+[seed(21)]
+productname      SEEDDYERSWOAD  /All taken from ryegrass, must be corrected !!!
+mainunitname     kg
+amount           0
+orgN_content        0.02         
+dryMatter        0.87
+standardDensity  20.0         g/m2
+
+[seed(22)]
+productname      SEEDCHICKORY  /All taken from ryegrass, must be corrected !!!
+mainunitname     kg
+amount           0
+orgN_content        0.02  
+dryMatter        0.87
+standardDensity  20.0         g/m2
+
+[seed(18)]
+productname      SEEDSUNFLOWER
+mainunitname     kg
+amount           0
+orgN_content        0.03  
+dryMatter        0.87
+standardDensity  25.0         g/m2
+
+[seed(19)]
+productname      SEEDLUCERNE
+mainunitname     kg
+amount           0
+orgN_content        0.02  
+dryMatter        0.87
+standardDensity  40.0         g/m2
+
+[seed(21)]
+productname      SEEDSOYBEAN
+mainunitname     kg
+amount           0
+orgN_content        0.038  
+dryMatter        0.87
+standardDensity  70.0         g/m2
+
+[seed(23)]
+productname      SEEDHAIRYVETCH
+mainunitname     kg
+amount           0
+orgN_content        0.035                      ?
+dryMatter        0.85                       ?
+standardDensity  200.0         g/m2
+
+[decomposable(1)]
+productname       ROOTMATTER
+mainunitname      t                / per ha
+orgN_content      0.016
+NH4_content       0           / presently ignored
+NO3_content       0
+P_content         0.0011
+K_content         0.021
+dryMatter         1.0         / water content irrelevant
+C_content         0.46
+kAOM1             0.0012      0.0013       / new value for the new CN model
+kAOM2             0.06        0.07
+AOM1_fraction     0.49        0.6
+AOM2_fraction     0.51        0.4
+
+
+[plantitem(1)]
+productname      WNWHT
+tradename        WHEAT
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.018
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0032
+K_content        0.0043
+S_content        0.0010
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(2)]
+productname      WNRPE
+tradename        RAPE
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.034
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0083
+K_content        0.014
+S_content        0.002 ?
+dryMatter        0.92
+C_content        0.39
+kAOM1            0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.02
+AOM1_fraction    0.55
+AOM2_fraction    0.45
+
+[plantitem(3)]
+productname      BARLEY
+tradename        BARLEY
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.016
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0031
+K_content        0.0038
+S_content        0.00094
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(4)]
+productname      BARLEYSTRAW
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.0054
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00077
+K_content        0.00070
+S_content        0.000094
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(5)]
+productname      WHEATSTRAW
+tradename        STRAW
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0045
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00051
+K_content        0.0067
+S_content        0.0009
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(6)]
+productname      RAPEPLANT
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0401
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0051
+K_content        0.00426
+S_content        0.001  ?
+dryMatter        0.91
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(7)]
+productname      RAPESTRAW
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0197
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0034
+K_content        0.0269
+S_content        0.001  ?
+dryMatter        0.90 
+C_content        0.41
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(8)]
+productname      RYEGRASS
+tradename        FALLOW
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081         // 0.2 / NOTE !!!!!!!!!! 0.081
+kAOM1            0.005         // 0.004        / new values for new cn model (17/1/3)
+kAOM2            0.06          // 0.086
+AOM1_fraction    0.4           // 0.7
+AOM2_fraction    0.6           // 0.3
+
+[plantitem(9)]
+productname      WNBRL
+tradename        WNBRL
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.016
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0031
+K_content        0.0038
+S_content        0.00094
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(10)]
+productname      PEA
+tradename        PEA
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.035            ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0032           ?
+K_content        0.0043           ?
+S_content        0.0010           ?
+dryMatter        0.85             ?
+C_content        0.39             ?
+kAOM1            0.00097      0.0014        0.0007       / JB according to CN-SIM II
+kAOM2            0.035        0.029         0.02
+AOM1_fraction    0.49         0.60          0.55
+AOM2_fraction    0.51         0.40          0.45
+
+[plantitem(11)]
+productname      PEASTRAW
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        0
+orgN_content     0.0090          ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00051         ?
+K_content        0.0067          ?
+S_content        0.0009          ?
+dryMatter        0.85            ?
+C_content        0.39            ?
+kAOM1            0.00097      0.0014        0.0007       / JB according to CN-SIM II
+kAOM2            0.035        0.029         0.02
+AOM1_fraction    0.49         0.60          0.55
+AOM2_fraction    0.51         0.40          0.45
+
+[plantitem(12)]
+productname      BARLEYPEA
+tradename        BARLEYPEA
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.035            ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0032           ?
+K_content        0.0043           ?
+S_content        0.0010           ?
+dryMatter        0.85             ?
+C_content        0.39             ?
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(13)]
+productname      BARLEYPEASTRAW
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        0
+orgN_content     0.0090          ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00051         ?
+K_content        0.0067          ?
+S_content        0.0009          ?
+dryMatter        0.85            ?
+C_content        0.39            ?
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(14)]
+productname      SPWHT
+tradename        SPWHEAT
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.018
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0032
+K_content        0.0043
+S_content        0.0010
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(15)]                          
+productname      BEET
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.021
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0029
+K_content        0.0027
+S_content        0.002  
+dryMatter        0.18
+C_content        0.08
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(16)]                                 // completely unverified!!!
+productname      BEETTOP
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0401
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0051
+K_content        0.00426
+S_content        0.001  ?
+dryMatter        0.91
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(17)]
+productname      CLOVER
+tradename        NONE
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.03         // From Eu-Rotate_N // Values are not verified (just copied)
+NH4_content      0.0		
+NO3_content      0.0		
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081         // 0.2          / NOTE !!!!!!!!!!!!! 0.081
+kAOM1            0.006        / new values for new cn model (17/1/3)
+kAOM2         	 0.13
+AOM1_fraction    0.50         0.1
+AOM1_Nfraction	 -1.0	
+AOM2_fraction    0.50         0.9
+AOM2_Nfraction   -1.0
+
+[plantitem(18)]
+productname      SILAGE
+tradename        NONE
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081
+kAOM1            0.004        / new values for new cn model (17/1/3)
+kAOM2            0.086
+AOM1_fraction    0.7
+AOM2_fraction    0.3
+
+[plantitem(19)]
+productname      CLOVERGRASS 		// Values are not verified (just copied)
+tradename        NONE
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040                   // Values are not verified (just copied)
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.81
+kAOM1            0.1		0.004        / new values for new cn model (17/1/3)
+kAOM2            0.8		//0.086
+AOM1_fraction    0.9 		//0.7
+AOM2_fraction    0.1		//0.3
+
+[plantitem(20)]
+productname      MAIZE 			// Values are not verified (just copied)
+tradename        NONE
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040                   // Values are not verified (just copied)
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.81
+kAOM1            0.004        		/ new values for new cn model (17/1/3)
+kAOM2            0.086
+AOM1_fraction    0.7
+AOM2_fraction    0.3
+
+[plantitem(21)]
+productname      MAIZESTRAW                  // Values are not verified (just copied)
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.0054
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00077
+K_content        0.00070
+S_content        0.000094
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(22)]
+productname      RYE / Contents need revision
+tradename        RYE
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.012
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0034
+K_content        0.0055
+S_content        0.0002
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        
+kAOM2            0.029         
+AOM1_fraction    0.60          
+AOM2_fraction    0.40          
+
+[plantitem(23)]
+productname      OATSTRAW / Contents need revision
+tradename        STRAW
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.0051  
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00014
+K_content        0.00021
+S_content        0.000094   
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014      
+kAOM2            0.029       
+AOM1_fraction    0.60        
+AOM2_fraction    0.40        
+
+[plantitem(24)]
+productname      RYESTRAW /Contents need revision
+tradename        STRAW
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.0052
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0010
+K_content        0.0067
+S_content        0.0009
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014       
+kAOM2            0.029        
+AOM1_fraction    0.60         
+AOM2_fraction    0.40         
+
+[plantitem(25)]
+productname      OAT / Contents need revision
+tradename        OAT
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.014
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0041
+K_content        0.0050
+S_content        0.0009
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014       
+kAOM2            0.029        
+AOM1_fraction    0.60         
+AOM2_fraction    0.40         
+
+[plantitem(26)]
+productname      SPRAPE
+tradename        RAPE
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.034
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0083
+K_content        0.014
+S_content        0.002 ?
+dryMatter        0.92
+C_content        0.39
+kAOM1            0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.02
+AOM1_fraction    0.55
+AOM2_fraction    0.45
+
+[plantitem(27)]
+productname      OILRADISH   ' Needs revision (just copy of ryegrass)
+tradename        OILRADISH
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081
+kAOM1            0.004        / new values for new cn model (17/1/3)
+kAOM2            0.086
+AOM1_fraction    0.7
+AOM2_fraction    0.3
+
+[plantitem(28)]                          
+productname      POTATO
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.035
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.000504
+K_content        0.0048
+S_content        0.002  
+dryMatter        0.24
+C_content        0.08
+kAOM1            0.0014        
+kAOM2            0.029         
+AOM1_fraction    0.60          
+AOM2_fraction    0.40          
+
+[plantitem(29)]                                 
+productname      POTATOTOP / Values taken from ryegrass
+tradename        none
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        0
+orgN_content     0.0040
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081
+kAOM1            0.004        / new values for new cn model (17/1/3)
+kAOM2            0.086
+AOM1_fraction    0.7
+AOM2_fraction    0.3
+
+
+[plantitem(38)]
+productname      CHICKORY   ' Needs revision (just copy of ryegrass)
+tradename        CHICKORY
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081
+kAOM1            0.004        / new values for new cn model (17/1/3)
+kAOM2            0.086
+AOM1_fraction    0.7
+AOM2_fraction    0.3
+
+[plantitem(39)]
+productname      DYERSWOAD   ' Needs revision (just copy of ryegrass)
+tradename        DYERSWOAD
+tradeable        0
+primaryprod      1
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0040
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00048
+K_content        0.00040
+S_content        0.00044
+dryMatter        0.18
+C_content        0.081
+kAOM1            0.004        / new values for new cn model (17/1/3)
+kAOM2            0.086
+AOM1_fraction    0.7
+AOM2_fraction    0.3
+
+[plantitem(34)]
+productname      SUNFLOWER
+tradename        SUNFLOWER
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.029
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0032
+K_content        0.0043
+S_content        0.0010
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(35)]
+productname      SUNFLOWERSTRAW
+tradename        NONE
+tradeable        0
+primaryprod      0
+mainunitname     t
+amount           0
+storeable         1
+orgN_content     0.0054
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.00077
+K_content        0.00070
+S_content        0.000094
+dryMatter        0.85
+C_content        0.39
+kAOM1            0.0014        0.0007        / new values for new cn model (17/1/3)
+kAOM2            0.029         0.02
+AOM1_fraction    0.60          0.55
+AOM2_fraction    0.40          0.45
+
+[plantitem(40)]
+productname      HAIRYVETCH		/TAKEN FROM PEA
+tradename        HAIRYVETCH
+tradeable        1
+primaryprod      1
+mainunitname     t
+amount           0
+storeable        1
+orgN_content     0.035            ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0032           ?
+K_content        0.0043           ?
+S_content        0.0010           ?
+dryMatter        0.85             ?
+C_content        0.39             ?
+kAOM1            0.00097      0.0014        0.0007       / JB according to CN-SIM II
+kAOM2            0.035        0.029         0.02
+AOM1_fraction    0.49         0.60          0.55
+AOM2_fraction    0.51         0.40          0.45
+
+[feeditem(1)]
+productname      WHEAT
+plantname        WHEAT
+mainunitname     t
+amount           0
+FE               1100
+orgN_content     0.0176      ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0026
+K_content        0.0043
+S_content        0.00014
+Ca_content       0.0004
+Mg_content       0.00012
+Cu_content       0.000005
+protein_N        0.0176
+Lysin            0.00252
+Threonin         0.00244
+Methionin        0.00139
+fat              0.0021
+sugar            0.0016
+starch           0.574
+organic          0.0
+dryMatter        0.85
+protein_digest      0.81
+P_digest         0.46
+MaxPercentage    0.70
+
+[feeditem(2)]
+productname      SOYSRW
+plantname        NONE
+mainunitname     t
+amount           0
+FE               1130
+orgN_content     0.0713           ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0063
+K_content        0.0208
+S_content        0.002
+Ca_content       0.0029
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.0713
+Lysin            0.0229
+Threonin         0.0145
+Methionin        0.0052
+fat              0.024
+sugar            0.119
+starch           0.023
+organic          0.0
+dryMatter        0.869
+protein_digest   0.86
+P_digest         0.38
+MaxPercentage    0.30
+
+[feeditem(3)]
+productname      FEEDBRL
+plantname        BARLEY
+produced         1
+mainunitname     t
+amount           0
+FE               990
+orgN_content     0.0182                 ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0029
+K_content        0.0043
+S_content        0.00094
+Ca_content       0.0006
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.0165
+Lysin            0.00273
+Threonin         0.00258
+Methionin        0.00168
+fat              0.0
+sugar            0.018
+starch           0.504
+organic          0.0
+dryMatter        0.85
+protein_digest   0.75
+P_digest         0.37
+MaxPercentage    0.70
+
+[feeditem(4)]
+productname      LYSIN
+plantname        NONE
+mainunitname     t
+amount           0
+FE               1000
+orgN_content     0.1918                 ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0                   
+K_content        0.0                   
+S_content        0.0                   
+Ca_content       0.0
+Mg_content       0.0
+Cu_content       0.0
+Lysin            0.4
+Threonin         0.0
+Methionin        0.0
+protein_N        0.1918
+fat              0.0
+sugar            0.0
+starch           0.0
+organic          0.0
+dryMatter        0.95
+protein_digest      1.0
+P_digest         0.0
+MaxPercentage    1.0
+
+[feeditem(5)]
+productname      METH
+plantname        NONE
+mainunitname     t
+amount           0
+FE               1000
+orgN_content     0.094                  
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0                           
+K_content        0.0                       
+S_content        0.215
+Ca_content       0.0
+Mg_content       0.0
+Cu_content       0.0
+Lysin            0.0
+Threonin         0.0
+Methionin        0.4
+protein_N        0.094
+fat              0.0
+sugar            0.0
+starch           0.0
+organic          0.0
+dryMatter        0.95
+protein_digest   1.0
+P_digest         0.0
+MaxPercentage    1.0
+
+[feeditem(6)]
+productname      THREO
+plantname        NONE
+mainunitname     t
+amount           0
+FE               1000
+orgN_content     0.1176
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0                           
+K_content        0.0                       
+S_content        0.0                       
+Ca_content       0.0                     
+Mg_content       0.0
+Cu_content       0.0
+Lysin            0.0
+Threonin         0.4
+Methionin        0.0
+protein_N        0.1176
+fat              0.0
+sugar            0.0
+starch           0.0
+organic          0.0
+dryMatter        0.95
+protein_digest   0.937
+P_digest         0.0
+MaxPercentage    1.0
+
+[feeditem(7)]
+productname      PEAS
+plantname        PEA
+mainunitname     t
+amount           0
+FE               1120
+orgN_content     0.034               
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0038
+K_content        0.0101
+S_content        0.002
+Ca_content       0.0011
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.034
+Lysin            0.011
+Threonin         0.0058
+Methionin        0.0015
+fat              0.0018
+sugar            0.08
+starch           0.372
+organic          0.0
+dryMatter        0.864
+protein_digest   0.77
+P_digest         0.42
+MaxPercentage    0.10                 // JB changed 0.3 to 0.1
+
+[feeditem(8)]
+productname      RAPST
+plantname        NONE
+mainunitname     t
+amount           0
+FE               880
+orgN_content     0.0564                ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0053
+K_content        0.012
+S_content        0.002
+Ca_content       0.0072
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.0564
+Lysin            0.0145
+Threonin         0.0116
+Methionin        0.0053
+fat              0.0032
+sugar            0.0072
+starch           0.0017
+organic          0.0
+dryMatter        0.878
+protein_digest   0.77
+P_digest         0.30
+MaxPercentage    0.10
+
+[feeditem(9)]
+productname      FAT
+plantname        NONE
+mainunitname     t
+amount           0
+FE               3200                 average of several types
+orgN_content     0.0                ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0
+K_content        0.0
+S_content        0.0
+Ca_content       0.0
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.0
+Lysin            0.0
+Threonin         0.0
+Methionin        0.0
+fat              1.0
+sugar            0.0
+starch           0.0
+organic          0.0
+dryMatter        0.8                    ?
+protein_digest   0.0
+P_digest         0.0
+MaxPercentage    0.0               // change to 0.03
+
+[feeditem(10)]
+productname      FISHM
+plantname        NONE
+mainunitname     t
+amount           0
+FE               1390
+orgN_content     0.118                ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0198
+K_content        0.0118
+S_content        0.0
+Ca_content       0.0273
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.118
+Lysin            0.0493
+Threonin         0.0275
+Methionin        0.0183
+fat              0.108
+sugar            0.0
+starch           0.0
+organic          0.864
+dryMatter        0.94                    ?
+protein_digest   0.92
+P_digest         0.72
+MaxPercentage    0.04
+
+[feeditem(11)]
+productname      MINP
+plantname        NONE
+mainunitname     t
+amount           0
+FE               0
+orgN_content     0.0                ?
+NH4_content      0.008   //?
+NO3_content      0.0
+P_content        0.1
+K_content        0.0
+S_content        0.0
+Ca_content       0.0
+Mg_content       0.0
+Cu_content       0.0003
+protein_N        0.0
+Lysin            0.0
+Threonin         0.0
+Methionin        0.0
+fat              0.0
+sugar            0.0
+starch           0.0
+organic          0.0
+dryMatter        1.0                    ?
+protein_digest   0.0
+P_digest         1.0
+MaxPercentage    1.0
+
+[feeditem(12)]
+productname      FEEDWBRL
+plantname        WNBRL
+mainunitname     t
+amount           0
+FE               990
+orgN_content     0.0182                 ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0029
+K_content        0.0043
+S_content        0.00094
+Ca_content       0.0006
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.0165
+Lysin            0.00273
+Threonin         0.00258
+Methionin        0.00168
+fat              0.0
+sugar            0.018
+starch           0.504
+organic          0.0
+dryMatter        0.85
+protein_digest   0.75
+P_digest         0.37
+MaxPercentage    0.70
+
+
+[feeditem(13)]
+productname      FEEDSPBRL
+plantname        SPBRL
+mainunitname     t
+amount           0
+FE               990
+orgN_content     0.0182                 ?
+NH4_content      0.0
+NO3_content      0.0
+P_content        0.0029
+K_content        0.0043
+S_content        0.00094
+Ca_content       0.0006
+Mg_content       0.0
+Cu_content       0.0
+protein_N        0.0165
+Lysin            0.00273
+Threonin         0.00258
+Methionin        0.00168
+fat              0.0
+sugar            0.018
+starch           0.504
+organic          0.0
+dryMatter        0.85
+protein_digest   0.75
+P_digest         0.37
+MaxPercentage    0.70
+
+
+[fertilizer(1)]
+productname       MINERAL-N
+mainunitname      kg
+amount            0
+N_content         0.46
+P_content         0
+K_content         0
+Ca_content        0
+Cl_content        0
+
+[fertilizer(2)]
+productname       MINERAL-P
+mainunitname      kg
+amount            0
+N_content         0
+P_content         0.39
+K_content         0
+Ca_content        0
+Cl_content        0
+
+
+[fertilizer(3)]
+productname       MINERAL-K
+mainunitname      kg
+amount            0
+N_content         0
+P_content         0
+K_content         0.42
+Ca_content        0
+Cl_content        0
+
+[manure(1)]
+productname       CATTLE-SLURRY-FRESH
+mainunitname      t
+amount            0
+orgN_content      0.0013
+NH4_content       0.0033
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.040		/ changed by JB 12_2_03 to match a C/N = 9
+dryMatter         0.10     
+kAOM1             0.015        / new values for new cn model (17/1/3)
+kAOM2             0.25
+AOM1_fraction     0.50          0.27
+AOM1_Nfraction    0.03          0.07
+AOM2_fraction     0.30          0.53
+AOM2_Nfraction    0.78          0.73
+
+[manure(2)]
+productname       CATTLE-SLURRY-STORED          ' new values from Kirchman june 2003
+mainunitname      t
+amount            0
+orgN_content      0.0023
+NH4_content       0.0015
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.043		
+dryMatter         0.10     
+kAOM1             0.0053        
+kAOM2             0.27        
+AOM1_fraction     0.54
+AOM1_Nfraction    0.57
+AOM2_fraction     0.26
+AOM2_Nfraction    0.23
+
+[manure(3)]
+productname       CATTLE-COMPOST           ' new values from master thesis by Anne Jensen
+mainunitname      t
+amount            0
+orgN_content      0.0023
+NH4_content       0.00007
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.043		
+dryMatter         0.10     
+kAOM1             0.0004        
+kAOM2             0.04        
+AOM1_fraction     0.74
+AOM1_Nfraction    0.66
+AOM2_fraction     0.06
+AOM2_Nfraction    0.14
+
+[manure(4)]
+productname       CATTLE-FYM           ' From CN-TOOL: Anne-FYM-K 
+mainunitname      t
+amount            0
+orgN_content      0.0018
+NH4_content       0.00042
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.043		
+dryMatter         0.10     
+kAOM1             0.001        
+kAOM2             0.037        
+AOM1_fraction     0.46
+AOM1_Nfraction    0.50
+AOM2_fraction     0.34
+AOM2_Nfraction    0.30
+
+[manure(5)]
+productname       PIG-SLURRY-DEGAS
+mainunitname      t
+amount            0
+orgN_content      0.0013
+NH4_content       0.0033
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.010 //' JODB 0.01 to be used for low DM contents 18_09_09  Foulum//0.040		/ changed by JB 12_2_03 to match a C/N = 9
+dryMatter         0.10     
+kAOM1             0.0037          / new values for new cn model (17/1/3)
+kAOM2             0.27
+AOM1_fraction     0.35
+AOM1_Nfraction    0.35
+AOM2_fraction     0.45
+AOM2_Nfraction    0.45
+
+[manure(6)]
+productname       PIG-SLURRY-STORED			' new values from Kirchman june 2003
+mainunitname      t
+amount            0
+orgN_content      0.0018
+NH4_content       0.0049
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.015 //0.038		' JODB 0.015 to be used for low DM contents 18_09_09 Foulum
+dryMatter         0.10     
+kAOM1             0.0057       
+kAOM2             0.27        
+AOM1_fraction     0.37
+AOM1_Nfraction    0.77
+AOM2_fraction     0.43
+AOM2_Nfraction    0.03
+
+[manure(7)]
+productname       PIG-COMPOST			' new values from master thesis by Anne Jensen
+mainunitname      t
+amount            0
+orgN_content      0.0025
+NH4_content       0.0007
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.041		
+dryMatter         0.10     
+kAOM1             0.0001       
+kAOM2             0.034        
+AOM1_fraction     0.48
+AOM1_Nfraction    0.53
+AOM2_fraction     0.32
+AOM2_Nfraction    0.27
+
+[manure(8)]
+productname       PIG-FYM			' new values from master thesis by Anne Jensen
+mainunitname      t
+amount            0
+orgN_content      0.0014
+NH4_content       0.0005
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.044		
+dryMatter         0.10     
+kAOM1             0.0001       
+kAOM2             0.047        
+AOM1_fraction     0.34
+AOM1_Nfraction    0.18
+AOM2_fraction     0.46
+AOM2_Nfraction    0.62
+
+[manure(9)]
+productname       PIG-SLURRY-FRESH			' new values from Kirchman june 2003
+mainunitname      t
+amount            0
+orgN_content      0.0033
+NH4_content       0.0035
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.038		
+dryMatter         0.10     
+kAOM1             0.058       
+kAOM2             0.27        
+AOM1_fraction     0.42
+AOM1_Nfraction    0.80
+AOM2_fraction     0.38
+AOM2_Nfraction    0.0
+
+[manure(10)]
+productname       SLURRY                    ' Default slurry type identical to PIG-SLURRY-STORED
+mainunitname      t
+amount            0
+orgN_content      0.0013
+NH4_content       0.0033
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.040		/ changed by JB 12_2_03 to match a C/N = 9
+dryMatter         0.10     
+kAOM1             0.01        / new values for new cn model (17/1/3)
+kAOM2             0.28        0.26
+AOM1_fraction     0.45
+AOM1_Nfraction    0.80
+AOM2_fraction     0.35
+AOM2_Nfraction    0.0
+
+[manure(18)]
+productname       FLUENT-MANURE                    ' Default slurry type identical to PIG-SLURRY-STORED
+mainunitname      t			' warning: refine to cattle-urine.... do use pt					
+amount            0
+orgN_content      0.0013
+NH4_content       0.0033
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.040		/ changed by JB 12_2_03 to match a C/N = 9
+dryMatter         0.10     
+kAOM1             0.01        / new values for new cn model (17/1/3)
+kAOM2             0.28        0.26
+AOM1_fraction     0.45
+AOM1_Nfraction    0.80
+AOM2_fraction     0.35
+AOM2_Nfraction    0.0
+
+[manure(12)]
+productname       SOLID-MANURE                    ' Default slurry type identical to PIG-SLURRY-STORED
+mainunitname      t			' warning: refine to cattle-urine.... do use pt	
+amount            0
+orgN_content      0.0013
+NH4_content       0.0033
+NO3_content       0.0
+P_content         0.011
+K_content         0.022
+C_content         0.040		/ changed by JB 12_2_03 to match a C/N = 9
+dryMatter         0.10     
+kAOM1             0.01        / new values for new cn model (17/1/3)
+kAOM2             0.28        0.26
+AOM1_fraction     0.45
+AOM1_Nfraction    0.80
+AOM2_fraction     0.35
+AOM2_Nfraction    0.0
+
+
+[chemical(1)]
+productname                       TiltTop
+mainunitname                      l
+amount                            0
+type                              fungicide
+activeSubstancePerUnit            0.50
+amountPerTFI                      0.50
+
+[chemical(2)]
+productname                       Express
+mainunitname                      pcs
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.50
+amountPerTFI                      1.0
+
+[chemical(3)]
+productname                       Manganchelate
+mainunitname                      kg
+amount                            0
+type                              microfertilizer
+activeSubstancePerUnit            1.0
+amountPerTFI                      1.5
+
+[chemical(4)]
+productname                       Oxitril
+mainunitname                      l
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.40
+amountPerTFI                      0.50
+
+[chemical(5)]
+productname                       Starane-180
+mainunitname                      l
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.18
+amountPerTFI                      0.90
+
+[chemical(6)]
+productname                       Stomp-SC
+mainunitname                      l
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.40
+amountPerTFI                      2.0
+
+[chemical(7)]
+productname                       Arelon
+mainunitname                      l
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.50
+amountPerTFI                      1.0
+
+[chemical(8)]
+productname                       Pirimor-G
+mainunitname                      kg
+amount                            0
+type                              insecticide
+activeSubstancePerUnit            0.50
+amountPerTFI                      0.20
+
+[chemical(9)]
+productname                       Treflan
+mainunitname                      l
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.48
+amountPerTFI                      1.6
+
+[chemical(10)]
+productname                       Kerb-F
+mainunitname                      l
+amount                            0
+type                              herbicide
+activeSubstancePerUnit            0.50
+amountPerTFI                      0.75
+
+[chemical(11)]
+productname                       Fastac
+mainunitname                      l
+amount                            0
+type                              insecticide
+activeSubstancePerUnit            0.2 ?
+amountPerTFI                      0.125
+
+[chemical(12)]
+productname                       TILT-250-EC
+mainunitname                      l
+amount                            0
+type                              fungicide
+activeSubstancePerUnit            0.25
+amountPerTFI                      0.50
+
+[chemical(13)]
+productname                       Basagran-480
+mainunitname                      l
+amount                            0
+type                              herbicide     ?
+activeSubstancePerUnit            0.50          ?
+amountPerTFI                      1.00
+
+[chemical(14)]
+productname                       Betanal
+mainunitname                      l
+amount                            0
+type                              herbicide     ?
+activeSubstancePerUnit            0.50          ?
+amountPerTFI                      1.00
+
+[chemical(15)]
+productname                       Goltix
+mainunitname                      l
+amount                            0
+type                              herbicide     ?
+activeSubstancePerUnit            0.50          ?
+amountPerTFI                      1.00
+
+[chemical(16)]
+productname                       PrimorG
+mainunitname                      l
+amount                            0
+type                              herbicide     ?
+activeSubstancePerUnit            0.50          ?
+amountPerTFI                      1.00
+
+[chemical(17)]
+productname                       RoundUp
+mainunitname                      l
+amount                            0
+type                              herbicide     ?
+activeSubstancePerUnit            0.50          ?
+amountPerTFI                      1.00
+
+[water(1)]
+productname                       WATER
+mainunitname                      m3
+amount                            0
+N_content                         0.000008
+
+[meat(1)]
+productname                 SWINEMEAT
+mainunitname                     t
+amount                           0.0
+orgN_content                     0.027
+NH4_content                      0.0
+NO3_content                      0.0
+P_content                        0.0055
+K_content                        0.0022
+Mg_content                       0.0
+Cu_content                       0.0
+Rt_content                       0.0
+protein                          0.027
+
+[premium(1)]
+productname             premi_WNWHT
+mainunitname            kr
+plantName               WNWHT
+isgreen			yes
+
+[premium(2)]
+productname             premi_WNRPE
+mainunitname            kr
+plantName               WNRPE
+isgreen			yes
+
+[premium(3)]
+productname             premi_SPBARL
+mainunitname            kr
+plantName               SPBARL
+isgreen			no
+
+[premium(4)]
+productname             premi_FLLW
+mainunitname            kr
+plantName               FLLW
+isgreen			yes
+
+[premium(5)]
+productname             premi_WNBRL
+mainunitname            kr
+plantName               WNBRL
+isgreen			yes
+
+[premium(6)]
+productname             premi_PEA
+mainunitname            kr
+plantName               PEA
+isgreen			no
+
+[end]
+

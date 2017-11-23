@@ -1,0 +1,81 @@
+// Ny version af BMP 27-1-03
+
+[AddedMatter(0)]
+Name                       AOM1
+DecompositionRate          0.004  /Set
+Direction(0)               SMB2
+Fraction(0)                0.688  /Optimised
+Direction(1)               SMB1
+Fraction(1)                0.312  /Optimised
+
+[AddedMatter(1)]
+Name                       AOM2
+DecompositionRate          0.04   /Set
+Direction(0)               SMB2
+Fraction(0)                0.688  /Optimised
+Direction(1)               SMB1
+Fraction(1)                0.312  /Optimised
+
+[BioMatter(0)]
+Name                       SMB1
+UseClayEffect              1
+UtilizationEfficiency      0.6    /Set
+TotalTurnover              0.0119 /Optimised
+TurnoverRatio              0.465  /Calculated
+Direction(0)               NOM
+Fraction(0)                1.0
+CNratioMin                 6.6 
+CNratioMax                 6.6
+CNratio                    6.6    /Set
+
+[BioMatter(1)]
+Name                       SMB2
+UseClayEffect              1
+UtilizationEfficiency      0.6    /Set
+TotalTurnover              0.128  /Optimised
+TurnoverRatio              0.527  /Optimised
+Direction(0)               SMR
+Fraction(0)                1.0
+CNratioMin                 9.33   /Optimised
+CNratioMax                 9.33   /Optimised
+CNratio                    9.33   /Optimised
+
+[Matter(0)]
+Name                       SMR
+UseClayEffect              1
+DecompositionRate          0.00441 /Optimised
+Direction(0)               SMB1
+Fraction(0)                1.0
+CNratio                    6.0    /Low limit of optimisation
+
+[Matter(1)]
+Name                       NOM
+DecompositionRate          0.000073     /NOTE 50% of0.0001460 /Optimised  
+Direction(0)               SMB1
+Fraction(0)                1.0
+CNratio                    10     /Set
+
+[Matter(2)]
+Name                       IOM
+DecompositionRate          0.0    /Considered inert 
+Direction(0)               IOM
+Fraction(0)                1.0
+CNratio                    17            10     /Set - default value
+
+[Parameters]
+ClayResponse               9
+ClayParameter4             1.67
+TemperatureResponse        1      /Kirschbaum
+WaterResponse              1      
+Y1                         0.6
+Y2                         0
+W1                         0
+W4                         5.5
+W2Offset                   1.5
+W3Offset                   -3
+NitrificationRate          3.04   /Taken from DAISY, 0.1 per day)
+NCslope                    4.05   /Slope for the linear relation between N/C ratio and fraction to AOM2
+NCintercept                0.33   /Intercept for the above relation
+MaxAOM2                    0.90   /The fraction to AOM2 can not become larger than this, regardless of N/C ratio
+
+[end]

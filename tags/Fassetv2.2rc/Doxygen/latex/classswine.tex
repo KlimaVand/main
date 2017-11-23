@@ -1,0 +1,122 @@
+\hypertarget{classswine}{
+\section{swine Class Reference}
+\label{classswine}\index{swine@{swine}}
+}
+
+
+{\ttfamily \#include $<$swine.h$>$}Inheritance diagram for swine::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classswine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classswine_a596ba6b6d36fb9674efb9af20138269b}{swine} ()
+\item 
+\hyperlink{classswine_ade28c6b738f570b312d65c7646dd23bf}{swine} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classswine_ae27fca38d2543b633e9f1407a47bbe3e}{$\sim$swine} ()
+\item 
+void \hyperlink{classswine_ad92430630a6202c56dd7ca32e57784ac}{Manure} (\hyperlink{classmanure}{manure} $\ast$fluidManure, \hyperlink{classmanure}{manure} $\ast$solidManure)
+\item 
+void \hyperlink{classswine_aa5b1551767e9bc33a2dad33ef32627fb}{DailyUpdate} ()
+\item 
+void \hyperlink{classswine_af290612a28b7676522d5ae1f450c44ec}{ReceivePlan} (char $\ast$FileName)
+\item 
+double \hyperlink{classswine_a9571c1623a0461c8fef99a0a4f4aafb7}{GetpigletsPerLitter} ()
+\item 
+void \hyperlink{classswine_a3e452ad14938178c13053b5733f72b78}{SetpigletsPerLitter} (double pigsPerYr)
+\item 
+double \hyperlink{classswine_a124dd4455caf560d2fa677230dcf38c6}{GetmaxParity} ()
+\item 
+virtual void \hyperlink{classswine_a57668c3c30994f0c3969dcef6d7280db}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classswine_aa53f35964f2b752022d2f413590a99b0}{ChangeName} (char $\ast$newname)
+\item 
+double \hyperlink{classswine_ab379109f2fea2e0fe5e649b8c59df202}{GetSensibleHeatProduction} (double weight, double n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classswine_a596ba6b6d36fb9674efb9af20138269b}{
+\index{swine@{swine}!swine@{swine}}
+\index{swine@{swine}!swine@{swine}}
+\subsubsection[{swine}]{\setlength{\rightskip}{0pt plus 5cm}swine::swine ()}}
+\label{classswine_a596ba6b6d36fb9674efb9af20138269b}
+\hypertarget{classswine_ade28c6b738f570b312d65c7646dd23bf}{
+\index{swine@{swine}!swine@{swine}}
+\index{swine@{swine}!swine@{swine}}
+\subsubsection[{swine}]{\setlength{\rightskip}{0pt plus 5cm}swine::swine (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classswine_ade28c6b738f570b312d65c7646dd23bf}
+\hypertarget{classswine_ae27fca38d2543b633e9f1407a47bbe3e}{
+\index{swine@{swine}!$\sim$swine@{$\sim$swine}}
+\index{$\sim$swine@{$\sim$swine}!swine@{swine}}
+\subsubsection[{$\sim$swine}]{\setlength{\rightskip}{0pt plus 5cm}swine::$\sim$swine ()}}
+\label{classswine_ae27fca38d2543b633e9f1407a47bbe3e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classswine_aa53f35964f2b752022d2f413590a99b0}{
+\index{swine@{swine}!ChangeName@{ChangeName}}
+\index{ChangeName@{ChangeName}!swine@{swine}}
+\subsubsection[{ChangeName}]{\setlength{\rightskip}{0pt plus 5cm}void swine::ChangeName (char $\ast$ {\em newname})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_aa53f35964f2b752022d2f413590a99b0}
+\hypertarget{classswine_aa5b1551767e9bc33a2dad33ef32627fb}{
+\index{swine@{swine}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!swine@{swine}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void swine::DailyUpdate (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classswine_aa5b1551767e9bc33a2dad33ef32627fb}
+
+
+Reimplemented from \hyperlink{classpig_ace82dae0cc5b75ed3051b145e12d1803}{pig}.\hypertarget{classswine_a124dd4455caf560d2fa677230dcf38c6}{
+\index{swine@{swine}!GetmaxParity@{GetmaxParity}}
+\index{GetmaxParity@{GetmaxParity}!swine@{swine}}
+\subsubsection[{GetmaxParity}]{\setlength{\rightskip}{0pt plus 5cm}double swine::GetmaxParity ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_a124dd4455caf560d2fa677230dcf38c6}
+\hypertarget{classswine_a9571c1623a0461c8fef99a0a4f4aafb7}{
+\index{swine@{swine}!GetpigletsPerLitter@{GetpigletsPerLitter}}
+\index{GetpigletsPerLitter@{GetpigletsPerLitter}!swine@{swine}}
+\subsubsection[{GetpigletsPerLitter}]{\setlength{\rightskip}{0pt plus 5cm}double swine::GetpigletsPerLitter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_a9571c1623a0461c8fef99a0a4f4aafb7}
+\hypertarget{classswine_ab379109f2fea2e0fe5e649b8c59df202}{
+\index{swine@{swine}!GetSensibleHeatProduction@{GetSensibleHeatProduction}}
+\index{GetSensibleHeatProduction@{GetSensibleHeatProduction}!swine@{swine}}
+\subsubsection[{GetSensibleHeatProduction}]{\setlength{\rightskip}{0pt plus 5cm}double swine::GetSensibleHeatProduction (double {\em weight}, \/  double {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classswine_ab379109f2fea2e0fe5e649b8c59df202}
+
+
+Reimplemented from \hyperlink{classpig_a2c7c1a356646211e31753de053977520}{pig}.\hypertarget{classswine_ad92430630a6202c56dd7ca32e57784ac}{
+\index{swine@{swine}!Manure@{Manure}}
+\index{Manure@{Manure}!swine@{swine}}
+\subsubsection[{Manure}]{\setlength{\rightskip}{0pt plus 5cm}void swine::Manure ({\bf manure} $\ast$ {\em fluidManure}, \/  {\bf manure} $\ast$ {\em solidManure})}}
+\label{classswine_ad92430630a6202c56dd7ca32e57784ac}
+\hypertarget{classswine_a57668c3c30994f0c3969dcef6d7280db}{
+\index{swine@{swine}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!swine@{swine}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void swine::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classswine_a57668c3c30994f0c3969dcef6d7280db}
+Initialize of variables from files 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]need to point a the file \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classpig_a43fbf15dc40e35fbfd5939c1748ff71b}{pig}.\hypertarget{classswine_af290612a28b7676522d5ae1f450c44ec}{
+\index{swine@{swine}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!swine@{swine}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void swine::ReceivePlan (char $\ast$ {\em FileName})}}
+\label{classswine_af290612a28b7676522d5ae1f450c44ec}
+
+
+Reimplemented from \hyperlink{classpig_a093788c67f8ab28b6e9da95bca443b89}{pig}.\hypertarget{classswine_a3e452ad14938178c13053b5733f72b78}{
+\index{swine@{swine}!SetpigletsPerLitter@{SetpigletsPerLitter}}
+\index{SetpigletsPerLitter@{SetpigletsPerLitter}!swine@{swine}}
+\subsubsection[{SetpigletsPerLitter}]{\setlength{\rightskip}{0pt plus 5cm}void swine::SetpigletsPerLitter (double {\em pigsPerYr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_a3e452ad14938178c13053b5733f72b78}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{swine_8h}{swine.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{swine_8cpp}{swine.cpp}\end{DoxyCompactItemize}

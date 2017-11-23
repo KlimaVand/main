@@ -1,0 +1,449 @@
+\hypertarget{classbase}{
+\section{base Class Reference}
+\label{classbase}\index{base@{base}}
+}
+
+
+{\ttfamily \#include $<$base.h$>$}Inheritance diagram for base::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{classbase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbase_a3b0362be8b58605e4975b969dd8131a4}{base} ()
+\item 
+\hyperlink{classbase_aa3d07f04318c6e353a7ea6652c548540}{base} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classbase_acba16924ff51ea95c2479951a459efb7}{base} (const \hyperlink{classbase}{base} \&aBase)
+\item 
+virtual \hyperlink{classbase_aab55b674bac3fd0abec406951dbda4eb}{$\sim$base} ()
+\item 
+\hyperlink{classbase}{base} \& \hyperlink{classbase_abd18e2130f975aacfde1833ad137e3c5}{operator=} (const \hyperlink{classbase}{base} \&aBase)
+\item 
+void \hyperlink{classbase_a32986c47c1ff0d162befc4a3830734f2}{Terminate} (const char $\ast$c1=\char`\"{}\char`\"{}, const char $\ast$c2=\char`\"{}\char`\"{}, const char $\ast$c3=\char`\"{}\char`\"{}, const char $\ast$c4=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{InitVariables} ()
+\item 
+void \hyperlink{classbase_a3cb378050dc4ced8420f41dcd7292239}{Setfile} (fstream $\ast$somefile)
+\item 
+void \hyperlink{classbase_a95e051f408e6a94d4f78fbacbace1363}{Setcur\_\-pos} (long acur\_\-pos)
+\item 
+void \hyperlink{classbase_a42c446f0adea294e97a2486946b7cbc4}{SetOwner} (const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+const char $\ast$ \hyperlink{classbase_a5b4079d3eb535e704fcaed3016c76ecb}{GetName} (void) const 
+\item 
+long \hyperlink{classbase_ab2462023b3d3545dc322beba514ca871}{Getcur\_\-pos} (void)
+\item 
+const \hyperlink{classbase}{base} $\ast$ \hyperlink{classbase_a9b463ca5ce18a3bec36b17c8a4b66d89}{GetOwner} ()
+\item 
+bool \hyperlink{classbase_a3bd68866b69ba97fbfc68152fd864408}{GetError} ()
+\item 
+void \hyperlink{classbase_a80052a7eeb8bce90247aedd358cc1cf6}{SetCritical} ()
+\item 
+void \hyperlink{classbase_a5c9e361dfd9a7804a33b7baa8f5a4b1f}{UnsetCritical} ()
+\item 
+void \hyperlink{classbase_af192519b5f92a24a2fdb5d0696fe01b4}{ResetError} ()
+\item 
+bool \hyperlink{classbase_a82e26b779409159be745275990ef9c99}{OpenInputFileString} (string fileName)
+\item 
+bool \hyperlink{classbase_a551ea12cd21bfc786892b5bb8c333ee0}{OpenInputFile} (char $\ast$fileName)
+\item 
+void \hyperlink{classbase_a56480e2d42e0f66e1416dbf064a913d1}{CloseInputFile} ()
+\item 
+void \hyperlink{classbase_a7ca584f6b100bb78cbaec8cfaaf9a30c}{DeleteInputFile} ()
+\item 
+void \hyperlink{classbase_a4f63fec241f5857f3fe28b43f85d0fa5}{GetSectionNumbers} (const char $\ast$sectionName, int $\ast$firstNum, int $\ast$numOfSections)
+\item 
+void \hyperlink{classbase_ad413a7174fe9559a9b6f23f39d286c5c}{GetVectorInfo} (const char $\ast$parameter, int $\ast$firstNum, int $\ast$vectorSize)
+\item 
+bool \hyperlink{classbase_a88e41ff60ffb7e707312a09f20457e73}{FindSection} (const char $\ast$sectionName)
+\item 
+bool \hyperlink{classbase_af8ea646e73b042204ee13bb9e1528a44}{FindSection} (const string sectionName)
+\item 
+bool \hyperlink{classbase_afec295182d9081861379a5cd10b62ca7}{FindSection} (const char $\ast$sectionName, int index)
+\item 
+bool \hyperlink{classbase_aff0b96b92d78c345fd60335cece99d08}{GetParameter} (const char $\ast$parameter, char $\ast$p\_\-string, int index=-\/1)
+\item 
+bool \hyperlink{classbase_a2643c255e2ae69b02c1ef7a427743453}{GetParameter} (const char $\ast$parameter, int $\ast$p\_\-value, int index=-\/1)
+\item 
+bool \hyperlink{classbase_ac3ea2aa929c9e33a064b9de01bf65788}{GetParameter} (const char $\ast$parameter, double $\ast$p\_\-value, int index=-\/1)
+\item 
+bool \hyperlink{classbase_a9cadba73da20536578f34f7e020d4c3e}{GetParameter} (const char $\ast$parameter, bool $\ast$p\_\-value, int index=-\/1)
+\item 
+bool \hyperlink{classbase_a02555c2565ace1d8e91dd539e38a74ca}{GetParameter} (const char $\ast$parameter, string $\ast$aString, int index=-\/1)
+\item 
+void \hyperlink{classbase_a25bbc64113a939ec258c996b3000c112}{ReadLine} (fstream $\ast$f, char $\ast$s, int maxlen)
+\item 
+string \hyperlink{classbase_aae39ec3da4311af6b93e424d29b2c66a}{GetLongName} ()
+\item 
+string \hyperlink{classbase_adc95005de44dba3af83c3d129d2ccba7}{GetLongNameInNumbers} ()
+\item 
+int \hyperlink{classbase_a1b4ec2736a9fa992d45fdbac5f964896}{GetIndex} ()
+\item 
+void \hyperlink{classbase_a3e3ad9f4d881b5f6714a9864dceedab3}{SetSignPositive} ()
+\item 
+void \hyperlink{classbase_a34d7bbc86ce70c03d9af72b95d1943ce}{SetSignNegative} ()
+\item 
+void \hyperlink{classbase_a6cd9c49580e376c03ad85179a78b287a}{UnsetSign} ()
+\item 
+bool \hyperlink{classbase_af7d1c48d9c4d70ab66ada169492bc3bb}{CheckSign} (double $\ast$aVal)
+\item 
+bool \hyperlink{classbase_af2babc9c4b820165f746bb531866643c}{CheckSign} (int $\ast$aVal)
+\item 
+fstream $\ast$ \hyperlink{classbase_ab9acf14b8bb1b3e47dc9312dbf0888c9}{Getfile} ()
+\item 
+bool \hyperlink{classbase_a0e19bdf15527693c91a1bb6feddfaba6}{OpenOutputFile} (char $\ast$fileName)
+\item 
+void \hyperlink{classbase_ad76df71a686123678d59cceb6045e24e}{CloseOutputFile} ()
+\item 
+void \hyperlink{classbase_a0941fad0c59ce0c15d4846748092ba3a}{SetIndex} (int anIndex)
+\item 
+bool \hyperlink{classbase_a7e46bf398988aee085433dd074edff44}{FileExists} (string strFilename)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classbase_aedb7805f64440b0f775949a1dbcf2f0ea768bca936198aad1beec3c138c1fe987}{MAX\_\-TXT} = 255
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbase_af2a52574d11ffe404e59c3b609b9853c}{EatSpaces} (char $\ast$s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classbase_abd8f99d007cb1914c0837488829974ec}{Name} \mbox{[}MAX\_\-TXT\mbox{]}
+\item 
+int \hyperlink{classbase_afa59aaa1a0201700640234eb13a03aae}{Index}
+\item 
+const \hyperlink{classbase}{base} $\ast$ \hyperlink{classbase_a907869971a8ad022d6292922b1ff3bb5}{Owner}
+\item 
+long \hyperlink{classbase_a18c8507e30ab4a13349958492f90572e}{cur\_\-pos}
+\item 
+fstream $\ast$ \hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}
+\item 
+bool \hyperlink{classbase_a72b1a293d5b28c566e45317bd28cdf30}{error}
+\item 
+bool \hyperlink{classbase_a54337c5388451d2200bfc4129e10114d}{critical}
+\item 
+int \hyperlink{classbase_aeccd588fec27112c3b58c91b7d6797da}{sign}
+\item 
+char \hyperlink{classbase_a350d087127f1d8ba8807eb521b6336fd}{fileNme} \mbox{[}MAX\_\-TXT\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classbase_aedb7805f64440b0f775949a1dbcf2f0e}{
+\subsubsection[{"@0}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_aedb7805f64440b0f775949a1dbcf2f0e}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MAX\_\-TXT@{MAX\_\-TXT}!base@{base}}\index{base@{base}!MAX\_\-TXT@{MAX\_\-TXT}}\item[{\em 
+\hypertarget{classbase_aedb7805f64440b0f775949a1dbcf2f0ea768bca936198aad1beec3c138c1fe987}{
+MAX\_\-TXT}
+\label{classbase_aedb7805f64440b0f775949a1dbcf2f0ea768bca936198aad1beec3c138c1fe987}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbase_a3b0362be8b58605e4975b969dd8131a4}{
+\index{base@{base}!base@{base}}
+\index{base@{base}!base@{base}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}base::base ()}}
+\label{classbase_a3b0362be8b58605e4975b969dd8131a4}
+\hypertarget{classbase_aa3d07f04318c6e353a7ea6652c548540}{
+\index{base@{base}!base@{base}}
+\index{base@{base}!base@{base}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}base::base (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classbase_aa3d07f04318c6e353a7ea6652c548540}
+\hypertarget{classbase_acba16924ff51ea95c2479951a459efb7}{
+\index{base@{base}!base@{base}}
+\index{base@{base}!base@{base}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}base::base (const {\bf base} \& {\em aBase})}}
+\label{classbase_acba16924ff51ea95c2479951a459efb7}
+\hypertarget{classbase_aab55b674bac3fd0abec406951dbda4eb}{
+\index{base@{base}!$\sim$base@{$\sim$base}}
+\index{$\sim$base@{$\sim$base}!base@{base}}
+\subsubsection[{$\sim$base}]{\setlength{\rightskip}{0pt plus 5cm}base::$\sim$base ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbase_aab55b674bac3fd0abec406951dbda4eb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbase_af2babc9c4b820165f746bb531866643c}{
+\index{base@{base}!CheckSign@{CheckSign}}
+\index{CheckSign@{CheckSign}!base@{base}}
+\subsubsection[{CheckSign}]{\setlength{\rightskip}{0pt plus 5cm}bool base::CheckSign (int $\ast$ {\em aVal})}}
+\label{classbase_af2babc9c4b820165f746bb531866643c}
+\hypertarget{classbase_af7d1c48d9c4d70ab66ada169492bc3bb}{
+\index{base@{base}!CheckSign@{CheckSign}}
+\index{CheckSign@{CheckSign}!base@{base}}
+\subsubsection[{CheckSign}]{\setlength{\rightskip}{0pt plus 5cm}bool base::CheckSign (double $\ast$ {\em aVal})}}
+\label{classbase_af7d1c48d9c4d70ab66ada169492bc3bb}
+\hypertarget{classbase_a56480e2d42e0f66e1416dbf064a913d1}{
+\index{base@{base}!CloseInputFile@{CloseInputFile}}
+\index{CloseInputFile@{CloseInputFile}!base@{base}}
+\subsubsection[{CloseInputFile}]{\setlength{\rightskip}{0pt plus 5cm}void base::CloseInputFile ()}}
+\label{classbase_a56480e2d42e0f66e1416dbf064a913d1}
+\hypertarget{classbase_ad76df71a686123678d59cceb6045e24e}{
+\index{base@{base}!CloseOutputFile@{CloseOutputFile}}
+\index{CloseOutputFile@{CloseOutputFile}!base@{base}}
+\subsubsection[{CloseOutputFile}]{\setlength{\rightskip}{0pt plus 5cm}void base::CloseOutputFile ()}}
+\label{classbase_ad76df71a686123678d59cceb6045e24e}
+\hypertarget{classbase_a7ca584f6b100bb78cbaec8cfaaf9a30c}{
+\index{base@{base}!DeleteInputFile@{DeleteInputFile}}
+\index{DeleteInputFile@{DeleteInputFile}!base@{base}}
+\subsubsection[{DeleteInputFile}]{\setlength{\rightskip}{0pt plus 5cm}void base::DeleteInputFile ()}}
+\label{classbase_a7ca584f6b100bb78cbaec8cfaaf9a30c}
+\hypertarget{classbase_af2a52574d11ffe404e59c3b609b9853c}{
+\index{base@{base}!EatSpaces@{EatSpaces}}
+\index{EatSpaces@{EatSpaces}!base@{base}}
+\subsubsection[{EatSpaces}]{\setlength{\rightskip}{0pt plus 5cm}void base::EatSpaces (char $\ast$ {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_af2a52574d11ffe404e59c3b609b9853c}
+\hypertarget{classbase_a7e46bf398988aee085433dd074edff44}{
+\index{base@{base}!FileExists@{FileExists}}
+\index{FileExists@{FileExists}!base@{base}}
+\subsubsection[{FileExists}]{\setlength{\rightskip}{0pt plus 5cm}bool base::FileExists (string {\em strFilename})}}
+\label{classbase_a7e46bf398988aee085433dd074edff44}
+\hypertarget{classbase_afec295182d9081861379a5cd10b62ca7}{
+\index{base@{base}!FindSection@{FindSection}}
+\index{FindSection@{FindSection}!base@{base}}
+\subsubsection[{FindSection}]{\setlength{\rightskip}{0pt plus 5cm}bool base::FindSection (const char $\ast$ {\em sectionName}, \/  int {\em index})}}
+\label{classbase_afec295182d9081861379a5cd10b62ca7}
+\hypertarget{classbase_af8ea646e73b042204ee13bb9e1528a44}{
+\index{base@{base}!FindSection@{FindSection}}
+\index{FindSection@{FindSection}!base@{base}}
+\subsubsection[{FindSection}]{\setlength{\rightskip}{0pt plus 5cm}bool base::FindSection (const string {\em sectionName})}}
+\label{classbase_af8ea646e73b042204ee13bb9e1528a44}
+\hypertarget{classbase_a88e41ff60ffb7e707312a09f20457e73}{
+\index{base@{base}!FindSection@{FindSection}}
+\index{FindSection@{FindSection}!base@{base}}
+\subsubsection[{FindSection}]{\setlength{\rightskip}{0pt plus 5cm}bool base::FindSection (const char $\ast$ {\em sectionName})}}
+\label{classbase_a88e41ff60ffb7e707312a09f20457e73}
+\hypertarget{classbase_ab2462023b3d3545dc322beba514ca871}{
+\index{base@{base}!Getcur\_\-pos@{Getcur\_\-pos}}
+\index{Getcur\_\-pos@{Getcur\_\-pos}!base@{base}}
+\subsubsection[{Getcur\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}long base::Getcur\_\-pos (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_ab2462023b3d3545dc322beba514ca871}
+\hypertarget{classbase_a3bd68866b69ba97fbfc68152fd864408}{
+\index{base@{base}!GetError@{GetError}}
+\index{GetError@{GetError}!base@{base}}
+\subsubsection[{GetError}]{\setlength{\rightskip}{0pt plus 5cm}bool base::GetError ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a3bd68866b69ba97fbfc68152fd864408}
+\hypertarget{classbase_ab9acf14b8bb1b3e47dc9312dbf0888c9}{
+\index{base@{base}!Getfile@{Getfile}}
+\index{Getfile@{Getfile}!base@{base}}
+\subsubsection[{Getfile}]{\setlength{\rightskip}{0pt plus 5cm}fstream$\ast$ base::Getfile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_ab9acf14b8bb1b3e47dc9312dbf0888c9}
+\hypertarget{classbase_a1b4ec2736a9fa992d45fdbac5f964896}{
+\index{base@{base}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!base@{base}}
+\subsubsection[{GetIndex}]{\setlength{\rightskip}{0pt plus 5cm}int base::GetIndex ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a1b4ec2736a9fa992d45fdbac5f964896}
+\hypertarget{classbase_aae39ec3da4311af6b93e424d29b2c66a}{
+\index{base@{base}!GetLongName@{GetLongName}}
+\index{GetLongName@{GetLongName}!base@{base}}
+\subsubsection[{GetLongName}]{\setlength{\rightskip}{0pt plus 5cm}string base::GetLongName ()}}
+\label{classbase_aae39ec3da4311af6b93e424d29b2c66a}
+\hypertarget{classbase_adc95005de44dba3af83c3d129d2ccba7}{
+\index{base@{base}!GetLongNameInNumbers@{GetLongNameInNumbers}}
+\index{GetLongNameInNumbers@{GetLongNameInNumbers}!base@{base}}
+\subsubsection[{GetLongNameInNumbers}]{\setlength{\rightskip}{0pt plus 5cm}string base::GetLongNameInNumbers ()}}
+\label{classbase_adc95005de44dba3af83c3d129d2ccba7}
+\hypertarget{classbase_a5b4079d3eb535e704fcaed3016c76ecb}{
+\index{base@{base}!GetName@{GetName}}
+\index{GetName@{GetName}!base@{base}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ base::GetName (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a5b4079d3eb535e704fcaed3016c76ecb}
+
+
+Reimplemented in \hyperlink{classorganic_product_a1ff3dd7c96d3d9fd7dee39aafc9cc0a5}{organicProduct}.\hypertarget{classbase_a9b463ca5ce18a3bec36b17c8a4b66d89}{
+\index{base@{base}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!base@{base}}
+\subsubsection[{GetOwner}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf base}$\ast$ base::GetOwner ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a9b463ca5ce18a3bec36b17c8a4b66d89}
+\hypertarget{classbase_a02555c2565ace1d8e91dd539e38a74ca}{
+\index{base@{base}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!base@{base}}
+\subsubsection[{GetParameter}]{\setlength{\rightskip}{0pt plus 5cm}bool base::GetParameter (const char $\ast$ {\em parameter}, \/  string $\ast$ {\em aString}, \/  int {\em index} = {\ttfamily -\/1})}}
+\label{classbase_a02555c2565ace1d8e91dd539e38a74ca}
+\hypertarget{classbase_a9cadba73da20536578f34f7e020d4c3e}{
+\index{base@{base}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!base@{base}}
+\subsubsection[{GetParameter}]{\setlength{\rightskip}{0pt plus 5cm}bool base::GetParameter (const char $\ast$ {\em parameter}, \/  bool $\ast$ {\em p\_\-value}, \/  int {\em index} = {\ttfamily -\/1})}}
+\label{classbase_a9cadba73da20536578f34f7e020d4c3e}
+\hypertarget{classbase_ac3ea2aa929c9e33a064b9de01bf65788}{
+\index{base@{base}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!base@{base}}
+\subsubsection[{GetParameter}]{\setlength{\rightskip}{0pt plus 5cm}bool base::GetParameter (const char $\ast$ {\em parameter}, \/  double $\ast$ {\em p\_\-value}, \/  int {\em index} = {\ttfamily -\/1})}}
+\label{classbase_ac3ea2aa929c9e33a064b9de01bf65788}
+\hypertarget{classbase_a2643c255e2ae69b02c1ef7a427743453}{
+\index{base@{base}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!base@{base}}
+\subsubsection[{GetParameter}]{\setlength{\rightskip}{0pt plus 5cm}bool base::GetParameter (const char $\ast$ {\em parameter}, \/  int $\ast$ {\em p\_\-value}, \/  int {\em index} = {\ttfamily -\/1})}}
+\label{classbase_a2643c255e2ae69b02c1ef7a427743453}
+\hypertarget{classbase_aff0b96b92d78c345fd60335cece99d08}{
+\index{base@{base}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!base@{base}}
+\subsubsection[{GetParameter}]{\setlength{\rightskip}{0pt plus 5cm}bool base::GetParameter (const char $\ast$ {\em parameter}, \/  char $\ast$ {\em p\_\-string}, \/  int {\em index} = {\ttfamily -\/1})}}
+\label{classbase_aff0b96b92d78c345fd60335cece99d08}
+\hypertarget{classbase_a4f63fec241f5857f3fe28b43f85d0fa5}{
+\index{base@{base}!GetSectionNumbers@{GetSectionNumbers}}
+\index{GetSectionNumbers@{GetSectionNumbers}!base@{base}}
+\subsubsection[{GetSectionNumbers}]{\setlength{\rightskip}{0pt plus 5cm}void base::GetSectionNumbers (const char $\ast$ {\em sectionName}, \/  int $\ast$ {\em firstNum}, \/  int $\ast$ {\em numOfSections})}}
+\label{classbase_a4f63fec241f5857f3fe28b43f85d0fa5}
+\hypertarget{classbase_ad413a7174fe9559a9b6f23f39d286c5c}{
+\index{base@{base}!GetVectorInfo@{GetVectorInfo}}
+\index{GetVectorInfo@{GetVectorInfo}!base@{base}}
+\subsubsection[{GetVectorInfo}]{\setlength{\rightskip}{0pt plus 5cm}void base::GetVectorInfo (const char $\ast$ {\em parameter}, \/  int $\ast$ {\em firstNum}, \/  int $\ast$ {\em vectorSize})}}
+\label{classbase_ad413a7174fe9559a9b6f23f39d286c5c}
+\hypertarget{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{
+\index{base@{base}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!base@{base}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void base::InitVariables ()}}
+\label{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}
+
+
+Reimplemented in \hyperlink{classfield_a001ff179927c8ead0f12d1dc04628ead}{field}, \hyperlink{classlegislate_a4f987bac101e783b992245a8541d7b34}{legislate}, \hyperlink{classtax_legislation_a7779a3f675f559f66cbfaf62f73bf746}{taxLegislation}, \hyperlink{classchemical_a8bb531b70e8d9c2270b2f9464d22069a}{chemical}, \hyperlink{classdecomposable_aabfa1610321f138dff27b27e074cf9ea}{decomposable}, \hyperlink{classenergy_aa993052d14ca60cbce1b89ff2e312d16}{energy}, \hyperlink{classfeed_item_ae08d4c420b75b14c595dab525f96dd9d}{feedItem}, \hyperlink{classfertilizer_afce6a4edd572f543a37e03618129be55}{fertilizer}, \hyperlink{classlive_matter_ab14efacc07e048507a6c3dd8d2942101}{liveMatter}, \hyperlink{classmanure_ac45a5d29b499ebe4f93a8473dc2cf821}{manure}, \hyperlink{classorganic_product_a82afaea76d84157abc874f5d87067ad5}{organicProduct}, \hyperlink{classplant_item_a68b971164b0ea870d6d14c5b53ad8223}{plantItem}, \hyperlink{classpremium_a18e6e7832622598ea24cb385a78f3a50}{premium}, \hyperlink{classprice_a84cb52c47624df899791468c95eb2795}{price}, \hyperlink{classproduct_afcbfb1feadfd4ed057845eab47e37ff5}{product}, \hyperlink{classseed_aabcb716243f0c8e8c57f05cf0f140a17}{seed}, and \hyperlink{classwater_a43ecfbe5d9e5a62ff43a4273985ae766}{water}.\hypertarget{classbase_a551ea12cd21bfc786892b5bb8c333ee0}{
+\index{base@{base}!OpenInputFile@{OpenInputFile}}
+\index{OpenInputFile@{OpenInputFile}!base@{base}}
+\subsubsection[{OpenInputFile}]{\setlength{\rightskip}{0pt plus 5cm}bool base::OpenInputFile (char $\ast$ {\em fileName})}}
+\label{classbase_a551ea12cd21bfc786892b5bb8c333ee0}
+\hypertarget{classbase_a82e26b779409159be745275990ef9c99}{
+\index{base@{base}!OpenInputFileString@{OpenInputFileString}}
+\index{OpenInputFileString@{OpenInputFileString}!base@{base}}
+\subsubsection[{OpenInputFileString}]{\setlength{\rightskip}{0pt plus 5cm}bool base::OpenInputFileString (string {\em fileName})}}
+\label{classbase_a82e26b779409159be745275990ef9c99}
+\hypertarget{classbase_a0e19bdf15527693c91a1bb6feddfaba6}{
+\index{base@{base}!OpenOutputFile@{OpenOutputFile}}
+\index{OpenOutputFile@{OpenOutputFile}!base@{base}}
+\subsubsection[{OpenOutputFile}]{\setlength{\rightskip}{0pt plus 5cm}bool base::OpenOutputFile (char $\ast$ {\em fileName})}}
+\label{classbase_a0e19bdf15527693c91a1bb6feddfaba6}
+\hypertarget{classbase_abd18e2130f975aacfde1833ad137e3c5}{
+\index{base@{base}!operator=@{operator=}}
+\index{operator=@{operator=}!base@{base}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base} \& base::operator= (const {\bf base} \& {\em aBase})}}
+\label{classbase_abd18e2130f975aacfde1833ad137e3c5}
+
+
+Reimplemented in \hyperlink{classecosystem_a5970455f5f04fa5382ebc534c3149185}{ecosystem}, \hyperlink{classfield_order_period_a125328fd2b2dc16b8183dd32a22cb63e}{fieldOrderPeriod}, \hyperlink{classpatch_aaa485c520a0fb67c68b2a5cfbe12d99e}{patch}, \hyperlink{classproduct_afa55a9466d7f5a287bae17100289733e}{product}, and \hyperlink{classmatter_a7e74962a5eb9280b2a259c9b908ded79}{matter}.\hypertarget{classbase_a25bbc64113a939ec258c996b3000c112}{
+\index{base@{base}!ReadLine@{ReadLine}}
+\index{ReadLine@{ReadLine}!base@{base}}
+\subsubsection[{ReadLine}]{\setlength{\rightskip}{0pt plus 5cm}void base::ReadLine (fstream $\ast$ {\em f}, \/  char $\ast$ {\em s}, \/  int {\em maxlen})}}
+\label{classbase_a25bbc64113a939ec258c996b3000c112}
+\hypertarget{classbase_af192519b5f92a24a2fdb5d0696fe01b4}{
+\index{base@{base}!ResetError@{ResetError}}
+\index{ResetError@{ResetError}!base@{base}}
+\subsubsection[{ResetError}]{\setlength{\rightskip}{0pt plus 5cm}void base::ResetError ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_af192519b5f92a24a2fdb5d0696fe01b4}
+\hypertarget{classbase_a80052a7eeb8bce90247aedd358cc1cf6}{
+\index{base@{base}!SetCritical@{SetCritical}}
+\index{SetCritical@{SetCritical}!base@{base}}
+\subsubsection[{SetCritical}]{\setlength{\rightskip}{0pt plus 5cm}void base::SetCritical ()}}
+\label{classbase_a80052a7eeb8bce90247aedd358cc1cf6}
+\hypertarget{classbase_a95e051f408e6a94d4f78fbacbace1363}{
+\index{base@{base}!Setcur\_\-pos@{Setcur\_\-pos}}
+\index{Setcur\_\-pos@{Setcur\_\-pos}!base@{base}}
+\subsubsection[{Setcur\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}void base::Setcur\_\-pos (long {\em acur\_\-pos})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a95e051f408e6a94d4f78fbacbace1363}
+\hypertarget{classbase_a3cb378050dc4ced8420f41dcd7292239}{
+\index{base@{base}!Setfile@{Setfile}}
+\index{Setfile@{Setfile}!base@{base}}
+\subsubsection[{Setfile}]{\setlength{\rightskip}{0pt plus 5cm}void base::Setfile (fstream $\ast$ {\em somefile})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a3cb378050dc4ced8420f41dcd7292239}
+\hypertarget{classbase_a0941fad0c59ce0c15d4846748092ba3a}{
+\index{base@{base}!SetIndex@{SetIndex}}
+\index{SetIndex@{SetIndex}!base@{base}}
+\subsubsection[{SetIndex}]{\setlength{\rightskip}{0pt plus 5cm}void base::SetIndex (int {\em anIndex})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a0941fad0c59ce0c15d4846748092ba3a}
+\hypertarget{classbase_a42c446f0adea294e97a2486946b7cbc4}{
+\index{base@{base}!SetOwner@{SetOwner}}
+\index{SetOwner@{SetOwner}!base@{base}}
+\subsubsection[{SetOwner}]{\setlength{\rightskip}{0pt plus 5cm}void base::SetOwner (const {\bf base} $\ast$ {\em aOwner})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbase_a42c446f0adea294e97a2486946b7cbc4}
+\hypertarget{classbase_a34d7bbc86ce70c03d9af72b95d1943ce}{
+\index{base@{base}!SetSignNegative@{SetSignNegative}}
+\index{SetSignNegative@{SetSignNegative}!base@{base}}
+\subsubsection[{SetSignNegative}]{\setlength{\rightskip}{0pt plus 5cm}void base::SetSignNegative ()}}
+\label{classbase_a34d7bbc86ce70c03d9af72b95d1943ce}
+\hypertarget{classbase_a3e3ad9f4d881b5f6714a9864dceedab3}{
+\index{base@{base}!SetSignPositive@{SetSignPositive}}
+\index{SetSignPositive@{SetSignPositive}!base@{base}}
+\subsubsection[{SetSignPositive}]{\setlength{\rightskip}{0pt plus 5cm}void base::SetSignPositive ()}}
+\label{classbase_a3e3ad9f4d881b5f6714a9864dceedab3}
+\hypertarget{classbase_a32986c47c1ff0d162befc4a3830734f2}{
+\index{base@{base}!Terminate@{Terminate}}
+\index{Terminate@{Terminate}!base@{base}}
+\subsubsection[{Terminate}]{\setlength{\rightskip}{0pt plus 5cm}void base::Terminate (const char $\ast$ {\em c1} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em c2} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em c3} = {\ttfamily \char`\"{}\char`\"{}}, \/  const char $\ast$ {\em c4} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classbase_a32986c47c1ff0d162befc4a3830734f2}
+\hypertarget{classbase_a5c9e361dfd9a7804a33b7baa8f5a4b1f}{
+\index{base@{base}!UnsetCritical@{UnsetCritical}}
+\index{UnsetCritical@{UnsetCritical}!base@{base}}
+\subsubsection[{UnsetCritical}]{\setlength{\rightskip}{0pt plus 5cm}void base::UnsetCritical ()}}
+\label{classbase_a5c9e361dfd9a7804a33b7baa8f5a4b1f}
+\hypertarget{classbase_a6cd9c49580e376c03ad85179a78b287a}{
+\index{base@{base}!UnsetSign@{UnsetSign}}
+\index{UnsetSign@{UnsetSign}!base@{base}}
+\subsubsection[{UnsetSign}]{\setlength{\rightskip}{0pt plus 5cm}void base::UnsetSign ()}}
+\label{classbase_a6cd9c49580e376c03ad85179a78b287a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbase_a54337c5388451d2200bfc4129e10114d}{
+\index{base@{base}!critical@{critical}}
+\index{critical@{critical}!base@{base}}
+\subsubsection[{critical}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf base::critical}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_a54337c5388451d2200bfc4129e10114d}
+\hypertarget{classbase_a18c8507e30ab4a13349958492f90572e}{
+\index{base@{base}!cur\_\-pos@{cur\_\-pos}}
+\index{cur\_\-pos@{cur\_\-pos}!base@{base}}
+\subsubsection[{cur\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf base::cur\_\-pos}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_a18c8507e30ab4a13349958492f90572e}
+\hypertarget{classbase_a72b1a293d5b28c566e45317bd28cdf30}{
+\index{base@{base}!error@{error}}
+\index{error@{error}!base@{base}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf base::error}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_a72b1a293d5b28c566e45317bd28cdf30}
+\hypertarget{classbase_a3af52ee9891719d09b8b19b42450b6f6}{
+\index{base@{base}!file@{file}}
+\index{file@{file}!base@{base}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}fstream$\ast$ {\bf base::file}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_a3af52ee9891719d09b8b19b42450b6f6}
+\hypertarget{classbase_a350d087127f1d8ba8807eb521b6336fd}{
+\index{base@{base}!fileNme@{fileNme}}
+\index{fileNme@{fileNme}!base@{base}}
+\subsubsection[{fileNme}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf base::fileNme}\mbox{[}MAX\_\-TXT\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_a350d087127f1d8ba8807eb521b6336fd}
+\hypertarget{classbase_afa59aaa1a0201700640234eb13a03aae}{
+\index{base@{base}!Index@{Index}}
+\index{Index@{Index}!base@{base}}
+\subsubsection[{Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf base::Index}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_afa59aaa1a0201700640234eb13a03aae}
+\hypertarget{classbase_abd8f99d007cb1914c0837488829974ec}{
+\index{base@{base}!Name@{Name}}
+\index{Name@{Name}!base@{base}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf base::Name}\mbox{[}MAX\_\-TXT\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_abd8f99d007cb1914c0837488829974ec}
+\hypertarget{classbase_a907869971a8ad022d6292922b1ff3bb5}{
+\index{base@{base}!Owner@{Owner}}
+\index{Owner@{Owner}!base@{base}}
+\subsubsection[{Owner}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf base}$\ast$ {\bf base::Owner}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_a907869971a8ad022d6292922b1ff3bb5}
+\hypertarget{classbase_aeccd588fec27112c3b58c91b7d6797da}{
+\index{base@{base}!sign@{sign}}
+\index{sign@{sign}!base@{base}}
+\subsubsection[{sign}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf base::sign}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbase_aeccd588fec27112c3b58c91b7d6797da}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{base_8h}{base.h}\item 
+C:/main/trunk/src/base/\hyperlink{base_8cpp}{base.cpp}\end{DoxyCompactItemize}

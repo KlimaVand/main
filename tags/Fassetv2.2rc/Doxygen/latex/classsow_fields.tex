@@ -1,0 +1,192 @@
+\hypertarget{classsow_fields}{
+\section{sowFields Class Reference}
+\label{classsow_fields}\index{sowFields@{sowFields}}
+}
+
+
+{\ttfamily \#include $<$sowFields.h$>$}Inheritance diagram for sowFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classsow_fields}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsow_fields_1_1sow_struct}{sowStruct}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsow_fields_a592f7678b68952373a34f62af314e106}{sowFields} ()
+\item 
+\hyperlink{classsow_fields_aa34fa84a5007d906736a0e46ffe43afd}{sowFields} (const \hyperlink{classsow_fields}{sowFields} \&h)
+\item 
+virtual \hyperlink{classsow_fields_ad19e5077dfd928f45b9f190ec273736f}{$\sim$sowFields} ()
+\item 
+virtual \hyperlink{classsow_fields}{sowFields} $\ast$ \hyperlink{classsow_fields_a0feeb92725f01a4e58784ca0d7a7d98e}{clone} () const 
+\item 
+virtual void \hyperlink{classsow_fields_ac6618566ccb801d5c07a11ea4c216750}{DefineSowFieldsOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, int \hyperlink{classsow_fields_ab43b87025b3e78f3624616754dd98120}{PVStrategy}, double reduc, \hyperlink{classseed}{seed} $\ast$theSeed)
+\item 
+virtual \hyperlink{classseed}{seed} $\ast$ \hyperlink{classsow_fields_a958ec0bc5d51ebaa5f13c27dcb1d3620}{GetSeed} (int i)
+\item 
+virtual const char $\ast$ \hyperlink{classsow_fields_a06b3d15e4ff9644953e4e0a39cfb53cc}{GetSpecificCropId} (int i)
+\item 
+virtual int \hyperlink{classsow_fields_a251cf5b16ca5ac4128918bb47bbf4b0f}{GetPVStrat} ()
+\item 
+virtual double \hyperlink{classsow_fields_ae5c43a7143c4c4f543a1157c17acb33c}{GetReduction} ()
+\item 
+virtual void \hyperlink{classsow_fields_afd7b68580aa74038af38793d3578918e}{AddSeed} (\hyperlink{classseed}{seed} $\ast$s, string \hyperlink{classcrop}{crop})
+\item 
+virtual bool \hyperlink{classsow_fields_ac2784f943d1fc9ffd9f831ed792da834}{IsSowingOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classsow_fields_af361db1618e35471eaed378178d3b554}{GetSeedNum} ()
+\item 
+virtual bool \hyperlink{classsow_fields_a7834909587530be2801797f19d3fa242}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\item 
+virtual void \hyperlink{classsow_fields_ad522bac768458cd78dfd8766545556bb}{Output} (ofstream $\ast$fs)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsow_fields}{sowFields} \& \hyperlink{classsow_fields_abc76f0e726ab2388e9f9be21d6c0b8be}{operator=} (const \hyperlink{classsow_fields}{sowFields} \&f)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classsow_fields_a963b55ec84f8451164ee615b1fa52927}{reduction}
+\begin{DoxyCompactList}\small\item\em Optional reduction in radiation use efficiency. \item\end{DoxyCompactList}\item 
+\hyperlink{structsow_fields_1_1sow_struct}{sowStruct} \hyperlink{classsow_fields_ae686b511409010a29219373a85126e36}{plants} \mbox{[}MaxPlants\mbox{]}
+\item 
+int \hyperlink{classsow_fields_ab43b87025b3e78f3624616754dd98120}{PVStrategy}
+\begin{DoxyCompactList}\small\item\em Plant Protection strategy. \item\end{DoxyCompactList}\item 
+int \hyperlink{classsow_fields_a8db7db6666e24673192929e5ded6f997}{numOfPlants}
+\begin{DoxyCompactList}\small\item\em number of plants in that area \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsow_fields_a592f7678b68952373a34f62af314e106}{
+\index{sowFields@{sowFields}!sowFields@{sowFields}}
+\index{sowFields@{sowFields}!sowFields@{sowFields}}
+\subsubsection[{sowFields}]{\setlength{\rightskip}{0pt plus 5cm}sowFields::sowFields ()}}
+\label{classsow_fields_a592f7678b68952373a34f62af314e106}
+\hypertarget{classsow_fields_aa34fa84a5007d906736a0e46ffe43afd}{
+\index{sowFields@{sowFields}!sowFields@{sowFields}}
+\index{sowFields@{sowFields}!sowFields@{sowFields}}
+\subsubsection[{sowFields}]{\setlength{\rightskip}{0pt plus 5cm}sowFields::sowFields (const {\bf sowFields} \& {\em h})}}
+\label{classsow_fields_aa34fa84a5007d906736a0e46ffe43afd}
+\hypertarget{classsow_fields_ad19e5077dfd928f45b9f190ec273736f}{
+\index{sowFields@{sowFields}!$\sim$sowFields@{$\sim$sowFields}}
+\index{$\sim$sowFields@{$\sim$sowFields}!sowFields@{sowFields}}
+\subsubsection[{$\sim$sowFields}]{\setlength{\rightskip}{0pt plus 5cm}sowFields::$\sim$sowFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_fields_ad19e5077dfd928f45b9f190ec273736f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsow_fields_afd7b68580aa74038af38793d3578918e}{
+\index{sowFields@{sowFields}!AddSeed@{AddSeed}}
+\index{AddSeed@{AddSeed}!sowFields@{sowFields}}
+\subsubsection[{AddSeed}]{\setlength{\rightskip}{0pt plus 5cm}void sowFields::AddSeed ({\bf seed} $\ast$ {\em s}, \/  string {\em crop})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_fields_afd7b68580aa74038af38793d3578918e}
+\hypertarget{classsow_fields_a7834909587530be2801797f19d3fa242}{
+\index{sowFields@{sowFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!sowFields@{sowFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool sowFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_fields_a7834909587530be2801797f19d3fa242}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it will return the cost in the cost variable 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classsow_fields_a0feeb92725f01a4e58784ca0d7a7d98e}{
+\index{sowFields@{sowFields}!clone@{clone}}
+\index{clone@{clone}!sowFields@{sowFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sowFields} $\ast$ sowFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_fields_a0feeb92725f01a4e58784ca0d7a7d98e}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classsow_fields_ac6618566ccb801d5c07a11ea4c216750}{
+\index{sowFields@{sowFields}!DefineSowFieldsOp@{DefineSowFieldsOp}}
+\index{DefineSowFieldsOp@{DefineSowFieldsOp}!sowFields@{sowFields}}
+\subsubsection[{DefineSowFieldsOp}]{\setlength{\rightskip}{0pt plus 5cm}void sowFields::DefineSowFieldsOp ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  int {\em PVStrategy}, \/  double {\em reduc}, \/  {\bf seed} $\ast$ {\em theSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_fields_ac6618566ccb801d5c07a11ea4c216750}
+\hypertarget{classsow_fields_a251cf5b16ca5ac4128918bb47bbf4b0f}{
+\index{sowFields@{sowFields}!GetPVStrat@{GetPVStrat}}
+\index{GetPVStrat@{GetPVStrat}!sowFields@{sowFields}}
+\subsubsection[{GetPVStrat}]{\setlength{\rightskip}{0pt plus 5cm}virtual int sowFields::GetPVStrat ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_fields_a251cf5b16ca5ac4128918bb47bbf4b0f}
+\hypertarget{classsow_fields_ae5c43a7143c4c4f543a1157c17acb33c}{
+\index{sowFields@{sowFields}!GetReduction@{GetReduction}}
+\index{GetReduction@{GetReduction}!sowFields@{sowFields}}
+\subsubsection[{GetReduction}]{\setlength{\rightskip}{0pt plus 5cm}virtual double sowFields::GetReduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_fields_ae5c43a7143c4c4f543a1157c17acb33c}
+\hypertarget{classsow_fields_a958ec0bc5d51ebaa5f13c27dcb1d3620}{
+\index{sowFields@{sowFields}!GetSeed@{GetSeed}}
+\index{GetSeed@{GetSeed}!sowFields@{sowFields}}
+\subsubsection[{GetSeed}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf seed}$\ast$ sowFields::GetSeed (int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_fields_a958ec0bc5d51ebaa5f13c27dcb1d3620}
+\hypertarget{classsow_fields_af361db1618e35471eaed378178d3b554}{
+\index{sowFields@{sowFields}!GetSeedNum@{GetSeedNum}}
+\index{GetSeedNum@{GetSeedNum}!sowFields@{sowFields}}
+\subsubsection[{GetSeedNum}]{\setlength{\rightskip}{0pt plus 5cm}virtual int sowFields::GetSeedNum ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_fields_af361db1618e35471eaed378178d3b554}
+\hypertarget{classsow_fields_a06b3d15e4ff9644953e4e0a39cfb53cc}{
+\index{sowFields@{sowFields}!GetSpecificCropId@{GetSpecificCropId}}
+\index{GetSpecificCropId@{GetSpecificCropId}!sowFields@{sowFields}}
+\subsubsection[{GetSpecificCropId}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ sowFields::GetSpecificCropId (int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_fields_a06b3d15e4ff9644953e4e0a39cfb53cc}
+\hypertarget{classsow_fields_ac2784f943d1fc9ffd9f831ed792da834}{
+\index{sowFields@{sowFields}!IsSowingOp@{IsSowingOp}}
+\index{IsSowingOp@{IsSowingOp}!sowFields@{sowFields}}
+\subsubsection[{IsSowingOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool sowFields::IsSowingOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_fields_ac2784f943d1fc9ffd9f831ed792da834}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_a223d85319e913d2337715db404a47c4f}{fieldOperationFields}.\hypertarget{classsow_fields_abc76f0e726ab2388e9f9be21d6c0b8be}{
+\index{sowFields@{sowFields}!operator=@{operator=}}
+\index{operator=@{operator=}!sowFields@{sowFields}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sowFields}\& sowFields::operator= (const {\bf sowFields} \& {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_fields_abc76f0e726ab2388e9f9be21d6c0b8be}
+
+
+Reimplemented from \hyperlink{classfield_operation_fields_aef84e67b95aeff732e28cbd2b197648a}{fieldOperationFields}.\hypertarget{classsow_fields_ad522bac768458cd78dfd8766545556bb}{
+\index{sowFields@{sowFields}!Output@{Output}}
+\index{Output@{Output}!sowFields@{sowFields}}
+\subsubsection[{Output}]{\setlength{\rightskip}{0pt plus 5cm}void sowFields::Output (ofstream $\ast$ {\em fs})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_fields_ad522bac768458cd78dfd8766545556bb}
+Write down the Operation, the area of the \hyperlink{classfield}{field} and the time 
+
+Reimplemented from \hyperlink{classfield_operation_fields_a8dff595b832bca540dda946639f7f47a}{fieldOperationFields}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classsow_fields_a8db7db6666e24673192929e5ded6f997}{
+\index{sowFields@{sowFields}!numOfPlants@{numOfPlants}}
+\index{numOfPlants@{numOfPlants}!sowFields@{sowFields}}
+\subsubsection[{numOfPlants}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sowFields::numOfPlants}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_fields_a8db7db6666e24673192929e5ded6f997}
+
+
+number of plants in that area \hypertarget{classsow_fields_ae686b511409010a29219373a85126e36}{
+\index{sowFields@{sowFields}!plants@{plants}}
+\index{plants@{plants}!sowFields@{sowFields}}
+\subsubsection[{plants}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sowStruct} {\bf sowFields::plants}\mbox{[}MaxPlants\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_fields_ae686b511409010a29219373a85126e36}
+\hypertarget{classsow_fields_ab43b87025b3e78f3624616754dd98120}{
+\index{sowFields@{sowFields}!PVStrategy@{PVStrategy}}
+\index{PVStrategy@{PVStrategy}!sowFields@{sowFields}}
+\subsubsection[{PVStrategy}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sowFields::PVStrategy}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_fields_ab43b87025b3e78f3624616754dd98120}
+
+
+Plant Protection strategy. \hypertarget{classsow_fields_a963b55ec84f8451164ee615b1fa52927}{
+\index{sowFields@{sowFields}!reduction@{reduction}}
+\index{reduction@{reduction}!sowFields@{sowFields}}
+\subsubsection[{reduction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowFields::reduction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_fields_a963b55ec84f8451164ee615b1fa52927}
+
+
+Optional reduction in radiation use efficiency. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{sow_fields_8h}{sowFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{sow_fields_8cpp}{sowFields.cpp}\end{DoxyCompactItemize}

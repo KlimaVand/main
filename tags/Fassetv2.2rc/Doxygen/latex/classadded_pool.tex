@@ -1,0 +1,232 @@
+\hypertarget{classadded_pool}{
+\section{addedPool Class Reference}
+\label{classadded_pool}\index{addedPool@{addedPool}}
+}
+
+
+{\ttfamily \#include $<$addedPool.h$>$}Inheritance diagram for addedPool::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classadded_pool}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classadded_pool_a13b5f518f801321e531672b6b03309d2}{addedPool} (const char $\ast$Pname, const int \hyperlink{classbase_afa59aaa1a0201700640234eb13a03aae}{Index}, const \hyperlink{classbase}{base} $\ast$owner)
+\item 
+\hyperlink{classadded_pool_ab5c337742c93f028dc93b7428647aa01}{addedPool} (const \hyperlink{classadded_pool}{addedPool} \&source)
+\item 
+virtual \hyperlink{classadded_pool}{addedPool} $\ast$ \hyperlink{classadded_pool_a6841609f3de8ac7a775bbd915eeaefdb}{clone} () const 
+\item 
+virtual void \hyperlink{classadded_pool_a6bc59f070b765a1fbbb1d24d17882b33}{Decay} (double environmentEffect, \hyperlink{classcn_matter}{cnMatter} \&out, int mode, double cnc)
+\item 
+virtual void \hyperlink{classadded_pool_a1ef97d19e864d5424801ef2cbab85bc2}{SetClayEffect1} (double c)
+\item 
+virtual void \hyperlink{classadded_pool_ae72c1de15194151dcc6fbc2b29e6c7d3}{SetClayEffect2} (double c)
+\item 
+virtual void \hyperlink{classadded_pool_a467e82b7fa7d7be8a8b72b3f0971a0c1}{SetClayResponseType} (int c)
+\item 
+virtual void \hyperlink{classadded_pool_ae255afcab8b53ec6761e69b2d42e772d}{SetUseClayEffect} (bool u)
+\item 
+virtual void \hyperlink{classadded_pool_ae44b05bd5c582fc559ea3713ce6ae828}{SetCNcrit} (double cnc)
+\item 
+virtual bool \hyperlink{classadded_pool_a0bc16d307ad2493bc2765fee91ebd4a0}{AddedMatter} ()
+\item 
+virtual void \hyperlink{classadded_pool_afbd54d1de5f10317e091a58e46be0ce3}{CatchInfluxIfHungry} (\hyperlink{classcn_matter}{cnMatter} \&content, int mode)
+\item 
+virtual void \hyperlink{classadded_pool_abe54b048d58a11fda014be4710031f56}{CatchInfluxIfNotHungry} (\hyperlink{classcn_matter}{cnMatter} \&content, int mode)
+\item 
+virtual void \hyperlink{classadded_pool_a67faed29b7b9d747de144920d7299a71}{CatchInflux} (\hyperlink{classcn_matter}{cnMatter} \&content, int mode)
+\item 
+virtual void \hyperlink{classadded_pool_ac19f010f6512bfb4f8ffaa9071e1251d}{FinalDecayIfHungryAOM} (double ratio, \hyperlink{classcn_matter}{cnMatter} \&out)
+\item 
+virtual void \hyperlink{classadded_pool_a6c1df7303f53a6c6693a371f0a0f760a}{FinalExportAOM} (double ratio, \hyperlink{classcn_matter}{cnMatter} \&out)
+\item 
+virtual bool \hyperlink{classadded_pool_afdb519f965dcf836634edfa30752d888}{IsAOM} () const 
+\item 
+virtual bool \hyperlink{classadded_pool_abbe1f7d292ff1224735bde06dd38eaa6}{Alike} (\hyperlink{classadded_pool}{addedPool} $\ast$aP)
+\item 
+virtual void \hyperlink{classadded_pool_afa0b865f26d4f7993142f7564de33056}{SoakDry} (\hyperlink{classadded_pool}{addedPool} $\ast$aP)
+\item 
+virtual void \hyperlink{classadded_pool_a4df8c3d4eb189579d3ba7f620e277598}{SetReduceTurnover} (double Reduce)
+\item 
+virtual void \hyperlink{classadded_pool_a53baccaba22ddacc656b75d90d32fa15}{ReleaseReduceTurnover} ()
+\item 
+virtual double \hyperlink{classadded_pool_a751b3e1eab19b4b6efc87c160e79a016}{GetReduceTurnover} ()
+\item 
+virtual bool \hyperlink{classadded_pool_a526f6f9fdd771c22b602cce6f756307f}{IsDerived} ()
+\item 
+virtual void \hyperlink{classadded_pool_a59c036e02555c4472128b90eb067f288}{SetDerived} (bool d)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classadded_pool_afec00b85b540b1d368dd51e1528e6aba}{Hungry} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classadded_pool_ad9e02a173998be72b421c76b2807e33c}{Derived}
+\item 
+double \hyperlink{classadded_pool_a50a8a0c125b2e0ba0c0e3b07128c9d6c}{ReduceTurnover}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classadded_pool_a13b5f518f801321e531672b6b03309d2}{
+\index{addedPool@{addedPool}!addedPool@{addedPool}}
+\index{addedPool@{addedPool}!addedPool@{addedPool}}
+\subsubsection[{addedPool}]{\setlength{\rightskip}{0pt plus 5cm}addedPool::addedPool (const char $\ast$ {\em Pname}, \/  const int {\em Index}, \/  const {\bf base} $\ast$ {\em owner})}}
+\label{classadded_pool_a13b5f518f801321e531672b6b03309d2}
+\hypertarget{classadded_pool_ab5c337742c93f028dc93b7428647aa01}{
+\index{addedPool@{addedPool}!addedPool@{addedPool}}
+\index{addedPool@{addedPool}!addedPool@{addedPool}}
+\subsubsection[{addedPool}]{\setlength{\rightskip}{0pt plus 5cm}addedPool::addedPool (const {\bf addedPool} \& {\em source})}}
+\label{classadded_pool_ab5c337742c93f028dc93b7428647aa01}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classadded_pool_a0bc16d307ad2493bc2765fee91ebd4a0}{
+\index{addedPool@{addedPool}!AddedMatter@{AddedMatter}}
+\index{AddedMatter@{AddedMatter}!addedPool@{addedPool}}
+\subsubsection[{AddedMatter}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool addedPool::AddedMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_a0bc16d307ad2493bc2765fee91ebd4a0}
+\hypertarget{classadded_pool_abbe1f7d292ff1224735bde06dd38eaa6}{
+\index{addedPool@{addedPool}!Alike@{Alike}}
+\index{Alike@{Alike}!addedPool@{addedPool}}
+\subsubsection[{Alike}]{\setlength{\rightskip}{0pt plus 5cm}bool addedPool::Alike ({\bf addedPool} $\ast$ {\em aP})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_abbe1f7d292ff1224735bde06dd38eaa6}
+\hypertarget{classadded_pool_a67faed29b7b9d747de144920d7299a71}{
+\index{addedPool@{addedPool}!CatchInflux@{CatchInflux}}
+\index{CatchInflux@{CatchInflux}!addedPool@{addedPool}}
+\subsubsection[{CatchInflux}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::CatchInflux ({\bf cnMatter} \& {\em content}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_a67faed29b7b9d747de144920d7299a71}
+
+
+Reimplemented from \hyperlink{classmatter_a5ad9b7b66c194958cdf58ec47024c0c9}{matter}.\hypertarget{classadded_pool_afbd54d1de5f10317e091a58e46be0ce3}{
+\index{addedPool@{addedPool}!CatchInfluxIfHungry@{CatchInfluxIfHungry}}
+\index{CatchInfluxIfHungry@{CatchInfluxIfHungry}!addedPool@{addedPool}}
+\subsubsection[{CatchInfluxIfHungry}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::CatchInfluxIfHungry ({\bf cnMatter} \& {\em content}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_afbd54d1de5f10317e091a58e46be0ce3}
+
+
+Reimplemented from \hyperlink{classmatter_abbc0846a0f37653351fbae149fbb91ce}{matter}.\hypertarget{classadded_pool_abe54b048d58a11fda014be4710031f56}{
+\index{addedPool@{addedPool}!CatchInfluxIfNotHungry@{CatchInfluxIfNotHungry}}
+\index{CatchInfluxIfNotHungry@{CatchInfluxIfNotHungry}!addedPool@{addedPool}}
+\subsubsection[{CatchInfluxIfNotHungry}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::CatchInfluxIfNotHungry ({\bf cnMatter} \& {\em content}, \/  int {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_abe54b048d58a11fda014be4710031f56}
+
+
+Reimplemented from \hyperlink{classmatter_af6764fccc5304bb9832879c40e7c7cba}{matter}.\hypertarget{classadded_pool_a6841609f3de8ac7a775bbd915eeaefdb}{
+\index{addedPool@{addedPool}!clone@{clone}}
+\index{clone@{clone}!addedPool@{addedPool}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf addedPool} $\ast$ addedPool::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_a6841609f3de8ac7a775bbd915eeaefdb}
+
+
+Reimplemented from \hyperlink{classmatter_afca594a86c75c8f40856bc5c8711266c}{matter}.\hypertarget{classadded_pool_a6bc59f070b765a1fbbb1d24d17882b33}{
+\index{addedPool@{addedPool}!Decay@{Decay}}
+\index{Decay@{Decay}!addedPool@{addedPool}}
+\subsubsection[{Decay}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::Decay (double {\em environmentEffect}, \/  {\bf cnMatter} \& {\em out}, \/  int {\em mode}, \/  double {\em cnc})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_a6bc59f070b765a1fbbb1d24d17882b33}
+\hypertarget{classadded_pool_ac19f010f6512bfb4f8ffaa9071e1251d}{
+\index{addedPool@{addedPool}!FinalDecayIfHungryAOM@{FinalDecayIfHungryAOM}}
+\index{FinalDecayIfHungryAOM@{FinalDecayIfHungryAOM}!addedPool@{addedPool}}
+\subsubsection[{FinalDecayIfHungryAOM}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::FinalDecayIfHungryAOM (double {\em ratio}, \/  {\bf cnMatter} \& {\em out})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_ac19f010f6512bfb4f8ffaa9071e1251d}
+\hypertarget{classadded_pool_a6c1df7303f53a6c6693a371f0a0f760a}{
+\index{addedPool@{addedPool}!FinalExportAOM@{FinalExportAOM}}
+\index{FinalExportAOM@{FinalExportAOM}!addedPool@{addedPool}}
+\subsubsection[{FinalExportAOM}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::FinalExportAOM (double {\em ratio}, \/  {\bf cnMatter} \& {\em out})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_a6c1df7303f53a6c6693a371f0a0f760a}
+\hypertarget{classadded_pool_a751b3e1eab19b4b6efc87c160e79a016}{
+\index{addedPool@{addedPool}!GetReduceTurnover@{GetReduceTurnover}}
+\index{GetReduceTurnover@{GetReduceTurnover}!addedPool@{addedPool}}
+\subsubsection[{GetReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}virtual double addedPool::GetReduceTurnover ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_a751b3e1eab19b4b6efc87c160e79a016}
+\hypertarget{classadded_pool_afec00b85b540b1d368dd51e1528e6aba}{
+\index{addedPool@{addedPool}!Hungry@{Hungry}}
+\index{Hungry@{Hungry}!addedPool@{addedPool}}
+\subsubsection[{Hungry}]{\setlength{\rightskip}{0pt plus 5cm}bool addedPool::Hungry ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classadded_pool_afec00b85b540b1d368dd51e1528e6aba}
+
+
+Reimplemented from \hyperlink{classmatter_a59b4566b93dd22923b97976c752783ef}{matter}.\hypertarget{classadded_pool_afdb519f965dcf836634edfa30752d888}{
+\index{addedPool@{addedPool}!IsAOM@{IsAOM}}
+\index{IsAOM@{IsAOM}!addedPool@{addedPool}}
+\subsubsection[{IsAOM}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool addedPool::IsAOM () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_afdb519f965dcf836634edfa30752d888}
+
+
+Reimplemented from \hyperlink{classmatter_a838d402c6b41deb9d9c20eeabecd94a8}{matter}.\hypertarget{classadded_pool_a526f6f9fdd771c22b602cce6f756307f}{
+\index{addedPool@{addedPool}!IsDerived@{IsDerived}}
+\index{IsDerived@{IsDerived}!addedPool@{addedPool}}
+\subsubsection[{IsDerived}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool addedPool::IsDerived ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_a526f6f9fdd771c22b602cce6f756307f}
+\hypertarget{classadded_pool_a53baccaba22ddacc656b75d90d32fa15}{
+\index{addedPool@{addedPool}!ReleaseReduceTurnover@{ReleaseReduceTurnover}}
+\index{ReleaseReduceTurnover@{ReleaseReduceTurnover}!addedPool@{addedPool}}
+\subsubsection[{ReleaseReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::ReleaseReduceTurnover ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_a53baccaba22ddacc656b75d90d32fa15}
+
+
+Reimplemented from \hyperlink{classmatter_a9fe8f4ee934f280c9964dacc27d42611}{matter}.\hypertarget{classadded_pool_a1ef97d19e864d5424801ef2cbab85bc2}{
+\index{addedPool@{addedPool}!SetClayEffect1@{SetClayEffect1}}
+\index{SetClayEffect1@{SetClayEffect1}!addedPool@{addedPool}}
+\subsubsection[{SetClayEffect1}]{\setlength{\rightskip}{0pt plus 5cm}virtual void addedPool::SetClayEffect1 (double {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_a1ef97d19e864d5424801ef2cbab85bc2}
+\hypertarget{classadded_pool_ae72c1de15194151dcc6fbc2b29e6c7d3}{
+\index{addedPool@{addedPool}!SetClayEffect2@{SetClayEffect2}}
+\index{SetClayEffect2@{SetClayEffect2}!addedPool@{addedPool}}
+\subsubsection[{SetClayEffect2}]{\setlength{\rightskip}{0pt plus 5cm}virtual void addedPool::SetClayEffect2 (double {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_ae72c1de15194151dcc6fbc2b29e6c7d3}
+\hypertarget{classadded_pool_a467e82b7fa7d7be8a8b72b3f0971a0c1}{
+\index{addedPool@{addedPool}!SetClayResponseType@{SetClayResponseType}}
+\index{SetClayResponseType@{SetClayResponseType}!addedPool@{addedPool}}
+\subsubsection[{SetClayResponseType}]{\setlength{\rightskip}{0pt plus 5cm}virtual void addedPool::SetClayResponseType (int {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_a467e82b7fa7d7be8a8b72b3f0971a0c1}
+\hypertarget{classadded_pool_ae44b05bd5c582fc559ea3713ce6ae828}{
+\index{addedPool@{addedPool}!SetCNcrit@{SetCNcrit}}
+\index{SetCNcrit@{SetCNcrit}!addedPool@{addedPool}}
+\subsubsection[{SetCNcrit}]{\setlength{\rightskip}{0pt plus 5cm}virtual void addedPool::SetCNcrit (double {\em cnc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_ae44b05bd5c582fc559ea3713ce6ae828}
+\hypertarget{classadded_pool_a59c036e02555c4472128b90eb067f288}{
+\index{addedPool@{addedPool}!SetDerived@{SetDerived}}
+\index{SetDerived@{SetDerived}!addedPool@{addedPool}}
+\subsubsection[{SetDerived}]{\setlength{\rightskip}{0pt plus 5cm}virtual void addedPool::SetDerived (bool {\em d})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_a59c036e02555c4472128b90eb067f288}
+\hypertarget{classadded_pool_a4df8c3d4eb189579d3ba7f620e277598}{
+\index{addedPool@{addedPool}!SetReduceTurnover@{SetReduceTurnover}}
+\index{SetReduceTurnover@{SetReduceTurnover}!addedPool@{addedPool}}
+\subsubsection[{SetReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::SetReduceTurnover (double {\em Reduce})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_a4df8c3d4eb189579d3ba7f620e277598}
+\hypertarget{classadded_pool_ae255afcab8b53ec6761e69b2d42e772d}{
+\index{addedPool@{addedPool}!SetUseClayEffect@{SetUseClayEffect}}
+\index{SetUseClayEffect@{SetUseClayEffect}!addedPool@{addedPool}}
+\subsubsection[{SetUseClayEffect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void addedPool::SetUseClayEffect (bool {\em u})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classadded_pool_ae255afcab8b53ec6761e69b2d42e772d}
+\hypertarget{classadded_pool_afa0b865f26d4f7993142f7564de33056}{
+\index{addedPool@{addedPool}!SoakDry@{SoakDry}}
+\index{SoakDry@{SoakDry}!addedPool@{addedPool}}
+\subsubsection[{SoakDry}]{\setlength{\rightskip}{0pt plus 5cm}void addedPool::SoakDry ({\bf addedPool} $\ast$ {\em aP})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classadded_pool_afa0b865f26d4f7993142f7564de33056}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classadded_pool_ad9e02a173998be72b421c76b2807e33c}{
+\index{addedPool@{addedPool}!Derived@{Derived}}
+\index{Derived@{Derived}!addedPool@{addedPool}}
+\subsubsection[{Derived}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf addedPool::Derived}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classadded_pool_ad9e02a173998be72b421c76b2807e33c}
+\hypertarget{classadded_pool_a50a8a0c125b2e0ba0c0e3b07128c9d6c}{
+\index{addedPool@{addedPool}!ReduceTurnover@{ReduceTurnover}}
+\index{ReduceTurnover@{ReduceTurnover}!addedPool@{addedPool}}
+\subsubsection[{ReduceTurnover}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf addedPool::ReduceTurnover}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classadded_pool_a50a8a0c125b2e0ba0c0e3b07128c9d6c}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{added_pool_8h}{addedPool.h}\item 
+C:/main/trunk/src/soil/\hyperlink{added_pool_8cpp}{addedPool.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,215 @@
+[SoilParameters]                 // Aarslev soil jordvandstationsprojekt
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         5
+Ammonium         0
+Nitrate          0
+ConductivityFC  -7.85            / from O.H.Jacobsen p46
+DryBulkDensity   1.51        / from original Askov data (O.H Jacobsen)
+ClayContent      0.123         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.127         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+
+CarbonPct        1.12        / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+CNRatio	10.7
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.051158681
+IOM	0.405174
+IOM.N	0.038722221
+
+RelativeWater(0) 0.425
+PFValue(0)       0.0
+RelativeWater(1) 0.370
+PFValue(1)       1.0
+RelativeWater(2) 0.357
+PFValue(2)       1.2
+RelativeWater(3) 0.318
+PFValue(3)       1.7
+RelativeWater(4) 0.285
+PFValue(4)       2.0
+RelativeWater(5) 0.258
+PFValue(5)       2.2
+RelativeWater(6) 0.233
+PFValue(6)       2.7
+RelativeWater(7) 0.086
+PFValue(7)       4.2
+
+[SoilLayer(2)]                     // 250-500
+Thickness        250
+SoilType         5
+Ammonium         0
+Nitrate          0
+ConductivityFC   -8.43             / from O.H.Jacobsen p46
+DryBulkDensity   1.628         / from O.H.Jacobsen
+ClayContent      0.164         	/ from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.125         	/ from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+
+CarbonPct        0.47        	/ from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+CNRatio	10.8         		/ modified
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.025270434
+IOM	0.7
+IOM.N	0.065518608
+
+RelativeWater(0) 0.385
+PFValue(0)       0.0
+RelativeWater(1) 0.339
+PFValue(1)       1.0
+RelativeWater(2) 0.330
+PFValue(2)       1.2
+RelativeWater(3) 0.302
+PFValue(3)       1.7
+RelativeWater(4) 0.275
+PFValue(4)       2.0
+RelativeWater(5) 0.251
+PFValue(5)       2.2
+RelativeWater(6) 0.219
+PFValue(6)       2.7
+RelativeWater(7) 0.089
+PFValue(7)       4.2
+
+
+[SoilLayer(3)]			// 500-750
+Thickness        250
+SoilType         5
+Ammonium         0
+Nitrate          0
+ConductivityFC   -8.76             / from O.H.Jacobsen p46
+DryBulkDensity   1.591         / from O.H.Jacobsen
+ClayContent      0.204         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.125         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+
+CarbonPct        0.29         	/ from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+CNRatio	9.0        	 	/ modified
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.030424922
+IOM	0.7
+IOM.N	0.078882638
+
+RelativeWater(0) 0.409
+PFValue(0)       0.0
+RelativeWater(1) 0.352
+PFValue(1)       1.0
+RelativeWater(2) 0.343
+PFValue(2)       1.2
+RelativeWater(3) 0.313
+PFValue(3)       1.7
+RelativeWater(4) 0.293
+PFValue(4)       2.0
+RelativeWater(5) 0.279
+PFValue(5)       2.2
+RelativeWater(6) 0.253
+PFValue(6)       2.7
+RelativeWater(7) 0.135
+PFValue(7)       4.2
+
+[SoilLayer(4)]
+Thickness        250          //750-1000
+SoilType         5
+Ammonium         0
+Nitrate          0
+ConductivityFC  -8.92             / from O.H.Jacobsen p46 
+DryBulkDensity   1.664         / modified
+ClayContent      0.213         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.106         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+
+
+CarbonPct        0.23         	/ from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+CNRatio	7.6	         	/ modified
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.036121987
+IOM	0.7
+IOM.N	0.093653409
+
+RelativeWater(0) 0.382
+PFValue(0)       0.0
+RelativeWater(1) 0.331
+PFValue(1)       1.0
+RelativeWater(2) 0.324
+PFValue(2)       1.2
+RelativeWater(3) 0.306
+PFValue(3)       1.7
+RelativeWater(4) 0.290
+PFValue(4)       2.0
+RelativeWater(5) 0.275
+PFValue(5)       2.2
+RelativeWater(6) 0.255
+PFValue(6)       2.7
+RelativeWater(7) 0.130
+PFValue(7)       4.2
+
+[SoilLayer(5)]
+Thickness        1500
+SoilType         5
+Ammonium         0
+Nitrate          0
+ConductivityFC  -8.74            / from O.H.Jacobsen p46 
+DryBulkDensity   1.616         / modified
+ClayContent      0.213         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+SiltContent      0.106         / from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+
+
+CarbonPct        0.10         	/ from Olesen, 1992. Tidsskrift for planteavl 96,325-342
+CNRatio	10.0	         	/ modified
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.036121987
+IOM	0.7
+IOM.N	0.093653409
+
+RelativeWater(0) 0.400
+PFValue(0)       0.0
+RelativeWater(1) 0.338
+PFValue(1)       1.0
+RelativeWater(2) 0.332
+PFValue(2)       1.2
+RelativeWater(3) 0.315
+PFValue(3)       1.7
+RelativeWater(4) 0.298
+PFValue(4)       2.0
+RelativeWater(5) 0.278
+PFValue(5)       2.2
+RelativeWater(6) 0.251
+PFValue(6)       2.7
+RelativeWater(7) 0.130
+PFValue(7)       4.2
+
+
+[end]

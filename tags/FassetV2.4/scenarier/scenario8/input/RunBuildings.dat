@@ -1,0 +1,30 @@
+[surface(0)]	
+Alias	Default
+[Store(0)]	
+Alias	Default
+[Slurrystore(0)]	
+Alias	Slurrystore
+Manuretype	SLURRY
+CrustResistance	0.0
+SpecificResistance	2000.0
+CoverResistance	00.0
+NH3Emissionfactor	0.05
+N2OEmissionfactor	0.001
+N2Emissionfactor	0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+NMinfactor	0.01
+PostCleanDepth	0.001
+Locked	0
+[Dungheap(0)]	
+Alias	Dungheap
+Manuretype	CATTLE-FYM
+NH3Emissionfactor	0.05
+N2OEmissionfactor	0.001
+N2Emissionfactor	0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+NMinfactor	0.01
+PostCleanDepth	0.001
+Locked	0
+[end]

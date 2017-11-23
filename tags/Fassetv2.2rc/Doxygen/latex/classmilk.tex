@@ -1,0 +1,151 @@
+\hypertarget{classmilk}{
+\section{milk Class Reference}
+\label{classmilk}\index{milk@{milk}}
+}
+
+
+{\ttfamily \#include $<$milk.h$>$}Inheritance diagram for milk::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classmilk}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmilk_afbca06d2ee59b992a121ac0df503c038}{milk} ()
+\item 
+\hyperlink{classmilk_a7d96f897491aa8ba5ba7440ef15501d3}{milk} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classmilk_a32902c3e0b0e5c194bd605cca510ddc5}{milk} (const \hyperlink{classmilk}{milk} \&amilk)
+\item 
+virtual \hyperlink{classmilk_a1128ed2aee0dd59ea5ed3ed1c1433532}{$\sim$milk} ()
+\item 
+void \hyperlink{classmilk_a23ab5951cc404f938184aa3b44080719}{Setfat} (double \&afat)
+\item 
+void \hyperlink{classmilk_a69060a252027a2f9f08e42ed6e2a7db3}{SetdryMatter} (double \&adryMatter)
+\item 
+double \hyperlink{classmilk_a3184a49b16c5140554be2af66d254899}{Getfat} (void) const 
+\item 
+double \hyperlink{classmilk_ae2e7cd84b885c21b529a48a78295967a}{GetdryMatter} (void) const 
+\item 
+double \hyperlink{classmilk_aa9b46018d36c0cb685cd185c6008ef65}{Getprotein} (void) const 
+\item 
+double \hyperlink{classmilk_aee1f5edbd82a3877995fde62a2c56abb}{Geturea} (void) const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classmilk_a91f8abdababf02b7204b5bffcbbf2557}{operator=} (const \hyperlink{classproduct}{product} \&someMilk)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classmilk_aa1c2c44df35bc4ce7f82e448a23acf5f}{operator+} (const \hyperlink{classproduct}{product} \&someMilk)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classmilk_a904640cf0fbcf990815d26f6c9453edb}{operator-\/} (const \hyperlink{classproduct}{product} \&someMilk)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classmilk_a185c7b47cef30f2993c339ca48af7db5}{clone} () const 
+\item 
+virtual void \hyperlink{classmilk_afad44ced6ab580a41fcc582cb83b87dd}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classmilk_adc53dfc2bbc4f8463e61ccb3c45f5ee0}{operator$<$$<$} (ostream \&os, const \hyperlink{classmilk}{milk} \&amilk)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmilk_afbca06d2ee59b992a121ac0df503c038}{
+\index{milk@{milk}!milk@{milk}}
+\index{milk@{milk}!milk@{milk}}
+\subsubsection[{milk}]{\setlength{\rightskip}{0pt plus 5cm}milk::milk ()}}
+\label{classmilk_afbca06d2ee59b992a121ac0df503c038}
+\hypertarget{classmilk_a7d96f897491aa8ba5ba7440ef15501d3}{
+\index{milk@{milk}!milk@{milk}}
+\index{milk@{milk}!milk@{milk}}
+\subsubsection[{milk}]{\setlength{\rightskip}{0pt plus 5cm}milk::milk (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classmilk_a7d96f897491aa8ba5ba7440ef15501d3}
+\hypertarget{classmilk_a32902c3e0b0e5c194bd605cca510ddc5}{
+\index{milk@{milk}!milk@{milk}}
+\index{milk@{milk}!milk@{milk}}
+\subsubsection[{milk}]{\setlength{\rightskip}{0pt plus 5cm}milk::milk (const {\bf milk} \& {\em amilk})}}
+\label{classmilk_a32902c3e0b0e5c194bd605cca510ddc5}
+\hypertarget{classmilk_a1128ed2aee0dd59ea5ed3ed1c1433532}{
+\index{milk@{milk}!$\sim$milk@{$\sim$milk}}
+\index{$\sim$milk@{$\sim$milk}!milk@{milk}}
+\subsubsection[{$\sim$milk}]{\setlength{\rightskip}{0pt plus 5cm}milk::$\sim$milk ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmilk_a1128ed2aee0dd59ea5ed3ed1c1433532}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmilk_a185c7b47cef30f2993c339ca48af7db5}{
+\index{milk@{milk}!clone@{clone}}
+\index{clone@{clone}!milk@{milk}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ milk::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmilk_a185c7b47cef30f2993c339ca48af7db5}
+
+
+Reimplemented from \hyperlink{classproduct_a18a1df87f3400774db21d1e8c573f04a}{product}.\hypertarget{classmilk_ae2e7cd84b885c21b529a48a78295967a}{
+\index{milk@{milk}!GetdryMatter@{GetdryMatter}}
+\index{GetdryMatter@{GetdryMatter}!milk@{milk}}
+\subsubsection[{GetdryMatter}]{\setlength{\rightskip}{0pt plus 5cm}double milk::GetdryMatter (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmilk_ae2e7cd84b885c21b529a48a78295967a}
+\hypertarget{classmilk_a3184a49b16c5140554be2af66d254899}{
+\index{milk@{milk}!Getfat@{Getfat}}
+\index{Getfat@{Getfat}!milk@{milk}}
+\subsubsection[{Getfat}]{\setlength{\rightskip}{0pt plus 5cm}double milk::Getfat (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmilk_a3184a49b16c5140554be2af66d254899}
+\hypertarget{classmilk_aa9b46018d36c0cb685cd185c6008ef65}{
+\index{milk@{milk}!Getprotein@{Getprotein}}
+\index{Getprotein@{Getprotein}!milk@{milk}}
+\subsubsection[{Getprotein}]{\setlength{\rightskip}{0pt plus 5cm}double milk::Getprotein (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmilk_aa9b46018d36c0cb685cd185c6008ef65}
+\hypertarget{classmilk_aee1f5edbd82a3877995fde62a2c56abb}{
+\index{milk@{milk}!Geturea@{Geturea}}
+\index{Geturea@{Geturea}!milk@{milk}}
+\subsubsection[{Geturea}]{\setlength{\rightskip}{0pt plus 5cm}double milk::Geturea (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmilk_aee1f5edbd82a3877995fde62a2c56abb}
+\hypertarget{classmilk_aa1c2c44df35bc4ce7f82e448a23acf5f}{
+\index{milk@{milk}!operator+@{operator+}}
+\index{operator+@{operator+}!milk@{milk}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& milk::operator+ (const {\bf product} \& {\em someMilk})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmilk_aa1c2c44df35bc4ce7f82e448a23acf5f}
+\hypertarget{classmilk_a904640cf0fbcf990815d26f6c9453edb}{
+\index{milk@{milk}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!milk@{milk}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& milk::operator-\/ (const {\bf product} \& {\em someMilk})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmilk_a904640cf0fbcf990815d26f6c9453edb}
+\hypertarget{classmilk_a91f8abdababf02b7204b5bffcbbf2557}{
+\index{milk@{milk}!operator=@{operator=}}
+\index{operator=@{operator=}!milk@{milk}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& milk::operator= (const {\bf product} \& {\em someMilk})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmilk_a91f8abdababf02b7204b5bffcbbf2557}
+\hypertarget{classmilk_afad44ced6ab580a41fcc582cb83b87dd}{
+\index{milk@{milk}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!milk@{milk}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void milk::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmilk_afad44ced6ab580a41fcc582cb83b87dd}
+
+
+Reimplemented from \hyperlink{classproduct_a1edb3e3d0619a2db8b8f1c95fed582ce}{product}.\hypertarget{classmilk_a69060a252027a2f9f08e42ed6e2a7db3}{
+\index{milk@{milk}!SetdryMatter@{SetdryMatter}}
+\index{SetdryMatter@{SetdryMatter}!milk@{milk}}
+\subsubsection[{SetdryMatter}]{\setlength{\rightskip}{0pt plus 5cm}void milk::SetdryMatter (double \& {\em adryMatter})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmilk_a69060a252027a2f9f08e42ed6e2a7db3}
+\hypertarget{classmilk_a23ab5951cc404f938184aa3b44080719}{
+\index{milk@{milk}!Setfat@{Setfat}}
+\index{Setfat@{Setfat}!milk@{milk}}
+\subsubsection[{Setfat}]{\setlength{\rightskip}{0pt plus 5cm}void milk::Setfat (double \& {\em afat})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmilk_a23ab5951cc404f938184aa3b44080719}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmilk_adc53dfc2bbc4f8463e61ccb3c45f5ee0}{
+\index{milk@{milk}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!milk@{milk}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf milk} \& {\em amilk})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmilk_adc53dfc2bbc4f8463e61ccb3c45f5ee0}
+
+
+Reimplemented from \hyperlink{classproduct_a1b6bf2f2c82a18a17907ee1192fd94bb}{product}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{milk_8h}{milk.h}\item 
+C:/main/trunk/src/products/\hyperlink{milk_8cpp}{milk.cpp}\end{DoxyCompactItemize}

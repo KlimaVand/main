@@ -1,0 +1,208 @@
+\hypertarget{classtech_equip}{
+\section{techEquip Class Reference}
+\label{classtech_equip}\index{techEquip@{techEquip}}
+}
+
+
+{\ttfamily \#include $<$techEquip.h$>$}Inheritance diagram for techEquip::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11cm]{classtech_equip}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtech_equip_abb990aaba6e93883b64ab4b60a5cf669}{techEquip} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classtech_equip_a17d3eba5034ecbb6049add3df96bf876}{techEquip} (const \hyperlink{classtech_equip}{techEquip} \&atechEquip)
+\item 
+virtual \hyperlink{classtech_equip_a602031975a6d2bd66828cc60649352fb}{$\sim$techEquip} ()
+\item 
+void \hyperlink{classtech_equip_a9593d2ee5545ea9157b43f5671c969b3}{SettechEquipName} (string \&atechEquipName)
+\item 
+void \hyperlink{classtech_equip_acd8e16736cfa57ee38bee4d9dad7e9de}{Setsize} (double asize)
+\item 
+void \hyperlink{classtech_equip_a4d3ba991907cd0a57ad5fb8770152874}{SetCarryCapacity} (double acarryCapacity)
+\item 
+void \hyperlink{classtech_equip_a3bdac847c7f243a4603fb9569c9b264e}{SethoursUltimo} (double ahoursUltimo)
+\item 
+void \hyperlink{classtech_equip_a276361ce65a8d7ceca469528c115b5e0}{AddhoursUltimo} (double ahoursUltimo)
+\item 
+string \hyperlink{classtech_equip_a1e2bcb0feb27e525bdec3f5f114e5a80}{GettechEquipName} (void)
+\item 
+double \hyperlink{classtech_equip_a907fd8953798aa945098332d20366166}{Getsize} (void)
+\item 
+double \hyperlink{classtech_equip_ae2b82293558dbb80274f62931b8cb49c}{GetCarryCapacity} (void)
+\item 
+double \hyperlink{classtech_equip_aa1d824dcc6a0b20bf896a4e9a63542ae}{GethoursPrimo} (void)
+\item 
+double \hyperlink{classtech_equip_a3b755c4eb6c71bb00b3cf745cd2d3c19}{GethoursUltimo} (void)
+\item 
+virtual double \hyperlink{classtech_equip_ad9c0cb0fabe3820710f162991bcd7e9a}{getHoursUsed} ()
+\item 
+virtual void \hyperlink{classtech_equip_a7b8543a8ead2be2a6a00d80123895e2c}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, char $\ast$sectionName=NULL)
+\item 
+void \hyperlink{classtech_equip_a8c55f7cfece19df5ab98ee219b3cec0f}{UpdateHours} ()
+\item 
+virtual void \hyperlink{classtech_equip_aa7884f75fe1cd006153266ee913f9c08}{GiveIndicators} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classtech_equip_a70f29db43df0085f1a5b8322c70e09ac}{techEquipName}
+\item 
+double \hyperlink{classtech_equip_a8e2d6b0d654ef641aa2bae722a926850}{size}
+\item 
+double \hyperlink{classtech_equip_a7abc4270ed1343782440634cc69842fc}{carryCapacity}
+\item 
+int \hyperlink{classtech_equip_abcca018fbc3f7fa3f12258914e1d20f7}{age}
+\item 
+double \hyperlink{classtech_equip_a45958baa672c3b616b5384615e7b3be8}{hoursPrimo}
+\item 
+double \hyperlink{classtech_equip_a33c806f6d44641789a8e919ed46e8608}{hoursUltimo}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtech_equip_abb990aaba6e93883b64ab4b60a5cf669}{
+\index{techEquip@{techEquip}!techEquip@{techEquip}}
+\index{techEquip@{techEquip}!techEquip@{techEquip}}
+\subsubsection[{techEquip}]{\setlength{\rightskip}{0pt plus 5cm}techEquip::techEquip (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classtech_equip_abb990aaba6e93883b64ab4b60a5cf669}
+\hypertarget{classtech_equip_a17d3eba5034ecbb6049add3df96bf876}{
+\index{techEquip@{techEquip}!techEquip@{techEquip}}
+\index{techEquip@{techEquip}!techEquip@{techEquip}}
+\subsubsection[{techEquip}]{\setlength{\rightskip}{0pt plus 5cm}techEquip::techEquip (const {\bf techEquip} \& {\em atechEquip})}}
+\label{classtech_equip_a17d3eba5034ecbb6049add3df96bf876}
+\hypertarget{classtech_equip_a602031975a6d2bd66828cc60649352fb}{
+\index{techEquip@{techEquip}!$\sim$techEquip@{$\sim$techEquip}}
+\index{$\sim$techEquip@{$\sim$techEquip}!techEquip@{techEquip}}
+\subsubsection[{$\sim$techEquip}]{\setlength{\rightskip}{0pt plus 5cm}techEquip::$\sim$techEquip ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classtech_equip_a602031975a6d2bd66828cc60649352fb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtech_equip_a276361ce65a8d7ceca469528c115b5e0}{
+\index{techEquip@{techEquip}!AddhoursUltimo@{AddhoursUltimo}}
+\index{AddhoursUltimo@{AddhoursUltimo}!techEquip@{techEquip}}
+\subsubsection[{AddhoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::AddhoursUltimo (double {\em ahoursUltimo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a276361ce65a8d7ceca469528c115b5e0}
+\hypertarget{classtech_equip_ae2b82293558dbb80274f62931b8cb49c}{
+\index{techEquip@{techEquip}!GetCarryCapacity@{GetCarryCapacity}}
+\index{GetCarryCapacity@{GetCarryCapacity}!techEquip@{techEquip}}
+\subsubsection[{GetCarryCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double techEquip::GetCarryCapacity (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_ae2b82293558dbb80274f62931b8cb49c}
+\hypertarget{classtech_equip_aa1d824dcc6a0b20bf896a4e9a63542ae}{
+\index{techEquip@{techEquip}!GethoursPrimo@{GethoursPrimo}}
+\index{GethoursPrimo@{GethoursPrimo}!techEquip@{techEquip}}
+\subsubsection[{GethoursPrimo}]{\setlength{\rightskip}{0pt plus 5cm}double techEquip::GethoursPrimo (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_aa1d824dcc6a0b20bf896a4e9a63542ae}
+
+
+Reimplemented in \hyperlink{classtech_farm_ad61694fe36efc7411dbe4de32452a214}{techFarm}.\hypertarget{classtech_equip_a3b755c4eb6c71bb00b3cf745cd2d3c19}{
+\index{techEquip@{techEquip}!GethoursUltimo@{GethoursUltimo}}
+\index{GethoursUltimo@{GethoursUltimo}!techEquip@{techEquip}}
+\subsubsection[{GethoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}double techEquip::GethoursUltimo (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a3b755c4eb6c71bb00b3cf745cd2d3c19}
+
+
+Reimplemented in \hyperlink{classtech_farm_aa35b82884aeaf19920b51eee73587026}{techFarm}.\hypertarget{classtech_equip_ad9c0cb0fabe3820710f162991bcd7e9a}{
+\index{techEquip@{techEquip}!getHoursUsed@{getHoursUsed}}
+\index{getHoursUsed@{getHoursUsed}!techEquip@{techEquip}}
+\subsubsection[{getHoursUsed}]{\setlength{\rightskip}{0pt plus 5cm}double techEquip::getHoursUsed ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classtech_equip_ad9c0cb0fabe3820710f162991bcd7e9a}
+
+
+Implements \hyperlink{class_tech_asset_af2cd10df95cbd8d5095098e0c6c16722}{TechAsset}.\hypertarget{classtech_equip_a907fd8953798aa945098332d20366166}{
+\index{techEquip@{techEquip}!Getsize@{Getsize}}
+\index{Getsize@{Getsize}!techEquip@{techEquip}}
+\subsubsection[{Getsize}]{\setlength{\rightskip}{0pt plus 5cm}double techEquip::Getsize (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a907fd8953798aa945098332d20366166}
+\hypertarget{classtech_equip_a1e2bcb0feb27e525bdec3f5f114e5a80}{
+\index{techEquip@{techEquip}!GettechEquipName@{GettechEquipName}}
+\index{GettechEquipName@{GettechEquipName}!techEquip@{techEquip}}
+\subsubsection[{GettechEquipName}]{\setlength{\rightskip}{0pt plus 5cm}string techEquip::GettechEquipName (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a1e2bcb0feb27e525bdec3f5f114e5a80}
+\hypertarget{classtech_equip_aa7884f75fe1cd006153266ee913f9c08}{
+\index{techEquip@{techEquip}!GiveIndicators@{GiveIndicators}}
+\index{GiveIndicators@{GiveIndicators}!techEquip@{techEquip}}
+\subsubsection[{GiveIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::GiveIndicators ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classtech_equip_aa7884f75fe1cd006153266ee913f9c08}
+\hypertarget{classtech_equip_a7b8543a8ead2be2a6a00d80123895e2c}{
+\index{techEquip@{techEquip}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!techEquip@{techEquip}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::ReadParameters (fstream $\ast$ {\em file}, \/  char $\ast$ {\em sectionName} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classtech_equip_a7b8543a8ead2be2a6a00d80123895e2c}
+
+
+Reimplemented in \hyperlink{classforage_cutter_af767727457025f83e708de8838a7beed}{forageCutter}, \hyperlink{classimplement_ab15a9401469890f3bd902bb007009957}{implement}, \hyperlink{classinstallation_ad006ec668a0ec601c610380cffe6e86b}{installation}, \hyperlink{classmanure_applic_abd655046e002e2da34a796b45f0597e2}{manureApplic}, \hyperlink{classself_propelled_a13e862db150a5804947fe838384529df}{selfPropelled}, \hyperlink{classtech_contract_ae2669826bdb3931c603d00e288011fff}{techContract}, \hyperlink{classtech_farm_aa64882b3e2248295d793274f75795707}{techFarm}, and \hyperlink{classtractor_aeb535e7ae93c012609c660369ed23f3c}{tractor}.\hypertarget{classtech_equip_a4d3ba991907cd0a57ad5fb8770152874}{
+\index{techEquip@{techEquip}!SetCarryCapacity@{SetCarryCapacity}}
+\index{SetCarryCapacity@{SetCarryCapacity}!techEquip@{techEquip}}
+\subsubsection[{SetCarryCapacity}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::SetCarryCapacity (double {\em acarryCapacity})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a4d3ba991907cd0a57ad5fb8770152874}
+\hypertarget{classtech_equip_a3bdac847c7f243a4603fb9569c9b264e}{
+\index{techEquip@{techEquip}!SethoursUltimo@{SethoursUltimo}}
+\index{SethoursUltimo@{SethoursUltimo}!techEquip@{techEquip}}
+\subsubsection[{SethoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::SethoursUltimo (double {\em ahoursUltimo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a3bdac847c7f243a4603fb9569c9b264e}
+\hypertarget{classtech_equip_acd8e16736cfa57ee38bee4d9dad7e9de}{
+\index{techEquip@{techEquip}!Setsize@{Setsize}}
+\index{Setsize@{Setsize}!techEquip@{techEquip}}
+\subsubsection[{Setsize}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::Setsize (double {\em asize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_acd8e16736cfa57ee38bee4d9dad7e9de}
+\hypertarget{classtech_equip_a9593d2ee5545ea9157b43f5671c969b3}{
+\index{techEquip@{techEquip}!SettechEquipName@{SettechEquipName}}
+\index{SettechEquipName@{SettechEquipName}!techEquip@{techEquip}}
+\subsubsection[{SettechEquipName}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::SettechEquipName (string \& {\em atechEquipName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtech_equip_a9593d2ee5545ea9157b43f5671c969b3}
+\hypertarget{classtech_equip_a8c55f7cfece19df5ab98ee219b3cec0f}{
+\index{techEquip@{techEquip}!UpdateHours@{UpdateHours}}
+\index{UpdateHours@{UpdateHours}!techEquip@{techEquip}}
+\subsubsection[{UpdateHours}]{\setlength{\rightskip}{0pt plus 5cm}void techEquip::UpdateHours ()}}
+\label{classtech_equip_a8c55f7cfece19df5ab98ee219b3cec0f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtech_equip_abcca018fbc3f7fa3f12258914e1d20f7}{
+\index{techEquip@{techEquip}!age@{age}}
+\index{age@{age}!techEquip@{techEquip}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf techEquip::age}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_equip_abcca018fbc3f7fa3f12258914e1d20f7}
+
+
+Reimplemented in \hyperlink{classtech_farm_a938e00cc70834f5115fa1fde901a8ca9}{techFarm}.\hypertarget{classtech_equip_a7abc4270ed1343782440634cc69842fc}{
+\index{techEquip@{techEquip}!carryCapacity@{carryCapacity}}
+\index{carryCapacity@{carryCapacity}!techEquip@{techEquip}}
+\subsubsection[{carryCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techEquip::carryCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_equip_a7abc4270ed1343782440634cc69842fc}
+\hypertarget{classtech_equip_a45958baa672c3b616b5384615e7b3be8}{
+\index{techEquip@{techEquip}!hoursPrimo@{hoursPrimo}}
+\index{hoursPrimo@{hoursPrimo}!techEquip@{techEquip}}
+\subsubsection[{hoursPrimo}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techEquip::hoursPrimo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_equip_a45958baa672c3b616b5384615e7b3be8}
+
+
+Reimplemented in \hyperlink{classtech_farm_a7b246e44d0bb53d7a27544dc8f90f894}{techFarm}.\hypertarget{classtech_equip_a33c806f6d44641789a8e919ed46e8608}{
+\index{techEquip@{techEquip}!hoursUltimo@{hoursUltimo}}
+\index{hoursUltimo@{hoursUltimo}!techEquip@{techEquip}}
+\subsubsection[{hoursUltimo}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techEquip::hoursUltimo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_equip_a33c806f6d44641789a8e919ed46e8608}
+
+
+Reimplemented in \hyperlink{classtech_farm_addd00177637ae6a4d7b2b5b17d8165eb}{techFarm}.\hypertarget{classtech_equip_a8e2d6b0d654ef641aa2bae722a926850}{
+\index{techEquip@{techEquip}!size@{size}}
+\index{size@{size}!techEquip@{techEquip}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf techEquip::size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_equip_a8e2d6b0d654ef641aa2bae722a926850}
+\hypertarget{classtech_equip_a70f29db43df0085f1a5b8322c70e09ac}{
+\index{techEquip@{techEquip}!techEquipName@{techEquipName}}
+\index{techEquipName@{techEquipName}!techEquip@{techEquip}}
+\subsubsection[{techEquipName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf techEquip::techEquipName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classtech_equip_a70f29db43df0085f1a5b8322c70e09ac}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{tech_equip_8h}{techEquip.h}\item 
+C:/main/trunk/src/technics/\hyperlink{tech_equip_8cpp}{techEquip.cpp}\end{DoxyCompactItemize}

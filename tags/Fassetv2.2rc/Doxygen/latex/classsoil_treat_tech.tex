@@ -1,0 +1,121 @@
+\hypertarget{classsoil_treat_tech}{
+\section{soilTreatTech Class Reference}
+\label{classsoil_treat_tech}\index{soilTreatTech@{soilTreatTech}}
+}
+
+
+{\ttfamily \#include $<$soilTreatTech.h$>$}Inheritance diagram for soilTreatTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classsoil_treat_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsoil_treat_tech_a4c26ebd0f19485caa234d5331b440cf3}{soilTreatTech} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classsoil_treat_tech_ad59b0663ed3e4f6510c52b943e8eb028}{$\sim$soilTreatTech} ()
+\item 
+virtual void \hyperlink{classsoil_treat_tech_a43342c7563137af6f07fd4b031f3c599}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classsoil_treat_tech_a988dd9310b22be5d36a28cdaa1dcc805}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+virtual void \hyperlink{classsoil_treat_tech_aea3565eebbd55354cbee50d13c1c892a}{UpdateProducts} (bool contractor=false)
+\item 
+int \hyperlink{classsoil_treat_tech_a77cc5c86d535e4982c10ca67ecedb28a}{SameConditionsSoilTreat} (double \hyperlink{classfield_operation_tech_a4577ac12831e5d317301920b7e26de69}{area}, double \hyperlink{classfield_operation_tech_a632ea22d4eb656dc9a2e44a2e5b0864c}{distance})
+\item 
+double \hyperlink{classsoil_treat_tech_afc70675f94061c67fdcc613397b512f1}{OldCost} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classsoil_treat_tech_a8cb69be7b91ff19c7ced98d10d8a3ff5}{CalcGangHours} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classsoil_treat_tech_a82f97281d5fbea96370f73eba5b37260}{k}
+\item 
+double \hyperlink{classsoil_treat_tech_a8a452833fde1e89e811dab21c30265e6}{firstFurrow}
+\item 
+double \hyperlink{classsoil_treat_tech_aed4d8643a628c0552169d6e0b7773cbc}{markHeadland}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsoil_treat_tech_a4c26ebd0f19485caa234d5331b440cf3}{
+\index{soilTreatTech@{soilTreatTech}!soilTreatTech@{soilTreatTech}}
+\index{soilTreatTech@{soilTreatTech}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{soilTreatTech}]{\setlength{\rightskip}{0pt plus 5cm}soilTreatTech::soilTreatTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classsoil_treat_tech_a4c26ebd0f19485caa234d5331b440cf3}
+\hypertarget{classsoil_treat_tech_ad59b0663ed3e4f6510c52b943e8eb028}{
+\index{soilTreatTech@{soilTreatTech}!$\sim$soilTreatTech@{$\sim$soilTreatTech}}
+\index{$\sim$soilTreatTech@{$\sim$soilTreatTech}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{$\sim$soilTreatTech}]{\setlength{\rightskip}{0pt plus 5cm}soilTreatTech::$\sim$soilTreatTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_tech_ad59b0663ed3e4f6510c52b943e8eb028}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsoil_treat_tech_a988dd9310b22be5d36a28cdaa1dcc805}{
+\index{soilTreatTech@{soilTreatTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void soilTreatTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_tech_a988dd9310b22be5d36a28cdaa1dcc805}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classsoil_treat_tech_a8cb69be7b91ff19c7ced98d10d8a3ff5}{
+\index{soilTreatTech@{soilTreatTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void soilTreatTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classsoil_treat_tech_a8cb69be7b91ff19c7ced98d10d8a3ff5}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classsoil_treat_tech_afc70675f94061c67fdcc613397b512f1}{
+\index{soilTreatTech@{soilTreatTech}!OldCost@{OldCost}}
+\index{OldCost@{OldCost}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{OldCost}]{\setlength{\rightskip}{0pt plus 5cm}double soilTreatTech::OldCost ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_treat_tech_afc70675f94061c67fdcc613397b512f1}
+\hypertarget{classsoil_treat_tech_a43342c7563137af6f07fd4b031f3c599}{
+\index{soilTreatTech@{soilTreatTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void soilTreatTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_tech_a43342c7563137af6f07fd4b031f3c599}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classsoil_treat_tech_a77cc5c86d535e4982c10ca67ecedb28a}{
+\index{soilTreatTech@{soilTreatTech}!SameConditionsSoilTreat@{SameConditionsSoilTreat}}
+\index{SameConditionsSoilTreat@{SameConditionsSoilTreat}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{SameConditionsSoilTreat}]{\setlength{\rightskip}{0pt plus 5cm}int soilTreatTech::SameConditionsSoilTreat (double {\em area}, \/  double {\em distance})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsoil_treat_tech_a77cc5c86d535e4982c10ca67ecedb28a}
+\hypertarget{classsoil_treat_tech_aea3565eebbd55354cbee50d13c1c892a}{
+\index{soilTreatTech@{soilTreatTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void soilTreatTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsoil_treat_tech_aea3565eebbd55354cbee50d13c1c892a}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classsoil_treat_tech_a8a452833fde1e89e811dab21c30265e6}{
+\index{soilTreatTech@{soilTreatTech}!firstFurrow@{firstFurrow}}
+\index{firstFurrow@{firstFurrow}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{firstFurrow}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilTreatTech::firstFurrow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_treat_tech_a8a452833fde1e89e811dab21c30265e6}
+\hypertarget{classsoil_treat_tech_a82f97281d5fbea96370f73eba5b37260}{
+\index{soilTreatTech@{soilTreatTech}!k@{k}}
+\index{k@{k}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf soilTreatTech::k}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_treat_tech_a82f97281d5fbea96370f73eba5b37260}
+\hypertarget{classsoil_treat_tech_aed4d8643a628c0552169d6e0b7773cbc}{
+\index{soilTreatTech@{soilTreatTech}!markHeadland@{markHeadland}}
+\index{markHeadland@{markHeadland}!soilTreatTech@{soilTreatTech}}
+\subsubsection[{markHeadland}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf soilTreatTech::markHeadland}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsoil_treat_tech_aed4d8643a628c0552169d6e0b7773cbc}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{soil_treat_tech_8h}{soilTreatTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{soil_treat_tech_8cpp}{soilTreatTech.cpp}\end{DoxyCompactItemize}

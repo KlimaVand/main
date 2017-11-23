@@ -1,0 +1,170 @@
+\hypertarget{classseed}{
+\section{seed Class Reference}
+\label{classseed}\index{seed@{seed}}
+}
+
+
+{\ttfamily \#include $<$seed.h$>$}Inheritance diagram for seed::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classseed}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classseed_a62b6981b66ef380c180afac5585ef00d}{seed} ()
+\item 
+\hyperlink{classseed_a3301a5b3bcd3101215bcad5168ac3d29}{seed} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classseed_a91e6c864eb05fe0924e8e6d8392c2fbf}{seed} (const \hyperlink{classseed}{seed} \&aseed)
+\item 
+virtual \hyperlink{classseed_acab13d9e431a56786c8d4b7f50085ac8}{$\sim$seed} ()
+\item 
+void \hyperlink{classseed_afc3e85e33e9c79809a1c600e990d196a}{SetN\_\-content} (double \&aN\_\-content)
+\item 
+double \hyperlink{classseed_a677b6a35306d0e55fb71b78182cbfb15}{GetN\_\-content} (void) const 
+\item 
+double \hyperlink{classseed_a716b7477525fd7eb4cb4c7144bbb1d8c}{GetStandardDensity} (void) const 
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classseed_af52e1504b4da971919e451f53fa0802f}{operator=} (const \hyperlink{classproduct}{product} \&someSeed)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classseed_acb2c018454084660561fa623ca2ee6da}{operator+} (const \hyperlink{classproduct}{product} \&someSeed)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classseed_a950984dedb76a7de041bc2ca20a0ecdd}{operator-\/} (const \hyperlink{classproduct}{product} \&someSeed)
+\item 
+void \hyperlink{classseed_aef923afa921c9ef6b772d0ee573159f4}{showstats} (ostream $\ast$os)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classseed_a0e2e68f7724e0551b885433a1e935ebf}{clone} () const 
+\item 
+virtual void \hyperlink{classseed_a8212329dfb9f4a2bc4c8a0fe401efaf3}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classseed_aabcb716243f0c8e8c57f05cf0f140a17}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classseed_ab6eef1e64e6ab26e4d0fce13ff9c3e40}{standardDensity}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classseed_addebb9c9bc7ceb6fadd6d3a86be76168}{operator$<$$<$} (ostream \&os, const \hyperlink{classseed}{seed} \&aseed)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classseed_a62b6981b66ef380c180afac5585ef00d}{
+\index{seed@{seed}!seed@{seed}}
+\index{seed@{seed}!seed@{seed}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}seed::seed ()}}
+\label{classseed_a62b6981b66ef380c180afac5585ef00d}
+\hypertarget{classseed_a3301a5b3bcd3101215bcad5168ac3d29}{
+\index{seed@{seed}!seed@{seed}}
+\index{seed@{seed}!seed@{seed}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}seed::seed (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classseed_a3301a5b3bcd3101215bcad5168ac3d29}
+\hypertarget{classseed_a91e6c864eb05fe0924e8e6d8392c2fbf}{
+\index{seed@{seed}!seed@{seed}}
+\index{seed@{seed}!seed@{seed}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}seed::seed (const {\bf seed} \& {\em aseed})}}
+\label{classseed_a91e6c864eb05fe0924e8e6d8392c2fbf}
+\hypertarget{classseed_acab13d9e431a56786c8d4b7f50085ac8}{
+\index{seed@{seed}!$\sim$seed@{$\sim$seed}}
+\index{$\sim$seed@{$\sim$seed}!seed@{seed}}
+\subsubsection[{$\sim$seed}]{\setlength{\rightskip}{0pt plus 5cm}seed::$\sim$seed ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_acab13d9e431a56786c8d4b7f50085ac8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classseed_a0e2e68f7724e0551b885433a1e935ebf}{
+\index{seed@{seed}!clone@{clone}}
+\index{clone@{clone}!seed@{seed}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ seed::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_a0e2e68f7724e0551b885433a1e935ebf}
+
+
+Reimplemented from \hyperlink{classlive_matter_a08101ef64ee3eeec55d222bb75975370}{liveMatter}.\hypertarget{classseed_a677b6a35306d0e55fb71b78182cbfb15}{
+\index{seed@{seed}!GetN\_\-content@{GetN\_\-content}}
+\index{GetN\_\-content@{GetN\_\-content}!seed@{seed}}
+\subsubsection[{GetN\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double seed::GetN\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classseed_a677b6a35306d0e55fb71b78182cbfb15}
+\hypertarget{classseed_a716b7477525fd7eb4cb4c7144bbb1d8c}{
+\index{seed@{seed}!GetStandardDensity@{GetStandardDensity}}
+\index{GetStandardDensity@{GetStandardDensity}!seed@{seed}}
+\subsubsection[{GetStandardDensity}]{\setlength{\rightskip}{0pt plus 5cm}double seed::GetStandardDensity (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classseed_a716b7477525fd7eb4cb4c7144bbb1d8c}
+\hypertarget{classseed_aabcb716243f0c8e8c57f05cf0f140a17}{
+\index{seed@{seed}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!seed@{seed}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void seed::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classseed_aabcb716243f0c8e8c57f05cf0f140a17}
+
+
+Reimplemented from \hyperlink{classlive_matter_ab14efacc07e048507a6c3dd8d2942101}{liveMatter}.\hypertarget{classseed_acb2c018454084660561fa623ca2ee6da}{
+\index{seed@{seed}!operator+@{operator+}}
+\index{operator+@{operator+}!seed@{seed}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& seed::operator+ (const {\bf product} \& {\em someSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_acb2c018454084660561fa623ca2ee6da}
+
+
+Reimplemented from \hyperlink{classlive_matter_ae7a333e94f166a448a4b8f8b70ebe9fe}{liveMatter}.\hypertarget{classseed_a950984dedb76a7de041bc2ca20a0ecdd}{
+\index{seed@{seed}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!seed@{seed}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& seed::operator-\/ (const {\bf product} \& {\em someSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_a950984dedb76a7de041bc2ca20a0ecdd}
+
+
+Reimplemented from \hyperlink{classlive_matter_a6b8311a516ba78a7caacc80a28ec143e}{liveMatter}.\hypertarget{classseed_af52e1504b4da971919e451f53fa0802f}{
+\index{seed@{seed}!operator=@{operator=}}
+\index{operator=@{operator=}!seed@{seed}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& seed::operator= (const {\bf product} \& {\em someSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_af52e1504b4da971919e451f53fa0802f}
+
+
+Reimplemented from \hyperlink{classlive_matter_a3b1eb79d0f248a4459874db44c335cac}{liveMatter}.\hypertarget{classseed_a8212329dfb9f4a2bc4c8a0fe401efaf3}{
+\index{seed@{seed}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!seed@{seed}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void seed::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_a8212329dfb9f4a2bc4c8a0fe401efaf3}
+
+
+Reimplemented from \hyperlink{classlive_matter_acaf1db5a1bb2fc9beb79002771f0282c}{liveMatter}.\hypertarget{classseed_afc3e85e33e9c79809a1c600e990d196a}{
+\index{seed@{seed}!SetN\_\-content@{SetN\_\-content}}
+\index{SetN\_\-content@{SetN\_\-content}!seed@{seed}}
+\subsubsection[{SetN\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void seed::SetN\_\-content (double \& {\em aN\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classseed_afc3e85e33e9c79809a1c600e990d196a}
+\hypertarget{classseed_aef923afa921c9ef6b772d0ee573159f4}{
+\index{seed@{seed}!showstats@{showstats}}
+\index{showstats@{showstats}!seed@{seed}}
+\subsubsection[{showstats}]{\setlength{\rightskip}{0pt plus 5cm}void seed::showstats (ostream $\ast$ {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classseed_aef923afa921c9ef6b772d0ee573159f4}
+
+
+Reimplemented from \hyperlink{classproduct_a1151ea416ab90047f8d087be57a6d7b1}{product}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classseed_addebb9c9bc7ceb6fadd6d3a86be76168}{
+\index{seed@{seed}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!seed@{seed}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf seed} \& {\em aseed})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classseed_addebb9c9bc7ceb6fadd6d3a86be76168}
+
+
+Reimplemented from \hyperlink{classlive_matter_a694b548b571c88f71f2c7cc75b47d0fb}{liveMatter}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classseed_ab6eef1e64e6ab26e4d0fce13ff9c3e40}{
+\index{seed@{seed}!standardDensity@{standardDensity}}
+\index{standardDensity@{standardDensity}!seed@{seed}}
+\subsubsection[{standardDensity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf seed::standardDensity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classseed_ab6eef1e64e6ab26e4d0fce13ff9c3e40}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{seed_8h}{seed.h}\item 
+C:/main/trunk/src/products/\hyperlink{seed_8cpp}{seed.cpp}\end{DoxyCompactItemize}

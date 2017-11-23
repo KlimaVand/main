@@ -1,0 +1,127 @@
+\hypertarget{class_a_l_f_a_m}{
+\section{ALFAM Class Reference}
+\label{class_a_l_f_a_m}\index{ALFAM@{ALFAM}}
+}
+
+
+{\ttfamily \#include $<$ALFAM.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_l_f_a_m_a47d3c530b41e72e8c529ec2cf4abce6a}{ALFAM} ()
+\item 
+void \hyperlink{class_a_l_f_a_m_ae4afb7f15146779a48856bc9c2b6998c}{initialise} (int soilWet, double aveAirTemp, double aveWindspeed, int manureType, double initDM, double initTAN, double appRate, int appMeth, double anexposureTime)
+\begin{DoxyCompactList}\small\item\em initialise emiting area \item\end{DoxyCompactList}\item 
+double \hyperlink{class_a_l_f_a_m_a62aa5a49fec33e4706b60b907e7170f3}{ALFAM\_\-volatilisation} (double duration)
+\begin{DoxyCompactList}\small\item\em calculate emission during a \hyperlink{classperiod}{period} (hours) \item\end{DoxyCompactList}\item 
+int \hyperlink{class_a_l_f_a_m_ac888410a9da9ca21e48daa4abc468614}{GetALFAMApplicCode} (int OpCode)
+\begin{DoxyCompactList}\small\item\em Get type of application method used. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_a_l_f_a_m_a5e3967d1a434cf9367281cfe881c65d6}{GetIsfinished} ()
+\begin{DoxyCompactList}\small\item\em returns true if area has finished emiting \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_a_l_f_a_m_acc5733b478c6b2ff521d5a6c6de62093}{TAN}
+\begin{DoxyCompactList}\small\item\em initial TAN content (gN/kg \hyperlink{classmanure}{manure}) \item\end{DoxyCompactList}\item 
+double \hyperlink{class_a_l_f_a_m_a769eebe5366f8aeb9d1fec89e25b700d}{applicRate}
+\begin{DoxyCompactList}\small\item\em application rate (tonnes/ha) \item\end{DoxyCompactList}\item 
+double \hyperlink{class_a_l_f_a_m_a626af05172d7fc201f02eedcce3a6956}{km}
+\begin{DoxyCompactList}\small\item\em time for half of Nmax to have been emitted (hours) \item\end{DoxyCompactList}\item 
+double \hyperlink{class_a_l_f_a_m_a030ebc40137f179126b288109c88a01e}{Nmax}
+\begin{DoxyCompactList}\small\item\em proportion of TAN that is emitted at time = infinity \item\end{DoxyCompactList}\item 
+double \hyperlink{class_a_l_f_a_m_a533d0dbe340ecc6aebb7b2ff33a21cd4}{timeElapsed}
+\begin{DoxyCompactList}\small\item\em time since application occurred \item\end{DoxyCompactList}\item 
+double \hyperlink{class_a_l_f_a_m_a81ec0b0c6ed35efb1eaf48361ce984ff}{exposureTime}
+\begin{DoxyCompactList}\small\item\em time from application before ploughing or harrowing (hours) \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a \hyperlink{classtest}{test} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_l_f_a_m_a47d3c530b41e72e8c529ec2cf4abce6a}{
+\index{ALFAM@{ALFAM}!ALFAM@{ALFAM}}
+\index{ALFAM@{ALFAM}!ALFAM@{ALFAM}}
+\subsubsection[{ALFAM}]{\setlength{\rightskip}{0pt plus 5cm}ALFAM::ALFAM ()}}
+\label{class_a_l_f_a_m_a47d3c530b41e72e8c529ec2cf4abce6a}
+constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_l_f_a_m_a62aa5a49fec33e4706b60b907e7170f3}{
+\index{ALFAM@{ALFAM}!ALFAM\_\-volatilisation@{ALFAM\_\-volatilisation}}
+\index{ALFAM\_\-volatilisation@{ALFAM\_\-volatilisation}!ALFAM@{ALFAM}}
+\subsubsection[{ALFAM\_\-volatilisation}]{\setlength{\rightskip}{0pt plus 5cm}double ALFAM::ALFAM\_\-volatilisation (double {\em duration})}}
+\label{class_a_l_f_a_m_a62aa5a49fec33e4706b60b907e7170f3}
+
+
+calculate emission during a \hyperlink{classperiod}{period} (hours) \hypertarget{class_a_l_f_a_m_ac888410a9da9ca21e48daa4abc468614}{
+\index{ALFAM@{ALFAM}!GetALFAMApplicCode@{GetALFAMApplicCode}}
+\index{GetALFAMApplicCode@{GetALFAMApplicCode}!ALFAM@{ALFAM}}
+\subsubsection[{GetALFAMApplicCode}]{\setlength{\rightskip}{0pt plus 5cm}int ALFAM::GetALFAMApplicCode (int {\em OpCode})}}
+\label{class_a_l_f_a_m_ac888410a9da9ca21e48daa4abc468614}
+
+
+Get type of application method used. \hypertarget{class_a_l_f_a_m_a5e3967d1a434cf9367281cfe881c65d6}{
+\index{ALFAM@{ALFAM}!GetIsfinished@{GetIsfinished}}
+\index{GetIsfinished@{GetIsfinished}!ALFAM@{ALFAM}}
+\subsubsection[{GetIsfinished}]{\setlength{\rightskip}{0pt plus 5cm}bool ALFAM::GetIsfinished ()}}
+\label{class_a_l_f_a_m_a5e3967d1a434cf9367281cfe881c65d6}
+
+
+returns true if area has finished emiting \hypertarget{class_a_l_f_a_m_ae4afb7f15146779a48856bc9c2b6998c}{
+\index{ALFAM@{ALFAM}!initialise@{initialise}}
+\index{initialise@{initialise}!ALFAM@{ALFAM}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}void ALFAM::initialise (int {\em soilWet}, \/  double {\em aveAirTemp}, \/  double {\em aveWindspeed}, \/  int {\em manureType}, \/  double {\em initDM}, \/  double {\em initTAN}, \/  double {\em appRate}, \/  int {\em appMeth}, \/  double {\em anexposureTime})}}
+\label{class_a_l_f_a_m_ae4afb7f15146779a48856bc9c2b6998c}
+
+
+initialise emiting area 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_a_l_f_a_m_a769eebe5366f8aeb9d1fec89e25b700d}{
+\index{ALFAM@{ALFAM}!applicRate@{applicRate}}
+\index{applicRate@{applicRate}!ALFAM@{ALFAM}}
+\subsubsection[{applicRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ALFAM::applicRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_a_l_f_a_m_a769eebe5366f8aeb9d1fec89e25b700d}
+
+
+application rate (tonnes/ha) \hypertarget{class_a_l_f_a_m_a81ec0b0c6ed35efb1eaf48361ce984ff}{
+\index{ALFAM@{ALFAM}!exposureTime@{exposureTime}}
+\index{exposureTime@{exposureTime}!ALFAM@{ALFAM}}
+\subsubsection[{exposureTime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ALFAM::exposureTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_a_l_f_a_m_a81ec0b0c6ed35efb1eaf48361ce984ff}
+
+
+time from application before ploughing or harrowing (hours) \hypertarget{class_a_l_f_a_m_a626af05172d7fc201f02eedcce3a6956}{
+\index{ALFAM@{ALFAM}!km@{km}}
+\index{km@{km}!ALFAM@{ALFAM}}
+\subsubsection[{km}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ALFAM::km}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_a_l_f_a_m_a626af05172d7fc201f02eedcce3a6956}
+
+
+time for half of Nmax to have been emitted (hours) \hypertarget{class_a_l_f_a_m_a030ebc40137f179126b288109c88a01e}{
+\index{ALFAM@{ALFAM}!Nmax@{Nmax}}
+\index{Nmax@{Nmax}!ALFAM@{ALFAM}}
+\subsubsection[{Nmax}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ALFAM::Nmax}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_a_l_f_a_m_a030ebc40137f179126b288109c88a01e}
+
+
+proportion of TAN that is emitted at time = infinity \hypertarget{class_a_l_f_a_m_acc5733b478c6b2ff521d5a6c6de62093}{
+\index{ALFAM@{ALFAM}!TAN@{TAN}}
+\index{TAN@{TAN}!ALFAM@{ALFAM}}
+\subsubsection[{TAN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ALFAM::TAN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_a_l_f_a_m_acc5733b478c6b2ff521d5a6c6de62093}
+
+
+initial TAN content (gN/kg \hyperlink{classmanure}{manure}) \hypertarget{class_a_l_f_a_m_a533d0dbe340ecc6aebb7b2ff33a21cd4}{
+\index{ALFAM@{ALFAM}!timeElapsed@{timeElapsed}}
+\index{timeElapsed@{timeElapsed}!ALFAM@{ALFAM}}
+\subsubsection[{timeElapsed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ALFAM::timeElapsed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_a_l_f_a_m_a533d0dbe340ecc6aebb7b2ff33a21cd4}
+
+
+time since application occurred 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/\hyperlink{_a_l_f_a_m_8h}{ALFAM.h}\item 
+C:/main/trunk/src/fields/\hyperlink{_a_l_f_a_m_8cpp}{ALFAM.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\hypertarget{classstatic_barley_pea}{
+\section{staticBarleyPea Class Reference}
+\label{classstatic_barley_pea}\index{staticBarleyPea@{staticBarleyPea}}
+}
+
+
+{\ttfamily \#include $<$staticBarleyPea.h$>$}Inheritance diagram for staticBarleyPea::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_barley_pea}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_barley_pea_a9930f4c80483ceb0b35eaf9b5e708783}{staticBarleyPea} ()
+\item 
+virtual int \hyperlink{classstatic_barley_pea_a98daf5a43966b97910b34fea072f5260}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_barley_pea_a34661b51fa85b70f7178d9fc63739139}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_barley_pea_a5bdd249b2d75283a8bd007bf338525a6}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual void \hyperlink{classstatic_barley_pea_ae0050aa14a078ae8fe7b047cd1f22465}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\item 
+virtual int \hyperlink{classstatic_barley_pea_ac33dd31e35056a4816bb1bec4613550d}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_barley_pea_a1e2e6e28ebc8e1a001aa2dfd7de96204}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_barley_pea_a8b1a6d68f92bbd24b79e8a3aaafc9cb1}{NitrogenAmount} (int JB\_\-NO, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_barley_pea_a49038b3b4434096d4cf1e64c241ac214}{ExpectedYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_barley_pea_a67ba0f94cf104e0a3d547f776399062f}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_barley_pea_a0d36ad23dbbf416950d11a5c933bc029}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_barley_pea_a8c7afa184fb792692e23bfa854214c9b}{ExtraNRelease\_\-} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea96fa653d76410eb7b329bc3e1bd2d41a}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_barley_pea_a680507d0428387688395e055ebba3bceaaeb9eb82d16d51a4e6b7f400379ee6b0}{Nitrogen\_\-levels} = 1, 
+\hyperlink{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea55500289d24592dea2ca9aa692c94c2d}{Sand\_\-max\_\-N} = 0, 
+\hyperlink{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea0d9ad46ef7e4772cc6f8a2995f1cedde}{Clay\_\-max\_\-N} = 0
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_barley_pea_a680507d0428387688395e055ebba3bce}{
+\subsubsection[{"@15}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_barley_pea_a680507d0428387688395e055ebba3bce}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticBarleyPea@{staticBarleyPea}}\index{staticBarleyPea@{staticBarleyPea}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea96fa653d76410eb7b329bc3e1bd2d41a}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea96fa653d76410eb7b329bc3e1bd2d41a}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticBarleyPea@{staticBarleyPea}}\index{staticBarleyPea@{staticBarleyPea}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_barley_pea_a680507d0428387688395e055ebba3bceaaeb9eb82d16d51a4e6b7f400379ee6b0}{
+Nitrogen\_\-levels}
+\label{classstatic_barley_pea_a680507d0428387688395e055ebba3bceaaeb9eb82d16d51a4e6b7f400379ee6b0}
+}]\index{Sand\_\-max\_\-N@{Sand\_\-max\_\-N}!staticBarleyPea@{staticBarleyPea}}\index{staticBarleyPea@{staticBarleyPea}!Sand\_\-max\_\-N@{Sand\_\-max\_\-N}}\item[{\em 
+\hypertarget{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea55500289d24592dea2ca9aa692c94c2d}{
+Sand\_\-max\_\-N}
+\label{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea55500289d24592dea2ca9aa692c94c2d}
+}]\index{Clay\_\-max\_\-N@{Clay\_\-max\_\-N}!staticBarleyPea@{staticBarleyPea}}\index{staticBarleyPea@{staticBarleyPea}!Clay\_\-max\_\-N@{Clay\_\-max\_\-N}}\item[{\em 
+\hypertarget{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea0d9ad46ef7e4772cc6f8a2995f1cedde}{
+Clay\_\-max\_\-N}
+\label{classstatic_barley_pea_a680507d0428387688395e055ebba3bcea0d9ad46ef7e4772cc6f8a2995f1cedde}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_barley_pea_a9930f4c80483ceb0b35eaf9b5e708783}{
+\index{staticBarleyPea@{staticBarleyPea}!staticBarleyPea@{staticBarleyPea}}
+\index{staticBarleyPea@{staticBarleyPea}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{staticBarleyPea}]{\setlength{\rightskip}{0pt plus 5cm}staticBarleyPea::staticBarleyPea ()}}
+\label{classstatic_barley_pea_a9930f4c80483ceb0b35eaf9b5e708783}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_barley_pea_a49038b3b4434096d4cf1e64c241ac214}{
+\index{staticBarleyPea@{staticBarleyPea}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticBarleyPea::ExpectedYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a49038b3b4434096d4cf1e64c241ac214}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_barley_pea_a8c7afa184fb792692e23bfa854214c9b}{
+\index{staticBarleyPea@{staticBarleyPea}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticBarleyPea::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a8c7afa184fb792692e23bfa854214c9b}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_barley_pea_a5bdd249b2d75283a8bd007bf338525a6}{
+\index{staticBarleyPea@{staticBarleyPea}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticBarleyPea::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a5bdd249b2d75283a8bd007bf338525a6}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_barley_pea_a8b1a6d68f92bbd24b79e8a3aaafc9cb1}{
+\index{staticBarleyPea@{staticBarleyPea}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticBarleyPea::NitrogenAmount (int {\em JB\_\-NO}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a8b1a6d68f92bbd24b79e8a3aaafc9cb1}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_barley_pea_a1e2e6e28ebc8e1a001aa2dfd7de96204}{
+\index{staticBarleyPea@{staticBarleyPea}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticBarleyPea::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a1e2e6e28ebc8e1a001aa2dfd7de96204}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_barley_pea_ac33dd31e35056a4816bb1bec4613550d}{
+\index{staticBarleyPea@{staticBarleyPea}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticBarleyPea::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_ac33dd31e35056a4816bb1bec4613550d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_barley_pea_a67ba0f94cf104e0a3d547f776399062f}{
+\index{staticBarleyPea@{staticBarleyPea}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticBarleyPea::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a67ba0f94cf104e0a3d547f776399062f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_barley_pea_a0d36ad23dbbf416950d11a5c933bc029}{
+\index{staticBarleyPea@{staticBarleyPea}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticBarleyPea::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a0d36ad23dbbf416950d11a5c933bc029}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_barley_pea_a34661b51fa85b70f7178d9fc63739139}{
+\index{staticBarleyPea@{staticBarleyPea}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticBarleyPea::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a34661b51fa85b70f7178d9fc63739139}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_barley_pea_a98daf5a43966b97910b34fea072f5260}{
+\index{staticBarleyPea@{staticBarleyPea}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticBarleyPea::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_barley_pea_a98daf5a43966b97910b34fea072f5260}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_barley_pea_ae0050aa14a078ae8fe7b047cd1f22465}{
+\index{staticBarleyPea@{staticBarleyPea}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticBarleyPea@{staticBarleyPea}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticBarleyPea::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_barley_pea_ae0050aa14a078ae8fe7b047cd1f22465}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_barley_pea_8h}{staticBarleyPea.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_barley_pea_8cpp}{staticBarleyPea.cpp}\end{DoxyCompactItemize}

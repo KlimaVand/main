@@ -1,0 +1,230 @@
+\hypertarget{classdiet}{
+\section{diet Class Reference}
+\label{classdiet}\index{diet@{diet}}
+}
+
+
+{\ttfamily \#include $<$diet.h$>$}Inheritance diagram for diet::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classdiet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdiet_a3316a2f0434fba4fdfcfc32bcbae57f9}{diet} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual \hyperlink{classdiet}{diet} $\ast$ \hyperlink{classdiet_aeb5ccbac2a03f2eff34a332699bd6fb0}{clone} () const 
+\item 
+\hyperlink{classdiet_a7aa7b6bf6b7849a2c809b3937afef657}{diet} ()
+\item 
+\hyperlink{classdiet_a84ae4cd84a77e5f6b7ca487cc8083ad4}{$\sim$diet} ()
+\item 
+\hyperlink{classbs_time}{bsTime} $\ast$ \hyperlink{classdiet_a66183f7ce65baa947f8aa77fa9521a65}{GetstartDate} ()
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classdiet_a985a9a46ad9be5ead29bc69e736934da}{GetnormalfeedItemList} ()
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classdiet_afe8f51300ef50da0919c8a1b95e2cdee}{GetdeficiencyfeedItemList} ()
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classdiet_a0d62c160e28ce12200c5bed5eede85f3}{GetsurplusfeedItemList} ()
+\item 
+\hyperlink{classfeed__resource}{feed\_\-resource} $\ast$ \hyperlink{classdiet_a813b9f27c3b008eb71400a79a7495d8c}{GetgrazedItem} ()
+\item 
+double \hyperlink{classdiet_a19917e60acd3811c778cc304813b2031}{GetHoused} ()
+\item 
+void \hyperlink{classdiet_af16ff6316a93c7e9c45fed7e0a7aaaaa}{DailyUpdate} ()
+\item 
+void \hyperlink{classdiet_ad0f3531dcbf70d82e8af546c17f83cee}{ReadParameters} (fstream $\ast$infile, bool isAutoFeed)
+\item 
+bool \hyperlink{classdiet_a41b73f38d9233f3c233b697378ebfafd}{IsGrazing} ()
+\item 
+bool \hyperlink{classdiet_a9a9f6b947cd297e0f800e2116ae17b82}{GetzeroGrazing} ()
+\item 
+\hyperlink{classfeed__resource}{feed\_\-resource} $\ast$ \hyperlink{classdiet_a0857655a60f21eb4df63f768f103aee6}{LoadFeedItem} (bool autoFeed)
+\item 
+double \hyperlink{classdiet_a138e712affb55216103df24b015ab279}{GetGrazingFeedRequirement} (bool zeroGrazed)
+\item 
+void \hyperlink{classdiet_ae1dd65fbcf12c6f7f2c576896935e293}{ShowDiet} (fstream $\ast$fs, bool header)
+\item 
+void \hyperlink{classdiet_a6745f2d95c6f4c86857f4490086112bd}{GetRoughageRequired} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$aList, double numberOfAnimals)
+\item 
+double \hyperlink{classdiet_a78d45d92896f9dffca096c03809338be}{GetGrassSilageRequired} (double numberOfAnimals)
+\item 
+double \hyperlink{classdiet_ae87ac77e21a845e5ea1d671a85703761}{GetSilageRequired} (double numberOfAnimals, int startCode, int endCode)
+\item 
+void \hyperlink{classdiet_a2232697991c7292a66bf920eacd8f8de}{ClearLists} ()
+\item 
+void \hyperlink{classdiet_a8444b527fbd89b0c61ebff4413d53516}{CreateDefaultDiets} (double differentiation)
+\item 
+double \hyperlink{classdiet_a90e75f05792ef5fe58c8a18be70af856}{GetpropRoughage} ()
+\item 
+double \hyperlink{classdiet_a6673b1f0e3b2b033b73c16a7e096ee87}{GetpropGrazed} ()
+\item 
+void \hyperlink{classdiet_a0abc110d56e3c840390ebee47106edf9}{SetpropGrazed} (double aVal)
+\item 
+bool \hyperlink{classdiet_a6c9fcde70c834198f2f67b361b93313b}{GetautoFeed} ()
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classdiet_ade50672d858563540e1589b857c6d4fb}{FindConservedRoughageFeed} ()
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classdiet_a4ea8bc5fea836aedba836343ab6b5376}{FindConcentrateFeed} ()
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classdiet_af057336f6bb49b8d919fcf4d9379d584}{FindGrazedFeed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdiet_a3316a2f0434fba4fdfcfc32bcbae57f9}{
+\index{diet@{diet}!diet@{diet}}
+\index{diet@{diet}!diet@{diet}}
+\subsubsection[{diet}]{\setlength{\rightskip}{0pt plus 5cm}diet::diet (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classdiet_a3316a2f0434fba4fdfcfc32bcbae57f9}
+constructor \hypertarget{classdiet_a7aa7b6bf6b7849a2c809b3937afef657}{
+\index{diet@{diet}!diet@{diet}}
+\index{diet@{diet}!diet@{diet}}
+\subsubsection[{diet}]{\setlength{\rightskip}{0pt plus 5cm}diet::diet ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a7aa7b6bf6b7849a2c809b3937afef657}
+\hypertarget{classdiet_a84ae4cd84a77e5f6b7ca487cc8083ad4}{
+\index{diet@{diet}!$\sim$diet@{$\sim$diet}}
+\index{$\sim$diet@{$\sim$diet}!diet@{diet}}
+\subsubsection[{$\sim$diet}]{\setlength{\rightskip}{0pt plus 5cm}diet::$\sim$diet ()}}
+\label{classdiet_a84ae4cd84a77e5f6b7ca487cc8083ad4}
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classdiet_a2232697991c7292a66bf920eacd8f8de}{
+\index{diet@{diet}!ClearLists@{ClearLists}}
+\index{ClearLists@{ClearLists}!diet@{diet}}
+\subsubsection[{ClearLists}]{\setlength{\rightskip}{0pt plus 5cm}void diet::ClearLists ()}}
+\label{classdiet_a2232697991c7292a66bf920eacd8f8de}
+Empty all list \hypertarget{classdiet_aeb5ccbac2a03f2eff34a332699bd6fb0}{
+\index{diet@{diet}!clone@{clone}}
+\index{clone@{clone}!diet@{diet}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf diet} $\ast$ diet::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdiet_aeb5ccbac2a03f2eff34a332699bd6fb0}
+clone \hypertarget{classdiet_a8444b527fbd89b0c61ebff4413d53516}{
+\index{diet@{diet}!CreateDefaultDiets@{CreateDefaultDiets}}
+\index{CreateDefaultDiets@{CreateDefaultDiets}!diet@{diet}}
+\subsubsection[{CreateDefaultDiets}]{\setlength{\rightskip}{0pt plus 5cm}void diet::CreateDefaultDiets (double {\em differentiation})}}
+\label{classdiet_a8444b527fbd89b0c61ebff4413d53516}
+\hypertarget{classdiet_af16ff6316a93c7e9c45fed7e0a7aaaaa}{
+\index{diet@{diet}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!diet@{diet}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void diet::DailyUpdate (void)}}
+\label{classdiet_af16ff6316a93c7e9c45fed7e0a7aaaaa}
+Empty Class. Why do we have it? \hypertarget{classdiet_a4ea8bc5fea836aedba836343ab6b5376}{
+\index{diet@{diet}!FindConcentrateFeed@{FindConcentrateFeed}}
+\index{FindConcentrateFeed@{FindConcentrateFeed}!diet@{diet}}
+\subsubsection[{FindConcentrateFeed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ diet::FindConcentrateFeed ()}}
+\label{classdiet_a4ea8bc5fea836aedba836343ab6b5376}
+Find the first instance of Concentrate in normalfeedItemList \hypertarget{classdiet_ade50672d858563540e1589b857c6d4fb}{
+\index{diet@{diet}!FindConservedRoughageFeed@{FindConservedRoughageFeed}}
+\index{FindConservedRoughageFeed@{FindConservedRoughageFeed}!diet@{diet}}
+\subsubsection[{FindConservedRoughageFeed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ diet::FindConservedRoughageFeed ()}}
+\label{classdiet_ade50672d858563540e1589b857c6d4fb}
+Find the first instance of roughage in normalfeedItemList \hypertarget{classdiet_af057336f6bb49b8d919fcf4d9379d584}{
+\index{diet@{diet}!FindGrazedFeed@{FindGrazedFeed}}
+\index{FindGrazedFeed@{FindGrazedFeed}!diet@{diet}}
+\subsubsection[{FindGrazedFeed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ diet::FindGrazedFeed ()}}
+\label{classdiet_af057336f6bb49b8d919fcf4d9379d584}
+\hypertarget{classdiet_a6c9fcde70c834198f2f67b361b93313b}{
+\index{diet@{diet}!GetautoFeed@{GetautoFeed}}
+\index{GetautoFeed@{GetautoFeed}!diet@{diet}}
+\subsubsection[{GetautoFeed}]{\setlength{\rightskip}{0pt plus 5cm}bool diet::GetautoFeed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a6c9fcde70c834198f2f67b361b93313b}
+\hypertarget{classdiet_afe8f51300ef50da0919c8a1b95e2cdee}{
+\index{diet@{diet}!GetdeficiencyfeedItemList@{GetdeficiencyfeedItemList}}
+\index{GetdeficiencyfeedItemList@{GetdeficiencyfeedItemList}!diet@{diet}}
+\subsubsection[{GetdeficiencyfeedItemList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf product}$>$$\ast$ diet::GetdeficiencyfeedItemList ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_afe8f51300ef50da0919c8a1b95e2cdee}
+\hypertarget{classdiet_a78d45d92896f9dffca096c03809338be}{
+\index{diet@{diet}!GetGrassSilageRequired@{GetGrassSilageRequired}}
+\index{GetGrassSilageRequired@{GetGrassSilageRequired}!diet@{diet}}
+\subsubsection[{GetGrassSilageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double diet::GetGrassSilageRequired (double {\em numberOfAnimals})}}
+\label{classdiet_a78d45d92896f9dffca096c03809338be}
+return the amount of Silage multiplier by numberOfAnimals \hypertarget{classdiet_a813b9f27c3b008eb71400a79a7495d8c}{
+\index{diet@{diet}!GetgrazedItem@{GetgrazedItem}}
+\index{GetgrazedItem@{GetgrazedItem}!diet@{diet}}
+\subsubsection[{GetgrazedItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feed\_\-resource}$\ast$ diet::GetgrazedItem ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a813b9f27c3b008eb71400a79a7495d8c}
+\hypertarget{classdiet_a138e712affb55216103df24b015ab279}{
+\index{diet@{diet}!GetGrazingFeedRequirement@{GetGrazingFeedRequirement}}
+\index{GetGrazingFeedRequirement@{GetGrazingFeedRequirement}!diet@{diet}}
+\subsubsection[{GetGrazingFeedRequirement}]{\setlength{\rightskip}{0pt plus 5cm}double diet::GetGrazingFeedRequirement (bool {\em zeroGrazed})}}
+\label{classdiet_a138e712affb55216103df24b015ab279}
+\hypertarget{classdiet_a19917e60acd3811c778cc304813b2031}{
+\index{diet@{diet}!GetHoused@{GetHoused}}
+\index{GetHoused@{GetHoused}!diet@{diet}}
+\subsubsection[{GetHoused}]{\setlength{\rightskip}{0pt plus 5cm}double diet::GetHoused ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a19917e60acd3811c778cc304813b2031}
+\hypertarget{classdiet_a985a9a46ad9be5ead29bc69e736934da}{
+\index{diet@{diet}!GetnormalfeedItemList@{GetnormalfeedItemList}}
+\index{GetnormalfeedItemList@{GetnormalfeedItemList}!diet@{diet}}
+\subsubsection[{GetnormalfeedItemList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf product}$>$$\ast$ diet::GetnormalfeedItemList ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a985a9a46ad9be5ead29bc69e736934da}
+\hypertarget{classdiet_a6673b1f0e3b2b033b73c16a7e096ee87}{
+\index{diet@{diet}!GetpropGrazed@{GetpropGrazed}}
+\index{GetpropGrazed@{GetpropGrazed}!diet@{diet}}
+\subsubsection[{GetpropGrazed}]{\setlength{\rightskip}{0pt plus 5cm}double diet::GetpropGrazed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a6673b1f0e3b2b033b73c16a7e096ee87}
+\hypertarget{classdiet_a90e75f05792ef5fe58c8a18be70af856}{
+\index{diet@{diet}!GetpropRoughage@{GetpropRoughage}}
+\index{GetpropRoughage@{GetpropRoughage}!diet@{diet}}
+\subsubsection[{GetpropRoughage}]{\setlength{\rightskip}{0pt plus 5cm}double diet::GetpropRoughage ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a90e75f05792ef5fe58c8a18be70af856}
+\hypertarget{classdiet_a6745f2d95c6f4c86857f4490086112bd}{
+\index{diet@{diet}!GetRoughageRequired@{GetRoughageRequired}}
+\index{GetRoughageRequired@{GetRoughageRequired}!diet@{diet}}
+\subsubsection[{GetRoughageRequired}]{\setlength{\rightskip}{0pt plus 5cm}void diet::GetRoughageRequired ({\bf linkList}$<$ {\bf product} $>$ $\ast$ {\em aList}, \/  double {\em numberOfAnimals})}}
+\label{classdiet_a6745f2d95c6f4c86857f4490086112bd}
+If normalfeedItemList and aList have the same \hyperlink{classitem}{item} that \hyperlink{classitem}{item} in normalfeedItemList's amount would be updated \hypertarget{classdiet_ae87ac77e21a845e5ea1d671a85703761}{
+\index{diet@{diet}!GetSilageRequired@{GetSilageRequired}}
+\index{GetSilageRequired@{GetSilageRequired}!diet@{diet}}
+\subsubsection[{GetSilageRequired}]{\setlength{\rightskip}{0pt plus 5cm}double diet::GetSilageRequired (double {\em numberOfAnimals}, \/  int {\em startCode}, \/  int {\em endCode})}}
+\label{classdiet_ae87ac77e21a845e5ea1d671a85703761}
+\hypertarget{classdiet_a66183f7ce65baa947f8aa77fa9521a65}{
+\index{diet@{diet}!GetstartDate@{GetstartDate}}
+\index{GetstartDate@{GetstartDate}!diet@{diet}}
+\subsubsection[{GetstartDate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bsTime}$\ast$ diet::GetstartDate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a66183f7ce65baa947f8aa77fa9521a65}
+\hypertarget{classdiet_a0d62c160e28ce12200c5bed5eede85f3}{
+\index{diet@{diet}!GetsurplusfeedItemList@{GetsurplusfeedItemList}}
+\index{GetsurplusfeedItemList@{GetsurplusfeedItemList}!diet@{diet}}
+\subsubsection[{GetsurplusfeedItemList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf product}$>$$\ast$ diet::GetsurplusfeedItemList ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a0d62c160e28ce12200c5bed5eede85f3}
+\hypertarget{classdiet_a9a9f6b947cd297e0f800e2116ae17b82}{
+\index{diet@{diet}!GetzeroGrazing@{GetzeroGrazing}}
+\index{GetzeroGrazing@{GetzeroGrazing}!diet@{diet}}
+\subsubsection[{GetzeroGrazing}]{\setlength{\rightskip}{0pt plus 5cm}bool diet::GetzeroGrazing ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a9a9f6b947cd297e0f800e2116ae17b82}
+\hypertarget{classdiet_a41b73f38d9233f3c233b697378ebfafd}{
+\index{diet@{diet}!IsGrazing@{IsGrazing}}
+\index{IsGrazing@{IsGrazing}!diet@{diet}}
+\subsubsection[{IsGrazing}]{\setlength{\rightskip}{0pt plus 5cm}bool diet::IsGrazing ()}}
+\label{classdiet_a41b73f38d9233f3c233b697378ebfafd}
+Grazing or not \hypertarget{classdiet_a0857655a60f21eb4df63f768f103aee6}{
+\index{diet@{diet}!LoadFeedItem@{LoadFeedItem}}
+\index{LoadFeedItem@{LoadFeedItem}!diet@{diet}}
+\subsubsection[{LoadFeedItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feed\_\-resource} $\ast$ diet::LoadFeedItem (bool {\em autoFeed})}}
+\label{classdiet_a0857655a60f21eb4df63f768f103aee6}
+\hypertarget{classdiet_ad0f3531dcbf70d82e8af546c17f83cee}{
+\index{diet@{diet}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!diet@{diet}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void diet::ReadParameters (fstream $\ast$ {\em infile}, \/  bool {\em isAutoFeed})}}
+\label{classdiet_ad0f3531dcbf70d82e8af546c17f83cee}
+Initialize \hyperlink{classdiet}{diet} from files \hypertarget{classdiet_a0abc110d56e3c840390ebee47106edf9}{
+\index{diet@{diet}!SetpropGrazed@{SetpropGrazed}}
+\index{SetpropGrazed@{SetpropGrazed}!diet@{diet}}
+\subsubsection[{SetpropGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void diet::SetpropGrazed (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdiet_a0abc110d56e3c840390ebee47106edf9}
+\hypertarget{classdiet_ae1dd65fbcf12c6f7f2c576896935e293}{
+\index{diet@{diet}!ShowDiet@{ShowDiet}}
+\index{ShowDiet@{ShowDiet}!diet@{diet}}
+\subsubsection[{ShowDiet}]{\setlength{\rightskip}{0pt plus 5cm}void diet::ShowDiet (fstream $\ast$ {\em fs}, \/  bool {\em header})}}
+\label{classdiet_ae1dd65fbcf12c6f7f2c576896935e293}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{diet_8h}{diet.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{diet_8cpp}{diet.cpp}\end{DoxyCompactItemize}

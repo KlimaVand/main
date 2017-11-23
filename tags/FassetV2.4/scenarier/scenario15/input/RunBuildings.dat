@@ -1,0 +1,20 @@
+[Store(0)]	
+Alias	Default
+Area	800
+[Slurrystore(0)]	
+Alias	Slurrystore
+StorageCapacity	270
+[CattleHousing(0)]	
+Alias	DairyHouse
+[CattleHousing(0).Section(0)]	
+Alias	Milkers
+Contains	DAIRY
+[CattleHousing(0).Section(0).floor(0)]	
+Alias	MilkersFloor
+ManureToName	CattleHousing(0).inhouse
+ManureToIndex	0
+[CattleHousing(0).inhouse(0)]	
+Alias	Slurrypit
+ManureToName	Slurrystore
+ManureToIndex	0
+[end]

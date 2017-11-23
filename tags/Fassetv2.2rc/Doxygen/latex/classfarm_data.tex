@@ -1,0 +1,298 @@
+\hypertarget{classfarm_data}{
+\section{farmData Class Reference}
+\label{classfarm_data}\index{farmData@{farmData}}
+}
+
+
+{\ttfamily \#include $<$farmData.h$>$}Inheritance diagram for farmData::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classfarm_data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classfarm_data_a91709d465272ff30629fe34c3584229f}{getpigfarm} ()
+\item 
+bool \hyperlink{classfarm_data_a02a60e838e3e3056ca5ba983f3ec874f}{getdairyfarm} ()
+\item 
+bool \hyperlink{classfarm_data_adc3da31ffca5aee7c893d112d8374be8}{getbeeffarm} ()
+\item 
+bool \hyperlink{classfarm_data_aa0c2ad7153088adff0e86179ec06da19}{getSowsKnowledge} ()
+\item 
+bool \hyperlink{classfarm_data_abb4c880543b25ffdd508e20723362cba}{getBaconersKnowledge} ()
+\item 
+bool \hyperlink{classfarm_data_aa209bdab6aefb7de3d008df5f7b2dca0}{getpigfarmFile} ()
+\item 
+bool \hyperlink{classfarm_data_a49f48626133e3616cbafa2e158a45255}{getdairyfarmFile} ()
+\item 
+bool \hyperlink{classfarm_data_a70fbbca25a9f70237844f15c034c2a11}{getbeeffarmFile} ()
+\item 
+bool \hyperlink{classfarm_data_a167fe053f54e542e746c2eb46a85d051}{getSowsKnowledgeFile} ()
+\item 
+bool \hyperlink{classfarm_data_ad5e87ebf838260c10d07f9ffccd1bfbc}{getBaconersKnowledgeFile} ()
+\item 
+double \hyperlink{classfarm_data_a639ebaf1060358d4c6b67ba41dfb4929}{getCapitalInterest} ()
+\item 
+double \hyperlink{classfarm_data_a38e44d02817a78bc29aeb6c62bd57043}{getMinFieldArea} ()
+\item 
+bool \hyperlink{classfarm_data_a39eea7de86f46c9ca07a358f9e89f933}{getCapitalInterestFile} ()
+\item 
+bool \hyperlink{classfarm_data_aada4ac3a7cc5c6a40736bdeb3b126c30}{getMinFieldAreaFile} ()
+\item 
+int \hyperlink{classfarm_data_a254a19218188f4e0144d1d64eb15359f}{getWatering} ()
+\item 
+int \hyperlink{classfarm_data_ad132b302da9b3e881eb32128b757c033}{getDaysBetweenIrrigation} ()
+\item 
+int \hyperlink{classfarm_data_aef1a96504b81439a5b1a843dd015f727}{getIrrigationDelay} ()
+\item 
+int \hyperlink{classfarm_data_a31e15da81a55923b46809f1b1a49a0e0}{getFingerFlow} ()
+\item 
+int \hyperlink{classfarm_data_a61a7f06c1a4a1e8cb9918021fd6ae732}{getScaleBuildings} ()
+\item 
+int \hyperlink{classfarm_data_a0fcf159bb05fade89e597c27e9f8d238}{getSelltheStrawProducts} ()
+\item 
+int \hyperlink{classfarm_data_a377fd256f7acb7f9f88783e9c83a2a1a}{getSelltheNonRoughageProducts} ()
+\item 
+int \hyperlink{classfarm_data_a3a621508744b8fde46e99cdedfff3cd9}{getFarmID} ()
+\item 
+bool \hyperlink{classfarm_data_a2647fba9e3eeb43dc9bb4c3df245f7f1}{getWateringFile} ()
+\item 
+bool \hyperlink{classfarm_data_a8e562556a301cf02479e3d606d2f9969}{getDaysBetweenIrrigationFile} ()
+\item 
+bool \hyperlink{classfarm_data_a9fbfd725ccfe33d7288801d1e5c4d099}{getIrrigationDelayFile} ()
+\item 
+bool \hyperlink{classfarm_data_ac827ff6838ba8e2b81ab4bffaf6223c3}{getFingerFlowFile} ()
+\item 
+bool \hyperlink{classfarm_data_a6e3a6f28c3ff7f3a049c2418e1770852}{getScaleBuildingsFile} ()
+\item 
+bool \hyperlink{classfarm_data_ac3fac71cd2212a99fc08a5ce48766709}{getSelltheStrawProductsFile} ()
+\item 
+bool \hyperlink{classfarm_data_ab691a5ffba157871b2562f60aa5321f7}{getSelltheNonRoughageProductsFile} ()
+\item 
+bool \hyperlink{classfarm_data_a66670cfc19135aefe2f7cecef4299f49}{getFarmIDFile} ()
+\item 
+\hyperlink{classfarm_data_afd7275ecdb30721e5f6221026b4c56ba}{farmData} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classfarm_data_a978fb6c1e7912cc1629ebc07f4633065}{farmFarmDataFile}
+\item 
+bool \hyperlink{classfarm_data_affca61735fb74aa47fe3047f5f2c1a5d}{farmLivestockDataFile}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classfarm_data_a876db3cf0dd016c20f850a14ec435f1d}{loaddataNITROSCAPE} ()
+\item 
+void \hyperlink{classfarm_data_a0e7b5f2a247620c8b77b1fa0050ff3ee}{add} ()
+\item 
+void \hyperlink{classfarm_data_acc1cdf104c536ccf1c9d882dbdd23741}{loaddata} ()
+\item 
+void \hyperlink{classfarm_data_aa64f203450f21d7a71e80a18a3936f55}{checkData} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class singleton pattern which mean that there can be only one instance of the class and access goes trough get\_\-instance which take cares of initialize if needed Each keyword have also a bool $\ast$File. This represent if that key word has been read from the file 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfarm_data_afd7275ecdb30721e5f6221026b4c56ba}{
+\index{farmData@{farmData}!farmData@{farmData}}
+\index{farmData@{farmData}!farmData@{farmData}}
+\subsubsection[{farmData}]{\setlength{\rightskip}{0pt plus 5cm}farmData::farmData ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_afd7275ecdb30721e5f6221026b4c56ba}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfarm_data_a0e7b5f2a247620c8b77b1fa0050ff3ee}{
+\index{farmData@{farmData}!add@{add}}
+\index{add@{add}!farmData@{farmData}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void farmData::add ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfarm_data_a0e7b5f2a247620c8b77b1fa0050ff3ee}
+\hypertarget{classfarm_data_aa64f203450f21d7a71e80a18a3936f55}{
+\index{farmData@{farmData}!checkData@{checkData}}
+\index{checkData@{checkData}!farmData@{farmData}}
+\subsubsection[{checkData}]{\setlength{\rightskip}{0pt plus 5cm}void farmData::checkData ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfarm_data_aa64f203450f21d7a71e80a18a3936f55}
+This function checks if the necessary data has been read and if it is correct. If something is wrong it either sends a FatalError or closing fasset \hypertarget{classfarm_data_abb4c880543b25ffdd508e20723362cba}{
+\index{farmData@{farmData}!getBaconersKnowledge@{getBaconersKnowledge}}
+\index{getBaconersKnowledge@{getBaconersKnowledge}!farmData@{farmData}}
+\subsubsection[{getBaconersKnowledge}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getBaconersKnowledge ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_abb4c880543b25ffdd508e20723362cba}
+\hypertarget{classfarm_data_ad5e87ebf838260c10d07f9ffccd1bfbc}{
+\index{farmData@{farmData}!getBaconersKnowledgeFile@{getBaconersKnowledgeFile}}
+\index{getBaconersKnowledgeFile@{getBaconersKnowledgeFile}!farmData@{farmData}}
+\subsubsection[{getBaconersKnowledgeFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getBaconersKnowledgeFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_ad5e87ebf838260c10d07f9ffccd1bfbc}
+\hypertarget{classfarm_data_adc3da31ffca5aee7c893d112d8374be8}{
+\index{farmData@{farmData}!getbeeffarm@{getbeeffarm}}
+\index{getbeeffarm@{getbeeffarm}!farmData@{farmData}}
+\subsubsection[{getbeeffarm}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getbeeffarm ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_adc3da31ffca5aee7c893d112d8374be8}
+\hypertarget{classfarm_data_a70fbbca25a9f70237844f15c034c2a11}{
+\index{farmData@{farmData}!getbeeffarmFile@{getbeeffarmFile}}
+\index{getbeeffarmFile@{getbeeffarmFile}!farmData@{farmData}}
+\subsubsection[{getbeeffarmFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getbeeffarmFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a70fbbca25a9f70237844f15c034c2a11}
+\hypertarget{classfarm_data_a639ebaf1060358d4c6b67ba41dfb4929}{
+\index{farmData@{farmData}!getCapitalInterest@{getCapitalInterest}}
+\index{getCapitalInterest@{getCapitalInterest}!farmData@{farmData}}
+\subsubsection[{getCapitalInterest}]{\setlength{\rightskip}{0pt plus 5cm}double farmData::getCapitalInterest ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a639ebaf1060358d4c6b67ba41dfb4929}
+This variables contains the value for the keywords there are under \mbox{[}farm\mbox{]} section Each keyword have also a bool $\ast$File. This represent if that key word has been read from the file \hypertarget{classfarm_data_a39eea7de86f46c9ca07a358f9e89f933}{
+\index{farmData@{farmData}!getCapitalInterestFile@{getCapitalInterestFile}}
+\index{getCapitalInterestFile@{getCapitalInterestFile}!farmData@{farmData}}
+\subsubsection[{getCapitalInterestFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getCapitalInterestFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a39eea7de86f46c9ca07a358f9e89f933}
+\hypertarget{classfarm_data_a02a60e838e3e3056ca5ba983f3ec874f}{
+\index{farmData@{farmData}!getdairyfarm@{getdairyfarm}}
+\index{getdairyfarm@{getdairyfarm}!farmData@{farmData}}
+\subsubsection[{getdairyfarm}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getdairyfarm ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a02a60e838e3e3056ca5ba983f3ec874f}
+\hypertarget{classfarm_data_a49f48626133e3616cbafa2e158a45255}{
+\index{farmData@{farmData}!getdairyfarmFile@{getdairyfarmFile}}
+\index{getdairyfarmFile@{getdairyfarmFile}!farmData@{farmData}}
+\subsubsection[{getdairyfarmFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getdairyfarmFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a49f48626133e3616cbafa2e158a45255}
+\hypertarget{classfarm_data_ad132b302da9b3e881eb32128b757c033}{
+\index{farmData@{farmData}!getDaysBetweenIrrigation@{getDaysBetweenIrrigation}}
+\index{getDaysBetweenIrrigation@{getDaysBetweenIrrigation}!farmData@{farmData}}
+\subsubsection[{getDaysBetweenIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getDaysBetweenIrrigation ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_ad132b302da9b3e881eb32128b757c033}
+\hypertarget{classfarm_data_a8e562556a301cf02479e3d606d2f9969}{
+\index{farmData@{farmData}!getDaysBetweenIrrigationFile@{getDaysBetweenIrrigationFile}}
+\index{getDaysBetweenIrrigationFile@{getDaysBetweenIrrigationFile}!farmData@{farmData}}
+\subsubsection[{getDaysBetweenIrrigationFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getDaysBetweenIrrigationFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a8e562556a301cf02479e3d606d2f9969}
+\hypertarget{classfarm_data_a3a621508744b8fde46e99cdedfff3cd9}{
+\index{farmData@{farmData}!getFarmID@{getFarmID}}
+\index{getFarmID@{getFarmID}!farmData@{farmData}}
+\subsubsection[{getFarmID}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getFarmID ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a3a621508744b8fde46e99cdedfff3cd9}
+\hypertarget{classfarm_data_a66670cfc19135aefe2f7cecef4299f49}{
+\index{farmData@{farmData}!getFarmIDFile@{getFarmIDFile}}
+\index{getFarmIDFile@{getFarmIDFile}!farmData@{farmData}}
+\subsubsection[{getFarmIDFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getFarmIDFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a66670cfc19135aefe2f7cecef4299f49}
+\hypertarget{classfarm_data_a31e15da81a55923b46809f1b1a49a0e0}{
+\index{farmData@{farmData}!getFingerFlow@{getFingerFlow}}
+\index{getFingerFlow@{getFingerFlow}!farmData@{farmData}}
+\subsubsection[{getFingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getFingerFlow ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a31e15da81a55923b46809f1b1a49a0e0}
+\hypertarget{classfarm_data_ac827ff6838ba8e2b81ab4bffaf6223c3}{
+\index{farmData@{farmData}!getFingerFlowFile@{getFingerFlowFile}}
+\index{getFingerFlowFile@{getFingerFlowFile}!farmData@{farmData}}
+\subsubsection[{getFingerFlowFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getFingerFlowFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_ac827ff6838ba8e2b81ab4bffaf6223c3}
+\hypertarget{classfarm_data_aef1a96504b81439a5b1a843dd015f727}{
+\index{farmData@{farmData}!getIrrigationDelay@{getIrrigationDelay}}
+\index{getIrrigationDelay@{getIrrigationDelay}!farmData@{farmData}}
+\subsubsection[{getIrrigationDelay}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getIrrigationDelay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_aef1a96504b81439a5b1a843dd015f727}
+\hypertarget{classfarm_data_a9fbfd725ccfe33d7288801d1e5c4d099}{
+\index{farmData@{farmData}!getIrrigationDelayFile@{getIrrigationDelayFile}}
+\index{getIrrigationDelayFile@{getIrrigationDelayFile}!farmData@{farmData}}
+\subsubsection[{getIrrigationDelayFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getIrrigationDelayFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a9fbfd725ccfe33d7288801d1e5c4d099}
+\hypertarget{classfarm_data_a38e44d02817a78bc29aeb6c62bd57043}{
+\index{farmData@{farmData}!getMinFieldArea@{getMinFieldArea}}
+\index{getMinFieldArea@{getMinFieldArea}!farmData@{farmData}}
+\subsubsection[{getMinFieldArea}]{\setlength{\rightskip}{0pt plus 5cm}double farmData::getMinFieldArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a38e44d02817a78bc29aeb6c62bd57043}
+\hypertarget{classfarm_data_aada4ac3a7cc5c6a40736bdeb3b126c30}{
+\index{farmData@{farmData}!getMinFieldAreaFile@{getMinFieldAreaFile}}
+\index{getMinFieldAreaFile@{getMinFieldAreaFile}!farmData@{farmData}}
+\subsubsection[{getMinFieldAreaFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getMinFieldAreaFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_aada4ac3a7cc5c6a40736bdeb3b126c30}
+\hypertarget{classfarm_data_a91709d465272ff30629fe34c3584229f}{
+\index{farmData@{farmData}!getpigfarm@{getpigfarm}}
+\index{getpigfarm@{getpigfarm}!farmData@{farmData}}
+\subsubsection[{getpigfarm}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getpigfarm ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a91709d465272ff30629fe34c3584229f}
+This variables contains the value for the keywords there are under \mbox{[}Livestock\mbox{]} section Each keyword have also a bool $\ast$File. This represent if that key word has been read from the file \hypertarget{classfarm_data_aa209bdab6aefb7de3d008df5f7b2dca0}{
+\index{farmData@{farmData}!getpigfarmFile@{getpigfarmFile}}
+\index{getpigfarmFile@{getpigfarmFile}!farmData@{farmData}}
+\subsubsection[{getpigfarmFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getpigfarmFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_aa209bdab6aefb7de3d008df5f7b2dca0}
+\hypertarget{classfarm_data_a61a7f06c1a4a1e8cb9918021fd6ae732}{
+\index{farmData@{farmData}!getScaleBuildings@{getScaleBuildings}}
+\index{getScaleBuildings@{getScaleBuildings}!farmData@{farmData}}
+\subsubsection[{getScaleBuildings}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getScaleBuildings ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a61a7f06c1a4a1e8cb9918021fd6ae732}
+\hypertarget{classfarm_data_a6e3a6f28c3ff7f3a049c2418e1770852}{
+\index{farmData@{farmData}!getScaleBuildingsFile@{getScaleBuildingsFile}}
+\index{getScaleBuildingsFile@{getScaleBuildingsFile}!farmData@{farmData}}
+\subsubsection[{getScaleBuildingsFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getScaleBuildingsFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a6e3a6f28c3ff7f3a049c2418e1770852}
+\hypertarget{classfarm_data_a377fd256f7acb7f9f88783e9c83a2a1a}{
+\index{farmData@{farmData}!getSelltheNonRoughageProducts@{getSelltheNonRoughageProducts}}
+\index{getSelltheNonRoughageProducts@{getSelltheNonRoughageProducts}!farmData@{farmData}}
+\subsubsection[{getSelltheNonRoughageProducts}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getSelltheNonRoughageProducts ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a377fd256f7acb7f9f88783e9c83a2a1a}
+\hypertarget{classfarm_data_ab691a5ffba157871b2562f60aa5321f7}{
+\index{farmData@{farmData}!getSelltheNonRoughageProductsFile@{getSelltheNonRoughageProductsFile}}
+\index{getSelltheNonRoughageProductsFile@{getSelltheNonRoughageProductsFile}!farmData@{farmData}}
+\subsubsection[{getSelltheNonRoughageProductsFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getSelltheNonRoughageProductsFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_ab691a5ffba157871b2562f60aa5321f7}
+\hypertarget{classfarm_data_a0fcf159bb05fade89e597c27e9f8d238}{
+\index{farmData@{farmData}!getSelltheStrawProducts@{getSelltheStrawProducts}}
+\index{getSelltheStrawProducts@{getSelltheStrawProducts}!farmData@{farmData}}
+\subsubsection[{getSelltheStrawProducts}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getSelltheStrawProducts ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a0fcf159bb05fade89e597c27e9f8d238}
+\hypertarget{classfarm_data_ac3fac71cd2212a99fc08a5ce48766709}{
+\index{farmData@{farmData}!getSelltheStrawProductsFile@{getSelltheStrawProductsFile}}
+\index{getSelltheStrawProductsFile@{getSelltheStrawProductsFile}!farmData@{farmData}}
+\subsubsection[{getSelltheStrawProductsFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getSelltheStrawProductsFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_ac3fac71cd2212a99fc08a5ce48766709}
+\hypertarget{classfarm_data_aa0c2ad7153088adff0e86179ec06da19}{
+\index{farmData@{farmData}!getSowsKnowledge@{getSowsKnowledge}}
+\index{getSowsKnowledge@{getSowsKnowledge}!farmData@{farmData}}
+\subsubsection[{getSowsKnowledge}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getSowsKnowledge ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_aa0c2ad7153088adff0e86179ec06da19}
+\hypertarget{classfarm_data_a167fe053f54e542e746c2eb46a85d051}{
+\index{farmData@{farmData}!getSowsKnowledgeFile@{getSowsKnowledgeFile}}
+\index{getSowsKnowledgeFile@{getSowsKnowledgeFile}!farmData@{farmData}}
+\subsubsection[{getSowsKnowledgeFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getSowsKnowledgeFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a167fe053f54e542e746c2eb46a85d051}
+\hypertarget{classfarm_data_a254a19218188f4e0144d1d64eb15359f}{
+\index{farmData@{farmData}!getWatering@{getWatering}}
+\index{getWatering@{getWatering}!farmData@{farmData}}
+\subsubsection[{getWatering}]{\setlength{\rightskip}{0pt plus 5cm}int farmData::getWatering ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a254a19218188f4e0144d1d64eb15359f}
+\hypertarget{classfarm_data_a2647fba9e3eeb43dc9bb4c3df245f7f1}{
+\index{farmData@{farmData}!getWateringFile@{getWateringFile}}
+\index{getWateringFile@{getWateringFile}!farmData@{farmData}}
+\subsubsection[{getWateringFile}]{\setlength{\rightskip}{0pt plus 5cm}bool farmData::getWateringFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfarm_data_a2647fba9e3eeb43dc9bb4c3df245f7f1}
+\hypertarget{classfarm_data_acc1cdf104c536ccf1c9d882dbdd23741}{
+\index{farmData@{farmData}!loaddata@{loaddata}}
+\index{loaddata@{loaddata}!farmData@{farmData}}
+\subsubsection[{loaddata}]{\setlength{\rightskip}{0pt plus 5cm}void farmData::loaddata ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfarm_data_acc1cdf104c536ccf1c9d882dbdd23741}
+This class load the data from farm.dat. Note that farm.dat should be placed in the default path or Fasset will exit If the keywords is not found the default value is used. See farm.xlsx for that information \hypertarget{classfarm_data_a876db3cf0dd016c20f850a14ec435f1d}{
+\index{farmData@{farmData}!loaddataNITROSCAPE@{loaddataNITROSCAPE}}
+\index{loaddataNITROSCAPE@{loaddataNITROSCAPE}!farmData@{farmData}}
+\subsubsection[{loaddataNITROSCAPE}]{\setlength{\rightskip}{0pt plus 5cm}void farmData::loaddataNITROSCAPE ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfarm_data_a876db3cf0dd016c20f850a14ec435f1d}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classfarm_data_a978fb6c1e7912cc1629ebc07f4633065}{
+\index{farmData@{farmData}!farmFarmDataFile@{farmFarmDataFile}}
+\index{farmFarmDataFile@{farmFarmDataFile}!farmData@{farmData}}
+\subsubsection[{farmFarmDataFile}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf farmData::farmFarmDataFile}}}
+\label{classfarm_data_a978fb6c1e7912cc1629ebc07f4633065}
+\hypertarget{classfarm_data_affca61735fb74aa47fe3047f5f2c1a5d}{
+\index{farmData@{farmData}!farmLivestockDataFile@{farmLivestockDataFile}}
+\index{farmLivestockDataFile@{farmLivestockDataFile}!farmData@{farmData}}
+\subsubsection[{farmLivestockDataFile}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf farmData::farmLivestockDataFile}}}
+\label{classfarm_data_affca61735fb74aa47fe3047f5f2c1a5d}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/data/\hyperlink{farm_data_8h}{farmData.h}\item 
+C:/main/trunk/src/data/\hyperlink{farm_data_8cpp}{farmData.cpp}\end{DoxyCompactItemize}

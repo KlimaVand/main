@@ -1,0 +1,46 @@
+\hypertarget{climate_8cpp}{
+\section{C:/main/trunk/src/base/climate.cpp File Reference}
+\label{climate_8cpp}\index{C:/main/trunk/src/base/climate.cpp@{C:/main/trunk/src/base/climate.cpp}}
+}
+{\ttfamily \#include \char`\"{}common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}climate.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}message.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}controlParameters.h\char`\"{}}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include \char`\"{}nixcbits.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../tools/fileAccess.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../data/environData.h\char`\"{}}\par
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{climate_8cpp_a6556f202e579e2b7289b98fa4d69914a}{AccmonthLength} \mbox{[}12\mbox{]} = \{0,31,59,90,120,151,181,212,243,273,304,334\}
+\item 
+const double \hyperlink{climate_8cpp_a256b9f2eb4c39c87820ecfb8bf6a8064}{OldAdjust} \mbox{[}13\mbox{]} = \{0,1.21,1.22,1.22,1.18,1.15,1.14,1.12,1.11,1.13,1.14,1.16,1.19\}
+\item 
+const double \hyperlink{climate_8cpp_a1d417925d4fd4f02d94af704efae4b9e}{NewAdjust} \mbox{[}13\mbox{]} = \{0,1.41,1.42,1.35,1.24,1.13,1.11,1.10,1.10,1.11,1.14,1.23,1.37\}
+\item 
+\hyperlink{classfile_access}{fileAccess} \hyperlink{climate_8cpp_a2ddca9dce78582e7c20399e52c93b2d3}{hd}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{climate_8cpp_a6556f202e579e2b7289b98fa4d69914a}{
+\index{climate.cpp@{climate.cpp}!AccmonthLength@{AccmonthLength}}
+\index{AccmonthLength@{AccmonthLength}!climate.cpp@{climate.cpp}}
+\subsubsection[{AccmonthLength}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf AccmonthLength}\mbox{[}12\mbox{]} = \{0,31,59,90,120,151,181,212,243,273,304,334\}}}
+\label{climate_8cpp_a6556f202e579e2b7289b98fa4d69914a}
+\hypertarget{climate_8cpp_a2ddca9dce78582e7c20399e52c93b2d3}{
+\index{climate.cpp@{climate.cpp}!hd@{hd}}
+\index{hd@{hd}!climate.cpp@{climate.cpp}}
+\subsubsection[{hd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fileAccess} {\bf hd}}}
+\label{climate_8cpp_a2ddca9dce78582e7c20399e52c93b2d3}
+\hypertarget{climate_8cpp_a1d417925d4fd4f02d94af704efae4b9e}{
+\index{climate.cpp@{climate.cpp}!NewAdjust@{NewAdjust}}
+\index{NewAdjust@{NewAdjust}!climate.cpp@{climate.cpp}}
+\subsubsection[{NewAdjust}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf NewAdjust}\mbox{[}13\mbox{]} = \{0,1.41,1.42,1.35,1.24,1.13,1.11,1.10,1.10,1.11,1.14,1.23,1.37\}}}
+\label{climate_8cpp_a1d417925d4fd4f02d94af704efae4b9e}
+\hypertarget{climate_8cpp_a256b9f2eb4c39c87820ecfb8bf6a8064}{
+\index{climate.cpp@{climate.cpp}!OldAdjust@{OldAdjust}}
+\index{OldAdjust@{OldAdjust}!climate.cpp@{climate.cpp}}
+\subsubsection[{OldAdjust}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf OldAdjust}\mbox{[}13\mbox{]} = \{0,1.21,1.22,1.22,1.18,1.15,1.14,1.12,1.11,1.13,1.14,1.16,1.19\}}}
+\label{climate_8cpp_a256b9f2eb4c39c87820ecfb8bf6a8064}

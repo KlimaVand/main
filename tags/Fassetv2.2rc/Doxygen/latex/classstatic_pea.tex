@@ -1,0 +1,173 @@
+\hypertarget{classstatic_pea}{
+\section{staticPea Class Reference}
+\label{classstatic_pea}\index{staticPea@{staticPea}}
+}
+
+
+{\ttfamily \#include $<$staticPea.h$>$}Inheritance diagram for staticPea::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_pea}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_pea_a95e2886088aebc737f1d998e48b4c691}{staticPea} ()
+\item 
+virtual int \hyperlink{classstatic_pea_a368cb5d2d6f10edb9d8aecde2e2d7b9b}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_pea_adaf16829a2d0bece8f22018377a89fd9}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_pea_a4e65ffc0e08921e18f95be49b3e12422}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_pea_a9ce174ccebfdb6f1494b5cbc8ed26e65}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_pea_ac4186d94b140bb10e0817f4273ae4f9d}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_pea_a617c3f2666334b3e86ad4ca3e105afc8}{NitrogenAmount} (int JB\_\-NO, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_pea_ade12e48b5d12ee356da9c38908cc8e07}{ExpectedYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_pea_a8142c951a5471b430813637a7a21e7d7}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_pea_a6e42e1210858f6b85749979418a4c0ad}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_pea_afff094d1caf8424d869bb8623284b536}{ExtraNRelease\_\-} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68a3df78686adfc12ef0af3cfea571e3d77}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68ab79d25463a6591ce72cf2f9185461608}{Nitrogen\_\-levels} = 1, 
+\hyperlink{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68ab65fba8b5a40eeba2bdbb1b1507d6d43}{Sand\_\-max\_\-N} = 0, 
+\hyperlink{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68a8035d9c5ef410c52d62f1c5fc94e8061}{Clay\_\-max\_\-N} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classstatic_pea_aa4d8917d0c11523a65c5abd929a9bd7c}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68}{
+\subsubsection[{"@21}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticPea@{staticPea}}\index{staticPea@{staticPea}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68a3df78686adfc12ef0af3cfea571e3d77}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68a3df78686adfc12ef0af3cfea571e3d77}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticPea@{staticPea}}\index{staticPea@{staticPea}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68ab79d25463a6591ce72cf2f9185461608}{
+Nitrogen\_\-levels}
+\label{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68ab79d25463a6591ce72cf2f9185461608}
+}]\index{Sand\_\-max\_\-N@{Sand\_\-max\_\-N}!staticPea@{staticPea}}\index{staticPea@{staticPea}!Sand\_\-max\_\-N@{Sand\_\-max\_\-N}}\item[{\em 
+\hypertarget{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68ab65fba8b5a40eeba2bdbb1b1507d6d43}{
+Sand\_\-max\_\-N}
+\label{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68ab65fba8b5a40eeba2bdbb1b1507d6d43}
+}]\index{Clay\_\-max\_\-N@{Clay\_\-max\_\-N}!staticPea@{staticPea}}\index{staticPea@{staticPea}!Clay\_\-max\_\-N@{Clay\_\-max\_\-N}}\item[{\em 
+\hypertarget{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68a8035d9c5ef410c52d62f1c5fc94e8061}{
+Clay\_\-max\_\-N}
+\label{classstatic_pea_a173ff47f02ff527bdd0cd9e8516a9e68a8035d9c5ef410c52d62f1c5fc94e8061}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_pea_a95e2886088aebc737f1d998e48b4c691}{
+\index{staticPea@{staticPea}!staticPea@{staticPea}}
+\index{staticPea@{staticPea}!staticPea@{staticPea}}
+\subsubsection[{staticPea}]{\setlength{\rightskip}{0pt plus 5cm}staticPea::staticPea ()}}
+\label{classstatic_pea_a95e2886088aebc737f1d998e48b4c691}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_pea_ade12e48b5d12ee356da9c38908cc8e07}{
+\index{staticPea@{staticPea}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticPea@{staticPea}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticPea::ExpectedYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_ade12e48b5d12ee356da9c38908cc8e07}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_pea_afff094d1caf8424d869bb8623284b536}{
+\index{staticPea@{staticPea}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticPea@{staticPea}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticPea::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_afff094d1caf8424d869bb8623284b536}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_pea_a4e65ffc0e08921e18f95be49b3e12422}{
+\index{staticPea@{staticPea}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticPea@{staticPea}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticPea::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_a4e65ffc0e08921e18f95be49b3e12422}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_pea_a617c3f2666334b3e86ad4ca3e105afc8}{
+\index{staticPea@{staticPea}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticPea@{staticPea}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticPea::NitrogenAmount (int {\em JB\_\-NO}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_a617c3f2666334b3e86ad4ca3e105afc8}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_pea_ac4186d94b140bb10e0817f4273ae4f9d}{
+\index{staticPea@{staticPea}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticPea@{staticPea}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticPea::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_ac4186d94b140bb10e0817f4273ae4f9d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_pea_a9ce174ccebfdb6f1494b5cbc8ed26e65}{
+\index{staticPea@{staticPea}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticPea@{staticPea}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticPea::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_a9ce174ccebfdb6f1494b5cbc8ed26e65}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_pea_a8142c951a5471b430813637a7a21e7d7}{
+\index{staticPea@{staticPea}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticPea@{staticPea}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticPea::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_a8142c951a5471b430813637a7a21e7d7}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_pea_a6e42e1210858f6b85749979418a4c0ad}{
+\index{staticPea@{staticPea}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticPea@{staticPea}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticPea::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_a6e42e1210858f6b85749979418a4c0ad}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_pea_adaf16829a2d0bece8f22018377a89fd9}{
+\index{staticPea@{staticPea}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticPea@{staticPea}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticPea::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_pea_adaf16829a2d0bece8f22018377a89fd9}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_pea_a368cb5d2d6f10edb9d8aecde2e2d7b9b}{
+\index{staticPea@{staticPea}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticPea@{staticPea}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticPea::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_pea_a368cb5d2d6f10edb9d8aecde2e2d7b9b}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_pea_aa4d8917d0c11523a65c5abd929a9bd7c}{
+\index{staticPea@{staticPea}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticPea@{staticPea}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticPea::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classstatic_pea_aa4d8917d0c11523a65c5abd929a9bd7c}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_pea_8h}{staticPea.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_pea_8cpp}{staticPea.cpp}\end{DoxyCompactItemize}

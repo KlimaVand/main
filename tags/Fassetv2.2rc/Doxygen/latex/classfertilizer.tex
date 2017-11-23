@@ -1,0 +1,290 @@
+\hypertarget{classfertilizer}{
+\section{fertilizer Class Reference}
+\label{classfertilizer}\index{fertilizer@{fertilizer}}
+}
+
+
+{\ttfamily \#include $<$fertilizer.h$>$}Inheritance diagram for fertilizer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classfertilizer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfertilizer_a1e4d38a4e98f1a0b39f1852de0d30383}{fertilizer} ()
+\item 
+\hyperlink{classfertilizer_adc4ae0decca7ec895def3a670f59c597}{fertilizer} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classfertilizer_ac7b4304100a388cedaad65c9eeaec128}{fertilizer} (const \hyperlink{classfertilizer}{fertilizer} \&afertilizer)
+\item 
+virtual \hyperlink{classfertilizer_acbb1a09db1bcb0818f3aaafd9cd0a7ea}{$\sim$fertilizer} ()
+\item 
+void \hyperlink{classfertilizer_a213ec34de1c23058796926ea2a5eb724}{SetN\_\-content} (\hyperlink{classnitrogen}{nitrogen} aN\_\-content)
+\item 
+void \hyperlink{classfertilizer_accf91762ffa698a82bcd2579e13d8ac2}{SetP\_\-content} (double aP\_\-content)
+\item 
+void \hyperlink{classfertilizer_aba04153f1ef7cd9d8415fd7e75511ea9}{SetK\_\-content} (double aK\_\-content)
+\item 
+void \hyperlink{classfertilizer_a63ac67ef24e6587f37a0c54a89c2afb4}{SetCa\_\-content} (double aCa\_\-content)
+\item 
+void \hyperlink{classfertilizer_a1aa5f7fc62508c6af74293e912ca2207}{SetCl\_\-content} (double aCl\_\-content)
+\item 
+void \hyperlink{classfertilizer_af4bd988ce3875432ddc2014a21476444}{SetMineralForm} (string aMineralForm)
+\item 
+void \hyperlink{classfertilizer_a532d27ade401ee2ee620a6d1fe63f4e7}{SetNH4\_\-fraction} (double aFrac)
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classfertilizer_a1b638345af84d6574dd4f9c5524bafc6}{GetN\_\-content} (void) const 
+\item 
+double \hyperlink{classfertilizer_aae9eb1ab9df9f6fe92529a2f7d0e7f55}{GetP\_\-content} (void) const 
+\item 
+double \hyperlink{classfertilizer_a72ac8ceb98ce846dbfc1b7d1d404e9c3}{GetK\_\-content} (void) const 
+\item 
+double \hyperlink{classfertilizer_ae3ddec9d6c7c27d2d3174cc7cb8a2703}{GetCa\_\-content} (void) const 
+\item 
+double \hyperlink{classfertilizer_a847e4854c4fe47fb8fa12cefe700bc2b}{GetCl\_\-content} (void) const 
+\item 
+string \hyperlink{classfertilizer_a69b4d147e3dcf693c48a1b89c0725c51}{GetMineralForm} () const 
+\item 
+double \hyperlink{classfertilizer_a4acc1a8047dd25b3217f02a5396112aa}{GetNH4\_\-fraction} ()
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classfertilizer_a1da114796fa3f51994befbbf778dbb70}{operator=} (const \hyperlink{classproduct}{product} \&someFertilizer)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classfertilizer_ab60a32c311094dbea502b2f36889e78d}{operator+} (const \hyperlink{classproduct}{product} \&someFertilizer)
+\item 
+virtual \hyperlink{classproduct}{product} \& \hyperlink{classfertilizer_ae3de37192bdc295effb86ed271bd6855}{operator-\/} (const \hyperlink{classproduct}{product} \&someFertilizer)
+\item 
+void \hyperlink{classfertilizer_a8b3b753b7d29e5a3e22d493e368e5f42}{showstats} (ostream $\ast$os)
+\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classfertilizer_aef152b18be864a2df64fd26fbed575e5}{clone} () const 
+\item 
+virtual void \hyperlink{classfertilizer_a4aeba843a60b5826ca016f922917985f}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classfertilizer_a2b7b0ff767e32cca1f77fa5cc48ee1ab}{Output} (fstream $\ast$fs)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classfertilizer_afce6a4edd572f543a37e03618129be55}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classfertilizer_af6513d3d34f339522280ee00f8c44f3e}{N\_\-content}
+\item 
+double \hyperlink{classfertilizer_a2e586559d4fb3b123391ee4c7815f166}{P\_\-content}
+\item 
+double \hyperlink{classfertilizer_ae63c55759fdc6bf9bb65c8138179b3a6}{K\_\-content}
+\item 
+double \hyperlink{classfertilizer_a600c30df6f51d426d0d62d4a1b0beab6}{Ca\_\-content}
+\item 
+double \hyperlink{classfertilizer_abae61b73ba06463e0c9c854dc323a099}{Cl\_\-content}
+\item 
+string \hyperlink{classfertilizer_a1984791c7e4363c98d2dd3655a192c60}{MineralForm}
+\item 
+double \hyperlink{classfertilizer_a9fff79dfc73ee1cde5edaef8b74813d0}{NH4\_\-fraction}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classfertilizer_a5a2254ccb8f746d7d2c66c39a00a3f18}{operator$<$$<$} (ostream \&os, const \hyperlink{classfertilizer}{fertilizer} \&afertilizer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfertilizer_a1e4d38a4e98f1a0b39f1852de0d30383}{
+\index{fertilizer@{fertilizer}!fertilizer@{fertilizer}}
+\index{fertilizer@{fertilizer}!fertilizer@{fertilizer}}
+\subsubsection[{fertilizer}]{\setlength{\rightskip}{0pt plus 5cm}fertilizer::fertilizer ()}}
+\label{classfertilizer_a1e4d38a4e98f1a0b39f1852de0d30383}
+\hypertarget{classfertilizer_adc4ae0decca7ec895def3a670f59c597}{
+\index{fertilizer@{fertilizer}!fertilizer@{fertilizer}}
+\index{fertilizer@{fertilizer}!fertilizer@{fertilizer}}
+\subsubsection[{fertilizer}]{\setlength{\rightskip}{0pt plus 5cm}fertilizer::fertilizer (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classfertilizer_adc4ae0decca7ec895def3a670f59c597}
+\hypertarget{classfertilizer_ac7b4304100a388cedaad65c9eeaec128}{
+\index{fertilizer@{fertilizer}!fertilizer@{fertilizer}}
+\index{fertilizer@{fertilizer}!fertilizer@{fertilizer}}
+\subsubsection[{fertilizer}]{\setlength{\rightskip}{0pt plus 5cm}fertilizer::fertilizer (const {\bf fertilizer} \& {\em afertilizer})}}
+\label{classfertilizer_ac7b4304100a388cedaad65c9eeaec128}
+\hypertarget{classfertilizer_acbb1a09db1bcb0818f3aaafd9cd0a7ea}{
+\index{fertilizer@{fertilizer}!$\sim$fertilizer@{$\sim$fertilizer}}
+\index{$\sim$fertilizer@{$\sim$fertilizer}!fertilizer@{fertilizer}}
+\subsubsection[{$\sim$fertilizer}]{\setlength{\rightskip}{0pt plus 5cm}fertilizer::$\sim$fertilizer ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_acbb1a09db1bcb0818f3aaafd9cd0a7ea}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfertilizer_aef152b18be864a2df64fd26fbed575e5}{
+\index{fertilizer@{fertilizer}!clone@{clone}}
+\index{clone@{clone}!fertilizer@{fertilizer}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ fertilizer::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_aef152b18be864a2df64fd26fbed575e5}
+
+
+Reimplemented from \hyperlink{classproduct_a18a1df87f3400774db21d1e8c573f04a}{product}.\hypertarget{classfertilizer_ae3ddec9d6c7c27d2d3174cc7cb8a2703}{
+\index{fertilizer@{fertilizer}!GetCa\_\-content@{GetCa\_\-content}}
+\index{GetCa\_\-content@{GetCa\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{GetCa\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double fertilizer::GetCa\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_ae3ddec9d6c7c27d2d3174cc7cb8a2703}
+\hypertarget{classfertilizer_a847e4854c4fe47fb8fa12cefe700bc2b}{
+\index{fertilizer@{fertilizer}!GetCl\_\-content@{GetCl\_\-content}}
+\index{GetCl\_\-content@{GetCl\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{GetCl\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double fertilizer::GetCl\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a847e4854c4fe47fb8fa12cefe700bc2b}
+\hypertarget{classfertilizer_a72ac8ceb98ce846dbfc1b7d1d404e9c3}{
+\index{fertilizer@{fertilizer}!GetK\_\-content@{GetK\_\-content}}
+\index{GetK\_\-content@{GetK\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{GetK\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double fertilizer::GetK\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a72ac8ceb98ce846dbfc1b7d1d404e9c3}
+\hypertarget{classfertilizer_a69b4d147e3dcf693c48a1b89c0725c51}{
+\index{fertilizer@{fertilizer}!GetMineralForm@{GetMineralForm}}
+\index{GetMineralForm@{GetMineralForm}!fertilizer@{fertilizer}}
+\subsubsection[{GetMineralForm}]{\setlength{\rightskip}{0pt plus 5cm}string fertilizer::GetMineralForm () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a69b4d147e3dcf693c48a1b89c0725c51}
+\hypertarget{classfertilizer_a1b638345af84d6574dd4f9c5524bafc6}{
+\index{fertilizer@{fertilizer}!GetN\_\-content@{GetN\_\-content}}
+\index{GetN\_\-content@{GetN\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{GetN\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} fertilizer::GetN\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a1b638345af84d6574dd4f9c5524bafc6}
+\hypertarget{classfertilizer_a4acc1a8047dd25b3217f02a5396112aa}{
+\index{fertilizer@{fertilizer}!GetNH4\_\-fraction@{GetNH4\_\-fraction}}
+\index{GetNH4\_\-fraction@{GetNH4\_\-fraction}!fertilizer@{fertilizer}}
+\subsubsection[{GetNH4\_\-fraction}]{\setlength{\rightskip}{0pt plus 5cm}double fertilizer::GetNH4\_\-fraction ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a4acc1a8047dd25b3217f02a5396112aa}
+\hypertarget{classfertilizer_aae9eb1ab9df9f6fe92529a2f7d0e7f55}{
+\index{fertilizer@{fertilizer}!GetP\_\-content@{GetP\_\-content}}
+\index{GetP\_\-content@{GetP\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{GetP\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double fertilizer::GetP\_\-content (void) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_aae9eb1ab9df9f6fe92529a2f7d0e7f55}
+\hypertarget{classfertilizer_afce6a4edd572f543a37e03618129be55}{
+\index{fertilizer@{fertilizer}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!fertilizer@{fertilizer}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_afce6a4edd572f543a37e03618129be55}
+
+
+Reimplemented from \hyperlink{classproduct_afcbfb1feadfd4ed057845eab47e37ff5}{product}.\hypertarget{classfertilizer_ab60a32c311094dbea502b2f36889e78d}{
+\index{fertilizer@{fertilizer}!operator+@{operator+}}
+\index{operator+@{operator+}!fertilizer@{fertilizer}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& fertilizer::operator+ (const {\bf product} \& {\em someFertilizer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_ab60a32c311094dbea502b2f36889e78d}
+\hypertarget{classfertilizer_ae3de37192bdc295effb86ed271bd6855}{
+\index{fertilizer@{fertilizer}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!fertilizer@{fertilizer}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& fertilizer::operator-\/ (const {\bf product} \& {\em someFertilizer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_ae3de37192bdc295effb86ed271bd6855}
+\hypertarget{classfertilizer_a1da114796fa3f51994befbbf778dbb70}{
+\index{fertilizer@{fertilizer}!operator=@{operator=}}
+\index{operator=@{operator=}!fertilizer@{fertilizer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} \& fertilizer::operator= (const {\bf product} \& {\em someFertilizer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_a1da114796fa3f51994befbbf778dbb70}
+\hypertarget{classfertilizer_a2b7b0ff767e32cca1f77fa5cc48ee1ab}{
+\index{fertilizer@{fertilizer}!Output@{Output}}
+\index{Output@{Output}!fertilizer@{fertilizer}}
+\subsubsection[{Output}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::Output (fstream $\ast$ {\em fs})}}
+\label{classfertilizer_a2b7b0ff767e32cca1f77fa5cc48ee1ab}
+\hypertarget{classfertilizer_a4aeba843a60b5826ca016f922917985f}{
+\index{fertilizer@{fertilizer}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!fertilizer@{fertilizer}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_a4aeba843a60b5826ca016f922917985f}
+
+
+Reimplemented from \hyperlink{classproduct_a1edb3e3d0619a2db8b8f1c95fed582ce}{product}.\hypertarget{classfertilizer_a63ac67ef24e6587f37a0c54a89c2afb4}{
+\index{fertilizer@{fertilizer}!SetCa\_\-content@{SetCa\_\-content}}
+\index{SetCa\_\-content@{SetCa\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{SetCa\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetCa\_\-content (double {\em aCa\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a63ac67ef24e6587f37a0c54a89c2afb4}
+\hypertarget{classfertilizer_a1aa5f7fc62508c6af74293e912ca2207}{
+\index{fertilizer@{fertilizer}!SetCl\_\-content@{SetCl\_\-content}}
+\index{SetCl\_\-content@{SetCl\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{SetCl\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetCl\_\-content (double {\em aCl\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a1aa5f7fc62508c6af74293e912ca2207}
+\hypertarget{classfertilizer_aba04153f1ef7cd9d8415fd7e75511ea9}{
+\index{fertilizer@{fertilizer}!SetK\_\-content@{SetK\_\-content}}
+\index{SetK\_\-content@{SetK\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{SetK\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetK\_\-content (double {\em aK\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_aba04153f1ef7cd9d8415fd7e75511ea9}
+\hypertarget{classfertilizer_af4bd988ce3875432ddc2014a21476444}{
+\index{fertilizer@{fertilizer}!SetMineralForm@{SetMineralForm}}
+\index{SetMineralForm@{SetMineralForm}!fertilizer@{fertilizer}}
+\subsubsection[{SetMineralForm}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetMineralForm (string {\em aMineralForm})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_af4bd988ce3875432ddc2014a21476444}
+\hypertarget{classfertilizer_a213ec34de1c23058796926ea2a5eb724}{
+\index{fertilizer@{fertilizer}!SetN\_\-content@{SetN\_\-content}}
+\index{SetN\_\-content@{SetN\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{SetN\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetN\_\-content ({\bf nitrogen} {\em aN\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a213ec34de1c23058796926ea2a5eb724}
+\hypertarget{classfertilizer_a532d27ade401ee2ee620a6d1fe63f4e7}{
+\index{fertilizer@{fertilizer}!SetNH4\_\-fraction@{SetNH4\_\-fraction}}
+\index{SetNH4\_\-fraction@{SetNH4\_\-fraction}!fertilizer@{fertilizer}}
+\subsubsection[{SetNH4\_\-fraction}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetNH4\_\-fraction (double {\em aFrac})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_a532d27ade401ee2ee620a6d1fe63f4e7}
+\hypertarget{classfertilizer_accf91762ffa698a82bcd2579e13d8ac2}{
+\index{fertilizer@{fertilizer}!SetP\_\-content@{SetP\_\-content}}
+\index{SetP\_\-content@{SetP\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{SetP\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::SetP\_\-content (double {\em aP\_\-content})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfertilizer_accf91762ffa698a82bcd2579e13d8ac2}
+\hypertarget{classfertilizer_a8b3b753b7d29e5a3e22d493e368e5f42}{
+\index{fertilizer@{fertilizer}!showstats@{showstats}}
+\index{showstats@{showstats}!fertilizer@{fertilizer}}
+\subsubsection[{showstats}]{\setlength{\rightskip}{0pt plus 5cm}void fertilizer::showstats (ostream $\ast$ {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfertilizer_a8b3b753b7d29e5a3e22d493e368e5f42}
+
+
+Reimplemented from \hyperlink{classproduct_a1151ea416ab90047f8d087be57a6d7b1}{product}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classfertilizer_a5a2254ccb8f746d7d2c66c39a00a3f18}{
+\index{fertilizer@{fertilizer}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fertilizer@{fertilizer}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf fertilizer} \& {\em afertilizer})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classfertilizer_a5a2254ccb8f746d7d2c66c39a00a3f18}
+
+
+Reimplemented from \hyperlink{classproduct_a1b6bf2f2c82a18a17907ee1192fd94bb}{product}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classfertilizer_a600c30df6f51d426d0d62d4a1b0beab6}{
+\index{fertilizer@{fertilizer}!Ca\_\-content@{Ca\_\-content}}
+\index{Ca\_\-content@{Ca\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{Ca\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fertilizer::Ca\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_a600c30df6f51d426d0d62d4a1b0beab6}
+\hypertarget{classfertilizer_abae61b73ba06463e0c9c854dc323a099}{
+\index{fertilizer@{fertilizer}!Cl\_\-content@{Cl\_\-content}}
+\index{Cl\_\-content@{Cl\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{Cl\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fertilizer::Cl\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_abae61b73ba06463e0c9c854dc323a099}
+\hypertarget{classfertilizer_ae63c55759fdc6bf9bb65c8138179b3a6}{
+\index{fertilizer@{fertilizer}!K\_\-content@{K\_\-content}}
+\index{K\_\-content@{K\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{K\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fertilizer::K\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_ae63c55759fdc6bf9bb65c8138179b3a6}
+\hypertarget{classfertilizer_a1984791c7e4363c98d2dd3655a192c60}{
+\index{fertilizer@{fertilizer}!MineralForm@{MineralForm}}
+\index{MineralForm@{MineralForm}!fertilizer@{fertilizer}}
+\subsubsection[{MineralForm}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf fertilizer::MineralForm}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_a1984791c7e4363c98d2dd3655a192c60}
+\hypertarget{classfertilizer_af6513d3d34f339522280ee00f8c44f3e}{
+\index{fertilizer@{fertilizer}!N\_\-content@{N\_\-content}}
+\index{N\_\-content@{N\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{N\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf fertilizer::N\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_af6513d3d34f339522280ee00f8c44f3e}
+\hypertarget{classfertilizer_a9fff79dfc73ee1cde5edaef8b74813d0}{
+\index{fertilizer@{fertilizer}!NH4\_\-fraction@{NH4\_\-fraction}}
+\index{NH4\_\-fraction@{NH4\_\-fraction}!fertilizer@{fertilizer}}
+\subsubsection[{NH4\_\-fraction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fertilizer::NH4\_\-fraction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_a9fff79dfc73ee1cde5edaef8b74813d0}
+\hypertarget{classfertilizer_a2e586559d4fb3b123391ee4c7815f166}{
+\index{fertilizer@{fertilizer}!P\_\-content@{P\_\-content}}
+\index{P\_\-content@{P\_\-content}!fertilizer@{fertilizer}}
+\subsubsection[{P\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf fertilizer::P\_\-content}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfertilizer_a2e586559d4fb3b123391ee4c7815f166}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{fertilizer_8h}{fertilizer.h}\item 
+C:/main/trunk/src/products/\hyperlink{fertilizer_8cpp}{fertilizer.cpp}\end{DoxyCompactItemize}

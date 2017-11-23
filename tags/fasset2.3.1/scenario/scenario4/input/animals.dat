@@ -1,0 +1,76 @@
+[Animal(0)]
+
+Alias			DAIRY
+SRW			630.0		//kg
+MBW			500.0		//kg was 630 for large race
+potPeakMilkYield	50.0		//Potential peak milk yield in litres per day
+lactose		45.0		//g/kg
+milkprotein		33.0		//g/kg
+milkfat		40.0		//g/kg
+a			44.9
+b			0.0916
+c			0.00322
+Gzero			-0.245
+rejectCoeff		0.071
+partitionSystem		1		//1 if using UK energy and protein system
+heatProduction    5000         //heat production per animal (W)
+amountFluid       15.0      // kg/day/animal
+amountSolid       33.4		// kg/day/animal
+herdMilkYieldConstant	7500.0
+lactationEnergyFudgeFactor	1.0
+V728			510.0
+q0			0.9		//parameter determining remobilisation to support lactation - dk system
+q1			0.06		//parameter determining remobilisation to support lactation - dk system
+acceptanceCoefficient   0.24            // rate at which dung effect wears off (per day)
+
+[Animal(1)]
+
+Alias			BEEF
+SRW			550.0		//kg
+MBW			550.0		//kg
+potPeakMilkYield	39.0		//Potential peak milk yield in litres per day
+lactose		45.0		//g/kg
+milkprotein		31.0		//g/kg
+milkfat		40.0		//g/kg
+a			44.9
+b			0.0916
+c			0.00322
+Gzero			-0.245
+rejectCoeff		0.071
+partitionSystem		1		//1 if using UK energy and protein system
+amountFluid       15.0      // kg/day/animal
+amountSolid       33.4		// kg/day/animal
+lactationEnergyFudgeFactor	1.0
+heatProduction    5000         //heat production per animal (W)
+herdMilkYieldConstant	7500.0
+q0			0.9		//parameter determining remobilisation to support lactation - dk system
+q1			0.06		//parameter determining remobilisation to support lactation - dk system
+acceptanceCoefficient   0.24            // rate at which dung effect wears off (per day)
+
+[Animal(2)]
+
+Alias			CROSSBREED
+SRW			550.0		//kg
+MBW			550.0		//kg
+potPeakMilkYield	39.0		//Potential peak milk yield in litres per day
+lactose		45.0		//g/kg
+milkprotein		31.0		//g/kg
+milkfat		40.0		//g/kg
+a			44.9
+b			0.0916
+c			0.00322
+Gzero			-0.245
+rejectCoeff		0.071
+partitionSystem		1		//1 if using UK energy and protein system
+amountFluid       15.0      // kg/day/animal
+amountSolid       33.4		// kg/day/animal
+lactationEnergyFudgeFactor	1.0
+heatProduction    5000         //heat production per animal (W)
+herdMilkYieldConstant	7500.0
+q0			0.9		//parameter determining remobilisation to support lactation - dk system
+q1			0.06		//parameter determining remobilisation to support lactation - dk system
+acceptanceCoefficient   0.24            // rate at which dung effect wears off (per day)
+
+[end]
+
+

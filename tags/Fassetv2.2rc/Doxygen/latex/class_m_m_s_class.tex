@@ -1,0 +1,274 @@
+\hypertarget{class_m_m_s_class}{
+\section{MMSClass Class Reference}
+\label{class_m_m_s_class}\index{MMSClass@{MMSClass}}
+}
+
+
+Describes the \hyperlink{classmanure}{manure} management system and the \hyperlink{classlivestock}{livestock}.  
+
+
+{\ttfamily \#include $<$MMSClass.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_m_s_class_a0fc546f250eed8b990109b05c7241140}{MMSClass} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_m_m_s_class_ae35ad04eea43313d0742a23bdafa6914}{$\sim$MMSClass} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_acdbfef61f2562067975629532d0da4bf}{InitialiseInterface} (\hyperlink{classevent_control}{eventControl} $\ast$aEventControl)
+\begin{DoxyCompactList}\small\item\em connects patches to the \hyperlink{classpatch}{patch} interfaces \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_a4e86f78741f81b1fd9532da0cf77748c}{zeroFarmOutputVariables} ()
+\begin{DoxyCompactList}\small\item\em Zero is all farm-\/scale variables. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_m_m_s_class_a5fbe8cd0e5e37a2770694c63ce042da3}{GetNumOfPatches} ()
+\begin{DoxyCompactList}\small\item\em returns number of patches on the farm \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_a618f8d059a46ed238e0ef8d58207722e}{SetEcoStatus} (int patchNo, double ReadyForHarvestOrLater, double IrrigationDemand, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classharv_info_class}{harvInfoClass} $>$ $\ast$theHarvestProducts)
+\begin{DoxyCompactList}\small\item\em logs the status of an \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_m_m_s_class_af0fdf59e2254ae73b27cbb61500a076f}{GetMMSTillage} (int patchNo, double $\ast$theType, double $\ast$theDepth, double $\ast$theFractionIncorporated)
+\begin{DoxyCompactList}\small\item\em checks whether a tillage \hyperlink{classoperation}{operation} should be performed. If so returns true \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_m_m_s_class_a4ebfe5cbd23fa7d45df7ca9ddb226fe2}{GetMMSAddOrganic} (int patchNo, double $\ast$theType, double $\ast$theamount, double $\ast$theDepth, double $\ast$theTotalN, double $\ast$theNH4N, double $\ast$theNO3N, double $\ast$thepercentDM, double $\ast$theC)
+\begin{DoxyCompactList}\small\item\em checks whether either \hyperlink{classmanure}{manure} or plant residues should be applied to the \hyperlink{classsoil}{soil}. If so returns true \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_m_m_s_class_af4ca114efc64eb0fc38e9bb00f1d880b}{GetMMSDoFertilisation} (int patchNo, double $\ast$theNH4N, double $\ast$theNO3N)
+\begin{DoxyCompactList}\small\item\em checks whether mineral \hyperlink{classnitrogen}{nitrogen} fertiliser should be applied to the \hyperlink{classsoil}{soil}. If so returns true \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_m_m_s_class_aa525cef9cc6ca7af74abed81f5bcf40e}{GetMMSDoSowing} (int patchNo, double $\ast$theSeedCode, double $\ast$theSeedDM, double $\ast$theSeedN)
+\begin{DoxyCompactList}\small\item\em checks whether a \hyperlink{classcrop}{crop} should be sown. If so, returns true \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_m_m_s_class_aa95d9e26d6a4ea7fc754aecd19d8a2bb}{GetMMSDoHarvesting} (int patchNo, double $\ast$theharvestCode, double $\ast$thepropGrainHarvested, double $\ast$thepropStrawHarvested)
+\begin{DoxyCompactList}\small\item\em checks whether a harvesting \hyperlink{classoperation}{operation} should be performed. If so, returns true \item\end{DoxyCompactList}\item 
+double \hyperlink{class_m_m_s_class_a8e68d4735ebf3127f1efa6fec7d6c6c9}{GetMMSPatchAmmonia} (int patchNo)
+\begin{DoxyCompactList}\small\item\em Returns the ammonia emission from fertiliser and \hyperlink{classmanure}{manure} applied to a particular \hyperlink{classpatch}{patch} (kilograms N per day). \item\end{DoxyCompactList}\item 
+double \hyperlink{class_m_m_s_class_a3f8f600885ab389f35329527a720caa5}{GetMMSSpreadAmmonia} ()
+\begin{DoxyCompactList}\small\item\em Returns the ammonia emission from fertiliser and \hyperlink{classmanure}{manure} applied to fields (kilograms N per day). \item\end{DoxyCompactList}\item 
+double \hyperlink{class_m_m_s_class_ab77575e35a1fcd15b454f96287cfbc4d}{GetMMSHouseAmmonia} (int houseNo)
+\begin{DoxyCompactList}\small\item\em Returns the ammonia emission from a particular \hyperlink{classanimal}{animal} house (kilograms N per day). \item\end{DoxyCompactList}\item 
+double \hyperlink{class_m_m_s_class_aef61b9a68eb4cc9df284b162516b282a}{GetMMSHouseAmmonia} ()
+\begin{DoxyCompactList}\small\item\em Returns the ammonia emission from all \hyperlink{classanimal}{animal} houses (kilograms N per day). \item\end{DoxyCompactList}\item 
+double \hyperlink{class_m_m_s_class_a4792c66bdc3f9b80a947d9ad83c6f708}{GetMMSStoreAmmonia} (int storeNo)
+\begin{DoxyCompactList}\small\item\em Returns the ammonia emission from a particular \hyperlink{classmanure}{manure} store (kilograms N per day). \item\end{DoxyCompactList}\item 
+double \hyperlink{class_m_m_s_class_a9681bb2179235730d1c4fb14e4616b42}{GetMMSStoreAmmonia} ()
+\begin{DoxyCompactList}\small\item\em Returns the ammonia emission from all \hyperlink{classmanure}{manure} stores (kilograms N per day). \item\end{DoxyCompactList}\item 
+int \hyperlink{class_m_m_s_class_adbc93d6a32b07724687b496aa0f863e2}{GetNumberOfHouses} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of \hyperlink{classanimal}{animal} houses on the farm. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_m_m_s_class_a10aa9739fcd0d54b15b3a49bdeca126e}{GetNumberOfStore} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} facilities on the farm. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_abf02bcf9d78d35dddf2867d390f87adb}{initialise\_\-MMS} (\hyperlink{classsystem_run_data}{systemRunData} aRunData)
+\begin{DoxyCompactList}\small\item\em initialises the \hyperlink{classmanure}{manure} management system model \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_a1876166aaad56d81c6144ddf53bab15c}{DoMMSDaily} ()
+\begin{DoxyCompactList}\small\item\em calls the daily routine of the \hyperlink{classmanure}{manure} management system model \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_a78c62051e79fbcc96544b37f71d19852}{Destroy\_\-MMS} ()
+\begin{DoxyCompactList}\small\item\em cleans up the memory occupied by the \hyperlink{classmanure}{manure} management system \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_s_class_a9cfb93d7cb67ba68a0a37d5bbea8fb4b}{SetMMSGlobals} ()
+\begin{DoxyCompactList}\small\item\em sets global variables to point to local classes \item\end{DoxyCompactList}\item 
+int \hyperlink{class_m_m_s_class_a0667b939a3d01931d222696b140b5365}{GetNumberFields} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes the \hyperlink{classmanure}{manure} management system and the \hyperlink{classlivestock}{livestock}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_m_s_class_a0fc546f250eed8b990109b05c7241140}{
+\index{MMSClass@{MMSClass}!MMSClass@{MMSClass}}
+\index{MMSClass@{MMSClass}!MMSClass@{MMSClass}}
+\subsubsection[{MMSClass}]{\setlength{\rightskip}{0pt plus 5cm}MMSClass::MMSClass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_m_m_s_class_a0fc546f250eed8b990109b05c7241140}
+
+
+Default constructor. \hypertarget{class_m_m_s_class_ae35ad04eea43313d0742a23bdafa6914}{
+\index{MMSClass@{MMSClass}!$\sim$MMSClass@{$\sim$MMSClass}}
+\index{$\sim$MMSClass@{$\sim$MMSClass}!MMSClass@{MMSClass}}
+\subsubsection[{$\sim$MMSClass}]{\setlength{\rightskip}{0pt plus 5cm}MMSClass::$\sim$MMSClass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_m_m_s_class_ae35ad04eea43313d0742a23bdafa6914}
+
+
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_m_s_class_a78c62051e79fbcc96544b37f71d19852}{
+\index{MMSClass@{MMSClass}!Destroy\_\-MMS@{Destroy\_\-MMS}}
+\index{Destroy\_\-MMS@{Destroy\_\-MMS}!MMSClass@{MMSClass}}
+\subsubsection[{Destroy\_\-MMS}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::Destroy\_\-MMS ()}}
+\label{class_m_m_s_class_a78c62051e79fbcc96544b37f71d19852}
+
+
+cleans up the memory occupied by the \hyperlink{classmanure}{manure} management system \hypertarget{class_m_m_s_class_a1876166aaad56d81c6144ddf53bab15c}{
+\index{MMSClass@{MMSClass}!DoMMSDaily@{DoMMSDaily}}
+\index{DoMMSDaily@{DoMMSDaily}!MMSClass@{MMSClass}}
+\subsubsection[{DoMMSDaily}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::DoMMSDaily ()}}
+\label{class_m_m_s_class_a1876166aaad56d81c6144ddf53bab15c}
+
+
+calls the daily routine of the \hyperlink{classmanure}{manure} management system model \hypertarget{class_m_m_s_class_a4ebfe5cbd23fa7d45df7ca9ddb226fe2}{
+\index{MMSClass@{MMSClass}!GetMMSAddOrganic@{GetMMSAddOrganic}}
+\index{GetMMSAddOrganic@{GetMMSAddOrganic}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSAddOrganic}]{\setlength{\rightskip}{0pt plus 5cm}bool MMSClass::GetMMSAddOrganic (int {\em patchNo}, \/  double $\ast$ {\em theType}, \/  double $\ast$ {\em theamount}, \/  double $\ast$ {\em theDepth}, \/  double $\ast$ {\em theTotalN}, \/  double $\ast$ {\em theNH4N}, \/  double $\ast$ {\em theNO3N}, \/  double $\ast$ {\em thepercentDM}, \/  double $\ast$ {\em theC})}}
+\label{class_m_m_s_class_a4ebfe5cbd23fa7d45df7ca9ddb226fe2}
+
+
+checks whether either \hyperlink{classmanure}{manure} or plant residues should be applied to the \hyperlink{classsoil}{soil}. If so returns true 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \item[{\em theType}]the type of material added. If less than 100, the material is \hyperlink{classmanure}{manure}, is greater than 100 it is plant residues \item[{\em theamount}]the amount of material added (tonnes fresh weight per hectare) \item[{\em theDepth}]the depth into the \hyperlink{classsoil}{soil} to which the material is applied \item[{\em theTotalN}]the total \hyperlink{classnitrogen}{nitrogen} applied (kilogram per hectare) \item[{\em theNH4N}]the ammonium \hyperlink{classnitrogen}{nitrogen} applied (kilograms per hectare) \item[{\em theNO3N}]the nitrate \hyperlink{classnitrogen}{nitrogen} applied (kilograms per hectare) \item[{\em thepercentDM}]the dry \hyperlink{classmatter}{matter} content (percentage) \item[{\em theC}]the Carbon applied (kilograms per hectare) \end{DoxyParams}
+\hypertarget{class_m_m_s_class_af4ca114efc64eb0fc38e9bb00f1d880b}{
+\index{MMSClass@{MMSClass}!GetMMSDoFertilisation@{GetMMSDoFertilisation}}
+\index{GetMMSDoFertilisation@{GetMMSDoFertilisation}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSDoFertilisation}]{\setlength{\rightskip}{0pt plus 5cm}bool MMSClass::GetMMSDoFertilisation (int {\em patchNo}, \/  double $\ast$ {\em theNH4N}, \/  double $\ast$ {\em theNO3N})}}
+\label{class_m_m_s_class_af4ca114efc64eb0fc38e9bb00f1d880b}
+
+
+checks whether mineral \hyperlink{classnitrogen}{nitrogen} fertiliser should be applied to the \hyperlink{classsoil}{soil}. If so returns true 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \item[{\em theNH4N}]the ammonium \hyperlink{classnitrogen}{nitrogen} applied (kilograms per hectare) \item[{\em theNO3N}]the nitrate \hyperlink{classnitrogen}{nitrogen} applied (kilograms per hectare) \end{DoxyParams}
+\hypertarget{class_m_m_s_class_aa95d9e26d6a4ea7fc754aecd19d8a2bb}{
+\index{MMSClass@{MMSClass}!GetMMSDoHarvesting@{GetMMSDoHarvesting}}
+\index{GetMMSDoHarvesting@{GetMMSDoHarvesting}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSDoHarvesting}]{\setlength{\rightskip}{0pt plus 5cm}bool MMSClass::GetMMSDoHarvesting (int {\em patchNo}, \/  double $\ast$ {\em theharvestCode}, \/  double $\ast$ {\em thepropGrainHarvested}, \/  double $\ast$ {\em thepropStrawHarvested})}}
+\label{class_m_m_s_class_aa95d9e26d6a4ea7fc754aecd19d8a2bb}
+
+
+checks whether a harvesting \hyperlink{classoperation}{operation} should be performed. If so, returns true 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \item[{\em theharvestCode}]harvest type identifier \item[{\em thepropGrainHarvested}]proportion of the grain that is harvested and removed \item[{\em thepropStrawHarvested}]proportion of the straw that is harvested and removed \end{DoxyParams}
+\hypertarget{class_m_m_s_class_aa525cef9cc6ca7af74abed81f5bcf40e}{
+\index{MMSClass@{MMSClass}!GetMMSDoSowing@{GetMMSDoSowing}}
+\index{GetMMSDoSowing@{GetMMSDoSowing}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSDoSowing}]{\setlength{\rightskip}{0pt plus 5cm}bool MMSClass::GetMMSDoSowing (int {\em patchNo}, \/  double $\ast$ {\em theSeedCode}, \/  double $\ast$ {\em theSeedDM}, \/  double $\ast$ {\em theSeedN})}}
+\label{class_m_m_s_class_aa525cef9cc6ca7af74abed81f5bcf40e}
+
+
+checks whether a \hyperlink{classcrop}{crop} should be sown. If so, returns true 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \item[{\em theSeedCode}]identifier of the \hyperlink{classcrop}{crop} to be sown \item[{\em theSeedDM}]the amount of \hyperlink{classseed}{seed} applied (kilograms dry \hyperlink{classmatter}{matter} per hectare) \item[{\em theSeedN}]the amount of \hyperlink{classnitrogen}{nitrogen} applied in \hyperlink{classseed}{seed} (kilograms per hectare) \end{DoxyParams}
+\hypertarget{class_m_m_s_class_aef61b9a68eb4cc9df284b162516b282a}{
+\index{MMSClass@{MMSClass}!GetMMSHouseAmmonia@{GetMMSHouseAmmonia}}
+\index{GetMMSHouseAmmonia@{GetMMSHouseAmmonia}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSHouseAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double MMSClass::GetMMSHouseAmmonia ()}}
+\label{class_m_m_s_class_aef61b9a68eb4cc9df284b162516b282a}
+
+
+Returns the ammonia emission from all \hyperlink{classanimal}{animal} houses (kilograms N per day). \hypertarget{class_m_m_s_class_ab77575e35a1fcd15b454f96287cfbc4d}{
+\index{MMSClass@{MMSClass}!GetMMSHouseAmmonia@{GetMMSHouseAmmonia}}
+\index{GetMMSHouseAmmonia@{GetMMSHouseAmmonia}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSHouseAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double MMSClass::GetMMSHouseAmmonia (int {\em houseNo})}}
+\label{class_m_m_s_class_ab77575e35a1fcd15b454f96287cfbc4d}
+
+
+Returns the ammonia emission from a particular \hyperlink{classanimal}{animal} house (kilograms N per day). 
+\begin{DoxyParams}{Parameters}
+\item[{\em houseNo}]index of the \hyperlink{classanimal}{animal} house for which the ammonia emissions is required \end{DoxyParams}
+\hypertarget{class_m_m_s_class_a8e68d4735ebf3127f1efa6fec7d6c6c9}{
+\index{MMSClass@{MMSClass}!GetMMSPatchAmmonia@{GetMMSPatchAmmonia}}
+\index{GetMMSPatchAmmonia@{GetMMSPatchAmmonia}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSPatchAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double MMSClass::GetMMSPatchAmmonia (int {\em patchNo})}}
+\label{class_m_m_s_class_a8e68d4735ebf3127f1efa6fec7d6c6c9}
+
+
+Returns the ammonia emission from fertiliser and \hyperlink{classmanure}{manure} applied to a particular \hyperlink{classpatch}{patch} (kilograms N per day). 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \end{DoxyParams}
+\hypertarget{class_m_m_s_class_a3f8f600885ab389f35329527a720caa5}{
+\index{MMSClass@{MMSClass}!GetMMSSpreadAmmonia@{GetMMSSpreadAmmonia}}
+\index{GetMMSSpreadAmmonia@{GetMMSSpreadAmmonia}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSSpreadAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double MMSClass::GetMMSSpreadAmmonia ()}}
+\label{class_m_m_s_class_a3f8f600885ab389f35329527a720caa5}
+
+
+Returns the ammonia emission from fertiliser and \hyperlink{classmanure}{manure} applied to fields (kilograms N per day). \hypertarget{class_m_m_s_class_a9681bb2179235730d1c4fb14e4616b42}{
+\index{MMSClass@{MMSClass}!GetMMSStoreAmmonia@{GetMMSStoreAmmonia}}
+\index{GetMMSStoreAmmonia@{GetMMSStoreAmmonia}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSStoreAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double MMSClass::GetMMSStoreAmmonia ()}}
+\label{class_m_m_s_class_a9681bb2179235730d1c4fb14e4616b42}
+
+
+Returns the ammonia emission from all \hyperlink{classmanure}{manure} stores (kilograms N per day). \hypertarget{class_m_m_s_class_a4792c66bdc3f9b80a947d9ad83c6f708}{
+\index{MMSClass@{MMSClass}!GetMMSStoreAmmonia@{GetMMSStoreAmmonia}}
+\index{GetMMSStoreAmmonia@{GetMMSStoreAmmonia}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSStoreAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double MMSClass::GetMMSStoreAmmonia (int {\em storeNo})}}
+\label{class_m_m_s_class_a4792c66bdc3f9b80a947d9ad83c6f708}
+
+
+Returns the ammonia emission from a particular \hyperlink{classmanure}{manure} store (kilograms N per day). 
+\begin{DoxyParams}{Parameters}
+\item[{\em storeNo}]index of the \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} for which the ammonia emissions is required \end{DoxyParams}
+\hypertarget{class_m_m_s_class_af0fdf59e2254ae73b27cbb61500a076f}{
+\index{MMSClass@{MMSClass}!GetMMSTillage@{GetMMSTillage}}
+\index{GetMMSTillage@{GetMMSTillage}!MMSClass@{MMSClass}}
+\subsubsection[{GetMMSTillage}]{\setlength{\rightskip}{0pt plus 5cm}bool MMSClass::GetMMSTillage (int {\em patchNo}, \/  double $\ast$ {\em theType}, \/  double $\ast$ {\em theDepth}, \/  double $\ast$ {\em theFractionIncorporated})}}
+\label{class_m_m_s_class_af0fdf59e2254ae73b27cbb61500a076f}
+
+
+checks whether a tillage \hyperlink{classoperation}{operation} should be performed. If so returns true 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \item[{\em theType}]tillage identifier \item[{\em theDepth}]depths to which tillage is performed \item[{\em theFractionIncorporated}]the fraction of any organic \hyperlink{classmatter}{matter} on the \hyperlink{classsoil}{soil} surface that is incorporated during tillage \end{DoxyParams}
+\hypertarget{class_m_m_s_class_a0667b939a3d01931d222696b140b5365}{
+\index{MMSClass@{MMSClass}!GetNumberFields@{GetNumberFields}}
+\index{GetNumberFields@{GetNumberFields}!MMSClass@{MMSClass}}
+\subsubsection[{GetNumberFields}]{\setlength{\rightskip}{0pt plus 5cm}int MMSClass::GetNumberFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_m_m_s_class_a0667b939a3d01931d222696b140b5365}
+\hypertarget{class_m_m_s_class_adbc93d6a32b07724687b496aa0f863e2}{
+\index{MMSClass@{MMSClass}!GetNumberOfHouses@{GetNumberOfHouses}}
+\index{GetNumberOfHouses@{GetNumberOfHouses}!MMSClass@{MMSClass}}
+\subsubsection[{GetNumberOfHouses}]{\setlength{\rightskip}{0pt plus 5cm}int MMSClass::GetNumberOfHouses ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_m_m_s_class_adbc93d6a32b07724687b496aa0f863e2}
+
+
+Returns the number of \hyperlink{classanimal}{animal} houses on the farm. \hypertarget{class_m_m_s_class_a10aa9739fcd0d54b15b3a49bdeca126e}{
+\index{MMSClass@{MMSClass}!GetNumberOfStore@{GetNumberOfStore}}
+\index{GetNumberOfStore@{GetNumberOfStore}!MMSClass@{MMSClass}}
+\subsubsection[{GetNumberOfStore}]{\setlength{\rightskip}{0pt plus 5cm}int MMSClass::GetNumberOfStore ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_m_m_s_class_a10aa9739fcd0d54b15b3a49bdeca126e}
+
+
+Returns the number of \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} facilities on the farm. \hypertarget{class_m_m_s_class_a5fbe8cd0e5e37a2770694c63ce042da3}{
+\index{MMSClass@{MMSClass}!GetNumOfPatches@{GetNumOfPatches}}
+\index{GetNumOfPatches@{GetNumOfPatches}!MMSClass@{MMSClass}}
+\subsubsection[{GetNumOfPatches}]{\setlength{\rightskip}{0pt plus 5cm}int MMSClass::GetNumOfPatches ()}}
+\label{class_m_m_s_class_a5fbe8cd0e5e37a2770694c63ce042da3}
+
+
+returns number of patches on the farm \hypertarget{class_m_m_s_class_abf02bcf9d78d35dddf2867d390f87adb}{
+\index{MMSClass@{MMSClass}!initialise\_\-MMS@{initialise\_\-MMS}}
+\index{initialise\_\-MMS@{initialise\_\-MMS}!MMSClass@{MMSClass}}
+\subsubsection[{initialise\_\-MMS}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::initialise\_\-MMS ({\bf systemRunData} {\em aRunData})}}
+\label{class_m_m_s_class_abf02bcf9d78d35dddf2867d390f87adb}
+
+
+initialises the \hyperlink{classmanure}{manure} management system model 
+\begin{DoxyParams}{Parameters}
+\item[{\em inputDirectory}]name of the directory from which input data and parameters should be obtained \item[{\em climateDirectory}]name of the directory containing the \hyperlink{classclimate}{climate} data file \item[{\em climateFileName}]name of the file containing the \hyperlink{classclimate}{climate} data \item[{\em climateFileType}]type of \hyperlink{classclimate}{climate} file \item[{\em outputDirectory}]name of the output directory \end{DoxyParams}
+\hypertarget{class_m_m_s_class_acdbfef61f2562067975629532d0da4bf}{
+\index{MMSClass@{MMSClass}!InitialiseInterface@{InitialiseInterface}}
+\index{InitialiseInterface@{InitialiseInterface}!MMSClass@{MMSClass}}
+\subsubsection[{InitialiseInterface}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::InitialiseInterface ({\bf eventControl} $\ast$ {\em aEventControl})}}
+\label{class_m_m_s_class_acdbfef61f2562067975629532d0da4bf}
+
+
+connects patches to the \hyperlink{classpatch}{patch} interfaces 
+\begin{DoxyParams}{Parameters}
+\item[{\em aEventControl}]pointer to the instance of the \hyperlink{classmanure}{manure} management system class \end{DoxyParams}
+\hypertarget{class_m_m_s_class_a618f8d059a46ed238e0ef8d58207722e}{
+\index{MMSClass@{MMSClass}!SetEcoStatus@{SetEcoStatus}}
+\index{SetEcoStatus@{SetEcoStatus}!MMSClass@{MMSClass}}
+\subsubsection[{SetEcoStatus}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::SetEcoStatus (int {\em patchNo}, \/  double {\em ReadyForHarvestOrLater}, \/  double {\em IrrigationDemand}, \/  {\bf linkList}$<$ {\bf harvInfoClass} $>$ $\ast$ {\em theHarvestProducts})}}
+\label{class_m_m_s_class_a618f8d059a46ed238e0ef8d58207722e}
+
+
+logs the status of an \hyperlink{classecosystem}{ecosystem} 
+\begin{DoxyParams}{Parameters}
+\item[{\em patchNo}]number of the relevant \hyperlink{classecosystem}{ecosystem} \item[{\em ReadyForHarvestOrLater}]is greater than zero if any \hyperlink{classcrop}{crop} present is ready for harvesting  IrrigationDemand the amount of \hyperlink{classwater}{water} necessary (in millimetres) to return the \hyperlink{classsoil}{soil} to \hyperlink{classfield}{field} capacity \item[{\em theHarvestProducts}]linked list of pointers to the class containing information about the harvestable \hyperlink{classcrop}{crop} \end{DoxyParams}
+\hypertarget{class_m_m_s_class_a9cfb93d7cb67ba68a0a37d5bbea8fb4b}{
+\index{MMSClass@{MMSClass}!SetMMSGlobals@{SetMMSGlobals}}
+\index{SetMMSGlobals@{SetMMSGlobals}!MMSClass@{MMSClass}}
+\subsubsection[{SetMMSGlobals}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::SetMMSGlobals ()}}
+\label{class_m_m_s_class_a9cfb93d7cb67ba68a0a37d5bbea8fb4b}
+
+
+sets global variables to point to local classes \hypertarget{class_m_m_s_class_a4e86f78741f81b1fd9532da0cf77748c}{
+\index{MMSClass@{MMSClass}!zeroFarmOutputVariables@{zeroFarmOutputVariables}}
+\index{zeroFarmOutputVariables@{zeroFarmOutputVariables}!MMSClass@{MMSClass}}
+\subsubsection[{zeroFarmOutputVariables}]{\setlength{\rightskip}{0pt plus 5cm}void MMSClass::zeroFarmOutputVariables ()}}
+\label{class_m_m_s_class_a4e86f78741f81b1fd9532da0cf77748c}
+
+
+Zero is all farm-\/scale variables. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/Nitroscape/\hyperlink{_m_m_s_class_8h}{MMSClass.h}\item 
+C:/main/trunk/src/Nitroscape/\hyperlink{_m_m_s_class_8cpp}{MMSClass.cpp}\end{DoxyCompactItemize}

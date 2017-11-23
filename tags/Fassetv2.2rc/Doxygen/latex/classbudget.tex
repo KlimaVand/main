@@ -1,0 +1,167 @@
+\hypertarget{classbudget}{
+\section{budget Class Reference}
+\label{classbudget}\index{budget@{budget}}
+}
+
+
+{\ttfamily \#include $<$budget.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbudget_aba8b6c695070f8943835fed016e88e89}{budget} ()
+\item 
+\hyperlink{classbudget_aecc92930fcb6f7f9c3fb3ea1ba7f12c8}{budget} (const \hyperlink{classbudget}{budget} \&abudget)
+\item 
+\hyperlink{classbudget}{budget} \& \hyperlink{classbudget_a5a09b3d53e4bb109f1413b99a634b55d}{operator=} (const \hyperlink{classbudget}{budget} \&f)
+\item 
+\hyperlink{classbudget_a449b93cd2025dabca2678109e890eb6f}{$\sim$budget} ()
+\item 
+double \hyperlink{classbudget_a50d818bbe5fe4e3d8175587633ba0846}{GetInput} () const 
+\item 
+double \hyperlink{classbudget_abbb3f94e526750daf8588055dab4b7e7}{GetOutput} () const 
+\item 
+string \hyperlink{classbudget_ad63e9d83d05c5a4ff9700a1a04715f68}{GetClassName} () const 
+\item 
+string \hyperlink{classbudget_ab544dc2df850963087b71d1d1781fa5a}{GetBudgetName} () const 
+\item 
+void \hyperlink{classbudget_a885260b83f245dee43a1e6ee70a4c68d}{SetInput} (double aInput)
+\item 
+void \hyperlink{classbudget_a28fc928b65aef6475ad0dee374bbb7f2}{SetOutput} (double aOutput)
+\item 
+void \hyperlink{classbudget_ada0ca75f0dd9d8a6d0dfd5fcbd666653}{SetNames} (string aClassName, string aBudgetName)
+\item 
+void \hyperlink{classbudget_a53c534dce354449261700e9c295d7e7e}{SetMonitor} (bool m)
+\item 
+void \hyperlink{classbudget_ad619d773e77931df0435e8c08314f68e}{AddInput} (double aInput)
+\item 
+void \hyperlink{classbudget_a47bfa9740186f2be18a10dd3423a5eea}{AddOutput} (double aOutput)
+\item 
+bool \hyperlink{classbudget_a2814c71d2d504462defc2c85f2cd86b2}{Balance} (double Remain)
+\item 
+void \hyperlink{classbudget_a47533e4ef9b8907303904da10f934f74}{Reset} ()
+\item 
+\hyperlink{classbudget}{budget} $\ast$ \hyperlink{classbudget_a5e9d9a8fdb2a2c1f462208f054a04499}{clone} () const 
+\item 
+void \hyperlink{classbudget_aa775844e174ace198419686907472ae4}{Add} (\hyperlink{classbudget}{budget} $\ast$aBudget, double fraction)
+\item 
+void \hyperlink{classbudget_a2f378ac0b5f670cc9ec42b4e9ceb3c51}{Add} (\hyperlink{classbudget}{budget} aBudget, double fraction)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classbudget_a0f6087201fd909afbaebd5cb15504f1e}{operator$<$$<$} (ostream \&os, const \hyperlink{classbudget}{budget} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbudget_aba8b6c695070f8943835fed016e88e89}{
+\index{budget@{budget}!budget@{budget}}
+\index{budget@{budget}!budget@{budget}}
+\subsubsection[{budget}]{\setlength{\rightskip}{0pt plus 5cm}budget::budget ()}}
+\label{classbudget_aba8b6c695070f8943835fed016e88e89}
+\hypertarget{classbudget_aecc92930fcb6f7f9c3fb3ea1ba7f12c8}{
+\index{budget@{budget}!budget@{budget}}
+\index{budget@{budget}!budget@{budget}}
+\subsubsection[{budget}]{\setlength{\rightskip}{0pt plus 5cm}budget::budget (const {\bf budget} \& {\em abudget})}}
+\label{classbudget_aecc92930fcb6f7f9c3fb3ea1ba7f12c8}
+\hypertarget{classbudget_a449b93cd2025dabca2678109e890eb6f}{
+\index{budget@{budget}!$\sim$budget@{$\sim$budget}}
+\index{$\sim$budget@{$\sim$budget}!budget@{budget}}
+\subsubsection[{$\sim$budget}]{\setlength{\rightskip}{0pt plus 5cm}budget::$\sim$budget ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbudget_a449b93cd2025dabca2678109e890eb6f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbudget_a2f378ac0b5f670cc9ec42b4e9ceb3c51}{
+\index{budget@{budget}!Add@{Add}}
+\index{Add@{Add}!budget@{budget}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void budget::Add ({\bf budget} {\em aBudget}, \/  double {\em fraction})}}
+\label{classbudget_a2f378ac0b5f670cc9ec42b4e9ceb3c51}
+\hypertarget{classbudget_aa775844e174ace198419686907472ae4}{
+\index{budget@{budget}!Add@{Add}}
+\index{Add@{Add}!budget@{budget}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void budget::Add ({\bf budget} $\ast$ {\em aBudget}, \/  double {\em fraction})}}
+\label{classbudget_aa775844e174ace198419686907472ae4}
+\hypertarget{classbudget_ad619d773e77931df0435e8c08314f68e}{
+\index{budget@{budget}!AddInput@{AddInput}}
+\index{AddInput@{AddInput}!budget@{budget}}
+\subsubsection[{AddInput}]{\setlength{\rightskip}{0pt plus 5cm}void budget::AddInput (double {\em aInput})}}
+\label{classbudget_ad619d773e77931df0435e8c08314f68e}
+\hypertarget{classbudget_a47bfa9740186f2be18a10dd3423a5eea}{
+\index{budget@{budget}!AddOutput@{AddOutput}}
+\index{AddOutput@{AddOutput}!budget@{budget}}
+\subsubsection[{AddOutput}]{\setlength{\rightskip}{0pt plus 5cm}void budget::AddOutput (double {\em aOutput})}}
+\label{classbudget_a47bfa9740186f2be18a10dd3423a5eea}
+\hypertarget{classbudget_a2814c71d2d504462defc2c85f2cd86b2}{
+\index{budget@{budget}!Balance@{Balance}}
+\index{Balance@{Balance}!budget@{budget}}
+\subsubsection[{Balance}]{\setlength{\rightskip}{0pt plus 5cm}bool budget::Balance (double {\em Remain})}}
+\label{classbudget_a2814c71d2d504462defc2c85f2cd86b2}
+\hypertarget{classbudget_a5e9d9a8fdb2a2c1f462208f054a04499}{
+\index{budget@{budget}!clone@{clone}}
+\index{clone@{clone}!budget@{budget}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} $\ast$ budget::clone () const}}
+\label{classbudget_a5e9d9a8fdb2a2c1f462208f054a04499}
+\hypertarget{classbudget_ab544dc2df850963087b71d1d1781fa5a}{
+\index{budget@{budget}!GetBudgetName@{GetBudgetName}}
+\index{GetBudgetName@{GetBudgetName}!budget@{budget}}
+\subsubsection[{GetBudgetName}]{\setlength{\rightskip}{0pt plus 5cm}string budget::GetBudgetName () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbudget_ab544dc2df850963087b71d1d1781fa5a}
+\hypertarget{classbudget_ad63e9d83d05c5a4ff9700a1a04715f68}{
+\index{budget@{budget}!GetClassName@{GetClassName}}
+\index{GetClassName@{GetClassName}!budget@{budget}}
+\subsubsection[{GetClassName}]{\setlength{\rightskip}{0pt plus 5cm}string budget::GetClassName () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbudget_ad63e9d83d05c5a4ff9700a1a04715f68}
+\hypertarget{classbudget_a50d818bbe5fe4e3d8175587633ba0846}{
+\index{budget@{budget}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!budget@{budget}}
+\subsubsection[{GetInput}]{\setlength{\rightskip}{0pt plus 5cm}double budget::GetInput () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbudget_a50d818bbe5fe4e3d8175587633ba0846}
+\hypertarget{classbudget_abbb3f94e526750daf8588055dab4b7e7}{
+\index{budget@{budget}!GetOutput@{GetOutput}}
+\index{GetOutput@{GetOutput}!budget@{budget}}
+\subsubsection[{GetOutput}]{\setlength{\rightskip}{0pt plus 5cm}double budget::GetOutput () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbudget_abbb3f94e526750daf8588055dab4b7e7}
+\hypertarget{classbudget_a5a09b3d53e4bb109f1413b99a634b55d}{
+\index{budget@{budget}!operator=@{operator=}}
+\index{operator=@{operator=}!budget@{budget}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} \& budget::operator= (const {\bf budget} \& {\em f})}}
+\label{classbudget_a5a09b3d53e4bb109f1413b99a634b55d}
+\hypertarget{classbudget_a47533e4ef9b8907303904da10f934f74}{
+\index{budget@{budget}!Reset@{Reset}}
+\index{Reset@{Reset}!budget@{budget}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void budget::Reset ()}}
+\label{classbudget_a47533e4ef9b8907303904da10f934f74}
+\hypertarget{classbudget_a885260b83f245dee43a1e6ee70a4c68d}{
+\index{budget@{budget}!SetInput@{SetInput}}
+\index{SetInput@{SetInput}!budget@{budget}}
+\subsubsection[{SetInput}]{\setlength{\rightskip}{0pt plus 5cm}void budget::SetInput (double {\em aInput})}}
+\label{classbudget_a885260b83f245dee43a1e6ee70a4c68d}
+\hypertarget{classbudget_a53c534dce354449261700e9c295d7e7e}{
+\index{budget@{budget}!SetMonitor@{SetMonitor}}
+\index{SetMonitor@{SetMonitor}!budget@{budget}}
+\subsubsection[{SetMonitor}]{\setlength{\rightskip}{0pt plus 5cm}void budget::SetMonitor (bool {\em m})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbudget_a53c534dce354449261700e9c295d7e7e}
+\hypertarget{classbudget_ada0ca75f0dd9d8a6d0dfd5fcbd666653}{
+\index{budget@{budget}!SetNames@{SetNames}}
+\index{SetNames@{SetNames}!budget@{budget}}
+\subsubsection[{SetNames}]{\setlength{\rightskip}{0pt plus 5cm}void budget::SetNames (string {\em aClassName}, \/  string {\em aBudgetName})}}
+\label{classbudget_ada0ca75f0dd9d8a6d0dfd5fcbd666653}
+\hypertarget{classbudget_a28fc928b65aef6475ad0dee374bbb7f2}{
+\index{budget@{budget}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!budget@{budget}}
+\subsubsection[{SetOutput}]{\setlength{\rightskip}{0pt plus 5cm}void budget::SetOutput (double {\em aOutput})}}
+\label{classbudget_a28fc928b65aef6475ad0dee374bbb7f2}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbudget_a0f6087201fd909afbaebd5cb15504f1e}{
+\index{budget@{budget}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!budget@{budget}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf budget} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbudget_a0f6087201fd909afbaebd5cb15504f1e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{budget_8h}{budget.h}\item 
+C:/main/trunk/src/base/\hyperlink{budget_8cpp}{budget.cpp}\end{DoxyCompactItemize}

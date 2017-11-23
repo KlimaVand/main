@@ -1,0 +1,57 @@
+\hypertarget{classcrop_chickory}{
+\section{cropChickory Class Reference}
+\label{classcrop_chickory}\index{cropChickory@{cropChickory}}
+}
+
+
+{\ttfamily \#include $<$cropChickory.h$>$}Inheritance diagram for cropChickory::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_chickory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_chickory_a45eba92f7103e66f01fe54009872f824}{cropChickory} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual double \hyperlink{classcrop_chickory_adef10cd7666f588810ba6d71c581e289}{Update} (double ActivePar)
+\item 
+virtual void \hyperlink{classcrop_chickory_ad29787a097e6f6239285473a1b5c85ad}{Cut} (\hyperlink{classplant_item}{plantItem} $\ast$cutPlantMaterial, double CutHeight)
+\begin{DoxyCompactList}\small\item\em harvest vegetation above a certain height. Is used for forage crops. Not currently used \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_chickory_a45eba92f7103e66f01fe54009872f824}{
+\index{cropChickory@{cropChickory}!cropChickory@{cropChickory}}
+\index{cropChickory@{cropChickory}!cropChickory@{cropChickory}}
+\subsubsection[{cropChickory}]{\setlength{\rightskip}{0pt plus 5cm}cropChickory::cropChickory (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_chickory_a45eba92f7103e66f01fe54009872f824}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_chickory_ad29787a097e6f6239285473a1b5c85ad}{
+\index{cropChickory@{cropChickory}!Cut@{Cut}}
+\index{Cut@{Cut}!cropChickory@{cropChickory}}
+\subsubsection[{Cut}]{\setlength{\rightskip}{0pt plus 5cm}void cropChickory::Cut ({\bf plantItem} $\ast$ {\em cutPlantMaterial}, \/  double {\em CutHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_chickory_ad29787a097e6f6239285473a1b5c85ad}
+
+
+harvest vegetation above a certain height. Is used for forage crops. Not currently used 
+\begin{DoxyParams}{Parameters}
+\item[{\em cutPlantMaterial}]pointer to an object containing material harvested. Amount is in grams per metre squared. \item[{\em cut\_\-height}]cut height in centimetres\end{DoxyParams}
+This function should not be called 
+
+Reimplemented from \hyperlink{classcrop_a5b2a6a3522c64790e295055ff164dc10}{crop}.\hypertarget{classcrop_chickory_adef10cd7666f588810ba6d71c581e289}{
+\index{cropChickory@{cropChickory}!Update@{Update}}
+\index{Update@{Update}!cropChickory@{cropChickory}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}double cropChickory::Update (double {\em ActivePar})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_chickory_adef10cd7666f588810ba6d71c581e289}
+Returns daily DM growth 
+
+Reimplemented from \hyperlink{classcrop_a9ed02462e332fffb65498075e7499bf4}{crop}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_chickory_8h}{cropChickory.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_chickory_8cpp}{cropChickory.cpp}\end{DoxyCompactItemize}

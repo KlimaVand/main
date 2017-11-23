@@ -1,0 +1,143 @@
+\hypertarget{classcrop_lucerne}{
+\section{cropLucerne Class Reference}
+\label{classcrop_lucerne}\index{cropLucerne@{cropLucerne}}
+}
+
+
+{\ttfamily \#include $<$cropLucerne.h$>$}Inheritance diagram for cropLucerne::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_lucerne}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_lucerne_a18a128ff7c9bb7f4fefb9364e402bc34}{cropLucerne} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_lucerne_a755889d07d217abc7b5dc399640c84f1}{cropLucerne} (const \hyperlink{classcrop_lucerne}{cropLucerne} \&acrop)
+\item 
+virtual \hyperlink{classcrop_lucerne}{cropLucerne} $\ast$ \hyperlink{classcrop_lucerne_a5060448bb250b985ad156fb25b368daa}{clone} ()
+\item 
+void \hyperlink{classcrop_lucerne_afa12d3c07920dd3947636f3a7da8c4b4}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual void \hyperlink{classcrop_lucerne_a021d6c3c1d6951936e97d1a7e900331a}{NitrogenAndTranspiration} (\hyperlink{classnitrogen}{nitrogen} aNitrogenUptake, double aTranspirationRatio)
+\item 
+virtual void \hyperlink{classcrop_lucerne_a6eebd1599c5ae746d05fdae4c82c60fb}{ReadParameters} (char $\ast$filename)
+\item 
+virtual void \hyperlink{classcrop_lucerne_a6c87366e1282653cb964ca4c96ab8731}{TransferDryMatterToRoot} (double $\ast$dDryMatt)
+\item 
+virtual double \hyperlink{classcrop_lucerne_a427ff2efe93600382bfac05ec8b48365}{GetNFixationThisDay} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classcrop_lucerne_a1b79ced150076c79417cf1c1758bf1c4}{CalcPotentialNFixation} (double dDryMatt)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_lucerne_a1825e7ae2c0a02fa019d85c9df1e994c}{MaxFixPerDM}
+\item 
+double \hyperlink{classcrop_lucerne_a8b4d1f5dcb870fac95a5f4e1d1030617}{DMCostPerN}
+\item 
+double \hyperlink{classcrop_lucerne_a1ddd2bbb29f98dd4dcd30e7a947ea1ec}{NFixationThisDay}
+\item 
+double \hyperlink{classcrop_lucerne_a3e326582f4ff33cd22db66290510696c}{PotNFix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_lucerne_a18a128ff7c9bb7f4fefb9364e402bc34}{
+\index{cropLucerne@{cropLucerne}!cropLucerne@{cropLucerne}}
+\index{cropLucerne@{cropLucerne}!cropLucerne@{cropLucerne}}
+\subsubsection[{cropLucerne}]{\setlength{\rightskip}{0pt plus 5cm}cropLucerne::cropLucerne (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_lucerne_a18a128ff7c9bb7f4fefb9364e402bc34}
+\hypertarget{classcrop_lucerne_a755889d07d217abc7b5dc399640c84f1}{
+\index{cropLucerne@{cropLucerne}!cropLucerne@{cropLucerne}}
+\index{cropLucerne@{cropLucerne}!cropLucerne@{cropLucerne}}
+\subsubsection[{cropLucerne}]{\setlength{\rightskip}{0pt plus 5cm}cropLucerne::cropLucerne (const {\bf cropLucerne} \& {\em acrop})}}
+\label{classcrop_lucerne_a755889d07d217abc7b5dc399640c84f1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_lucerne_afa12d3c07920dd3947636f3a7da8c4b4}{
+\index{cropLucerne@{cropLucerne}!Add@{Add}}
+\index{Add@{Add}!cropLucerne@{cropLucerne}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cropLucerne::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_lucerne_afa12d3c07920dd3947636f3a7da8c4b4}
+
+
+Reimplemented from \hyperlink{classcrop_ryegrass_a3ee92e29d981a5bcae487e10f5aa18d4}{cropRyegrass}.\hypertarget{classcrop_lucerne_a1b79ced150076c79417cf1c1758bf1c4}{
+\index{cropLucerne@{cropLucerne}!CalcPotentialNFixation@{CalcPotentialNFixation}}
+\index{CalcPotentialNFixation@{CalcPotentialNFixation}!cropLucerne@{cropLucerne}}
+\subsubsection[{CalcPotentialNFixation}]{\setlength{\rightskip}{0pt plus 5cm}double cropLucerne::CalcPotentialNFixation (double {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_lucerne_a1b79ced150076c79417cf1c1758bf1c4}
+\hypertarget{classcrop_lucerne_a5060448bb250b985ad156fb25b368daa}{
+\index{cropLucerne@{cropLucerne}!clone@{clone}}
+\index{clone@{clone}!cropLucerne@{cropLucerne}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cropLucerne}$\ast$ cropLucerne::clone ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_lucerne_a5060448bb250b985ad156fb25b368daa}
+
+
+Reimplemented from \hyperlink{classcrop_ryegrass_af7eb9cc81f755e89fc1486cc242b8b84}{cropRyegrass}.\hypertarget{classcrop_lucerne_a427ff2efe93600382bfac05ec8b48365}{
+\index{cropLucerne@{cropLucerne}!GetNFixationThisDay@{GetNFixationThisDay}}
+\index{GetNFixationThisDay@{GetNFixationThisDay}!cropLucerne@{cropLucerne}}
+\subsubsection[{GetNFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cropLucerne::GetNFixationThisDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_lucerne_a427ff2efe93600382bfac05ec8b48365}
+
+
+Reimplemented from \hyperlink{classcrop_aec045be7b4c6fd112b48ead6ee68dcd9}{crop}.\hypertarget{classcrop_lucerne_a021d6c3c1d6951936e97d1a7e900331a}{
+\index{cropLucerne@{cropLucerne}!NitrogenAndTranspiration@{NitrogenAndTranspiration}}
+\index{NitrogenAndTranspiration@{NitrogenAndTranspiration}!cropLucerne@{cropLucerne}}
+\subsubsection[{NitrogenAndTranspiration}]{\setlength{\rightskip}{0pt plus 5cm}void cropLucerne::NitrogenAndTranspiration ({\bf nitrogen} {\em aNitrogenUptake}, \/  double {\em aTranspirationRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_lucerne_a021d6c3c1d6951936e97d1a7e900331a}
+Adding Nitrogen uptake to the \hyperlink{classcrop}{crop} and replace Transpiration Ratio 
+
+Reimplemented from \hyperlink{classcrop_a4ed6aaf98890015fb52d4d8957313166}{crop}.\hypertarget{classcrop_lucerne_a6eebd1599c5ae746d05fdae4c82c60fb}{
+\index{cropLucerne@{cropLucerne}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropLucerne@{cropLucerne}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropLucerne::ReadParameters (char $\ast$ {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_lucerne_a6eebd1599c5ae746d05fdae4c82c60fb}
+
+
+Reimplemented from \hyperlink{classcrop_ryegrass_a0bcd3f5b23b82810d40e2bf089755447}{cropRyegrass}.\hypertarget{classcrop_lucerne_a6c87366e1282653cb964ca4c96ab8731}{
+\index{cropLucerne@{cropLucerne}!TransferDryMatterToRoot@{TransferDryMatterToRoot}}
+\index{TransferDryMatterToRoot@{TransferDryMatterToRoot}!cropLucerne@{cropLucerne}}
+\subsubsection[{TransferDryMatterToRoot}]{\setlength{\rightskip}{0pt plus 5cm}void cropLucerne::TransferDryMatterToRoot (double $\ast$ {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_lucerne_a6c87366e1282653cb964ca4c96ab8731}
+
+
+Reimplemented from \hyperlink{classcrop_aeb0993f2a6d2f21d30a5c24bbd46833e}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_lucerne_a8b4d1f5dcb870fac95a5f4e1d1030617}{
+\index{cropLucerne@{cropLucerne}!DMCostPerN@{DMCostPerN}}
+\index{DMCostPerN@{DMCostPerN}!cropLucerne@{cropLucerne}}
+\subsubsection[{DMCostPerN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropLucerne::DMCostPerN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_lucerne_a8b4d1f5dcb870fac95a5f4e1d1030617}
+
+
+Reimplemented from \hyperlink{classcrop_af06dc09d391a57692b440c7c492dbc41}{crop}.\hypertarget{classcrop_lucerne_a1825e7ae2c0a02fa019d85c9df1e994c}{
+\index{cropLucerne@{cropLucerne}!MaxFixPerDM@{MaxFixPerDM}}
+\index{MaxFixPerDM@{MaxFixPerDM}!cropLucerne@{cropLucerne}}
+\subsubsection[{MaxFixPerDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropLucerne::MaxFixPerDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_lucerne_a1825e7ae2c0a02fa019d85c9df1e994c}
+
+
+Reimplemented from \hyperlink{classcrop_acd7a9182db99895de016c87785b58cc9}{crop}.\hypertarget{classcrop_lucerne_a1ddd2bbb29f98dd4dcd30e7a947ea1ec}{
+\index{cropLucerne@{cropLucerne}!NFixationThisDay@{NFixationThisDay}}
+\index{NFixationThisDay@{NFixationThisDay}!cropLucerne@{cropLucerne}}
+\subsubsection[{NFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropLucerne::NFixationThisDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_lucerne_a1ddd2bbb29f98dd4dcd30e7a947ea1ec}
+\hypertarget{classcrop_lucerne_a3e326582f4ff33cd22db66290510696c}{
+\index{cropLucerne@{cropLucerne}!PotNFix@{PotNFix}}
+\index{PotNFix@{PotNFix}!cropLucerne@{cropLucerne}}
+\subsubsection[{PotNFix}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropLucerne::PotNFix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_lucerne_a3e326582f4ff33cd22db66290510696c}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_lucerne_8h}{cropLucerne.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_lucerne_8cpp}{cropLucerne.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,1760 @@
+\hypertarget{classcrop}{
+\section{crop Class Reference}
+\label{classcrop}\index{crop@{crop}}
+}
+
+
+{\ttfamily \#include $<$crop.h$>$}Inheritance diagram for crop::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{classcrop}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcrop_a0e65f8e17a7a00d9c4273a12d62c46d6}{DeleteRootMatter} ()
+\item 
+virtual double \hyperlink{classcrop_aad20ce4175c73ff9e9e41cdde0ff6070}{GetTotalStrawN} ()
+\item 
+virtual int \hyperlink{classcrop_a9e1e91e9a97bcd8d0867427ec54334d4}{GetTotStorageN} ()
+\item 
+virtual string \hyperlink{classcrop_ad469acc2d28e07fc7356793c8cf7eabb}{GetStrawItemName} ()
+\item 
+virtual string \hyperlink{classcrop_ab34034b35e26b316a1649770f3de6374}{GetPlantItemName} ()
+\item 
+\hyperlink{classcrop_a852f1319f017379280a1604a1bbddf0e}{crop} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_ae21f526e78ac3bcfe9f71a58d785b7bf}{crop} (const \hyperlink{classcrop}{crop} \&acrop)
+\item 
+virtual \hyperlink{classcrop_a87d279e2be25081212cf17871c177388}{$\sim$crop} ()
+\item 
+virtual \hyperlink{classcrop}{crop} $\ast$ \hyperlink{classcrop_a59eff636f3b438badd4b06811c1fc595}{clone} ()
+\item 
+virtual double \hyperlink{classcrop_aac8ad06adb13f585cfde7cd3f2661618}{GiveEvapFactor} ()
+\item 
+virtual double \hyperlink{classcrop_a646a4f85f4fd25b4cbfc37cb46aae4ab}{GetAndFlushTransferredNitrogen} ()
+\item 
+virtual double \hyperlink{classcrop_a1eb45dfdaae692240eac0102df381742}{GetAndFlushTransferredCarbon} ()
+\item 
+virtual void \hyperlink{classcrop_a8c2110cc2b12fed93031787f6c557fcb}{AssignRootParameters} (\hyperlink{classsoil}{soil} $\ast$CropSoil)
+\item 
+virtual int \hyperlink{classcrop_a2094690538653a0a491682b12ae2da3e}{IrrigationDemand} ()
+\item 
+virtual void \hyperlink{classcrop_a2c5df235a96a1daa3ab122baf17518d4}{Sow} (double SeedDensDryMatt, double \hyperlink{classcrop_aa4666fdd11920e05003bfeefc5518ddf}{RelativeDensity}, double NitrogenInSeed)
+\item 
+virtual void \hyperlink{classcrop_a387dc393ee7cd05a40874739cff8579e}{Harvest} (\hyperlink{classdecomposable}{decomposable} $\ast$Storage, \hyperlink{classdecomposable}{decomposable} $\ast$Straw)
+\begin{DoxyCompactList}\small\item\em harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_a8b5cf5b385f82405af121592f7106fc2}{Terminate} (\hyperlink{classdecomposable}{decomposable} $\ast$Straw, \hyperlink{classdecomposable}{decomposable} $\ast$DeadRoot, double $\ast$\&\hyperlink{classcrop_ad629acdfd462323490f91ad3ce9a7b59}{RootLengthList})
+\begin{DoxyCompactList}\small\item\em kills the \hyperlink{classcrop}{crop} \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_a5b2a6a3522c64790e295055ff164dc10}{Cut} (\hyperlink{classplant_item}{plantItem} $\ast$cutPlantMaterial, double cut\_\-height)
+\begin{DoxyCompactList}\small\item\em harvest vegetation above a certain height. Is used for forage crops. Not currently used \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_a4acf198494d9c34cf42f27e5a9f11032}{Graze} (\hyperlink{classplant_item}{plantItem} $\ast$cutPlantMaterial, double cut\_\-height)
+\item 
+virtual void \hyperlink{classcrop_a9c7ffd6332d9aa190c27618cbcaea767}{KillRootsBelow} (double depth, \hyperlink{classdecomposable}{decomposable} $\ast$DeadRoot, double $\ast$RootList)
+\item 
+virtual void \hyperlink{classcrop_a442c2c4c3198041f6480f1e6f3a1f35e}{StreamKeyData} (fstream \&os)
+\item 
+virtual \hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_a4f4f31c68a905ef3fef26b9d7456cb36}{NitrogenInStorage} ()
+\item 
+virtual \hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_a82bef6e98553aa173173b0ea454a3e0a}{NitrogenInVegTop} ()
+\item 
+virtual \hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_ad0404629e0ae80c88ae7b99ff50cfdca}{NitrogenInRoot} ()
+\item 
+virtual \hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_a0d276aec35091a517cc117546cf8c9f9}{GiveTotalNitrogen} ()
+\item 
+virtual double \hyperlink{classcrop_aa94e2f14b2e8e72c893ab67ad1123e14}{GiveLeafAreaIndex} ()
+\item 
+virtual double \hyperlink{classcrop_a8e4c60317adb0f14a2f21462c2eb9a6c}{LeafAreaFraction} (double height) const 
+\item 
+virtual double \hyperlink{classcrop_aef3e13efa427477cd8ce5aa070c3e2cb}{TotalLeafAreaIndex} (double height, double thickness) const 
+\item 
+virtual double \hyperlink{classcrop_a5c3e9f999f957f7bebe6cca43f569eab}{GreenLeafAreaIndex} (double height, double thickness)
+\item 
+virtual double \hyperlink{classcrop_a86c3888357b5ca286bfaede7fa64c1e4}{GiveYellowLeafAreaIndex} ()
+\item 
+virtual double \hyperlink{classcrop_aa0e3e053a447eb7b6389099e9e93e672}{InterceptionCapacity} ()
+\item 
+virtual double \hyperlink{classcrop_ab8db7f88fbd260a4e8b7dbb735490753}{GiveDryMatterStorage} ()
+\item 
+virtual double \hyperlink{classcrop_a8442897ed98c68b6821a17ce3adc38e8}{GiveDryMatterVegTop} ()
+\item 
+virtual double \hyperlink{classcrop_aceebd864d8c9058698b7f93ae413c45d}{GiveDryMatterRoot} ()
+\item 
+virtual double \hyperlink{classcrop_a45017219012e2e4865e53c406ca32756}{GiveRootInInterval} (double startDep, double thick, double input)
+\item 
+virtual double \hyperlink{classcrop_aa3ce4d26c1cdce101dfe72adc793ebf2}{GiveExtCoeff} () const 
+\item 
+virtual double \hyperlink{classcrop_a75948813cda562087a4ba9474a5906c6}{GiveCropHeight} ()
+\item 
+virtual double \hyperlink{classcrop_a481d40295898bbc66581b5bc0849de75}{GetDailyDMProduction} ()
+\item 
+virtual double $\ast$ \hyperlink{classcrop_a17c3bc93f8a3a6c784f9e30e9d17fbef}{GiveRootLengthList} ()
+\item 
+virtual double \hyperlink{classcrop_a9ff0b086b54afd4c235cb80a9a080d05}{fTW} ()
+\item 
+virtual double \hyperlink{classcrop_a4697bfc911fdbf7ffb8c8bc5af5eaaeb}{fTW} (double temperature)
+\item 
+virtual double \hyperlink{classcrop_a602622ac2c0de6432e6b9438dbbb646b}{fNitrogen} ()
+\item 
+virtual double \hyperlink{classcrop_a3bcfac5c51663141e42b2d6bd17a2cb6}{fNitrogenCurve} ()
+\item 
+virtual void \hyperlink{classcrop_a7f8e3691756173129745ea074a076442}{GetStatus} (double $\ast$aRootRadius, double $\ast$aRootpF, double $\ast$aNitrogenDemand, double $\ast$aNitrateUptakeRate, double $\ast$aAmmoniumUptakeRate, double $\ast$aMinimumSoilNitrate, double $\ast$aMinimumSoilAmmonium)
+\item 
+virtual void \hyperlink{classcrop_a4ed6aaf98890015fb52d4d8957313166}{NitrogenAndTranspiration} (\hyperlink{classnitrogen}{nitrogen} aNitrogenUptake, double aTranspirationRatio)
+\item 
+virtual double \hyperlink{classcrop_a9ed02462e332fffb65498075e7499bf4}{Update} (double ActivePar)
+\item 
+virtual void \hyperlink{classcrop_aeccf3077c6ad647769145b8064ba426b}{UpdateHeight} ()
+\item 
+virtual double \hyperlink{classcrop_aec045be7b4c6fd112b48ead6ee68dcd9}{GetNFixationThisDay} ()
+\item 
+virtual \hyperlink{classdecomposable}{decomposable} $\ast$ \hyperlink{classcrop_ad8b5b9fcd4195ec6ce773c3b454e08b8}{GetRootMatter} ()
+\item 
+virtual \hyperlink{classdecomposable}{decomposable} $\ast$ \hyperlink{classcrop_aab72365c4fb148684a99ce2bcb9e0d70}{GetTopMatter} ()
+\item 
+virtual double \hyperlink{classcrop_aca02c95647c1bcb413c8bc53d4702b09}{getLastNUptake} ()
+\item 
+virtual string \hyperlink{classcrop_a9410b9d5cb1b537736a52d426b682f93}{GetCropName} ()
+\item 
+virtual bool \hyperlink{classcrop_ae111caaea1504db0b2956e662defdc19}{GetTerminated} ()
+\item 
+virtual bool \hyperlink{classcrop_a499e790eeeb926cff4529a98458b1419}{ReadyForRemoval} ()
+\item 
+virtual void \hyperlink{classcrop_ae707acd0c0d6f2b03f3a8f97d1922508}{SetUndersown} (bool isPermanent)
+\item 
+virtual void \hyperlink{classcrop_aa079c1db3cb10a86a58a3efa0f2e51a9}{SetDryMatterVegTopTotalStand} (double DMVT)
+\item 
+virtual void \hyperlink{classcrop_ad827f06873022ef9681e99b83d3c9ea1}{SetTotalLAIStand} (double TLS)
+\item 
+virtual bool \hyperlink{classcrop_ae3212213482a95d8946090c5a481f551}{IsUndersown} ()
+\item 
+virtual bool \hyperlink{classcrop_a1fc1c31116ee5b1254d4893e83633f21}{ContinueGrowth} ()
+\item 
+virtual bool \hyperlink{classcrop_a8dd9a3a833e045f767eb3a6abd5f9677}{IsBareCrop} ()
+\item 
+virtual bool \hyperlink{classcrop_ac831e55c0840bb1008c4d91d2c00a47a}{IsMaize} ()
+\item 
+virtual void \hyperlink{classcrop_a09c265a1590e65269b0f767da95dc85f}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual bool \hyperlink{classcrop_a8f2d5d0807fb0a81e50ea09e6df594ac}{ReadyForHarvest} ()
+\item 
+virtual bool \hyperlink{classcrop_a218928e354da6f48a953731f2b5da527}{Sown} ()
+\item 
+virtual void \hyperlink{classcrop_a68b4dca8529ca2be2d18541a4249bba5}{SetSoilPointer} (\hyperlink{classsoil}{soil} $\ast$sp)
+\item 
+virtual void \hyperlink{classcrop_a750cc1981b6d1fcb6e1a1e43bb22accf}{SetRUEfactor} (double f)
+\item 
+virtual void \hyperlink{classcrop_a9b0b91147d9172c43e4ea336e5b2d3f8}{SetMinDMtemp} (double aTemp)
+\item 
+virtual void \hyperlink{classcrop_ab5f2bbf268e6d623d0a69cc4a37049fb}{SetMaxPlantHeight} (double aHeight)
+\item 
+virtual void \hyperlink{classcrop_af0b1a78d5cf3e32cf24c762e1dfb4048}{ReadParameters} (string filename)
+\item 
+virtual void \hyperlink{classcrop_a87faf3aada27a5f2bfc506bf265d67b7}{MeasuredData} ()
+\item 
+virtual double \hyperlink{classcrop_a9346991c7b35dd7767dec41314a26274}{GetBulkDensity} ()
+\item 
+virtual void \hyperlink{classcrop_a8c3a80a0de839c07691add129dbacafa}{StartBudget} ()
+\item 
+virtual bool \hyperlink{classcrop_aaacb9f08e608ce328d60a25813a49ca5}{EndBudget} (double $\ast$NRemain, double $\ast$DMRemain)
+\item 
+virtual \hyperlink{classbudget}{budget} $\ast$ \hyperlink{classcrop_aa5d7748725ee956e02db1e248ddaa9fb}{GetNbudget} ()
+\item 
+virtual \hyperlink{classbudget}{budget} $\ast$ \hyperlink{classcrop_aa0a404571c0eaf2f5d836f330d7c3b07}{GetDMbudget} ()
+\item 
+virtual \hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classcrop_a066047061cd93c3ae3e798d66dc002fb}{GetAvailability} (double cutHeight, int animalType)
+\item 
+virtual double \hyperlink{classcrop_aebb32418775393941f24b066cd4ddec9}{GiveStandingDryMatter} ()
+\item 
+virtual void \hyperlink{classcrop_a29e704e7767db2f9270128fefc1a74c7}{SetGrazed} (double grazing\_\-height, double DMGrazed)
+\item 
+virtual double \hyperlink{classcrop_aed591b1785dede13c062ab0af439a902}{GetgrazableDM} ()
+\item 
+virtual double \hyperlink{classcrop_a771d3a2885d168f4f06686cc7868cad8}{GetgrazableN} ()
+\begin{DoxyCompactList}\small\item\em return 0 \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_ab856b98a56903245f5c0f0f173b74f35}{GetgrazableC} ()
+\begin{DoxyCompactList}\small\item\em return 0 \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_ac48847f64021da9cd0c2dac80d6b7849}{GetAvailableStandingDM} (double cutHeight, bool useUptakeWeight=true)
+\item 
+virtual double \hyperlink{classcrop_a0e9bb36caf25761c567dd2c59e3afccd}{PotentialDryMatter} (double radiation, double temperature)
+\item 
+virtual void \hyperlink{classcrop_ac113e2ac847afe0da1d72cad7faf4c5f}{ClearTemporaryVariables} ()
+\begin{DoxyCompactList}\small\item\em does nothing \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_a1aafdf75bbeabd5e961678d20b487976}{GetGrazedDM} ()
+\begin{DoxyCompactList}\small\item\em return 0 \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_a6ea34dbffd72c0178788d037db5d032e}{SetCropName} (char $\ast$aName)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classcrop_af852d2f62dd22411199ae8e164536a7d}{CropName}
+\item 
+string \hyperlink{classcrop_af982befddb79f8aedfa207bce540c47a}{PlantItemName}
+\item 
+string \hyperlink{classcrop_aa2aceced21d0fee166e40a836c2ee9cc}{StrawItemName}
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classcrop_abcf1ea79bf745adc82536072ed52cb34ae1dd25438b62c5ebf1af3f86fd0e3039}{MaxPhases} = 9, 
+\hyperlink{classcrop_abcf1ea79bf745adc82536072ed52cb34a44205a77100c5a12cdd20fd59ffc2c69}{MaxMeasuredPoints} =  50
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classcrop_af01aa0fd15613a9e2fcb2a23ca089d5f}{TemperatureEffect} (double t)
+\item 
+virtual double \hyperlink{classcrop_abfdb2b5e795f4843b14de933386afac9}{TargetFunction} (double az, double \hyperlink{classcrop_aefe9049cee98b6ac81f4362c4a1190a9}{RootDepth}, double \hyperlink{classcrop_a1f0aa4443cf11cdf5776454bd056fa28}{TotalRootLength}, double \hyperlink{classcrop_a3bd248dac15a2aefd7289240ffeeb879}{RootDensAtBottom})
+\item 
+virtual double \hyperlink{classcrop_a06cb6f783d002e20c7e19938b30dca54}{RootPenetrationReduction} ()
+\item 
+virtual void \hyperlink{classcrop_a9a07463f05737a8a8e118263e79feccc}{CalcFormParameter} (long double $\ast$az, double \hyperlink{classcrop_aefe9049cee98b6ac81f4362c4a1190a9}{RootDepth}, double \hyperlink{classcrop_a1f0aa4443cf11cdf5776454bd056fa28}{TotalRootLength}, double \hyperlink{classcrop_a3bd248dac15a2aefd7289240ffeeb879}{RootDensAtBottom})
+\item 
+virtual double \hyperlink{classcrop_a50355c2424f5c5f1a7bfc1b8f91c500f}{CalcRootDensAtSurf} (long double az, double \hyperlink{classcrop_aefe9049cee98b6ac81f4362c4a1190a9}{RootDepth}, double \hyperlink{classcrop_a3bd248dac15a2aefd7289240ffeeb879}{RootDensAtBottom})
+\item 
+virtual double \hyperlink{classcrop_a72e68283aa65578e991092da749c6f44}{RootLengthInInterval} (double startdepth, double thickness)
+\item 
+virtual void \hyperlink{classcrop_a022c14d2c183c8d21c622c225bb763d8}{CalcRootGrowth} ()
+\item 
+virtual double \hyperlink{classcrop_a2dbc56666f949042e5d0c80dbbd66325}{DeltaDryMatter} ()
+\item 
+virtual double \hyperlink{classcrop_a453298213a2fe4470677235a81e6d62a}{OptimalDeltaDryMatter} ()
+\item 
+virtual double \hyperlink{classcrop_a210e5515e11a5b705e0d3cd99a12e581}{FractionToRoot} ()
+\item 
+virtual void \hyperlink{classcrop_aeb0993f2a6d2f21d30a5c24bbd46833e}{TransferDryMatterToRoot} (double $\ast$deltaDryMatt)
+\item 
+virtual double \hyperlink{classcrop_ab0b92e4e8ee085757f97ebffb299a721}{MaxTransferable} ()
+\item 
+virtual void \hyperlink{classcrop_aa93103e69836afc4fb23c1a29b15584f}{TransferDryMatterToStorage} (double $\ast$deltaDryMatt)
+\item 
+virtual void \hyperlink{classcrop_a14395e2b72c28aaf9dc729fcd0d3b1c8}{CalcLeafAreaIndices} ()
+\item 
+virtual double \hyperlink{classcrop_a6416f0baf1364f2cf28f312584c39f73}{Nmax} ()
+\item 
+virtual double \hyperlink{classcrop_adc9f2a384dfd4be26746b822c4324f37}{Nmin} ()
+\item 
+virtual double \hyperlink{classcrop_a32e4925865c2310ccc9efc0df1cec1bb}{NpctMaxVegTop} ()
+\item 
+virtual double \hyperlink{classcrop_a10c59f3f5b94ba41a4678e68d6e559b2}{NpctMinVegTop} ()
+\item 
+virtual double \hyperlink{classcrop_a7f8a309f89bee5db02055897d0a717be}{NitrogenDemand} ()
+\item 
+virtual void \hyperlink{classcrop_ae8be0fd1bc438d926ce68942cb0886a0}{RootDecay} (double \hyperlink{classcrop_a15b020b5308e854371c7919b1ebe64ab}{RootTranslocation})
+\item 
+virtual void \hyperlink{classcrop_a84819af6b3132d798a56acd9c78dfbe1}{CalcRootDistribution} ()
+\item 
+virtual int \hyperlink{classcrop_a47f0d5b8da50f8daae81b4897d11cda5}{RootDistrIsLinear} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classphenology}{phenology} $\ast$ \hyperlink{classcrop_a38f05d3f77cfc67ff755eb8c0d79e301}{Phenology}
+\item 
+bool \hyperlink{classcrop_af94e599e6f05fae15099673485d28e88}{terminated}
+\begin{DoxyCompactList}\small\item\em Describe if a \hyperlink{classplan}{plan} is dead(true) or alive(false). \item\end{DoxyCompactList}\item 
+bool \hyperlink{classcrop_a7b2a38633965734c3298a4da248c6d53}{WinterSeed}
+\begin{DoxyCompactList}\small\item\em Describe if a \hyperlink{classplan}{plan} can grow trough winter. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classcrop_ac85050f76b5416047499dcdc854d6f41}{FillFlag}
+\begin{DoxyCompactList}\small\item\em Describe if a \hyperlink{classplan}{plan} can fill. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classcrop_a8e7d3a42d931c8c1d95f92bb2669f2ef}{CutOrHarvested}
+\begin{DoxyCompactList}\small\item\em Describe if a \hyperlink{classplan}{plan} has been cut or harvested. \item\end{DoxyCompactList}\item 
+int \hyperlink{classcrop_add8f384e82643550fa78abd7382abc4f}{NumOfLayers}
+\begin{DoxyCompactList}\small\item\em Describe how many layers a \hyperlink{classplan}{plan} has. It is use to distribute sunlight. \item\end{DoxyCompactList}\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_adabbdde8753e5ae0ecd238e221429d88}{Nitrogen}
+\begin{DoxyCompactList}\small\item\em How much Nitrogen that is in the plant. \item\end{DoxyCompactList}\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_aa050617ad81407650b6bd3150b8c5b93}{AccumulatedRootNDeposit}
+\begin{DoxyCompactList}\small\item\em How much Nitrogen that the plant has given to the \hyperlink{classsoil}{soil} via roots. \item\end{DoxyCompactList}\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_ad9583ee2f76a5141a1a54ebea83627fe}{AccumulatedTopNDeposit}
+\begin{DoxyCompactList}\small\item\em How much Nitrogen that the plant gives to the ground via dead leafs. \item\end{DoxyCompactList}\item 
+\hyperlink{classnitrogen}{nitrogen} \hyperlink{classcrop_ac99038132c4676e35b98265edb34a213}{AccumulatedNProduction}
+\begin{DoxyCompactList}\small\item\em Noone knows that this is. \item\end{DoxyCompactList}\item 
+double \hyperlink{classcrop_af06dc09d391a57692b440c7c492dbc41}{DMCostPerN}
+\item 
+double \hyperlink{classcrop_acd7a9182db99895de016c87785b58cc9}{MaxFixPerDM}
+\item 
+double \hyperlink{classcrop_a1707be6e4080e9ca3c3f24d6ffe0d6fa}{AmmoniumUptakeRate}
+\item 
+double \hyperlink{classcrop_a668a3be41e3f465357ee7ad27e261a02}{CoeffGreenIdx}
+\item 
+double \hyperlink{classcrop_a787dec1e35057a17b4837bc01fc34350}{ColonialisationRate}
+\item 
+double \hyperlink{classcrop_a3a262508a417bdfee36e9961ec283d96}{Conversfactor}
+\item 
+double \hyperlink{classcrop_ab60ba190cccea48dbc2b7112b663545e}{ConversionCoefficient}
+\item 
+double \hyperlink{classcrop_afe8c6c11905d19aca8f9623180b8462f}{DecayRoot}
+\item 
+double \hyperlink{classcrop_ab94a62632b347617f4f62b317a16ff73}{FillFactor}
+\item 
+double \hyperlink{classcrop_a134737bfb7ce5b5c558f15a19232181f}{GerminationConversion}
+\item 
+double \hyperlink{classcrop_af3aac84af1f2d62509c26dfe15d1756c}{InitialCAI}
+\item 
+double \hyperlink{classcrop_ac51148719f4b421963566a281b04c0cf}{InitialRootDepth}
+\item 
+double \hyperlink{classcrop_a068c7be7b71c0b4581ec57ffd204766b}{InterceptCoeff}
+\item 
+double \hyperlink{classcrop_a9836313fa9dae417e0d3a41850209e37}{k}
+\item 
+double \hyperlink{classcrop_a94bdf58b80c10956d690e55f9dfc3bf8}{LAIDistributionPar}
+\item 
+double \hyperlink{classcrop_ac84c4bfe32722d43f1edf0f3954bf6d9}{LAIDMRatio}
+\item 
+double \hyperlink{classcrop_aa53e9f0b5c21a1dafb1d78291820350d}{LAINitrogenRatio}
+\item 
+double \hyperlink{classcrop_a79905dd2d78bdaafd9569f9ecdd43665}{MaxGLAICrop}
+\item 
+double \hyperlink{classcrop_a8ee0da1040a104bfc08b4618d3574db1}{MaxAllocToRoot}
+\item 
+double \hyperlink{classcrop_a6c3d05934ce21df6acb4161c3baab56e}{MaxDMtemp}
+\item 
+double \hyperlink{classcrop_a62361ade607f9cc57e226c1134ad0eb2}{MaxN\_\-Root}
+\item 
+double \hyperlink{classcrop_a9f5ab366fce6f1259588cf5087cdb4c2}{MaxN\_\-Store}
+\item 
+double \hyperlink{classcrop_a211a8242464133985cb2f26964b0f782}{MaxPlantHeight}
+\item 
+double \hyperlink{classcrop_ace1e4d77fd9e80f3cd5c301927e03630}{MaxRadUseEff}
+\item 
+double \hyperlink{classcrop_aa37b1e6e7ca46537edb64086518d5088}{MaxRootDepthCrop}
+\item 
+double \hyperlink{classcrop_a366215bb50374cc375870081f55df157}{MinAllocToRoot}
+\item 
+double \hyperlink{classcrop_aea1414f901f3fc6d6ad5e8d2936ea409}{MinDMtemp}
+\item 
+double \hyperlink{classcrop_a94dedacaf228ed611dd4a9c43fcf1140}{MinimumRootDens}
+\item 
+double \hyperlink{classcrop_a99a529deb646061aa62fcb9953844de2}{MinimumSenescense}
+\item 
+double \hyperlink{classcrop_af11b53bf326f21dc1628289175ecb6d7}{MinimumSoilAmmonium}
+\item 
+double \hyperlink{classcrop_af1ec4e9a12abd41e5f5b39c87cfc2349}{MinimumSoilNitrate}
+\item 
+double \hyperlink{classcrop_a4ec1369c2adcd701d7c4676fce24310c}{MinN\_\-Root}
+\item 
+double \hyperlink{classcrop_a3a411cb751e18aaf088d266ee47c9420}{MinN\_\-Store}
+\item 
+double \hyperlink{classcrop_ad789899ed1b1f807e992d207dceaa192}{NCurveParam}
+\item 
+double \hyperlink{classcrop_a0cbba1c8f072c0ae99c9465f5eadf2cb}{NitrateUptakeRate}
+\item 
+double \hyperlink{classcrop_ab71cf78ab9ac2779deeb032e7b36e47d}{NPctMax}
+\item 
+double \hyperlink{classcrop_a64b16d0f5b047dbd1c1fcdde7fd09a87}{NPctMin}
+\item 
+double \hyperlink{classcrop_a23c5f9e6bead96515b31e977405637d8}{PhotoSyntActPart}
+\item 
+double \hyperlink{classcrop_a69df1a97a358dff8c354b08cb93908ec}{PowDM}
+\item 
+double \hyperlink{classcrop_a0bbe1011a2b6d4224bd986f26d5a1d39}{ReducedNInYellow}
+\item 
+double \hyperlink{classcrop_a252ade240154c71d644732abc9304f79}{RhizoDepositFraction}
+\item 
+double \hyperlink{classcrop_a3bd248dac15a2aefd7289240ffeeb879}{RootDensAtBottom}
+\item 
+double \hyperlink{classcrop_ac3e7efec04f1437634c82c1c3d045924}{RootPentrRate}
+\item 
+double \hyperlink{classcrop_a6ea7c6dccd7cf399d9276d0328c142cb}{RootpF}
+\item 
+double \hyperlink{classcrop_a56cef92be3d0cb8376b13f1666c469e2}{SpecificRootLength}
+\item 
+double \hyperlink{classcrop_adf0da70c2a7dc063b5bcb09730e155c6}{StoreForFilling}
+\item 
+double \hyperlink{classcrop_aab8805ada2711ddb5996d9e87376eb21}{TempRootMin}
+\item 
+double \hyperlink{classcrop_a158a4f00952108fdc19727bdc90765f9}{TopFraction}
+\item 
+double \hyperlink{classcrop_abcc0955968163247c126f91191a4c782}{WaterDeficitGrainFill}
+\item 
+double \hyperlink{classcrop_a4a332805f2e6027e5e2e18e2bf7cae17}{WaterDeficitLagPhase}
+\item 
+double \hyperlink{classcrop_a5eb2d5b9554ecd6e8f7f32b229509b67}{WaterDeficitVegGrowth}
+\item 
+double \hyperlink{classcrop_a86b3309065f886170bff7ad71c0a853f}{FractionNminInRoots}
+\item 
+double \hyperlink{classcrop_a3ac764feb8fb805863a89f3fbda9f831}{FractionNminInVegTop}
+\item 
+double \hyperlink{classcrop_a40992582378c797a8b5a4b8d9aef6d2b}{CO2Effect}
+\item 
+double \hyperlink{classcrop_ac9e8384797116e758558faff120ae56d}{AccumulatedDMProduction}
+\item 
+double \hyperlink{classcrop_ad4c7a7759997919efa9c9befb53cab69}{AccumulatedNFixation}
+\item 
+double \hyperlink{classcrop_a29dcfc8e28d3f6689a94184c968a1882}{AccumulatedRootDeposit}
+\item 
+double \hyperlink{classcrop_a9342a07dc579e1e3169eba7060741339}{AccumulatedRootRespiration}
+\item 
+double \hyperlink{classcrop_a9bf4f47a0a193df878aa15b364dbec14}{AccumulatedTopDeposit}
+\item 
+double \hyperlink{classcrop_a0491b172b4874adcd1b3930cb3be00fe}{DeltaDMTop}
+\item 
+double \hyperlink{classcrop_a3c5f4942cf46d45168caf4da80b79537}{DryMatterRoot}
+\item 
+double \hyperlink{classcrop_a4a2803c0618d2f662abfa8d230c811df}{DryMatterStorage}
+\item 
+double \hyperlink{classcrop_ae5c58459f879a52a543bc517918513fd}{DryMatterTotalStandVegTop}
+\item 
+double \hyperlink{classcrop_a755b12e801a538bb34a8c7b829047e76}{DryMatterVegTop}
+\item 
+double \hyperlink{classcrop_ac8a4c50c9066688c48f1d8fc6df8561c}{fNitrogenAfterRipe}
+\item 
+double \hyperlink{classcrop_a394d3da7bbc4c297a68b5c6f575c5ecc}{fractionOfSpace}
+\item 
+double \hyperlink{classcrop_a2691a60a48a5166469df5da0e0e824fb}{GreenCropAreaIndex}
+\item 
+double \hyperlink{classcrop_a86aa841b9bfef88701e24c3a1922bba5}{InitialSeedDM}
+\item 
+double \hyperlink{classcrop_af42802c05fc1e8dcba94d04bcb41f163}{InterceptedRadiation}
+\item 
+double \hyperlink{classcrop_a7cc6a117013deeda470335c166066615}{maxGLAI}
+\item 
+double \hyperlink{classcrop_a10ecc3d91cd9e62af94a5b889587d3f4}{MaxRootDepth}
+\item 
+double \hyperlink{classcrop_a3f40980535ac184d9cced18aff1a0f8c}{PlantHeight}
+\item 
+double \hyperlink{classcrop_aa4666fdd11920e05003bfeefc5518ddf}{RelativeDensity}
+\item 
+double \hyperlink{classcrop_a089361fdbd7eedb3b84e501ebc4f7221}{Rg}
+\item 
+double \hyperlink{classcrop_a512f2450d70fb9f2a84d046d5a090a94}{RootDensAtSurf}
+\item 
+double \hyperlink{classcrop_aefe9049cee98b6ac81f4362c4a1190a9}{RootDepth}
+\item 
+double \hyperlink{classcrop_ab27528bd7fd066f3c4e028de1fbc70e1}{RootRespiration}
+\item 
+double \hyperlink{classcrop_a15b020b5308e854371c7919b1ebe64ab}{RootTranslocation}
+\item 
+double \hyperlink{classcrop_a2dfb21c27aff36f3049be9a39e7c6538}{SeedDM}
+\item 
+double \hyperlink{classcrop_abfc8df1469f20d8084f744da461d1df5}{temp}
+\item 
+double \hyperlink{classcrop_a362d42d586668dca552ec4d8cd381b68}{TempSumRoot}
+\item 
+double \hyperlink{classcrop_ac25231ecf44f1c5ffb8bf60c45334929}{totalLAIStand}
+\item 
+double \hyperlink{classcrop_a1f0aa4443cf11cdf5776454bd056fa28}{TotalRootLength}
+\item 
+double \hyperlink{classcrop_a0c55583d4613cc09bb912de3078aae49}{TransferableStorage}
+\item 
+double \hyperlink{classcrop_ab1133e34965bc17531d6bbf675cfa240}{TransferedDMToStorage}
+\item 
+double \hyperlink{classcrop_a461228045f8a07f1f12a06acd12adf89}{TranspirationRatio}
+\item 
+double \hyperlink{classcrop_a7acb3fa412808c819f4d9b662cc2148c}{YellowCropAreaIndex}
+\item 
+\hyperlink{classdecomposable}{decomposable} $\ast$ \hyperlink{classcrop_a2ca05aa427979d52b8fbbba1cc5150cf}{rootMatter}
+\item 
+\hyperlink{classdecomposable}{decomposable} $\ast$ \hyperlink{classcrop_a4a8b0a766947fe8b0dfc6a59a24b9bef}{topMatter}
+\item 
+double \hyperlink{classcrop_a5c8bcec383225ccfa1997ed7de4b2446}{RootDistrParm}
+\item 
+int \hyperlink{classcrop_a47dba0ce0c03f35aa973d259f32c7b74}{MeasuredNumber}
+\item 
+double \hyperlink{classcrop_abc773778bea26210ad38d1ed7a342e24}{DateMeasured} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_ab89c9b8db9ad838549d4072dceeb2687}{DMmeasured} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_ad4423586042c12afedbec52624d26fe1}{GLAIMeasured} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_a1c9dc2dc8243ccdccb109ad9b578024b}{NTopMeasured} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_aec9af11e7b2b4fef9fe6c3b5bc892fa4}{DMmeasuredDeriv} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_a6bbccaab0f3df96f277d5891a27176b6}{GLAIMeasuredDeriv} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_ab47524d5cde79d0ad709a7e13524dac5}{NTopMeasuredDeriv} \mbox{[}MaxMeasuredPoints\mbox{]}
+\item 
+double \hyperlink{classcrop_ad629acdfd462323490f91ad3ce9a7b59}{RootLengthList} \mbox{[}MaxSoilLayers\mbox{]}
+\item 
+double \hyperlink{classcrop_a26eb467869df5fc16784e0b42798cc4b}{LayerThickness} \mbox{[}MaxSoilLayers\mbox{]}
+\item 
+bool \hyperlink{classcrop_a6af7b95c4e451b425aeed60156151e9d}{UnderSown}
+\item 
+bool \hyperlink{classcrop_af82f3b3de55473a22e08c2b07d6e0645}{GrowthContinue}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classcrop_af7ae14fac12af3efa728e789155983fb}{Nbudget}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classcrop_a3e5fad944be35152e933b5e50f928f5a}{N15budget}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classcrop_a46844fd0540eb7627555f21afa8545e8}{DMbudget}
+\item 
+\hyperlink{classsoil}{soil} $\ast$ \hyperlink{classcrop_aaf7bdd66e714b1ad4057bad5a46e6772}{aSoil}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcrop_abcf1ea79bf745adc82536072ed52cb34}{
+\subsubsection[{"@12}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_abcf1ea79bf745adc82536072ed52cb34}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MaxPhases@{MaxPhases}!crop@{crop}}\index{crop@{crop}!MaxPhases@{MaxPhases}}\item[{\em 
+\hypertarget{classcrop_abcf1ea79bf745adc82536072ed52cb34ae1dd25438b62c5ebf1af3f86fd0e3039}{
+MaxPhases}
+\label{classcrop_abcf1ea79bf745adc82536072ed52cb34ae1dd25438b62c5ebf1af3f86fd0e3039}
+}]\index{MaxMeasuredPoints@{MaxMeasuredPoints}!crop@{crop}}\index{crop@{crop}!MaxMeasuredPoints@{MaxMeasuredPoints}}\item[{\em 
+\hypertarget{classcrop_abcf1ea79bf745adc82536072ed52cb34a44205a77100c5a12cdd20fd59ffc2c69}{
+MaxMeasuredPoints}
+\label{classcrop_abcf1ea79bf745adc82536072ed52cb34a44205a77100c5a12cdd20fd59ffc2c69}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_a852f1319f017379280a1604a1bbddf0e}{
+\index{crop@{crop}!crop@{crop}}
+\index{crop@{crop}!crop@{crop}}
+\subsubsection[{crop}]{\setlength{\rightskip}{0pt plus 5cm}crop::crop (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_a852f1319f017379280a1604a1bbddf0e}
+\hypertarget{classcrop_ae21f526e78ac3bcfe9f71a58d785b7bf}{
+\index{crop@{crop}!crop@{crop}}
+\index{crop@{crop}!crop@{crop}}
+\subsubsection[{crop}]{\setlength{\rightskip}{0pt plus 5cm}crop::crop (const {\bf crop} \& {\em acrop})}}
+\label{classcrop_ae21f526e78ac3bcfe9f71a58d785b7bf}
+\hypertarget{classcrop_a87d279e2be25081212cf17871c177388}{
+\index{crop@{crop}!$\sim$crop@{$\sim$crop}}
+\index{$\sim$crop@{$\sim$crop}!crop@{crop}}
+\subsubsection[{$\sim$crop}]{\setlength{\rightskip}{0pt plus 5cm}crop::$\sim$crop ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a87d279e2be25081212cf17871c177388}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_a09c265a1590e65269b0f767da95dc85f}{
+\index{crop@{crop}!Add@{Add}}
+\index{Add@{Add}!crop@{crop}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void crop::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a09c265a1590e65269b0f767da95dc85f}
+\hypertarget{classcrop_a8c2110cc2b12fed93031787f6c557fcb}{
+\index{crop@{crop}!AssignRootParameters@{AssignRootParameters}}
+\index{AssignRootParameters@{AssignRootParameters}!crop@{crop}}
+\subsubsection[{AssignRootParameters}]{\setlength{\rightskip}{0pt plus 5cm}void crop::AssignRootParameters ({\bf soil} $\ast$ {\em CropSoil})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a8c2110cc2b12fed93031787f6c557fcb}
+\hyperlink{classsoil}{soil} information, NumOfLayers and MaxRootDepth \hypertarget{classcrop_a9a07463f05737a8a8e118263e79feccc}{
+\index{crop@{crop}!CalcFormParameter@{CalcFormParameter}}
+\index{CalcFormParameter@{CalcFormParameter}!crop@{crop}}
+\subsubsection[{CalcFormParameter}]{\setlength{\rightskip}{0pt plus 5cm}void crop::CalcFormParameter (long double $\ast$ {\em az}, \/  double {\em RootDepth}, \/  double {\em TotalRootLength}, \/  double {\em RootDensAtBottom})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a9a07463f05737a8a8e118263e79feccc}
+\hypertarget{classcrop_a14395e2b72c28aaf9dc729fcd0d3b1c8}{
+\index{crop@{crop}!CalcLeafAreaIndices@{CalcLeafAreaIndices}}
+\index{CalcLeafAreaIndices@{CalcLeafAreaIndices}!crop@{crop}}
+\subsubsection[{CalcLeafAreaIndices}]{\setlength{\rightskip}{0pt plus 5cm}void crop::CalcLeafAreaIndices ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a14395e2b72c28aaf9dc729fcd0d3b1c8}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a573d23b1d622e156001cae5c45203bc0}{cropRyegrass}.\hypertarget{classcrop_a50355c2424f5c5f1a7bfc1b8f91c500f}{
+\index{crop@{crop}!CalcRootDensAtSurf@{CalcRootDensAtSurf}}
+\index{CalcRootDensAtSurf@{CalcRootDensAtSurf}!crop@{crop}}
+\subsubsection[{CalcRootDensAtSurf}]{\setlength{\rightskip}{0pt plus 5cm}double crop::CalcRootDensAtSurf (long double {\em az}, \/  double {\em RootDepth}, \/  double {\em RootDensAtBottom})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a50355c2424f5c5f1a7bfc1b8f91c500f}
+\hypertarget{classcrop_a84819af6b3132d798a56acd9c78dfbe1}{
+\index{crop@{crop}!CalcRootDistribution@{CalcRootDistribution}}
+\index{CalcRootDistribution@{CalcRootDistribution}!crop@{crop}}
+\subsubsection[{CalcRootDistribution}]{\setlength{\rightskip}{0pt plus 5cm}void crop::CalcRootDistribution ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a84819af6b3132d798a56acd9c78dfbe1}
+Updating root each in each layer of the \hyperlink{classsoil}{soil} \hypertarget{classcrop_a022c14d2c183c8d21c622c225bb763d8}{
+\index{crop@{crop}!CalcRootGrowth@{CalcRootGrowth}}
+\index{CalcRootGrowth@{CalcRootGrowth}!crop@{crop}}
+\subsubsection[{CalcRootGrowth}]{\setlength{\rightskip}{0pt plus 5cm}void crop::CalcRootGrowth ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a022c14d2c183c8d21c622c225bb763d8}
+\hypertarget{classcrop_ac113e2ac847afe0da1d72cad7faf4c5f}{
+\index{crop@{crop}!ClearTemporaryVariables@{ClearTemporaryVariables}}
+\index{ClearTemporaryVariables@{ClearTemporaryVariables}!crop@{crop}}
+\subsubsection[{ClearTemporaryVariables}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::ClearTemporaryVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ac113e2ac847afe0da1d72cad7faf4c5f}
+
+
+does nothing 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a8c524dccd76c81476124974e3e486a33}{cropRyegrass}.\hypertarget{classcrop_a59eff636f3b438badd4b06811c1fc595}{
+\index{crop@{crop}!clone@{clone}}
+\index{clone@{clone}!crop@{crop}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf crop}$\ast$ crop::clone ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a59eff636f3b438badd4b06811c1fc595}
+
+
+Reimplemented in \hyperlink{classcrop_clover_afe134102e033bd1326eb955327b4d902}{cropClover}, \hyperlink{classcrop_lucerne_a5060448bb250b985ad156fb25b368daa}{cropLucerne}, and \hyperlink{classcrop_ryegrass_af7eb9cc81f755e89fc1486cc242b8b84}{cropRyegrass}.\hypertarget{classcrop_a1fc1c31116ee5b1254d4893e83633f21}{
+\index{crop@{crop}!ContinueGrowth@{ContinueGrowth}}
+\index{ContinueGrowth@{ContinueGrowth}!crop@{crop}}
+\subsubsection[{ContinueGrowth}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::ContinueGrowth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a1fc1c31116ee5b1254d4893e83633f21}
+\hypertarget{classcrop_a5b2a6a3522c64790e295055ff164dc10}{
+\index{crop@{crop}!Cut@{Cut}}
+\index{Cut@{Cut}!crop@{crop}}
+\subsubsection[{Cut}]{\setlength{\rightskip}{0pt plus 5cm}void crop::Cut ({\bf plantItem} $\ast$ {\em cutPlantMaterial}, \/  double {\em CutHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a5b2a6a3522c64790e295055ff164dc10}
+
+
+harvest vegetation above a certain height. Is used for forage crops. Not currently used 
+\begin{DoxyParams}{Parameters}
+\item[{\em cutPlantMaterial}]pointer to an object containing material harvested. Amount is in grams per metre squared. \item[{\em cut\_\-height}]cut height in centimetres\end{DoxyParams}
+This function should not be called 
+
+Reimplemented in \hyperlink{classcrop_chickory_ad29787a097e6f6239285473a1b5c85ad}{cropChickory}, \hyperlink{classcrop_dyers_woad_a88209c73370f84f4e7f46ab28e6a2097}{cropDyersWoad}, \hyperlink{classcrop_ital_ryegrass_a0cf33f1022b9cbc023df110f68cac622}{cropItalRyegrass}, \hyperlink{classcrop_oil_radish_a3e3ded25f3277d7b8b24fb70900f5138}{cropOilRadish}, and \hyperlink{classcrop_ryegrass_a35e69a6dea6f87f1adb3060e456290ba}{cropRyegrass}.\hypertarget{classcrop_a0e65f8e17a7a00d9c4273a12d62c46d6}{
+\index{crop@{crop}!DeleteRootMatter@{DeleteRootMatter}}
+\index{DeleteRootMatter@{DeleteRootMatter}!crop@{crop}}
+\subsubsection[{DeleteRootMatter}]{\setlength{\rightskip}{0pt plus 5cm}void crop::DeleteRootMatter ()}}
+\label{classcrop_a0e65f8e17a7a00d9c4273a12d62c46d6}
+\hypertarget{classcrop_a2dbc56666f949042e5d0c80dbbd66325}{
+\index{crop@{crop}!DeltaDryMatter@{DeltaDryMatter}}
+\index{DeltaDryMatter@{DeltaDryMatter}!crop@{crop}}
+\subsubsection[{DeltaDryMatter}]{\setlength{\rightskip}{0pt plus 5cm}double crop::DeltaDryMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a2dbc56666f949042e5d0c80dbbd66325}
+Alters the dry \hyperlink{classmatter}{matter} production relative to CO2 concentration Unaltered at ppmCO2 = 377 CO2 function parameters only estimated for winter wheat \hypertarget{classcrop_aaacb9f08e608ce328d60a25813a49ca5}{
+\index{crop@{crop}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!crop@{crop}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}bool crop::EndBudget (double $\ast$ {\em NRemain}, \/  double $\ast$ {\em DMRemain})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aaacb9f08e608ce328d60a25813a49ca5}
+see if 3 budges classes wholes the right values Nrmeain and DMRemain wholes the values of what is remaing 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a5bb3f7b2ad5805e527bea21bbb71531c}{cropRyegrass}.\hypertarget{classcrop_a602622ac2c0de6432e6b9438dbbb646b}{
+\index{crop@{crop}!fNitrogen@{fNitrogen}}
+\index{fNitrogen@{fNitrogen}!crop@{crop}}
+\subsubsection[{fNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}double crop::fNitrogen ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a602622ac2c0de6432e6b9438dbbb646b}
+returns a factor that describe how much N that are in each part of the plant (root, veg and store) 
+
+Reimplemented in \hyperlink{classcrop_rye_a2781d1b924cb3e3f9fba021a5052c629}{cropRye}, and \hyperlink{classcrop_wwheat_aa4c7b3fd03506c8d3ca174bfc31d93e2}{cropWwheat}.\hypertarget{classcrop_a3bcfac5c51663141e42b2d6bd17a2cb6}{
+\index{crop@{crop}!fNitrogenCurve@{fNitrogenCurve}}
+\index{fNitrogenCurve@{fNitrogenCurve}!crop@{crop}}
+\subsubsection[{fNitrogenCurve}]{\setlength{\rightskip}{0pt plus 5cm}double crop::fNitrogenCurve ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a3bcfac5c51663141e42b2d6bd17a2cb6}
+\hypertarget{classcrop_a210e5515e11a5b705e0d3cd99a12e581}{
+\index{crop@{crop}!FractionToRoot@{FractionToRoot}}
+\index{FractionToRoot@{FractionToRoot}!crop@{crop}}
+\subsubsection[{FractionToRoot}]{\setlength{\rightskip}{0pt plus 5cm}double crop::FractionToRoot ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a210e5515e11a5b705e0d3cd99a12e581}
+\hypertarget{classcrop_a4697bfc911fdbf7ffb8c8bc5af5eaaeb}{
+\index{crop@{crop}!fTW@{fTW}}
+\index{fTW@{fTW}!crop@{crop}}
+\subsubsection[{fTW}]{\setlength{\rightskip}{0pt plus 5cm}double crop::fTW (double {\em temperature})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a4697bfc911fdbf7ffb8c8bc5af5eaaeb}
+\hypertarget{classcrop_a9ff0b086b54afd4c235cb80a9a080d05}{
+\index{crop@{crop}!fTW@{fTW}}
+\index{fTW@{fTW}!crop@{crop}}
+\subsubsection[{fTW}]{\setlength{\rightskip}{0pt plus 5cm}double crop::fTW ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a9ff0b086b54afd4c235cb80a9a080d05}
+\hypertarget{classcrop_a1eb45dfdaae692240eac0102df381742}{
+\index{crop@{crop}!GetAndFlushTransferredCarbon@{GetAndFlushTransferredCarbon}}
+\index{GetAndFlushTransferredCarbon@{GetAndFlushTransferredCarbon}!crop@{crop}}
+\subsubsection[{GetAndFlushTransferredCarbon}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetAndFlushTransferredCarbon ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a1eb45dfdaae692240eac0102df381742}
+\hypertarget{classcrop_a646a4f85f4fd25b4cbfc37cb46aae4ab}{
+\index{crop@{crop}!GetAndFlushTransferredNitrogen@{GetAndFlushTransferredNitrogen}}
+\index{GetAndFlushTransferredNitrogen@{GetAndFlushTransferredNitrogen}!crop@{crop}}
+\subsubsection[{GetAndFlushTransferredNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetAndFlushTransferredNitrogen ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a646a4f85f4fd25b4cbfc37cb46aae4ab}
+\hypertarget{classcrop_a066047061cd93c3ae3e798d66dc002fb}{
+\index{crop@{crop}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!crop@{crop}}
+\subsubsection[{GetAvailability}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf feedItem}$\ast$ crop::GetAvailability (double {\em cutHeight}, \/  int {\em animalType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a066047061cd93c3ae3e798d66dc002fb}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a3907b56b9f463da7667d89f726543ef5}{cropRyegrass}.\hypertarget{classcrop_ac48847f64021da9cd0c2dac80d6b7849}{
+\index{crop@{crop}!GetAvailableStandingDM@{GetAvailableStandingDM}}
+\index{GetAvailableStandingDM@{GetAvailableStandingDM}!crop@{crop}}
+\subsubsection[{GetAvailableStandingDM}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetAvailableStandingDM (double {\em cutHeight}, \/  bool {\em useUptakeWeight} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ac48847f64021da9cd0c2dac80d6b7849}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a4bf3812ba96c183f5ff8b671d8ee9d85}{cropRyegrass}.\hypertarget{classcrop_a9346991c7b35dd7767dec41314a26274}{
+\index{crop@{crop}!GetBulkDensity@{GetBulkDensity}}
+\index{GetBulkDensity@{GetBulkDensity}!crop@{crop}}
+\subsubsection[{GetBulkDensity}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetBulkDensity ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a9346991c7b35dd7767dec41314a26274}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_af6202e05ea5e0c9b91acd3deea308a24}{cropRyegrass}.\hypertarget{classcrop_a9410b9d5cb1b537736a52d426b682f93}{
+\index{crop@{crop}!GetCropName@{GetCropName}}
+\index{GetCropName@{GetCropName}!crop@{crop}}
+\subsubsection[{GetCropName}]{\setlength{\rightskip}{0pt plus 5cm}virtual string crop::GetCropName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a9410b9d5cb1b537736a52d426b682f93}
+\hypertarget{classcrop_a481d40295898bbc66581b5bc0849de75}{
+\index{crop@{crop}!GetDailyDMProduction@{GetDailyDMProduction}}
+\index{GetDailyDMProduction@{GetDailyDMProduction}!crop@{crop}}
+\subsubsection[{GetDailyDMProduction}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetDailyDMProduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a481d40295898bbc66581b5bc0849de75}
+\hypertarget{classcrop_aa0a404571c0eaf2f5d836f330d7c3b07}{
+\index{crop@{crop}!GetDMbudget@{GetDMbudget}}
+\index{GetDMbudget@{GetDMbudget}!crop@{crop}}
+\subsubsection[{GetDMbudget}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf budget}$\ast$ crop::GetDMbudget ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aa0a404571c0eaf2f5d836f330d7c3b07}
+\hypertarget{classcrop_ab856b98a56903245f5c0f0f173b74f35}{
+\index{crop@{crop}!GetgrazableC@{GetgrazableC}}
+\index{GetgrazableC@{GetgrazableC}!crop@{crop}}
+\subsubsection[{GetgrazableC}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetgrazableC ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ab856b98a56903245f5c0f0f173b74f35}
+
+
+return 0 \hypertarget{classcrop_aed591b1785dede13c062ab0af439a902}{
+\index{crop@{crop}!GetgrazableDM@{GetgrazableDM}}
+\index{GetgrazableDM@{GetgrazableDM}!crop@{crop}}
+\subsubsection[{GetgrazableDM}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetgrazableDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aed591b1785dede13c062ab0af439a902}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_ae0b4f4270bb1cc5d47751bb999816ad7}{cropRyegrass}.\hypertarget{classcrop_a771d3a2885d168f4f06686cc7868cad8}{
+\index{crop@{crop}!GetgrazableN@{GetgrazableN}}
+\index{GetgrazableN@{GetgrazableN}!crop@{crop}}
+\subsubsection[{GetgrazableN}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetgrazableN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a771d3a2885d168f4f06686cc7868cad8}
+
+
+return 0 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a158a56a14a1b65c246b9dc87b736feb0}{cropRyegrass}.\hypertarget{classcrop_a1aafdf75bbeabd5e961678d20b487976}{
+\index{crop@{crop}!GetGrazedDM@{GetGrazedDM}}
+\index{GetGrazedDM@{GetGrazedDM}!crop@{crop}}
+\subsubsection[{GetGrazedDM}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetGrazedDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a1aafdf75bbeabd5e961678d20b487976}
+
+
+return 0 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a02c5bec33e0f0a6240c34dde03a09e01}{cropRyegrass}.\hypertarget{classcrop_aca02c95647c1bcb413c8bc53d4702b09}{
+\index{crop@{crop}!getLastNUptake@{getLastNUptake}}
+\index{getLastNUptake@{getLastNUptake}!crop@{crop}}
+\subsubsection[{getLastNUptake}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::getLastNUptake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aca02c95647c1bcb413c8bc53d4702b09}
+\hypertarget{classcrop_aa5d7748725ee956e02db1e248ddaa9fb}{
+\index{crop@{crop}!GetNbudget@{GetNbudget}}
+\index{GetNbudget@{GetNbudget}!crop@{crop}}
+\subsubsection[{GetNbudget}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf budget}$\ast$ crop::GetNbudget ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aa5d7748725ee956e02db1e248ddaa9fb}
+\hypertarget{classcrop_aec045be7b4c6fd112b48ead6ee68dcd9}{
+\index{crop@{crop}!GetNFixationThisDay@{GetNFixationThisDay}}
+\index{GetNFixationThisDay@{GetNFixationThisDay}!crop@{crop}}
+\subsubsection[{GetNFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetNFixationThisDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aec045be7b4c6fd112b48ead6ee68dcd9}
+
+
+Reimplemented in \hyperlink{classcrop_clover_a59fd79a6a70369bb7bae83417641ddef}{cropClover}, \hyperlink{classcrop_lucerne_a427ff2efe93600382bfac05ec8b48365}{cropLucerne}, and \hyperlink{classcrop_pea_ac337615ba724c897a369dd1ad85a951e}{cropPea}.\hypertarget{classcrop_ab34034b35e26b316a1649770f3de6374}{
+\index{crop@{crop}!GetPlantItemName@{GetPlantItemName}}
+\index{GetPlantItemName@{GetPlantItemName}!crop@{crop}}
+\subsubsection[{GetPlantItemName}]{\setlength{\rightskip}{0pt plus 5cm}virtual string crop::GetPlantItemName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ab34034b35e26b316a1649770f3de6374}
+\hypertarget{classcrop_ad8b5b9fcd4195ec6ce773c3b454e08b8}{
+\index{crop@{crop}!GetRootMatter@{GetRootMatter}}
+\index{GetRootMatter@{GetRootMatter}!crop@{crop}}
+\subsubsection[{GetRootMatter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf decomposable}$\ast$ crop::GetRootMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ad8b5b9fcd4195ec6ce773c3b454e08b8}
+\hypertarget{classcrop_a7f8e3691756173129745ea074a076442}{
+\index{crop@{crop}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!crop@{crop}}
+\subsubsection[{GetStatus}]{\setlength{\rightskip}{0pt plus 5cm}void crop::GetStatus (double $\ast$ {\em aRootRadius}, \/  double $\ast$ {\em aRootpF}, \/  double $\ast$ {\em aNitrogenDemand}, \/  double $\ast$ {\em aNitrateUptakeRate}, \/  double $\ast$ {\em aAmmoniumUptakeRate}, \/  double $\ast$ {\em aMinimumSoilNitrate}, \/  double $\ast$ {\em aMinimumSoilAmmonium})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a7f8e3691756173129745ea074a076442}
+
+
+Reimplemented in \hyperlink{classcropbare_a776fa8bf716f23af17ff9c1bb10d1bdc}{cropbare}.\hypertarget{classcrop_ad469acc2d28e07fc7356793c8cf7eabb}{
+\index{crop@{crop}!GetStrawItemName@{GetStrawItemName}}
+\index{GetStrawItemName@{GetStrawItemName}!crop@{crop}}
+\subsubsection[{GetStrawItemName}]{\setlength{\rightskip}{0pt plus 5cm}virtual string crop::GetStrawItemName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ad469acc2d28e07fc7356793c8cf7eabb}
+\hypertarget{classcrop_ae111caaea1504db0b2956e662defdc19}{
+\index{crop@{crop}!GetTerminated@{GetTerminated}}
+\index{GetTerminated@{GetTerminated}!crop@{crop}}
+\subsubsection[{GetTerminated}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::GetTerminated ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ae111caaea1504db0b2956e662defdc19}
+\hypertarget{classcrop_aab72365c4fb148684a99ce2bcb9e0d70}{
+\index{crop@{crop}!GetTopMatter@{GetTopMatter}}
+\index{GetTopMatter@{GetTopMatter}!crop@{crop}}
+\subsubsection[{GetTopMatter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf decomposable}$\ast$ crop::GetTopMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aab72365c4fb148684a99ce2bcb9e0d70}
+\hypertarget{classcrop_aad20ce4175c73ff9e9e41cdde0ff6070}{
+\index{crop@{crop}!GetTotalStrawN@{GetTotalStrawN}}
+\index{GetTotalStrawN@{GetTotalStrawN}!crop@{crop}}
+\subsubsection[{GetTotalStrawN}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GetTotalStrawN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aad20ce4175c73ff9e9e41cdde0ff6070}
+\hypertarget{classcrop_a9e1e91e9a97bcd8d0867427ec54334d4}{
+\index{crop@{crop}!GetTotStorageN@{GetTotStorageN}}
+\index{GetTotStorageN@{GetTotStorageN}!crop@{crop}}
+\subsubsection[{GetTotStorageN}]{\setlength{\rightskip}{0pt plus 5cm}virtual int crop::GetTotStorageN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a9e1e91e9a97bcd8d0867427ec54334d4}
+\hypertarget{classcrop_a75948813cda562087a4ba9474a5906c6}{
+\index{crop@{crop}!GiveCropHeight@{GiveCropHeight}}
+\index{GiveCropHeight@{GiveCropHeight}!crop@{crop}}
+\subsubsection[{GiveCropHeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GiveCropHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a75948813cda562087a4ba9474a5906c6}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_ad5e9c54a99aa929e1ecab9c7146b6b09}{cropRyegrass}.\hypertarget{classcrop_aceebd864d8c9058698b7f93ae413c45d}{
+\index{crop@{crop}!GiveDryMatterRoot@{GiveDryMatterRoot}}
+\index{GiveDryMatterRoot@{GiveDryMatterRoot}!crop@{crop}}
+\subsubsection[{GiveDryMatterRoot}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveDryMatterRoot ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aceebd864d8c9058698b7f93ae413c45d}
+\hypertarget{classcrop_ab8db7f88fbd260a4e8b7dbb735490753}{
+\index{crop@{crop}!GiveDryMatterStorage@{GiveDryMatterStorage}}
+\index{GiveDryMatterStorage@{GiveDryMatterStorage}!crop@{crop}}
+\subsubsection[{GiveDryMatterStorage}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveDryMatterStorage ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ab8db7f88fbd260a4e8b7dbb735490753}
+\hypertarget{classcrop_a8442897ed98c68b6821a17ce3adc38e8}{
+\index{crop@{crop}!GiveDryMatterVegTop@{GiveDryMatterVegTop}}
+\index{GiveDryMatterVegTop@{GiveDryMatterVegTop}!crop@{crop}}
+\subsubsection[{GiveDryMatterVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveDryMatterVegTop ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a8442897ed98c68b6821a17ce3adc38e8}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_aedd4ae77832a94a71902085022f1eb88}{cropRyegrass}.\hypertarget{classcrop_aac8ad06adb13f585cfde7cd3f2661618}{
+\index{crop@{crop}!GiveEvapFactor@{GiveEvapFactor}}
+\index{GiveEvapFactor@{GiveEvapFactor}!crop@{crop}}
+\subsubsection[{GiveEvapFactor}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveEvapFactor ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aac8ad06adb13f585cfde7cd3f2661618}
+Calculate how much \hyperlink{classwater}{water} that evaporates 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a8c82f3380064d4351d60aada56820cf4}{cropRyegrass}.\hypertarget{classcrop_aa3ce4d26c1cdce101dfe72adc793ebf2}{
+\index{crop@{crop}!GiveExtCoeff@{GiveExtCoeff}}
+\index{GiveExtCoeff@{GiveExtCoeff}!crop@{crop}}
+\subsubsection[{GiveExtCoeff}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveExtCoeff () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aa3ce4d26c1cdce101dfe72adc793ebf2}
+returns extinction coefficient for photosynthetic active radiation \hypertarget{classcrop_aa94e2f14b2e8e72c893ab67ad1123e14}{
+\index{crop@{crop}!GiveLeafAreaIndex@{GiveLeafAreaIndex}}
+\index{GiveLeafAreaIndex@{GiveLeafAreaIndex}!crop@{crop}}
+\subsubsection[{GiveLeafAreaIndex}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveLeafAreaIndex ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aa94e2f14b2e8e72c893ab67ad1123e14}
+\hypertarget{classcrop_a45017219012e2e4865e53c406ca32756}{
+\index{crop@{crop}!GiveRootInInterval@{GiveRootInInterval}}
+\index{GiveRootInInterval@{GiveRootInInterval}!crop@{crop}}
+\subsubsection[{GiveRootInInterval}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveRootInInterval (double {\em startDep}, \/  double {\em thick}, \/  double {\em input})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a45017219012e2e4865e53c406ca32756}
+\hypertarget{classcrop_a17c3bc93f8a3a6c784f9e30e9d17fbef}{
+\index{crop@{crop}!GiveRootLengthList@{GiveRootLengthList}}
+\index{GiveRootLengthList@{GiveRootLengthList}!crop@{crop}}
+\subsubsection[{GiveRootLengthList}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ crop::GiveRootLengthList ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a17c3bc93f8a3a6c784f9e30e9d17fbef}
+\hypertarget{classcrop_aebb32418775393941f24b066cd4ddec9}{
+\index{crop@{crop}!GiveStandingDryMatter@{GiveStandingDryMatter}}
+\index{GiveStandingDryMatter@{GiveStandingDryMatter}!crop@{crop}}
+\subsubsection[{GiveStandingDryMatter}]{\setlength{\rightskip}{0pt plus 5cm}virtual double crop::GiveStandingDryMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aebb32418775393941f24b066cd4ddec9}
+\hypertarget{classcrop_a0d276aec35091a517cc117546cf8c9f9}{
+\index{crop@{crop}!GiveTotalNitrogen@{GiveTotalNitrogen}}
+\index{GiveTotalNitrogen@{GiveTotalNitrogen}!crop@{crop}}
+\subsubsection[{GiveTotalNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} crop::GiveTotalNitrogen ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a0d276aec35091a517cc117546cf8c9f9}
+\hypertarget{classcrop_a86c3888357b5ca286bfaede7fa64c1e4}{
+\index{crop@{crop}!GiveYellowLeafAreaIndex@{GiveYellowLeafAreaIndex}}
+\index{GiveYellowLeafAreaIndex@{GiveYellowLeafAreaIndex}!crop@{crop}}
+\subsubsection[{GiveYellowLeafAreaIndex}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GiveYellowLeafAreaIndex ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a86c3888357b5ca286bfaede7fa64c1e4}
+\hypertarget{classcrop_a4acf198494d9c34cf42f27e5a9f11032}{
+\index{crop@{crop}!Graze@{Graze}}
+\index{Graze@{Graze}!crop@{crop}}
+\subsubsection[{Graze}]{\setlength{\rightskip}{0pt plus 5cm}void crop::Graze ({\bf plantItem} $\ast$ {\em cutPlantMaterial}, \/  double {\em cut\_\-height})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a4acf198494d9c34cf42f27e5a9f11032}
+generated a warning if the plant is alive \hypertarget{classcrop_a5c3e9f999f957f7bebe6cca43f569eab}{
+\index{crop@{crop}!GreenLeafAreaIndex@{GreenLeafAreaIndex}}
+\index{GreenLeafAreaIndex@{GreenLeafAreaIndex}!crop@{crop}}
+\subsubsection[{GreenLeafAreaIndex}]{\setlength{\rightskip}{0pt plus 5cm}double crop::GreenLeafAreaIndex (double {\em height}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a5c3e9f999f957f7bebe6cca43f569eab}
+Gives the green leaf area in a specific layer in canopy assuming that the yellow leaves are situated i the lower part of the canopy below the green leaves \hypertarget{classcrop_a387dc393ee7cd05a40874739cff8579e}{
+\index{crop@{crop}!Harvest@{Harvest}}
+\index{Harvest@{Harvest}!crop@{crop}}
+\subsubsection[{Harvest}]{\setlength{\rightskip}{0pt plus 5cm}void crop::Harvest ({\bf decomposable} $\ast$ {\em Storage}, \/  {\bf decomposable} $\ast$ {\em Straw})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a387dc393ee7cd05a40874739cff8579e}
+
+
+harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classstorage}{storage}}]pointer to an object containing the maincrop \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. grain) \item[{\em Straw}]pointer to an object containing the remaining \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. Straw)\end{DoxyParams}
+harvest the current \hyperlink{classcrop}{crop}. The drymatter and straw is stored in the input parameters. Nitroget is updated The plant is still alive 
+
+Reimplemented in \hyperlink{classcropbare_ab9e81123fa54843efce5da0861e401f6}{cropbare}, \hyperlink{classcrop_ryegrass_a33a0c70645ce03afc49541e8d3f4919b}{cropRyegrass}, \hyperlink{classcrop_seed_grass_a3415f1b4d08da621709cbb07156137e0}{cropSeedGrass}, and \hyperlink{classcrop_wwheat_a846500070e461386ab5c309a9e6cd388}{cropWwheat}.\hypertarget{classcrop_aa0e3e053a447eb7b6389099e9e93e672}{
+\index{crop@{crop}!InterceptionCapacity@{InterceptionCapacity}}
+\index{InterceptionCapacity@{InterceptionCapacity}!crop@{crop}}
+\subsubsection[{InterceptionCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double crop::InterceptionCapacity ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aa0e3e053a447eb7b6389099e9e93e672}
+\hypertarget{classcrop_a2094690538653a0a491682b12ae2da3e}{
+\index{crop@{crop}!IrrigationDemand@{IrrigationDemand}}
+\index{IrrigationDemand@{IrrigationDemand}!crop@{crop}}
+\subsubsection[{IrrigationDemand}]{\setlength{\rightskip}{0pt plus 5cm}int crop::IrrigationDemand ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a2094690538653a0a491682b12ae2da3e}
+\hypertarget{classcrop_a8dd9a3a833e045f767eb3a6abd5f9677}{
+\index{crop@{crop}!IsBareCrop@{IsBareCrop}}
+\index{IsBareCrop@{IsBareCrop}!crop@{crop}}
+\subsubsection[{IsBareCrop}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::IsBareCrop ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a8dd9a3a833e045f767eb3a6abd5f9677}
+
+
+Reimplemented in \hyperlink{classcropbare_a9fa5ef7d9c5e0ca6d8cc6fe35b00ab86}{cropbare}.\hypertarget{classcrop_ac831e55c0840bb1008c4d91d2c00a47a}{
+\index{crop@{crop}!IsMaize@{IsMaize}}
+\index{IsMaize@{IsMaize}!crop@{crop}}
+\subsubsection[{IsMaize}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::IsMaize ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ac831e55c0840bb1008c4d91d2c00a47a}
+\hypertarget{classcrop_ae3212213482a95d8946090c5a481f551}{
+\index{crop@{crop}!IsUndersown@{IsUndersown}}
+\index{IsUndersown@{IsUndersown}!crop@{crop}}
+\subsubsection[{IsUndersown}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::IsUndersown ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ae3212213482a95d8946090c5a481f551}
+\hypertarget{classcrop_a9c7ffd6332d9aa190c27618cbcaea767}{
+\index{crop@{crop}!KillRootsBelow@{KillRootsBelow}}
+\index{KillRootsBelow@{KillRootsBelow}!crop@{crop}}
+\subsubsection[{KillRootsBelow}]{\setlength{\rightskip}{0pt plus 5cm}void crop::KillRootsBelow (double {\em depth}, \/  {\bf decomposable} $\ast$ {\em DeadRoot}, \/  double $\ast$ {\em RootList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a9c7ffd6332d9aa190c27618cbcaea767}
+Kills roots below a certain depth. Used for grazing and cutting pastures. Dead code since it is never called \hypertarget{classcrop_a8e4c60317adb0f14a2f21462c2eb9a6c}{
+\index{crop@{crop}!LeafAreaFraction@{LeafAreaFraction}}
+\index{LeafAreaFraction@{LeafAreaFraction}!crop@{crop}}
+\subsubsection[{LeafAreaFraction}]{\setlength{\rightskip}{0pt plus 5cm}double crop::LeafAreaFraction (double {\em height}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a8e4c60317adb0f14a2f21462c2eb9a6c}
+Gives leaf area fraction below a certain height \hypertarget{classcrop_ab0b92e4e8ee085757f97ebffb299a721}{
+\index{crop@{crop}!MaxTransferable@{MaxTransferable}}
+\index{MaxTransferable@{MaxTransferable}!crop@{crop}}
+\subsubsection[{MaxTransferable}]{\setlength{\rightskip}{0pt plus 5cm}double crop::MaxTransferable ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ab0b92e4e8ee085757f97ebffb299a721}
+\hypertarget{classcrop_a87faf3aada27a5f2bfc506bf265d67b7}{
+\index{crop@{crop}!MeasuredData@{MeasuredData}}
+\index{MeasuredData@{MeasuredData}!crop@{crop}}
+\subsubsection[{MeasuredData}]{\setlength{\rightskip}{0pt plus 5cm}void crop::MeasuredData ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a87faf3aada27a5f2bfc506bf265d67b7}
+\hypertarget{classcrop_a4ed6aaf98890015fb52d4d8957313166}{
+\index{crop@{crop}!NitrogenAndTranspiration@{NitrogenAndTranspiration}}
+\index{NitrogenAndTranspiration@{NitrogenAndTranspiration}!crop@{crop}}
+\subsubsection[{NitrogenAndTranspiration}]{\setlength{\rightskip}{0pt plus 5cm}void crop::NitrogenAndTranspiration ({\bf nitrogen} {\em aNitrogenUptake}, \/  double {\em aTranspirationRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a4ed6aaf98890015fb52d4d8957313166}
+Adding Nitrogen uptake to the \hyperlink{classcrop}{crop} and replace Transpiration Ratio 
+
+Reimplemented in \hyperlink{classcrop_clover_a93d5dff1cdb5018b42f38cac6dc1de13}{cropClover}, \hyperlink{classcrop_lucerne_a021d6c3c1d6951936e97d1a7e900331a}{cropLucerne}, and \hyperlink{classcrop_pea_a2e984c9df88d272f2caade355a36fff7}{cropPea}.\hypertarget{classcrop_a7f8a309f89bee5db02055897d0a717be}{
+\index{crop@{crop}!NitrogenDemand@{NitrogenDemand}}
+\index{NitrogenDemand@{NitrogenDemand}!crop@{crop}}
+\subsubsection[{NitrogenDemand}]{\setlength{\rightskip}{0pt plus 5cm}double crop::NitrogenDemand ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a7f8a309f89bee5db02055897d0a717be}
+\hypertarget{classcrop_ad0404629e0ae80c88ae7b99ff50cfdca}{
+\index{crop@{crop}!NitrogenInRoot@{NitrogenInRoot}}
+\index{NitrogenInRoot@{NitrogenInRoot}!crop@{crop}}
+\subsubsection[{NitrogenInRoot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} crop::NitrogenInRoot ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ad0404629e0ae80c88ae7b99ff50cfdca}
+\hypertarget{classcrop_a4f4f31c68a905ef3fef26b9d7456cb36}{
+\index{crop@{crop}!NitrogenInStorage@{NitrogenInStorage}}
+\index{NitrogenInStorage@{NitrogenInStorage}!crop@{crop}}
+\subsubsection[{NitrogenInStorage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} crop::NitrogenInStorage ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a4f4f31c68a905ef3fef26b9d7456cb36}
+\hypertarget{classcrop_a82bef6e98553aa173173b0ea454a3e0a}{
+\index{crop@{crop}!NitrogenInVegTop@{NitrogenInVegTop}}
+\index{NitrogenInVegTop@{NitrogenInVegTop}!crop@{crop}}
+\subsubsection[{NitrogenInVegTop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} crop::NitrogenInVegTop ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a82bef6e98553aa173173b0ea454a3e0a}
+Calculate how much Nitrogen that are in the top plant that is not planed for usage \hypertarget{classcrop_a6416f0baf1364f2cf28f312584c39f73}{
+\index{crop@{crop}!Nmax@{Nmax}}
+\index{Nmax@{Nmax}!crop@{crop}}
+\subsubsection[{Nmax}]{\setlength{\rightskip}{0pt plus 5cm}double crop::Nmax ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a6416f0baf1364f2cf28f312584c39f73}
+MEL 2007: New calculation of Nmax. Calculate the minimum amount Nitrogen that the \hyperlink{classcrop}{crop} needs 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_aac89498ebd762c28e8bed76ec7c78db0}{cropRyegrass}.\hypertarget{classcrop_adc9f2a384dfd4be26746b822c4324f37}{
+\index{crop@{crop}!Nmin@{Nmin}}
+\index{Nmin@{Nmin}!crop@{crop}}
+\subsubsection[{Nmin}]{\setlength{\rightskip}{0pt plus 5cm}double crop::Nmin ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_adc9f2a384dfd4be26746b822c4324f37}
+MEL 2007: New calculation of Nmin. Calculate the minimum amount Nitrogen that the \hyperlink{classcrop}{crop} needs \hypertarget{classcrop_a32e4925865c2310ccc9efc0df1cec1bb}{
+\index{crop@{crop}!NpctMaxVegTop@{NpctMaxVegTop}}
+\index{NpctMaxVegTop@{NpctMaxVegTop}!crop@{crop}}
+\subsubsection[{NpctMaxVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double crop::NpctMaxVegTop ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a32e4925865c2310ccc9efc0df1cec1bb}
+MEL 2007: Follows the concept of Justes et al. 1994. Annals of Botany 74:397-\/407. \hypertarget{classcrop_a10c59f3f5b94ba41a4678e68d6e559b2}{
+\index{crop@{crop}!NpctMinVegTop@{NpctMinVegTop}}
+\index{NpctMinVegTop@{NpctMinVegTop}!crop@{crop}}
+\subsubsection[{NpctMinVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double crop::NpctMinVegTop ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a10c59f3f5b94ba41a4678e68d6e559b2}
+MEL 2007: Follows the concept of Justes et al. 1994. Annals of Botany 74:397-\/407. \hypertarget{classcrop_a453298213a2fe4470677235a81e6d62a}{
+\index{crop@{crop}!OptimalDeltaDryMatter@{OptimalDeltaDryMatter}}
+\index{OptimalDeltaDryMatter@{OptimalDeltaDryMatter}!crop@{crop}}
+\subsubsection[{OptimalDeltaDryMatter}]{\setlength{\rightskip}{0pt plus 5cm}double crop::OptimalDeltaDryMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a453298213a2fe4470677235a81e6d62a}
+Calculates the optimal production. Used for root growth \hypertarget{classcrop_a0e9bb36caf25761c567dd2c59e3afccd}{
+\index{crop@{crop}!PotentialDryMatter@{PotentialDryMatter}}
+\index{PotentialDryMatter@{PotentialDryMatter}!crop@{crop}}
+\subsubsection[{PotentialDryMatter}]{\setlength{\rightskip}{0pt plus 5cm}double crop::PotentialDryMatter (double {\em radiation}, \/  double {\em temperature})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a0e9bb36caf25761c567dd2c59e3afccd}
+Get really rough estimate of potential growth. Assumes complete interception of radiation Used in grassland management \hypertarget{classcrop_af0b1a78d5cf3e32cf24c762e1dfb4048}{
+\index{crop@{crop}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!crop@{crop}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void crop::ReadParameters (string {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_af0b1a78d5cf3e32cf24c762e1dfb4048}
+\hypertarget{classcrop_a8f2d5d0807fb0a81e50ea09e6df594ac}{
+\index{crop@{crop}!ReadyForHarvest@{ReadyForHarvest}}
+\index{ReadyForHarvest@{ReadyForHarvest}!crop@{crop}}
+\subsubsection[{ReadyForHarvest}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::ReadyForHarvest ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a8f2d5d0807fb0a81e50ea09e6df594ac}
+
+
+Reimplemented in \hyperlink{classcrop_beet_a0d8bc5bc5f448342e8dd52824443ab63}{cropBeet}, \hyperlink{classcrop_maize_aad7767146cabf892674c77190b6782ef}{cropMaize}, \hyperlink{classcrop_potato_ac3aabdce7024004252aec7b0c150ddf3}{cropPotato}, and \hyperlink{classcrop_ryegrass_a621ec6683bbbf9ff717db7c9a428e722}{cropRyegrass}.\hypertarget{classcrop_a499e790eeeb926cff4529a98458b1419}{
+\index{crop@{crop}!ReadyForRemoval@{ReadyForRemoval}}
+\index{ReadyForRemoval@{ReadyForRemoval}!crop@{crop}}
+\subsubsection[{ReadyForRemoval}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::ReadyForRemoval ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a499e790eeeb926cff4529a98458b1419}
+\hypertarget{classcrop_ae8be0fd1bc438d926ce68942cb0886a0}{
+\index{crop@{crop}!RootDecay@{RootDecay}}
+\index{RootDecay@{RootDecay}!crop@{crop}}
+\subsubsection[{RootDecay}]{\setlength{\rightskip}{0pt plus 5cm}void crop::RootDecay (double {\em RootTranslocation})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ae8be0fd1bc438d926ce68942cb0886a0}
+Rhizodeposition and root decay 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a7b2e92086e8aa5ae0d41c5b7e7678181}{cropRyegrass}.\hypertarget{classcrop_a47f0d5b8da50f8daae81b4897d11cda5}{
+\index{crop@{crop}!RootDistrIsLinear@{RootDistrIsLinear}}
+\index{RootDistrIsLinear@{RootDistrIsLinear}!crop@{crop}}
+\subsubsection[{RootDistrIsLinear}]{\setlength{\rightskip}{0pt plus 5cm}int crop::RootDistrIsLinear ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a47f0d5b8da50f8daae81b4897d11cda5}
+\hypertarget{classcrop_a72e68283aa65578e991092da749c6f44}{
+\index{crop@{crop}!RootLengthInInterval@{RootLengthInInterval}}
+\index{RootLengthInInterval@{RootLengthInInterval}!crop@{crop}}
+\subsubsection[{RootLengthInInterval}]{\setlength{\rightskip}{0pt plus 5cm}double crop::RootLengthInInterval (double {\em startdepth}, \/  double {\em thickness})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a72e68283aa65578e991092da749c6f44}
+\hypertarget{classcrop_a06cb6f783d002e20c7e19938b30dca54}{
+\index{crop@{crop}!RootPenetrationReduction@{RootPenetrationReduction}}
+\index{RootPenetrationReduction@{RootPenetrationReduction}!crop@{crop}}
+\subsubsection[{RootPenetrationReduction}]{\setlength{\rightskip}{0pt plus 5cm}double crop::RootPenetrationReduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_a06cb6f783d002e20c7e19938b30dca54}
+\hypertarget{classcrop_a6ea34dbffd72c0178788d037db5d032e}{
+\index{crop@{crop}!SetCropName@{SetCropName}}
+\index{SetCropName@{SetCropName}!crop@{crop}}
+\subsubsection[{SetCropName}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetCropName (char $\ast$ {\em aName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a6ea34dbffd72c0178788d037db5d032e}
+\hypertarget{classcrop_aa079c1db3cb10a86a58a3efa0f2e51a9}{
+\index{crop@{crop}!SetDryMatterVegTopTotalStand@{SetDryMatterVegTopTotalStand}}
+\index{SetDryMatterVegTopTotalStand@{SetDryMatterVegTopTotalStand}!crop@{crop}}
+\subsubsection[{SetDryMatterVegTopTotalStand}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetDryMatterVegTopTotalStand (double {\em DMVT})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_aa079c1db3cb10a86a58a3efa0f2e51a9}
+\hypertarget{classcrop_a29e704e7767db2f9270128fefc1a74c7}{
+\index{crop@{crop}!SetGrazed@{SetGrazed}}
+\index{SetGrazed@{SetGrazed}!crop@{crop}}
+\subsubsection[{SetGrazed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetGrazed (double {\em grazing\_\-height}, \/  double {\em DMGrazed})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a29e704e7767db2f9270128fefc1a74c7}
+
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a64930de42e02d7aa99becc169c5a8b19}{cropRyegrass}.\hypertarget{classcrop_ab5f2bbf268e6d623d0a69cc4a37049fb}{
+\index{crop@{crop}!SetMaxPlantHeight@{SetMaxPlantHeight}}
+\index{SetMaxPlantHeight@{SetMaxPlantHeight}!crop@{crop}}
+\subsubsection[{SetMaxPlantHeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetMaxPlantHeight (double {\em aHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ab5f2bbf268e6d623d0a69cc4a37049fb}
+\hypertarget{classcrop_a9b0b91147d9172c43e4ea336e5b2d3f8}{
+\index{crop@{crop}!SetMinDMtemp@{SetMinDMtemp}}
+\index{SetMinDMtemp@{SetMinDMtemp}!crop@{crop}}
+\subsubsection[{SetMinDMtemp}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetMinDMtemp (double {\em aTemp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a9b0b91147d9172c43e4ea336e5b2d3f8}
+\hypertarget{classcrop_a750cc1981b6d1fcb6e1a1e43bb22accf}{
+\index{crop@{crop}!SetRUEfactor@{SetRUEfactor}}
+\index{SetRUEfactor@{SetRUEfactor}!crop@{crop}}
+\subsubsection[{SetRUEfactor}]{\setlength{\rightskip}{0pt plus 5cm}void crop::SetRUEfactor (double {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a750cc1981b6d1fcb6e1a1e43bb22accf}
+Scales the radiation use efficiency according to \hyperlink{classcrop}{crop} rotation and pesticide use. Calling this function should remain optional. \hypertarget{classcrop_a68b4dca8529ca2be2d18541a4249bba5}{
+\index{crop@{crop}!SetSoilPointer@{SetSoilPointer}}
+\index{SetSoilPointer@{SetSoilPointer}!crop@{crop}}
+\subsubsection[{SetSoilPointer}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetSoilPointer ({\bf soil} $\ast$ {\em sp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a68b4dca8529ca2be2d18541a4249bba5}
+\hypertarget{classcrop_ad827f06873022ef9681e99b83d3c9ea1}{
+\index{crop@{crop}!SetTotalLAIStand@{SetTotalLAIStand}}
+\index{SetTotalLAIStand@{SetTotalLAIStand}!crop@{crop}}
+\subsubsection[{SetTotalLAIStand}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetTotalLAIStand (double {\em TLS})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ad827f06873022ef9681e99b83d3c9ea1}
+\hypertarget{classcrop_ae707acd0c0d6f2b03f3a8f97d1922508}{
+\index{crop@{crop}!SetUndersown@{SetUndersown}}
+\index{SetUndersown@{SetUndersown}!crop@{crop}}
+\subsubsection[{SetUndersown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void crop::SetUndersown (bool {\em isPermanent})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ae707acd0c0d6f2b03f3a8f97d1922508}
+\hypertarget{classcrop_a2c5df235a96a1daa3ab122baf17518d4}{
+\index{crop@{crop}!Sow@{Sow}}
+\index{Sow@{Sow}!crop@{crop}}
+\subsubsection[{Sow}]{\setlength{\rightskip}{0pt plus 5cm}void crop::Sow (double {\em SeedDensDryMatt}, \/  double {\em aRelativeDensity}, \/  double {\em NitrogenInSeed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a2c5df235a96a1daa3ab122baf17518d4}
+An account of the DM lost via \char`\"{}GerminationConversion\char`\"{} must be added, in order to keep total balance of DM/carbon !!! 
+
+Reimplemented in \hyperlink{classcrop_rye_a0e583eca63fb8a2f609763d1a319d891}{cropRye}, and \hyperlink{classcrop_wwheat_a48bc90182781fdf230087c37b372238d}{cropWwheat}.\hypertarget{classcrop_a218928e354da6f48a953731f2b5da527}{
+\index{crop@{crop}!Sown@{Sown}}
+\index{Sown@{Sown}!crop@{crop}}
+\subsubsection[{Sown}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool crop::Sown ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_a218928e354da6f48a953731f2b5da527}
+\hypertarget{classcrop_a8c3a80a0de839c07691add129dbacafa}{
+\index{crop@{crop}!StartBudget@{StartBudget}}
+\index{StartBudget@{StartBudget}!crop@{crop}}
+\subsubsection[{StartBudget}]{\setlength{\rightskip}{0pt plus 5cm}void crop::StartBudget ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a8c3a80a0de839c07691add129dbacafa}
+\hypertarget{classcrop_a442c2c4c3198041f6480f1e6f3a1f35e}{
+\index{crop@{crop}!StreamKeyData@{StreamKeyData}}
+\index{StreamKeyData@{StreamKeyData}!crop@{crop}}
+\subsubsection[{StreamKeyData}]{\setlength{\rightskip}{0pt plus 5cm}void crop::StreamKeyData (fstream \& {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a442c2c4c3198041f6480f1e6f3a1f35e}
+Output \hyperlink{classcrop}{crop} variables to file \hypertarget{classcrop_abfdb2b5e795f4843b14de933386afac9}{
+\index{crop@{crop}!TargetFunction@{TargetFunction}}
+\index{TargetFunction@{TargetFunction}!crop@{crop}}
+\subsubsection[{TargetFunction}]{\setlength{\rightskip}{0pt plus 5cm}double crop::TargetFunction (double {\em az}, \/  double {\em RootDepth}, \/  double {\em TotalRootLength}, \/  double {\em RootDensAtBottom})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_abfdb2b5e795f4843b14de933386afac9}
+\hypertarget{classcrop_af01aa0fd15613a9e2fcb2a23ca089d5f}{
+\index{crop@{crop}!TemperatureEffect@{TemperatureEffect}}
+\index{TemperatureEffect@{TemperatureEffect}!crop@{crop}}
+\subsubsection[{TemperatureEffect}]{\setlength{\rightskip}{0pt plus 5cm}double crop::TemperatureEffect (double {\em t})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_af01aa0fd15613a9e2fcb2a23ca089d5f}
+Returns the effect of temperature on various processes t -\/ temperature (degreeC) \hypertarget{classcrop_a8b5cf5b385f82405af121592f7106fc2}{
+\index{crop@{crop}!Terminate@{Terminate}}
+\index{Terminate@{Terminate}!crop@{crop}}
+\subsubsection[{Terminate}]{\setlength{\rightskip}{0pt plus 5cm}void crop::Terminate ({\bf decomposable} $\ast$ {\em Straw}, \/  {\bf decomposable} $\ast$ {\em DeadRoot}, \/  double $\ast$\& {\em RootLengthList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a8b5cf5b385f82405af121592f7106fc2}
+
+
+kills the \hyperlink{classcrop}{crop} terminator \hyperlink{classcrop}{crop} and partitions the dry \hyperlink{classmatter}{matter} 
+\begin{DoxyParams}{Parameters}
+\item[{\em straw}]contains the aboveground dry \hyperlink{classmatter}{matter} \item[{\em DeadRoot}]the belowground dry \hyperlink{classmatter}{matter} \item[{\em RootLengthList}]not sure\end{DoxyParams}
+Kills the plant. The length of the root, the amount of root and amount of straw is returned 
+
+Reimplemented in \hyperlink{classcrop_ryegrass_a9a97cb45a3f91020ccf85f6fabcc532a}{cropRyegrass}.\hypertarget{classcrop_aef3e13efa427477cd8ce5aa070c3e2cb}{
+\index{crop@{crop}!TotalLeafAreaIndex@{TotalLeafAreaIndex}}
+\index{TotalLeafAreaIndex@{TotalLeafAreaIndex}!crop@{crop}}
+\subsubsection[{TotalLeafAreaIndex}]{\setlength{\rightskip}{0pt plus 5cm}double crop::TotalLeafAreaIndex (double {\em height}, \/  double {\em thickness}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aef3e13efa427477cd8ce5aa070c3e2cb}
+Gives the total leaf area index in a certain layer of the canopy \hypertarget{classcrop_aeb0993f2a6d2f21d30a5c24bbd46833e}{
+\index{crop@{crop}!TransferDryMatterToRoot@{TransferDryMatterToRoot}}
+\index{TransferDryMatterToRoot@{TransferDryMatterToRoot}!crop@{crop}}
+\subsubsection[{TransferDryMatterToRoot}]{\setlength{\rightskip}{0pt plus 5cm}void crop::TransferDryMatterToRoot (double $\ast$ {\em deltaDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_aeb0993f2a6d2f21d30a5c24bbd46833e}
+
+
+Reimplemented in \hyperlink{classcrop_clover_a1440530239e8b4754faefd889e56c83a}{cropClover}, \hyperlink{classcrop_lucerne_a6c87366e1282653cb964ca4c96ab8731}{cropLucerne}, and \hyperlink{classcrop_pea_acd369e049225726674bcc0091f2f9e54}{cropPea}.\hypertarget{classcrop_aa93103e69836afc4fb23c1a29b15584f}{
+\index{crop@{crop}!TransferDryMatterToStorage@{TransferDryMatterToStorage}}
+\index{TransferDryMatterToStorage@{TransferDryMatterToStorage}!crop@{crop}}
+\subsubsection[{TransferDryMatterToStorage}]{\setlength{\rightskip}{0pt plus 5cm}void crop::TransferDryMatterToStorage (double $\ast$ {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_aa93103e69836afc4fb23c1a29b15584f}
+BPE and MEL 2007: New limitation to the transfer of DM to \hyperlink{classstorage}{storage} according to the concept of Justes et al. 1994. Annals of Botany 74:397-\/407. 
+
+Reimplemented in \hyperlink{classcrop_beet_a6082dfaca5fc7cae98ec3fd5208d1380}{cropBeet}, \hyperlink{classcrop_potato_a6fcc63dfefbe4d6c6753c6ba0d71ea8f}{cropPotato}, and \hyperlink{classcrop_ryegrass_a41ff7bdc52b0466a4598e104b4723572}{cropRyegrass}.\hypertarget{classcrop_a9ed02462e332fffb65498075e7499bf4}{
+\index{crop@{crop}!Update@{Update}}
+\index{Update@{Update}!crop@{crop}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}double crop::Update (double {\em ActivePar})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_a9ed02462e332fffb65498075e7499bf4}
+Returns daily DM growth 
+
+Reimplemented in \hyperlink{classcropbare_a141cff2a17ccfb22637dd0692a427795}{cropbare}, \hyperlink{classcrop_chickory_adef10cd7666f588810ba6d71c581e289}{cropChickory}, \hyperlink{classcrop_dyers_woad_ac99e68efb5b08aa2e0208b5e925929a8}{cropDyersWoad}, \hyperlink{classcrop_hairy_vetch_a4a1d386caee18a4ae111c5b8a1448d48}{cropHairyVetch}, \hyperlink{classcrop_oat_ae7850c3901966142a6ada63470313e5a}{cropOat}, \hyperlink{classcrop_oil_radish_aa699ab0f332d4a9eba58255b99fe2ea2}{cropOilRadish}, and \hyperlink{classcrop_ryegrass_a6785773151146d1e49ec5bb5c75636aa}{cropRyegrass}.\hypertarget{classcrop_aeccf3077c6ad647769145b8064ba426b}{
+\index{crop@{crop}!UpdateHeight@{UpdateHeight}}
+\index{UpdateHeight@{UpdateHeight}!crop@{crop}}
+\subsubsection[{UpdateHeight}]{\setlength{\rightskip}{0pt plus 5cm}void crop::UpdateHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_aeccf3077c6ad647769145b8064ba426b}
+updates the height of the plant 
+
+Reimplemented in \hyperlink{classcrop_rye_ad2996d19a34c3a800f1f356b522b4904}{cropRye}, \hyperlink{classcrop_ryegrass_a73b6ee5b772c6748d37be7d006a092c6}{cropRyegrass}, and \hyperlink{classcrop_wwheat_a42da6f7e2539c75a2171f2dae571257f}{cropWwheat}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_ac9e8384797116e758558faff120ae56d}{
+\index{crop@{crop}!AccumulatedDMProduction@{AccumulatedDMProduction}}
+\index{AccumulatedDMProduction@{AccumulatedDMProduction}!crop@{crop}}
+\subsubsection[{AccumulatedDMProduction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::AccumulatedDMProduction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac9e8384797116e758558faff120ae56d}
+\hypertarget{classcrop_ad4c7a7759997919efa9c9befb53cab69}{
+\index{crop@{crop}!AccumulatedNFixation@{AccumulatedNFixation}}
+\index{AccumulatedNFixation@{AccumulatedNFixation}!crop@{crop}}
+\subsubsection[{AccumulatedNFixation}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::AccumulatedNFixation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ad4c7a7759997919efa9c9befb53cab69}
+\hypertarget{classcrop_ac99038132c4676e35b98265edb34a213}{
+\index{crop@{crop}!AccumulatedNProduction@{AccumulatedNProduction}}
+\index{AccumulatedNProduction@{AccumulatedNProduction}!crop@{crop}}
+\subsubsection[{AccumulatedNProduction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf crop::AccumulatedNProduction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac99038132c4676e35b98265edb34a213}
+
+
+Noone knows that this is. \hypertarget{classcrop_a29dcfc8e28d3f6689a94184c968a1882}{
+\index{crop@{crop}!AccumulatedRootDeposit@{AccumulatedRootDeposit}}
+\index{AccumulatedRootDeposit@{AccumulatedRootDeposit}!crop@{crop}}
+\subsubsection[{AccumulatedRootDeposit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::AccumulatedRootDeposit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a29dcfc8e28d3f6689a94184c968a1882}
+\hypertarget{classcrop_aa050617ad81407650b6bd3150b8c5b93}{
+\index{crop@{crop}!AccumulatedRootNDeposit@{AccumulatedRootNDeposit}}
+\index{AccumulatedRootNDeposit@{AccumulatedRootNDeposit}!crop@{crop}}
+\subsubsection[{AccumulatedRootNDeposit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf crop::AccumulatedRootNDeposit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aa050617ad81407650b6bd3150b8c5b93}
+
+
+How much Nitrogen that the plant has given to the \hyperlink{classsoil}{soil} via roots. \hypertarget{classcrop_a9342a07dc579e1e3169eba7060741339}{
+\index{crop@{crop}!AccumulatedRootRespiration@{AccumulatedRootRespiration}}
+\index{AccumulatedRootRespiration@{AccumulatedRootRespiration}!crop@{crop}}
+\subsubsection[{AccumulatedRootRespiration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::AccumulatedRootRespiration}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a9342a07dc579e1e3169eba7060741339}
+\hypertarget{classcrop_a9bf4f47a0a193df878aa15b364dbec14}{
+\index{crop@{crop}!AccumulatedTopDeposit@{AccumulatedTopDeposit}}
+\index{AccumulatedTopDeposit@{AccumulatedTopDeposit}!crop@{crop}}
+\subsubsection[{AccumulatedTopDeposit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::AccumulatedTopDeposit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a9bf4f47a0a193df878aa15b364dbec14}
+\hypertarget{classcrop_ad9583ee2f76a5141a1a54ebea83627fe}{
+\index{crop@{crop}!AccumulatedTopNDeposit@{AccumulatedTopNDeposit}}
+\index{AccumulatedTopNDeposit@{AccumulatedTopNDeposit}!crop@{crop}}
+\subsubsection[{AccumulatedTopNDeposit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf crop::AccumulatedTopNDeposit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ad9583ee2f76a5141a1a54ebea83627fe}
+
+
+How much Nitrogen that the plant gives to the ground via dead leafs. \hypertarget{classcrop_a1707be6e4080e9ca3c3f24d6ffe0d6fa}{
+\index{crop@{crop}!AmmoniumUptakeRate@{AmmoniumUptakeRate}}
+\index{AmmoniumUptakeRate@{AmmoniumUptakeRate}!crop@{crop}}
+\subsubsection[{AmmoniumUptakeRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::AmmoniumUptakeRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a1707be6e4080e9ca3c3f24d6ffe0d6fa}
+\hypertarget{classcrop_aaf7bdd66e714b1ad4057bad5a46e6772}{
+\index{crop@{crop}!aSoil@{aSoil}}
+\index{aSoil@{aSoil}!crop@{crop}}
+\subsubsection[{aSoil}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soil}$\ast$ {\bf crop::aSoil}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aaf7bdd66e714b1ad4057bad5a46e6772}
+\hypertarget{classcrop_a40992582378c797a8b5a4b8d9aef6d2b}{
+\index{crop@{crop}!CO2Effect@{CO2Effect}}
+\index{CO2Effect@{CO2Effect}!crop@{crop}}
+\subsubsection[{CO2Effect}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::CO2Effect}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a40992582378c797a8b5a4b8d9aef6d2b}
+\hypertarget{classcrop_a668a3be41e3f465357ee7ad27e261a02}{
+\index{crop@{crop}!CoeffGreenIdx@{CoeffGreenIdx}}
+\index{CoeffGreenIdx@{CoeffGreenIdx}!crop@{crop}}
+\subsubsection[{CoeffGreenIdx}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::CoeffGreenIdx}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a668a3be41e3f465357ee7ad27e261a02}
+\hypertarget{classcrop_a787dec1e35057a17b4837bc01fc34350}{
+\index{crop@{crop}!ColonialisationRate@{ColonialisationRate}}
+\index{ColonialisationRate@{ColonialisationRate}!crop@{crop}}
+\subsubsection[{ColonialisationRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::ColonialisationRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a787dec1e35057a17b4837bc01fc34350}
+\hypertarget{classcrop_a3a262508a417bdfee36e9961ec283d96}{
+\index{crop@{crop}!Conversfactor@{Conversfactor}}
+\index{Conversfactor@{Conversfactor}!crop@{crop}}
+\subsubsection[{Conversfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::Conversfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3a262508a417bdfee36e9961ec283d96}
+\hypertarget{classcrop_ab60ba190cccea48dbc2b7112b663545e}{
+\index{crop@{crop}!ConversionCoefficient@{ConversionCoefficient}}
+\index{ConversionCoefficient@{ConversionCoefficient}!crop@{crop}}
+\subsubsection[{ConversionCoefficient}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::ConversionCoefficient}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab60ba190cccea48dbc2b7112b663545e}
+\hypertarget{classcrop_af852d2f62dd22411199ae8e164536a7d}{
+\index{crop@{crop}!CropName@{CropName}}
+\index{CropName@{CropName}!crop@{crop}}
+\subsubsection[{CropName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf crop::CropName}}}
+\label{classcrop_af852d2f62dd22411199ae8e164536a7d}
+\hypertarget{classcrop_a8e7d3a42d931c8c1d95f92bb2669f2ef}{
+\index{crop@{crop}!CutOrHarvested@{CutOrHarvested}}
+\index{CutOrHarvested@{CutOrHarvested}!crop@{crop}}
+\subsubsection[{CutOrHarvested}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf crop::CutOrHarvested}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a8e7d3a42d931c8c1d95f92bb2669f2ef}
+
+
+Describe if a \hyperlink{classplan}{plan} has been cut or harvested. \hypertarget{classcrop_abc773778bea26210ad38d1ed7a342e24}{
+\index{crop@{crop}!DateMeasured@{DateMeasured}}
+\index{DateMeasured@{DateMeasured}!crop@{crop}}
+\subsubsection[{DateMeasured}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DateMeasured}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_abc773778bea26210ad38d1ed7a342e24}
+\hypertarget{classcrop_afe8c6c11905d19aca8f9623180b8462f}{
+\index{crop@{crop}!DecayRoot@{DecayRoot}}
+\index{DecayRoot@{DecayRoot}!crop@{crop}}
+\subsubsection[{DecayRoot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DecayRoot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_afe8c6c11905d19aca8f9623180b8462f}
+\hypertarget{classcrop_a0491b172b4874adcd1b3930cb3be00fe}{
+\index{crop@{crop}!DeltaDMTop@{DeltaDMTop}}
+\index{DeltaDMTop@{DeltaDMTop}!crop@{crop}}
+\subsubsection[{DeltaDMTop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DeltaDMTop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a0491b172b4874adcd1b3930cb3be00fe}
+\hypertarget{classcrop_a46844fd0540eb7627555f21afa8545e8}{
+\index{crop@{crop}!DMbudget@{DMbudget}}
+\index{DMbudget@{DMbudget}!crop@{crop}}
+\subsubsection[{DMbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf crop::DMbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a46844fd0540eb7627555f21afa8545e8}
+\hypertarget{classcrop_af06dc09d391a57692b440c7c492dbc41}{
+\index{crop@{crop}!DMCostPerN@{DMCostPerN}}
+\index{DMCostPerN@{DMCostPerN}!crop@{crop}}
+\subsubsection[{DMCostPerN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DMCostPerN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af06dc09d391a57692b440c7c492dbc41}
+
+
+Reimplemented in \hyperlink{classcrop_clover_a9b3c11041d71e6050fe2831c22318ed3}{cropClover}, \hyperlink{classcrop_lucerne_a8b4d1f5dcb870fac95a5f4e1d1030617}{cropLucerne}, and \hyperlink{classcrop_pea_a74e2cc41cbccf0a208430b23a1267853}{cropPea}.\hypertarget{classcrop_ab89c9b8db9ad838549d4072dceeb2687}{
+\index{crop@{crop}!DMmeasured@{DMmeasured}}
+\index{DMmeasured@{DMmeasured}!crop@{crop}}
+\subsubsection[{DMmeasured}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DMmeasured}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab89c9b8db9ad838549d4072dceeb2687}
+\hypertarget{classcrop_aec9af11e7b2b4fef9fe6c3b5bc892fa4}{
+\index{crop@{crop}!DMmeasuredDeriv@{DMmeasuredDeriv}}
+\index{DMmeasuredDeriv@{DMmeasuredDeriv}!crop@{crop}}
+\subsubsection[{DMmeasuredDeriv}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DMmeasuredDeriv}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aec9af11e7b2b4fef9fe6c3b5bc892fa4}
+\hypertarget{classcrop_a3c5f4942cf46d45168caf4da80b79537}{
+\index{crop@{crop}!DryMatterRoot@{DryMatterRoot}}
+\index{DryMatterRoot@{DryMatterRoot}!crop@{crop}}
+\subsubsection[{DryMatterRoot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DryMatterRoot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3c5f4942cf46d45168caf4da80b79537}
+\hypertarget{classcrop_a4a2803c0618d2f662abfa8d230c811df}{
+\index{crop@{crop}!DryMatterStorage@{DryMatterStorage}}
+\index{DryMatterStorage@{DryMatterStorage}!crop@{crop}}
+\subsubsection[{DryMatterStorage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DryMatterStorage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a4a2803c0618d2f662abfa8d230c811df}
+\hypertarget{classcrop_ae5c58459f879a52a543bc517918513fd}{
+\index{crop@{crop}!DryMatterTotalStandVegTop@{DryMatterTotalStandVegTop}}
+\index{DryMatterTotalStandVegTop@{DryMatterTotalStandVegTop}!crop@{crop}}
+\subsubsection[{DryMatterTotalStandVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DryMatterTotalStandVegTop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ae5c58459f879a52a543bc517918513fd}
+\hypertarget{classcrop_a755b12e801a538bb34a8c7b829047e76}{
+\index{crop@{crop}!DryMatterVegTop@{DryMatterVegTop}}
+\index{DryMatterVegTop@{DryMatterVegTop}!crop@{crop}}
+\subsubsection[{DryMatterVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::DryMatterVegTop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a755b12e801a538bb34a8c7b829047e76}
+\hypertarget{classcrop_ab94a62632b347617f4f62b317a16ff73}{
+\index{crop@{crop}!FillFactor@{FillFactor}}
+\index{FillFactor@{FillFactor}!crop@{crop}}
+\subsubsection[{FillFactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::FillFactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab94a62632b347617f4f62b317a16ff73}
+\hypertarget{classcrop_ac85050f76b5416047499dcdc854d6f41}{
+\index{crop@{crop}!FillFlag@{FillFlag}}
+\index{FillFlag@{FillFlag}!crop@{crop}}
+\subsubsection[{FillFlag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf crop::FillFlag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac85050f76b5416047499dcdc854d6f41}
+
+
+Describe if a \hyperlink{classplan}{plan} can fill. \hypertarget{classcrop_ac8a4c50c9066688c48f1d8fc6df8561c}{
+\index{crop@{crop}!fNitrogenAfterRipe@{fNitrogenAfterRipe}}
+\index{fNitrogenAfterRipe@{fNitrogenAfterRipe}!crop@{crop}}
+\subsubsection[{fNitrogenAfterRipe}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::fNitrogenAfterRipe}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac8a4c50c9066688c48f1d8fc6df8561c}
+\hypertarget{classcrop_a86b3309065f886170bff7ad71c0a853f}{
+\index{crop@{crop}!FractionNminInRoots@{FractionNminInRoots}}
+\index{FractionNminInRoots@{FractionNminInRoots}!crop@{crop}}
+\subsubsection[{FractionNminInRoots}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::FractionNminInRoots}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a86b3309065f886170bff7ad71c0a853f}
+\hypertarget{classcrop_a3ac764feb8fb805863a89f3fbda9f831}{
+\index{crop@{crop}!FractionNminInVegTop@{FractionNminInVegTop}}
+\index{FractionNminInVegTop@{FractionNminInVegTop}!crop@{crop}}
+\subsubsection[{FractionNminInVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::FractionNminInVegTop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3ac764feb8fb805863a89f3fbda9f831}
+\hypertarget{classcrop_a394d3da7bbc4c297a68b5c6f575c5ecc}{
+\index{crop@{crop}!fractionOfSpace@{fractionOfSpace}}
+\index{fractionOfSpace@{fractionOfSpace}!crop@{crop}}
+\subsubsection[{fractionOfSpace}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::fractionOfSpace}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a394d3da7bbc4c297a68b5c6f575c5ecc}
+\hypertarget{classcrop_a134737bfb7ce5b5c558f15a19232181f}{
+\index{crop@{crop}!GerminationConversion@{GerminationConversion}}
+\index{GerminationConversion@{GerminationConversion}!crop@{crop}}
+\subsubsection[{GerminationConversion}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::GerminationConversion}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a134737bfb7ce5b5c558f15a19232181f}
+\hypertarget{classcrop_ad4423586042c12afedbec52624d26fe1}{
+\index{crop@{crop}!GLAIMeasured@{GLAIMeasured}}
+\index{GLAIMeasured@{GLAIMeasured}!crop@{crop}}
+\subsubsection[{GLAIMeasured}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::GLAIMeasured}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ad4423586042c12afedbec52624d26fe1}
+\hypertarget{classcrop_a6bbccaab0f3df96f277d5891a27176b6}{
+\index{crop@{crop}!GLAIMeasuredDeriv@{GLAIMeasuredDeriv}}
+\index{GLAIMeasuredDeriv@{GLAIMeasuredDeriv}!crop@{crop}}
+\subsubsection[{GLAIMeasuredDeriv}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::GLAIMeasuredDeriv}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a6bbccaab0f3df96f277d5891a27176b6}
+\hypertarget{classcrop_a2691a60a48a5166469df5da0e0e824fb}{
+\index{crop@{crop}!GreenCropAreaIndex@{GreenCropAreaIndex}}
+\index{GreenCropAreaIndex@{GreenCropAreaIndex}!crop@{crop}}
+\subsubsection[{GreenCropAreaIndex}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::GreenCropAreaIndex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a2691a60a48a5166469df5da0e0e824fb}
+\hypertarget{classcrop_af82f3b3de55473a22e08c2b07d6e0645}{
+\index{crop@{crop}!GrowthContinue@{GrowthContinue}}
+\index{GrowthContinue@{GrowthContinue}!crop@{crop}}
+\subsubsection[{GrowthContinue}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf crop::GrowthContinue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af82f3b3de55473a22e08c2b07d6e0645}
+\hypertarget{classcrop_af3aac84af1f2d62509c26dfe15d1756c}{
+\index{crop@{crop}!InitialCAI@{InitialCAI}}
+\index{InitialCAI@{InitialCAI}!crop@{crop}}
+\subsubsection[{InitialCAI}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::InitialCAI}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af3aac84af1f2d62509c26dfe15d1756c}
+\hypertarget{classcrop_ac51148719f4b421963566a281b04c0cf}{
+\index{crop@{crop}!InitialRootDepth@{InitialRootDepth}}
+\index{InitialRootDepth@{InitialRootDepth}!crop@{crop}}
+\subsubsection[{InitialRootDepth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::InitialRootDepth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac51148719f4b421963566a281b04c0cf}
+\hypertarget{classcrop_a86aa841b9bfef88701e24c3a1922bba5}{
+\index{crop@{crop}!InitialSeedDM@{InitialSeedDM}}
+\index{InitialSeedDM@{InitialSeedDM}!crop@{crop}}
+\subsubsection[{InitialSeedDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::InitialSeedDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a86aa841b9bfef88701e24c3a1922bba5}
+\hypertarget{classcrop_a068c7be7b71c0b4581ec57ffd204766b}{
+\index{crop@{crop}!InterceptCoeff@{InterceptCoeff}}
+\index{InterceptCoeff@{InterceptCoeff}!crop@{crop}}
+\subsubsection[{InterceptCoeff}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::InterceptCoeff}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a068c7be7b71c0b4581ec57ffd204766b}
+\hypertarget{classcrop_af42802c05fc1e8dcba94d04bcb41f163}{
+\index{crop@{crop}!InterceptedRadiation@{InterceptedRadiation}}
+\index{InterceptedRadiation@{InterceptedRadiation}!crop@{crop}}
+\subsubsection[{InterceptedRadiation}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::InterceptedRadiation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af42802c05fc1e8dcba94d04bcb41f163}
+\hypertarget{classcrop_a9836313fa9dae417e0d3a41850209e37}{
+\index{crop@{crop}!k@{k}}
+\index{k@{k}!crop@{crop}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::k}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a9836313fa9dae417e0d3a41850209e37}
+\hypertarget{classcrop_a94bdf58b80c10956d690e55f9dfc3bf8}{
+\index{crop@{crop}!LAIDistributionPar@{LAIDistributionPar}}
+\index{LAIDistributionPar@{LAIDistributionPar}!crop@{crop}}
+\subsubsection[{LAIDistributionPar}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::LAIDistributionPar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a94bdf58b80c10956d690e55f9dfc3bf8}
+\hypertarget{classcrop_ac84c4bfe32722d43f1edf0f3954bf6d9}{
+\index{crop@{crop}!LAIDMRatio@{LAIDMRatio}}
+\index{LAIDMRatio@{LAIDMRatio}!crop@{crop}}
+\subsubsection[{LAIDMRatio}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::LAIDMRatio}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac84c4bfe32722d43f1edf0f3954bf6d9}
+\hypertarget{classcrop_aa53e9f0b5c21a1dafb1d78291820350d}{
+\index{crop@{crop}!LAINitrogenRatio@{LAINitrogenRatio}}
+\index{LAINitrogenRatio@{LAINitrogenRatio}!crop@{crop}}
+\subsubsection[{LAINitrogenRatio}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::LAINitrogenRatio}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aa53e9f0b5c21a1dafb1d78291820350d}
+\hypertarget{classcrop_a26eb467869df5fc16784e0b42798cc4b}{
+\index{crop@{crop}!LayerThickness@{LayerThickness}}
+\index{LayerThickness@{LayerThickness}!crop@{crop}}
+\subsubsection[{LayerThickness}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::LayerThickness}\mbox{[}MaxSoilLayers\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a26eb467869df5fc16784e0b42798cc4b}
+\hypertarget{classcrop_a8ee0da1040a104bfc08b4618d3574db1}{
+\index{crop@{crop}!MaxAllocToRoot@{MaxAllocToRoot}}
+\index{MaxAllocToRoot@{MaxAllocToRoot}!crop@{crop}}
+\subsubsection[{MaxAllocToRoot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxAllocToRoot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a8ee0da1040a104bfc08b4618d3574db1}
+\hypertarget{classcrop_a6c3d05934ce21df6acb4161c3baab56e}{
+\index{crop@{crop}!MaxDMtemp@{MaxDMtemp}}
+\index{MaxDMtemp@{MaxDMtemp}!crop@{crop}}
+\subsubsection[{MaxDMtemp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxDMtemp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a6c3d05934ce21df6acb4161c3baab56e}
+\hypertarget{classcrop_acd7a9182db99895de016c87785b58cc9}{
+\index{crop@{crop}!MaxFixPerDM@{MaxFixPerDM}}
+\index{MaxFixPerDM@{MaxFixPerDM}!crop@{crop}}
+\subsubsection[{MaxFixPerDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxFixPerDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_acd7a9182db99895de016c87785b58cc9}
+
+
+Reimplemented in \hyperlink{classcrop_clover_a1d9dbe99654e2faa451ab20ff6653683}{cropClover}, \hyperlink{classcrop_lucerne_a1825e7ae2c0a02fa019d85c9df1e994c}{cropLucerne}, and \hyperlink{classcrop_pea_a1852a7eb6965220c3bbd686504a87193}{cropPea}.\hypertarget{classcrop_a7cc6a117013deeda470335c166066615}{
+\index{crop@{crop}!maxGLAI@{maxGLAI}}
+\index{maxGLAI@{maxGLAI}!crop@{crop}}
+\subsubsection[{maxGLAI}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::maxGLAI}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a7cc6a117013deeda470335c166066615}
+\hypertarget{classcrop_a79905dd2d78bdaafd9569f9ecdd43665}{
+\index{crop@{crop}!MaxGLAICrop@{MaxGLAICrop}}
+\index{MaxGLAICrop@{MaxGLAICrop}!crop@{crop}}
+\subsubsection[{MaxGLAICrop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxGLAICrop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a79905dd2d78bdaafd9569f9ecdd43665}
+\hypertarget{classcrop_a62361ade607f9cc57e226c1134ad0eb2}{
+\index{crop@{crop}!MaxN\_\-Root@{MaxN\_\-Root}}
+\index{MaxN\_\-Root@{MaxN\_\-Root}!crop@{crop}}
+\subsubsection[{MaxN\_\-Root}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxN\_\-Root}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a62361ade607f9cc57e226c1134ad0eb2}
+\hypertarget{classcrop_a9f5ab366fce6f1259588cf5087cdb4c2}{
+\index{crop@{crop}!MaxN\_\-Store@{MaxN\_\-Store}}
+\index{MaxN\_\-Store@{MaxN\_\-Store}!crop@{crop}}
+\subsubsection[{MaxN\_\-Store}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxN\_\-Store}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a9f5ab366fce6f1259588cf5087cdb4c2}
+\hypertarget{classcrop_a211a8242464133985cb2f26964b0f782}{
+\index{crop@{crop}!MaxPlantHeight@{MaxPlantHeight}}
+\index{MaxPlantHeight@{MaxPlantHeight}!crop@{crop}}
+\subsubsection[{MaxPlantHeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxPlantHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a211a8242464133985cb2f26964b0f782}
+\hypertarget{classcrop_ace1e4d77fd9e80f3cd5c301927e03630}{
+\index{crop@{crop}!MaxRadUseEff@{MaxRadUseEff}}
+\index{MaxRadUseEff@{MaxRadUseEff}!crop@{crop}}
+\subsubsection[{MaxRadUseEff}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxRadUseEff}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ace1e4d77fd9e80f3cd5c301927e03630}
+\hypertarget{classcrop_a10ecc3d91cd9e62af94a5b889587d3f4}{
+\index{crop@{crop}!MaxRootDepth@{MaxRootDepth}}
+\index{MaxRootDepth@{MaxRootDepth}!crop@{crop}}
+\subsubsection[{MaxRootDepth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxRootDepth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a10ecc3d91cd9e62af94a5b889587d3f4}
+\hypertarget{classcrop_aa37b1e6e7ca46537edb64086518d5088}{
+\index{crop@{crop}!MaxRootDepthCrop@{MaxRootDepthCrop}}
+\index{MaxRootDepthCrop@{MaxRootDepthCrop}!crop@{crop}}
+\subsubsection[{MaxRootDepthCrop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MaxRootDepthCrop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aa37b1e6e7ca46537edb64086518d5088}
+\hypertarget{classcrop_a47dba0ce0c03f35aa973d259f32c7b74}{
+\index{crop@{crop}!MeasuredNumber@{MeasuredNumber}}
+\index{MeasuredNumber@{MeasuredNumber}!crop@{crop}}
+\subsubsection[{MeasuredNumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf crop::MeasuredNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a47dba0ce0c03f35aa973d259f32c7b74}
+\hypertarget{classcrop_a366215bb50374cc375870081f55df157}{
+\index{crop@{crop}!MinAllocToRoot@{MinAllocToRoot}}
+\index{MinAllocToRoot@{MinAllocToRoot}!crop@{crop}}
+\subsubsection[{MinAllocToRoot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinAllocToRoot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a366215bb50374cc375870081f55df157}
+\hypertarget{classcrop_aea1414f901f3fc6d6ad5e8d2936ea409}{
+\index{crop@{crop}!MinDMtemp@{MinDMtemp}}
+\index{MinDMtemp@{MinDMtemp}!crop@{crop}}
+\subsubsection[{MinDMtemp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinDMtemp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aea1414f901f3fc6d6ad5e8d2936ea409}
+\hypertarget{classcrop_a94dedacaf228ed611dd4a9c43fcf1140}{
+\index{crop@{crop}!MinimumRootDens@{MinimumRootDens}}
+\index{MinimumRootDens@{MinimumRootDens}!crop@{crop}}
+\subsubsection[{MinimumRootDens}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinimumRootDens}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a94dedacaf228ed611dd4a9c43fcf1140}
+\hypertarget{classcrop_a99a529deb646061aa62fcb9953844de2}{
+\index{crop@{crop}!MinimumSenescense@{MinimumSenescense}}
+\index{MinimumSenescense@{MinimumSenescense}!crop@{crop}}
+\subsubsection[{MinimumSenescense}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinimumSenescense}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a99a529deb646061aa62fcb9953844de2}
+\hypertarget{classcrop_af11b53bf326f21dc1628289175ecb6d7}{
+\index{crop@{crop}!MinimumSoilAmmonium@{MinimumSoilAmmonium}}
+\index{MinimumSoilAmmonium@{MinimumSoilAmmonium}!crop@{crop}}
+\subsubsection[{MinimumSoilAmmonium}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinimumSoilAmmonium}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af11b53bf326f21dc1628289175ecb6d7}
+\hypertarget{classcrop_af1ec4e9a12abd41e5f5b39c87cfc2349}{
+\index{crop@{crop}!MinimumSoilNitrate@{MinimumSoilNitrate}}
+\index{MinimumSoilNitrate@{MinimumSoilNitrate}!crop@{crop}}
+\subsubsection[{MinimumSoilNitrate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinimumSoilNitrate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af1ec4e9a12abd41e5f5b39c87cfc2349}
+\hypertarget{classcrop_a4ec1369c2adcd701d7c4676fce24310c}{
+\index{crop@{crop}!MinN\_\-Root@{MinN\_\-Root}}
+\index{MinN\_\-Root@{MinN\_\-Root}!crop@{crop}}
+\subsubsection[{MinN\_\-Root}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinN\_\-Root}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a4ec1369c2adcd701d7c4676fce24310c}
+\hypertarget{classcrop_a3a411cb751e18aaf088d266ee47c9420}{
+\index{crop@{crop}!MinN\_\-Store@{MinN\_\-Store}}
+\index{MinN\_\-Store@{MinN\_\-Store}!crop@{crop}}
+\subsubsection[{MinN\_\-Store}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::MinN\_\-Store}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3a411cb751e18aaf088d266ee47c9420}
+\hypertarget{classcrop_a3e5fad944be35152e933b5e50f928f5a}{
+\index{crop@{crop}!N15budget@{N15budget}}
+\index{N15budget@{N15budget}!crop@{crop}}
+\subsubsection[{N15budget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf crop::N15budget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3e5fad944be35152e933b5e50f928f5a}
+\hypertarget{classcrop_af7ae14fac12af3efa728e789155983fb}{
+\index{crop@{crop}!Nbudget@{Nbudget}}
+\index{Nbudget@{Nbudget}!crop@{crop}}
+\subsubsection[{Nbudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf crop::Nbudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af7ae14fac12af3efa728e789155983fb}
+\hypertarget{classcrop_ad789899ed1b1f807e992d207dceaa192}{
+\index{crop@{crop}!NCurveParam@{NCurveParam}}
+\index{NCurveParam@{NCurveParam}!crop@{crop}}
+\subsubsection[{NCurveParam}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::NCurveParam}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ad789899ed1b1f807e992d207dceaa192}
+\hypertarget{classcrop_a0cbba1c8f072c0ae99c9465f5eadf2cb}{
+\index{crop@{crop}!NitrateUptakeRate@{NitrateUptakeRate}}
+\index{NitrateUptakeRate@{NitrateUptakeRate}!crop@{crop}}
+\subsubsection[{NitrateUptakeRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::NitrateUptakeRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a0cbba1c8f072c0ae99c9465f5eadf2cb}
+\hypertarget{classcrop_adabbdde8753e5ae0ecd238e221429d88}{
+\index{crop@{crop}!Nitrogen@{Nitrogen}}
+\index{Nitrogen@{Nitrogen}!crop@{crop}}
+\subsubsection[{Nitrogen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nitrogen} {\bf crop::Nitrogen}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_adabbdde8753e5ae0ecd238e221429d88}
+
+
+How much Nitrogen that is in the plant. \hypertarget{classcrop_ab71cf78ab9ac2779deeb032e7b36e47d}{
+\index{crop@{crop}!NPctMax@{NPctMax}}
+\index{NPctMax@{NPctMax}!crop@{crop}}
+\subsubsection[{NPctMax}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::NPctMax}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab71cf78ab9ac2779deeb032e7b36e47d}
+\hypertarget{classcrop_a64b16d0f5b047dbd1c1fcdde7fd09a87}{
+\index{crop@{crop}!NPctMin@{NPctMin}}
+\index{NPctMin@{NPctMin}!crop@{crop}}
+\subsubsection[{NPctMin}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::NPctMin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a64b16d0f5b047dbd1c1fcdde7fd09a87}
+\hypertarget{classcrop_a1c9dc2dc8243ccdccb109ad9b578024b}{
+\index{crop@{crop}!NTopMeasured@{NTopMeasured}}
+\index{NTopMeasured@{NTopMeasured}!crop@{crop}}
+\subsubsection[{NTopMeasured}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::NTopMeasured}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a1c9dc2dc8243ccdccb109ad9b578024b}
+\hypertarget{classcrop_ab47524d5cde79d0ad709a7e13524dac5}{
+\index{crop@{crop}!NTopMeasuredDeriv@{NTopMeasuredDeriv}}
+\index{NTopMeasuredDeriv@{NTopMeasuredDeriv}!crop@{crop}}
+\subsubsection[{NTopMeasuredDeriv}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::NTopMeasuredDeriv}\mbox{[}MaxMeasuredPoints\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab47524d5cde79d0ad709a7e13524dac5}
+\hypertarget{classcrop_add8f384e82643550fa78abd7382abc4f}{
+\index{crop@{crop}!NumOfLayers@{NumOfLayers}}
+\index{NumOfLayers@{NumOfLayers}!crop@{crop}}
+\subsubsection[{NumOfLayers}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf crop::NumOfLayers}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_add8f384e82643550fa78abd7382abc4f}
+
+
+Describe how many layers a \hyperlink{classplan}{plan} has. It is use to distribute sunlight. \hypertarget{classcrop_a38f05d3f77cfc67ff755eb8c0d79e301}{
+\index{crop@{crop}!Phenology@{Phenology}}
+\index{Phenology@{Phenology}!crop@{crop}}
+\subsubsection[{Phenology}]{\setlength{\rightskip}{0pt plus 5cm}{\bf phenology}$\ast$ {\bf crop::Phenology}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a38f05d3f77cfc67ff755eb8c0d79e301}
+\hypertarget{classcrop_a23c5f9e6bead96515b31e977405637d8}{
+\index{crop@{crop}!PhotoSyntActPart@{PhotoSyntActPart}}
+\index{PhotoSyntActPart@{PhotoSyntActPart}!crop@{crop}}
+\subsubsection[{PhotoSyntActPart}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::PhotoSyntActPart}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a23c5f9e6bead96515b31e977405637d8}
+\hypertarget{classcrop_a3f40980535ac184d9cced18aff1a0f8c}{
+\index{crop@{crop}!PlantHeight@{PlantHeight}}
+\index{PlantHeight@{PlantHeight}!crop@{crop}}
+\subsubsection[{PlantHeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::PlantHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3f40980535ac184d9cced18aff1a0f8c}
+\hypertarget{classcrop_af982befddb79f8aedfa207bce540c47a}{
+\index{crop@{crop}!PlantItemName@{PlantItemName}}
+\index{PlantItemName@{PlantItemName}!crop@{crop}}
+\subsubsection[{PlantItemName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf crop::PlantItemName}}}
+\label{classcrop_af982befddb79f8aedfa207bce540c47a}
+\hypertarget{classcrop_a69df1a97a358dff8c354b08cb93908ec}{
+\index{crop@{crop}!PowDM@{PowDM}}
+\index{PowDM@{PowDM}!crop@{crop}}
+\subsubsection[{PowDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::PowDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a69df1a97a358dff8c354b08cb93908ec}
+\hypertarget{classcrop_a0bbe1011a2b6d4224bd986f26d5a1d39}{
+\index{crop@{crop}!ReducedNInYellow@{ReducedNInYellow}}
+\index{ReducedNInYellow@{ReducedNInYellow}!crop@{crop}}
+\subsubsection[{ReducedNInYellow}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::ReducedNInYellow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a0bbe1011a2b6d4224bd986f26d5a1d39}
+\hypertarget{classcrop_aa4666fdd11920e05003bfeefc5518ddf}{
+\index{crop@{crop}!RelativeDensity@{RelativeDensity}}
+\index{RelativeDensity@{RelativeDensity}!crop@{crop}}
+\subsubsection[{RelativeDensity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RelativeDensity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aa4666fdd11920e05003bfeefc5518ddf}
+\hypertarget{classcrop_a089361fdbd7eedb3b84e501ebc4f7221}{
+\index{crop@{crop}!Rg@{Rg}}
+\index{Rg@{Rg}!crop@{crop}}
+\subsubsection[{Rg}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::Rg}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a089361fdbd7eedb3b84e501ebc4f7221}
+\hypertarget{classcrop_a252ade240154c71d644732abc9304f79}{
+\index{crop@{crop}!RhizoDepositFraction@{RhizoDepositFraction}}
+\index{RhizoDepositFraction@{RhizoDepositFraction}!crop@{crop}}
+\subsubsection[{RhizoDepositFraction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RhizoDepositFraction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a252ade240154c71d644732abc9304f79}
+\hypertarget{classcrop_a3bd248dac15a2aefd7289240ffeeb879}{
+\index{crop@{crop}!RootDensAtBottom@{RootDensAtBottom}}
+\index{RootDensAtBottom@{RootDensAtBottom}!crop@{crop}}
+\subsubsection[{RootDensAtBottom}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootDensAtBottom}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a3bd248dac15a2aefd7289240ffeeb879}
+\hypertarget{classcrop_a512f2450d70fb9f2a84d046d5a090a94}{
+\index{crop@{crop}!RootDensAtSurf@{RootDensAtSurf}}
+\index{RootDensAtSurf@{RootDensAtSurf}!crop@{crop}}
+\subsubsection[{RootDensAtSurf}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootDensAtSurf}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a512f2450d70fb9f2a84d046d5a090a94}
+\hypertarget{classcrop_aefe9049cee98b6ac81f4362c4a1190a9}{
+\index{crop@{crop}!RootDepth@{RootDepth}}
+\index{RootDepth@{RootDepth}!crop@{crop}}
+\subsubsection[{RootDepth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootDepth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aefe9049cee98b6ac81f4362c4a1190a9}
+\hypertarget{classcrop_a5c8bcec383225ccfa1997ed7de4b2446}{
+\index{crop@{crop}!RootDistrParm@{RootDistrParm}}
+\index{RootDistrParm@{RootDistrParm}!crop@{crop}}
+\subsubsection[{RootDistrParm}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootDistrParm}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a5c8bcec383225ccfa1997ed7de4b2446}
+\hypertarget{classcrop_ad629acdfd462323490f91ad3ce9a7b59}{
+\index{crop@{crop}!RootLengthList@{RootLengthList}}
+\index{RootLengthList@{RootLengthList}!crop@{crop}}
+\subsubsection[{RootLengthList}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootLengthList}\mbox{[}MaxSoilLayers\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ad629acdfd462323490f91ad3ce9a7b59}
+\hypertarget{classcrop_a2ca05aa427979d52b8fbbba1cc5150cf}{
+\index{crop@{crop}!rootMatter@{rootMatter}}
+\index{rootMatter@{rootMatter}!crop@{crop}}
+\subsubsection[{rootMatter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf decomposable}$\ast$ {\bf crop::rootMatter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a2ca05aa427979d52b8fbbba1cc5150cf}
+\hypertarget{classcrop_ac3e7efec04f1437634c82c1c3d045924}{
+\index{crop@{crop}!RootPentrRate@{RootPentrRate}}
+\index{RootPentrRate@{RootPentrRate}!crop@{crop}}
+\subsubsection[{RootPentrRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootPentrRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac3e7efec04f1437634c82c1c3d045924}
+\hypertarget{classcrop_a6ea7c6dccd7cf399d9276d0328c142cb}{
+\index{crop@{crop}!RootpF@{RootpF}}
+\index{RootpF@{RootpF}!crop@{crop}}
+\subsubsection[{RootpF}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootpF}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a6ea7c6dccd7cf399d9276d0328c142cb}
+\hypertarget{classcrop_ab27528bd7fd066f3c4e028de1fbc70e1}{
+\index{crop@{crop}!RootRespiration@{RootRespiration}}
+\index{RootRespiration@{RootRespiration}!crop@{crop}}
+\subsubsection[{RootRespiration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootRespiration}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab27528bd7fd066f3c4e028de1fbc70e1}
+\hypertarget{classcrop_a15b020b5308e854371c7919b1ebe64ab}{
+\index{crop@{crop}!RootTranslocation@{RootTranslocation}}
+\index{RootTranslocation@{RootTranslocation}!crop@{crop}}
+\subsubsection[{RootTranslocation}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::RootTranslocation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a15b020b5308e854371c7919b1ebe64ab}
+\hypertarget{classcrop_a2dfb21c27aff36f3049be9a39e7c6538}{
+\index{crop@{crop}!SeedDM@{SeedDM}}
+\index{SeedDM@{SeedDM}!crop@{crop}}
+\subsubsection[{SeedDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::SeedDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a2dfb21c27aff36f3049be9a39e7c6538}
+\hypertarget{classcrop_a56cef92be3d0cb8376b13f1666c469e2}{
+\index{crop@{crop}!SpecificRootLength@{SpecificRootLength}}
+\index{SpecificRootLength@{SpecificRootLength}!crop@{crop}}
+\subsubsection[{SpecificRootLength}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::SpecificRootLength}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a56cef92be3d0cb8376b13f1666c469e2}
+\hypertarget{classcrop_adf0da70c2a7dc063b5bcb09730e155c6}{
+\index{crop@{crop}!StoreForFilling@{StoreForFilling}}
+\index{StoreForFilling@{StoreForFilling}!crop@{crop}}
+\subsubsection[{StoreForFilling}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::StoreForFilling}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_adf0da70c2a7dc063b5bcb09730e155c6}
+\hypertarget{classcrop_aa2aceced21d0fee166e40a836c2ee9cc}{
+\index{crop@{crop}!StrawItemName@{StrawItemName}}
+\index{StrawItemName@{StrawItemName}!crop@{crop}}
+\subsubsection[{StrawItemName}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf crop::StrawItemName}}}
+\label{classcrop_aa2aceced21d0fee166e40a836c2ee9cc}
+\hypertarget{classcrop_abfc8df1469f20d8084f744da461d1df5}{
+\index{crop@{crop}!temp@{temp}}
+\index{temp@{temp}!crop@{crop}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::temp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_abfc8df1469f20d8084f744da461d1df5}
+\hypertarget{classcrop_aab8805ada2711ddb5996d9e87376eb21}{
+\index{crop@{crop}!TempRootMin@{TempRootMin}}
+\index{TempRootMin@{TempRootMin}!crop@{crop}}
+\subsubsection[{TempRootMin}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TempRootMin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_aab8805ada2711ddb5996d9e87376eb21}
+\hypertarget{classcrop_a362d42d586668dca552ec4d8cd381b68}{
+\index{crop@{crop}!TempSumRoot@{TempSumRoot}}
+\index{TempSumRoot@{TempSumRoot}!crop@{crop}}
+\subsubsection[{TempSumRoot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TempSumRoot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a362d42d586668dca552ec4d8cd381b68}
+\hypertarget{classcrop_af94e599e6f05fae15099673485d28e88}{
+\index{crop@{crop}!terminated@{terminated}}
+\index{terminated@{terminated}!crop@{crop}}
+\subsubsection[{terminated}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf crop::terminated}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_af94e599e6f05fae15099673485d28e88}
+
+
+Describe if a \hyperlink{classplan}{plan} is dead(true) or alive(false). \hypertarget{classcrop_a158a4f00952108fdc19727bdc90765f9}{
+\index{crop@{crop}!TopFraction@{TopFraction}}
+\index{TopFraction@{TopFraction}!crop@{crop}}
+\subsubsection[{TopFraction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TopFraction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a158a4f00952108fdc19727bdc90765f9}
+\hypertarget{classcrop_a4a8b0a766947fe8b0dfc6a59a24b9bef}{
+\index{crop@{crop}!topMatter@{topMatter}}
+\index{topMatter@{topMatter}!crop@{crop}}
+\subsubsection[{topMatter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf decomposable}$\ast$ {\bf crop::topMatter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a4a8b0a766947fe8b0dfc6a59a24b9bef}
+\hypertarget{classcrop_ac25231ecf44f1c5ffb8bf60c45334929}{
+\index{crop@{crop}!totalLAIStand@{totalLAIStand}}
+\index{totalLAIStand@{totalLAIStand}!crop@{crop}}
+\subsubsection[{totalLAIStand}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::totalLAIStand}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ac25231ecf44f1c5ffb8bf60c45334929}
+\hypertarget{classcrop_a1f0aa4443cf11cdf5776454bd056fa28}{
+\index{crop@{crop}!TotalRootLength@{TotalRootLength}}
+\index{TotalRootLength@{TotalRootLength}!crop@{crop}}
+\subsubsection[{TotalRootLength}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TotalRootLength}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a1f0aa4443cf11cdf5776454bd056fa28}
+\hypertarget{classcrop_a0c55583d4613cc09bb912de3078aae49}{
+\index{crop@{crop}!TransferableStorage@{TransferableStorage}}
+\index{TransferableStorage@{TransferableStorage}!crop@{crop}}
+\subsubsection[{TransferableStorage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TransferableStorage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a0c55583d4613cc09bb912de3078aae49}
+\hypertarget{classcrop_ab1133e34965bc17531d6bbf675cfa240}{
+\index{crop@{crop}!TransferedDMToStorage@{TransferedDMToStorage}}
+\index{TransferedDMToStorage@{TransferedDMToStorage}!crop@{crop}}
+\subsubsection[{TransferedDMToStorage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TransferedDMToStorage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ab1133e34965bc17531d6bbf675cfa240}
+\hypertarget{classcrop_a461228045f8a07f1f12a06acd12adf89}{
+\index{crop@{crop}!TranspirationRatio@{TranspirationRatio}}
+\index{TranspirationRatio@{TranspirationRatio}!crop@{crop}}
+\subsubsection[{TranspirationRatio}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::TranspirationRatio}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a461228045f8a07f1f12a06acd12adf89}
+\hypertarget{classcrop_a6af7b95c4e451b425aeed60156151e9d}{
+\index{crop@{crop}!UnderSown@{UnderSown}}
+\index{UnderSown@{UnderSown}!crop@{crop}}
+\subsubsection[{UnderSown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf crop::UnderSown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a6af7b95c4e451b425aeed60156151e9d}
+\hypertarget{classcrop_abcc0955968163247c126f91191a4c782}{
+\index{crop@{crop}!WaterDeficitGrainFill@{WaterDeficitGrainFill}}
+\index{WaterDeficitGrainFill@{WaterDeficitGrainFill}!crop@{crop}}
+\subsubsection[{WaterDeficitGrainFill}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::WaterDeficitGrainFill}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_abcc0955968163247c126f91191a4c782}
+\hypertarget{classcrop_a4a332805f2e6027e5e2e18e2bf7cae17}{
+\index{crop@{crop}!WaterDeficitLagPhase@{WaterDeficitLagPhase}}
+\index{WaterDeficitLagPhase@{WaterDeficitLagPhase}!crop@{crop}}
+\subsubsection[{WaterDeficitLagPhase}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::WaterDeficitLagPhase}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a4a332805f2e6027e5e2e18e2bf7cae17}
+\hypertarget{classcrop_a5eb2d5b9554ecd6e8f7f32b229509b67}{
+\index{crop@{crop}!WaterDeficitVegGrowth@{WaterDeficitVegGrowth}}
+\index{WaterDeficitVegGrowth@{WaterDeficitVegGrowth}!crop@{crop}}
+\subsubsection[{WaterDeficitVegGrowth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::WaterDeficitVegGrowth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a5eb2d5b9554ecd6e8f7f32b229509b67}
+\hypertarget{classcrop_a7b2a38633965734c3298a4da248c6d53}{
+\index{crop@{crop}!WinterSeed@{WinterSeed}}
+\index{WinterSeed@{WinterSeed}!crop@{crop}}
+\subsubsection[{WinterSeed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf crop::WinterSeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a7b2a38633965734c3298a4da248c6d53}
+
+
+Describe if a \hyperlink{classplan}{plan} can grow trough winter. \hypertarget{classcrop_a7acb3fa412808c819f4d9b662cc2148c}{
+\index{crop@{crop}!YellowCropAreaIndex@{YellowCropAreaIndex}}
+\index{YellowCropAreaIndex@{YellowCropAreaIndex}!crop@{crop}}
+\subsubsection[{YellowCropAreaIndex}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf crop::YellowCropAreaIndex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_a7acb3fa412808c819f4d9b662cc2148c}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_8h}{crop.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_8cpp}{crop.cpp}\end{DoxyCompactItemize}

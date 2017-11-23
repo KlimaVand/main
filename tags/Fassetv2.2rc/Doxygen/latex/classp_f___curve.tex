@@ -1,0 +1,153 @@
+\hypertarget{classp_f___curve}{
+\section{pF\_\-Curve Class Reference}
+\label{classp_f___curve}\index{pF\_\-Curve@{pF\_\-Curve}}
+}
+
+
+{\ttfamily \#include $<$pFCurve.h$>$}Inheritance diagram for pF\_\-Curve::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classp_f___curve}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classp_f___curve_a08f8e5a9dbf7d29e0413501fa695a8bf}{pF\_\-Curve} (int Intpol=0)
+\item 
+\hyperlink{classp_f___curve_a563d797aa0fddb481ae44b8dffcc4283}{pF\_\-Curve} (const \hyperlink{classp_f___curve}{pF\_\-Curve} \&pFSource)
+\item 
+\hyperlink{classp_f___curve_a9a3addfa27190e8e5d00659ed79dc942}{$\sim$pF\_\-Curve} ()
+\item 
+void \hyperlink{classp_f___curve_a30876c763a84fb1b368b9199dd3bfe4e}{SetIntpol} (int Intpol)
+\item 
+void \hyperlink{classp_f___curve_afc0b0af6cf40637e3d7c3320a9e0408c}{AddWaterItem} (\hyperlink{structp_f___water_data}{pF\_\-WaterData} data)
+\item 
+void \hyperlink{classp_f___curve_a32475e71de9e84e7e565d2d2244bf062}{AddWaterData} (double RelativeWater, double pFValue)
+\item 
+void \hyperlink{classp_f___curve_aade09d8adedcc05c408e8410364d9132}{AddConductionItem} (\hyperlink{structp_f___conduction_data}{pF\_\-ConductionData} data)
+\item 
+void \hyperlink{classp_f___curve_a64d50a0166931ab3390514d037f20c04}{AddConductionData} (double pFValue, double logCond, double fluxPoten)
+\item 
+void \hyperlink{classp_f___curve_a85d921adde495b6e6bcb0ccab79739be}{AddExternalConductionData} (double pFValue, double conduc)
+\item 
+void \hyperlink{classp_f___curve_adc14b985f54ce11c4955b319f1428f3e}{MakeHydraulicConductivity} (double FieldConductivity)
+\item 
+double \hyperlink{classp_f___curve_a6989350998b7c15af4fd59055ee20676}{GetpF} (double RelativeWater)
+\item 
+double \hyperlink{classp_f___curve_a816b70830f88edec58e42d94dee0b254}{GetPressurePotential} (double RelativeWater)
+\item 
+double \hyperlink{classp_f___curve_a574df17f0a69cf55b6b6de58bec3d006}{CalcRelativeWater} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve_a662cff8287e3a413961df635acef65b7}{GetRelativeWater} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve_ad91243e8ef9217ea0979deac6dffa268}{GetConductivity} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve_a8a960e306ab5f6285102c50e3de04b65}{GetFluxPotential} (double pFValue)
+\item 
+double \hyperlink{classp_f___curve_a56e32b11b9053c1b91ac9610c38a3822}{GetPorosity} ()
+\item 
+void \hyperlink{classp_f___curve_a32cae6290138a8f729593ed623b03af5}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, int index, double dryBulkDensity, double clayContent, double siltContent, double carbon, bool TopSoil)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classp_f___curve_a08f8e5a9dbf7d29e0413501fa695a8bf}{
+\index{pF\_\-Curve@{pF\_\-Curve}!pF\_\-Curve@{pF\_\-Curve}}
+\index{pF\_\-Curve@{pF\_\-Curve}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{pF\_\-Curve}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve::pF\_\-Curve (int {\em Intpol} = {\ttfamily 0})}}
+\label{classp_f___curve_a08f8e5a9dbf7d29e0413501fa695a8bf}
+\hypertarget{classp_f___curve_a563d797aa0fddb481ae44b8dffcc4283}{
+\index{pF\_\-Curve@{pF\_\-Curve}!pF\_\-Curve@{pF\_\-Curve}}
+\index{pF\_\-Curve@{pF\_\-Curve}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{pF\_\-Curve}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve::pF\_\-Curve (const {\bf pF\_\-Curve} \& {\em pFSource})}}
+\label{classp_f___curve_a563d797aa0fddb481ae44b8dffcc4283}
+\hypertarget{classp_f___curve_a9a3addfa27190e8e5d00659ed79dc942}{
+\index{pF\_\-Curve@{pF\_\-Curve}!$\sim$pF\_\-Curve@{$\sim$pF\_\-Curve}}
+\index{$\sim$pF\_\-Curve@{$\sim$pF\_\-Curve}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{$\sim$pF\_\-Curve}]{\setlength{\rightskip}{0pt plus 5cm}pF\_\-Curve::$\sim$pF\_\-Curve ()}}
+\label{classp_f___curve_a9a3addfa27190e8e5d00659ed79dc942}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classp_f___curve_a64d50a0166931ab3390514d037f20c04}{
+\index{pF\_\-Curve@{pF\_\-Curve}!AddConductionData@{AddConductionData}}
+\index{AddConductionData@{AddConductionData}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{AddConductionData}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::AddConductionData (double {\em pFValue}, \/  double {\em logCond}, \/  double {\em fluxPoten})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a64d50a0166931ab3390514d037f20c04}
+\hypertarget{classp_f___curve_aade09d8adedcc05c408e8410364d9132}{
+\index{pF\_\-Curve@{pF\_\-Curve}!AddConductionItem@{AddConductionItem}}
+\index{AddConductionItem@{AddConductionItem}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{AddConductionItem}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::AddConductionItem ({\bf pF\_\-ConductionData} {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_aade09d8adedcc05c408e8410364d9132}
+\hypertarget{classp_f___curve_a85d921adde495b6e6bcb0ccab79739be}{
+\index{pF\_\-Curve@{pF\_\-Curve}!AddExternalConductionData@{AddExternalConductionData}}
+\index{AddExternalConductionData@{AddExternalConductionData}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{AddExternalConductionData}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::AddExternalConductionData (double {\em pFValue}, \/  double {\em conduc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a85d921adde495b6e6bcb0ccab79739be}
+\hypertarget{classp_f___curve_a32475e71de9e84e7e565d2d2244bf062}{
+\index{pF\_\-Curve@{pF\_\-Curve}!AddWaterData@{AddWaterData}}
+\index{AddWaterData@{AddWaterData}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{AddWaterData}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::AddWaterData (double {\em RelativeWater}, \/  double {\em pFValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a32475e71de9e84e7e565d2d2244bf062}
+\hypertarget{classp_f___curve_afc0b0af6cf40637e3d7c3320a9e0408c}{
+\index{pF\_\-Curve@{pF\_\-Curve}!AddWaterItem@{AddWaterItem}}
+\index{AddWaterItem@{AddWaterItem}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{AddWaterItem}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::AddWaterItem ({\bf pF\_\-WaterData} {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_afc0b0af6cf40637e3d7c3320a9e0408c}
+\hypertarget{classp_f___curve_a574df17f0a69cf55b6b6de58bec3d006}{
+\index{pF\_\-Curve@{pF\_\-Curve}!CalcRelativeWater@{CalcRelativeWater}}
+\index{CalcRelativeWater@{CalcRelativeWater}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{CalcRelativeWater}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::CalcRelativeWater (double {\em pFValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a574df17f0a69cf55b6b6de58bec3d006}
+\hypertarget{classp_f___curve_ad91243e8ef9217ea0979deac6dffa268}{
+\index{pF\_\-Curve@{pF\_\-Curve}!GetConductivity@{GetConductivity}}
+\index{GetConductivity@{GetConductivity}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{GetConductivity}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::GetConductivity (double {\em pFValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_ad91243e8ef9217ea0979deac6dffa268}
+\hypertarget{classp_f___curve_a8a960e306ab5f6285102c50e3de04b65}{
+\index{pF\_\-Curve@{pF\_\-Curve}!GetFluxPotential@{GetFluxPotential}}
+\index{GetFluxPotential@{GetFluxPotential}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{GetFluxPotential}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::GetFluxPotential (double {\em pFValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a8a960e306ab5f6285102c50e3de04b65}
+\hypertarget{classp_f___curve_a6989350998b7c15af4fd59055ee20676}{
+\index{pF\_\-Curve@{pF\_\-Curve}!GetpF@{GetpF}}
+\index{GetpF@{GetpF}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{GetpF}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::GetpF (double {\em RelativeWater})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a6989350998b7c15af4fd59055ee20676}
+\hypertarget{classp_f___curve_a56e32b11b9053c1b91ac9610c38a3822}{
+\index{pF\_\-Curve@{pF\_\-Curve}!GetPorosity@{GetPorosity}}
+\index{GetPorosity@{GetPorosity}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{GetPorosity}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::GetPorosity ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a56e32b11b9053c1b91ac9610c38a3822}
+\hypertarget{classp_f___curve_a816b70830f88edec58e42d94dee0b254}{
+\index{pF\_\-Curve@{pF\_\-Curve}!GetPressurePotential@{GetPressurePotential}}
+\index{GetPressurePotential@{GetPressurePotential}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{GetPressurePotential}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::GetPressurePotential (double {\em RelativeWater})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a816b70830f88edec58e42d94dee0b254}
+\hypertarget{classp_f___curve_a662cff8287e3a413961df635acef65b7}{
+\index{pF\_\-Curve@{pF\_\-Curve}!GetRelativeWater@{GetRelativeWater}}
+\index{GetRelativeWater@{GetRelativeWater}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{GetRelativeWater}]{\setlength{\rightskip}{0pt plus 5cm}double pF\_\-Curve::GetRelativeWater (double {\em pFValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a662cff8287e3a413961df635acef65b7}
+\hypertarget{classp_f___curve_adc14b985f54ce11c4955b319f1428f3e}{
+\index{pF\_\-Curve@{pF\_\-Curve}!MakeHydraulicConductivity@{MakeHydraulicConductivity}}
+\index{MakeHydraulicConductivity@{MakeHydraulicConductivity}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{MakeHydraulicConductivity}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::MakeHydraulicConductivity (double {\em FieldConductivity})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_adc14b985f54ce11c4955b319f1428f3e}
+\hypertarget{classp_f___curve_a32cae6290138a8f729593ed623b03af5}{
+\index{pF\_\-Curve@{pF\_\-Curve}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::ReadParameters (fstream $\ast$ {\em file}, \/  int {\em index}, \/  double {\em dryBulkDensity}, \/  double {\em clayContent}, \/  double {\em siltContent}, \/  double {\em carbon}, \/  bool {\em TopSoil})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a32cae6290138a8f729593ed623b03af5}
+\hypertarget{classp_f___curve_a30876c763a84fb1b368b9199dd3bfe4e}{
+\index{pF\_\-Curve@{pF\_\-Curve}!SetIntpol@{SetIntpol}}
+\index{SetIntpol@{SetIntpol}!pF_Curve@{pF\_\-Curve}}
+\subsubsection[{SetIntpol}]{\setlength{\rightskip}{0pt plus 5cm}void pF\_\-Curve::SetIntpol (int {\em Intpol})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classp_f___curve_a30876c763a84fb1b368b9199dd3bfe4e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/soil/\hyperlink{p_f_curve_8h}{pFCurve.h}\item 
+C:/main/trunk/src/soil/\hyperlink{p_f_curve_8cpp}{pFCurve.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+[surface(0)]	
+Alias	Default
+[Store(0)]	
+Alias	Default
+[Slurrystore(0)]	
+Alias	Slurrystore
+Depth	3
+Manuretype	SLURRY
+CrustResistance	0.0
+SpecificResistance	2000.0
+CoverResistance	00.0
+PostCleanDepth	0.001
+Locked	0
+[Dungheap(0)]	
+Alias	Dungheap
+Depth	3
+Manuretype	CATTLE-FYM
+PostCleanDepth	0.001
+Locked	0
+[endl]

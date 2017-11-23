@@ -1,0 +1,192 @@
+\hypertarget{classlegislate}{
+\section{legislate Class Reference}
+\label{classlegislate}\index{legislate@{legislate}}
+}
+
+
+{\ttfamily \#include $<$legislation.h$>$}Inheritance diagram for legislate::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classlegislate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlegislate_a64eb8d7a8bd6b552187b279476135bda}{legislate} ()
+\item 
+\hyperlink{classlegislate_adbe3b26cc6e03c3ab2fa9618c7c4916e}{legislate} (char $\ast$aName, int aIndex=-\/1, \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classlegislate_a7119b4f1b6d127bd8de4a2cb137325e2}{$\sim$legislate} ()
+\item 
+void \hyperlink{classlegislate_ad843a70145258602b6498888fcc6071b}{Initialize} (string LawApplyFileName)
+\item 
+void \hyperlink{classlegislate_a90c8e0899b14eb5b00029f8d70d409aa}{Initializeproductutes} ()
+\item 
+void \hyperlink{classlegislate_a20f65128d1ed14fc55f297179d9fc2f1}{InitializeTax} ()
+\item 
+bool \hyperlink{classlegislate_a21ea475cf056d4912ce704f5468650df}{IsGreen} (char $\ast$aFieldName)
+\item 
+double \hyperlink{classlegislate_a492a5696879bad9d24c6f4f882f0f4fd}{GetContribution} (char $\ast$aFieldName)
+\item 
+double \hyperlink{classlegislate_a5b9e7dced822a702531be6014a5d8384}{GetCurrentTax} (int type)
+\item 
+double \hyperlink{classlegislate_afaa572033956815914b8d918c75c2688}{GetCurrentLevel} (int type)
+\item 
+void \hyperlink{classlegislate_adec72b5fc80eb682053afdd9f8793fa2}{Update} (void)
+\item 
+void \hyperlink{classlegislate_a0e5d387c97dfb83092af5011888639b5}{CalcLP} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classlegislate_a4f987bac101e783b992245a8541d7b34}{InitVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classlegislate_af44d0fa6a200c08d12117bb3826166af}{fieldAttribList}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtax_legislation}{taxLegislation} $>$ $\ast$ \hyperlink{classlegislate_a8c46861a853dc95e9bb2ba62270e12ff}{taxList}
+\item 
+int \hyperlink{classlegislate_afcb6a9247a41a1ebbe825d5046a59910}{simulationYear}
+\item 
+double \hyperlink{classlegislate_a37450fa9b052799e02c330924e765698}{GreenPrecent}
+\item 
+double \hyperlink{classlegislate_a506189710b9609850f54a85ac8cbde4f}{Fallow}
+\item 
+double \hyperlink{classlegislate_aaff56136764eb06a5e710025a13f4a63}{Nprice}
+\item 
+double \hyperlink{classlegislate_a87333630df0b33be69eec765cd1136e9}{Pprice}
+\item 
+double \hyperlink{classlegislate_a6bad541fd82777f4f49643606735e8c3}{Kprice}
+\item 
+double \hyperlink{classlegislate_ade274de9eef9fb1531405290cf95a293}{Nmax}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlegislate_a64eb8d7a8bd6b552187b279476135bda}{
+\index{legislate@{legislate}!legislate@{legislate}}
+\index{legislate@{legislate}!legislate@{legislate}}
+\subsubsection[{legislate}]{\setlength{\rightskip}{0pt plus 5cm}legislate::legislate ()}}
+\label{classlegislate_a64eb8d7a8bd6b552187b279476135bda}
+\hypertarget{classlegislate_adbe3b26cc6e03c3ab2fa9618c7c4916e}{
+\index{legislate@{legislate}!legislate@{legislate}}
+\index{legislate@{legislate}!legislate@{legislate}}
+\subsubsection[{legislate}]{\setlength{\rightskip}{0pt plus 5cm}legislate::legislate (char $\ast$ {\em aName}, \/  int {\em aIndex} = {\ttfamily -\/1}, \/  {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classlegislate_adbe3b26cc6e03c3ab2fa9618c7c4916e}
+\hypertarget{classlegislate_a7119b4f1b6d127bd8de4a2cb137325e2}{
+\index{legislate@{legislate}!$\sim$legislate@{$\sim$legislate}}
+\index{$\sim$legislate@{$\sim$legislate}!legislate@{legislate}}
+\subsubsection[{$\sim$legislate}]{\setlength{\rightskip}{0pt plus 5cm}legislate::$\sim$legislate ()}}
+\label{classlegislate_a7119b4f1b6d127bd8de4a2cb137325e2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlegislate_a0e5d387c97dfb83092af5011888639b5}{
+\index{legislate@{legislate}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!legislate@{legislate}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void legislate::CalcLP ()}}
+\label{classlegislate_a0e5d387c97dfb83092af5011888639b5}
+\hypertarget{classlegislate_a492a5696879bad9d24c6f4f882f0f4fd}{
+\index{legislate@{legislate}!GetContribution@{GetContribution}}
+\index{GetContribution@{GetContribution}!legislate@{legislate}}
+\subsubsection[{GetContribution}]{\setlength{\rightskip}{0pt plus 5cm}double legislate::GetContribution (char $\ast$ {\em aFieldName})}}
+\label{classlegislate_a492a5696879bad9d24c6f4f882f0f4fd}
+\hypertarget{classlegislate_afaa572033956815914b8d918c75c2688}{
+\index{legislate@{legislate}!GetCurrentLevel@{GetCurrentLevel}}
+\index{GetCurrentLevel@{GetCurrentLevel}!legislate@{legislate}}
+\subsubsection[{GetCurrentLevel}]{\setlength{\rightskip}{0pt plus 5cm}double legislate::GetCurrentLevel (int {\em type})}}
+\label{classlegislate_afaa572033956815914b8d918c75c2688}
+\hypertarget{classlegislate_a5b9e7dced822a702531be6014a5d8384}{
+\index{legislate@{legislate}!GetCurrentTax@{GetCurrentTax}}
+\index{GetCurrentTax@{GetCurrentTax}!legislate@{legislate}}
+\subsubsection[{GetCurrentTax}]{\setlength{\rightskip}{0pt plus 5cm}double legislate::GetCurrentTax (int {\em type})}}
+\label{classlegislate_a5b9e7dced822a702531be6014a5d8384}
+\hypertarget{classlegislate_ad843a70145258602b6498888fcc6071b}{
+\index{legislate@{legislate}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!legislate@{legislate}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void legislate::Initialize (string {\em LawApplyFileName})}}
+\label{classlegislate_ad843a70145258602b6498888fcc6071b}
+\hypertarget{classlegislate_a90c8e0899b14eb5b00029f8d70d409aa}{
+\index{legislate@{legislate}!Initializeproductutes@{Initializeproductutes}}
+\index{Initializeproductutes@{Initializeproductutes}!legislate@{legislate}}
+\subsubsection[{Initializeproductutes}]{\setlength{\rightskip}{0pt plus 5cm}void legislate::Initializeproductutes ()}}
+\label{classlegislate_a90c8e0899b14eb5b00029f8d70d409aa}
+\hypertarget{classlegislate_a20f65128d1ed14fc55f297179d9fc2f1}{
+\index{legislate@{legislate}!InitializeTax@{InitializeTax}}
+\index{InitializeTax@{InitializeTax}!legislate@{legislate}}
+\subsubsection[{InitializeTax}]{\setlength{\rightskip}{0pt plus 5cm}void legislate::InitializeTax ()}}
+\label{classlegislate_a20f65128d1ed14fc55f297179d9fc2f1}
+\hypertarget{classlegislate_a4f987bac101e783b992245a8541d7b34}{
+\index{legislate@{legislate}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!legislate@{legislate}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void legislate::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_a4f987bac101e783b992245a8541d7b34}
+
+
+Reimplemented from \hyperlink{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{base}.\hypertarget{classlegislate_a21ea475cf056d4912ce704f5468650df}{
+\index{legislate@{legislate}!IsGreen@{IsGreen}}
+\index{IsGreen@{IsGreen}!legislate@{legislate}}
+\subsubsection[{IsGreen}]{\setlength{\rightskip}{0pt plus 5cm}bool legislate::IsGreen (char $\ast$ {\em aFieldName})}}
+\label{classlegislate_a21ea475cf056d4912ce704f5468650df}
+\hypertarget{classlegislate_adec72b5fc80eb682053afdd9f8793fa2}{
+\index{legislate@{legislate}!Update@{Update}}
+\index{Update@{Update}!legislate@{legislate}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void legislate::Update (void)}}
+\label{classlegislate_adec72b5fc80eb682053afdd9f8793fa2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlegislate_a506189710b9609850f54a85ac8cbde4f}{
+\index{legislate@{legislate}!Fallow@{Fallow}}
+\index{Fallow@{Fallow}!legislate@{legislate}}
+\subsubsection[{Fallow}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf legislate::Fallow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_a506189710b9609850f54a85ac8cbde4f}
+\hypertarget{classlegislate_af44d0fa6a200c08d12117bb3826166af}{
+\index{legislate@{legislate}!fieldAttribList@{fieldAttribList}}
+\index{fieldAttribList@{fieldAttribList}!legislate@{legislate}}
+\subsubsection[{fieldAttribList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf product}$>$$\ast$ {\bf legislate::fieldAttribList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_af44d0fa6a200c08d12117bb3826166af}
+\hypertarget{classlegislate_a37450fa9b052799e02c330924e765698}{
+\index{legislate@{legislate}!GreenPrecent@{GreenPrecent}}
+\index{GreenPrecent@{GreenPrecent}!legislate@{legislate}}
+\subsubsection[{GreenPrecent}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf legislate::GreenPrecent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_a37450fa9b052799e02c330924e765698}
+\hypertarget{classlegislate_a6bad541fd82777f4f49643606735e8c3}{
+\index{legislate@{legislate}!Kprice@{Kprice}}
+\index{Kprice@{Kprice}!legislate@{legislate}}
+\subsubsection[{Kprice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf legislate::Kprice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_a6bad541fd82777f4f49643606735e8c3}
+\hypertarget{classlegislate_ade274de9eef9fb1531405290cf95a293}{
+\index{legislate@{legislate}!Nmax@{Nmax}}
+\index{Nmax@{Nmax}!legislate@{legislate}}
+\subsubsection[{Nmax}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf legislate::Nmax}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_ade274de9eef9fb1531405290cf95a293}
+\hypertarget{classlegislate_aaff56136764eb06a5e710025a13f4a63}{
+\index{legislate@{legislate}!Nprice@{Nprice}}
+\index{Nprice@{Nprice}!legislate@{legislate}}
+\subsubsection[{Nprice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf legislate::Nprice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_aaff56136764eb06a5e710025a13f4a63}
+\hypertarget{classlegislate_a87333630df0b33be69eec765cd1136e9}{
+\index{legislate@{legislate}!Pprice@{Pprice}}
+\index{Pprice@{Pprice}!legislate@{legislate}}
+\subsubsection[{Pprice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf legislate::Pprice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_a87333630df0b33be69eec765cd1136e9}
+\hypertarget{classlegislate_afcb6a9247a41a1ebbe825d5046a59910}{
+\index{legislate@{legislate}!simulationYear@{simulationYear}}
+\index{simulationYear@{simulationYear}!legislate@{legislate}}
+\subsubsection[{simulationYear}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf legislate::simulationYear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_afcb6a9247a41a1ebbe825d5046a59910}
+\hypertarget{classlegislate_a8c46861a853dc95e9bb2ba62270e12ff}{
+\index{legislate@{legislate}!taxList@{taxList}}
+\index{taxList@{taxList}!legislate@{legislate}}
+\subsubsection[{taxList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf taxLegislation}$>$$\ast$ {\bf legislate::taxList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classlegislate_a8c46861a853dc95e9bb2ba62270e12ff}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/legislation/\hyperlink{legislation_8h}{legislation.h}\item 
+C:/main/trunk/src/legislation/\hyperlink{legislation_8cpp}{legislation.cpp}\end{DoxyCompactItemize}

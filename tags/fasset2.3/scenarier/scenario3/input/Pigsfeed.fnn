@@ -1,0 +1,151 @@
+[Group(0)]
+Alias			PIGLETS
+
+[Group(0).Feed(0)]
+FeedCode		203	//WHEAT
+Amount			1.5
+[Group(0).Feed(1)]
+FeedCode		155	//SOYA
+Amount			0.69
+[Group(0).Feed(2)]
+FeedCode		908	//FISHMEAL   	
+Amount			0.037
+[Group(0).Feed(3)]
+FeedCode		345	//FAT
+Amount			0.03
+
+[Group(1)]
+Alias			BACONERS
+
+[Group(1).Feed(0)]
+FeedCode		203	//WHEAT
+Amount			2.0
+[Group(1).Feed(1)]
+FeedCode		155	//SOYA
+Amount			0.5
+[Group(1).Feed(2)]
+FeedCode		201	//BARLEY   	
+Amount			0.5
+[Group(1).Feed(3)]
+FeedCode		216	//PEA
+Amount			0.111
+[Group(1).Feed(4)]
+FeedCode		207	//RYE
+Amount			0.089
+[Group(1).Feed(5)]
+FeedCode		145	//RAPE
+Amount			0.089
+
+[Group(2)]
+Alias			SOWS_MATING
+
+[Group(2).Feed(0)]
+FeedCode		203	//WHEAT
+Amount			1.482
+[Group(2).Feed(1)]
+FeedCode		155	//SOYA
+Amount			0.578
+[Group(2).Feed(2)]
+FeedCode		201	//BARLEY   	
+Amount			1.482
+[Group(2).Feed(3)]
+FeedCode		345	//FAT
+Amount			0.057
+[Group(2).Feed(4)]
+FeedCode		908	//FISHMEAL   	
+Amount			0.076
+
+[Group(3)]
+Alias			SOWS_LACTATING
+
+[Group(3).Feed(0)]
+FeedCode		203	//WHEAT
+Amount			2.028
+[Group(3).Feed(1)]
+FeedCode		155	//SOYA
+Amount			0.790
+[Group(3).Feed(2)]
+FeedCode		201	//BARLEY   	
+Amount			2.028
+[Group(3).Feed(3)]
+FeedCode		345	//FAT
+Amount			0.078
+[Group(3).Feed(4)]
+FeedCode		908	//FISHMEAL   	
+Amount			0.104
+
+[Group(4)]
+Alias			SOWS_PREGNANT
+
+[Group(4).Feed(0)]
+FeedCode		203	//WHEAT
+Amount			2.5
+[Group(4).Feed(1)]
+FeedCode		155	//SOYA
+Amount			1.0
+[Group(4).Feed(2)]
+FeedCode		201	//BARLEY   	
+Amount			0.3
+
+[Group(5)]
+Alias			NEWSOWS
+
+[Group(5).Feed(0)]
+FeedCode		203	//WHEAT
+Amount			2.0
+[Group(5).Feed(1)]
+FeedCode		155	//SOYA
+Amount			0.5
+[Group(5).Feed(2)]
+FeedCode		201	//BARLEY   	
+Amount			0.5
+[Group(5).Feed(3)]
+FeedCode		216	//PEA
+Amount			0.111
+[Group(5).Feed(4)]
+FeedCode		207	//RYE
+Amount			0.089
+[Group(5).Feed(5)]
+FeedCode		145	//RAPE
+Amount			0.089
+
+[end]
+
+
+
+
+
+
+
+
+
+PIGLETS.WHEAT 		0.322
+PIGLETS.SOYA	 	0.069
+PIGLETS.FISHMEAL   	0.037
+PIGLETS.FAT   		0.018
+BACONERS.WHEAT 		1.137
+BACONERS.BARLEY 	0.446
+BACONERS.PEA   		0.111
+BACONERS.RYE   		0.089
+BACONERS.RAPE  		0.089
+BACONERS.SOYA	 	0.29
+SOWS_MATING.WHEAT 	1.482
+SOWS_MATING.BARLEY 	1.482
+SOWS_MATING.SOYA	0.578
+SOWS_MATING.FISHMEAL 	0.076
+SOWS_MATING.FAT   	0.057
+SOWS_LACTATING.WHEAT 	2.028
+SOWS_LACTATING.BARLEY 	2.028
+SOWS_LACTATING.SOYA	0.790
+SOWS_LACTATING.FISHMEAL	0.104
+SOWS_LACTATING.FAT	0.078
+SOWS_PREGNANT.WHEAT 	1.286
+SOWS_PREGNANT.BARLEY 	1.286
+SOWS_PREGNANT.SOYA	0.225
+NEWSOWS.WHEAT 		0.530
+NEWSOWS.BARLEY 		0.530
+NEWSOWS.SOYA		0.207   		
+NEWSOWS.FISHMEAL	0.027
+NEWSOWS.FAT		0.020
+[end]
+

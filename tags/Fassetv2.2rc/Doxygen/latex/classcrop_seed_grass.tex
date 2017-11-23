@@ -1,0 +1,48 @@
+\hypertarget{classcrop_seed_grass}{
+\section{cropSeedGrass Class Reference}
+\label{classcrop_seed_grass}\index{cropSeedGrass@{cropSeedGrass}}
+}
+
+
+{\ttfamily \#include $<$cropSeedgrass.h$>$}Inheritance diagram for cropSeedGrass::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_seed_grass}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_seed_grass_a787e13423fbca25789364a243abd126b}{cropSeedGrass} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual void \hyperlink{classcrop_seed_grass_a3415f1b4d08da621709cbb07156137e0}{Harvest} (\hyperlink{classdecomposable}{decomposable} $\ast$Storage, \hyperlink{classdecomposable}{decomposable} $\ast$Straw)
+\begin{DoxyCompactList}\small\item\em harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_seed_grass_a787e13423fbca25789364a243abd126b}{
+\index{cropSeedGrass@{cropSeedGrass}!cropSeedGrass@{cropSeedGrass}}
+\index{cropSeedGrass@{cropSeedGrass}!cropSeedGrass@{cropSeedGrass}}
+\subsubsection[{cropSeedGrass}]{\setlength{\rightskip}{0pt plus 5cm}cropSeedGrass::cropSeedGrass (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_seed_grass_a787e13423fbca25789364a243abd126b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_seed_grass_a3415f1b4d08da621709cbb07156137e0}{
+\index{cropSeedGrass@{cropSeedGrass}!Harvest@{Harvest}}
+\index{Harvest@{Harvest}!cropSeedGrass@{cropSeedGrass}}
+\subsubsection[{Harvest}]{\setlength{\rightskip}{0pt plus 5cm}void cropSeedGrass::Harvest ({\bf decomposable} $\ast$ {\em Storage}, \/  {\bf decomposable} $\ast$ {\em Straw})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_seed_grass_a3415f1b4d08da621709cbb07156137e0}
+
+
+harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classstorage}{storage}}]pointer to an object containing the maincrop \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. grain) \item[{\em Straw}]pointer to an object containing the remaining \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. Straw)\end{DoxyParams}
+harvest the current \hyperlink{classcrop}{crop}. The drymatter and straw is stored in the input parameters. Nitroget is updated The plant is still alive 
+
+Reimplemented from \hyperlink{classcrop_ryegrass_a33a0c70645ce03afc49541e8d3f4919b}{cropRyegrass}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_seedgrass_8h}{cropSeedgrass.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_seedgrass_8cpp}{cropSeedgrass.cpp}\end{DoxyCompactItemize}

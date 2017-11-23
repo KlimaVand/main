@@ -1,0 +1,1064 @@
+\hypertarget{classfield}{
+\section{field Class Reference}
+\label{classfield}\index{field@{field}}
+}
+
+
+{\ttfamily \#include $<$field.h$>$}Inheritance diagram for field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classfield}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfield_1_1history_struct}{historyStruct}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfield_aba5192e37ab34e3da4561bd79c23c9ec}{field} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classfield_aa173f413fc94d3ffc5aeb68d453dc700}{field} (const \hyperlink{classfield}{field} \&\hyperlink{classfield_a2d250d63f6438e6ebdfd1e4c4bf1292e}{f})
+\item 
+\hyperlink{classfield_a600cf76c8c366764a8e0e6a48e43d0fd}{$\sim$field} ()
+\item 
+void \hyperlink{classfield_a7eb47d106515b522ec6a8c117ab19db9}{ReadPatchParameters} (\hyperlink{classpatch}{patch} $\ast$p)
+\item 
+void \hyperlink{classfield_a52be92c175965887ed3f016cb7c683fe}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classfield_ae5c00c9f05eaf3f156bc1e133cff88e9}{SplitMe} (\hyperlink{classfield}{field} $\ast$\&fP)
+\item 
+void \hyperlink{classfield_a1654a805f18f2b50214dcde5dcac2b92}{ImplementFingerFlow} ()
+\item 
+void \hyperlink{classfield_a90e670aa48996bbf164c0df85ae5590e}{UpdateField} ()
+\item 
+void \hyperlink{classfield_aa0a885f9ccaccf1004a295f48a767992}{ShowHistory} ()
+\item 
+void \hyperlink{classfield_a29216588259cbd4b0c9877ee5de0df0b}{AssignNumber} (int num)
+\item 
+int \hyperlink{classfield_ae217e8d00b4c340b9aa7ace73f69f1db}{ReturnNumber} ()
+\item 
+void \hyperlink{classfield_a468fc8855c94286509a39dfcd8130c2b}{CropHistory} (int nr, char $\ast$\&crop\_\-id)
+\item 
+void \hyperlink{classfield_ac88e569c5e0854563c505665eba50e24}{PresentCrop\_\-} (char $\ast$\&crop\_\-id)
+\item 
+double \hyperlink{classfield_aab17aa694538578ace4f6fc40cc561fc}{DistanceToField\_\-} ()
+\item 
+int \hyperlink{classfield_a71f3063168d6fd870a8f46ae64de6e43}{IsFieldFenced\_\-} ()
+\item 
+double \hyperlink{classfield_a06bf7fac158821737ac02588c50008a2}{FieldArea\_\-} ()
+\item 
+int \hyperlink{classfield_aa93627cc48e5c33da7ce60ef2b06fb91}{JBno} ()
+\item 
+void \hyperlink{classfield_a94bf6bbab5235c10e3f495fbd4120cda}{SetMinimumArea} (double min\_\-area)
+\item 
+void \hyperlink{classfield_a56772aae8a615014781dbd3b400f812a}{SetDaysBetweenIrrigation} (int interval)
+\item 
+void \hyperlink{classfield_a5997f5906b29b4f9ebf81965c239d1b2}{SetIrrigationDelay} (int delay)
+\item 
+void \hyperlink{classfield_af7c73512be5fcf494c02139c141af5ea}{SetFingerFlow} (int aFingerFlow)
+\item 
+void \hyperlink{classfield_a2943f6f16de6cd14db847055cf7a6f0e}{PlanField\_\-} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$OP, \hyperlink{classfield_a6f1744c3ac290d5fc0ef66302c0ec632}{str} crop\_\-id, int futureNum)
+\item 
+void \hyperlink{classfield_a025a74a5935f44df084705be722fb0da}{ForceCurrentPlant} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$OP, \hyperlink{classfield_a6f1744c3ac290d5fc0ef66302c0ec632}{str} crop\_\-id)
+\item 
+void \hyperlink{classfield_afa0f5c8b78d3aa7ca1f1788ee957df52}{ShowCurrentPlan} (ostream $\ast$fs)
+\item 
+void \hyperlink{classfield_ad6338ef1402d2bfa7837678ab9f79f41}{ShowFuturePlans} (ostream $\ast$fs)
+\item 
+void \hyperlink{classfield_a5c05b940e58b24dae910654ee8a4eca0}{DisplayCurrentPlan} ()
+\item 
+void \hyperlink{classfield_a15884755ee5efe058ae4dd8feb64594b}{OutputPlantDetails} (bool header)
+\item 
+double \hyperlink{classfield_aa626fa3770c1d155456d6d51e3a382a8}{ExtraN} ()
+\item 
+void \hyperlink{classfield_a1ea940c20a6d0f4edadaf9f2d3ebc8c1}{GiveIndicator} ()
+\item 
+void \hyperlink{classfield_a1546aa77b3b2f65bde8d168bb7421075}{ResetFixedCrops} ()
+\item 
+void \hyperlink{classfield_a361ad422a8357695a389c747024f01e8}{AddFixedCrop} (const char $\ast$crop\_\-id, double size)
+\item 
+int \hyperlink{classfield_ae82d54518055938a17684f162e98d5c8}{NumOfFixedCrops} ()
+\item 
+const char $\ast$ \hyperlink{classfield_aa6414fb1ce4976eb0b4693572c545352}{GiveFixedCrop} (int No)
+\item 
+double \hyperlink{classfield_ad7e63b07d4199618d6e0cdfd16619b95}{GiveFixedSize} (int No)
+\item 
+double \hyperlink{classfield_ac4c5edc4de9c9035c58c7204356a12b0}{GetArea} ()
+\item 
+void \hyperlink{classfield_a1e6214765a7a3851aaa23c54e5270b8b}{SetActive} (bool a)
+\item 
+bool \hyperlink{classfield_a80a51fb0402683c89f7aa316210854e1}{GetActive} ()
+\item 
+bool \hyperlink{classfield_a266182a9e7fd4a4707e1e81c9ab23abe}{FuturePlanExists} ()
+\item 
+bool \hyperlink{classfield_aadde0ba8d453394c5e790f7e92c0cb35}{GetGrazingPossible} ()
+\item 
+void \hyperlink{classfield_a68b457aa1077de7fca8e8230d69c2ed0}{SetGrazingPossible} (bool trueOrfalse)
+\item 
+\hyperlink{classpatch}{patch} $\ast$ \hyperlink{classfield_a1c1d7b0d34468d382915e228f29d13ea}{GetPatch} (int aNumber)
+\item 
+void \hyperlink{classfield_a7e446412f0c24c7a58401dab58c10a40}{AdjustPatchAreas} (double adjust, bool balance)
+\item 
+const \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classpatch}{patch} $>$ $\ast$ \hyperlink{classfield_abd533cd184e5e45a7bc1718f46962520}{GetThePatches} ()
+\item 
+void \hyperlink{classfield_a66e90b94decea0ecf62aa77d7ffe842a}{SlicePatch} (double sliceArea)
+\item 
+const int \hyperlink{classfield_aebe4396575cb69945b1aa60e4837f48c}{GetNumOfPatches} ()
+\item 
+void \hyperlink{classfield_aa848ac8ed702a8c82aea5263bb65e451}{MeltAllPatches} ()
+\item 
+void \hyperlink{classfield_a5e7c7c8374cf01bc46d7e0c4619b5bd5}{GiveIndicators} ()
+\item 
+void \hyperlink{classfield_a3ee84f37d88779277b69e962346b1a24}{StartBudget} ()
+\item 
+void \hyperlink{classfield_a16113f10f06008c8c9c9e117b568b98f}{EndBudget} ()
+\item 
+bool \hyperlink{classfield_aaa75ae81d0511e47197059ee64b38dc5}{GetGrazingShutDown} ()
+\item 
+void \hyperlink{classfield_a72edee119271bbed91109a3c648c61c6}{SetGrazingShutDown} (bool sd)
+\item 
+double \hyperlink{classfield_a4eeb65d29ddebdbfb177cd338c12bc3b}{GetDMavailableForGrazing} ()
+\item 
+void \hyperlink{classfield_aec7bb755e251aa39a8469e57131dd183}{ConsumeGrass} (double $\ast$DM, double $\ast$N, double $\ast$digestibility)
+\item 
+void \hyperlink{classfield_a5b62b48e403a06c3728b246265b7fb57}{DepositManure} (\hyperlink{classmanure}{manure} $\ast$urineToField, \hyperlink{classmanure}{manure} $\ast$dungToField, double area\_\-ur, double area\_\-du)
+\item 
+void \hyperlink{classfield_a3839d27d6bdd8eb8c613c14bbea80e82}{OutputYearlyData} (char $\ast$inputDir)
+\item 
+void \hyperlink{classfield_a82c55e295edd95a5de179d29cb77b231}{OutputDailyData} ()
+\item 
+double \hyperlink{classfield_a486e5f6dd9eba623677d0442dbf57926}{GetMaxCropHeight} ()
+\item 
+\hyperlink{classplan}{plan} $\ast$ \hyperlink{classfield_a83310dd2f0b81ec3178627f285e7535a}{GivecrrPlan} ()
+\item 
+\hyperlink{classplan}{plan} $\ast$ \hyperlink{classfield_a25fdbd15094af59bac804070622daf40}{GiveNextPlan} ()
+\item 
+double \hyperlink{classfield_ad5e1460e730daa874bb7b0fced8ebb5a}{GetHerbageMasskg} ()
+\item 
+double \hyperlink{classfield_aedfd65c34ae6b67acbd5cdfb2e5d1a9e}{GetHerbageMasskgPerHa} ()
+\item 
+\hyperlink{classpatch}{patch} $\ast$ \hyperlink{classfield_a45e0e46b4d636c8f903dd50ca1927b02}{GetMeanPatch} (bool incl\_\-basal, bool incl\_\-urine, bool incl\_\-overlap, bool incl\_\-dung)
+\item 
+void \hyperlink{classfield_abc9f4e1d63c6f056029895d84884e07c}{calc\_\-new\_\-spots} (double \hyperlink{classfield_a1403303f06e0e2d83fc68543bea2f2ed}{new\_\-area\_\-urine}, double \hyperlink{classfield_a1183441459b4c65b13dfaf43001bf892}{new\_\-area\_\-dung}, double $\ast$new\_\-area\_\-urine\_\-once, double $\ast$new\_\-area\_\-dung\_\-once, double $\ast$new\_\-area\_\-urine\_\-overlap, double $\ast$new\_\-area\_\-dung\_\-overlap, double $\ast$new\_\-area\_\-basal)
+\item 
+double \hyperlink{classfield_a9c97c30d1b4b2a53e13de987c674cf29}{AreaBudget} ()
+\item 
+\hyperlink{classpatch}{patch} $\ast$ \hyperlink{classfield_a1fe57d3640a5edae2ab2375a18044853}{getCurrentPatch} (bool \hyperlink{classfield_a70a2a287278fc7614895337ecebd75ea}{dung}, bool overlap)
+\item 
+void \hyperlink{classfield_a5aa65cb86171ccbeb39c0ca6c462bd77}{TestSplit} ()
+\item 
+void \hyperlink{classfield_abd9213abba8f8304ad579eb91363aba4}{WriteTestState} ()
+\item 
+void \hyperlink{classfield_a78efd8f2b5f220ddfec85b4ad847d79a}{AddPatch} (\hyperlink{classdecomposable}{decomposable} $\ast$\hyperlink{classmatter}{matter}, \hyperlink{classpatch}{patch} $\ast$new\_\-patch, int type, char $\ast$name, double \hyperlink{classfield_a500a3007e7d5ce1b18e950abbe4c7a21}{area})
+\item 
+double \hyperlink{classfield_aa89adadc9a47424d3bac9305baf57384}{GetAvailableHerbageMasskgPerHa} (double cuttingHeight)
+\item 
+double \hyperlink{classfield_ac7b4f7eb002f1f49ce00734f2177cc87}{GetAvailableHerbageMasskg} (double cuttingHeight)
+\item 
+void \hyperlink{classfield_ae6d7a8d477727df7370ae82fb63c7781}{GetRoughageProducts} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$aList)
+\item 
+int \hyperlink{classfield_a0354c55d8c1fff919fd9f54ede284d64}{GetForageItemCode} ()
+\item 
+void \hyperlink{classfield_a62798f048b9b2b4c7c4ba3e5ff6f0694}{AutoGrazingPossible} ()
+\item 
+double \hyperlink{classfield_a2bb1e4784fca6aed504a2ab7d4f200a0}{GetDMGrazed} ()
+\item 
+double \hyperlink{classfield_a106ff033bc0271d52377d1c25b5e297b}{GetAbovegroundCropN} ()
+\item 
+double \hyperlink{classfield_a3b566f2cfcd110bb6acdc6912d3ab3c9}{GetDailyDMProduction} ()
+\item 
+double \hyperlink{classfield_ac93fd3654dbd322021fcd0c92475e39b}{InitExpectedGrowthRate} (double radiation, double temperature)
+\item 
+void \hyperlink{classfield_a3e63fc647748d3e072b82aeed08f2727}{AddExpectedGrowth} (int \hyperlink{classperiod}{period}, double value)
+\item 
+double \hyperlink{classfield_aaa9134b4cb75d4cbed4c90015f20b48f}{GetExpectedGrowth} (\hyperlink{classbs_time}{bsTime} $\ast$aDate)
+\item 
+void \hyperlink{classfield_a7a6c11488529bfc2cada2caec2f56dc1}{SetexpectedGrowth} (int day, double value)
+\item 
+double \hyperlink{classfield_a090eef7a1e95aaa0d997f14952d7068e}{GetexpectedGrowth} (int day)
+\item 
+void \hyperlink{classfield_ae1b97f96f274b114d6d92c1ce80f3dfd}{ClearTemporaryVariables} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classfield_ac9700210a8ba81db46722b7ee572a673ae55908c767f059fc8071dd960b9b63c9}{MaxFixedCrops} = 25
+ \}
+\item 
+enum \{ \hyperlink{classfield_a1b15dba3f966736e40276ac6026f76e9a72cd17de1f06f30df4f9cd0efa5bcd0c}{MaxWritePatches} = 25
+ \}
+\item 
+typedef char \hyperlink{classfield_a6f1744c3ac290d5fc0ef66302c0ec632}{str} \mbox{[}id\_\-len\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classfield_ab9b2bfaedcd8a6421f4533160c6b4a80}{NitrogenInSystem} ()
+\item 
+void \hyperlink{classfield_ad57b5d59bb4168a4f642c6490bedc001}{UpdatePatches} ()
+\item 
+void \hyperlink{classfield_ad2d1131c9c208b90868ab13d9f87ceed}{DivideThisInstance} (\hyperlink{classfield}{field} $\ast$\&fP, \hyperlink{classplan}{plan} $\ast$Pl)
+\item 
+void \hyperlink{classfield_aa5c556bd1ec5b80a42441d0ac4a65f4c}{MakeInstance} (\hyperlink{classfield}{field} $\ast$\&fP, \hyperlink{classplan}{plan} $\ast$Pl)
+\item 
+\hyperlink{classfield}{field} $\ast$ \hyperlink{classfield_a4d3c3f8c50e61befbbda998cc4a7437d}{MakeNewField} ()
+\item 
+void \hyperlink{classfield_a51e15b1581712c50d383f2c64a3cc203}{PushHistory} (\hyperlink{classfield}{field} $\ast$fP, \hyperlink{classfield_a6f1744c3ac290d5fc0ef66302c0ec632}{str} $\ast$crop\_\-id)
+\item 
+void \hyperlink{classfield_acd79798ce9ab3f64c895e48c622e8f0b}{AssignNewCrop} ()
+\item 
+bool \hyperlink{classfield_a0609f721e5761c23529f1f08f785a264}{HandleOperation} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$FOP)
+\item 
+void \hyperlink{classfield_abd51d3a66f0da4571963d53197e84914}{Irrigate} (int year, int month, int day)
+\item 
+bool \hyperlink{classfield_aae3221ddc530c2211f8092b00d175c02}{SoilIsSuitableForFertilizing} ()
+\item 
+bool \hyperlink{classfield_a7ee560523f2f9f9f12ede3c2fba4b064}{OperationCanBePerformed} (\hyperlink{classplan}{plan} $\ast$aPlan, \hyperlink{classpatch}{patch} $\ast$aPatch)
+\item 
+void \hyperlink{classfield_a001ff179927c8ead0f12d1dc04628ead}{InitVariables} ()
+\item 
+void \hyperlink{classfield_adde20822cfc7a99c9ed35b831353bcbb}{AdjustFieldArea} (double newArea)
+\item 
+int \hyperlink{classfield_adc362e0bae809a3134164c4f66ef36d4}{GetOperationIndex} (string date)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+fstream \hyperlink{classfield_a2d250d63f6438e6ebdfd1e4c4bf1292e}{f}
+\item 
+fstream \hyperlink{classfield_aa966c76aed1a50e17cdc88537b58f2bd}{fPatch1}
+\item 
+fstream \hyperlink{classfield_af93145dbed4cbdeaadfdae78c51893f9}{fPatch2}
+\item 
+char $\ast$ \hyperlink{classfield_aad91c5b34d09b1eceee5fd72cfce99bb}{FixedCrop} \mbox{[}MaxFixedCrops\mbox{]}
+\item 
+double \hyperlink{classfield_a99578e6e2a62c40659e95a97b4812543}{FixedSize} \mbox{[}MaxFixedCrops\mbox{]}
+\item 
+\hyperlink{structfield_1_1history_struct}{historyStruct} \hyperlink{classfield_a0a8c128c2386a858df6990959b468137}{History} \mbox{[}BackScope\mbox{]}
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classpatch}{patch} $>$ $\ast$ \hyperlink{classfield_a4a4d06d397563e9bd4031f92acaaacc6}{thePatches}
+\item 
+\hyperlink{classplan}{plan} $\ast$ \hyperlink{classfield_ad9aa754f50edcc609d69051ade821958}{crrPlan}
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classplan}{plan} $>$ $\ast$ \hyperlink{classfield_a06360b6852f2e8f6348924d7bb3564b2}{Lfutr}
+\item 
+string \hyperlink{classfield_a516bfd09956ed9ece6cbac427205607e}{last\_\-date}
+\item 
+double \hyperlink{classfield_a8821f9d047c11b19d393c8ae2b6f2028}{Minimum}
+\item 
+double \hyperlink{classfield_a500a3007e7d5ce1b18e950abbe4c7a21}{area}
+\item 
+double \hyperlink{classfield_ab8da800fdceae26674ff4c49457b7911}{MinArea}
+\item 
+double \hyperlink{classfield_a477599b3c8ed6a953d27dc2d2db2cfcc}{distance}
+\item 
+double \hyperlink{classfield_ab8ea98f5c1a6daf2e61deb15c6b3370e}{deposition\_\-sum}
+\item 
+double \hyperlink{classfield_a5b73ff6306457cefd90df1f718595008}{fixation\_\-sum}
+\item 
+int \hyperlink{classfield_a8f1b394ff56f186e875fac2fbcaa29d9}{last\_\-idx}
+\item 
+int \hyperlink{classfield_af2d4002c30bf188d089dbe1d33a0b784}{fenced}
+\item 
+int \hyperlink{classfield_ae283dc67495fb9dd0056d9a88b6f69c1}{JBNO}
+\item 
+int \hyperlink{classfield_acfff5382da945e06998c1f1c73b516e9}{daysSinceIrrigation}
+\item 
+int \hyperlink{classfield_aa279abd93bccb07f247dbc84f4320d94}{daysSinceIrrigationRequest}
+\item 
+int \hyperlink{classfield_ab9cb5bab1f200cff668744cbf39c3a71}{daysBetweenIrrigation}
+\item 
+int \hyperlink{classfield_a5a67b4783694d4ba4cf87270306b910b}{fingerFlow}
+\item 
+int \hyperlink{classfield_a44f394bfa9a2924bde0653645b5a3182}{irrigationDelay}
+\item 
+int \hyperlink{classfield_a07969cf234c23a6f05d6a2f81b424917}{NoFixCrops}
+\item 
+bool \hyperlink{classfield_a996fdf906e65192c69c7ab58bd47cd30}{testover}
+\item 
+bool \hyperlink{classfield_adf9545309af5dd5c46b1059e66abe714}{active}
+\item 
+bool \hyperlink{classfield_a70e2c5be4735304e735cd79230e0fe5a}{monitorPatches}
+\item 
+bool \hyperlink{classfield_a290e1b803f7299cb7cf7054ef02027e3}{grazingShutDown}
+\item 
+bool \hyperlink{classfield_a3af1a5461fe52c5fb81cc339809666b9}{grazingPossible}
+\item 
+double \hyperlink{classfield_abd96c9e9d47349a3faaed79c4a85f894}{area\_\-urine}
+\item 
+double \hyperlink{classfield_a9c28012934fefe1cdbb10f3d680f7f87}{area\_\-overlap}
+\item 
+double \hyperlink{classfield_aa436f3310aeaf096dfa3a03a8fcc632a}{area\_\-dung}
+\item 
+double \hyperlink{classfield_a1403303f06e0e2d83fc68543bea2f2ed}{new\_\-area\_\-urine}
+\item 
+double \hyperlink{classfield_a1183441459b4c65b13dfaf43001bf892}{new\_\-area\_\-dung}
+\item 
+double \hyperlink{classfield_a99af7d28a2e26d37e1e6fc170bb7c416}{DMOfftake}
+\item 
+double \hyperlink{classfield_a54956ebaa2b763b10fbcc7cf81e1d27d}{expectedCumulativeGrowth} \mbox{[}2\mbox{]}
+\item 
+double \hyperlink{classfield_ab34c30afdf90e35b899c7a4120db6566}{expectedGrowth} \mbox{[}366\mbox{]}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classfield_a5651ea96e5367910b5753a22bafb374e}{urine}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classfield_a70a2a287278fc7614895337ecebd75ea}{dung}
+\item 
+int \hyperlink{classfield_aaedb741713027149afc17d7ff0424862}{maxPatches}
+\item 
+int \hyperlink{classfield_af985296d2be7e23cb70d38ca5e3da62c}{pile\_\-days}
+\item 
+int \hyperlink{classfield_a5ea1d24702e131374c0a8c4951eb2a5e}{pile\_\-counter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classfield_a6f1744c3ac290d5fc0ef66302c0ec632}{
+\index{field@{field}!str@{str}}
+\index{str@{str}!field@{field}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf field::str}\mbox{[}id\_\-len\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a6f1744c3ac290d5fc0ef66302c0ec632}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classfield_ac9700210a8ba81db46722b7ee572a673}{
+\subsubsection[{"@13}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ac9700210a8ba81db46722b7ee572a673}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MaxFixedCrops@{MaxFixedCrops}!field@{field}}\index{field@{field}!MaxFixedCrops@{MaxFixedCrops}}\item[{\em 
+\hypertarget{classfield_ac9700210a8ba81db46722b7ee572a673ae55908c767f059fc8071dd960b9b63c9}{
+MaxFixedCrops}
+\label{classfield_ac9700210a8ba81db46722b7ee572a673ae55908c767f059fc8071dd960b9b63c9}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{classfield_a1b15dba3f966736e40276ac6026f76e9}{
+\subsubsection[{"@14}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a1b15dba3f966736e40276ac6026f76e9}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MaxWritePatches@{MaxWritePatches}!field@{field}}\index{field@{field}!MaxWritePatches@{MaxWritePatches}}\item[{\em 
+\hypertarget{classfield_a1b15dba3f966736e40276ac6026f76e9a72cd17de1f06f30df4f9cd0efa5bcd0c}{
+MaxWritePatches}
+\label{classfield_a1b15dba3f966736e40276ac6026f76e9a72cd17de1f06f30df4f9cd0efa5bcd0c}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfield_aba5192e37ab34e3da4561bd79c23c9ec}{
+\index{field@{field}!field@{field}}
+\index{field@{field}!field@{field}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}field::field (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classfield_aba5192e37ab34e3da4561bd79c23c9ec}
+\hypertarget{classfield_aa173f413fc94d3ffc5aeb68d453dc700}{
+\index{field@{field}!field@{field}}
+\index{field@{field}!field@{field}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}field::field (const {\bf field} \& {\em f})}}
+\label{classfield_aa173f413fc94d3ffc5aeb68d453dc700}
+\hypertarget{classfield_a600cf76c8c366764a8e0e6a48e43d0fd}{
+\index{field@{field}!$\sim$field@{$\sim$field}}
+\index{$\sim$field@{$\sim$field}!field@{field}}
+\subsubsection[{$\sim$field}]{\setlength{\rightskip}{0pt plus 5cm}field::$\sim$field ()}}
+\label{classfield_a600cf76c8c366764a8e0e6a48e43d0fd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfield_a3e63fc647748d3e072b82aeed08f2727}{
+\index{field@{field}!AddExpectedGrowth@{AddExpectedGrowth}}
+\index{AddExpectedGrowth@{AddExpectedGrowth}!field@{field}}
+\subsubsection[{AddExpectedGrowth}]{\setlength{\rightskip}{0pt plus 5cm}void field::AddExpectedGrowth (int {\em period}, \/  double {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a3e63fc647748d3e072b82aeed08f2727}
+\hypertarget{classfield_a361ad422a8357695a389c747024f01e8}{
+\index{field@{field}!AddFixedCrop@{AddFixedCrop}}
+\index{AddFixedCrop@{AddFixedCrop}!field@{field}}
+\subsubsection[{AddFixedCrop}]{\setlength{\rightskip}{0pt plus 5cm}void field::AddFixedCrop (const char $\ast$ {\em crop\_\-id}, \/  double {\em size})}}
+\label{classfield_a361ad422a8357695a389c747024f01e8}
+\hypertarget{classfield_a78efd8f2b5f220ddfec85b4ad847d79a}{
+\index{field@{field}!AddPatch@{AddPatch}}
+\index{AddPatch@{AddPatch}!field@{field}}
+\subsubsection[{AddPatch}]{\setlength{\rightskip}{0pt plus 5cm}void field::AddPatch ({\bf decomposable} $\ast$ {\em matter}, \/  {\bf patch} $\ast$ {\em new\_\-patch}, \/  int {\em type}, \/  char $\ast$ {\em name}, \/  double {\em area})}}
+\label{classfield_a78efd8f2b5f220ddfec85b4ad847d79a}
+\hypertarget{classfield_adde20822cfc7a99c9ed35b831353bcbb}{
+\index{field@{field}!AdjustFieldArea@{AdjustFieldArea}}
+\index{AdjustFieldArea@{AdjustFieldArea}!field@{field}}
+\subsubsection[{AdjustFieldArea}]{\setlength{\rightskip}{0pt plus 5cm}void field::AdjustFieldArea (double {\em newArea})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_adde20822cfc7a99c9ed35b831353bcbb}
+\hypertarget{classfield_a7e446412f0c24c7a58401dab58c10a40}{
+\index{field@{field}!AdjustPatchAreas@{AdjustPatchAreas}}
+\index{AdjustPatchAreas@{AdjustPatchAreas}!field@{field}}
+\subsubsection[{AdjustPatchAreas}]{\setlength{\rightskip}{0pt plus 5cm}void field::AdjustPatchAreas (double {\em adjust}, \/  bool {\em balance})}}
+\label{classfield_a7e446412f0c24c7a58401dab58c10a40}
+\hypertarget{classfield_a9c97c30d1b4b2a53e13de987c674cf29}{
+\index{field@{field}!AreaBudget@{AreaBudget}}
+\index{AreaBudget@{AreaBudget}!field@{field}}
+\subsubsection[{AreaBudget}]{\setlength{\rightskip}{0pt plus 5cm}double field::AreaBudget ()}}
+\label{classfield_a9c97c30d1b4b2a53e13de987c674cf29}
+\hypertarget{classfield_acd79798ce9ab3f64c895e48c622e8f0b}{
+\index{field@{field}!AssignNewCrop@{AssignNewCrop}}
+\index{AssignNewCrop@{AssignNewCrop}!field@{field}}
+\subsubsection[{AssignNewCrop}]{\setlength{\rightskip}{0pt plus 5cm}void field::AssignNewCrop ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_acd79798ce9ab3f64c895e48c622e8f0b}
+\hypertarget{classfield_a29216588259cbd4b0c9877ee5de0df0b}{
+\index{field@{field}!AssignNumber@{AssignNumber}}
+\index{AssignNumber@{AssignNumber}!field@{field}}
+\subsubsection[{AssignNumber}]{\setlength{\rightskip}{0pt plus 5cm}void field::AssignNumber (int {\em num})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a29216588259cbd4b0c9877ee5de0df0b}
+\hypertarget{classfield_a62798f048b9b2b4c7c4ba3e5ff6f0694}{
+\index{field@{field}!AutoGrazingPossible@{AutoGrazingPossible}}
+\index{AutoGrazingPossible@{AutoGrazingPossible}!field@{field}}
+\subsubsection[{AutoGrazingPossible}]{\setlength{\rightskip}{0pt plus 5cm}void field::AutoGrazingPossible ()}}
+\label{classfield_a62798f048b9b2b4c7c4ba3e5ff6f0694}
+\hypertarget{classfield_abc9f4e1d63c6f056029895d84884e07c}{
+\index{field@{field}!calc\_\-new\_\-spots@{calc\_\-new\_\-spots}}
+\index{calc\_\-new\_\-spots@{calc\_\-new\_\-spots}!field@{field}}
+\subsubsection[{calc\_\-new\_\-spots}]{\setlength{\rightskip}{0pt plus 5cm}void field::calc\_\-new\_\-spots (double {\em new\_\-area\_\-urine}, \/  double {\em new\_\-area\_\-dung}, \/  double $\ast$ {\em new\_\-area\_\-urine\_\-once}, \/  double $\ast$ {\em new\_\-area\_\-dung\_\-once}, \/  double $\ast$ {\em new\_\-area\_\-urine\_\-overlap}, \/  double $\ast$ {\em new\_\-area\_\-dung\_\-overlap}, \/  double $\ast$ {\em new\_\-area\_\-basal})}}
+\label{classfield_abc9f4e1d63c6f056029895d84884e07c}
+\hypertarget{classfield_ae1b97f96f274b114d6d92c1ce80f3dfd}{
+\index{field@{field}!ClearTemporaryVariables@{ClearTemporaryVariables}}
+\index{ClearTemporaryVariables@{ClearTemporaryVariables}!field@{field}}
+\subsubsection[{ClearTemporaryVariables}]{\setlength{\rightskip}{0pt plus 5cm}void field::ClearTemporaryVariables ()}}
+\label{classfield_ae1b97f96f274b114d6d92c1ce80f3dfd}
+\hypertarget{classfield_aec7bb755e251aa39a8469e57131dd183}{
+\index{field@{field}!ConsumeGrass@{ConsumeGrass}}
+\index{ConsumeGrass@{ConsumeGrass}!field@{field}}
+\subsubsection[{ConsumeGrass}]{\setlength{\rightskip}{0pt plus 5cm}void field::ConsumeGrass (double $\ast$ {\em DM}, \/  double $\ast$ {\em N}, \/  double $\ast$ {\em digestibility})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_aec7bb755e251aa39a8469e57131dd183}
+\hypertarget{classfield_a468fc8855c94286509a39dfcd8130c2b}{
+\index{field@{field}!CropHistory@{CropHistory}}
+\index{CropHistory@{CropHistory}!field@{field}}
+\subsubsection[{CropHistory}]{\setlength{\rightskip}{0pt plus 5cm}void field::CropHistory (int {\em nr}, \/  char $\ast$\& {\em crop\_\-id})}}
+\label{classfield_a468fc8855c94286509a39dfcd8130c2b}
+\hypertarget{classfield_a5b62b48e403a06c3728b246265b7fb57}{
+\index{field@{field}!DepositManure@{DepositManure}}
+\index{DepositManure@{DepositManure}!field@{field}}
+\subsubsection[{DepositManure}]{\setlength{\rightskip}{0pt plus 5cm}void field::DepositManure ({\bf manure} $\ast$ {\em urineToField}, \/  {\bf manure} $\ast$ {\em dungToField}, \/  double {\em area\_\-ur}, \/  double {\em area\_\-du})}}
+\label{classfield_a5b62b48e403a06c3728b246265b7fb57}
+\hypertarget{classfield_a5c05b940e58b24dae910654ee8a4eca0}{
+\index{field@{field}!DisplayCurrentPlan@{DisplayCurrentPlan}}
+\index{DisplayCurrentPlan@{DisplayCurrentPlan}!field@{field}}
+\subsubsection[{DisplayCurrentPlan}]{\setlength{\rightskip}{0pt plus 5cm}void field::DisplayCurrentPlan ()}}
+\label{classfield_a5c05b940e58b24dae910654ee8a4eca0}
+\hypertarget{classfield_aab17aa694538578ace4f6fc40cc561fc}{
+\index{field@{field}!DistanceToField\_\-@{DistanceToField\_\-}}
+\index{DistanceToField\_\-@{DistanceToField\_\-}!field@{field}}
+\subsubsection[{DistanceToField\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double field::DistanceToField\_\- ()}}
+\label{classfield_aab17aa694538578ace4f6fc40cc561fc}
+\hypertarget{classfield_ad2d1131c9c208b90868ab13d9f87ceed}{
+\index{field@{field}!DivideThisInstance@{DivideThisInstance}}
+\index{DivideThisInstance@{DivideThisInstance}!field@{field}}
+\subsubsection[{DivideThisInstance}]{\setlength{\rightskip}{0pt plus 5cm}void field::DivideThisInstance ({\bf field} $\ast$\& {\em fP}, \/  {\bf plan} $\ast$ {\em Pl})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ad2d1131c9c208b90868ab13d9f87ceed}
+\hypertarget{classfield_a16113f10f06008c8c9c9e117b568b98f}{
+\index{field@{field}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!field@{field}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void field::EndBudget ()}}
+\label{classfield_a16113f10f06008c8c9c9e117b568b98f}
+\hypertarget{classfield_aa626fa3770c1d155456d6d51e3a382a8}{
+\index{field@{field}!ExtraN@{ExtraN}}
+\index{ExtraN@{ExtraN}!field@{field}}
+\subsubsection[{ExtraN}]{\setlength{\rightskip}{0pt plus 5cm}double field::ExtraN ()}}
+\label{classfield_aa626fa3770c1d155456d6d51e3a382a8}
+\hypertarget{classfield_a06bf7fac158821737ac02588c50008a2}{
+\index{field@{field}!FieldArea\_\-@{FieldArea\_\-}}
+\index{FieldArea\_\-@{FieldArea\_\-}!field@{field}}
+\subsubsection[{FieldArea\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double field::FieldArea\_\- ()}}
+\label{classfield_a06bf7fac158821737ac02588c50008a2}
+\hypertarget{classfield_a025a74a5935f44df084705be722fb0da}{
+\index{field@{field}!ForceCurrentPlant@{ForceCurrentPlant}}
+\index{ForceCurrentPlant@{ForceCurrentPlant}!field@{field}}
+\subsubsection[{ForceCurrentPlant}]{\setlength{\rightskip}{0pt plus 5cm}void field::ForceCurrentPlant ({\bf linkList}$<$ {\bf fieldOperationFields} $>$ $\ast$ {\em OP}, \/  {\bf str} {\em crop\_\-id})}}
+\label{classfield_a025a74a5935f44df084705be722fb0da}
+\hypertarget{classfield_a266182a9e7fd4a4707e1e81c9ab23abe}{
+\index{field@{field}!FuturePlanExists@{FuturePlanExists}}
+\index{FuturePlanExists@{FuturePlanExists}!field@{field}}
+\subsubsection[{FuturePlanExists}]{\setlength{\rightskip}{0pt plus 5cm}bool field::FuturePlanExists ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a266182a9e7fd4a4707e1e81c9ab23abe}
+\hypertarget{classfield_a106ff033bc0271d52377d1c25b5e297b}{
+\index{field@{field}!GetAbovegroundCropN@{GetAbovegroundCropN}}
+\index{GetAbovegroundCropN@{GetAbovegroundCropN}!field@{field}}
+\subsubsection[{GetAbovegroundCropN}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetAbovegroundCropN ()}}
+\label{classfield_a106ff033bc0271d52377d1c25b5e297b}
+\hypertarget{classfield_a80a51fb0402683c89f7aa316210854e1}{
+\index{field@{field}!GetActive@{GetActive}}
+\index{GetActive@{GetActive}!field@{field}}
+\subsubsection[{GetActive}]{\setlength{\rightskip}{0pt plus 5cm}bool field::GetActive ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a80a51fb0402683c89f7aa316210854e1}
+\hypertarget{classfield_ac4c5edc4de9c9035c58c7204356a12b0}{
+\index{field@{field}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!field@{field}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_ac4c5edc4de9c9035c58c7204356a12b0}
+\hypertarget{classfield_ac7b4f7eb002f1f49ce00734f2177cc87}{
+\index{field@{field}!GetAvailableHerbageMasskg@{GetAvailableHerbageMasskg}}
+\index{GetAvailableHerbageMasskg@{GetAvailableHerbageMasskg}!field@{field}}
+\subsubsection[{GetAvailableHerbageMasskg}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetAvailableHerbageMasskg (double {\em cuttingHeight})}}
+\label{classfield_ac7b4f7eb002f1f49ce00734f2177cc87}
+\hypertarget{classfield_aa89adadc9a47424d3bac9305baf57384}{
+\index{field@{field}!GetAvailableHerbageMasskgPerHa@{GetAvailableHerbageMasskgPerHa}}
+\index{GetAvailableHerbageMasskgPerHa@{GetAvailableHerbageMasskgPerHa}!field@{field}}
+\subsubsection[{GetAvailableHerbageMasskgPerHa}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetAvailableHerbageMasskgPerHa (double {\em cuttingHeight})}}
+\label{classfield_aa89adadc9a47424d3bac9305baf57384}
+\hypertarget{classfield_a1fe57d3640a5edae2ab2375a18044853}{
+\index{field@{field}!getCurrentPatch@{getCurrentPatch}}
+\index{getCurrentPatch@{getCurrentPatch}!field@{field}}
+\subsubsection[{getCurrentPatch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf patch} $\ast$ field::getCurrentPatch (bool {\em dung}, \/  bool {\em overlap})}}
+\label{classfield_a1fe57d3640a5edae2ab2375a18044853}
+\hypertarget{classfield_a3b566f2cfcd110bb6acdc6912d3ab3c9}{
+\index{field@{field}!GetDailyDMProduction@{GetDailyDMProduction}}
+\index{GetDailyDMProduction@{GetDailyDMProduction}!field@{field}}
+\subsubsection[{GetDailyDMProduction}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetDailyDMProduction ()}}
+\label{classfield_a3b566f2cfcd110bb6acdc6912d3ab3c9}
+\hypertarget{classfield_a4eeb65d29ddebdbfb177cd338c12bc3b}{
+\index{field@{field}!GetDMavailableForGrazing@{GetDMavailableForGrazing}}
+\index{GetDMavailableForGrazing@{GetDMavailableForGrazing}!field@{field}}
+\subsubsection[{GetDMavailableForGrazing}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetDMavailableForGrazing ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a4eeb65d29ddebdbfb177cd338c12bc3b}
+\hypertarget{classfield_a2bb1e4784fca6aed504a2ab7d4f200a0}{
+\index{field@{field}!GetDMGrazed@{GetDMGrazed}}
+\index{GetDMGrazed@{GetDMGrazed}!field@{field}}
+\subsubsection[{GetDMGrazed}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetDMGrazed ()}}
+\label{classfield_a2bb1e4784fca6aed504a2ab7d4f200a0}
+\hypertarget{classfield_a090eef7a1e95aaa0d997f14952d7068e}{
+\index{field@{field}!GetexpectedGrowth@{GetexpectedGrowth}}
+\index{GetexpectedGrowth@{GetexpectedGrowth}!field@{field}}
+\subsubsection[{GetexpectedGrowth}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetexpectedGrowth (int {\em day})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a090eef7a1e95aaa0d997f14952d7068e}
+\hypertarget{classfield_aaa9134b4cb75d4cbed4c90015f20b48f}{
+\index{field@{field}!GetExpectedGrowth@{GetExpectedGrowth}}
+\index{GetExpectedGrowth@{GetExpectedGrowth}!field@{field}}
+\subsubsection[{GetExpectedGrowth}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetExpectedGrowth ({\bf bsTime} $\ast$ {\em aDate})}}
+\label{classfield_aaa9134b4cb75d4cbed4c90015f20b48f}
+\hypertarget{classfield_a0354c55d8c1fff919fd9f54ede284d64}{
+\index{field@{field}!GetForageItemCode@{GetForageItemCode}}
+\index{GetForageItemCode@{GetForageItemCode}!field@{field}}
+\subsubsection[{GetForageItemCode}]{\setlength{\rightskip}{0pt plus 5cm}int field::GetForageItemCode ()}}
+\label{classfield_a0354c55d8c1fff919fd9f54ede284d64}
+\hypertarget{classfield_aadde0ba8d453394c5e790f7e92c0cb35}{
+\index{field@{field}!GetGrazingPossible@{GetGrazingPossible}}
+\index{GetGrazingPossible@{GetGrazingPossible}!field@{field}}
+\subsubsection[{GetGrazingPossible}]{\setlength{\rightskip}{0pt plus 5cm}bool field::GetGrazingPossible ()}}
+\label{classfield_aadde0ba8d453394c5e790f7e92c0cb35}
+\hypertarget{classfield_aaa75ae81d0511e47197059ee64b38dc5}{
+\index{field@{field}!GetGrazingShutDown@{GetGrazingShutDown}}
+\index{GetGrazingShutDown@{GetGrazingShutDown}!field@{field}}
+\subsubsection[{GetGrazingShutDown}]{\setlength{\rightskip}{0pt plus 5cm}bool field::GetGrazingShutDown ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_aaa75ae81d0511e47197059ee64b38dc5}
+\hypertarget{classfield_ad5e1460e730daa874bb7b0fced8ebb5a}{
+\index{field@{field}!GetHerbageMasskg@{GetHerbageMasskg}}
+\index{GetHerbageMasskg@{GetHerbageMasskg}!field@{field}}
+\subsubsection[{GetHerbageMasskg}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetHerbageMasskg ()}}
+\label{classfield_ad5e1460e730daa874bb7b0fced8ebb5a}
+\hypertarget{classfield_aedfd65c34ae6b67acbd5cdfb2e5d1a9e}{
+\index{field@{field}!GetHerbageMasskgPerHa@{GetHerbageMasskgPerHa}}
+\index{GetHerbageMasskgPerHa@{GetHerbageMasskgPerHa}!field@{field}}
+\subsubsection[{GetHerbageMasskgPerHa}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetHerbageMasskgPerHa ()}}
+\label{classfield_aedfd65c34ae6b67acbd5cdfb2e5d1a9e}
+\hypertarget{classfield_a486e5f6dd9eba623677d0442dbf57926}{
+\index{field@{field}!GetMaxCropHeight@{GetMaxCropHeight}}
+\index{GetMaxCropHeight@{GetMaxCropHeight}!field@{field}}
+\subsubsection[{GetMaxCropHeight}]{\setlength{\rightskip}{0pt plus 5cm}double field::GetMaxCropHeight ()}}
+\label{classfield_a486e5f6dd9eba623677d0442dbf57926}
+\hypertarget{classfield_a45e0e46b4d636c8f903dd50ca1927b02}{
+\index{field@{field}!GetMeanPatch@{GetMeanPatch}}
+\index{GetMeanPatch@{GetMeanPatch}!field@{field}}
+\subsubsection[{GetMeanPatch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf patch} $\ast$ field::GetMeanPatch (bool {\em incl\_\-basal}, \/  bool {\em incl\_\-urine}, \/  bool {\em incl\_\-overlap}, \/  bool {\em incl\_\-dung})}}
+\label{classfield_a45e0e46b4d636c8f903dd50ca1927b02}
+\hypertarget{classfield_aebe4396575cb69945b1aa60e4837f48c}{
+\index{field@{field}!GetNumOfPatches@{GetNumOfPatches}}
+\index{GetNumOfPatches@{GetNumOfPatches}!field@{field}}
+\subsubsection[{GetNumOfPatches}]{\setlength{\rightskip}{0pt plus 5cm}const int field::GetNumOfPatches ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_aebe4396575cb69945b1aa60e4837f48c}
+\hypertarget{classfield_adc362e0bae809a3134164c4f66ef36d4}{
+\index{field@{field}!GetOperationIndex@{GetOperationIndex}}
+\index{GetOperationIndex@{GetOperationIndex}!field@{field}}
+\subsubsection[{GetOperationIndex}]{\setlength{\rightskip}{0pt plus 5cm}int field::GetOperationIndex (string {\em date})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_adc362e0bae809a3134164c4f66ef36d4}
+\hypertarget{classfield_a1c1d7b0d34468d382915e228f29d13ea}{
+\index{field@{field}!GetPatch@{GetPatch}}
+\index{GetPatch@{GetPatch}!field@{field}}
+\subsubsection[{GetPatch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf patch}$\ast$ field::GetPatch (int {\em aNumber})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a1c1d7b0d34468d382915e228f29d13ea}
+\hypertarget{classfield_ae6d7a8d477727df7370ae82fb63c7781}{
+\index{field@{field}!GetRoughageProducts@{GetRoughageProducts}}
+\index{GetRoughageProducts@{GetRoughageProducts}!field@{field}}
+\subsubsection[{GetRoughageProducts}]{\setlength{\rightskip}{0pt plus 5cm}void field::GetRoughageProducts ({\bf linkList}$<$ {\bf product} $>$ $\ast$ {\em aList})}}
+\label{classfield_ae6d7a8d477727df7370ae82fb63c7781}
+\hypertarget{classfield_abd533cd184e5e45a7bc1718f46962520}{
+\index{field@{field}!GetThePatches@{GetThePatches}}
+\index{GetThePatches@{GetThePatches}!field@{field}}
+\subsubsection[{GetThePatches}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf cloneList}$<${\bf patch}$>$$\ast$ field::GetThePatches ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_abd533cd184e5e45a7bc1718f46962520}
+\hypertarget{classfield_a83310dd2f0b81ec3178627f285e7535a}{
+\index{field@{field}!GivecrrPlan@{GivecrrPlan}}
+\index{GivecrrPlan@{GivecrrPlan}!field@{field}}
+\subsubsection[{GivecrrPlan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plan}$\ast$ field::GivecrrPlan ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a83310dd2f0b81ec3178627f285e7535a}
+\hypertarget{classfield_aa6414fb1ce4976eb0b4693572c545352}{
+\index{field@{field}!GiveFixedCrop@{GiveFixedCrop}}
+\index{GiveFixedCrop@{GiveFixedCrop}!field@{field}}
+\subsubsection[{GiveFixedCrop}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ field::GiveFixedCrop (int {\em No})}}
+\label{classfield_aa6414fb1ce4976eb0b4693572c545352}
+\hypertarget{classfield_ad7e63b07d4199618d6e0cdfd16619b95}{
+\index{field@{field}!GiveFixedSize@{GiveFixedSize}}
+\index{GiveFixedSize@{GiveFixedSize}!field@{field}}
+\subsubsection[{GiveFixedSize}]{\setlength{\rightskip}{0pt plus 5cm}double field::GiveFixedSize (int {\em No})}}
+\label{classfield_ad7e63b07d4199618d6e0cdfd16619b95}
+\hypertarget{classfield_a1ea940c20a6d0f4edadaf9f2d3ebc8c1}{
+\index{field@{field}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!field@{field}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void field::GiveIndicator ()}}
+\label{classfield_a1ea940c20a6d0f4edadaf9f2d3ebc8c1}
+\hypertarget{classfield_a5e7c7c8374cf01bc46d7e0c4619b5bd5}{
+\index{field@{field}!GiveIndicators@{GiveIndicators}}
+\index{GiveIndicators@{GiveIndicators}!field@{field}}
+\subsubsection[{GiveIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void field::GiveIndicators ()}}
+\label{classfield_a5e7c7c8374cf01bc46d7e0c4619b5bd5}
+\hypertarget{classfield_a25fdbd15094af59bac804070622daf40}{
+\index{field@{field}!GiveNextPlan@{GiveNextPlan}}
+\index{GiveNextPlan@{GiveNextPlan}!field@{field}}
+\subsubsection[{GiveNextPlan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plan}$\ast$ field::GiveNextPlan ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a25fdbd15094af59bac804070622daf40}
+\hypertarget{classfield_a0609f721e5761c23529f1f08f785a264}{
+\index{field@{field}!HandleOperation@{HandleOperation}}
+\index{HandleOperation@{HandleOperation}!field@{field}}
+\subsubsection[{HandleOperation}]{\setlength{\rightskip}{0pt plus 5cm}bool field::HandleOperation ({\bf fieldOperationFields} $\ast$ {\em FOP})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a0609f721e5761c23529f1f08f785a264}
+\hypertarget{classfield_a1654a805f18f2b50214dcde5dcac2b92}{
+\index{field@{field}!ImplementFingerFlow@{ImplementFingerFlow}}
+\index{ImplementFingerFlow@{ImplementFingerFlow}!field@{field}}
+\subsubsection[{ImplementFingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}void field::ImplementFingerFlow ()}}
+\label{classfield_a1654a805f18f2b50214dcde5dcac2b92}
+\hypertarget{classfield_ac93fd3654dbd322021fcd0c92475e39b}{
+\index{field@{field}!InitExpectedGrowthRate@{InitExpectedGrowthRate}}
+\index{InitExpectedGrowthRate@{InitExpectedGrowthRate}!field@{field}}
+\subsubsection[{InitExpectedGrowthRate}]{\setlength{\rightskip}{0pt plus 5cm}double field::InitExpectedGrowthRate (double {\em radiation}, \/  double {\em temperature})}}
+\label{classfield_ac93fd3654dbd322021fcd0c92475e39b}
+\hypertarget{classfield_a001ff179927c8ead0f12d1dc04628ead}{
+\index{field@{field}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!field@{field}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void field::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a001ff179927c8ead0f12d1dc04628ead}
+
+
+Reimplemented from \hyperlink{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{base}.\hypertarget{classfield_abd51d3a66f0da4571963d53197e84914}{
+\index{field@{field}!Irrigate@{Irrigate}}
+\index{Irrigate@{Irrigate}!field@{field}}
+\subsubsection[{Irrigate}]{\setlength{\rightskip}{0pt plus 5cm}void field::Irrigate (int {\em year}, \/  int {\em month}, \/  int {\em day})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_abd51d3a66f0da4571963d53197e84914}
+\hypertarget{classfield_a71f3063168d6fd870a8f46ae64de6e43}{
+\index{field@{field}!IsFieldFenced\_\-@{IsFieldFenced\_\-}}
+\index{IsFieldFenced\_\-@{IsFieldFenced\_\-}!field@{field}}
+\subsubsection[{IsFieldFenced\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int field::IsFieldFenced\_\- ()}}
+\label{classfield_a71f3063168d6fd870a8f46ae64de6e43}
+\hypertarget{classfield_aa93627cc48e5c33da7ce60ef2b06fb91}{
+\index{field@{field}!JBno@{JBno}}
+\index{JBno@{JBno}!field@{field}}
+\subsubsection[{JBno}]{\setlength{\rightskip}{0pt plus 5cm}int field::JBno ()}}
+\label{classfield_aa93627cc48e5c33da7ce60ef2b06fb91}
+\hypertarget{classfield_aa5c556bd1ec5b80a42441d0ac4a65f4c}{
+\index{field@{field}!MakeInstance@{MakeInstance}}
+\index{MakeInstance@{MakeInstance}!field@{field}}
+\subsubsection[{MakeInstance}]{\setlength{\rightskip}{0pt plus 5cm}void field::MakeInstance ({\bf field} $\ast$\& {\em fP}, \/  {\bf plan} $\ast$ {\em Pl})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aa5c556bd1ec5b80a42441d0ac4a65f4c}
+\hypertarget{classfield_a4d3c3f8c50e61befbbda998cc4a7437d}{
+\index{field@{field}!MakeNewField@{MakeNewField}}
+\index{MakeNewField@{MakeNewField}!field@{field}}
+\subsubsection[{MakeNewField}]{\setlength{\rightskip}{0pt plus 5cm}{\bf field} $\ast$ field::MakeNewField ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a4d3c3f8c50e61befbbda998cc4a7437d}
+\hypertarget{classfield_aa848ac8ed702a8c82aea5263bb65e451}{
+\index{field@{field}!MeltAllPatches@{MeltAllPatches}}
+\index{MeltAllPatches@{MeltAllPatches}!field@{field}}
+\subsubsection[{MeltAllPatches}]{\setlength{\rightskip}{0pt plus 5cm}void field::MeltAllPatches ()}}
+\label{classfield_aa848ac8ed702a8c82aea5263bb65e451}
+\hypertarget{classfield_ab9b2bfaedcd8a6421f4533160c6b4a80}{
+\index{field@{field}!NitrogenInSystem@{NitrogenInSystem}}
+\index{NitrogenInSystem@{NitrogenInSystem}!field@{field}}
+\subsubsection[{NitrogenInSystem}]{\setlength{\rightskip}{0pt plus 5cm}double field::NitrogenInSystem ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ab9b2bfaedcd8a6421f4533160c6b4a80}
+\hypertarget{classfield_ae82d54518055938a17684f162e98d5c8}{
+\index{field@{field}!NumOfFixedCrops@{NumOfFixedCrops}}
+\index{NumOfFixedCrops@{NumOfFixedCrops}!field@{field}}
+\subsubsection[{NumOfFixedCrops}]{\setlength{\rightskip}{0pt plus 5cm}int field::NumOfFixedCrops ()}}
+\label{classfield_ae82d54518055938a17684f162e98d5c8}
+\hypertarget{classfield_a7ee560523f2f9f9f12ede3c2fba4b064}{
+\index{field@{field}!OperationCanBePerformed@{OperationCanBePerformed}}
+\index{OperationCanBePerformed@{OperationCanBePerformed}!field@{field}}
+\subsubsection[{OperationCanBePerformed}]{\setlength{\rightskip}{0pt plus 5cm}bool field::OperationCanBePerformed ({\bf plan} $\ast$ {\em aPlan}, \/  {\bf patch} $\ast$ {\em aPatch})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a7ee560523f2f9f9f12ede3c2fba4b064}
+\hypertarget{classfield_a82c55e295edd95a5de179d29cb77b231}{
+\index{field@{field}!OutputDailyData@{OutputDailyData}}
+\index{OutputDailyData@{OutputDailyData}!field@{field}}
+\subsubsection[{OutputDailyData}]{\setlength{\rightskip}{0pt plus 5cm}void field::OutputDailyData ()}}
+\label{classfield_a82c55e295edd95a5de179d29cb77b231}
+\hypertarget{classfield_a15884755ee5efe058ae4dd8feb64594b}{
+\index{field@{field}!OutputPlantDetails@{OutputPlantDetails}}
+\index{OutputPlantDetails@{OutputPlantDetails}!field@{field}}
+\subsubsection[{OutputPlantDetails}]{\setlength{\rightskip}{0pt plus 5cm}void field::OutputPlantDetails (bool {\em header})}}
+\label{classfield_a15884755ee5efe058ae4dd8feb64594b}
+\hypertarget{classfield_a3839d27d6bdd8eb8c613c14bbea80e82}{
+\index{field@{field}!OutputYearlyData@{OutputYearlyData}}
+\index{OutputYearlyData@{OutputYearlyData}!field@{field}}
+\subsubsection[{OutputYearlyData}]{\setlength{\rightskip}{0pt plus 5cm}void field::OutputYearlyData (char $\ast$ {\em inputDir})}}
+\label{classfield_a3839d27d6bdd8eb8c613c14bbea80e82}
+\hypertarget{classfield_a2943f6f16de6cd14db847055cf7a6f0e}{
+\index{field@{field}!PlanField\_\-@{PlanField\_\-}}
+\index{PlanField\_\-@{PlanField\_\-}!field@{field}}
+\subsubsection[{PlanField\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void field::PlanField\_\- ({\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ {\em OP}, \/  {\bf str} {\em crop\_\-id}, \/  int {\em futureNum})}}
+\label{classfield_a2943f6f16de6cd14db847055cf7a6f0e}
+\hypertarget{classfield_ac88e569c5e0854563c505665eba50e24}{
+\index{field@{field}!PresentCrop\_\-@{PresentCrop\_\-}}
+\index{PresentCrop\_\-@{PresentCrop\_\-}!field@{field}}
+\subsubsection[{PresentCrop\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void field::PresentCrop\_\- (char $\ast$\& {\em crop\_\-id})}}
+\label{classfield_ac88e569c5e0854563c505665eba50e24}
+\hypertarget{classfield_a51e15b1581712c50d383f2c64a3cc203}{
+\index{field@{field}!PushHistory@{PushHistory}}
+\index{PushHistory@{PushHistory}!field@{field}}
+\subsubsection[{PushHistory}]{\setlength{\rightskip}{0pt plus 5cm}void field::PushHistory ({\bf field} $\ast$ {\em fP}, \/  {\bf str} $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a51e15b1581712c50d383f2c64a3cc203}
+\hypertarget{classfield_a52be92c175965887ed3f016cb7c683fe}{
+\index{field@{field}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!field@{field}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void field::ReadParameters (fstream $\ast$ {\em file})}}
+\label{classfield_a52be92c175965887ed3f016cb7c683fe}
+\hypertarget{classfield_a7eb47d106515b522ec6a8c117ab19db9}{
+\index{field@{field}!ReadPatchParameters@{ReadPatchParameters}}
+\index{ReadPatchParameters@{ReadPatchParameters}!field@{field}}
+\subsubsection[{ReadPatchParameters}]{\setlength{\rightskip}{0pt plus 5cm}void field::ReadPatchParameters ({\bf patch} $\ast$ {\em p})}}
+\label{classfield_a7eb47d106515b522ec6a8c117ab19db9}
+\hypertarget{classfield_a1546aa77b3b2f65bde8d168bb7421075}{
+\index{field@{field}!ResetFixedCrops@{ResetFixedCrops}}
+\index{ResetFixedCrops@{ResetFixedCrops}!field@{field}}
+\subsubsection[{ResetFixedCrops}]{\setlength{\rightskip}{0pt plus 5cm}void field::ResetFixedCrops ()}}
+\label{classfield_a1546aa77b3b2f65bde8d168bb7421075}
+\hypertarget{classfield_ae217e8d00b4c340b9aa7ace73f69f1db}{
+\index{field@{field}!ReturnNumber@{ReturnNumber}}
+\index{ReturnNumber@{ReturnNumber}!field@{field}}
+\subsubsection[{ReturnNumber}]{\setlength{\rightskip}{0pt plus 5cm}int field::ReturnNumber ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_ae217e8d00b4c340b9aa7ace73f69f1db}
+\hypertarget{classfield_a1e6214765a7a3851aaa23c54e5270b8b}{
+\index{field@{field}!SetActive@{SetActive}}
+\index{SetActive@{SetActive}!field@{field}}
+\subsubsection[{SetActive}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetActive (bool {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a1e6214765a7a3851aaa23c54e5270b8b}
+\hypertarget{classfield_a56772aae8a615014781dbd3b400f812a}{
+\index{field@{field}!SetDaysBetweenIrrigation@{SetDaysBetweenIrrigation}}
+\index{SetDaysBetweenIrrigation@{SetDaysBetweenIrrigation}!field@{field}}
+\subsubsection[{SetDaysBetweenIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetDaysBetweenIrrigation (int {\em interval})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a56772aae8a615014781dbd3b400f812a}
+\hypertarget{classfield_a7a6c11488529bfc2cada2caec2f56dc1}{
+\index{field@{field}!SetexpectedGrowth@{SetexpectedGrowth}}
+\index{SetexpectedGrowth@{SetexpectedGrowth}!field@{field}}
+\subsubsection[{SetexpectedGrowth}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetexpectedGrowth (int {\em day}, \/  double {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a7a6c11488529bfc2cada2caec2f56dc1}
+\hypertarget{classfield_af7c73512be5fcf494c02139c141af5ea}{
+\index{field@{field}!SetFingerFlow@{SetFingerFlow}}
+\index{SetFingerFlow@{SetFingerFlow}!field@{field}}
+\subsubsection[{SetFingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetFingerFlow (int {\em aFingerFlow})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_af7c73512be5fcf494c02139c141af5ea}
+\hypertarget{classfield_a68b457aa1077de7fca8e8230d69c2ed0}{
+\index{field@{field}!SetGrazingPossible@{SetGrazingPossible}}
+\index{SetGrazingPossible@{SetGrazingPossible}!field@{field}}
+\subsubsection[{SetGrazingPossible}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetGrazingPossible (bool {\em trueOrfalse})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a68b457aa1077de7fca8e8230d69c2ed0}
+\hypertarget{classfield_a72edee119271bbed91109a3c648c61c6}{
+\index{field@{field}!SetGrazingShutDown@{SetGrazingShutDown}}
+\index{SetGrazingShutDown@{SetGrazingShutDown}!field@{field}}
+\subsubsection[{SetGrazingShutDown}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetGrazingShutDown (bool {\em sd})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a72edee119271bbed91109a3c648c61c6}
+\hypertarget{classfield_a5997f5906b29b4f9ebf81965c239d1b2}{
+\index{field@{field}!SetIrrigationDelay@{SetIrrigationDelay}}
+\index{SetIrrigationDelay@{SetIrrigationDelay}!field@{field}}
+\subsubsection[{SetIrrigationDelay}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetIrrigationDelay (int {\em delay})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a5997f5906b29b4f9ebf81965c239d1b2}
+\hypertarget{classfield_a94bf6bbab5235c10e3f495fbd4120cda}{
+\index{field@{field}!SetMinimumArea@{SetMinimumArea}}
+\index{SetMinimumArea@{SetMinimumArea}!field@{field}}
+\subsubsection[{SetMinimumArea}]{\setlength{\rightskip}{0pt plus 5cm}void field::SetMinimumArea (double {\em min\_\-area})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfield_a94bf6bbab5235c10e3f495fbd4120cda}
+\hypertarget{classfield_afa0f5c8b78d3aa7ca1f1788ee957df52}{
+\index{field@{field}!ShowCurrentPlan@{ShowCurrentPlan}}
+\index{ShowCurrentPlan@{ShowCurrentPlan}!field@{field}}
+\subsubsection[{ShowCurrentPlan}]{\setlength{\rightskip}{0pt plus 5cm}void field::ShowCurrentPlan (ostream $\ast$ {\em fs})}}
+\label{classfield_afa0f5c8b78d3aa7ca1f1788ee957df52}
+\hypertarget{classfield_ad6338ef1402d2bfa7837678ab9f79f41}{
+\index{field@{field}!ShowFuturePlans@{ShowFuturePlans}}
+\index{ShowFuturePlans@{ShowFuturePlans}!field@{field}}
+\subsubsection[{ShowFuturePlans}]{\setlength{\rightskip}{0pt plus 5cm}void field::ShowFuturePlans (ostream $\ast$ {\em fs})}}
+\label{classfield_ad6338ef1402d2bfa7837678ab9f79f41}
+\hypertarget{classfield_aa0a885f9ccaccf1004a295f48a767992}{
+\index{field@{field}!ShowHistory@{ShowHistory}}
+\index{ShowHistory@{ShowHistory}!field@{field}}
+\subsubsection[{ShowHistory}]{\setlength{\rightskip}{0pt plus 5cm}void field::ShowHistory ()}}
+\label{classfield_aa0a885f9ccaccf1004a295f48a767992}
+\hypertarget{classfield_a66e90b94decea0ecf62aa77d7ffe842a}{
+\index{field@{field}!SlicePatch@{SlicePatch}}
+\index{SlicePatch@{SlicePatch}!field@{field}}
+\subsubsection[{SlicePatch}]{\setlength{\rightskip}{0pt plus 5cm}void field::SlicePatch (double {\em sliceArea})}}
+\label{classfield_a66e90b94decea0ecf62aa77d7ffe842a}
+\hypertarget{classfield_aae3221ddc530c2211f8092b00d175c02}{
+\index{field@{field}!SoilIsSuitableForFertilizing@{SoilIsSuitableForFertilizing}}
+\index{SoilIsSuitableForFertilizing@{SoilIsSuitableForFertilizing}!field@{field}}
+\subsubsection[{SoilIsSuitableForFertilizing}]{\setlength{\rightskip}{0pt plus 5cm}bool field::SoilIsSuitableForFertilizing ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aae3221ddc530c2211f8092b00d175c02}
+\hypertarget{classfield_ae5c00c9f05eaf3f156bc1e133cff88e9}{
+\index{field@{field}!SplitMe@{SplitMe}}
+\index{SplitMe@{SplitMe}!field@{field}}
+\subsubsection[{SplitMe}]{\setlength{\rightskip}{0pt plus 5cm}void field::SplitMe ({\bf field} $\ast$\& {\em fP})}}
+\label{classfield_ae5c00c9f05eaf3f156bc1e133cff88e9}
+\hypertarget{classfield_a3ee84f37d88779277b69e962346b1a24}{
+\index{field@{field}!StartBudget@{StartBudget}}
+\index{StartBudget@{StartBudget}!field@{field}}
+\subsubsection[{StartBudget}]{\setlength{\rightskip}{0pt plus 5cm}void field::StartBudget ()}}
+\label{classfield_a3ee84f37d88779277b69e962346b1a24}
+\hypertarget{classfield_a5aa65cb86171ccbeb39c0ca6c462bd77}{
+\index{field@{field}!TestSplit@{TestSplit}}
+\index{TestSplit@{TestSplit}!field@{field}}
+\subsubsection[{TestSplit}]{\setlength{\rightskip}{0pt plus 5cm}void field::TestSplit ()}}
+\label{classfield_a5aa65cb86171ccbeb39c0ca6c462bd77}
+\hypertarget{classfield_a90e670aa48996bbf164c0df85ae5590e}{
+\index{field@{field}!UpdateField@{UpdateField}}
+\index{UpdateField@{UpdateField}!field@{field}}
+\subsubsection[{UpdateField}]{\setlength{\rightskip}{0pt plus 5cm}void field::UpdateField ()}}
+\label{classfield_a90e670aa48996bbf164c0df85ae5590e}
+\hypertarget{classfield_ad57b5d59bb4168a4f642c6490bedc001}{
+\index{field@{field}!UpdatePatches@{UpdatePatches}}
+\index{UpdatePatches@{UpdatePatches}!field@{field}}
+\subsubsection[{UpdatePatches}]{\setlength{\rightskip}{0pt plus 5cm}void field::UpdatePatches ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ad57b5d59bb4168a4f642c6490bedc001}
+\hypertarget{classfield_abd9213abba8f8304ad579eb91363aba4}{
+\index{field@{field}!WriteTestState@{WriteTestState}}
+\index{WriteTestState@{WriteTestState}!field@{field}}
+\subsubsection[{WriteTestState}]{\setlength{\rightskip}{0pt plus 5cm}void field::WriteTestState ()}}
+\label{classfield_abd9213abba8f8304ad579eb91363aba4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classfield_adf9545309af5dd5c46b1059e66abe714}{
+\index{field@{field}!active@{active}}
+\index{active@{active}!field@{field}}
+\subsubsection[{active}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf field::active}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_adf9545309af5dd5c46b1059e66abe714}
+\hypertarget{classfield_a500a3007e7d5ce1b18e950abbe4c7a21}{
+\index{field@{field}!area@{area}}
+\index{area@{area}!field@{field}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::area}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a500a3007e7d5ce1b18e950abbe4c7a21}
+\hypertarget{classfield_aa436f3310aeaf096dfa3a03a8fcc632a}{
+\index{field@{field}!area\_\-dung@{area\_\-dung}}
+\index{area\_\-dung@{area\_\-dung}!field@{field}}
+\subsubsection[{area\_\-dung}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::area\_\-dung}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aa436f3310aeaf096dfa3a03a8fcc632a}
+\hypertarget{classfield_a9c28012934fefe1cdbb10f3d680f7f87}{
+\index{field@{field}!area\_\-overlap@{area\_\-overlap}}
+\index{area\_\-overlap@{area\_\-overlap}!field@{field}}
+\subsubsection[{area\_\-overlap}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::area\_\-overlap}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a9c28012934fefe1cdbb10f3d680f7f87}
+\hypertarget{classfield_abd96c9e9d47349a3faaed79c4a85f894}{
+\index{field@{field}!area\_\-urine@{area\_\-urine}}
+\index{area\_\-urine@{area\_\-urine}!field@{field}}
+\subsubsection[{area\_\-urine}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::area\_\-urine}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_abd96c9e9d47349a3faaed79c4a85f894}
+\hypertarget{classfield_ad9aa754f50edcc609d69051ade821958}{
+\index{field@{field}!crrPlan@{crrPlan}}
+\index{crrPlan@{crrPlan}!field@{field}}
+\subsubsection[{crrPlan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plan}$\ast$ {\bf field::crrPlan}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ad9aa754f50edcc609d69051ade821958}
+\hypertarget{classfield_ab9cb5bab1f200cff668744cbf39c3a71}{
+\index{field@{field}!daysBetweenIrrigation@{daysBetweenIrrigation}}
+\index{daysBetweenIrrigation@{daysBetweenIrrigation}!field@{field}}
+\subsubsection[{daysBetweenIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::daysBetweenIrrigation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ab9cb5bab1f200cff668744cbf39c3a71}
+\hypertarget{classfield_acfff5382da945e06998c1f1c73b516e9}{
+\index{field@{field}!daysSinceIrrigation@{daysSinceIrrigation}}
+\index{daysSinceIrrigation@{daysSinceIrrigation}!field@{field}}
+\subsubsection[{daysSinceIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::daysSinceIrrigation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_acfff5382da945e06998c1f1c73b516e9}
+\hypertarget{classfield_aa279abd93bccb07f247dbc84f4320d94}{
+\index{field@{field}!daysSinceIrrigationRequest@{daysSinceIrrigationRequest}}
+\index{daysSinceIrrigationRequest@{daysSinceIrrigationRequest}!field@{field}}
+\subsubsection[{daysSinceIrrigationRequest}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::daysSinceIrrigationRequest}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aa279abd93bccb07f247dbc84f4320d94}
+\hypertarget{classfield_ab8ea98f5c1a6daf2e61deb15c6b3370e}{
+\index{field@{field}!deposition\_\-sum@{deposition\_\-sum}}
+\index{deposition\_\-sum@{deposition\_\-sum}!field@{field}}
+\subsubsection[{deposition\_\-sum}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::deposition\_\-sum}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ab8ea98f5c1a6daf2e61deb15c6b3370e}
+\hypertarget{classfield_a477599b3c8ed6a953d27dc2d2db2cfcc}{
+\index{field@{field}!distance@{distance}}
+\index{distance@{distance}!field@{field}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::distance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a477599b3c8ed6a953d27dc2d2db2cfcc}
+\hypertarget{classfield_a99af7d28a2e26d37e1e6fc170bb7c416}{
+\index{field@{field}!DMOfftake@{DMOfftake}}
+\index{DMOfftake@{DMOfftake}!field@{field}}
+\subsubsection[{DMOfftake}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::DMOfftake}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a99af7d28a2e26d37e1e6fc170bb7c416}
+\hypertarget{classfield_a70a2a287278fc7614895337ecebd75ea}{
+\index{field@{field}!dung@{dung}}
+\index{dung@{dung}!field@{field}}
+\subsubsection[{dung}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf field::dung}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a70a2a287278fc7614895337ecebd75ea}
+\hypertarget{classfield_a54956ebaa2b763b10fbcc7cf81e1d27d}{
+\index{field@{field}!expectedCumulativeGrowth@{expectedCumulativeGrowth}}
+\index{expectedCumulativeGrowth@{expectedCumulativeGrowth}!field@{field}}
+\subsubsection[{expectedCumulativeGrowth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::expectedCumulativeGrowth}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a54956ebaa2b763b10fbcc7cf81e1d27d}
+\hypertarget{classfield_ab34c30afdf90e35b899c7a4120db6566}{
+\index{field@{field}!expectedGrowth@{expectedGrowth}}
+\index{expectedGrowth@{expectedGrowth}!field@{field}}
+\subsubsection[{expectedGrowth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::expectedGrowth}\mbox{[}366\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ab34c30afdf90e35b899c7a4120db6566}
+\hypertarget{classfield_a2d250d63f6438e6ebdfd1e4c4bf1292e}{
+\index{field@{field}!f@{f}}
+\index{f@{f}!field@{field}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}fstream {\bf field::f}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a2d250d63f6438e6ebdfd1e4c4bf1292e}
+\hypertarget{classfield_af2d4002c30bf188d089dbe1d33a0b784}{
+\index{field@{field}!fenced@{fenced}}
+\index{fenced@{fenced}!field@{field}}
+\subsubsection[{fenced}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::fenced}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_af2d4002c30bf188d089dbe1d33a0b784}
+\hypertarget{classfield_a5a67b4783694d4ba4cf87270306b910b}{
+\index{field@{field}!fingerFlow@{fingerFlow}}
+\index{fingerFlow@{fingerFlow}!field@{field}}
+\subsubsection[{fingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::fingerFlow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a5a67b4783694d4ba4cf87270306b910b}
+\hypertarget{classfield_a5b73ff6306457cefd90df1f718595008}{
+\index{field@{field}!fixation\_\-sum@{fixation\_\-sum}}
+\index{fixation\_\-sum@{fixation\_\-sum}!field@{field}}
+\subsubsection[{fixation\_\-sum}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::fixation\_\-sum}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a5b73ff6306457cefd90df1f718595008}
+\hypertarget{classfield_aad91c5b34d09b1eceee5fd72cfce99bb}{
+\index{field@{field}!FixedCrop@{FixedCrop}}
+\index{FixedCrop@{FixedCrop}!field@{field}}
+\subsubsection[{FixedCrop}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf field::FixedCrop}\mbox{[}MaxFixedCrops\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aad91c5b34d09b1eceee5fd72cfce99bb}
+\hypertarget{classfield_a99578e6e2a62c40659e95a97b4812543}{
+\index{field@{field}!FixedSize@{FixedSize}}
+\index{FixedSize@{FixedSize}!field@{field}}
+\subsubsection[{FixedSize}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::FixedSize}\mbox{[}MaxFixedCrops\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a99578e6e2a62c40659e95a97b4812543}
+\hypertarget{classfield_aa966c76aed1a50e17cdc88537b58f2bd}{
+\index{field@{field}!fPatch1@{fPatch1}}
+\index{fPatch1@{fPatch1}!field@{field}}
+\subsubsection[{fPatch1}]{\setlength{\rightskip}{0pt plus 5cm}fstream {\bf field::fPatch1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aa966c76aed1a50e17cdc88537b58f2bd}
+\hypertarget{classfield_af93145dbed4cbdeaadfdae78c51893f9}{
+\index{field@{field}!fPatch2@{fPatch2}}
+\index{fPatch2@{fPatch2}!field@{field}}
+\subsubsection[{fPatch2}]{\setlength{\rightskip}{0pt plus 5cm}fstream {\bf field::fPatch2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_af93145dbed4cbdeaadfdae78c51893f9}
+\hypertarget{classfield_a3af1a5461fe52c5fb81cc339809666b9}{
+\index{field@{field}!grazingPossible@{grazingPossible}}
+\index{grazingPossible@{grazingPossible}!field@{field}}
+\subsubsection[{grazingPossible}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf field::grazingPossible}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a3af1a5461fe52c5fb81cc339809666b9}
+\hypertarget{classfield_a290e1b803f7299cb7cf7054ef02027e3}{
+\index{field@{field}!grazingShutDown@{grazingShutDown}}
+\index{grazingShutDown@{grazingShutDown}!field@{field}}
+\subsubsection[{grazingShutDown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf field::grazingShutDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a290e1b803f7299cb7cf7054ef02027e3}
+\hypertarget{classfield_a0a8c128c2386a858df6990959b468137}{
+\index{field@{field}!History@{History}}
+\index{History@{History}!field@{field}}
+\subsubsection[{History}]{\setlength{\rightskip}{0pt plus 5cm}{\bf historyStruct} {\bf field::History}\mbox{[}BackScope\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a0a8c128c2386a858df6990959b468137}
+\hypertarget{classfield_a44f394bfa9a2924bde0653645b5a3182}{
+\index{field@{field}!irrigationDelay@{irrigationDelay}}
+\index{irrigationDelay@{irrigationDelay}!field@{field}}
+\subsubsection[{irrigationDelay}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::irrigationDelay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a44f394bfa9a2924bde0653645b5a3182}
+\hypertarget{classfield_ae283dc67495fb9dd0056d9a88b6f69c1}{
+\index{field@{field}!JBNO@{JBNO}}
+\index{JBNO@{JBNO}!field@{field}}
+\subsubsection[{JBNO}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::JBNO}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ae283dc67495fb9dd0056d9a88b6f69c1}
+\hypertarget{classfield_a516bfd09956ed9ece6cbac427205607e}{
+\index{field@{field}!last\_\-date@{last\_\-date}}
+\index{last\_\-date@{last\_\-date}!field@{field}}
+\subsubsection[{last\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf field::last\_\-date}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a516bfd09956ed9ece6cbac427205607e}
+\hypertarget{classfield_a8f1b394ff56f186e875fac2fbcaa29d9}{
+\index{field@{field}!last\_\-idx@{last\_\-idx}}
+\index{last\_\-idx@{last\_\-idx}!field@{field}}
+\subsubsection[{last\_\-idx}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::last\_\-idx}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a8f1b394ff56f186e875fac2fbcaa29d9}
+\hypertarget{classfield_a06360b6852f2e8f6348924d7bb3564b2}{
+\index{field@{field}!Lfutr@{Lfutr}}
+\index{Lfutr@{Lfutr}!field@{field}}
+\subsubsection[{Lfutr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf plan}$>$$\ast$ {\bf field::Lfutr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a06360b6852f2e8f6348924d7bb3564b2}
+\hypertarget{classfield_aaedb741713027149afc17d7ff0424862}{
+\index{field@{field}!maxPatches@{maxPatches}}
+\index{maxPatches@{maxPatches}!field@{field}}
+\subsubsection[{maxPatches}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::maxPatches}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_aaedb741713027149afc17d7ff0424862}
+\hypertarget{classfield_ab8da800fdceae26674ff4c49457b7911}{
+\index{field@{field}!MinArea@{MinArea}}
+\index{MinArea@{MinArea}!field@{field}}
+\subsubsection[{MinArea}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::MinArea}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_ab8da800fdceae26674ff4c49457b7911}
+\hypertarget{classfield_a8821f9d047c11b19d393c8ae2b6f2028}{
+\index{field@{field}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!field@{field}}
+\subsubsection[{Minimum}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::Minimum}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a8821f9d047c11b19d393c8ae2b6f2028}
+\hypertarget{classfield_a70e2c5be4735304e735cd79230e0fe5a}{
+\index{field@{field}!monitorPatches@{monitorPatches}}
+\index{monitorPatches@{monitorPatches}!field@{field}}
+\subsubsection[{monitorPatches}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf field::monitorPatches}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a70e2c5be4735304e735cd79230e0fe5a}
+\hypertarget{classfield_a1183441459b4c65b13dfaf43001bf892}{
+\index{field@{field}!new\_\-area\_\-dung@{new\_\-area\_\-dung}}
+\index{new\_\-area\_\-dung@{new\_\-area\_\-dung}!field@{field}}
+\subsubsection[{new\_\-area\_\-dung}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::new\_\-area\_\-dung}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a1183441459b4c65b13dfaf43001bf892}
+\hypertarget{classfield_a1403303f06e0e2d83fc68543bea2f2ed}{
+\index{field@{field}!new\_\-area\_\-urine@{new\_\-area\_\-urine}}
+\index{new\_\-area\_\-urine@{new\_\-area\_\-urine}!field@{field}}
+\subsubsection[{new\_\-area\_\-urine}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf field::new\_\-area\_\-urine}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a1403303f06e0e2d83fc68543bea2f2ed}
+\hypertarget{classfield_a07969cf234c23a6f05d6a2f81b424917}{
+\index{field@{field}!NoFixCrops@{NoFixCrops}}
+\index{NoFixCrops@{NoFixCrops}!field@{field}}
+\subsubsection[{NoFixCrops}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::NoFixCrops}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a07969cf234c23a6f05d6a2f81b424917}
+\hypertarget{classfield_a5ea1d24702e131374c0a8c4951eb2a5e}{
+\index{field@{field}!pile\_\-counter@{pile\_\-counter}}
+\index{pile\_\-counter@{pile\_\-counter}!field@{field}}
+\subsubsection[{pile\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::pile\_\-counter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a5ea1d24702e131374c0a8c4951eb2a5e}
+\hypertarget{classfield_af985296d2be7e23cb70d38ca5e3da62c}{
+\index{field@{field}!pile\_\-days@{pile\_\-days}}
+\index{pile\_\-days@{pile\_\-days}!field@{field}}
+\subsubsection[{pile\_\-days}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf field::pile\_\-days}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_af985296d2be7e23cb70d38ca5e3da62c}
+\hypertarget{classfield_a996fdf906e65192c69c7ab58bd47cd30}{
+\index{field@{field}!testover@{testover}}
+\index{testover@{testover}!field@{field}}
+\subsubsection[{testover}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf field::testover}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a996fdf906e65192c69c7ab58bd47cd30}
+\hypertarget{classfield_a4a4d06d397563e9bd4031f92acaaacc6}{
+\index{field@{field}!thePatches@{thePatches}}
+\index{thePatches@{thePatches}!field@{field}}
+\subsubsection[{thePatches}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf patch}$>$$\ast$ {\bf field::thePatches}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a4a4d06d397563e9bd4031f92acaaacc6}
+\hypertarget{classfield_a5651ea96e5367910b5753a22bafb374e}{
+\index{field@{field}!urine@{urine}}
+\index{urine@{urine}!field@{field}}
+\subsubsection[{urine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf field::urine}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classfield_a5651ea96e5367910b5753a22bafb374e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/\hyperlink{field_8h}{field.h}\item 
+C:/main/trunk/src/fields/\hyperlink{field_8cpp}{field.cpp}\end{DoxyCompactItemize}

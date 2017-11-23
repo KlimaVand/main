@@ -1,0 +1,177 @@
+\hypertarget{classplant_care_tech}{
+\section{plantCareTech Class Reference}
+\label{classplant_care_tech}\index{plantCareTech@{plantCareTech}}
+}
+
+
+{\ttfamily \#include $<$plantCareTech.h$>$}Inheritance diagram for plantCareTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classplant_care_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classplant_care_tech_a833337d3d8b192ab21e01e17e0907490}{plantCareTech} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classplant_care_tech_add340452926f3160e902f5789f7ca0d4}{$\sim$plantCareTech} ()
+\item 
+virtual void \hyperlink{classplant_care_tech_ac699023786b1759775d57e80b5817096}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classplant_care_tech_a55d4a7b94fdbb6f1d3533b2f5b4b20dc}{SetTheWaterAndChemicals} (\hyperlink{classwater}{water} $\ast$aWater, \hyperlink{classchemical}{chemical} $\ast$aChemical1, \hyperlink{classchemical}{chemical} $\ast$aChemical2, \hyperlink{classchemical}{chemical} $\ast$aChemical3)
+\item 
+void \hyperlink{classplant_care_tech_ab4b61e63f30a98eb3d877e928966272f}{ClearTheWaterAndChemicals} ()
+\item 
+virtual void \hyperlink{classplant_care_tech_aafaa089fe218f4a9edb91842404160e5}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+virtual void \hyperlink{classplant_care_tech_a877ed4e1f3d84637783c1ac0474a6bc6}{UpdateProducts} (bool contractor=false)
+\item 
+virtual void \hyperlink{classplant_care_tech_a99f5c674a3ae4cb85e1a56e2b3bb46cf}{UpdateChemical} (\hyperlink{classchemical}{chemical} $\ast$aChemical)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classplant_care_tech_a3d5338d71d9ef7b80859ac1576084d7f}{CalcGangHours} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classplant_care_tech_af6973ecf84e0cf5b8038b63ac0a37962}{roadSpeed}
+\item 
+double \hyperlink{classplant_care_tech_ac2b91ab06473ab299519083dc6abad7f}{specificArea}
+\item 
+double \hyperlink{classplant_care_tech_a6340fc154dde2944ecf687129f9068de}{fillingTime}
+\item 
+double \hyperlink{classplant_care_tech_afddb64cd9cee165be13d4236fde7663e}{prepFillingTank}
+\item 
+double \hyperlink{classplant_care_tech_a81e833c3367e43f79966c8dec40ba121}{treatmentFrequency1}
+\item 
+double \hyperlink{classplant_care_tech_ab7c0f81e2054bff14fe602ca34bee55b}{treatmentFrequency2}
+\item 
+\hyperlink{classwater}{water} $\ast$ \hyperlink{classplant_care_tech_a616e548a2ae0f4e23f2b37e1516171b9}{theWater}
+\item 
+\hyperlink{classchemical}{chemical} $\ast$ \hyperlink{classplant_care_tech_a851a664b2cb3f4db017fc10787534272}{theChemical1}
+\item 
+\hyperlink{classchemical}{chemical} $\ast$ \hyperlink{classplant_care_tech_ae3d33614c0c4b94ac6c7c23d8ebe1c59}{theChemical2}
+\item 
+\hyperlink{classchemical}{chemical} $\ast$ \hyperlink{classplant_care_tech_a9980093768fda818b6706513e3c8fc3e}{theChemical3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classplant_care_tech_a833337d3d8b192ab21e01e17e0907490}{
+\index{plantCareTech@{plantCareTech}!plantCareTech@{plantCareTech}}
+\index{plantCareTech@{plantCareTech}!plantCareTech@{plantCareTech}}
+\subsubsection[{plantCareTech}]{\setlength{\rightskip}{0pt plus 5cm}plantCareTech::plantCareTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classplant_care_tech_a833337d3d8b192ab21e01e17e0907490}
+\hypertarget{classplant_care_tech_add340452926f3160e902f5789f7ca0d4}{
+\index{plantCareTech@{plantCareTech}!$\sim$plantCareTech@{$\sim$plantCareTech}}
+\index{$\sim$plantCareTech@{$\sim$plantCareTech}!plantCareTech@{plantCareTech}}
+\subsubsection[{$\sim$plantCareTech}]{\setlength{\rightskip}{0pt plus 5cm}plantCareTech::$\sim$plantCareTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_tech_add340452926f3160e902f5789f7ca0d4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classplant_care_tech_aafaa089fe218f4a9edb91842404160e5}{
+\index{plantCareTech@{plantCareTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!plantCareTech@{plantCareTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_tech_aafaa089fe218f4a9edb91842404160e5}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classplant_care_tech_a3d5338d71d9ef7b80859ac1576084d7f}{
+\index{plantCareTech@{plantCareTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!plantCareTech@{plantCareTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classplant_care_tech_a3d5338d71d9ef7b80859ac1576084d7f}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classplant_care_tech_ab4b61e63f30a98eb3d877e928966272f}{
+\index{plantCareTech@{plantCareTech}!ClearTheWaterAndChemicals@{ClearTheWaterAndChemicals}}
+\index{ClearTheWaterAndChemicals@{ClearTheWaterAndChemicals}!plantCareTech@{plantCareTech}}
+\subsubsection[{ClearTheWaterAndChemicals}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::ClearTheWaterAndChemicals ()}}
+\label{classplant_care_tech_ab4b61e63f30a98eb3d877e928966272f}
+\hypertarget{classplant_care_tech_ac699023786b1759775d57e80b5817096}{
+\index{plantCareTech@{plantCareTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!plantCareTech@{plantCareTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_tech_ac699023786b1759775d57e80b5817096}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classplant_care_tech_a55d4a7b94fdbb6f1d3533b2f5b4b20dc}{
+\index{plantCareTech@{plantCareTech}!SetTheWaterAndChemicals@{SetTheWaterAndChemicals}}
+\index{SetTheWaterAndChemicals@{SetTheWaterAndChemicals}!plantCareTech@{plantCareTech}}
+\subsubsection[{SetTheWaterAndChemicals}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::SetTheWaterAndChemicals ({\bf water} $\ast$ {\em aWater}, \/  {\bf chemical} $\ast$ {\em aChemical1}, \/  {\bf chemical} $\ast$ {\em aChemical2}, \/  {\bf chemical} $\ast$ {\em aChemical3})}}
+\label{classplant_care_tech_a55d4a7b94fdbb6f1d3533b2f5b4b20dc}
+\hypertarget{classplant_care_tech_a99f5c674a3ae4cb85e1a56e2b3bb46cf}{
+\index{plantCareTech@{plantCareTech}!UpdateChemical@{UpdateChemical}}
+\index{UpdateChemical@{UpdateChemical}!plantCareTech@{plantCareTech}}
+\subsubsection[{UpdateChemical}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::UpdateChemical ({\bf chemical} $\ast$ {\em aChemical})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_tech_a99f5c674a3ae4cb85e1a56e2b3bb46cf}
+\hypertarget{classplant_care_tech_a877ed4e1f3d84637783c1ac0474a6bc6}{
+\index{plantCareTech@{plantCareTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!plantCareTech@{plantCareTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_tech_a877ed4e1f3d84637783c1ac0474a6bc6}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classplant_care_tech_a6340fc154dde2944ecf687129f9068de}{
+\index{plantCareTech@{plantCareTech}!fillingTime@{fillingTime}}
+\index{fillingTime@{fillingTime}!plantCareTech@{plantCareTech}}
+\subsubsection[{fillingTime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf plantCareTech::fillingTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_a6340fc154dde2944ecf687129f9068de}
+\hypertarget{classplant_care_tech_afddb64cd9cee165be13d4236fde7663e}{
+\index{plantCareTech@{plantCareTech}!prepFillingTank@{prepFillingTank}}
+\index{prepFillingTank@{prepFillingTank}!plantCareTech@{plantCareTech}}
+\subsubsection[{prepFillingTank}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf plantCareTech::prepFillingTank}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_afddb64cd9cee165be13d4236fde7663e}
+\hypertarget{classplant_care_tech_af6973ecf84e0cf5b8038b63ac0a37962}{
+\index{plantCareTech@{plantCareTech}!roadSpeed@{roadSpeed}}
+\index{roadSpeed@{roadSpeed}!plantCareTech@{plantCareTech}}
+\subsubsection[{roadSpeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf plantCareTech::roadSpeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_af6973ecf84e0cf5b8038b63ac0a37962}
+\hypertarget{classplant_care_tech_ac2b91ab06473ab299519083dc6abad7f}{
+\index{plantCareTech@{plantCareTech}!specificArea@{specificArea}}
+\index{specificArea@{specificArea}!plantCareTech@{plantCareTech}}
+\subsubsection[{specificArea}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf plantCareTech::specificArea}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_ac2b91ab06473ab299519083dc6abad7f}
+\hypertarget{classplant_care_tech_a851a664b2cb3f4db017fc10787534272}{
+\index{plantCareTech@{plantCareTech}!theChemical1@{theChemical1}}
+\index{theChemical1@{theChemical1}!plantCareTech@{plantCareTech}}
+\subsubsection[{theChemical1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chemical}$\ast$ {\bf plantCareTech::theChemical1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_a851a664b2cb3f4db017fc10787534272}
+\hypertarget{classplant_care_tech_ae3d33614c0c4b94ac6c7c23d8ebe1c59}{
+\index{plantCareTech@{plantCareTech}!theChemical2@{theChemical2}}
+\index{theChemical2@{theChemical2}!plantCareTech@{plantCareTech}}
+\subsubsection[{theChemical2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chemical}$\ast$ {\bf plantCareTech::theChemical2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_ae3d33614c0c4b94ac6c7c23d8ebe1c59}
+\hypertarget{classplant_care_tech_a9980093768fda818b6706513e3c8fc3e}{
+\index{plantCareTech@{plantCareTech}!theChemical3@{theChemical3}}
+\index{theChemical3@{theChemical3}!plantCareTech@{plantCareTech}}
+\subsubsection[{theChemical3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chemical}$\ast$ {\bf plantCareTech::theChemical3}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_a9980093768fda818b6706513e3c8fc3e}
+\hypertarget{classplant_care_tech_a616e548a2ae0f4e23f2b37e1516171b9}{
+\index{plantCareTech@{plantCareTech}!theWater@{theWater}}
+\index{theWater@{theWater}!plantCareTech@{plantCareTech}}
+\subsubsection[{theWater}]{\setlength{\rightskip}{0pt plus 5cm}{\bf water}$\ast$ {\bf plantCareTech::theWater}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_a616e548a2ae0f4e23f2b37e1516171b9}
+\hypertarget{classplant_care_tech_a81e833c3367e43f79966c8dec40ba121}{
+\index{plantCareTech@{plantCareTech}!treatmentFrequency1@{treatmentFrequency1}}
+\index{treatmentFrequency1@{treatmentFrequency1}!plantCareTech@{plantCareTech}}
+\subsubsection[{treatmentFrequency1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf plantCareTech::treatmentFrequency1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_a81e833c3367e43f79966c8dec40ba121}
+\hypertarget{classplant_care_tech_ab7c0f81e2054bff14fe602ca34bee55b}{
+\index{plantCareTech@{plantCareTech}!treatmentFrequency2@{treatmentFrequency2}}
+\index{treatmentFrequency2@{treatmentFrequency2}!plantCareTech@{plantCareTech}}
+\subsubsection[{treatmentFrequency2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf plantCareTech::treatmentFrequency2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classplant_care_tech_ab7c0f81e2054bff14fe602ca34bee55b}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{plant_care_tech_8h}{plantCareTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{plant_care_tech_8cpp}{plantCareTech.cpp}\end{DoxyCompactItemize}

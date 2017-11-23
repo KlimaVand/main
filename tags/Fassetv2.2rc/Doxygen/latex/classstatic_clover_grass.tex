@@ -1,0 +1,183 @@
+\hypertarget{classstatic_clover_grass}{
+\section{staticCloverGrass Class Reference}
+\label{classstatic_clover_grass}\index{staticCloverGrass@{staticCloverGrass}}
+}
+
+
+{\ttfamily \#include $<$staticCloverGrass.h$>$}Inheritance diagram for staticCloverGrass::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_clover_grass}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_clover_grass_a2a75c00ffc15dccb394517f789ea51a7}{staticCloverGrass} (bool permanentGrass)
+\item 
+virtual int \hyperlink{classstatic_clover_grass_aaaa2e0c87530fc75182dbdcd2dac4571}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_clover_grass_a2eb39c57d3165893587edade1a470342}{PVstratFactor} (int PV\_\-strat)
+\item 
+void \hyperlink{classstatic_clover_grass_a737916e73dc4466b5bc7c53013a4895e}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_clover_grass_a109415e46a73076fa9b573f273aab284}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_clover_grass_a2361fc85251a91cf8f1d1c7930392323}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_clover_grass_a847d7d5346d43b21712110c1f73f5b4d}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_clover_grass_a751ba37577ff9a5fe44fb4cd0c3b62f2}{NitrogenAmount} (int JB\_\-NO, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_clover_grass_a17e80290c27da7304243f8ac3211631f}{ExpectedYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_clover_grass_a3ab4d1c458661d02bc92b991ce2e4c15}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_clover_grass_a4503f83751d06364054bc14d0b7221db}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_clover_grass_adc4ac213c2bf4b59ad590a634d13ff4a}{ExtraNRelease\_\-} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa7a96373c11f406076beea5d5b0bc92cb}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa1b63f244b007c552b212b924dc589cf8}{Nitrogen\_\-levels} = 1, 
+\hyperlink{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baaef005ecaf2dcadc9c37e3124a6d4fa44}{Sand\_\-max\_\-N} = 0, 
+\hyperlink{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa0a9574b0adcf3d355205c02eba85c78f}{Clay\_\-max\_\-N} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classstatic_clover_grass_a92eeec31d30a8fbbe716a35a82603bba}{permanent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106ba}{
+\subsubsection[{"@17}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106ba}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticCloverGrass@{staticCloverGrass}}\index{staticCloverGrass@{staticCloverGrass}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa7a96373c11f406076beea5d5b0bc92cb}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa7a96373c11f406076beea5d5b0bc92cb}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticCloverGrass@{staticCloverGrass}}\index{staticCloverGrass@{staticCloverGrass}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa1b63f244b007c552b212b924dc589cf8}{
+Nitrogen\_\-levels}
+\label{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa1b63f244b007c552b212b924dc589cf8}
+}]\index{Sand\_\-max\_\-N@{Sand\_\-max\_\-N}!staticCloverGrass@{staticCloverGrass}}\index{staticCloverGrass@{staticCloverGrass}!Sand\_\-max\_\-N@{Sand\_\-max\_\-N}}\item[{\em 
+\hypertarget{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baaef005ecaf2dcadc9c37e3124a6d4fa44}{
+Sand\_\-max\_\-N}
+\label{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baaef005ecaf2dcadc9c37e3124a6d4fa44}
+}]\index{Clay\_\-max\_\-N@{Clay\_\-max\_\-N}!staticCloverGrass@{staticCloverGrass}}\index{staticCloverGrass@{staticCloverGrass}!Clay\_\-max\_\-N@{Clay\_\-max\_\-N}}\item[{\em 
+\hypertarget{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa0a9574b0adcf3d355205c02eba85c78f}{
+Clay\_\-max\_\-N}
+\label{classstatic_clover_grass_aefc62d078dcbf30bc84e12d501b106baa0a9574b0adcf3d355205c02eba85c78f}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_clover_grass_a2a75c00ffc15dccb394517f789ea51a7}{
+\index{staticCloverGrass@{staticCloverGrass}!staticCloverGrass@{staticCloverGrass}}
+\index{staticCloverGrass@{staticCloverGrass}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{staticCloverGrass}]{\setlength{\rightskip}{0pt plus 5cm}staticCloverGrass::staticCloverGrass (bool {\em permanentGrass})}}
+\label{classstatic_clover_grass_a2a75c00ffc15dccb394517f789ea51a7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_clover_grass_a17e80290c27da7304243f8ac3211631f}{
+\index{staticCloverGrass@{staticCloverGrass}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCloverGrass::ExpectedYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a17e80290c27da7304243f8ac3211631f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_clover_grass_adc4ac213c2bf4b59ad590a634d13ff4a}{
+\index{staticCloverGrass@{staticCloverGrass}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCloverGrass::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_adc4ac213c2bf4b59ad590a634d13ff4a}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_clover_grass_a109415e46a73076fa9b573f273aab284}{
+\index{staticCloverGrass@{staticCloverGrass}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticCloverGrass::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a109415e46a73076fa9b573f273aab284}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_clover_grass_a751ba37577ff9a5fe44fb4cd0c3b62f2}{
+\index{staticCloverGrass@{staticCloverGrass}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticCloverGrass::NitrogenAmount (int {\em JB\_\-NO}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a751ba37577ff9a5fe44fb4cd0c3b62f2}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_clover_grass_a847d7d5346d43b21712110c1f73f5b4d}{
+\index{staticCloverGrass@{staticCloverGrass}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticCloverGrass::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a847d7d5346d43b21712110c1f73f5b4d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_clover_grass_a2361fc85251a91cf8f1d1c7930392323}{
+\index{staticCloverGrass@{staticCloverGrass}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticCloverGrass::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a2361fc85251a91cf8f1d1c7930392323}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_clover_grass_a3ab4d1c458661d02bc92b991ce2e4c15}{
+\index{staticCloverGrass@{staticCloverGrass}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCloverGrass::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a3ab4d1c458661d02bc92b991ce2e4c15}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_clover_grass_a4503f83751d06364054bc14d0b7221db}{
+\index{staticCloverGrass@{staticCloverGrass}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticCloverGrass::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a4503f83751d06364054bc14d0b7221db}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_clover_grass_a2eb39c57d3165893587edade1a470342}{
+\index{staticCloverGrass@{staticCloverGrass}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticCloverGrass::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a2eb39c57d3165893587edade1a470342}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_clover_grass_aaaa2e0c87530fc75182dbdcd2dac4571}{
+\index{staticCloverGrass@{staticCloverGrass}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticCloverGrass::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_clover_grass_aaaa2e0c87530fc75182dbdcd2dac4571}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_clover_grass_a737916e73dc4466b5bc7c53013a4895e}{
+\index{staticCloverGrass@{staticCloverGrass}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticCloverGrass::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_clover_grass_a737916e73dc4466b5bc7c53013a4895e}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classstatic_clover_grass_a92eeec31d30a8fbbe716a35a82603bba}{
+\index{staticCloverGrass@{staticCloverGrass}!permanent@{permanent}}
+\index{permanent@{permanent}!staticCloverGrass@{staticCloverGrass}}
+\subsubsection[{permanent}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf staticCloverGrass::permanent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_clover_grass_a92eeec31d30a8fbbe716a35a82603bba}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_clover_grass_8h}{staticCloverGrass.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_clover_grass_8cpp}{staticCloverGrass.cpp}\end{DoxyCompactItemize}

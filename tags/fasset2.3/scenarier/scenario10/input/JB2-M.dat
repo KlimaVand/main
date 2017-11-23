@@ -1,0 +1,118 @@
+[SoilParameters]              // Data for "jordprofildatabasen" DJF+HYDRES model
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         2
+DryBulkDensity   1.40                     
+ClayContent      0.036
+SiltContent      0.051
+MualemVanGenucten 1
+
+CarbonPct        1.57
+CNRatio	13
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.041747316
+IOM	0.405174
+IOM.N	0.031598719
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         2
+DryBulkDensity   1.44                     
+ClayContent      0.049
+SiltContent      0.042
+MualemVanGenucten 1
+
+CarbonPct        0.83
+CNRatio	14
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.019379591
+IOM	0.7
+IOM.N	0.05024543
+
+[SoilLayer(3)]
+Thickness        250
+SoilType         2
+DryBulkDensity   1.49                     
+ClayContent      0.058
+SiltContent      0.043
+MualemVanGenucten 1
+
+CarbonPct        0.47
+CNRatio	13
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.020908945
+IOM	0.7
+IOM.N	0.054210581
+
+[SoilLayer(4)]
+Thickness        250
+SoilType         2
+DryBulkDensity   1.58                    
+ClayContent      0.064
+SiltContent      0.050
+MualemVanGenucten 1
+
+CarbonPct        0.33
+CNRatio	12
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.02269319
+IOM	0.7
+IOM.N	0.058836592
+
+
+
+[SoilLayer(5)]
+Thickness        1500
+SoilType         2
+DryBulkDensity   1.58                    
+ClayContent      0.064
+SiltContent      0.050
+MualemVanGenucten 1
+
+CarbonPct        0.01
+CNRatio	12
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.02269319
+IOM	0.7
+IOM.N	0.058836592
+
+[end]

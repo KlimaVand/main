@@ -1,0 +1,89 @@
+\hypertarget{soil_profile_8cpp}{
+\section{C:/main/trunk/src/soil/soilProfile.cpp File Reference}
+\label{soil_profile_8cpp}\index{C:/main/trunk/src/soil/soilProfile.cpp@{C:/main/trunk/src/soil/soilProfile.cpp}}
+}
+{\ttfamily \#include \char`\"{}../base/common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}soilProfile.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../base/cloneList.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../base/bstime.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../base/message.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}soil.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../base/timeUse.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../base/controlParameters.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../base/climate.h\char`\"{}}\par
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{soil_profile_8cpp_abe32a77da4fc54336203eca151b28875}{LatentHeatMelting} = 334400.0
+\item 
+const double \hyperlink{soil_profile_8cpp_aa802d053b0e834f15ac8331c6c1d42b8}{HeatCapacityWater} = 4192.0
+\item 
+const double \hyperlink{soil_profile_8cpp_a3429b0569d7d39f18cbcb8bfba864023}{HeatCapacitySolid} = 750.0
+\item 
+const double \hyperlink{soil_profile_8cpp_a60ac72fe64fb25fb3826fa9324a8ab6e}{HeatCapacityIce} = 2050
+\item 
+const double \hyperlink{soil_profile_8cpp_a79ee1ed68b41e6515e17cc7529c31a8a}{WaterDensity} = 1000
+\item 
+const double \hyperlink{soil_profile_8cpp_a9b7cb6558bb43062b69e5ff4633ab65e}{IceDensity} = 920
+\item 
+const double \hyperlink{soil_profile_8cpp_a93c72ef3556ca3c949c47c262342d6d8}{VolHeatCapacityIce} = \hyperlink{soil_profile_8cpp_a60ac72fe64fb25fb3826fa9324a8ab6e}{HeatCapacityIce}$\ast$\hyperlink{soil_profile_8cpp_a9b7cb6558bb43062b69e5ff4633ab65e}{IceDensity}
+\item 
+const double \hyperlink{soil_profile_8cpp_a9f9b68b68cac2da8b1f620458740f11e}{VolHeatCapacityWater} = \hyperlink{soil_profile_8cpp_aa802d053b0e834f15ac8331c6c1d42b8}{HeatCapacityWater}$\ast$\hyperlink{soil_profile_8cpp_a79ee1ed68b41e6515e17cc7529c31a8a}{WaterDensity}
+\item 
+const double \hyperlink{soil_profile_8cpp_a269902d013e2fa7ce90ecb1d85805602}{snowConductivity} = 2.86e-\/6$\ast$300$\ast$300
+\item 
+const double \hyperlink{soil_profile_8cpp_a2b1af553057bae6c283762156c7f5469}{specCapacity} = \hyperlink{soil_profile_8cpp_abe32a77da4fc54336203eca151b28875}{LatentHeatMelting}$\ast$\hyperlink{soil_profile_8cpp_a79ee1ed68b41e6515e17cc7529c31a8a}{WaterDensity}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{soil_profile_8cpp_a60ac72fe64fb25fb3826fa9324a8ab6e}{
+\index{soilProfile.cpp@{soilProfile.cpp}!HeatCapacityIce@{HeatCapacityIce}}
+\index{HeatCapacityIce@{HeatCapacityIce}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{HeatCapacityIce}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf HeatCapacityIce} = 2050}}
+\label{soil_profile_8cpp_a60ac72fe64fb25fb3826fa9324a8ab6e}
+\hypertarget{soil_profile_8cpp_a3429b0569d7d39f18cbcb8bfba864023}{
+\index{soilProfile.cpp@{soilProfile.cpp}!HeatCapacitySolid@{HeatCapacitySolid}}
+\index{HeatCapacitySolid@{HeatCapacitySolid}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{HeatCapacitySolid}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf HeatCapacitySolid} = 750.0}}
+\label{soil_profile_8cpp_a3429b0569d7d39f18cbcb8bfba864023}
+\hypertarget{soil_profile_8cpp_aa802d053b0e834f15ac8331c6c1d42b8}{
+\index{soilProfile.cpp@{soilProfile.cpp}!HeatCapacityWater@{HeatCapacityWater}}
+\index{HeatCapacityWater@{HeatCapacityWater}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{HeatCapacityWater}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf HeatCapacityWater} = 4192.0}}
+\label{soil_profile_8cpp_aa802d053b0e834f15ac8331c6c1d42b8}
+\hypertarget{soil_profile_8cpp_a9b7cb6558bb43062b69e5ff4633ab65e}{
+\index{soilProfile.cpp@{soilProfile.cpp}!IceDensity@{IceDensity}}
+\index{IceDensity@{IceDensity}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{IceDensity}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf IceDensity} = 920}}
+\label{soil_profile_8cpp_a9b7cb6558bb43062b69e5ff4633ab65e}
+\hypertarget{soil_profile_8cpp_abe32a77da4fc54336203eca151b28875}{
+\index{soilProfile.cpp@{soilProfile.cpp}!LatentHeatMelting@{LatentHeatMelting}}
+\index{LatentHeatMelting@{LatentHeatMelting}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{LatentHeatMelting}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf LatentHeatMelting} = 334400.0}}
+\label{soil_profile_8cpp_abe32a77da4fc54336203eca151b28875}
+\hypertarget{soil_profile_8cpp_a269902d013e2fa7ce90ecb1d85805602}{
+\index{soilProfile.cpp@{soilProfile.cpp}!snowConductivity@{snowConductivity}}
+\index{snowConductivity@{snowConductivity}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{snowConductivity}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf snowConductivity} = 2.86e-\/6$\ast$300$\ast$300}}
+\label{soil_profile_8cpp_a269902d013e2fa7ce90ecb1d85805602}
+\hypertarget{soil_profile_8cpp_a2b1af553057bae6c283762156c7f5469}{
+\index{soilProfile.cpp@{soilProfile.cpp}!specCapacity@{specCapacity}}
+\index{specCapacity@{specCapacity}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{specCapacity}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf specCapacity} = {\bf LatentHeatMelting}$\ast${\bf WaterDensity}}}
+\label{soil_profile_8cpp_a2b1af553057bae6c283762156c7f5469}
+\hypertarget{soil_profile_8cpp_a93c72ef3556ca3c949c47c262342d6d8}{
+\index{soilProfile.cpp@{soilProfile.cpp}!VolHeatCapacityIce@{VolHeatCapacityIce}}
+\index{VolHeatCapacityIce@{VolHeatCapacityIce}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{VolHeatCapacityIce}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf VolHeatCapacityIce} = {\bf HeatCapacityIce}$\ast${\bf IceDensity}}}
+\label{soil_profile_8cpp_a93c72ef3556ca3c949c47c262342d6d8}
+\hypertarget{soil_profile_8cpp_a9f9b68b68cac2da8b1f620458740f11e}{
+\index{soilProfile.cpp@{soilProfile.cpp}!VolHeatCapacityWater@{VolHeatCapacityWater}}
+\index{VolHeatCapacityWater@{VolHeatCapacityWater}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{VolHeatCapacityWater}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf VolHeatCapacityWater} = {\bf HeatCapacityWater}$\ast${\bf WaterDensity}}}
+\label{soil_profile_8cpp_a9f9b68b68cac2da8b1f620458740f11e}
+\hypertarget{soil_profile_8cpp_a79ee1ed68b41e6515e17cc7529c31a8a}{
+\index{soilProfile.cpp@{soilProfile.cpp}!WaterDensity@{WaterDensity}}
+\index{WaterDensity@{WaterDensity}!soilProfile.cpp@{soilProfile.cpp}}
+\subsubsection[{WaterDensity}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf WaterDensity} = 1000}}
+\label{soil_profile_8cpp_a79ee1ed68b41e6515e17cc7529c31a8a}

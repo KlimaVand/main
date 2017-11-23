@@ -1,0 +1,130 @@
+[SoilParameters]                         // Ecological arable field trial (JB oct-2002)
+Nodes           40			 // Modified for new IOM values
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         4
+ConductivityFC  -7.42			// log10(m/s)   conductivity at field capacity O.H.Jacobsen p 47
+DryBulkDensity   1.42                    
+ClayContent      0.088
+SiltContent      0.133
+
+CarbonPct        2.29
+CNRatio          13.1
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.041413092
+IOM	0.405174
+IOM.N	0.031345743
+
+RelativeWater(0) 0.329
+PFValue(0)       1.0
+RelativeWater(1) 0.254
+PFValue(1)       2.0
+RelativeWater(2) 0.194
+PFValue(2)       3.0
+RelativeWater(3) 0.086
+PFValue(3)       4.2
+
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         4
+ConductivityFC   -7.24		
+DryBulkDensity   1.48                    
+ClayContent      0.112
+SiltContent      0.129
+
+CarbonPct        1.25
+CNRatio          13.3
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.020425991
+IOM	0.7
+IOM.N	0.052958428
+
+RelativeWater(0) 0.337
+PFValue(0)       1.0
+RelativeWater(1) 0.206
+PFValue(1)       2.0
+RelativeWater(2) 0.117
+PFValue(2)       3.0
+RelativeWater(3) 0.058
+PFValue(3)       4.2
+
+[SoilLayer(3)]
+Thickness        250
+SoilType         4
+ConductivityFC   -8.6				
+DryBulkDensity   1.73                    
+ClayContent      0.135
+SiltContent      0.119
+
+CarbonPct        0.43
+CNRatio          9.4
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.029108883
+IOM	0.7
+IOM.N	0.075470545
+
+RelativeWater(0) 0.333
+PFValue(0)       1.0
+RelativeWater(1) 0.295
+PFValue(1)       2.0
+RelativeWater(2) 0.25
+PFValue(2)       3.0
+RelativeWater(3) 0.145
+PFValue(3)       4.2
+
+[SoilLayer(4)]
+Thickness        1500
+SoilType         4
+ConductivityFC   -8.72     
+DryBulkDensity   1.78                    
+ClayContent      0.144
+SiltContent      0.113
+
+CarbonPct        0.21
+CNRatio          7.0
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.039261187
+IOM	0.7
+IOM.N	0.101792405
+
+RelativeWater(0) 0.341
+PFValue(0)       1.0
+RelativeWater(1) 0.178
+PFValue(1)       2.0
+RelativeWater(2) 0.135
+PFValue(2)       3.0
+RelativeWater(3) 0.066
+PFValue(3)       4.2
+[end]

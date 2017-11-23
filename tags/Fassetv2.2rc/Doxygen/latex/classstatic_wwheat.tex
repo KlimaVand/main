@@ -1,0 +1,211 @@
+\hypertarget{classstatic_wwheat}{
+\section{staticWwheat Class Reference}
+\label{classstatic_wwheat}\index{staticWwheat@{staticWwheat}}
+}
+
+
+{\ttfamily \#include $<$staticWwheat.h$>$}Inheritance diagram for staticWwheat::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_wwheat}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_wwheat_a7d9fa03e51dd0478f91de605deea2606}{staticWwheat} ()
+\item 
+virtual int \hyperlink{classstatic_wwheat_a51961674d4896c3f4c69bec9a4e47ee0}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_wwheat_ab8772fd418b602cc729945fdaebf695e}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual void \hyperlink{classstatic_wwheat_adad91fcc0de2a252030e17e25fdc97e4}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_wwheat_a7ad6be729608506d81e911675dc9ae1f}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_wwheat_ab3b506b81bbf6bee0b5993a5d1e82e0f}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_wwheat_ab6756889c263146d276fe9e5f09469ca}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wwheat_a5ef5878549be7108d8fda9ef63b2bc34}{NitrogenAmount} (int soil\_\-type, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_wwheat_a2a711b3d2779a34f6b8b95d12e8166fd}{ExpectedYield\_\-} (int soil\_\-type, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_wwheat_aca3709bba8050b2888a4f1d7f034309d}{ExpectedStrawYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_wwheat_a01fccbd4041ab0eb454ec7df73f3d87c}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wwheat_ac3e69e6aea659a75d0db30841c82ca6d}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wwheat_a96c132fcd9b33934b75c887329d9c09c}{ExtraNRelease\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wwheat_a5376e77c08e26a7a57ee1a1ba02095e2}{NUseSlurrySpring} ()
+\item 
+virtual int \hyperlink{classstatic_wwheat_a9c50241cdc2ca7f9bf8a05813415eb3e}{SlyrryPossibleThisPeriod} (\hyperlink{classperiod}{period} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06a062deeba46d95d1a65d6d3b05d85c2a2}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06a14ef0b04b70dc33504bcc508c8879ed0}{Nitrogen\_\-levels} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classstatic_wwheat_ad969c3d0aba84277d7b0d4a881c66e56}{Nopt} (int JB\_\-NO)
+\item 
+double \hyperlink{classstatic_wwheat_a97b208e29e9f0ba0dcc3b940503449a2}{Ymin} (int JB\_\-NO)
+\item 
+double \hyperlink{classstatic_wwheat_a76fa2c4a59fa9a7918345d3e4194aba7}{Ymax} (int JB\_\-NO)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06}{
+\subsubsection[{"@29}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticWwheat@{staticWwheat}}\index{staticWwheat@{staticWwheat}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06a062deeba46d95d1a65d6d3b05d85c2a2}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06a062deeba46d95d1a65d6d3b05d85c2a2}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticWwheat@{staticWwheat}}\index{staticWwheat@{staticWwheat}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06a14ef0b04b70dc33504bcc508c8879ed0}{
+Nitrogen\_\-levels}
+\label{classstatic_wwheat_ac9ec09c08dd943c896ba757bf1123d06a14ef0b04b70dc33504bcc508c8879ed0}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_wwheat_a7d9fa03e51dd0478f91de605deea2606}{
+\index{staticWwheat@{staticWwheat}!staticWwheat@{staticWwheat}}
+\index{staticWwheat@{staticWwheat}!staticWwheat@{staticWwheat}}
+\subsubsection[{staticWwheat}]{\setlength{\rightskip}{0pt plus 5cm}staticWwheat::staticWwheat ()}}
+\label{classstatic_wwheat_a7d9fa03e51dd0478f91de605deea2606}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_wwheat_aca3709bba8050b2888a4f1d7f034309d}{
+\index{staticWwheat@{staticWwheat}!ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}}
+\index{ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{ExpectedStrawYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::ExpectedStrawYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_aca3709bba8050b2888a4f1d7f034309d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{staticCrop}.\hypertarget{classstatic_wwheat_a2a711b3d2779a34f6b8b95d12e8166fd}{
+\index{staticWwheat@{staticWwheat}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::ExpectedYield\_\- (int {\em soil\_\-type}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_a2a711b3d2779a34f6b8b95d12e8166fd}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_wwheat_a96c132fcd9b33934b75c887329d9c09c}{
+\index{staticWwheat@{staticWwheat}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_a96c132fcd9b33934b75c887329d9c09c}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_wwheat_a7ad6be729608506d81e911675dc9ae1f}{
+\index{staticWwheat@{staticWwheat}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticWwheat@{staticWwheat}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticWwheat::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_a7ad6be729608506d81e911675dc9ae1f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_wwheat_a5ef5878549be7108d8fda9ef63b2bc34}{
+\index{staticWwheat@{staticWwheat}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticWwheat@{staticWwheat}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::NitrogenAmount (int {\em soil\_\-type}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_a5ef5878549be7108d8fda9ef63b2bc34}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_wwheat_ab6756889c263146d276fe9e5f09469ca}{
+\index{staticWwheat@{staticWwheat}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticWwheat::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_ab6756889c263146d276fe9e5f09469ca}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_wwheat_ad969c3d0aba84277d7b0d4a881c66e56}{
+\index{staticWwheat@{staticWwheat}!Nopt@{Nopt}}
+\index{Nopt@{Nopt}!staticWwheat@{staticWwheat}}
+\subsubsection[{Nopt}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::Nopt (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wwheat_ad969c3d0aba84277d7b0d4a881c66e56}
+\hypertarget{classstatic_wwheat_ab3b506b81bbf6bee0b5993a5d1e82e0f}{
+\index{staticWwheat@{staticWwheat}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticWwheat::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_ab3b506b81bbf6bee0b5993a5d1e82e0f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_wwheat_a5376e77c08e26a7a57ee1a1ba02095e2}{
+\index{staticWwheat@{staticWwheat}!NUseSlurrySpring@{NUseSlurrySpring}}
+\index{NUseSlurrySpring@{NUseSlurrySpring}!staticWwheat@{staticWwheat}}
+\subsubsection[{NUseSlurrySpring}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticWwheat::NUseSlurrySpring ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_wwheat_a5376e77c08e26a7a57ee1a1ba02095e2}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{staticCrop}.\hypertarget{classstatic_wwheat_a01fccbd4041ab0eb454ec7df73f3d87c}{
+\index{staticWwheat@{staticWwheat}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_a01fccbd4041ab0eb454ec7df73f3d87c}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_wwheat_ac3e69e6aea659a75d0db30841c82ca6d}{
+\index{staticWwheat@{staticWwheat}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticWwheat@{staticWwheat}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_ac3e69e6aea659a75d0db30841c82ca6d}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_wwheat_ab8772fd418b602cc729945fdaebf695e}{
+\index{staticWwheat@{staticWwheat}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticWwheat@{staticWwheat}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_ab8772fd418b602cc729945fdaebf695e}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_wwheat_a9c50241cdc2ca7f9bf8a05813415eb3e}{
+\index{staticWwheat@{staticWwheat}!SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}}
+\index{SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}!staticWwheat@{staticWwheat}}
+\subsubsection[{SlyrryPossibleThisPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int staticWwheat::SlyrryPossibleThisPeriod ({\bf period} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_a9c50241cdc2ca7f9bf8a05813415eb3e}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{staticCrop}.\hypertarget{classstatic_wwheat_a51961674d4896c3f4c69bec9a4e47ee0}{
+\index{staticWwheat@{staticWwheat}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticWwheat@{staticWwheat}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticWwheat::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_wwheat_a51961674d4896c3f4c69bec9a4e47ee0}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_wwheat_adad91fcc0de2a252030e17e25fdc97e4}{
+\index{staticWwheat@{staticWwheat}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticWwheat@{staticWwheat}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticWwheat::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wwheat_adad91fcc0de2a252030e17e25fdc97e4}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.\hypertarget{classstatic_wwheat_a76fa2c4a59fa9a7918345d3e4194aba7}{
+\index{staticWwheat@{staticWwheat}!Ymax@{Ymax}}
+\index{Ymax@{Ymax}!staticWwheat@{staticWwheat}}
+\subsubsection[{Ymax}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::Ymax (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wwheat_a76fa2c4a59fa9a7918345d3e4194aba7}
+\hypertarget{classstatic_wwheat_a97b208e29e9f0ba0dcc3b940503449a2}{
+\index{staticWwheat@{staticWwheat}!Ymin@{Ymin}}
+\index{Ymin@{Ymin}!staticWwheat@{staticWwheat}}
+\subsubsection[{Ymin}]{\setlength{\rightskip}{0pt plus 5cm}double staticWwheat::Ymin (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wwheat_a97b208e29e9f0ba0dcc3b940503449a2}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_wwheat_8h}{staticWwheat.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_wwheat_8cpp}{staticWwheat.cpp}\end{DoxyCompactItemize}

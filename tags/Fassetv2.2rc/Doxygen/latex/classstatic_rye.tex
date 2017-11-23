@@ -1,0 +1,211 @@
+\hypertarget{classstatic_rye}{
+\section{staticRye Class Reference}
+\label{classstatic_rye}\index{staticRye@{staticRye}}
+}
+
+
+{\ttfamily \#include $<$staticRye.h$>$}Inheritance diagram for staticRye::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_rye}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_rye_ac213bcfc28e5c41044f1f8c1c0bcbe71}{staticRye} ()
+\item 
+virtual int \hyperlink{classstatic_rye_ad0e64c4bdab814efbe44b1ffbaf9a322}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_rye_a2a8f5a4738e856f635722ea48bf1ea04}{PVstratFactor} (int PV\_\-strat)
+\item 
+virtual void \hyperlink{classstatic_rye_a9842ed0a85f8e721762a72f0d2252587}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_rye_a0532c6cd87e39116de39436d5b47c7e8}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_rye_ac293d50ad067e382400530df8bcead56}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_rye_a22cb837905cefab1cb8491b216a4eaa7}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_rye_aec49ed18f9cc96318e71ca20d9caaddf}{NitrogenAmount} (int soil\_\-type, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_rye_a6c6bedff00773f73edc12bba9702b27a}{ExpectedYield\_\-} (int soil\_\-type, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_rye_a7e9c9e6226d2311ae3b621b79753bdf9}{ExpectedStrawYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_rye_a29a2a89b2cb2d8e47ee6b7881560b0f4}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_rye_a48f4563a6399ff40bafcb87e53b2d4a1}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_rye_a62343c8b7153985ed21866d7d64e5b40}{ExtraNRelease\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_rye_af3bbe1562e3361dbfa02b186d11a810a}{NUseSlurrySpring} ()
+\item 
+virtual int \hyperlink{classstatic_rye_a8e23a3afa6cba94afd57049287748c99}{SlyrryPossibleThisPeriod} (\hyperlink{classperiod}{period} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146aae41aa4e79fddf0b86bef6b4f6f78467}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146a1fe9f04dc1234ab75efdbe3100d6cbb3}{Nitrogen\_\-levels} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classstatic_rye_a4255082b0ac988eaaf8020e5cbb6caab}{Nopt} (int JB\_\-NO)
+\item 
+double \hyperlink{classstatic_rye_a81ed178d1e0b0004c1ae96a8805c1705}{Ymin} (int JB\_\-NO)
+\item 
+double \hyperlink{classstatic_rye_af2cca3d5d8190bc8708a5244b5dc9824}{Ymax} (int JB\_\-NO)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146}{
+\subsubsection[{"@23}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticRye@{staticRye}}\index{staticRye@{staticRye}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146aae41aa4e79fddf0b86bef6b4f6f78467}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146aae41aa4e79fddf0b86bef6b4f6f78467}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticRye@{staticRye}}\index{staticRye@{staticRye}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146a1fe9f04dc1234ab75efdbe3100d6cbb3}{
+Nitrogen\_\-levels}
+\label{classstatic_rye_ad49fe0513441ac05b2924e6e635c3146a1fe9f04dc1234ab75efdbe3100d6cbb3}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_rye_ac213bcfc28e5c41044f1f8c1c0bcbe71}{
+\index{staticRye@{staticRye}!staticRye@{staticRye}}
+\index{staticRye@{staticRye}!staticRye@{staticRye}}
+\subsubsection[{staticRye}]{\setlength{\rightskip}{0pt plus 5cm}staticRye::staticRye ()}}
+\label{classstatic_rye_ac213bcfc28e5c41044f1f8c1c0bcbe71}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_rye_a7e9c9e6226d2311ae3b621b79753bdf9}{
+\index{staticRye@{staticRye}!ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}}
+\index{ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}!staticRye@{staticRye}}
+\subsubsection[{ExpectedStrawYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::ExpectedStrawYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a7e9c9e6226d2311ae3b621b79753bdf9}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{staticCrop}.\hypertarget{classstatic_rye_a6c6bedff00773f73edc12bba9702b27a}{
+\index{staticRye@{staticRye}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticRye@{staticRye}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::ExpectedYield\_\- (int {\em soil\_\-type}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a6c6bedff00773f73edc12bba9702b27a}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_rye_a62343c8b7153985ed21866d7d64e5b40}{
+\index{staticRye@{staticRye}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticRye@{staticRye}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a62343c8b7153985ed21866d7d64e5b40}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_rye_a0532c6cd87e39116de39436d5b47c7e8}{
+\index{staticRye@{staticRye}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticRye@{staticRye}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticRye::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a0532c6cd87e39116de39436d5b47c7e8}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_rye_aec49ed18f9cc96318e71ca20d9caaddf}{
+\index{staticRye@{staticRye}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticRye@{staticRye}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::NitrogenAmount (int {\em soil\_\-type}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_aec49ed18f9cc96318e71ca20d9caaddf}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_rye_a22cb837905cefab1cb8491b216a4eaa7}{
+\index{staticRye@{staticRye}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticRye@{staticRye}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticRye::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a22cb837905cefab1cb8491b216a4eaa7}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_rye_a4255082b0ac988eaaf8020e5cbb6caab}{
+\index{staticRye@{staticRye}!Nopt@{Nopt}}
+\index{Nopt@{Nopt}!staticRye@{staticRye}}
+\subsubsection[{Nopt}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::Nopt (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_rye_a4255082b0ac988eaaf8020e5cbb6caab}
+\hypertarget{classstatic_rye_ac293d50ad067e382400530df8bcead56}{
+\index{staticRye@{staticRye}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticRye@{staticRye}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticRye::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_ac293d50ad067e382400530df8bcead56}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_rye_af3bbe1562e3361dbfa02b186d11a810a}{
+\index{staticRye@{staticRye}!NUseSlurrySpring@{NUseSlurrySpring}}
+\index{NUseSlurrySpring@{NUseSlurrySpring}!staticRye@{staticRye}}
+\subsubsection[{NUseSlurrySpring}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticRye::NUseSlurrySpring ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_rye_af3bbe1562e3361dbfa02b186d11a810a}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{staticCrop}.\hypertarget{classstatic_rye_a29a2a89b2cb2d8e47ee6b7881560b0f4}{
+\index{staticRye@{staticRye}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticRye@{staticRye}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a29a2a89b2cb2d8e47ee6b7881560b0f4}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_rye_a48f4563a6399ff40bafcb87e53b2d4a1}{
+\index{staticRye@{staticRye}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticRye@{staticRye}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a48f4563a6399ff40bafcb87e53b2d4a1}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_rye_a2a8f5a4738e856f635722ea48bf1ea04}{
+\index{staticRye@{staticRye}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticRye@{staticRye}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a2a8f5a4738e856f635722ea48bf1ea04}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_rye_a8e23a3afa6cba94afd57049287748c99}{
+\index{staticRye@{staticRye}!SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}}
+\index{SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}!staticRye@{staticRye}}
+\subsubsection[{SlyrryPossibleThisPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int staticRye::SlyrryPossibleThisPeriod ({\bf period} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a8e23a3afa6cba94afd57049287748c99}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{staticCrop}.\hypertarget{classstatic_rye_ad0e64c4bdab814efbe44b1ffbaf9a322}{
+\index{staticRye@{staticRye}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticRye@{staticRye}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticRye::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_rye_ad0e64c4bdab814efbe44b1ffbaf9a322}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_rye_a9842ed0a85f8e721762a72f0d2252587}{
+\index{staticRye@{staticRye}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticRye@{staticRye}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticRye::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_rye_a9842ed0a85f8e721762a72f0d2252587}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.\hypertarget{classstatic_rye_af2cca3d5d8190bc8708a5244b5dc9824}{
+\index{staticRye@{staticRye}!Ymax@{Ymax}}
+\index{Ymax@{Ymax}!staticRye@{staticRye}}
+\subsubsection[{Ymax}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::Ymax (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_rye_af2cca3d5d8190bc8708a5244b5dc9824}
+\hypertarget{classstatic_rye_a81ed178d1e0b0004c1ae96a8805c1705}{
+\index{staticRye@{staticRye}!Ymin@{Ymin}}
+\index{Ymin@{Ymin}!staticRye@{staticRye}}
+\subsubsection[{Ymin}]{\setlength{\rightskip}{0pt plus 5cm}double staticRye::Ymin (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_rye_a81ed178d1e0b0004c1ae96a8805c1705}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_rye_8h}{staticRye.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_rye_8cpp}{staticRye.cpp}\end{DoxyCompactItemize}

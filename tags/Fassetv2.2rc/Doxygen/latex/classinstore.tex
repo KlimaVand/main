@@ -1,0 +1,131 @@
+\hypertarget{classinstore}{
+\section{instore Class Reference}
+\label{classinstore}\index{instore@{instore}}
+}
+
+
+{\ttfamily \#include $<$instore.h$>$}Inheritance diagram for instore::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classinstore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinstore_a3ee4eec37f131b9eb5e2ff5072caafed}{instore} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual \hyperlink{classinstore_aab1ed501097338b080ad6818f4f3c26a}{$\sim$instore} ()
+\item 
+virtual void \hyperlink{classinstore_a5f289ba185023e4b7c15d82e79d1ac7f}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classinstore_ae11c6905a5d87e26fb8662e202faa188}{Volatize} (double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission})
+\item 
+virtual void \hyperlink{classinstore_a4a0d001c67c2611871505d71269a3fce}{floorVolatize} (double airVelocity, double humidity, double temperature, double areaSoiled, double duration, double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$waterEvap, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission})
+\item 
+virtual void \hyperlink{classinstore_a840256bcb3fe9248c741f2b0b22ff2e0}{inhouseVolatize} (double airVelocity, double humidity, double temperature, double duration, double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$waterEvap, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission})
+\item 
+virtual double \hyperlink{classinstore_a6074de577169c2ad9bc7cb041c361771}{VolatizeDung} (bool ventilated)
+\item 
+virtual void \hyperlink{classinstore_a3235daf3842bf6c4b1e30f56167e69c1}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classinstore_afbd76ef97e35ef93c4945667e8341945}{GiveIndicator} (int indicatorType)
+\item 
+virtual void \hyperlink{classinstore_a589fc8cfe56114a2468991195f494d77}{ScaleInstore} (double numberOfAnimals)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classinstore_a0eebbd632b677efe27261ea75208dca3}{velocityConstant}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classinstore_a2ff66b6c5bc714a61ac6aeeebf9b2519}{operator$<$$<$} (ostream \&os, const \hyperlink{classinstore}{instore} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classinstore_a3ee4eec37f131b9eb5e2ff5072caafed}{
+\index{instore@{instore}!instore@{instore}}
+\index{instore@{instore}!instore@{instore}}
+\subsubsection[{instore}]{\setlength{\rightskip}{0pt plus 5cm}instore::instore (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classinstore_a3ee4eec37f131b9eb5e2ff5072caafed}
+\hypertarget{classinstore_aab1ed501097338b080ad6818f4f3c26a}{
+\index{instore@{instore}!$\sim$instore@{$\sim$instore}}
+\index{$\sim$instore@{$\sim$instore}!instore@{instore}}
+\subsubsection[{$\sim$instore}]{\setlength{\rightskip}{0pt plus 5cm}instore::$\sim$instore ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_aab1ed501097338b080ad6818f4f3c26a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classinstore_a3235daf3842bf6c4b1e30f56167e69c1}{
+\index{instore@{instore}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!instore@{instore}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void instore::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_a3235daf3842bf6c4b1e30f56167e69c1}
+Control that Fasset does not exceed the Capacity of the \hyperlink{classinstore}{instore} 
+
+Reimplemented from \hyperlink{classmanurestore_a6eb8d6bedf9b0732423bfbb98d5da453}{manurestore}.\hypertarget{classinstore_a4a0d001c67c2611871505d71269a3fce}{
+\index{instore@{instore}!floorVolatize@{floorVolatize}}
+\index{floorVolatize@{floorVolatize}!instore@{instore}}
+\subsubsection[{floorVolatize}]{\setlength{\rightskip}{0pt plus 5cm}void instore::floorVolatize (double {\em airVelocity}, \/  double {\em humidity}, \/  double {\em temperature}, \/  double {\em areaSoiled}, \/  double {\em duration}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em waterEvap}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_a4a0d001c67c2611871505d71269a3fce}
+Volatize \hyperlink{classnitrogen}{nitrogen} gasses from the floor -\/ used for dynamic modelling \hypertarget{classinstore_afbd76ef97e35ef93c4945667e8341945}{
+\index{instore@{instore}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!instore@{instore}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void instore::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_afbd76ef97e35ef93c4945667e8341945}
+
+
+Reimplemented from \hyperlink{classmanurestore_a0e71b577a0d53a31588784dd56c9b935}{manurestore}.\hypertarget{classinstore_a840256bcb3fe9248c741f2b0b22ff2e0}{
+\index{instore@{instore}!inhouseVolatize@{inhouseVolatize}}
+\index{inhouseVolatize@{inhouseVolatize}!instore@{instore}}
+\subsubsection[{inhouseVolatize}]{\setlength{\rightskip}{0pt plus 5cm}void instore::inhouseVolatize (double {\em airVelocity}, \/  double {\em humidity}, \/  double {\em temperature}, \/  double {\em duration}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em waterEvap}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_a840256bcb3fe9248c741f2b0b22ff2e0}
+Volatize \hyperlink{classnitrogen}{nitrogen} gasses from the inhouse \hyperlink{classmanure}{manure} store -\/ used for dynamic modelling \hypertarget{classinstore_a5f289ba185023e4b7c15d82e79d1ac7f}{
+\index{instore@{instore}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!instore@{instore}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void instore::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_a5f289ba185023e4b7c15d82e79d1ac7f}
+Init reads the relevant values from its owners file 
+
+Reimplemented from \hyperlink{classmanurestore_ae639f0ef3e9fee3416a2bfd2ab1ef496}{manurestore}.\hypertarget{classinstore_a589fc8cfe56114a2468991195f494d77}{
+\index{instore@{instore}!ScaleInstore@{ScaleInstore}}
+\index{ScaleInstore@{ScaleInstore}!instore@{instore}}
+\subsubsection[{ScaleInstore}]{\setlength{\rightskip}{0pt plus 5cm}void instore::ScaleInstore (double {\em annualAmount})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_a589fc8cfe56114a2468991195f494d77}
+Scale \hyperlink{classinstore}{instore} to number of animals present, pass info to next store. Note cumulative effect on capacity \hypertarget{classinstore_ae11c6905a5d87e26fb8662e202faa188}{
+\index{instore@{instore}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!instore@{instore}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void instore::Volatize (double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_ae11c6905a5d87e26fb8662e202faa188}
+Volatize gasses from the inhouse \hyperlink{classmanure}{manure} store -\/ used for static (emission factor) modelling \hypertarget{classinstore_a6074de577169c2ad9bc7cb041c361771}{
+\index{instore@{instore}!VolatizeDung@{VolatizeDung}}
+\index{VolatizeDung@{VolatizeDung}!instore@{instore}}
+\subsubsection[{VolatizeDung}]{\setlength{\rightskip}{0pt plus 5cm}double instore::VolatizeDung (bool {\em ventilated})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classinstore_a6074de577169c2ad9bc7cb041c361771}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classinstore_a2ff66b6c5bc714a61ac6aeeebf9b2519}{
+\index{instore@{instore}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!instore@{instore}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf instore} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classinstore_a2ff66b6c5bc714a61ac6aeeebf9b2519}
+
+
+Reimplemented from \hyperlink{classmanurestore_a8ac9597914271cef193878847c073724}{manurestore}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classinstore_a0eebbd632b677efe27261ea75208dca3}{
+\index{instore@{instore}!velocityConstant@{velocityConstant}}
+\index{velocityConstant@{velocityConstant}!instore@{instore}}
+\subsubsection[{velocityConstant}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf instore::velocityConstant}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classinstore_a0eebbd632b677efe27261ea75208dca3}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{instore_8h}{instore.h}\item 
+C:/main/trunk/src/building/\hyperlink{instore_8cpp}{instore.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{classcropbare}{
+\section{cropbare Class Reference}
+\label{classcropbare}\index{cropbare@{cropbare}}
+}
+
+
+{\ttfamily \#include $<$cropBare.h$>$}Inheritance diagram for cropbare::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classcropbare}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcropbare_a6d017192b466eb2f5c9bd9d4ce8df322}{cropbare} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual void \hyperlink{classcropbare_a776fa8bf716f23af17ff9c1bb10d1bdc}{GetStatus} (double $\ast$aRootRadius, double $\ast$aRootpF, double $\ast$aNitrogenDemand, double $\ast$aNitrateUptakeRate, double $\ast$aAmmoniumUptakeRate, double $\ast$aMinimumSoilNitrate, double $\ast$aMinimumSoilAmmonium)
+\item 
+virtual double \hyperlink{classcropbare_a141cff2a17ccfb22637dd0692a427795}{Update} (double ActivePar)
+\item 
+virtual bool \hyperlink{classcropbare_a9fa5ef7d9c5e0ca6d8cc6fe35b00ab86}{IsBareCrop} ()
+\item 
+virtual void \hyperlink{classcropbare_ab9e81123fa54843efce5da0861e401f6}{Harvest} (\hyperlink{classdecomposable}{decomposable} $\ast$Storage, \hyperlink{classdecomposable}{decomposable} $\ast$Straw)
+\begin{DoxyCompactList}\small\item\em harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcropbare_a6d017192b466eb2f5c9bd9d4ce8df322}{
+\index{cropbare@{cropbare}!cropbare@{cropbare}}
+\index{cropbare@{cropbare}!cropbare@{cropbare}}
+\subsubsection[{cropbare}]{\setlength{\rightskip}{0pt plus 5cm}cropbare::cropbare (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcropbare_a6d017192b466eb2f5c9bd9d4ce8df322}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcropbare_a776fa8bf716f23af17ff9c1bb10d1bdc}{
+\index{cropbare@{cropbare}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!cropbare@{cropbare}}
+\subsubsection[{GetStatus}]{\setlength{\rightskip}{0pt plus 5cm}void cropbare::GetStatus (double $\ast$ {\em aRootRadius}, \/  double $\ast$ {\em aRootpF}, \/  double $\ast$ {\em aNitrogenDemand}, \/  double $\ast$ {\em aNitrateUptakeRate}, \/  double $\ast$ {\em aAmmoniumUptakeRate}, \/  double $\ast$ {\em aMinimumSoilNitrate}, \/  double $\ast$ {\em aMinimumSoilAmmonium})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcropbare_a776fa8bf716f23af17ff9c1bb10d1bdc}
+
+
+Reimplemented from \hyperlink{classcrop_a7f8e3691756173129745ea074a076442}{crop}.\hypertarget{classcropbare_ab9e81123fa54843efce5da0861e401f6}{
+\index{cropbare@{cropbare}!Harvest@{Harvest}}
+\index{Harvest@{Harvest}!cropbare@{cropbare}}
+\subsubsection[{Harvest}]{\setlength{\rightskip}{0pt plus 5cm}void cropbare::Harvest ({\bf decomposable} $\ast$ {\em Storage}, \/  {\bf decomposable} $\ast$ {\em Straw})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcropbare_ab9e81123fa54843efce5da0861e401f6}
+
+
+harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classstorage}{storage}}]pointer to an object containing the maincrop \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. grain) \item[{\em Straw}]pointer to an object containing the remaining \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. Straw)\end{DoxyParams}
+harvest the current \hyperlink{classcrop}{crop}. The drymatter and straw is stored in the input parameters. Nitroget is updated The plant is still alive 
+
+Reimplemented from \hyperlink{classcrop_a387dc393ee7cd05a40874739cff8579e}{crop}.\hypertarget{classcropbare_a9fa5ef7d9c5e0ca6d8cc6fe35b00ab86}{
+\index{cropbare@{cropbare}!IsBareCrop@{IsBareCrop}}
+\index{IsBareCrop@{IsBareCrop}!cropbare@{cropbare}}
+\subsubsection[{IsBareCrop}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cropbare::IsBareCrop ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcropbare_a9fa5ef7d9c5e0ca6d8cc6fe35b00ab86}
+
+
+Reimplemented from \hyperlink{classcrop_a8dd9a3a833e045f767eb3a6abd5f9677}{crop}.\hypertarget{classcropbare_a141cff2a17ccfb22637dd0692a427795}{
+\index{cropbare@{cropbare}!Update@{Update}}
+\index{Update@{Update}!cropbare@{cropbare}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}double cropbare::Update (double {\em ActivePar})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcropbare_a141cff2a17ccfb22637dd0692a427795}
+Returns daily DM growth 
+
+Reimplemented from \hyperlink{classcrop_a9ed02462e332fffb65498075e7499bf4}{crop}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_bare_8h}{cropBare.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_bare_8cpp}{cropBare.cpp}\end{DoxyCompactItemize}

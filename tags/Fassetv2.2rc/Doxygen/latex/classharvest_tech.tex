@@ -1,0 +1,312 @@
+\hypertarget{classharvest_tech}{
+\section{harvestTech Class Reference}
+\label{classharvest_tech}\index{harvestTech@{harvestTech}}
+}
+
+
+{\ttfamily \#include $<$harvestTech.h$>$}Inheritance diagram for harvestTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classharvest_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classharvest_tech_a219b924c7e1e1224f72f62eebc973d4c}{harvestTech} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classharvest_tech_a37b6681330c9b3d7edd5480f8c68cd66}{$\sim$harvestTech} ()
+\item 
+void \hyperlink{classharvest_tech_ae5e426c9daf76eb383bc475c15dd069f}{SetoperationID} (int aoperationID)
+\item 
+virtual void \hyperlink{classharvest_tech_a8b2a5efa11d4ee3355c75cec9a080b27}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classharvest_tech_a08dcfb181357050af56db22695c5c90e}{SetMainProduct} (int i, \hyperlink{classplant_item}{plantItem} $\ast$aMain)
+\item 
+virtual void \hyperlink{classharvest_tech_ada5009f15cedc20583c711df035af86f}{SetStrawProduct} (int i, \hyperlink{classplant_item}{plantItem} $\ast$aStraw)
+\item 
+virtual void \hyperlink{classharvest_tech_a4e255e621cdcd9c4c1ce3a01fad834b7}{SetForageProduct} (int i, \hyperlink{classplant_item}{plantItem} $\ast$aForage)
+\item 
+void \hyperlink{classharvest_tech_ab48c8055972115e18263492081374a09}{ClearThePlantItems} ()
+\item 
+virtual void \hyperlink{classharvest_tech_a9cbac27e3242c6ac08e0cbcebfdb13b3}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+virtual void \hyperlink{classharvest_tech_a80aa806fd5fa0f652b8ead63fb8976a4}{UpdateProducts} (bool contractor=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classharvest_tech_a76ab6bbf21dabdf2dccc36bb5a632f9e}{CalcGangHours} ()
+\item 
+virtual void \hyperlink{classharvest_tech_a7da76cf91a1af094816d27b373e7f913}{CalcGangFuel} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classharvest_tech_a93d97054ababd16fce76c51d42975f55}{loadClampCapacity}
+\item 
+double \hyperlink{classharvest_tech_a86f9582f0ac899f0ba02e43610cd8a14}{reloadingCapacity}
+\item 
+double \hyperlink{classharvest_tech_ad7098f90d7fbb9d02a12dad4714de781}{unloadCapacity}
+\item 
+double \hyperlink{classharvest_tech_ad73c0def5ee037378be9afcee7cfbf72}{unloadRoothouseCapacity}
+\item 
+double \hyperlink{classharvest_tech_ab042ca61e906ae05ff26c8ff4071a7e7}{depositCapacity}
+\item 
+double \hyperlink{classharvest_tech_a552aa9da2e2c63e010bc7227a5988ee3}{depositRoothouseCapacity}
+\item 
+double \hyperlink{classharvest_tech_a41a9494ba016f84157185069c96ae472}{prepUnloadingStorage}
+\item 
+double \hyperlink{classharvest_tech_a2d41e95efc4e103511f72f09fc610426}{prepUnloadingRoothouse}
+\item 
+double \hyperlink{classharvest_tech_a9c2a254f2e35e8ee1065911fe0028c80}{prepReloading}
+\item 
+double \hyperlink{classharvest_tech_a57e05f0cb4467a2aff0e6433a6c3d26e}{prepReloadingHarvester}
+\item 
+double \hyperlink{classharvest_tech_a27e1ea7eab9adc9b2d2a0d94fe78b80d}{prepClamp}
+\item 
+double \hyperlink{classharvest_tech_a63be74e621105c9148ca2f98edb29fb8}{uncoverClamp}
+\item 
+double \hyperlink{classharvest_tech_a6738cd70c0169d7a3653c1e75868b461}{roadSpeed}
+\item 
+double \hyperlink{classharvest_tech_a6287a8add3f5b707b42a6565ecc67d87}{balesLost}
+\item 
+double \hyperlink{classharvest_tech_a57a9eef8f134eb29850e764f16249fcf}{balesLoad}
+\item 
+double \hyperlink{classharvest_tech_a1b368e19b6f1bbd519b9c263168011f0}{strawBalerCapacity}
+\item 
+double \hyperlink{classharvest_tech_ac27e8d47de57e3eac8c8e2c018a30ac9}{bindTime}
+\item 
+double \hyperlink{classharvest_tech_a596bf2f645408dba4cf16d4c020ebe54}{loadCapacity}
+\item 
+double \hyperlink{classharvest_tech_a80df64e4f1a1a350d9417442f5a1fde2}{reloading}
+\item 
+double \hyperlink{classharvest_tech_a65e2dcf017abd9238c0146d7e46bf631}{moweCarriage}
+\item 
+int \hyperlink{classharvest_tech_a17ee58d74bbafc0c067cd16a69769a08}{stops}
+\item 
+int \hyperlink{classharvest_tech_ad551ccd676b1a6078f1447eb15e60064}{operationID}
+\item 
+int \hyperlink{classharvest_tech_ac17112c92ad4a22487df2fd5d3fc6c18}{baleType}
+\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classharvest_tech_adcf86d0ccb7f92d9e5ecbe6e5a8ed3bc}{MainProduct} \mbox{[}MaxPlants\mbox{]}
+\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classharvest_tech_a390dbcd08cb961378c244a52b550bd70}{StrawProduct} \mbox{[}MaxPlants\mbox{]}
+\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classharvest_tech_a55a5dcd524da7e4e3f5eef68b60fec91}{ForageProduct} \mbox{[}MaxPlants\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classharvest_tech_a219b924c7e1e1224f72f62eebc973d4c}{
+\index{harvestTech@{harvestTech}!harvestTech@{harvestTech}}
+\index{harvestTech@{harvestTech}!harvestTech@{harvestTech}}
+\subsubsection[{harvestTech}]{\setlength{\rightskip}{0pt plus 5cm}harvestTech::harvestTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classharvest_tech_a219b924c7e1e1224f72f62eebc973d4c}
+\hypertarget{classharvest_tech_a37b6681330c9b3d7edd5480f8c68cd66}{
+\index{harvestTech@{harvestTech}!$\sim$harvestTech@{$\sim$harvestTech}}
+\index{$\sim$harvestTech@{$\sim$harvestTech}!harvestTech@{harvestTech}}
+\subsubsection[{$\sim$harvestTech}]{\setlength{\rightskip}{0pt plus 5cm}harvestTech::$\sim$harvestTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_tech_a37b6681330c9b3d7edd5480f8c68cd66}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classharvest_tech_a9cbac27e3242c6ac08e0cbcebfdb13b3}{
+\index{harvestTech@{harvestTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!harvestTech@{harvestTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_tech_a9cbac27e3242c6ac08e0cbcebfdb13b3}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classharvest_tech_a7da76cf91a1af094816d27b373e7f913}{
+\index{harvestTech@{harvestTech}!CalcGangFuel@{CalcGangFuel}}
+\index{CalcGangFuel@{CalcGangFuel}!harvestTech@{harvestTech}}
+\subsubsection[{CalcGangFuel}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::CalcGangFuel ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classharvest_tech_a7da76cf91a1af094816d27b373e7f913}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a530d49b4cf06668121b80eba679b7e98}{fieldOperationTech}.\hypertarget{classharvest_tech_a76ab6bbf21dabdf2dccc36bb5a632f9e}{
+\index{harvestTech@{harvestTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!harvestTech@{harvestTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classharvest_tech_a76ab6bbf21dabdf2dccc36bb5a632f9e}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classharvest_tech_ab48c8055972115e18263492081374a09}{
+\index{harvestTech@{harvestTech}!ClearThePlantItems@{ClearThePlantItems}}
+\index{ClearThePlantItems@{ClearThePlantItems}!harvestTech@{harvestTech}}
+\subsubsection[{ClearThePlantItems}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::ClearThePlantItems ()}}
+\label{classharvest_tech_ab48c8055972115e18263492081374a09}
+\hypertarget{classharvest_tech_a8b2a5efa11d4ee3355c75cec9a080b27}{
+\index{harvestTech@{harvestTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!harvestTech@{harvestTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_tech_a8b2a5efa11d4ee3355c75cec9a080b27}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classharvest_tech_a4e255e621cdcd9c4c1ce3a01fad834b7}{
+\index{harvestTech@{harvestTech}!SetForageProduct@{SetForageProduct}}
+\index{SetForageProduct@{SetForageProduct}!harvestTech@{harvestTech}}
+\subsubsection[{SetForageProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestTech::SetForageProduct (int {\em i}, \/  {\bf plantItem} $\ast$ {\em aForage})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_tech_a4e255e621cdcd9c4c1ce3a01fad834b7}
+\hypertarget{classharvest_tech_a08dcfb181357050af56db22695c5c90e}{
+\index{harvestTech@{harvestTech}!SetMainProduct@{SetMainProduct}}
+\index{SetMainProduct@{SetMainProduct}!harvestTech@{harvestTech}}
+\subsubsection[{SetMainProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestTech::SetMainProduct (int {\em i}, \/  {\bf plantItem} $\ast$ {\em aMain})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_tech_a08dcfb181357050af56db22695c5c90e}
+\hypertarget{classharvest_tech_ae5e426c9daf76eb383bc475c15dd069f}{
+\index{harvestTech@{harvestTech}!SetoperationID@{SetoperationID}}
+\index{SetoperationID@{SetoperationID}!harvestTech@{harvestTech}}
+\subsubsection[{SetoperationID}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::SetoperationID (int {\em aoperationID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classharvest_tech_ae5e426c9daf76eb383bc475c15dd069f}
+\hypertarget{classharvest_tech_ada5009f15cedc20583c711df035af86f}{
+\index{harvestTech@{harvestTech}!SetStrawProduct@{SetStrawProduct}}
+\index{SetStrawProduct@{SetStrawProduct}!harvestTech@{harvestTech}}
+\subsubsection[{SetStrawProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestTech::SetStrawProduct (int {\em i}, \/  {\bf plantItem} $\ast$ {\em aStraw})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_tech_ada5009f15cedc20583c711df035af86f}
+\hypertarget{classharvest_tech_a80aa806fd5fa0f652b8ead63fb8976a4}{
+\index{harvestTech@{harvestTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!harvestTech@{harvestTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void harvestTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_tech_a80aa806fd5fa0f652b8ead63fb8976a4}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classharvest_tech_a57a9eef8f134eb29850e764f16249fcf}{
+\index{harvestTech@{harvestTech}!balesLoad@{balesLoad}}
+\index{balesLoad@{balesLoad}!harvestTech@{harvestTech}}
+\subsubsection[{balesLoad}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::balesLoad}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a57a9eef8f134eb29850e764f16249fcf}
+\hypertarget{classharvest_tech_a6287a8add3f5b707b42a6565ecc67d87}{
+\index{harvestTech@{harvestTech}!balesLost@{balesLost}}
+\index{balesLost@{balesLost}!harvestTech@{harvestTech}}
+\subsubsection[{balesLost}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::balesLost}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a6287a8add3f5b707b42a6565ecc67d87}
+\hypertarget{classharvest_tech_ac17112c92ad4a22487df2fd5d3fc6c18}{
+\index{harvestTech@{harvestTech}!baleType@{baleType}}
+\index{baleType@{baleType}!harvestTech@{harvestTech}}
+\subsubsection[{baleType}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf harvestTech::baleType}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_ac17112c92ad4a22487df2fd5d3fc6c18}
+\hypertarget{classharvest_tech_ac27e8d47de57e3eac8c8e2c018a30ac9}{
+\index{harvestTech@{harvestTech}!bindTime@{bindTime}}
+\index{bindTime@{bindTime}!harvestTech@{harvestTech}}
+\subsubsection[{bindTime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::bindTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_ac27e8d47de57e3eac8c8e2c018a30ac9}
+\hypertarget{classharvest_tech_ab042ca61e906ae05ff26c8ff4071a7e7}{
+\index{harvestTech@{harvestTech}!depositCapacity@{depositCapacity}}
+\index{depositCapacity@{depositCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{depositCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::depositCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_ab042ca61e906ae05ff26c8ff4071a7e7}
+\hypertarget{classharvest_tech_a552aa9da2e2c63e010bc7227a5988ee3}{
+\index{harvestTech@{harvestTech}!depositRoothouseCapacity@{depositRoothouseCapacity}}
+\index{depositRoothouseCapacity@{depositRoothouseCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{depositRoothouseCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::depositRoothouseCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a552aa9da2e2c63e010bc7227a5988ee3}
+\hypertarget{classharvest_tech_a55a5dcd524da7e4e3f5eef68b60fec91}{
+\index{harvestTech@{harvestTech}!ForageProduct@{ForageProduct}}
+\index{ForageProduct@{ForageProduct}!harvestTech@{harvestTech}}
+\subsubsection[{ForageProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem}$\ast$ {\bf harvestTech::ForageProduct}\mbox{[}MaxPlants\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a55a5dcd524da7e4e3f5eef68b60fec91}
+\hypertarget{classharvest_tech_a596bf2f645408dba4cf16d4c020ebe54}{
+\index{harvestTech@{harvestTech}!loadCapacity@{loadCapacity}}
+\index{loadCapacity@{loadCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{loadCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::loadCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a596bf2f645408dba4cf16d4c020ebe54}
+\hypertarget{classharvest_tech_a93d97054ababd16fce76c51d42975f55}{
+\index{harvestTech@{harvestTech}!loadClampCapacity@{loadClampCapacity}}
+\index{loadClampCapacity@{loadClampCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{loadClampCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::loadClampCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a93d97054ababd16fce76c51d42975f55}
+\hypertarget{classharvest_tech_adcf86d0ccb7f92d9e5ecbe6e5a8ed3bc}{
+\index{harvestTech@{harvestTech}!MainProduct@{MainProduct}}
+\index{MainProduct@{MainProduct}!harvestTech@{harvestTech}}
+\subsubsection[{MainProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem}$\ast$ {\bf harvestTech::MainProduct}\mbox{[}MaxPlants\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_adcf86d0ccb7f92d9e5ecbe6e5a8ed3bc}
+\hypertarget{classharvest_tech_a65e2dcf017abd9238c0146d7e46bf631}{
+\index{harvestTech@{harvestTech}!moweCarriage@{moweCarriage}}
+\index{moweCarriage@{moweCarriage}!harvestTech@{harvestTech}}
+\subsubsection[{moweCarriage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::moweCarriage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a65e2dcf017abd9238c0146d7e46bf631}
+\hypertarget{classharvest_tech_ad551ccd676b1a6078f1447eb15e60064}{
+\index{harvestTech@{harvestTech}!operationID@{operationID}}
+\index{operationID@{operationID}!harvestTech@{harvestTech}}
+\subsubsection[{operationID}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf harvestTech::operationID}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_ad551ccd676b1a6078f1447eb15e60064}
+\hypertarget{classharvest_tech_a27e1ea7eab9adc9b2d2a0d94fe78b80d}{
+\index{harvestTech@{harvestTech}!prepClamp@{prepClamp}}
+\index{prepClamp@{prepClamp}!harvestTech@{harvestTech}}
+\subsubsection[{prepClamp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::prepClamp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a27e1ea7eab9adc9b2d2a0d94fe78b80d}
+\hypertarget{classharvest_tech_a9c2a254f2e35e8ee1065911fe0028c80}{
+\index{harvestTech@{harvestTech}!prepReloading@{prepReloading}}
+\index{prepReloading@{prepReloading}!harvestTech@{harvestTech}}
+\subsubsection[{prepReloading}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::prepReloading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a9c2a254f2e35e8ee1065911fe0028c80}
+\hypertarget{classharvest_tech_a57e05f0cb4467a2aff0e6433a6c3d26e}{
+\index{harvestTech@{harvestTech}!prepReloadingHarvester@{prepReloadingHarvester}}
+\index{prepReloadingHarvester@{prepReloadingHarvester}!harvestTech@{harvestTech}}
+\subsubsection[{prepReloadingHarvester}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::prepReloadingHarvester}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a57e05f0cb4467a2aff0e6433a6c3d26e}
+\hypertarget{classharvest_tech_a2d41e95efc4e103511f72f09fc610426}{
+\index{harvestTech@{harvestTech}!prepUnloadingRoothouse@{prepUnloadingRoothouse}}
+\index{prepUnloadingRoothouse@{prepUnloadingRoothouse}!harvestTech@{harvestTech}}
+\subsubsection[{prepUnloadingRoothouse}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::prepUnloadingRoothouse}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a2d41e95efc4e103511f72f09fc610426}
+\hypertarget{classharvest_tech_a41a9494ba016f84157185069c96ae472}{
+\index{harvestTech@{harvestTech}!prepUnloadingStorage@{prepUnloadingStorage}}
+\index{prepUnloadingStorage@{prepUnloadingStorage}!harvestTech@{harvestTech}}
+\subsubsection[{prepUnloadingStorage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::prepUnloadingStorage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a41a9494ba016f84157185069c96ae472}
+\hypertarget{classharvest_tech_a80df64e4f1a1a350d9417442f5a1fde2}{
+\index{harvestTech@{harvestTech}!reloading@{reloading}}
+\index{reloading@{reloading}!harvestTech@{harvestTech}}
+\subsubsection[{reloading}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::reloading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a80df64e4f1a1a350d9417442f5a1fde2}
+\hypertarget{classharvest_tech_a86f9582f0ac899f0ba02e43610cd8a14}{
+\index{harvestTech@{harvestTech}!reloadingCapacity@{reloadingCapacity}}
+\index{reloadingCapacity@{reloadingCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{reloadingCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::reloadingCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a86f9582f0ac899f0ba02e43610cd8a14}
+\hypertarget{classharvest_tech_a6738cd70c0169d7a3653c1e75868b461}{
+\index{harvestTech@{harvestTech}!roadSpeed@{roadSpeed}}
+\index{roadSpeed@{roadSpeed}!harvestTech@{harvestTech}}
+\subsubsection[{roadSpeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::roadSpeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a6738cd70c0169d7a3653c1e75868b461}
+\hypertarget{classharvest_tech_a17ee58d74bbafc0c067cd16a69769a08}{
+\index{harvestTech@{harvestTech}!stops@{stops}}
+\index{stops@{stops}!harvestTech@{harvestTech}}
+\subsubsection[{stops}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf harvestTech::stops}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a17ee58d74bbafc0c067cd16a69769a08}
+\hypertarget{classharvest_tech_a1b368e19b6f1bbd519b9c263168011f0}{
+\index{harvestTech@{harvestTech}!strawBalerCapacity@{strawBalerCapacity}}
+\index{strawBalerCapacity@{strawBalerCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{strawBalerCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::strawBalerCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a1b368e19b6f1bbd519b9c263168011f0}
+\hypertarget{classharvest_tech_a390dbcd08cb961378c244a52b550bd70}{
+\index{harvestTech@{harvestTech}!StrawProduct@{StrawProduct}}
+\index{StrawProduct@{StrawProduct}!harvestTech@{harvestTech}}
+\subsubsection[{StrawProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem}$\ast$ {\bf harvestTech::StrawProduct}\mbox{[}MaxPlants\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a390dbcd08cb961378c244a52b550bd70}
+\hypertarget{classharvest_tech_a63be74e621105c9148ca2f98edb29fb8}{
+\index{harvestTech@{harvestTech}!uncoverClamp@{uncoverClamp}}
+\index{uncoverClamp@{uncoverClamp}!harvestTech@{harvestTech}}
+\subsubsection[{uncoverClamp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::uncoverClamp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_a63be74e621105c9148ca2f98edb29fb8}
+\hypertarget{classharvest_tech_ad7098f90d7fbb9d02a12dad4714de781}{
+\index{harvestTech@{harvestTech}!unloadCapacity@{unloadCapacity}}
+\index{unloadCapacity@{unloadCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{unloadCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::unloadCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_ad7098f90d7fbb9d02a12dad4714de781}
+\hypertarget{classharvest_tech_ad73c0def5ee037378be9afcee7cfbf72}{
+\index{harvestTech@{harvestTech}!unloadRoothouseCapacity@{unloadRoothouseCapacity}}
+\index{unloadRoothouseCapacity@{unloadRoothouseCapacity}!harvestTech@{harvestTech}}
+\subsubsection[{unloadRoothouseCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf harvestTech::unloadRoothouseCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classharvest_tech_ad73c0def5ee037378be9afcee7cfbf72}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{harvest_tech_8h}{harvestTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{harvest_tech_8cpp}{harvestTech.cpp}\end{DoxyCompactItemize}

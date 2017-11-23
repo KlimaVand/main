@@ -1,0 +1,168 @@
+\hypertarget{classbuilding}{
+\section{building Class Reference}
+\label{classbuilding}\index{building@{building}}
+}
+
+
+Superclass for all \hyperlink{classbuildings}{buildings}.  
+
+
+{\ttfamily \#include $<$building.h$>$}Inheritance diagram for building::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.22222cm]{classbuilding}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbuilding_ad342a61b9663079befc52c7100929d96}{building} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classbuilding_aa73aea14fd1e7e2952f760fe84f098c3}{building} (const char $\ast$aName, const int Aindex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. \item\end{DoxyCompactList}\item 
+\hyperlink{classbuilding_aef43740bc60aed8365e98539fcc3007d}{building} (const \hyperlink{classbuilding}{building} \&aBuilding)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classbuilding_a95a0fbd3ebfdd2077e7d8588bf7931ee}{$\sim$building} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em initialize from file \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbuilding_a584ba300427d2a648f478b68065b7a18}{DailyUpdate} ()
+\begin{DoxyCompactList}\small\item\em Daily actions should be called every day by manager. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbuilding_af1f27cbf72295547af61edc9e02a7e61}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em probably obsolete \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbuilding_a5c0a02ae89842962b07ca544b4c43cd4}{SetArea} (int aArea)
+\begin{DoxyCompactList}\small\item\em Set area. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classbuilding_a930bf40915b04b091ce5fa00cf15c58e}{GetArea} ()
+\begin{DoxyCompactList}\small\item\em Return area. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classbuilding_aa68e50d312e05ff1e342393d21c9f3cb}{Area}
+\begin{DoxyCompactList}\small\item\em Usable groundarea in sqr(m), usable for whatever. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classbuilding_a47f4f2ec998d1300d4ccd788b0a668ca}{operator$<$$<$} (ostream \&os, \hyperlink{classbuilding}{building} $\ast$b)
+\begin{DoxyCompactList}\small\item\em output streaming \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Superclass for all \hyperlink{classbuildings}{buildings}. Superclass for all \hyperlink{classbuildings}{buildings}. It should not be instanced. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbuilding_ad342a61b9663079befc52c7100929d96}{
+\index{building@{building}!building@{building}}
+\index{building@{building}!building@{building}}
+\subsubsection[{building}]{\setlength{\rightskip}{0pt plus 5cm}building::building ()}}
+\label{classbuilding_ad342a61b9663079befc52c7100929d96}
+
+
+Default Constructor. \hypertarget{classbuilding_aa73aea14fd1e7e2952f760fe84f098c3}{
+\index{building@{building}!building@{building}}
+\index{building@{building}!building@{building}}
+\subsubsection[{building}]{\setlength{\rightskip}{0pt plus 5cm}building::building (const char $\ast$ {\em aName}, \/  const int {\em Aindex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classbuilding_aa73aea14fd1e7e2952f760fe84f098c3}
+
+
+Constructor with arguments. \hypertarget{classbuilding_aef43740bc60aed8365e98539fcc3007d}{
+\index{building@{building}!building@{building}}
+\index{building@{building}!building@{building}}
+\subsubsection[{building}]{\setlength{\rightskip}{0pt plus 5cm}building::building (const {\bf building} \& {\em aBuilding})}}
+\label{classbuilding_aef43740bc60aed8365e98539fcc3007d}
+
+
+Copy constructor. \hypertarget{classbuilding_a95a0fbd3ebfdd2077e7d8588bf7931ee}{
+\index{building@{building}!$\sim$building@{$\sim$building}}
+\index{$\sim$building@{$\sim$building}!building@{building}}
+\subsubsection[{$\sim$building}]{\setlength{\rightskip}{0pt plus 5cm}building::$\sim$building ()}}
+\label{classbuilding_a95a0fbd3ebfdd2077e7d8588bf7931ee}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbuilding_af1f27cbf72295547af61edc9e02a7e61}{
+\index{building@{building}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!building@{building}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void building::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbuilding_af1f27cbf72295547af61edc9e02a7e61}
+
+
+probably obsolete CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented in \hyperlink{classbarn_storage_a5c4a88279dcfa290b08db30d075e1756}{barnStorage}, \hyperlink{classcattlehouse_a7806fd8778ff33751dcb81e06a01471e}{cattlehouse}, \hyperlink{classdungheap_af4b63f00620c98cefc7008b5bc6b2170}{dungheap}, \hyperlink{classhard_standing_class_a03f3703e524d927cbf930e47bebd846d}{hardStandingClass}, \hyperlink{classpigstable_a9e56606838c623a05cb2f6e0b721cc47}{pigstable}, \hyperlink{classpigstable_aff8c1aa84a8727d9a5c6d060bf6fe323}{pigstable}, \hyperlink{classslurrystore_a307b2de3fb81bd7adfa90335f6371816}{slurrystore}, and \hyperlink{classstable_acaf566bef659f0a671e27afa6244df4b}{stable}.\hypertarget{classbuilding_a584ba300427d2a648f478b68065b7a18}{
+\index{building@{building}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!building@{building}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void building::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbuilding_a584ba300427d2a648f478b68065b7a18}
+
+
+Daily actions should be called every day by manager. Does nothing 
+
+Reimplemented in \hyperlink{classbarn_storage_ac98e6005a3cb00a07d128931d2a6feb1}{barnStorage}, \hyperlink{classbiogas_reactor_ae8242ee2ab7dd6495125af9720b54aa4}{biogasReactor}, \hyperlink{classcattlehouse_a75cd328a6b1b07b2eb49be0048ac889d}{cattlehouse}, \hyperlink{classdigestate_store_a209611f25ea14ad07c9de42fa46eea05}{digestateStore}, \hyperlink{classdungheap_ab901a0eba5e5cb9164042bbfad350435}{dungheap}, \hyperlink{classhard_standing_class_ac182354be245579d4b8ec936add0c0be}{hardStandingClass}, \hyperlink{classpigstable_a971c427391124e56a4374ace16c461df}{pigstable}, \hyperlink{classpigstable_a0339646d96e17f62b6e745be279ec633}{pigstable}, \hyperlink{classslurrystore_a0e660eb43b403bef8aaefb8188a73d4f}{slurrystore}, and \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable}.\hypertarget{classbuilding_a930bf40915b04b091ce5fa00cf15c58e}{
+\index{building@{building}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!building@{building}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}virtual double building::GetArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classbuilding_a930bf40915b04b091ce5fa00cf15c58e}
+
+
+Return area. 
+
+Reimplemented in \hyperlink{classbarn_storage_a727f13788856da203570834247a7b475}{barnStorage}.\hypertarget{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{
+\index{building@{building}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!building@{building}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void building::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classbarn_storage_add4a5961a82e36e01d6905e01ac274de}{barnStorage}, \hyperlink{classbiogas_reactor_ab2482d657ec9095da5aef508d0841e0e}{biogasReactor}, \hyperlink{classcattlehouse_ab71be5e3ab86351671ae24119ec62bd4}{cattlehouse}, \hyperlink{classdigestate_store_ae1402687e7bf67b150bf01e97c4798b9}{digestateStore}, \hyperlink{classdungheap_ac8c6b260da69dabe3a0019f9a5d8d499}{dungheap}, \hyperlink{classhard_standing_class_a2a5c5d0905de0042918e0829e24145a3}{hardStandingClass}, \hyperlink{classpigstable_a55806be52263692f12d10870d9ee86eb}{pigstable}, \hyperlink{classpigstable_a809943d3ff6f8314d92bfc1b29dec8af}{pigstable}, \hyperlink{classslurrystore_a982183d9d72019736bfdb792c4cb5d78}{slurrystore}, and \hyperlink{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{stable}.\hypertarget{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{
+\index{building@{building}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!building@{building}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void building::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}
+
+
+initialize from file Reads data from file 
+
+Reimplemented in \hyperlink{classbarn_storage_a04a2ab71aceafb10d6f4a51ed59960e5}{barnStorage}, \hyperlink{classbiogas_reactor_aafc4e774b0d67a08d3f55c566e5a58b7}{biogasReactor}, \hyperlink{classcattlehouse_a113f5bf0d97865c9872c0c4efd073861}{cattlehouse}, \hyperlink{classdigestate_store_a93cdf55c94956f5e817ad386ea0c2a4b}{digestateStore}, \hyperlink{classdungheap_a369749ce14a7061f1c1f4e0c6973d68f}{dungheap}, \hyperlink{classhard_standing_class_a87b03d8140b5d5913fc8e79cc8229410}{hardStandingClass}, \hyperlink{classpigstable_a97e3706555a93da782e5418df532078c}{pigstable}, \hyperlink{classpigstable_aa31308b795d7a454e5156e8c2f49fe47}{pigstable}, \hyperlink{classslurrystore_a20975780b58214d7a091cbc2573c910c}{slurrystore}, and \hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{stable}.\hypertarget{classbuilding_a5c0a02ae89842962b07ca544b4c43cd4}{
+\index{building@{building}!SetArea@{SetArea}}
+\index{SetArea@{SetArea}!building@{building}}
+\subsubsection[{SetArea}]{\setlength{\rightskip}{0pt plus 5cm}virtual void building::SetArea (int {\em aArea})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classbuilding_a5c0a02ae89842962b07ca544b4c43cd4}
+
+
+Set area. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbuilding_a47f4f2ec998d1300d4ccd788b0a668ca}{
+\index{building@{building}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!building@{building}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf building} $\ast$ {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbuilding_a47f4f2ec998d1300d4ccd788b0a668ca}
+
+
+output streaming 
+
+Reimplemented in \hyperlink{classstable_a3372b8131ba5e161ddda6baf3b22d81d}{stable}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classbuilding_aa68e50d312e05ff1e342393d21c9f3cb}{
+\index{building@{building}!Area@{Area}}
+\index{Area@{Area}!building@{building}}
+\subsubsection[{Area}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf building::Area}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbuilding_aa68e50d312e05ff1e342393d21c9f3cb}
+
+
+Usable groundarea in sqr(m), usable for whatever. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{building_8h}{building.h}\item 
+C:/main/trunk/src/building/\hyperlink{building_8cpp}{building.cpp}\end{DoxyCompactItemize}

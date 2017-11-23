@@ -1,0 +1,240 @@
+\hypertarget{classharvest_fields}{
+\section{harvestFields Class Reference}
+\label{classharvest_fields}\index{harvestFields@{harvestFields}}
+}
+
+
+{\ttfamily \#include $<$harvestFields.h$>$}Inheritance diagram for harvestFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classharvest_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classharvest_fields_a8b8fcdfd3c788f786028f5e0debd18cd}{harvestFields} ()
+\item 
+\hyperlink{classharvest_fields_a96f508aeaf0387012d820861a2c8add7}{harvestFields} (const \hyperlink{classharvest_fields}{harvestFields} \&h)
+\item 
+virtual \hyperlink{classharvest_fields_a55a3857a71addd3d362c0c9f85e6a920}{$\sim$harvestFields} ()
+\item 
+virtual \hyperlink{classharvest_fields}{harvestFields} $\ast$ \hyperlink{classharvest_fields_aa252f8782663a14d3ccefff889279b36}{clone} () const 
+\item 
+virtual void \hyperlink{classharvest_fields_abe2ee717c2495800b8ad75d9d7382b7b}{SetOperationId} (int harvestCode)
+\item 
+virtual void \hyperlink{classharvest_fields_abd4843e05dba100f27d5c1b4a4e0a004}{SetFractionGrainHarvested} (double propGrainHarvested)
+\item 
+virtual void \hyperlink{classharvest_fields_a0d164d1fd85c0c4545fa90d92f5c00ea}{SetFractionStrawHarvested} (double propStrawHarvested)
+\item 
+virtual void \hyperlink{classharvest_fields_aed7f89142c895481212938562ce61f3a}{DefineHarvestFieldsOper} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, string \hyperlink{classcrop}{crop}, string cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, double reduc, bool forced, double StrWaste=0.0, double GrainWaste=0.0)
+\item 
+virtual bool \hyperlink{classharvest_fields_a3928ef45dc41fa069fcde4ff23f69d54}{HarvestAndForced} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classharvest_fields_a20e16c680ffd74dbf3a06c3dfe94a85f}{GetMainProduct} (int i=0)
+\item 
+virtual \hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classharvest_fields_ac4aae2b6cd458df8e64f859776e672ff}{GetStrawProduct} (int i=0)
+\item 
+virtual \hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classharvest_fields_a8eea5e22cb934b9582c5bd168135390b}{GetForageProduct} (int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_abf0a1c96f2c3fd07843970bc1c4ae157}{SetMainProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aPlantItem, int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_a815c019544bfb711da8dd32cc3be9974}{AddMainProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aPlantItem, int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_ae88064e2d377dc620294bf23ef43efa4}{SetStrawProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aPlantItem, int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_a3928ce56a1f4783c76be19dca31a59ab}{AddStrawProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aPlantItem, int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_a92f27195932617ba70c3c7043bf9898d}{SetForageProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aPlantItem, int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_a89f89e2f7d4efeb1905320514cd747b0}{AddForageProduct} (\hyperlink{classplant_item}{plantItem} $\ast$aPlantItem, int i=0)
+\item 
+virtual void \hyperlink{classharvest_fields_a866acc00456f874d384414c557818194}{SetCuttingHeight} (double height)
+\item 
+virtual double \hyperlink{classharvest_fields_a2f6612b8edd1ad8a89f5df4890b990c7}{GetCuttingHeight} ()
+\item 
+virtual double \hyperlink{classharvest_fields_ab9cb28e116628fc463de8eb6c39baf0a}{GetFractionStrawHarvested} ()
+\item 
+virtual double \hyperlink{classharvest_fields_adc76919fe377000c2c48276227cfd6ca}{GetFractionGrainHarvested} ()
+\item 
+virtual bool \hyperlink{classharvest_fields_a9fcfd4121d8290708c8db3da63a56d78}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classharvest_fields_a283ca8cf777ec3a4fab5122cc827492f}{ClearProducts} ()
+\item 
+virtual bool \hyperlink{classharvest_fields_ab50f128112be82518c06028ecb470cb7}{IsHarvestOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classharvest_fields_a0aea28a5f5ab32df57a2204cce6cd04b}{operator$<$$<$} (ostream \&os, const \hyperlink{classharvest_fields}{harvestFields} \&aFieldOp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describe the outcome of a harvest 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classharvest_fields_a8b8fcdfd3c788f786028f5e0debd18cd}{
+\index{harvestFields@{harvestFields}!harvestFields@{harvestFields}}
+\index{harvestFields@{harvestFields}!harvestFields@{harvestFields}}
+\subsubsection[{harvestFields}]{\setlength{\rightskip}{0pt plus 5cm}harvestFields::harvestFields ()}}
+\label{classharvest_fields_a8b8fcdfd3c788f786028f5e0debd18cd}
+\hypertarget{classharvest_fields_a96f508aeaf0387012d820861a2c8add7}{
+\index{harvestFields@{harvestFields}!harvestFields@{harvestFields}}
+\index{harvestFields@{harvestFields}!harvestFields@{harvestFields}}
+\subsubsection[{harvestFields}]{\setlength{\rightskip}{0pt plus 5cm}harvestFields::harvestFields (const {\bf harvestFields} \& {\em h})}}
+\label{classharvest_fields_a96f508aeaf0387012d820861a2c8add7}
+\hypertarget{classharvest_fields_a55a3857a71addd3d362c0c9f85e6a920}{
+\index{harvestFields@{harvestFields}!$\sim$harvestFields@{$\sim$harvestFields}}
+\index{$\sim$harvestFields@{$\sim$harvestFields}!harvestFields@{harvestFields}}
+\subsubsection[{$\sim$harvestFields}]{\setlength{\rightskip}{0pt plus 5cm}harvestFields::$\sim$harvestFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a55a3857a71addd3d362c0c9f85e6a920}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classharvest_fields_a89f89e2f7d4efeb1905320514cd747b0}{
+\index{harvestFields@{harvestFields}!AddForageProduct@{AddForageProduct}}
+\index{AddForageProduct@{AddForageProduct}!harvestFields@{harvestFields}}
+\subsubsection[{AddForageProduct}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::AddForageProduct ({\bf plantItem} $\ast$ {\em aPlantItem}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a89f89e2f7d4efeb1905320514cd747b0}
+\hypertarget{classharvest_fields_a815c019544bfb711da8dd32cc3be9974}{
+\index{harvestFields@{harvestFields}!AddMainProduct@{AddMainProduct}}
+\index{AddMainProduct@{AddMainProduct}!harvestFields@{harvestFields}}
+\subsubsection[{AddMainProduct}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::AddMainProduct ({\bf plantItem} $\ast$ {\em aPlantItem}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a815c019544bfb711da8dd32cc3be9974}
+\hypertarget{classharvest_fields_a3928ce56a1f4783c76be19dca31a59ab}{
+\index{harvestFields@{harvestFields}!AddStrawProduct@{AddStrawProduct}}
+\index{AddStrawProduct@{AddStrawProduct}!harvestFields@{harvestFields}}
+\subsubsection[{AddStrawProduct}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::AddStrawProduct ({\bf plantItem} $\ast$ {\em aPlantItem}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a3928ce56a1f4783c76be19dca31a59ab}
+\hypertarget{classharvest_fields_a9fcfd4121d8290708c8db3da63a56d78}{
+\index{harvestFields@{harvestFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!harvestFields@{harvestFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool harvestFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a9fcfd4121d8290708c8db3da63a56d78}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.
+
+Reimplemented in \hyperlink{classmake_grazable_ae09405366070332941b95c92b334c6c1}{makeGrazable}.\hypertarget{classharvest_fields_a283ca8cf777ec3a4fab5122cc827492f}{
+\index{harvestFields@{harvestFields}!ClearProducts@{ClearProducts}}
+\index{ClearProducts@{ClearProducts}!harvestFields@{harvestFields}}
+\subsubsection[{ClearProducts}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::ClearProducts ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a283ca8cf777ec3a4fab5122cc827492f}
+\hypertarget{classharvest_fields_aa252f8782663a14d3ccefff889279b36}{
+\index{harvestFields@{harvestFields}!clone@{clone}}
+\index{clone@{clone}!harvestFields@{harvestFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf harvestFields} $\ast$ harvestFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_aa252f8782663a14d3ccefff889279b36}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.
+
+Reimplemented in \hyperlink{classmake_grazable_a52ff627730636a7a71b975a203edbf5f}{makeGrazable}.\hypertarget{classharvest_fields_aed7f89142c895481212938562ce61f3a}{
+\index{harvestFields@{harvestFields}!DefineHarvestFieldsOper@{DefineHarvestFieldsOper}}
+\index{DefineHarvestFieldsOper@{DefineHarvestFieldsOper}!harvestFields@{harvestFields}}
+\subsubsection[{DefineHarvestFieldsOper}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::DefineHarvestFieldsOper ({\bf operationNames} {\em op}, \/  string {\em crop}, \/  string {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  double {\em reduc}, \/  bool {\em forced}, \/  double {\em StrWaste} = {\ttfamily 0.0}, \/  double {\em GrainWaste} = {\ttfamily 0.0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_aed7f89142c895481212938562ce61f3a}
+\hypertarget{classharvest_fields_a2f6612b8edd1ad8a89f5df4890b990c7}{
+\index{harvestFields@{harvestFields}!GetCuttingHeight@{GetCuttingHeight}}
+\index{GetCuttingHeight@{GetCuttingHeight}!harvestFields@{harvestFields}}
+\subsubsection[{GetCuttingHeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual double harvestFields::GetCuttingHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_a2f6612b8edd1ad8a89f5df4890b990c7}
+\hypertarget{classharvest_fields_a8eea5e22cb934b9582c5bd168135390b}{
+\index{harvestFields@{harvestFields}!GetForageProduct@{GetForageProduct}}
+\index{GetForageProduct@{GetForageProduct}!harvestFields@{harvestFields}}
+\subsubsection[{GetForageProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf plantItem}$\ast$ harvestFields::GetForageProduct (int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_a8eea5e22cb934b9582c5bd168135390b}
+\hypertarget{classharvest_fields_adc76919fe377000c2c48276227cfd6ca}{
+\index{harvestFields@{harvestFields}!GetFractionGrainHarvested@{GetFractionGrainHarvested}}
+\index{GetFractionGrainHarvested@{GetFractionGrainHarvested}!harvestFields@{harvestFields}}
+\subsubsection[{GetFractionGrainHarvested}]{\setlength{\rightskip}{0pt plus 5cm}virtual double harvestFields::GetFractionGrainHarvested ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_adc76919fe377000c2c48276227cfd6ca}
+\hypertarget{classharvest_fields_ab9cb28e116628fc463de8eb6c39baf0a}{
+\index{harvestFields@{harvestFields}!GetFractionStrawHarvested@{GetFractionStrawHarvested}}
+\index{GetFractionStrawHarvested@{GetFractionStrawHarvested}!harvestFields@{harvestFields}}
+\subsubsection[{GetFractionStrawHarvested}]{\setlength{\rightskip}{0pt plus 5cm}virtual double harvestFields::GetFractionStrawHarvested ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_ab9cb28e116628fc463de8eb6c39baf0a}
+\hypertarget{classharvest_fields_a20e16c680ffd74dbf3a06c3dfe94a85f}{
+\index{harvestFields@{harvestFields}!GetMainProduct@{GetMainProduct}}
+\index{GetMainProduct@{GetMainProduct}!harvestFields@{harvestFields}}
+\subsubsection[{GetMainProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf plantItem}$\ast$ harvestFields::GetMainProduct (int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_a20e16c680ffd74dbf3a06c3dfe94a85f}
+\hypertarget{classharvest_fields_ac4aae2b6cd458df8e64f859776e672ff}{
+\index{harvestFields@{harvestFields}!GetStrawProduct@{GetStrawProduct}}
+\index{GetStrawProduct@{GetStrawProduct}!harvestFields@{harvestFields}}
+\subsubsection[{GetStrawProduct}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf plantItem}$\ast$ harvestFields::GetStrawProduct (int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_ac4aae2b6cd458df8e64f859776e672ff}
+\hypertarget{classharvest_fields_a3928ef45dc41fa069fcde4ff23f69d54}{
+\index{harvestFields@{harvestFields}!HarvestAndForced@{HarvestAndForced}}
+\index{HarvestAndForced@{HarvestAndForced}!harvestFields@{harvestFields}}
+\subsubsection[{HarvestAndForced}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool harvestFields::HarvestAndForced ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_a3928ef45dc41fa069fcde4ff23f69d54}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aad34a4f52c734a152ad3768fca005b6e}{fieldOperationFields}.\hypertarget{classharvest_fields_ab50f128112be82518c06028ecb470cb7}{
+\index{harvestFields@{harvestFields}!IsHarvestOp@{IsHarvestOp}}
+\index{IsHarvestOp@{IsHarvestOp}!harvestFields@{harvestFields}}
+\subsubsection[{IsHarvestOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool harvestFields::IsHarvestOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_ab50f128112be82518c06028ecb470cb7}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_ad9bda8d7d67001b38bc34e82fa344fca}{fieldOperationFields}.
+
+Reimplemented in \hyperlink{classmake_grazable_a0c637b243ff0bc8232d121553f417573}{makeGrazable}.\hypertarget{classharvest_fields_a866acc00456f874d384414c557818194}{
+\index{harvestFields@{harvestFields}!SetCuttingHeight@{SetCuttingHeight}}
+\index{SetCuttingHeight@{SetCuttingHeight}!harvestFields@{harvestFields}}
+\subsubsection[{SetCuttingHeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestFields::SetCuttingHeight (double {\em height})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_a866acc00456f874d384414c557818194}
+\hypertarget{classharvest_fields_a92f27195932617ba70c3c7043bf9898d}{
+\index{harvestFields@{harvestFields}!SetForageProduct@{SetForageProduct}}
+\index{SetForageProduct@{SetForageProduct}!harvestFields@{harvestFields}}
+\subsubsection[{SetForageProduct}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::SetForageProduct ({\bf plantItem} $\ast$ {\em aPlantItem}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_a92f27195932617ba70c3c7043bf9898d}
+\hypertarget{classharvest_fields_abd4843e05dba100f27d5c1b4a4e0a004}{
+\index{harvestFields@{harvestFields}!SetFractionGrainHarvested@{SetFractionGrainHarvested}}
+\index{SetFractionGrainHarvested@{SetFractionGrainHarvested}!harvestFields@{harvestFields}}
+\subsubsection[{SetFractionGrainHarvested}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestFields::SetFractionGrainHarvested (double {\em propGrainHarvested})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_abd4843e05dba100f27d5c1b4a4e0a004}
+\hypertarget{classharvest_fields_a0d164d1fd85c0c4545fa90d92f5c00ea}{
+\index{harvestFields@{harvestFields}!SetFractionStrawHarvested@{SetFractionStrawHarvested}}
+\index{SetFractionStrawHarvested@{SetFractionStrawHarvested}!harvestFields@{harvestFields}}
+\subsubsection[{SetFractionStrawHarvested}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestFields::SetFractionStrawHarvested (double {\em propStrawHarvested})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_a0d164d1fd85c0c4545fa90d92f5c00ea}
+\hypertarget{classharvest_fields_abf0a1c96f2c3fd07843970bc1c4ae157}{
+\index{harvestFields@{harvestFields}!SetMainProduct@{SetMainProduct}}
+\index{SetMainProduct@{SetMainProduct}!harvestFields@{harvestFields}}
+\subsubsection[{SetMainProduct}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::SetMainProduct ({\bf plantItem} $\ast$ {\em aPlantItem}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_abf0a1c96f2c3fd07843970bc1c4ae157}
+\hypertarget{classharvest_fields_abe2ee717c2495800b8ad75d9d7382b7b}{
+\index{harvestFields@{harvestFields}!SetOperationId@{SetOperationId}}
+\index{SetOperationId@{SetOperationId}!harvestFields@{harvestFields}}
+\subsubsection[{SetOperationId}]{\setlength{\rightskip}{0pt plus 5cm}virtual void harvestFields::SetOperationId (int {\em harvestCode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classharvest_fields_abe2ee717c2495800b8ad75d9d7382b7b}
+\hypertarget{classharvest_fields_ae88064e2d377dc620294bf23ef43efa4}{
+\index{harvestFields@{harvestFields}!SetStrawProduct@{SetStrawProduct}}
+\index{SetStrawProduct@{SetStrawProduct}!harvestFields@{harvestFields}}
+\subsubsection[{SetStrawProduct}]{\setlength{\rightskip}{0pt plus 5cm}void harvestFields::SetStrawProduct ({\bf plantItem} $\ast$ {\em aPlantItem}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classharvest_fields_ae88064e2d377dc620294bf23ef43efa4}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classharvest_fields_a0aea28a5f5ab32df57a2204cce6cd04b}{
+\index{harvestFields@{harvestFields}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!harvestFields@{harvestFields}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf harvestFields} \& {\em aFieldOp})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classharvest_fields_a0aea28a5f5ab32df57a2204cce6cd04b}
+
+
+Reimplemented from \hyperlink{classfield_operation_fields_a24dfd201a1faafc49dab9678977b12e3}{fieldOperationFields}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{harvest_fields_8h}{harvestFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{harvest_fields_8cpp}{harvestFields.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{classcrop_dyers_woad}{
+\section{cropDyersWoad Class Reference}
+\label{classcrop_dyers_woad}\index{cropDyersWoad@{cropDyersWoad}}
+}
+
+
+{\ttfamily \#include $<$cropDyerswoad.h$>$}Inheritance diagram for cropDyersWoad::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_dyers_woad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_dyers_woad_af31dc1b18214f6808a295a081dce0850}{cropDyersWoad} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual double \hyperlink{classcrop_dyers_woad_ac99e68efb5b08aa2e0208b5e925929a8}{Update} (double ActivePar)
+\item 
+virtual void \hyperlink{classcrop_dyers_woad_a88209c73370f84f4e7f46ab28e6a2097}{Cut} (\hyperlink{classplant_item}{plantItem} $\ast$cutPlantMaterial, double CutHeight)
+\begin{DoxyCompactList}\small\item\em harvest vegetation above a certain height. Is used for forage crops. Not currently used \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_dyers_woad_af31dc1b18214f6808a295a081dce0850}{
+\index{cropDyersWoad@{cropDyersWoad}!cropDyersWoad@{cropDyersWoad}}
+\index{cropDyersWoad@{cropDyersWoad}!cropDyersWoad@{cropDyersWoad}}
+\subsubsection[{cropDyersWoad}]{\setlength{\rightskip}{0pt plus 5cm}cropDyersWoad::cropDyersWoad (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_dyers_woad_af31dc1b18214f6808a295a081dce0850}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_dyers_woad_a88209c73370f84f4e7f46ab28e6a2097}{
+\index{cropDyersWoad@{cropDyersWoad}!Cut@{Cut}}
+\index{Cut@{Cut}!cropDyersWoad@{cropDyersWoad}}
+\subsubsection[{Cut}]{\setlength{\rightskip}{0pt plus 5cm}void cropDyersWoad::Cut ({\bf plantItem} $\ast$ {\em cutPlantMaterial}, \/  double {\em CutHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_dyers_woad_a88209c73370f84f4e7f46ab28e6a2097}
+
+
+harvest vegetation above a certain height. Is used for forage crops. Not currently used 
+\begin{DoxyParams}{Parameters}
+\item[{\em cutPlantMaterial}]pointer to an object containing material harvested. Amount is in grams per metre squared. \item[{\em cut\_\-height}]cut height in centimetres\end{DoxyParams}
+This function should not be called 
+
+Reimplemented from \hyperlink{classcrop_a5b2a6a3522c64790e295055ff164dc10}{crop}.\hypertarget{classcrop_dyers_woad_ac99e68efb5b08aa2e0208b5e925929a8}{
+\index{cropDyersWoad@{cropDyersWoad}!Update@{Update}}
+\index{Update@{Update}!cropDyersWoad@{cropDyersWoad}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}double cropDyersWoad::Update (double {\em ActivePar})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_dyers_woad_ac99e68efb5b08aa2e0208b5e925929a8}
+Returns daily DM growth 
+
+Reimplemented from \hyperlink{classcrop_a9ed02462e332fffb65498075e7499bf4}{crop}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_dyerswoad_8h}{cropDyerswoad.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_dyerswoad_8cpp}{cropDyerswoad.cpp}\end{DoxyCompactItemize}

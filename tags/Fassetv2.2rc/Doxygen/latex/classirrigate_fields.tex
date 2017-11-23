@@ -1,0 +1,102 @@
+\hypertarget{classirrigate_fields}{
+\section{irrigateFields Class Reference}
+\label{classirrigate_fields}\index{irrigateFields@{irrigateFields}}
+}
+
+
+{\ttfamily \#include $<$irrigateFields.h$>$}Inheritance diagram for irrigateFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classirrigate_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classirrigate_fields_a5033ec5eccc0361ee9253addbdee93bb}{irrigateFields} ()
+\item 
+\hyperlink{classirrigate_fields_a73b818c0ab612132a1235cde4a0dd517}{irrigateFields} (const \hyperlink{classirrigate_fields}{irrigateFields} \&i)
+\item 
+virtual \hyperlink{classirrigate_fields_ac5ca7243c3b7db8724565012459482e7}{$\sim$irrigateFields} ()
+\item 
+virtual \hyperlink{classirrigate_fields}{irrigateFields} $\ast$ \hyperlink{classirrigate_fields_a162b39c6de0effa998c14fa4516da08b}{clone} () const 
+\item 
+virtual void \hyperlink{classirrigate_fields_ac25be5a54804ed89dd06f30b233240e1}{DefineIrrigateFieldsOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, \hyperlink{classwater}{water} $\ast$theWater, bool automatic)
+\item 
+virtual \hyperlink{classwater}{water} $\ast$ \hyperlink{classirrigate_fields_a01abb4e549487714b388c0923c390b3a}{GetWater} ()
+\item 
+virtual bool \hyperlink{classirrigate_fields_a5ec3ea58a4f844b81c394155e332829c}{IsIrrigationOp} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classirrigate_fields_a288149c6a4e9bc3d60cf8f3494aa274f}{AutomaticIrrigation} ()
+\begin{DoxyCompactList}\small\item\em returning false \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classirrigate_fields_a2180e7648439e025e85c304388260f14}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirrigate_fields_a5033ec5eccc0361ee9253addbdee93bb}{
+\index{irrigateFields@{irrigateFields}!irrigateFields@{irrigateFields}}
+\index{irrigateFields@{irrigateFields}!irrigateFields@{irrigateFields}}
+\subsubsection[{irrigateFields}]{\setlength{\rightskip}{0pt plus 5cm}irrigateFields::irrigateFields ()}}
+\label{classirrigate_fields_a5033ec5eccc0361ee9253addbdee93bb}
+\hypertarget{classirrigate_fields_a73b818c0ab612132a1235cde4a0dd517}{
+\index{irrigateFields@{irrigateFields}!irrigateFields@{irrigateFields}}
+\index{irrigateFields@{irrigateFields}!irrigateFields@{irrigateFields}}
+\subsubsection[{irrigateFields}]{\setlength{\rightskip}{0pt plus 5cm}irrigateFields::irrigateFields (const {\bf irrigateFields} \& {\em i})}}
+\label{classirrigate_fields_a73b818c0ab612132a1235cde4a0dd517}
+\hypertarget{classirrigate_fields_ac5ca7243c3b7db8724565012459482e7}{
+\index{irrigateFields@{irrigateFields}!$\sim$irrigateFields@{$\sim$irrigateFields}}
+\index{$\sim$irrigateFields@{$\sim$irrigateFields}!irrigateFields@{irrigateFields}}
+\subsubsection[{$\sim$irrigateFields}]{\setlength{\rightskip}{0pt plus 5cm}irrigateFields::$\sim$irrigateFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_fields_ac5ca7243c3b7db8724565012459482e7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classirrigate_fields_a288149c6a4e9bc3d60cf8f3494aa274f}{
+\index{irrigateFields@{irrigateFields}!AutomaticIrrigation@{AutomaticIrrigation}}
+\index{AutomaticIrrigation@{AutomaticIrrigation}!irrigateFields@{irrigateFields}}
+\subsubsection[{AutomaticIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool irrigateFields::AutomaticIrrigation ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirrigate_fields_a288149c6a4e9bc3d60cf8f3494aa274f}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_a46acdf3a83fd93634ecc8f97d44a2f81}{fieldOperationFields}.\hypertarget{classirrigate_fields_a2180e7648439e025e85c304388260f14}{
+\index{irrigateFields@{irrigateFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!irrigateFields@{irrigateFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool irrigateFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_fields_a2180e7648439e025e85c304388260f14}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it will return the cost in the cost variable ) 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classirrigate_fields_a162b39c6de0effa998c14fa4516da08b}{
+\index{irrigateFields@{irrigateFields}!clone@{clone}}
+\index{clone@{clone}!irrigateFields@{irrigateFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf irrigateFields} $\ast$ irrigateFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_fields_a162b39c6de0effa998c14fa4516da08b}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classirrigate_fields_ac25be5a54804ed89dd06f30b233240e1}{
+\index{irrigateFields@{irrigateFields}!DefineIrrigateFieldsOp@{DefineIrrigateFieldsOp}}
+\index{DefineIrrigateFieldsOp@{DefineIrrigateFieldsOp}!irrigateFields@{irrigateFields}}
+\subsubsection[{DefineIrrigateFieldsOp}]{\setlength{\rightskip}{0pt plus 5cm}void irrigateFields::DefineIrrigateFieldsOp ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  {\bf water} $\ast$ {\em theWater}, \/  bool {\em automatic})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classirrigate_fields_ac25be5a54804ed89dd06f30b233240e1}
+\hypertarget{classirrigate_fields_a01abb4e549487714b388c0923c390b3a}{
+\index{irrigateFields@{irrigateFields}!GetWater@{GetWater}}
+\index{GetWater@{GetWater}!irrigateFields@{irrigateFields}}
+\subsubsection[{GetWater}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf water}$\ast$ irrigateFields::GetWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirrigate_fields_a01abb4e549487714b388c0923c390b3a}
+\hypertarget{classirrigate_fields_a5ec3ea58a4f844b81c394155e332829c}{
+\index{irrigateFields@{irrigateFields}!IsIrrigationOp@{IsIrrigationOp}}
+\index{IsIrrigationOp@{IsIrrigationOp}!irrigateFields@{irrigateFields}}
+\subsubsection[{IsIrrigationOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool irrigateFields::IsIrrigationOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirrigate_fields_a5ec3ea58a4f844b81c394155e332829c}
+
+
+returning false 
+
+Reimplemented from \hyperlink{classfield_operation_fields_acc173f03d2190f694c9bef2fd1e5a314}{fieldOperationFields}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{irrigate_fields_8h}{irrigateFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{irrigate_fields_8cpp}{irrigateFields.cpp}\end{DoxyCompactItemize}

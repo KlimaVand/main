@@ -1,0 +1,184 @@
+\hypertarget{classsow_tech}{
+\section{sowTech Class Reference}
+\label{classsow_tech}\index{sowTech@{sowTech}}
+}
+
+
+{\ttfamily \#include $<$sowTech.h$>$}Inheritance diagram for sowTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classsow_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsow_tech_af2c05557103b1f521bf0eb9fa3c99184}{sowTech} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classsow_tech_a166961c766601040ddbc7c0c7512898c}{$\sim$sowTech} ()
+\item 
+virtual void \hyperlink{classsow_tech_aa606f377adfc0cf3fd80d96ba2576fcc}{ReadParameters} (fstream $\ast$f)
+\item 
+void \hyperlink{classsow_tech_a325472a41315e1397c1ca4926a5caf4f}{AddSeed} (\hyperlink{classseed}{seed} $\ast$s)
+\item 
+void \hyperlink{classsow_tech_ab449c30df32928c4d35b52dd60fbfb75}{ClearTheSeeds} ()
+\item 
+virtual void \hyperlink{classsow_tech_a044008a71f40c31f0bd3469476c70e97}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+virtual void \hyperlink{classsow_tech_a0cfbd371272aa15a18bca486a2926464}{UpdateProducts} (bool contractor=false)
+\item 
+virtual void \hyperlink{classsow_tech_a1f109785f7a75ea155724d5eaa4d29fb}{ResetSeeds} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classsow_tech_aec37925c5aa7d1ea82df758921c8fdc3}{CalcGangHours} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classsow_tech_a71b124af038adf72594946368e47d27b}{prepFillSowing}
+\item 
+double \hyperlink{classsow_tech_a2cc7e4ca798b84613d391afdd10b329f}{fillingTime1Sowing}
+\item 
+double \hyperlink{classsow_tech_a24d47bf031ea00d206f1dc8dd7aba118}{fillingTime2Sowing}
+\item 
+double \hyperlink{classsow_tech_a98b1760033ac01469be4a281608de249}{fillingAmount1}
+\item 
+double \hyperlink{classsow_tech_a7cc699ce5d5c80c6e52b49340058f181}{fillingAmount2}
+\item 
+double \hyperlink{classsow_tech_a20f695d310362d3df05a4dc9762b07cc}{roadSpeed}
+\item 
+double \hyperlink{classsow_tech_a07d006768f330cee12e40f2349f545b1}{changingTrailer}
+\item 
+double \hyperlink{classsow_tech_a44e19de889b77e8bb3dd3bdc6acba256}{loadingTime}
+\item 
+double \hyperlink{classsow_tech_a37a4ac51de9da38135ebbe406671eddd}{prepLoading}
+\item 
+int \hyperlink{classsow_tech_ae36e777f99870f8bc819f0239f858583}{numOfSeeds}
+\item 
+\hyperlink{classseed}{seed} $\ast$ \hyperlink{classsow_tech_a12a77b69512097cce7ae2f0b520c7281}{theSeeds} \mbox{[}MaxPlants\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsow_tech_af2c05557103b1f521bf0eb9fa3c99184}{
+\index{sowTech@{sowTech}!sowTech@{sowTech}}
+\index{sowTech@{sowTech}!sowTech@{sowTech}}
+\subsubsection[{sowTech}]{\setlength{\rightskip}{0pt plus 5cm}sowTech::sowTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classsow_tech_af2c05557103b1f521bf0eb9fa3c99184}
+\hypertarget{classsow_tech_a166961c766601040ddbc7c0c7512898c}{
+\index{sowTech@{sowTech}!$\sim$sowTech@{$\sim$sowTech}}
+\index{$\sim$sowTech@{$\sim$sowTech}!sowTech@{sowTech}}
+\subsubsection[{$\sim$sowTech}]{\setlength{\rightskip}{0pt plus 5cm}sowTech::$\sim$sowTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_tech_a166961c766601040ddbc7c0c7512898c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsow_tech_a325472a41315e1397c1ca4926a5caf4f}{
+\index{sowTech@{sowTech}!AddSeed@{AddSeed}}
+\index{AddSeed@{AddSeed}!sowTech@{sowTech}}
+\subsubsection[{AddSeed}]{\setlength{\rightskip}{0pt plus 5cm}void sowTech::AddSeed ({\bf seed} $\ast$ {\em s})}}
+\label{classsow_tech_a325472a41315e1397c1ca4926a5caf4f}
+\hypertarget{classsow_tech_a044008a71f40c31f0bd3469476c70e97}{
+\index{sowTech@{sowTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!sowTech@{sowTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void sowTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_tech_a044008a71f40c31f0bd3469476c70e97}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classsow_tech_aec37925c5aa7d1ea82df758921c8fdc3}{
+\index{sowTech@{sowTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!sowTech@{sowTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void sowTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classsow_tech_aec37925c5aa7d1ea82df758921c8fdc3}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classsow_tech_ab449c30df32928c4d35b52dd60fbfb75}{
+\index{sowTech@{sowTech}!ClearTheSeeds@{ClearTheSeeds}}
+\index{ClearTheSeeds@{ClearTheSeeds}!sowTech@{sowTech}}
+\subsubsection[{ClearTheSeeds}]{\setlength{\rightskip}{0pt plus 5cm}void sowTech::ClearTheSeeds ()}}
+\label{classsow_tech_ab449c30df32928c4d35b52dd60fbfb75}
+\hypertarget{classsow_tech_aa606f377adfc0cf3fd80d96ba2576fcc}{
+\index{sowTech@{sowTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!sowTech@{sowTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void sowTech::ReadParameters (fstream $\ast$ {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_tech_aa606f377adfc0cf3fd80d96ba2576fcc}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classsow_tech_a1f109785f7a75ea155724d5eaa4d29fb}{
+\index{sowTech@{sowTech}!ResetSeeds@{ResetSeeds}}
+\index{ResetSeeds@{ResetSeeds}!sowTech@{sowTech}}
+\subsubsection[{ResetSeeds}]{\setlength{\rightskip}{0pt plus 5cm}virtual void sowTech::ResetSeeds ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classsow_tech_a1f109785f7a75ea155724d5eaa4d29fb}
+\hypertarget{classsow_tech_a0cfbd371272aa15a18bca486a2926464}{
+\index{sowTech@{sowTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!sowTech@{sowTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void sowTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsow_tech_a0cfbd371272aa15a18bca486a2926464}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classsow_tech_a07d006768f330cee12e40f2349f545b1}{
+\index{sowTech@{sowTech}!changingTrailer@{changingTrailer}}
+\index{changingTrailer@{changingTrailer}!sowTech@{sowTech}}
+\subsubsection[{changingTrailer}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::changingTrailer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a07d006768f330cee12e40f2349f545b1}
+\hypertarget{classsow_tech_a98b1760033ac01469be4a281608de249}{
+\index{sowTech@{sowTech}!fillingAmount1@{fillingAmount1}}
+\index{fillingAmount1@{fillingAmount1}!sowTech@{sowTech}}
+\subsubsection[{fillingAmount1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::fillingAmount1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a98b1760033ac01469be4a281608de249}
+\hypertarget{classsow_tech_a7cc699ce5d5c80c6e52b49340058f181}{
+\index{sowTech@{sowTech}!fillingAmount2@{fillingAmount2}}
+\index{fillingAmount2@{fillingAmount2}!sowTech@{sowTech}}
+\subsubsection[{fillingAmount2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::fillingAmount2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a7cc699ce5d5c80c6e52b49340058f181}
+\hypertarget{classsow_tech_a2cc7e4ca798b84613d391afdd10b329f}{
+\index{sowTech@{sowTech}!fillingTime1Sowing@{fillingTime1Sowing}}
+\index{fillingTime1Sowing@{fillingTime1Sowing}!sowTech@{sowTech}}
+\subsubsection[{fillingTime1Sowing}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::fillingTime1Sowing}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a2cc7e4ca798b84613d391afdd10b329f}
+\hypertarget{classsow_tech_a24d47bf031ea00d206f1dc8dd7aba118}{
+\index{sowTech@{sowTech}!fillingTime2Sowing@{fillingTime2Sowing}}
+\index{fillingTime2Sowing@{fillingTime2Sowing}!sowTech@{sowTech}}
+\subsubsection[{fillingTime2Sowing}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::fillingTime2Sowing}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a24d47bf031ea00d206f1dc8dd7aba118}
+\hypertarget{classsow_tech_a44e19de889b77e8bb3dd3bdc6acba256}{
+\index{sowTech@{sowTech}!loadingTime@{loadingTime}}
+\index{loadingTime@{loadingTime}!sowTech@{sowTech}}
+\subsubsection[{loadingTime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::loadingTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a44e19de889b77e8bb3dd3bdc6acba256}
+\hypertarget{classsow_tech_ae36e777f99870f8bc819f0239f858583}{
+\index{sowTech@{sowTech}!numOfSeeds@{numOfSeeds}}
+\index{numOfSeeds@{numOfSeeds}!sowTech@{sowTech}}
+\subsubsection[{numOfSeeds}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sowTech::numOfSeeds}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_ae36e777f99870f8bc819f0239f858583}
+\hypertarget{classsow_tech_a71b124af038adf72594946368e47d27b}{
+\index{sowTech@{sowTech}!prepFillSowing@{prepFillSowing}}
+\index{prepFillSowing@{prepFillSowing}!sowTech@{sowTech}}
+\subsubsection[{prepFillSowing}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::prepFillSowing}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a71b124af038adf72594946368e47d27b}
+\hypertarget{classsow_tech_a37a4ac51de9da38135ebbe406671eddd}{
+\index{sowTech@{sowTech}!prepLoading@{prepLoading}}
+\index{prepLoading@{prepLoading}!sowTech@{sowTech}}
+\subsubsection[{prepLoading}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::prepLoading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a37a4ac51de9da38135ebbe406671eddd}
+\hypertarget{classsow_tech_a20f695d310362d3df05a4dc9762b07cc}{
+\index{sowTech@{sowTech}!roadSpeed@{roadSpeed}}
+\index{roadSpeed@{roadSpeed}!sowTech@{sowTech}}
+\subsubsection[{roadSpeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf sowTech::roadSpeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a20f695d310362d3df05a4dc9762b07cc}
+\hypertarget{classsow_tech_a12a77b69512097cce7ae2f0b520c7281}{
+\index{sowTech@{sowTech}!theSeeds@{theSeeds}}
+\index{theSeeds@{theSeeds}!sowTech@{sowTech}}
+\subsubsection[{theSeeds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf seed}$\ast$ {\bf sowTech::theSeeds}\mbox{[}MaxPlants\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsow_tech_a12a77b69512097cce7ae2f0b520c7281}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{sow_tech_8h}{sowTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{sow_tech_8cpp}{sowTech.cpp}\end{DoxyCompactItemize}

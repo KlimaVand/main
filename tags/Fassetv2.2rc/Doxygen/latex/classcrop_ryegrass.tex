@@ -1,0 +1,496 @@
+\hypertarget{classcrop_ryegrass}{
+\section{cropRyegrass Class Reference}
+\label{classcrop_ryegrass}\index{cropRyegrass@{cropRyegrass}}
+}
+
+
+{\ttfamily \#include $<$cropRyegrass.h$>$}Inheritance diagram for cropRyegrass::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcrop_ryegrass}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrop_ryegrass_a39d6d74db795bf6cf394ab5f055dbb2a}{cropRyegrass} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcrop_ryegrass_aeea36991d9749de3448b4c60d1338bd5}{cropRyegrass} (const \hyperlink{classcrop_ryegrass}{cropRyegrass} \&acrop)
+\item 
+virtual \hyperlink{classcrop_ryegrass_a807136660c42b9bc34009d182037893c}{$\sim$cropRyegrass} ()
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a3ee92e29d981a5bcae487e10f5aa18d4}{Add} (\hyperlink{classcrop}{crop} $\ast$aCrop, double fraction)
+\item 
+virtual \hyperlink{classcrop_ryegrass}{cropRyegrass} $\ast$ \hyperlink{classcrop_ryegrass_af7eb9cc81f755e89fc1486cc242b8b84}{clone} ()
+\item 
+virtual double \hyperlink{classcrop_ryegrass_a6785773151146d1e49ec5bb5c75636aa}{Update} (double ActivePar)
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a73b6ee5b772c6748d37be7d006a092c6}{UpdateHeight} ()
+\item 
+virtual bool \hyperlink{classcrop_ryegrass_a621ec6683bbbf9ff717db7c9a428e722}{ReadyForHarvest} ()
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a7b2e92086e8aa5ae0d41c5b7e7678181}{RootDecay} (double Translocation)
+\item 
+virtual double \hyperlink{classcrop_ryegrass_a8c82f3380064d4351d60aada56820cf4}{GiveEvapFactor} ()
+\item 
+virtual double \hyperlink{classcrop_ryegrass_aedd4ae77832a94a71902085022f1eb88}{GiveDryMatterVegTop} ()
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a0bcd3f5b23b82810d40e2bf089755447}{ReadParameters} (char $\ast$fileName)
+\item 
+virtual double \hyperlink{classcrop_ryegrass_af6202e05ea5e0c9b91acd3deea308a24}{GetBulkDensity} ()
+\item 
+virtual double \hyperlink{classcrop_ryegrass_ad5e9c54a99aa929e1ecab9c7146b6b09}{GiveCropHeight} ()
+\item 
+virtual \hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classcrop_ryegrass_a3907b56b9f463da7667d89f726543ef5}{GetAvailability} (double cutHeight, int animalType)
+\item 
+virtual double \hyperlink{classcrop_ryegrass_a4bf3812ba96c183f5ff8b671d8ee9d85}{GetAvailableStandingDM} (double cutHeight, bool useUptakeWeight=true)
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a64930de42e02d7aa99becc169c5a8b19}{SetGrazed} (double cutHeight, double DMGrazed)
+\item 
+virtual double \hyperlink{classcrop_ryegrass_ae0b4f4270bb1cc5d47751bb999816ad7}{GetgrazableDM} ()
+\item 
+virtual double \hyperlink{classcrop_ryegrass_a158a56a14a1b65c246b9dc87b736feb0}{GetgrazableN} ()
+\begin{DoxyCompactList}\small\item\em return 0 \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_ryegrass_a35e69a6dea6f87f1adb3060e456290ba}{Cut} (\hyperlink{classplant_item}{plantItem} $\ast$cutPlantMaterial, double cut\_\-height)
+\begin{DoxyCompactList}\small\item\em harvest vegetation above a certain height. Is used for forage crops. Not currently used \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_ryegrass_a1e6a5963c054701247f58d1d44972212}{GiveTotalDryMatter} ()
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a9a97cb45a3f91020ccf85f6fabcc532a}{Terminate} (\hyperlink{classdecomposable}{decomposable} $\ast$Straw, \hyperlink{classdecomposable}{decomposable} $\ast$DeadRoot, double $\ast$\&\hyperlink{classcrop_ad629acdfd462323490f91ad3ce9a7b59}{RootLengthList})
+\begin{DoxyCompactList}\small\item\em kills the \hyperlink{classcrop}{crop} \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_ryegrass_ad72a3a888551fd165455cf75bd59cbf1}{GrazeOrCut} (\hyperlink{classdecomposable}{decomposable} $\ast$Hay, double fractionLeft, bool graze)
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a33a0c70645ce03afc49541e8d3f4919b}{Harvest} (\hyperlink{classdecomposable}{decomposable} $\ast$Storage, \hyperlink{classdecomposable}{decomposable} $\ast$Straw)
+\begin{DoxyCompactList}\small\item\em harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_ryegrass_a02c5bec33e0f0a6240c34dde03a09e01}{GetGrazedDM} ()
+\begin{DoxyCompactList}\small\item\em return 0 \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classcrop_ryegrass_a8c524dccd76c81476124974e3e486a33}{ClearTemporaryVariables} ()
+\begin{DoxyCompactList}\small\item\em does nothing \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classcrop_ryegrass_aac89498ebd762c28e8bed76ec7c78db0}{Nmax} ()
+\item 
+virtual bool \hyperlink{classcrop_ryegrass_a5bb3f7b2ad5805e527bea21bbb71531c}{EndBudget} (double $\ast$NRemain, double $\ast$DMRemain)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{classcrop_ryegrass_a0e2ec4857ca4630c5a9df02e8cd72b72}{UpdateAgeClasses} (double deltaDryMatt)
+\item 
+virtual double \hyperlink{classcrop_ryegrass_a81ee410c4677a88854065d2cbcecf4fc}{TopRespiration} ()
+\item 
+virtual double \hyperlink{classcrop_ryegrass_aebf12683e5eb4d3a672808a2e3ab147c}{DeadDMTop} ()
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a573d23b1d622e156001cae5c45203bc0}{CalcLeafAreaIndices} ()
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a41ff7bdc52b0466a4598e104b4723572}{TransferDryMatterToStorage} (double $\ast$deltaDryMatt)
+\item 
+virtual void \hyperlink{classcrop_ryegrass_aa5b4bfccf6d06ebf0058b3348255e840}{RemoveDMFromOldestAgeClass} (double transferFromAgeClass)
+\item 
+virtual void \hyperlink{classcrop_ryegrass_a65e6d648842b070c8dfe343d548dee1c}{RipeSenescence} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcrop_ryegrass_ad0c31787525448d29e932a5d05476978}{MinDayLength}
+\item 
+double \hyperlink{classcrop_ryegrass_a9eae1ff94eb994ed040a740ce40b6e06}{MinN\_\-Straw}
+\item 
+double \hyperlink{classcrop_ryegrass_a851332fb794a51440e3930cb53f03802}{BulkDensity}
+\item 
+double \hyperlink{classcrop_ryegrass_a28d4c2eb58e04a840f3be6277a13e51b}{RespirationTop}
+\item 
+double \hyperlink{classcrop_ryegrass_aebf442425c9fe0662ad5f60a61792500}{RespirationRoot}
+\item 
+double \hyperlink{classcrop_ryegrass_ae11486448ac560cb05033e804aea5316}{TransferRate}
+\item 
+double \hyperlink{classcrop_ryegrass_a425c715cfd92033db6af5b091903af98}{RecycleFraction}
+\item 
+double \hyperlink{classcrop_ryegrass_a3f0d73c30fb6fe15198a3beca5a68a6e}{TemperatureSumAfterCut}
+\item 
+double \hyperlink{classcrop_ryegrass_a75af628b7d7bb576d4c9285391d292b2}{CutDelay}
+\item 
+bool \hyperlink{classcrop_ryegrass_affc800f21a3c26e2277a8e5679c27204}{HasBeenCut}
+\item 
+double \hyperlink{classcrop_ryegrass_a0b667252165fc134819df04548618d56}{liveOMD}
+\item 
+double \hyperlink{classcrop_ryegrass_aad215af4abecd60bf33e223aafec8e6c}{deadOMD}
+\item 
+double \hyperlink{classcrop_ryegrass_aebfc7e7f1e48269a0b41f08c27072b61}{grazableDM}
+\item 
+double \hyperlink{classcrop_ryegrass_a6fd909e402b37a89599cef6d026671c0}{grazableN}
+\item 
+double \hyperlink{classcrop_ryegrass_a60b9ccc77a862693545200a71d113608}{grazedDM} \mbox{[}4\mbox{]}
+\item 
+double \hyperlink{classcrop_ryegrass_a445c84d8258d5047e62dcd3d222cf8bd}{uptakeWeight} \mbox{[}4\mbox{]}
+\item 
+double \hyperlink{classcrop_ryegrass_ae9641d6c7c5459eb6053cb421df4e8d0}{AgeClassTop} \mbox{[}4\mbox{]}
+\item 
+double \hyperlink{classcrop_ryegrass_ad38b65aa16d9136baee37d9f6faff1a0}{RateOfRipeReSeed}
+\item 
+double \hyperlink{classcrop_ryegrass_ababb5c5bbefcf437f81ac636fbbf3805}{InitialLAIIncrease}
+\item 
+double \hyperlink{classcrop_ryegrass_a20afe6ee954c51fafe8d0c184c395c65}{ReSeedDM}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrop_ryegrass_a39d6d74db795bf6cf394ab5f055dbb2a}{
+\index{cropRyegrass@{cropRyegrass}!cropRyegrass@{cropRyegrass}}
+\index{cropRyegrass@{cropRyegrass}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{cropRyegrass}]{\setlength{\rightskip}{0pt plus 5cm}cropRyegrass::cropRyegrass (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcrop_ryegrass_a39d6d74db795bf6cf394ab5f055dbb2a}
+\hypertarget{classcrop_ryegrass_aeea36991d9749de3448b4c60d1338bd5}{
+\index{cropRyegrass@{cropRyegrass}!cropRyegrass@{cropRyegrass}}
+\index{cropRyegrass@{cropRyegrass}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{cropRyegrass}]{\setlength{\rightskip}{0pt plus 5cm}cropRyegrass::cropRyegrass (const {\bf cropRyegrass} \& {\em acrop})}}
+\label{classcrop_ryegrass_aeea36991d9749de3448b4c60d1338bd5}
+\hypertarget{classcrop_ryegrass_a807136660c42b9bc34009d182037893c}{
+\index{cropRyegrass@{cropRyegrass}!$\sim$cropRyegrass@{$\sim$cropRyegrass}}
+\index{$\sim$cropRyegrass@{$\sim$cropRyegrass}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{$\sim$cropRyegrass}]{\setlength{\rightskip}{0pt plus 5cm}virtual cropRyegrass::$\sim$cropRyegrass ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a807136660c42b9bc34009d182037893c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrop_ryegrass_a3ee92e29d981a5bcae487e10f5aa18d4}{
+\index{cropRyegrass@{cropRyegrass}!Add@{Add}}
+\index{Add@{Add}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::Add ({\bf crop} $\ast$ {\em aCrop}, \/  double {\em fraction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a3ee92e29d981a5bcae487e10f5aa18d4}
+
+
+Reimplemented in \hyperlink{classcrop_clover_ab0d1a2a7eb7738bac0cb6456a95cf90c}{cropClover}, and \hyperlink{classcrop_lucerne_afa12d3c07920dd3947636f3a7da8c4b4}{cropLucerne}.\hypertarget{classcrop_ryegrass_a573d23b1d622e156001cae5c45203bc0}{
+\index{cropRyegrass@{cropRyegrass}!CalcLeafAreaIndices@{CalcLeafAreaIndices}}
+\index{CalcLeafAreaIndices@{CalcLeafAreaIndices}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{CalcLeafAreaIndices}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::CalcLeafAreaIndices ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a573d23b1d622e156001cae5c45203bc0}
+
+
+Reimplemented from \hyperlink{classcrop_a14395e2b72c28aaf9dc729fcd0d3b1c8}{crop}.\hypertarget{classcrop_ryegrass_a8c524dccd76c81476124974e3e486a33}{
+\index{cropRyegrass@{cropRyegrass}!ClearTemporaryVariables@{ClearTemporaryVariables}}
+\index{ClearTemporaryVariables@{ClearTemporaryVariables}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{ClearTemporaryVariables}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::ClearTemporaryVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a8c524dccd76c81476124974e3e486a33}
+
+
+does nothing 
+
+Reimplemented from \hyperlink{classcrop_ac113e2ac847afe0da1d72cad7faf4c5f}{crop}.\hypertarget{classcrop_ryegrass_af7eb9cc81f755e89fc1486cc242b8b84}{
+\index{cropRyegrass@{cropRyegrass}!clone@{clone}}
+\index{clone@{clone}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cropRyegrass} $\ast$ cropRyegrass::clone ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_af7eb9cc81f755e89fc1486cc242b8b84}
+
+
+Reimplemented from \hyperlink{classcrop_a59eff636f3b438badd4b06811c1fc595}{crop}.
+
+Reimplemented in \hyperlink{classcrop_clover_afe134102e033bd1326eb955327b4d902}{cropClover}, and \hyperlink{classcrop_lucerne_a5060448bb250b985ad156fb25b368daa}{cropLucerne}.\hypertarget{classcrop_ryegrass_a35e69a6dea6f87f1adb3060e456290ba}{
+\index{cropRyegrass@{cropRyegrass}!Cut@{Cut}}
+\index{Cut@{Cut}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{Cut}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::Cut ({\bf plantItem} $\ast$ {\em cutPlantMaterial}, \/  double {\em CutHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a35e69a6dea6f87f1adb3060e456290ba}
+
+
+harvest vegetation above a certain height. Is used for forage crops. Not currently used 
+\begin{DoxyParams}{Parameters}
+\item[{\em cutPlantMaterial}]pointer to an object containing material harvested. Amount is in grams per metre squared. \item[{\em cut\_\-height}]cut height in centimetres\end{DoxyParams}
+This function should not be called 
+
+Reimplemented from \hyperlink{classcrop_a5b2a6a3522c64790e295055ff164dc10}{crop}.\hypertarget{classcrop_ryegrass_aebf12683e5eb4d3a672808a2e3ab147c}{
+\index{cropRyegrass@{cropRyegrass}!DeadDMTop@{DeadDMTop}}
+\index{DeadDMTop@{DeadDMTop}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{DeadDMTop}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::DeadDMTop ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_aebf12683e5eb4d3a672808a2e3ab147c}
+\hypertarget{classcrop_ryegrass_a5bb3f7b2ad5805e527bea21bbb71531c}{
+\index{cropRyegrass@{cropRyegrass}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}bool cropRyegrass::EndBudget (double $\ast$ {\em NRemain}, \/  double $\ast$ {\em DMRemain})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a5bb3f7b2ad5805e527bea21bbb71531c}
+see if 3 budges classes wholes the right values Nrmeain and DMRemain wholes the values of what is remaing 
+
+Reimplemented from \hyperlink{classcrop_aaacb9f08e608ce328d60a25813a49ca5}{crop}.\hypertarget{classcrop_ryegrass_a3907b56b9f463da7667d89f726543ef5}{
+\index{cropRyegrass@{cropRyegrass}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GetAvailability}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem} $\ast$ cropRyegrass::GetAvailability (double {\em cutHeight}, \/  int {\em animalType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a3907b56b9f463da7667d89f726543ef5}
+
+
+Reimplemented from \hyperlink{classcrop_a066047061cd93c3ae3e798d66dc002fb}{crop}.\hypertarget{classcrop_ryegrass_a4bf3812ba96c183f5ff8b671d8ee9d85}{
+\index{cropRyegrass@{cropRyegrass}!GetAvailableStandingDM@{GetAvailableStandingDM}}
+\index{GetAvailableStandingDM@{GetAvailableStandingDM}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GetAvailableStandingDM}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::GetAvailableStandingDM (double {\em cutHeight}, \/  bool {\em useUptakeWeight} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a4bf3812ba96c183f5ff8b671d8ee9d85}
+
+
+Reimplemented from \hyperlink{classcrop_ac48847f64021da9cd0c2dac80d6b7849}{crop}.\hypertarget{classcrop_ryegrass_af6202e05ea5e0c9b91acd3deea308a24}{
+\index{cropRyegrass@{cropRyegrass}!GetBulkDensity@{GetBulkDensity}}
+\index{GetBulkDensity@{GetBulkDensity}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GetBulkDensity}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cropRyegrass::GetBulkDensity ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_af6202e05ea5e0c9b91acd3deea308a24}
+
+
+Reimplemented from \hyperlink{classcrop_a9346991c7b35dd7767dec41314a26274}{crop}.\hypertarget{classcrop_ryegrass_ae0b4f4270bb1cc5d47751bb999816ad7}{
+\index{cropRyegrass@{cropRyegrass}!GetgrazableDM@{GetgrazableDM}}
+\index{GetgrazableDM@{GetgrazableDM}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GetgrazableDM}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cropRyegrass::GetgrazableDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_ae0b4f4270bb1cc5d47751bb999816ad7}
+
+
+Reimplemented from \hyperlink{classcrop_aed591b1785dede13c062ab0af439a902}{crop}.\hypertarget{classcrop_ryegrass_a158a56a14a1b65c246b9dc87b736feb0}{
+\index{cropRyegrass@{cropRyegrass}!GetgrazableN@{GetgrazableN}}
+\index{GetgrazableN@{GetgrazableN}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GetgrazableN}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cropRyegrass::GetgrazableN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a158a56a14a1b65c246b9dc87b736feb0}
+
+
+return 0 
+
+Reimplemented from \hyperlink{classcrop_a771d3a2885d168f4f06686cc7868cad8}{crop}.\hypertarget{classcrop_ryegrass_a02c5bec33e0f0a6240c34dde03a09e01}{
+\index{cropRyegrass@{cropRyegrass}!GetGrazedDM@{GetGrazedDM}}
+\index{GetGrazedDM@{GetGrazedDM}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GetGrazedDM}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::GetGrazedDM ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a02c5bec33e0f0a6240c34dde03a09e01}
+
+
+return 0 
+
+Reimplemented from \hyperlink{classcrop_a1aafdf75bbeabd5e961678d20b487976}{crop}.\hypertarget{classcrop_ryegrass_ad5e9c54a99aa929e1ecab9c7146b6b09}{
+\index{cropRyegrass@{cropRyegrass}!GiveCropHeight@{GiveCropHeight}}
+\index{GiveCropHeight@{GiveCropHeight}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GiveCropHeight}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::GiveCropHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_ad5e9c54a99aa929e1ecab9c7146b6b09}
+
+
+Reimplemented from \hyperlink{classcrop_a75948813cda562087a4ba9474a5906c6}{crop}.\hypertarget{classcrop_ryegrass_aedd4ae77832a94a71902085022f1eb88}{
+\index{cropRyegrass@{cropRyegrass}!GiveDryMatterVegTop@{GiveDryMatterVegTop}}
+\index{GiveDryMatterVegTop@{GiveDryMatterVegTop}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GiveDryMatterVegTop}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::GiveDryMatterVegTop ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_aedd4ae77832a94a71902085022f1eb88}
+
+
+Reimplemented from \hyperlink{classcrop_a8442897ed98c68b6821a17ce3adc38e8}{crop}.\hypertarget{classcrop_ryegrass_a8c82f3380064d4351d60aada56820cf4}{
+\index{cropRyegrass@{cropRyegrass}!GiveEvapFactor@{GiveEvapFactor}}
+\index{GiveEvapFactor@{GiveEvapFactor}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GiveEvapFactor}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::GiveEvapFactor ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a8c82f3380064d4351d60aada56820cf4}
+Calculate how much \hyperlink{classwater}{water} that evaporates 
+
+Reimplemented from \hyperlink{classcrop_aac8ad06adb13f585cfde7cd3f2661618}{crop}.\hypertarget{classcrop_ryegrass_a1e6a5963c054701247f58d1d44972212}{
+\index{cropRyegrass@{cropRyegrass}!GiveTotalDryMatter@{GiveTotalDryMatter}}
+\index{GiveTotalDryMatter@{GiveTotalDryMatter}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GiveTotalDryMatter}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::GiveTotalDryMatter ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a1e6a5963c054701247f58d1d44972212}
+\hypertarget{classcrop_ryegrass_ad72a3a888551fd165455cf75bd59cbf1}{
+\index{cropRyegrass@{cropRyegrass}!GrazeOrCut@{GrazeOrCut}}
+\index{GrazeOrCut@{GrazeOrCut}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{GrazeOrCut}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::GrazeOrCut ({\bf decomposable} $\ast$ {\em Hay}, \/  double {\em fractionLeft}, \/  bool {\em graze})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_ad72a3a888551fd165455cf75bd59cbf1}
+\hypertarget{classcrop_ryegrass_a33a0c70645ce03afc49541e8d3f4919b}{
+\index{cropRyegrass@{cropRyegrass}!Harvest@{Harvest}}
+\index{Harvest@{Harvest}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{Harvest}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::Harvest ({\bf decomposable} $\ast$ {\em Storage}, \/  {\bf decomposable} $\ast$ {\em Straw})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a33a0c70645ce03afc49541e8d3f4919b}
+
+
+harvests all aboveground dry \hyperlink{classmatter}{matter}. Is used for harvesting non-\/forage crops 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classstorage}{storage}}]pointer to an object containing the maincrop \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. grain) \item[{\em Straw}]pointer to an object containing the remaining \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. Straw)\end{DoxyParams}
+harvest the current \hyperlink{classcrop}{crop}. The drymatter and straw is stored in the input parameters. Nitroget is updated The plant is still alive 
+
+Reimplemented from \hyperlink{classcrop_a387dc393ee7cd05a40874739cff8579e}{crop}.
+
+Reimplemented in \hyperlink{classcrop_seed_grass_a3415f1b4d08da621709cbb07156137e0}{cropSeedGrass}.\hypertarget{classcrop_ryegrass_aac89498ebd762c28e8bed76ec7c78db0}{
+\index{cropRyegrass@{cropRyegrass}!Nmax@{Nmax}}
+\index{Nmax@{Nmax}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{Nmax}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::Nmax ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_aac89498ebd762c28e8bed76ec7c78db0}
+MEL 2007: New calculation of Nmax. Calculate the minimum amount Nitrogen that the \hyperlink{classcrop}{crop} needs 
+
+Reimplemented from \hyperlink{classcrop_a6416f0baf1364f2cf28f312584c39f73}{crop}.\hypertarget{classcrop_ryegrass_a0bcd3f5b23b82810d40e2bf089755447}{
+\index{cropRyegrass@{cropRyegrass}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::ReadParameters (char $\ast$ {\em fileName})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a0bcd3f5b23b82810d40e2bf089755447}
+
+
+Reimplemented in \hyperlink{classcrop_clover_a3a424244e4f17a802bbf8b52effdbd14}{cropClover}, and \hyperlink{classcrop_lucerne_a6eebd1599c5ae746d05fdae4c82c60fb}{cropLucerne}.\hypertarget{classcrop_ryegrass_a621ec6683bbbf9ff717db7c9a428e722}{
+\index{cropRyegrass@{cropRyegrass}!ReadyForHarvest@{ReadyForHarvest}}
+\index{ReadyForHarvest@{ReadyForHarvest}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{ReadyForHarvest}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cropRyegrass::ReadyForHarvest ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a621ec6683bbbf9ff717db7c9a428e722}
+
+
+Reimplemented from \hyperlink{classcrop_a8f2d5d0807fb0a81e50ea09e6df594ac}{crop}.\hypertarget{classcrop_ryegrass_aa5b4bfccf6d06ebf0058b3348255e840}{
+\index{cropRyegrass@{cropRyegrass}!RemoveDMFromOldestAgeClass@{RemoveDMFromOldestAgeClass}}
+\index{RemoveDMFromOldestAgeClass@{RemoveDMFromOldestAgeClass}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RemoveDMFromOldestAgeClass}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::RemoveDMFromOldestAgeClass (double {\em transferFromAgeClass})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_aa5b4bfccf6d06ebf0058b3348255e840}
+\hypertarget{classcrop_ryegrass_a65e6d648842b070c8dfe343d548dee1c}{
+\index{cropRyegrass@{cropRyegrass}!RipeSenescence@{RipeSenescence}}
+\index{RipeSenescence@{RipeSenescence}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RipeSenescence}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::RipeSenescence ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a65e6d648842b070c8dfe343d548dee1c}
+\hypertarget{classcrop_ryegrass_a7b2e92086e8aa5ae0d41c5b7e7678181}{
+\index{cropRyegrass@{cropRyegrass}!RootDecay@{RootDecay}}
+\index{RootDecay@{RootDecay}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RootDecay}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::RootDecay (double {\em RootTranslocation})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a7b2e92086e8aa5ae0d41c5b7e7678181}
+Rhizodeposition and root decay 
+
+Reimplemented from \hyperlink{classcrop_ae8be0fd1bc438d926ce68942cb0886a0}{crop}.\hypertarget{classcrop_ryegrass_a64930de42e02d7aa99becc169c5a8b19}{
+\index{cropRyegrass@{cropRyegrass}!SetGrazed@{SetGrazed}}
+\index{SetGrazed@{SetGrazed}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{SetGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::SetGrazed (double {\em cutHeight}, \/  double {\em DMGrazed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a64930de42e02d7aa99becc169c5a8b19}
+
+
+Reimplemented from \hyperlink{classcrop_a29e704e7767db2f9270128fefc1a74c7}{crop}.\hypertarget{classcrop_ryegrass_a9a97cb45a3f91020ccf85f6fabcc532a}{
+\index{cropRyegrass@{cropRyegrass}!Terminate@{Terminate}}
+\index{Terminate@{Terminate}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{Terminate}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::Terminate ({\bf decomposable} $\ast$ {\em Straw}, \/  {\bf decomposable} $\ast$ {\em DeadRoot}, \/  double $\ast$\& {\em RootLengthList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a9a97cb45a3f91020ccf85f6fabcc532a}
+
+
+kills the \hyperlink{classcrop}{crop} terminator \hyperlink{classcrop}{crop} and partitions the dry \hyperlink{classmatter}{matter} 
+\begin{DoxyParams}{Parameters}
+\item[{\em straw}]contains the aboveground dry \hyperlink{classmatter}{matter} \item[{\em DeadRoot}]the belowground dry \hyperlink{classmatter}{matter} \item[{\em RootLengthList}]not sure\end{DoxyParams}
+Kills the plant. The length of the root, the amount of root and amount of straw is returned 
+
+Reimplemented from \hyperlink{classcrop_a8b5cf5b385f82405af121592f7106fc2}{crop}.\hypertarget{classcrop_ryegrass_a81ee410c4677a88854065d2cbcecf4fc}{
+\index{cropRyegrass@{cropRyegrass}!TopRespiration@{TopRespiration}}
+\index{TopRespiration@{TopRespiration}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{TopRespiration}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::TopRespiration ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a81ee410c4677a88854065d2cbcecf4fc}
+\hypertarget{classcrop_ryegrass_a41ff7bdc52b0466a4598e104b4723572}{
+\index{cropRyegrass@{cropRyegrass}!TransferDryMatterToStorage@{TransferDryMatterToStorage}}
+\index{TransferDryMatterToStorage@{TransferDryMatterToStorage}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{TransferDryMatterToStorage}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::TransferDryMatterToStorage (double $\ast$ {\em dDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a41ff7bdc52b0466a4598e104b4723572}
+BPE and MEL 2007: New limitation to the transfer of DM to \hyperlink{classstorage}{storage} according to the concept of Justes et al. 1994. Annals of Botany 74:397-\/407. 
+
+Reimplemented from \hyperlink{classcrop_aa93103e69836afc4fb23c1a29b15584f}{crop}.\hypertarget{classcrop_ryegrass_a6785773151146d1e49ec5bb5c75636aa}{
+\index{cropRyegrass@{cropRyegrass}!Update@{Update}}
+\index{Update@{Update}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::Update (double {\em ActivePar})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a6785773151146d1e49ec5bb5c75636aa}
+Returns daily DM growth 
+
+Reimplemented from \hyperlink{classcrop_a9ed02462e332fffb65498075e7499bf4}{crop}.\hypertarget{classcrop_ryegrass_a0e2ec4857ca4630c5a9df02e8cd72b72}{
+\index{cropRyegrass@{cropRyegrass}!UpdateAgeClasses@{UpdateAgeClasses}}
+\index{UpdateAgeClasses@{UpdateAgeClasses}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{UpdateAgeClasses}]{\setlength{\rightskip}{0pt plus 5cm}double cropRyegrass::UpdateAgeClasses (double {\em deltaDryMatt})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a0e2ec4857ca4630c5a9df02e8cd72b72}
+\hypertarget{classcrop_ryegrass_a73b6ee5b772c6748d37be7d006a092c6}{
+\index{cropRyegrass@{cropRyegrass}!UpdateHeight@{UpdateHeight}}
+\index{UpdateHeight@{UpdateHeight}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{UpdateHeight}]{\setlength{\rightskip}{0pt plus 5cm}void cropRyegrass::UpdateHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcrop_ryegrass_a73b6ee5b772c6748d37be7d006a092c6}
+updates the height of the plant 
+
+Reimplemented from \hyperlink{classcrop_aeccf3077c6ad647769145b8064ba426b}{crop}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrop_ryegrass_ae9641d6c7c5459eb6053cb421df4e8d0}{
+\index{cropRyegrass@{cropRyegrass}!AgeClassTop@{AgeClassTop}}
+\index{AgeClassTop@{AgeClassTop}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{AgeClassTop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::AgeClassTop}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_ae9641d6c7c5459eb6053cb421df4e8d0}
+\hypertarget{classcrop_ryegrass_a851332fb794a51440e3930cb53f03802}{
+\index{cropRyegrass@{cropRyegrass}!BulkDensity@{BulkDensity}}
+\index{BulkDensity@{BulkDensity}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{BulkDensity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::BulkDensity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a851332fb794a51440e3930cb53f03802}
+\hypertarget{classcrop_ryegrass_a75af628b7d7bb576d4c9285391d292b2}{
+\index{cropRyegrass@{cropRyegrass}!CutDelay@{CutDelay}}
+\index{CutDelay@{CutDelay}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{CutDelay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::CutDelay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a75af628b7d7bb576d4c9285391d292b2}
+\hypertarget{classcrop_ryegrass_aad215af4abecd60bf33e223aafec8e6c}{
+\index{cropRyegrass@{cropRyegrass}!deadOMD@{deadOMD}}
+\index{deadOMD@{deadOMD}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{deadOMD}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::deadOMD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_aad215af4abecd60bf33e223aafec8e6c}
+\hypertarget{classcrop_ryegrass_aebfc7e7f1e48269a0b41f08c27072b61}{
+\index{cropRyegrass@{cropRyegrass}!grazableDM@{grazableDM}}
+\index{grazableDM@{grazableDM}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{grazableDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::grazableDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_aebfc7e7f1e48269a0b41f08c27072b61}
+\hypertarget{classcrop_ryegrass_a6fd909e402b37a89599cef6d026671c0}{
+\index{cropRyegrass@{cropRyegrass}!grazableN@{grazableN}}
+\index{grazableN@{grazableN}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{grazableN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::grazableN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a6fd909e402b37a89599cef6d026671c0}
+\hypertarget{classcrop_ryegrass_a60b9ccc77a862693545200a71d113608}{
+\index{cropRyegrass@{cropRyegrass}!grazedDM@{grazedDM}}
+\index{grazedDM@{grazedDM}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{grazedDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::grazedDM}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a60b9ccc77a862693545200a71d113608}
+\hypertarget{classcrop_ryegrass_affc800f21a3c26e2277a8e5679c27204}{
+\index{cropRyegrass@{cropRyegrass}!HasBeenCut@{HasBeenCut}}
+\index{HasBeenCut@{HasBeenCut}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{HasBeenCut}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cropRyegrass::HasBeenCut}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_affc800f21a3c26e2277a8e5679c27204}
+\hypertarget{classcrop_ryegrass_ababb5c5bbefcf437f81ac636fbbf3805}{
+\index{cropRyegrass@{cropRyegrass}!InitialLAIIncrease@{InitialLAIIncrease}}
+\index{InitialLAIIncrease@{InitialLAIIncrease}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{InitialLAIIncrease}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::InitialLAIIncrease}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_ababb5c5bbefcf437f81ac636fbbf3805}
+\hypertarget{classcrop_ryegrass_a0b667252165fc134819df04548618d56}{
+\index{cropRyegrass@{cropRyegrass}!liveOMD@{liveOMD}}
+\index{liveOMD@{liveOMD}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{liveOMD}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::liveOMD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a0b667252165fc134819df04548618d56}
+\hypertarget{classcrop_ryegrass_ad0c31787525448d29e932a5d05476978}{
+\index{cropRyegrass@{cropRyegrass}!MinDayLength@{MinDayLength}}
+\index{MinDayLength@{MinDayLength}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{MinDayLength}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::MinDayLength}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_ad0c31787525448d29e932a5d05476978}
+\hypertarget{classcrop_ryegrass_a9eae1ff94eb994ed040a740ce40b6e06}{
+\index{cropRyegrass@{cropRyegrass}!MinN\_\-Straw@{MinN\_\-Straw}}
+\index{MinN\_\-Straw@{MinN\_\-Straw}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{MinN\_\-Straw}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::MinN\_\-Straw}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a9eae1ff94eb994ed040a740ce40b6e06}
+\hypertarget{classcrop_ryegrass_ad38b65aa16d9136baee37d9f6faff1a0}{
+\index{cropRyegrass@{cropRyegrass}!RateOfRipeReSeed@{RateOfRipeReSeed}}
+\index{RateOfRipeReSeed@{RateOfRipeReSeed}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RateOfRipeReSeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::RateOfRipeReSeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_ad38b65aa16d9136baee37d9f6faff1a0}
+\hypertarget{classcrop_ryegrass_a425c715cfd92033db6af5b091903af98}{
+\index{cropRyegrass@{cropRyegrass}!RecycleFraction@{RecycleFraction}}
+\index{RecycleFraction@{RecycleFraction}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RecycleFraction}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::RecycleFraction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a425c715cfd92033db6af5b091903af98}
+\hypertarget{classcrop_ryegrass_a20afe6ee954c51fafe8d0c184c395c65}{
+\index{cropRyegrass@{cropRyegrass}!ReSeedDM@{ReSeedDM}}
+\index{ReSeedDM@{ReSeedDM}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{ReSeedDM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::ReSeedDM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a20afe6ee954c51fafe8d0c184c395c65}
+\hypertarget{classcrop_ryegrass_aebf442425c9fe0662ad5f60a61792500}{
+\index{cropRyegrass@{cropRyegrass}!RespirationRoot@{RespirationRoot}}
+\index{RespirationRoot@{RespirationRoot}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RespirationRoot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::RespirationRoot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_aebf442425c9fe0662ad5f60a61792500}
+\hypertarget{classcrop_ryegrass_a28d4c2eb58e04a840f3be6277a13e51b}{
+\index{cropRyegrass@{cropRyegrass}!RespirationTop@{RespirationTop}}
+\index{RespirationTop@{RespirationTop}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{RespirationTop}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::RespirationTop}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a28d4c2eb58e04a840f3be6277a13e51b}
+\hypertarget{classcrop_ryegrass_a3f0d73c30fb6fe15198a3beca5a68a6e}{
+\index{cropRyegrass@{cropRyegrass}!TemperatureSumAfterCut@{TemperatureSumAfterCut}}
+\index{TemperatureSumAfterCut@{TemperatureSumAfterCut}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{TemperatureSumAfterCut}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::TemperatureSumAfterCut}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a3f0d73c30fb6fe15198a3beca5a68a6e}
+\hypertarget{classcrop_ryegrass_ae11486448ac560cb05033e804aea5316}{
+\index{cropRyegrass@{cropRyegrass}!TransferRate@{TransferRate}}
+\index{TransferRate@{TransferRate}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{TransferRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::TransferRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_ae11486448ac560cb05033e804aea5316}
+\hypertarget{classcrop_ryegrass_a445c84d8258d5047e62dcd3d222cf8bd}{
+\index{cropRyegrass@{cropRyegrass}!uptakeWeight@{uptakeWeight}}
+\index{uptakeWeight@{uptakeWeight}!cropRyegrass@{cropRyegrass}}
+\subsubsection[{uptakeWeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cropRyegrass::uptakeWeight}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcrop_ryegrass_a445c84d8258d5047e62dcd3d222cf8bd}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_ryegrass_8h}{cropRyegrass.h}\item 
+C:/main/trunk/src/fields/crops/\hyperlink{crop_ryegrass_8cpp}{cropRyegrass.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,859 @@
+\hypertarget{classstable}{
+\section{stable Class Reference}
+\label{classstable}\index{stable@{stable}}
+}
+
+
+parent class for \hyperlink{classanimal}{animal} housing  
+
+
+{\ttfamily \#include $<$stable.h$>$}Inheritance diagram for stable::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classstable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstable_a46222d79fa0c2eca30a5dfba0029302c}{stable} (char $\ast$aname, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner, \hyperlink{classanimal_stock}{animalStock} $\ast$alivestock=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. \item\end{DoxyCompactList}\item 
+\hyperlink{classstable_adcfc503ae93e77c418caeda5828ded06}{stable} (const \hyperlink{classstable}{stable} \&aStable)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classstable_a56a41cc73948359a0a3ef1c77cef9c82}{$\sim$stable} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classstable_af11653ccffcdc3bfb928d47485fc39b4}{GetAnimalType} ()
+\begin{DoxyCompactList}\small\item\em get the type of \hyperlink{classanimal}{animal} housed (will be overloaded) \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a8d74bb1d63bc771084f2b94f1c1eed96}{SetLivestock} (\hyperlink{classanimal_stock}{animalStock} $\ast$aLivestock)
+\item 
+int \hyperlink{classstable_a478ddd9c5b91b0dcf03bbf08b2787b3a}{GetSlurrySystem} ()
+\begin{DoxyCompactList}\small\item\em Get functions. \item\end{DoxyCompactList}\item 
+string \hyperlink{classstable_a26fb43b0d40106a87ba9ae11425ac9c6}{GetAlias} ()
+\begin{DoxyCompactList}\small\item\em Returned the alias name of the Aum housing. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a2dc443b7a16b5f1ea82e8bd393724ee1}{GetventilationRate} ()
+\begin{DoxyCompactList}\small\item\em Return the ventilation rate of the \hyperlink{classanimal}{animal} housing (in cubic metres per second). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{DailyUpdate} ()
+\begin{DoxyCompactList}\small\item\em Handles all daily actions of the \hyperlink{classstable}{stable}; should be called by the manager. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Reads information from file. \item\end{DoxyCompactList}\item 
+\hyperlink{classanimal_section}{animalSection} $\ast$ \hyperlink{classstable_ad816f0c1199ebc697c10e8736e3faacc}{GetanimalSection} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Return a pointer to the named \hyperlink{classanimal}{animal} section. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a88a9be2c3fbd2c04e64339dfc9794661}{GetinsideTemperature} ()
+\begin{DoxyCompactList}\small\item\em Returns the temperature inside the \hyperlink{classbuilding}{building} in Celsius. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_aeba6a6b4fde4b262d38cedaec2f74348}{GetTotalN} ()
+\begin{DoxyCompactList}\small\item\em Return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classanimal}{animal} housing. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a9990239dddd0fd843bb0a7c25552292f}{GetTotalC} ()
+\begin{DoxyCompactList}\small\item\em Return the total amount of Carbon in the \hyperlink{classanimal}{animal} housing. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_acaf566bef659f0a671e27afa6244df4b}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em OBSOLETE. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_a7aa89cb458e69d9f3e4c17edbeff7b81}{CleanManure} ()
+\begin{DoxyCompactList}\small\item\em remove todays \hyperlink{classmanure}{manure} \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a5c7b73de0ce9ab464cd2fbc326200286}{GetManureAmount} ()
+\item 
+virtual void \hyperlink{classstable_ab2278527e43d05badfe1e09e619330e2}{Volatize} ()
+\begin{DoxyCompactList}\small\item\em calculate C and N volatilization \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classstable_a2014aabbb54c1309c936c527f3d385e8}{CapacityOverflow} ()
+\begin{DoxyCompactList}\small\item\em check if \hyperlink{classstable}{stable} capacity is overflowed \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_a55ffbd42077f05d0db4c4f7d15ac727a}{LinkManureStores} (\hyperlink{classmanurestore}{manurestore} $\ast$aManureStore)
+\item 
+virtual void \hyperlink{classstable_ab5d66f0a84fb3e73971682da583206e8}{CheckLinks} ()
+\item 
+virtual void \hyperlink{classstable_ab9f96c65f6dc2d3cf6b1788434505857}{EndBudget} (bool show)
+\item 
+virtual double \hyperlink{classstable_a3361fcda27cc06bc63567e7afdd5270c}{GetNInput} ()
+\item 
+virtual double \hyperlink{classstable_ae0081d6197b922c43e3c36780705e42f}{GetNOutput} ()
+\item 
+virtual void \hyperlink{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classstable_a3de6b97449e7f4a58ffad4690d81831a}{GetFromManureStore} (double RequestedAmount, \hyperlink{classproduct}{product} $\ast$p)
+\begin{DoxyCompactList}\small\item\em this function returns a pointer to a \hyperlink{classmanure}{manure} object that contains the requested amount \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_af4e0be5221f1bddebfe9297188e00089}{ScaleSize} ()
+\begin{DoxyCompactList}\small\item\em scale the \hyperlink{classanimal}{animal} house to the number of animals present \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a8b0725c4f70fea2c3cb3c107bf8ed4f3}{GetTotalAreaSections} ()
+\begin{DoxyCompactList}\small\item\em Return the total area. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_abf86381ef397c270b3eeb9909dc06a23}{checkArea} ()
+\begin{DoxyCompactList}\small\item\em //!check to make sure total area of \hyperlink{classanimal}{animal} sections is less than \hyperlink{classplan}{plan} area of \hyperlink{classbuilding}{building} \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_a4f31b768e529147a0b6eb3053b7f32d6}{calcWallArea} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total wall area of the \hyperlink{classanimal}{animal} housing (in square metres). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_a8cf231463ff53ad88d48885e5d063334}{controlled} (double heatOP, double outsideAirTemp, double $\ast$supplementaryHeat)
+\begin{DoxyCompactList}\small\item\em Calculates the ventilation and inside temperature of \hyperlink{classanimal}{animal} housing with forced ventilation systems. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classstable_a28efbc6e9afeb220d069ac7ccba7343a}{uncontrolled} (double heatOP, double outsideAirTemp, double windspeed, double solarRad)
+\begin{DoxyCompactList}\small\item\em Calculates the ventilation and inside temperature of freely-\/ventilated housing. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a78d6cd91aa176da41ea04afc90dfc17b}{CalcFreeVentilation} (double airDensity, double thermalTrans, double surfaceArea, double apertureHeight, double windspeed, double outsideAirTemp, double heatOP, double q, double $\ast$\hyperlink{classstable_a934e5c5203ed1c98f304d28c119b219b}{ventilationRate}, double $\ast$deltaTemper)
+\begin{DoxyCompactList}\small\item\em Calculates the ventilation rate of freely ventilated housing. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a09fd313c5cc182435bf0c39f6127a68c}{GetNrOfAnimals} ()
+\begin{DoxyCompactList}\small\item\em Returns total number of animals in the \hyperlink{classanimal}{animal} housing. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a9bd7855c10c562f9ea785d6ba3608dcc}{CalcMinimumVentilationRate} ()
+\begin{DoxyCompactList}\small\item\em Calculates the minimum ventilation rate (will be overloaded). \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a40ccfa66db782fe4bb8fdcb19ef20f00}{CalcMaximumVentilationRate} ()
+\begin{DoxyCompactList}\small\item\em Calculates the maximum ventilation rate (will be overloaded). \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a44baa21fe350cee62d66a5c3b29b8878}{GetDailyElectricity} ()
+\begin{DoxyCompactList}\small\item\em Returns the amount of electricity used in the \hyperlink{classanimal}{animal} housing OBSOLETE. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a51684aec61abca5159208fea530f9877}{Initialise} (char $\ast$InputFilename)
+\begin{DoxyCompactList}\small\item\em Initialisation routine OBSOLETE? \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a001595b56aa1e470ed4f54f3df9208ed}{SetinUse} (bool aVal)
+\begin{DoxyCompactList}\small\item\em Sets whether the \hyperlink{classanimal}{animal} house will be used. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classstable_a556b940db4c05999073d72bfee6adbbc}{GetinUse} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the housing is currently in use. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classstable_a194dfcdf2c3f49d3683205ef972fd674}{CalcPropSensible} ()
+\begin{DoxyCompactList}\small\item\em Calculate the proportion of the heat \hyperlink{classenergy}{energy} that is in the sensible form. \item\end{DoxyCompactList}\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classstable_a29cdecb2508e0504a5382d6d13b123a9}{EmptyManureFromStore} ()
+\begin{DoxyCompactList}\small\item\em Empty the \hyperlink{classanimal}{animal} house of \hyperlink{classmanure}{manure}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a893832014c2956195ca9316345456ab5}{OpenDetailsFile} ()
+\begin{DoxyCompactList}\small\item\em Open the file that will store the details of the \hyperlink{classanimal}{animal} house variables. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a13fcbf0229ba9f7ce566505f1ea23d5b}{CloseDetailsFile} ()
+\begin{DoxyCompactList}\small\item\em Close the file that will store the details of the \hyperlink{classanimal}{animal} house state variables. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstable_a1d024423d843bb60ff772cfebc61b1ef}{ShowStable} (bool header)
+\begin{DoxyCompactList}\small\item\em Output the state variables. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a512896f7eb1325fc52e1c87e2ad128e3}{GetvolatAmmonia} ()
+\begin{DoxyCompactList}\small\item\em Returned the amount of ammonia volatilised (kg N per day). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_stock}{animalStock} $\ast$ \hyperlink{classstable_ada5b39b9185fc598fda42e04cda311e3}{Livestock}
+\begin{DoxyCompactList}\small\item\em the herd of animals living in the \hyperlink{classstable}{stable} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classstable_ae3d42ac372bdf768d47ade3cf5ec3691}{minTemperature}
+\item 
+double \hyperlink{classstable_ad7c65b7d1858b8903bd997be80fa773a}{maxTemperature}
+\item 
+double \hyperlink{classstable_a81925f4e6ae3fff76da6011035ae6e93}{Emissionfactor}
+\begin{DoxyCompactList}\small\item\em ammonia emission factor for use in static emission model \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_ab03af3bbdccbf2ce7f505756133c39d6}{wallArea}
+\begin{DoxyCompactList}\small\item\em area of all walls, assume housing is cubic \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_afa55899e2704ab5fb1c444eff74be611}{planArea}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classplan}{plan} area of house \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a96fc0324c5e4a937b9e41b8545344491}{meanHeight}
+\begin{DoxyCompactList}\small\item\em mean height of house \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_afe7c8a3b3520bc4cdecaa787336c38d4}{thermalTransWall}
+\begin{DoxyCompactList}\small\item\em thermal transmissivity of wall \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_acdaf9b3f72667dc54be6b995cbf22e8d}{thermalTransRoof}
+\begin{DoxyCompactList}\small\item\em thermal transmissivity of roof \item\end{DoxyCompactList}\item 
+int \hyperlink{classstable_a48d5bedebd1be85d7705e59fe5a834b5}{controlledVent}
+\begin{DoxyCompactList}\small\item\em true if the housing has controlled ventilation \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a934e5c5203ed1c98f304d28c119b219b}{ventilationRate}
+\begin{DoxyCompactList}\small\item\em ventilation rate (cubic metres per second) \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a69b1f4500abb6928a09ecd21cd292c76}{insideTemperature}
+\begin{DoxyCompactList}\small\item\em Inside temperature in degrees Celsius. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a1abeb022b24c9def3485ea890c8b1883}{apertureWidth}
+\item 
+double \hyperlink{classstable_aa652845f1b893896db9077948fec11eb}{maxapertureHeight}
+\begin{DoxyCompactList}\small\item\em max average height of aperture to outside (m) -\/ uncontrolled ventilation \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a8c04cadb037dac13736a1a862977d7e5}{minPropApertureHeight}
+\begin{DoxyCompactList}\small\item\em assume that the ventilation cannot be choked off completely. This is the minimum closure, as a proportion of the maximum height \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a3a3775492c3cb96d3e401e257102f77d}{absorbCoeff}
+\begin{DoxyCompactList}\small\item\em absorption coefficient for solar radiation (roof only) \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a19ded1916302f2b2a616f5aef49b3d56}{emissivity}
+\begin{DoxyCompactList}\small\item\em emissivity of roof for long wave radiation \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_ae2a0976b43911d11324350d18211b1ed}{externSurfResis}
+\begin{DoxyCompactList}\small\item\em surface resistence of roof \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a1c1bad0f5a3fdbf212f8396eda0d29b2}{targetTemperature}
+\begin{DoxyCompactList}\small\item\em Target inside temperature. \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_ac9723b32bae1707d7b962f446d10627a}{minVentilation}
+\begin{DoxyCompactList}\small\item\em min ventilation rate in cubic metres per sec \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a57f84982eb9851ab84277c3a823a967d}{maxVentilation}
+\begin{DoxyCompactList}\small\item\em max ventilation rate in cubic metres per sec \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a8b86c3ce1b5b2b45d21944e13e417f0d}{optimumAirVelocity}
+\begin{DoxyCompactList}\small\item\em optimum air velocity in freely-\/ventilated housing, in metres per sec \item\end{DoxyCompactList}\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classanimal_section}{animalSection} $>$ $\ast$ \hyperlink{classstable_acb077d73e0190efa9c1359d03515d991}{sections}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classanimal}{animal} housing sections \item\end{DoxyCompactList}\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classinstore}{instore} $>$ $\ast$ \hyperlink{classstable_ad827c2a4881390861ed8dc4ebc4358b9}{inhouseStores}
+\begin{DoxyCompactList}\small\item\em Storage within the \hyperlink{classanimal}{animal} housing. Usually for \hyperlink{classmanure}{manure}. \item\end{DoxyCompactList}\item 
+string \hyperlink{classstable_a271c0bd63a923bc1073e0055a5d023bf}{Alias}
+\begin{DoxyCompactList}\small\item\em alternative name \item\end{DoxyCompactList}\item 
+bool \hyperlink{classstable_a98595703d682fc7a073100f8eb04f8fc}{inUse}
+\begin{DoxyCompactList}\small\item\em Set false to skip function calls to housing that is not used. \item\end{DoxyCompactList}\item 
+fstream $\ast$ \hyperlink{classstable_aa1825c229093fbb6ace9325613c4837b}{detailsFile}
+\begin{DoxyCompactList}\small\item\em File for detailed output (if activated). \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a1f0ac889ae9a48dc82e55e3a98ae233b}{volatAmmonia}
+\begin{DoxyCompactList}\small\item\em volatilisation of ammonia (kg per day) \item\end{DoxyCompactList}\item 
+double \hyperlink{classstable_a07f66a7a6e1bc573583fe29c2b3e1855}{waterEvap}
+\item 
+double \hyperlink{classstable_a92a798364c13ada51dea903e382a4324}{N2Emission}
+\item 
+double \hyperlink{classstable_ac2affdc6d7ce852d12562a3725cd56bb}{N2OEmission}
+\item 
+double \hyperlink{classstable_aadb2a305188cecdae4ebdb8a519ce6ef}{CH4Emission}
+\item 
+double \hyperlink{classstable_aa54ec15545c243cd78c81c79a517dbab}{CO2Emission}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classstable_a3372b8131ba5e161ddda6baf3b22d81d}{operator$<$$<$} (ostream \&os, \hyperlink{classstable}{stable} $\ast$s)
+\begin{DoxyCompactList}\small\item\em output streaming \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+parent class for \hyperlink{classanimal}{animal} housing Parent class for \hyperlink{classanimal}{animal} housing. Normally derived into specialised \hyperlink{classanimal}{animal} house classes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstable_a46222d79fa0c2eca30a5dfba0029302c}{
+\index{stable@{stable}!stable@{stable}}
+\index{stable@{stable}!stable@{stable}}
+\subsubsection[{stable}]{\setlength{\rightskip}{0pt plus 5cm}stable::stable (char $\ast$ {\em aname}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner}, \/  {\bf animalStock} $\ast$ {\em alivestock} = {\ttfamily NULL})}}
+\label{classstable_a46222d79fa0c2eca30a5dfba0029302c}
+
+
+Constructor with arguments. \hypertarget{classstable_adcfc503ae93e77c418caeda5828ded06}{
+\index{stable@{stable}!stable@{stable}}
+\index{stable@{stable}!stable@{stable}}
+\subsubsection[{stable}]{\setlength{\rightskip}{0pt plus 5cm}stable::stable (const {\bf stable} \& {\em aStable})}}
+\label{classstable_adcfc503ae93e77c418caeda5828ded06}
+
+
+Copy constructor. \hypertarget{classstable_a56a41cc73948359a0a3ef1c77cef9c82}{
+\index{stable@{stable}!$\sim$stable@{$\sim$stable}}
+\index{$\sim$stable@{$\sim$stable}!stable@{stable}}
+\subsubsection[{$\sim$stable}]{\setlength{\rightskip}{0pt plus 5cm}stable::$\sim$stable ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a56a41cc73948359a0a3ef1c77cef9c82}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classstable_a78d6cd91aa176da41ea04afc90dfc17b}{
+\index{stable@{stable}!CalcFreeVentilation@{CalcFreeVentilation}}
+\index{CalcFreeVentilation@{CalcFreeVentilation}!stable@{stable}}
+\subsubsection[{CalcFreeVentilation}]{\setlength{\rightskip}{0pt plus 5cm}void stable::CalcFreeVentilation (double {\em airDensity}, \/  double {\em thermalTrans}, \/  double {\em surfaceArea}, \/  double {\em apertureHeight}, \/  double {\em windspeed}, \/  double {\em outsideAirTemp}, \/  double {\em heatOP}, \/  double {\em q}, \/  double $\ast$ {\em ventilationRate}, \/  double $\ast$ {\em deltaTemper})}}
+\label{classstable_a78d6cd91aa176da41ea04afc90dfc17b}
+
+
+Calculates the ventilation rate of freely ventilated housing. 
+\begin{DoxyParams}{Parameters}
+\item[{\em airDensity}]density of the air in kilograms per metre cubed \item[{\em thermalTrans}]mean thermal transmissivity of the wall and roof material (in Watts per metre Kelvin) \item[{\em surfaceArea}]total surface area (wall and roof combined) in square metres \item[{\em apertureArea}]total area of apertures in the wall or roof (in square metres) \item[{\em windspeed}]outside windspeed (in meters per second) \item[{\em outsideAirTemp}]outside air temperature in Celsius \item[{\em heatOP}]output of sensible heat by the animals in the housing (in Watts) \item[{\em q}]input of heat via solar radiation of the roof (Watts) \item[{\em ventilationRate}]ventilation rate in cubic metres per second \item[{\em deltaTemper}]temperature differential between inside and outside\end{DoxyParams}
+Nic need to document this one 
+
+Model from A THERMAL BALANCE MODEL FOR LIVESTOCK BUILDINGS, Cooper et al, 1998
+
+discharge coefficient for sharp-\/edged openings
+
+B = factor to simplify subsequent equations
+
+a1, b1, c1, d1 are coefficients of the cubic equation number 21 in Cooper et al
+
+Thermal ventilation is the ventilation that occurs due to buoyancy effect of the warmed air
+
+windforcedVent is the ventilation that occurs due to the effect of the wind blowing air through the apertures in the \hyperlink{classbuilding}{building}
+
+solve for ventilation rate
+
+If the ventilation rate is lower than that resulting from wind-\/forced ventilation, the thermal ventilation is zero \hypertarget{classstable_acaf566bef659f0a671e27afa6244df4b}{
+\index{stable@{stable}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!stable@{stable}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void stable::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_acaf566bef659f0a671e27afa6244df4b}
+
+
+OBSOLETE. CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classbuilding_af1f27cbf72295547af61edc9e02a7e61}{building}.
+
+Reimplemented in \hyperlink{classcattlehouse_a7806fd8778ff33751dcb81e06a01471e}{cattlehouse}, \hyperlink{classhard_standing_class_a03f3703e524d927cbf930e47bebd846d}{hardStandingClass}, \hyperlink{classpigstable_a9e56606838c623a05cb2f6e0b721cc47}{pigstable}, and \hyperlink{classpigstable_aff8c1aa84a8727d9a5c6d060bf6fe323}{pigstable}.\hypertarget{classstable_a40ccfa66db782fe4bb8fdcb19ef20f00}{
+\index{stable@{stable}!CalcMaximumVentilationRate@{CalcMaximumVentilationRate}}
+\index{CalcMaximumVentilationRate@{CalcMaximumVentilationRate}!stable@{stable}}
+\subsubsection[{CalcMaximumVentilationRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double stable::CalcMaximumVentilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstable_a40ccfa66db782fe4bb8fdcb19ef20f00}
+
+
+Calculates the maximum ventilation rate (will be overloaded). 
+
+Reimplemented in \hyperlink{classpigstable_a8b3e2aff62122c23b6b6e95829731b80}{pigstable}, and \hyperlink{classpigstable_a1695437806e4b3d9a68c0ec872a4f846}{pigstable}.\hypertarget{classstable_a9bd7855c10c562f9ea785d6ba3608dcc}{
+\index{stable@{stable}!CalcMinimumVentilationRate@{CalcMinimumVentilationRate}}
+\index{CalcMinimumVentilationRate@{CalcMinimumVentilationRate}!stable@{stable}}
+\subsubsection[{CalcMinimumVentilationRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double stable::CalcMinimumVentilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstable_a9bd7855c10c562f9ea785d6ba3608dcc}
+
+
+Calculates the minimum ventilation rate (will be overloaded). 
+
+Reimplemented in \hyperlink{classpigstable_ae93e1ef050422ae6e4e156b888a56330}{pigstable}, and \hyperlink{classpigstable_a9dc314d78207fccac503793e8fa4885d}{pigstable}.\hypertarget{classstable_a194dfcdf2c3f49d3683205ef972fd674}{
+\index{stable@{stable}!CalcPropSensible@{CalcPropSensible}}
+\index{CalcPropSensible@{CalcPropSensible}!stable@{stable}}
+\subsubsection[{CalcPropSensible}]{\setlength{\rightskip}{0pt plus 5cm}double stable::CalcPropSensible ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a194dfcdf2c3f49d3683205ef972fd674}
+
+
+Calculate the proportion of the heat \hyperlink{classenergy}{energy} that is in the sensible form. Nic need to document this one \hypertarget{classstable_a4f31b768e529147a0b6eb3053b7f32d6}{
+\index{stable@{stable}!calcWallArea@{calcWallArea}}
+\index{calcWallArea@{calcWallArea}!stable@{stable}}
+\subsubsection[{calcWallArea}]{\setlength{\rightskip}{0pt plus 5cm}void stable::calcWallArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a4f31b768e529147a0b6eb3053b7f32d6}
+
+
+Calculates the total wall area of the \hyperlink{classanimal}{animal} housing (in square metres). Calculate the area of the wall, Assuming that the \hyperlink{classstable}{stable} is cubic \hypertarget{classstable_a2014aabbb54c1309c936c527f3d385e8}{
+\index{stable@{stable}!CapacityOverflow@{CapacityOverflow}}
+\index{CapacityOverflow@{CapacityOverflow}!stable@{stable}}
+\subsubsection[{CapacityOverflow}]{\setlength{\rightskip}{0pt plus 5cm}bool stable::CapacityOverflow ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a2014aabbb54c1309c936c527f3d385e8}
+
+
+check if \hyperlink{classstable}{stable} capacity is overflowed \hyperlink{classstable_a2014aabbb54c1309c936c527f3d385e8}{CapacityOverflow()} returns true if there isn't enough space in the \hyperlink{classstable}{stable} for the animals 
+
+Reimplemented in \hyperlink{classhard_standing_class_a458d101f2c4346d2e019d284f273181b}{hardStandingClass}, \hyperlink{classpigstable_ab741568ab92b4d23205c5c19c749b574}{pigstable}, and \hyperlink{classpigstable_a952f12bb06ab3080002183709010b0e9}{pigstable}.\hypertarget{classstable_abf86381ef397c270b3eeb9909dc06a23}{
+\index{stable@{stable}!checkArea@{checkArea}}
+\index{checkArea@{checkArea}!stable@{stable}}
+\subsubsection[{checkArea}]{\setlength{\rightskip}{0pt plus 5cm}void stable::checkArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_abf86381ef397c270b3eeb9909dc06a23}
+
+
+//!check to make sure total area of \hyperlink{classanimal}{animal} sections is less than \hyperlink{classplan}{plan} area of \hyperlink{classbuilding}{building} check to make sure total area of \hyperlink{classanimal}{animal} sections is less than \hyperlink{classplan}{plan} area of \hyperlink{classbuilding}{building} \hypertarget{classstable_ab5d66f0a84fb3e73971682da583206e8}{
+\index{stable@{stable}!CheckLinks@{CheckLinks}}
+\index{CheckLinks@{CheckLinks}!stable@{stable}}
+\subsubsection[{CheckLinks}]{\setlength{\rightskip}{0pt plus 5cm}void stable::CheckLinks ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_ab5d66f0a84fb3e73971682da583206e8}
+check if every inhouseStores knows the next inhouseStores. Does also check if each flooring knows the next flooring \hypertarget{classstable_a7aa89cb458e69d9f3e4c17edbeff7b81}{
+\index{stable@{stable}!CleanManure@{CleanManure}}
+\index{CleanManure@{CleanManure}!stable@{stable}}
+\subsubsection[{CleanManure}]{\setlength{\rightskip}{0pt plus 5cm}void stable::CleanManure ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a7aa89cb458e69d9f3e4c17edbeff7b81}
+
+
+remove todays \hyperlink{classmanure}{manure} Remove \hyperlink{classmanure}{manure} from flooring and transfer to relevant \hyperlink{classmanure}{manure} store \hypertarget{classstable_a13fcbf0229ba9f7ce566505f1ea23d5b}{
+\index{stable@{stable}!CloseDetailsFile@{CloseDetailsFile}}
+\index{CloseDetailsFile@{CloseDetailsFile}!stable@{stable}}
+\subsubsection[{CloseDetailsFile}]{\setlength{\rightskip}{0pt plus 5cm}void stable::CloseDetailsFile ()}}
+\label{classstable_a13fcbf0229ba9f7ce566505f1ea23d5b}
+
+
+Close the file that will store the details of the \hyperlink{classanimal}{animal} house state variables. \hypertarget{classstable_a8cf231463ff53ad88d48885e5d063334}{
+\index{stable@{stable}!controlled@{controlled}}
+\index{controlled@{controlled}!stable@{stable}}
+\subsubsection[{controlled}]{\setlength{\rightskip}{0pt plus 5cm}void stable::controlled (double {\em heatOP}, \/  double {\em outsideAirTemp}, \/  double $\ast$ {\em supplementaryHeat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a8cf231463ff53ad88d48885e5d063334}
+
+
+Calculates the ventilation and inside temperature of \hyperlink{classanimal}{animal} housing with forced ventilation systems. 
+\begin{DoxyParams}{Parameters}
+\item[{\em heatOP}]output of sensible heat by the animals in the housing (in Watts) \item[{\em outsideAirTemp}]outside air temperature in Celsius \item[{\em supplementaryHeat}]supplementary heating required to maintain the inside temperature at the target level (in Watts) \end{DoxyParams}
+\hypertarget{classstable_a8bdbc59976ddb6c324e7b629794ff388}{
+\index{stable@{stable}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!stable@{stable}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void stable::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a8bdbc59976ddb6c324e7b629794ff388}
+
+
+Handles all daily actions of the \hyperlink{classstable}{stable}; should be called by the manager. bool \hyperlink{classstable_a556b940db4c05999073d72bfee6adbbc}{GetinUse()} \{return inUse;\};
+
+\hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{DailyUpdate()} should be called everyday Updates every \hyperlink{classanimal_section}{animalSection} in the \hyperlink{classstable}{stable}. Update the Ammonia, \hyperlink{classwater}{water}, N2, N2O, CH4Emission and CO2Emission in the \hyperlink{classmanure}{manure}. 
+
+Reimplemented from \hyperlink{classbuilding_a584ba300427d2a648f478b68065b7a18}{building}.
+
+Reimplemented in \hyperlink{classcattlehouse_a75cd328a6b1b07b2eb49be0048ac889d}{cattlehouse}, \hyperlink{classhard_standing_class_ac182354be245579d4b8ec936add0c0be}{hardStandingClass}, \hyperlink{classpigstable_a971c427391124e56a4374ace16c461df}{pigstable}, and \hyperlink{classpigstable_a0339646d96e17f62b6e745be279ec633}{pigstable}.\hypertarget{classstable_a29cdecb2508e0504a5382d6d13b123a9}{
+\index{stable@{stable}!EmptyManureFromStore@{EmptyManureFromStore}}
+\index{EmptyManureFromStore@{EmptyManureFromStore}!stable@{stable}}
+\subsubsection[{EmptyManureFromStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ stable::EmptyManureFromStore ()}}
+\label{classstable_a29cdecb2508e0504a5382d6d13b123a9}
+
+
+Empty the \hyperlink{classanimal}{animal} house of \hyperlink{classmanure}{manure}. remove everything from the \hyperlink{classstable}{stable} \hypertarget{classstable_ab9f96c65f6dc2d3cf6b1788434505857}{
+\index{stable@{stable}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!stable@{stable}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void stable::EndBudget (bool {\em show})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_ab9f96c65f6dc2d3cf6b1788434505857}
+Check N \hyperlink{classbudget}{budget} at end of simulation Note: checks \hyperlink{classbudget}{budget} of constituent parts -\/ \hyperlink{classstable}{stable} itself does not have a \hyperlink{classbudget}{budget} class now does not do any anything \hypertarget{classstable_a26fb43b0d40106a87ba9ae11425ac9c6}{
+\index{stable@{stable}!GetAlias@{GetAlias}}
+\index{GetAlias@{GetAlias}!stable@{stable}}
+\subsubsection[{GetAlias}]{\setlength{\rightskip}{0pt plus 5cm}string stable::GetAlias ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstable_a26fb43b0d40106a87ba9ae11425ac9c6}
+
+
+Returned the alias name of the Aum housing. \hypertarget{classstable_ad816f0c1199ebc697c10e8736e3faacc}{
+\index{stable@{stable}!GetanimalSection@{GetanimalSection}}
+\index{GetanimalSection@{GetanimalSection}!stable@{stable}}
+\subsubsection[{GetanimalSection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalSection} $\ast$ stable::GetanimalSection (const char $\ast$ {\em name})}}
+\label{classstable_ad816f0c1199ebc697c10e8736e3faacc}
+
+
+Return a pointer to the named \hyperlink{classanimal}{animal} section. 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the \hyperlink{classanimal}{animal} section\end{DoxyParams}
+\hyperlink{classstable_ad816f0c1199ebc697c10e8736e3faacc}{GetanimalSection()} is called by animals to find out where they belong \hypertarget{classstable_af11653ccffcdc3bfb928d47485fc39b4}{
+\index{stable@{stable}!GetAnimalType@{GetAnimalType}}
+\index{GetAnimalType@{GetAnimalType}!stable@{stable}}
+\subsubsection[{GetAnimalType}]{\setlength{\rightskip}{0pt plus 5cm}virtual string stable::GetAnimalType ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstable_af11653ccffcdc3bfb928d47485fc39b4}
+
+
+get the type of \hyperlink{classanimal}{animal} housed (will be overloaded) 
+
+Reimplemented in \hyperlink{classcattlehouse_ab4c837c538894c34c19d7a1cf23ce09f}{cattlehouse}, \hyperlink{classhard_standing_class_a3fb5297a67e0d2af40b940c22e2d2408}{hardStandingClass}, \hyperlink{classpigstable_af4e59e6d7864795569365be2ccdd2d6b}{pigstable}, and \hyperlink{classpigstable_a1078430122dd7afe16b4294b9b969467}{pigstable}.\hypertarget{classstable_a44baa21fe350cee62d66a5c3b29b8878}{
+\index{stable@{stable}!GetDailyElectricity@{GetDailyElectricity}}
+\index{GetDailyElectricity@{GetDailyElectricity}!stable@{stable}}
+\subsubsection[{GetDailyElectricity}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetDailyElectricity ()}}
+\label{classstable_a44baa21fe350cee62d66a5c3b29b8878}
+
+
+Returns the amount of electricity used in the \hyperlink{classanimal}{animal} housing OBSOLETE. Calculate total daily electricity use of housing \hypertarget{classstable_a3de6b97449e7f4a58ffad4690d81831a}{
+\index{stable@{stable}!GetFromManureStore@{GetFromManureStore}}
+\index{GetFromManureStore@{GetFromManureStore}!stable@{stable}}
+\subsubsection[{GetFromManureStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ stable::GetFromManureStore (double {\em RequestedAmount}, \/  {\bf product} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a3de6b97449e7f4a58ffad4690d81831a}
+
+
+this function returns a pointer to a \hyperlink{classmanure}{manure} object that contains the requested amount 
+\begin{DoxyParams}{Parameters}
+\item[{\em RequestedAmount}]the amount of \hyperlink{classmanure}{manure} requested (tonnes fresh weight) \item[{\em p}]pointer to the \hyperlink{classmanure}{manure} object\end{DoxyParams}
+Get amount \hyperlink{classmanure}{manure} from the \hyperlink{classstable}{stable} \hypertarget{classstable_a88a9be2c3fbd2c04e64339dfc9794661}{
+\index{stable@{stable}!GetinsideTemperature@{GetinsideTemperature}}
+\index{GetinsideTemperature@{GetinsideTemperature}!stable@{stable}}
+\subsubsection[{GetinsideTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetinsideTemperature ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstable_a88a9be2c3fbd2c04e64339dfc9794661}
+
+
+Returns the temperature inside the \hyperlink{classbuilding}{building} in Celsius. \hypertarget{classstable_a556b940db4c05999073d72bfee6adbbc}{
+\index{stable@{stable}!GetinUse@{GetinUse}}
+\index{GetinUse@{GetinUse}!stable@{stable}}
+\subsubsection[{GetinUse}]{\setlength{\rightskip}{0pt plus 5cm}bool stable::GetinUse ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstable_a556b940db4c05999073d72bfee6adbbc}
+
+
+Returns whether the housing is currently in use. \hypertarget{classstable_a5c7b73de0ce9ab464cd2fbc326200286}{
+\index{stable@{stable}!GetManureAmount@{GetManureAmount}}
+\index{GetManureAmount@{GetManureAmount}!stable@{stable}}
+\subsubsection[{GetManureAmount}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetManureAmount ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a5c7b73de0ce9ab464cd2fbc326200286}
+Get amount \hyperlink{classmanure}{manure} in the \hyperlink{classstable}{stable} \hypertarget{classstable_a3361fcda27cc06bc63567e7afdd5270c}{
+\index{stable@{stable}!GetNInput@{GetNInput}}
+\index{GetNInput@{GetNInput}!stable@{stable}}
+\subsubsection[{GetNInput}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetNInput ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a3361fcda27cc06bc63567e7afdd5270c}
+Get N input from constituents Stable itself does not have a \hyperlink{classbudget}{budget} class \hypertarget{classstable_ae0081d6197b922c43e3c36780705e42f}{
+\index{stable@{stable}!GetNOutput@{GetNOutput}}
+\index{GetNOutput@{GetNOutput}!stable@{stable}}
+\subsubsection[{GetNOutput}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetNOutput ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_ae0081d6197b922c43e3c36780705e42f}
+Get N output from constituents Stable itself does not have a \hyperlink{classbudget}{budget} class \hypertarget{classstable_a09fd313c5cc182435bf0c39f6127a68c}{
+\index{stable@{stable}!GetNrOfAnimals@{GetNrOfAnimals}}
+\index{GetNrOfAnimals@{GetNrOfAnimals}!stable@{stable}}
+\subsubsection[{GetNrOfAnimals}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetNrOfAnimals ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a09fd313c5cc182435bf0c39f6127a68c}
+
+
+Returns total number of animals in the \hyperlink{classanimal}{animal} housing. Get number of animals present \hypertarget{classstable_a478ddd9c5b91b0dcf03bbf08b2787b3a}{
+\index{stable@{stable}!GetSlurrySystem@{GetSlurrySystem}}
+\index{GetSlurrySystem@{GetSlurrySystem}!stable@{stable}}
+\subsubsection[{GetSlurrySystem}]{\setlength{\rightskip}{0pt plus 5cm}int stable::GetSlurrySystem ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstable_a478ddd9c5b91b0dcf03bbf08b2787b3a}
+
+
+Get functions. \hypertarget{classstable_a8b0725c4f70fea2c3cb3c107bf8ed4f3}{
+\index{stable@{stable}!GetTotalAreaSections@{GetTotalAreaSections}}
+\index{GetTotalAreaSections@{GetTotalAreaSections}!stable@{stable}}
+\subsubsection[{GetTotalAreaSections}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetTotalAreaSections ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a8b0725c4f70fea2c3cb3c107bf8ed4f3}
+
+
+Return the total area. Calculate total floor area of housing \hypertarget{classstable_a9990239dddd0fd843bb0a7c25552292f}{
+\index{stable@{stable}!GetTotalC@{GetTotalC}}
+\index{GetTotalC@{GetTotalC}!stable@{stable}}
+\subsubsection[{GetTotalC}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetTotalC ()}}
+\label{classstable_a9990239dddd0fd843bb0a7c25552292f}
+
+
+Return the total amount of Carbon in the \hyperlink{classanimal}{animal} housing. Get all C present in the \hyperlink{classstable}{stable} \hypertarget{classstable_aeba6a6b4fde4b262d38cedaec2f74348}{
+\index{stable@{stable}!GetTotalN@{GetTotalN}}
+\index{GetTotalN@{GetTotalN}!stable@{stable}}
+\subsubsection[{GetTotalN}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetTotalN ()}}
+\label{classstable_aeba6a6b4fde4b262d38cedaec2f74348}
+
+
+Return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classanimal}{animal} housing. Get all N present in the \hyperlink{classstable}{stable} \hypertarget{classstable_a2dc443b7a16b5f1ea82e8bd393724ee1}{
+\index{stable@{stable}!GetventilationRate@{GetventilationRate}}
+\index{GetventilationRate@{GetventilationRate}!stable@{stable}}
+\subsubsection[{GetventilationRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double stable::GetventilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstable_a2dc443b7a16b5f1ea82e8bd393724ee1}
+
+
+Return the ventilation rate of the \hyperlink{classanimal}{animal} housing (in cubic metres per second). \hypertarget{classstable_a512896f7eb1325fc52e1c87e2ad128e3}{
+\index{stable@{stable}!GetvolatAmmonia@{GetvolatAmmonia}}
+\index{GetvolatAmmonia@{GetvolatAmmonia}!stable@{stable}}
+\subsubsection[{GetvolatAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double stable::GetvolatAmmonia ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstable_a512896f7eb1325fc52e1c87e2ad128e3}
+
+
+Returned the amount of ammonia volatilised (kg N per day). \hypertarget{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{
+\index{stable@{stable}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!stable@{stable}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void stable::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a2911ffc8041366d46674bf48a6b4d6c5}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{building}.
+
+Reimplemented in \hyperlink{classcattlehouse_ab71be5e3ab86351671ae24119ec62bd4}{cattlehouse}, \hyperlink{classhard_standing_class_a2a5c5d0905de0042918e0829e24145a3}{hardStandingClass}, \hyperlink{classpigstable_a55806be52263692f12d10870d9ee86eb}{pigstable}, and \hyperlink{classpigstable_a809943d3ff6f8314d92bfc1b29dec8af}{pigstable}.\hypertarget{classstable_a51684aec61abca5159208fea530f9877}{
+\index{stable@{stable}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!stable@{stable}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void stable::Initialise (char $\ast$ {\em InputFilename})}}
+\label{classstable_a51684aec61abca5159208fea530f9877}
+
+
+Initialisation routine OBSOLETE? 
+\begin{DoxyParams}{Parameters}
+\item[{\em InputFilename}]name of input file \end{DoxyParams}
+\hypertarget{classstable_a55ffbd42077f05d0db4c4f7d15ac727a}{
+\index{stable@{stable}!LinkManureStores@{LinkManureStores}}
+\index{LinkManureStores@{LinkManureStores}!stable@{stable}}
+\subsubsection[{LinkManureStores}]{\setlength{\rightskip}{0pt plus 5cm}void stable::LinkManureStores ({\bf manurestore} $\ast$ {\em aManureStore})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a55ffbd42077f05d0db4c4f7d15ac727a}
+Check to see if an external \hyperlink{classmanure}{manure} store receives \hyperlink{classmanure}{manure} from this housing Also link flooring to in-\/house \hyperlink{classstorage}{storage}, if necessary \hypertarget{classstable_a893832014c2956195ca9316345456ab5}{
+\index{stable@{stable}!OpenDetailsFile@{OpenDetailsFile}}
+\index{OpenDetailsFile@{OpenDetailsFile}!stable@{stable}}
+\subsubsection[{OpenDetailsFile}]{\setlength{\rightskip}{0pt plus 5cm}void stable::OpenDetailsFile ()}}
+\label{classstable_a893832014c2956195ca9316345456ab5}
+
+
+Open the file that will store the details of the \hyperlink{classanimal}{animal} house variables. \hypertarget{classstable_ab0195f308a48e008485cf5d04955a741}{
+\index{stable@{stable}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!stable@{stable}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void stable::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_ab0195f308a48e008485cf5d04955a741}
+
+
+Reads information from file. 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]pointer to the file to be read\end{DoxyParams}
+\hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{ReadParameters()} reads information from file. 
+
+Reimplemented from \hyperlink{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{building}.
+
+Reimplemented in \hyperlink{classcattlehouse_a113f5bf0d97865c9872c0c4efd073861}{cattlehouse}, \hyperlink{classhard_standing_class_a87b03d8140b5d5913fc8e79cc8229410}{hardStandingClass}, \hyperlink{classpigstable_a97e3706555a93da782e5418df532078c}{pigstable}, and \hyperlink{classpigstable_aa31308b795d7a454e5156e8c2f49fe47}{pigstable}.\hypertarget{classstable_af4e0be5221f1bddebfe9297188e00089}{
+\index{stable@{stable}!ScaleSize@{ScaleSize}}
+\index{ScaleSize@{ScaleSize}!stable@{stable}}
+\subsubsection[{ScaleSize}]{\setlength{\rightskip}{0pt plus 5cm}void stable::ScaleSize ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_af4e0be5221f1bddebfe9297188e00089}
+
+
+scale the \hyperlink{classanimal}{animal} house to the number of animals present Scale \hyperlink{classanimal}{animal} section (and inhouse \hyperlink{classstorage}{storage}) to \hyperlink{classanimal}{animal} numbers NJH June 2001 \hypertarget{classstable_a001595b56aa1e470ed4f54f3df9208ed}{
+\index{stable@{stable}!SetinUse@{SetinUse}}
+\index{SetinUse@{SetinUse}!stable@{stable}}
+\subsubsection[{SetinUse}]{\setlength{\rightskip}{0pt plus 5cm}void stable::SetinUse (bool {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstable_a001595b56aa1e470ed4f54f3df9208ed}
+
+
+Sets whether the \hyperlink{classanimal}{animal} house will be used. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aVal}]set to true or false, depending on whether the housing is used or not \end{DoxyParams}
+\hypertarget{classstable_a8d74bb1d63bc771084f2b94f1c1eed96}{
+\index{stable@{stable}!SetLivestock@{SetLivestock}}
+\index{SetLivestock@{SetLivestock}!stable@{stable}}
+\subsubsection[{SetLivestock}]{\setlength{\rightskip}{0pt plus 5cm}void stable::SetLivestock ({\bf animalStock} $\ast$ {\em aLivestock})}}
+\label{classstable_a8d74bb1d63bc771084f2b94f1c1eed96}
+Sets the herd of the \hyperlink{classstable}{stable} \hypertarget{classstable_a1d024423d843bb60ff772cfebc61b1ef}{
+\index{stable@{stable}!ShowStable@{ShowStable}}
+\index{ShowStable@{ShowStable}!stable@{stable}}
+\subsubsection[{ShowStable}]{\setlength{\rightskip}{0pt plus 5cm}void stable::ShowStable (bool {\em header})}}
+\label{classstable_a1d024423d843bb60ff772cfebc61b1ef}
+
+
+Output the state variables. header set to true to print the header details for the state variables \hypertarget{classstable_a28efbc6e9afeb220d069ac7ccba7343a}{
+\index{stable@{stable}!uncontrolled@{uncontrolled}}
+\index{uncontrolled@{uncontrolled}!stable@{stable}}
+\subsubsection[{uncontrolled}]{\setlength{\rightskip}{0pt plus 5cm}void stable::uncontrolled (double {\em heatOP}, \/  double {\em outsideAirTemp}, \/  double {\em windspeed}, \/  double {\em solarRad})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_a28efbc6e9afeb220d069ac7ccba7343a}
+
+
+Calculates the ventilation and inside temperature of freely-\/ventilated housing. 
+\begin{DoxyParams}{Parameters}
+\item[{\em heatOP}]output of sensible heat by the animals in the housing (in Watts) \item[{\em outsideAirTemp}]outside air temperature in Celsius \item[{\em windspeed}]outside windspeed (in meters per second) \item[{\em solarRad}]solar radiation in Watts per meter squared\end{DoxyParams}
+Nic need to document this one 
+
+Temperature of outside surface of roof
+
+tempSol = outside air temperature which, in the absence of solar radiation, would give the same temperature distribution and rate of \hyperlink{classenergy}{energy} transfer through a wall or roof as that which exists with the actual air temperature and incident radiation
+
+Temperature difference between outside surfaces of roof and air temperature
+
+Heat input or output to housing through the roof material
+
+First set ventilation rate to that which is necessary to have the optimum air velocity
+
+Calculate the temperature difference that will be achieved by the ventilation with outside air
+
+if the temperature achieved obtaining the optimal ventilation rate exceeds the maximum permitted, recalculate the ventilation rate to prevent this
+
+if the temperature achieved obtaining the optimal ventilation rate is below the minimum permitted, recalculate the ventilation rate to prevent this
+
+now we know the target ventilation rate, we need to see if this can be achieved by adjusting the aperture size assume initially that this is possible
+
+calculate ventilation with the minimum ventilation
+
+if the target ventilation is less than the minimum, use the minimum
+
+calculate ventilation with the maximum ventilation
+
+If ventilation exceeds the maximum, use the maximum \hypertarget{classstable_ab2278527e43d05badfe1e09e619330e2}{
+\index{stable@{stable}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!stable@{stable}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void stable::Volatize ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstable_ab2278527e43d05badfe1e09e619330e2}
+
+
+calculate C and N volatilization \hyperlink{classstable_ab2278527e43d05badfe1e09e619330e2}{Volatize()} Called everyday by DailyActions() Computes the daily volatization of N and C gasses from the dirty \hyperlink{classstable}{stable} floor 
+
+simple emission model, using emission factors
+
+Calculating emissions for \hyperlink{classanimal}{animal} sections
+
+Calculating emissions for in-\/house \hyperlink{classstorage}{storage}
+
+dynamic emission model
+
+get \hyperlink{classanimal}{animal} heat production
+
+calculate the amount of sensible heat produced in the \hyperlink{classanimal}{animal} housing
+
+calculate the air velocity, using the appropriate functions for controlled or freely ventilated systems
+
+factor 0.05 is a nasty fudge. It reduces the wind speed near the floor surface
+
+calculate gaseous emissions for \hyperlink{classanimal}{animal} sections
+
+calculate emissions for in-\/house \hyperlink{classstorage}{storage}
+
+If detailed output data has been requested, write this to file
+
+Record gaseous \hyperlink{classnitrogen}{nitrogen} and carbon losses 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classstable_a3372b8131ba5e161ddda6baf3b22d81d}{
+\index{stable@{stable}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!stable@{stable}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf stable} $\ast$ {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classstable_a3372b8131ba5e161ddda6baf3b22d81d}
+
+
+output streaming 
+
+Reimplemented from \hyperlink{classbuilding_a47f4f2ec998d1300d4ccd788b0a668ca}{building}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classstable_a3a3775492c3cb96d3e401e257102f77d}{
+\index{stable@{stable}!absorbCoeff@{absorbCoeff}}
+\index{absorbCoeff@{absorbCoeff}!stable@{stable}}
+\subsubsection[{absorbCoeff}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::absorbCoeff}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a3a3775492c3cb96d3e401e257102f77d}
+
+
+absorption coefficient for solar radiation (roof only) \hypertarget{classstable_a271c0bd63a923bc1073e0055a5d023bf}{
+\index{stable@{stable}!Alias@{Alias}}
+\index{Alias@{Alias}!stable@{stable}}
+\subsubsection[{Alias}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf stable::Alias}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a271c0bd63a923bc1073e0055a5d023bf}
+
+
+alternative name \hypertarget{classstable_a1abeb022b24c9def3485ea890c8b1883}{
+\index{stable@{stable}!apertureWidth@{apertureWidth}}
+\index{apertureWidth@{apertureWidth}!stable@{stable}}
+\subsubsection[{apertureWidth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::apertureWidth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a1abeb022b24c9def3485ea890c8b1883}
+following params are only for wind-\/forced ventilation max average width of aperture to outside (m) -\/ uncontrolled ventilation \hypertarget{classstable_aadb2a305188cecdae4ebdb8a519ce6ef}{
+\index{stable@{stable}!CH4Emission@{CH4Emission}}
+\index{CH4Emission@{CH4Emission}!stable@{stable}}
+\subsubsection[{CH4Emission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::CH4Emission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_aadb2a305188cecdae4ebdb8a519ce6ef}
+\hypertarget{classstable_aa54ec15545c243cd78c81c79a517dbab}{
+\index{stable@{stable}!CO2Emission@{CO2Emission}}
+\index{CO2Emission@{CO2Emission}!stable@{stable}}
+\subsubsection[{CO2Emission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::CO2Emission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_aa54ec15545c243cd78c81c79a517dbab}
+\hypertarget{classstable_a48d5bedebd1be85d7705e59fe5a834b5}{
+\index{stable@{stable}!controlledVent@{controlledVent}}
+\index{controlledVent@{controlledVent}!stable@{stable}}
+\subsubsection[{controlledVent}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf stable::controlledVent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a48d5bedebd1be85d7705e59fe5a834b5}
+
+
+true if the housing has controlled ventilation \hypertarget{classstable_aa1825c229093fbb6ace9325613c4837b}{
+\index{stable@{stable}!detailsFile@{detailsFile}}
+\index{detailsFile@{detailsFile}!stable@{stable}}
+\subsubsection[{detailsFile}]{\setlength{\rightskip}{0pt plus 5cm}fstream$\ast$ {\bf stable::detailsFile}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_aa1825c229093fbb6ace9325613c4837b}
+
+
+File for detailed output (if activated). \hypertarget{classstable_a81925f4e6ae3fff76da6011035ae6e93}{
+\index{stable@{stable}!Emissionfactor@{Emissionfactor}}
+\index{Emissionfactor@{Emissionfactor}!stable@{stable}}
+\subsubsection[{Emissionfactor}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::Emissionfactor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a81925f4e6ae3fff76da6011035ae6e93}
+
+
+ammonia emission factor for use in static emission model \hypertarget{classstable_a19ded1916302f2b2a616f5aef49b3d56}{
+\index{stable@{stable}!emissivity@{emissivity}}
+\index{emissivity@{emissivity}!stable@{stable}}
+\subsubsection[{emissivity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::emissivity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a19ded1916302f2b2a616f5aef49b3d56}
+
+
+emissivity of roof for long wave radiation \hypertarget{classstable_ae2a0976b43911d11324350d18211b1ed}{
+\index{stable@{stable}!externSurfResis@{externSurfResis}}
+\index{externSurfResis@{externSurfResis}!stable@{stable}}
+\subsubsection[{externSurfResis}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::externSurfResis}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ae2a0976b43911d11324350d18211b1ed}
+
+
+surface resistence of roof \hypertarget{classstable_ad827c2a4881390861ed8dc4ebc4358b9}{
+\index{stable@{stable}!inhouseStores@{inhouseStores}}
+\index{inhouseStores@{inhouseStores}!stable@{stable}}
+\subsubsection[{inhouseStores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf instore}$>$$\ast$ {\bf stable::inhouseStores}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ad827c2a4881390861ed8dc4ebc4358b9}
+
+
+Storage within the \hyperlink{classanimal}{animal} housing. Usually for \hyperlink{classmanure}{manure}. \hypertarget{classstable_a69b1f4500abb6928a09ecd21cd292c76}{
+\index{stable@{stable}!insideTemperature@{insideTemperature}}
+\index{insideTemperature@{insideTemperature}!stable@{stable}}
+\subsubsection[{insideTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::insideTemperature}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a69b1f4500abb6928a09ecd21cd292c76}
+
+
+Inside temperature in degrees Celsius. \hypertarget{classstable_a98595703d682fc7a073100f8eb04f8fc}{
+\index{stable@{stable}!inUse@{inUse}}
+\index{inUse@{inUse}!stable@{stable}}
+\subsubsection[{inUse}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf stable::inUse}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a98595703d682fc7a073100f8eb04f8fc}
+
+
+Set false to skip function calls to housing that is not used. \hypertarget{classstable_ada5b39b9185fc598fda42e04cda311e3}{
+\index{stable@{stable}!Livestock@{Livestock}}
+\index{Livestock@{Livestock}!stable@{stable}}
+\subsubsection[{Livestock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalStock}$\ast$ {\bf stable::Livestock}}}
+\label{classstable_ada5b39b9185fc598fda42e04cda311e3}
+
+
+the herd of animals living in the \hyperlink{classstable}{stable} \hypertarget{classstable_aa652845f1b893896db9077948fec11eb}{
+\index{stable@{stable}!maxapertureHeight@{maxapertureHeight}}
+\index{maxapertureHeight@{maxapertureHeight}!stable@{stable}}
+\subsubsection[{maxapertureHeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::maxapertureHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_aa652845f1b893896db9077948fec11eb}
+
+
+max average height of aperture to outside (m) -\/ uncontrolled ventilation \hypertarget{classstable_ad7c65b7d1858b8903bd997be80fa773a}{
+\index{stable@{stable}!maxTemperature@{maxTemperature}}
+\index{maxTemperature@{maxTemperature}!stable@{stable}}
+\subsubsection[{maxTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::maxTemperature}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ad7c65b7d1858b8903bd997be80fa773a}
+\hypertarget{classstable_a57f84982eb9851ab84277c3a823a967d}{
+\index{stable@{stable}!maxVentilation@{maxVentilation}}
+\index{maxVentilation@{maxVentilation}!stable@{stable}}
+\subsubsection[{maxVentilation}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::maxVentilation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a57f84982eb9851ab84277c3a823a967d}
+
+
+max ventilation rate in cubic metres per sec \hypertarget{classstable_a96fc0324c5e4a937b9e41b8545344491}{
+\index{stable@{stable}!meanHeight@{meanHeight}}
+\index{meanHeight@{meanHeight}!stable@{stable}}
+\subsubsection[{meanHeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::meanHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a96fc0324c5e4a937b9e41b8545344491}
+
+
+mean height of house \hypertarget{classstable_a8c04cadb037dac13736a1a862977d7e5}{
+\index{stable@{stable}!minPropApertureHeight@{minPropApertureHeight}}
+\index{minPropApertureHeight@{minPropApertureHeight}!stable@{stable}}
+\subsubsection[{minPropApertureHeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::minPropApertureHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a8c04cadb037dac13736a1a862977d7e5}
+
+
+assume that the ventilation cannot be choked off completely. This is the minimum closure, as a proportion of the maximum height \hypertarget{classstable_ae3d42ac372bdf768d47ade3cf5ec3691}{
+\index{stable@{stable}!minTemperature@{minTemperature}}
+\index{minTemperature@{minTemperature}!stable@{stable}}
+\subsubsection[{minTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::minTemperature}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ae3d42ac372bdf768d47ade3cf5ec3691}
+\hypertarget{classstable_ac9723b32bae1707d7b962f446d10627a}{
+\index{stable@{stable}!minVentilation@{minVentilation}}
+\index{minVentilation@{minVentilation}!stable@{stable}}
+\subsubsection[{minVentilation}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::minVentilation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ac9723b32bae1707d7b962f446d10627a}
+
+
+min ventilation rate in cubic metres per sec \hypertarget{classstable_a92a798364c13ada51dea903e382a4324}{
+\index{stable@{stable}!N2Emission@{N2Emission}}
+\index{N2Emission@{N2Emission}!stable@{stable}}
+\subsubsection[{N2Emission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::N2Emission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a92a798364c13ada51dea903e382a4324}
+\hypertarget{classstable_ac2affdc6d7ce852d12562a3725cd56bb}{
+\index{stable@{stable}!N2OEmission@{N2OEmission}}
+\index{N2OEmission@{N2OEmission}!stable@{stable}}
+\subsubsection[{N2OEmission}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::N2OEmission}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ac2affdc6d7ce852d12562a3725cd56bb}
+\hypertarget{classstable_a8b86c3ce1b5b2b45d21944e13e417f0d}{
+\index{stable@{stable}!optimumAirVelocity@{optimumAirVelocity}}
+\index{optimumAirVelocity@{optimumAirVelocity}!stable@{stable}}
+\subsubsection[{optimumAirVelocity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::optimumAirVelocity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a8b86c3ce1b5b2b45d21944e13e417f0d}
+
+
+optimum air velocity in freely-\/ventilated housing, in metres per sec \hypertarget{classstable_afa55899e2704ab5fb1c444eff74be611}{
+\index{stable@{stable}!planArea@{planArea}}
+\index{planArea@{planArea}!stable@{stable}}
+\subsubsection[{planArea}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::planArea}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_afa55899e2704ab5fb1c444eff74be611}
+
+
+\hyperlink{classplan}{plan} area of house \hypertarget{classstable_acb077d73e0190efa9c1359d03515d991}{
+\index{stable@{stable}!sections@{sections}}
+\index{sections@{sections}!stable@{stable}}
+\subsubsection[{sections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf animalSection}$>$$\ast$ {\bf stable::sections}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_acb077d73e0190efa9c1359d03515d991}
+
+
+\hyperlink{classanimal}{animal} housing sections \hypertarget{classstable_a1c1bad0f5a3fdbf212f8396eda0d29b2}{
+\index{stable@{stable}!targetTemperature@{targetTemperature}}
+\index{targetTemperature@{targetTemperature}!stable@{stable}}
+\subsubsection[{targetTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::targetTemperature}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a1c1bad0f5a3fdbf212f8396eda0d29b2}
+
+
+Target inside temperature. \hypertarget{classstable_acdaf9b3f72667dc54be6b995cbf22e8d}{
+\index{stable@{stable}!thermalTransRoof@{thermalTransRoof}}
+\index{thermalTransRoof@{thermalTransRoof}!stable@{stable}}
+\subsubsection[{thermalTransRoof}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::thermalTransRoof}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_acdaf9b3f72667dc54be6b995cbf22e8d}
+
+
+thermal transmissivity of roof \hypertarget{classstable_afe7c8a3b3520bc4cdecaa787336c38d4}{
+\index{stable@{stable}!thermalTransWall@{thermalTransWall}}
+\index{thermalTransWall@{thermalTransWall}!stable@{stable}}
+\subsubsection[{thermalTransWall}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::thermalTransWall}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_afe7c8a3b3520bc4cdecaa787336c38d4}
+
+
+thermal transmissivity of wall \hypertarget{classstable_a934e5c5203ed1c98f304d28c119b219b}{
+\index{stable@{stable}!ventilationRate@{ventilationRate}}
+\index{ventilationRate@{ventilationRate}!stable@{stable}}
+\subsubsection[{ventilationRate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::ventilationRate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a934e5c5203ed1c98f304d28c119b219b}
+
+
+ventilation rate (cubic metres per second) \hypertarget{classstable_a1f0ac889ae9a48dc82e55e3a98ae233b}{
+\index{stable@{stable}!volatAmmonia@{volatAmmonia}}
+\index{volatAmmonia@{volatAmmonia}!stable@{stable}}
+\subsubsection[{volatAmmonia}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::volatAmmonia}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a1f0ac889ae9a48dc82e55e3a98ae233b}
+
+
+volatilisation of ammonia (kg per day) \hypertarget{classstable_ab03af3bbdccbf2ce7f505756133c39d6}{
+\index{stable@{stable}!wallArea@{wallArea}}
+\index{wallArea@{wallArea}!stable@{stable}}
+\subsubsection[{wallArea}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::wallArea}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_ab03af3bbdccbf2ce7f505756133c39d6}
+
+
+area of all walls, assume housing is cubic \hypertarget{classstable_a07f66a7a6e1bc573583fe29c2b3e1855}{
+\index{stable@{stable}!waterEvap@{waterEvap}}
+\index{waterEvap@{waterEvap}!stable@{stable}}
+\subsubsection[{waterEvap}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf stable::waterEvap}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstable_a07f66a7a6e1bc573583fe29c2b3e1855}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{stable_8h}{stable.h}\item 
+C:/main/trunk/src/building/\hyperlink{stable_8cpp}{stable.cpp}\end{DoxyCompactItemize}

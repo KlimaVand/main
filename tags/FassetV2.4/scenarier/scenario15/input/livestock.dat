@@ -1,0 +1,36 @@
+AnimalModel	2
+[DairyStock]	
+MaxNumPerCohort	1000
+[DairyStock.Group(0)]	
+Alias	HEIFERS1
+Code	0
+minAge	0.0
+maxAge	0.5
+Sex	1
+Young	1
+LivestockUnits	0.13
+[DairyStock.Group(1)]	
+Alias	HEIFERS2
+Code	0
+minAge	0.5
+maxAge	1.0
+Sex	1
+Young	1
+LivestockUnits	0.34
+[DairyStock.Group(2)]	
+Alias	HEIFERS3
+Code	0
+minAge	1.0
+maxAge	2.0
+Sex	1
+Young	1
+LivestockUnits	0.13
+[DairyStock.Group(3)]	
+Alias	DAIRY
+Code	0
+minAge	2.0
+maxAge	5.0
+Sex	1
+Young	0
+LivestockUnits	1.18
+[end]

@@ -1,0 +1,2367 @@
+0	31.01 N from mineral fertilizer         	     0.000	                     kg N
+0	                 31.02 N from deposition	    18.899	                     kg N
+0	                       31.03 N from seed	     2.720	                     kg N
+0	                   31.04 N from fixation	     0.000	                     kg N
+0	           31.05 N from irrigation water	     0.000	                     kg N
+0	              31.06 N from spread manure	     0.000	                     kg N
+0	           31.07 N in urine from grazing	     0.000	                     kg N
+0	          31.08 N in faeces from grazing	     0.000	                     kg N
+0	                31.20 N removed in grain	     0.000	                     kg N
+0	                31.21 N removed in straw	     0.000	                     kg N
+0	                  31.22 N removed in cut	     0.000	                     kg N
+0	               31.23 N removed by cattle	     0.000	                     kg N
+0	                 31.40 Nitrate N leached	    16.139	                     kg N
+0	                31.41 Ammonium N leached	    18.082	                     kg N
+0	           31.42 N2 from denitrification	   104.539	                     kg N
+0	          31.43 N2O from denitrification	    22.692	                     kg N
+0	            31.44 N2O from nitrification	     0.366	                     kg N
+0	           31.45 NH3-N loss by spreading	     0.000	                     kg N
+0	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+0	              31.47 N in surface run-off	     0.000	                     kg N
+0	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+0	          31.60 N in standing crop/straw	   111.267	                     kg N
+0	          31.61 Total soil/soilsurface N	 19383.534	                     kg N
+0	31.99 Total soil/soilsurface nitrogen to 1 m depth	 17765.794	                     kg N
+0	                32.10 N uptake from soil	   116.408	                     kg N
+0	32.20 N from roots incorporated into soil	     7.861	                     kg N
+0	32.21 N from straw incorporated into soil	     0.000	                     kg N
+0	32.22 N from leaf litterfall incorporated into soil	     0.000	                     kg N
+0	32.23 N from storage incorporated into soil	     0.000	                     kg N
+0	32.30 Gross N-mineralisation from soil org. matter	   196.202	                     kg N
+0	32.40 Nitrate N leached from leaching depth	    23.093	                     kg N
+0	32.41 Ammonium N leached from leaching depth	    22.643	                     kg N
+0	                 32.60 Organic N in soil	 19326.659	                     kg N
+0	                 32.61 Mineral N in soil	    56.875	                     kg N
+0	                    32.62 AOM1 N in soil	    52.529	                     kg N
+0	                    32.63 AOM2 N in soil	     0.494	                     kg N
+0	                    32.64 SMB1 N in soil	   155.861	                     kg N
+0	                    32.65 SMB2 N in soil	     5.159	                     kg N
+0	                     32.66 SMR N in soil	   151.320	                     kg N
+0	                     32.67 NOM N in soil	  7316.986	                     kg N
+0	                     32.68 IOM N in soil	 11644.309	                     kg N
+0	         32.69 Organic N in soil 0-25 cm	  7252.669	                     kg N
+0	         32.70 Mineral N in soil 0-25 cm	    20.874	                     kg N
+0	        32.71 Organic N in soil 25-50 cm	  7673.208	                     kg N
+0	        32.72 Mineral N in soil 25-50 cm	    11.972	                     kg N
+0	        32.73 Organic N in soil 50-75 cm	  1400.320	                     kg N
+0	        32.74 Mineral N in soil 50-75 cm	     3.073	                     kg N
+0	       32.75 Organic N in soil 75-250 cm	  3000.462	                     kg N
+0	       32.76 Mineral N in soil 75-250 cm	    20.955	                     kg N
+0	              32.77 N in AOM+SMB 0-25 cm	   194.684	                     kg N
+0	             32.78 N in AOM+SMB 25-50 cm	   101.160	                     kg N
+0	             32.79 N in AOM+SMB 50-75 cm	    22.243	                     kg N
+0	            32.80 N in AOM+SMB 75-250 cm	    47.276	                     kg N
+0	                  32.81 N in NOM 0-25 cm	  4012.687	                     kg N
+0	                 32.82 N in NOM 25-50 cm	  2103.019	                     kg N
+0	                        32.83 Nmin 0-500	    32.846	                     kg N
+0	                        32.84 Nmin 0-750	    35.919	                     kg N
+0	                       32.85 Nmin 0-1000	    39.541	                     kg N
+0	                 32.90 N in NOM 50-75 cm	   382.173	                     kg N
+0	                32.91 N in NOM 75-250 cm	   819.107	                     kg N
+0	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+0	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+0	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+0	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+0	        33.01 N in feed for young cattle	     0.000	                     kg N
+0	        33.02 N in feed for adult cattle	     0.000	                     kg N
+0	                33.03 N in bought cattle	     0.000	                     kg N
+0	                33.04 N grazed by cattle	     0.000	                     kg N
+0	                         33.20 N in milk	     0.000	                     kg N
+0	                  33.21 N in sold cattle	     0.000	                     kg N
+0	           33.40 N in dairy cattle waste	     0.000	                     kg N
+0	          33.41 N in young cattle manure	     0.000	                     kg N
+0	          33.42 N in dairy cattle manure	     0.000	                     kg N
+0	                 33.60 N bound in cattle	     0.000	                     kg N
+0	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+0	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+0	             34.01 N in feed for piglets	     0.000	                     kg N
+0	                34.02 N in feed for sows	     0.000	                     kg N
+0	            34.03 N in feed for baconers	     0.000	                     kg N
+0	                  34.04 N in bought pigs	     0.000	                     kg N
+0	                    34.20 N in sold pigs	     0.000	                     kg N
+0	                  34.40 N in sows manure	     0.000	                     kg N
+0	              34.41 N in baconers manure	     0.000	                     kg N
+0	               34.42 N in piglets manure	     0.000	                     kg N
+0	                   34.60 N bound in pigs	     0.000	                     kg N
+0	              35.01 N from imported feed	     0.000	                     kg N
+0	            35.02 N from imported manure	     0.000	                     kg N
+0	           35.03 N from imported bedding	     0.000	                     kg N
+0	           35.04 N from harvest to store	     0.000	                     kg N
+0	          35.20 N in sold plant products	     0.000	                     kg N
+0	     35.21 N removed from manure storage	     0.000	                     kg N
+0	              35.22 N in exported manure	     0.000	                     kg N
+0	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+0	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+0	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+0	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+0	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+0	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+0	         35.60 N bound in manure storage	     0.000	                     kg N
+0	          35.61 N bound in stable manure	     0.000	                     kg N
+0	        35.62 N in stored plant products	     0.000	                     kg N
+0	                      35.63 N in bedding	     0.000	                     kg N
+0	    35.80 N transf. from stable to store	     0.000	                     kg N
+0	35.81 N removed from stored plant products	     0.000	                     kg N
+0	35.82 N removed from stored feed products	     0.000	                     kg N
+0	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+0	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+0	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+0	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+0	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+0	   36.05 S.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+0	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+0	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+0	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+0	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+0	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+0	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+0	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+0	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+0	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+0	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+0	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+0	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+0	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+0	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+0	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+0	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+0	 37.00 N difference from area adjustment	     0.000	                     kg N
+0	37.01 N crop difference from area adjustment	     0.000	                     kg N
+0	37.02 N soil difference from area adjustment	     0.000	                     kg N
+0	              38.10 N15 harvest in grain	     0.000	                     kg N
+0	                 38.11 Total N15 harvest	     0.000	                     kg N
+0	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+0	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+0	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+0	               38.23 N15-Denitrification	     0.000	                     kg N
+0	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+0	               39.01 Catch crop DM (1/9)	     0.000	                    kg DM
+0	              39.02 Catch crop DM (1/11)	     0.000	                    kg DM
+0	                39.03 Catch crop N (1/9)	     0.000	                     kg N
+0	               39.04 Catch crop N (1/11)	     0.000	                     kg N
+0	39.10 Grain yield at environmental indicator date	     0.000	                        t
+0	39.11 Straw yield at environmental indicator date	     0.000	                        t
+0	39.12 Cut at environmental indicator date	     0.000	                        t
+0	    39.20 Date of emergence of main crop	     0.000	              day of year
+0	    39.21 Date of flowering of main crop	     0.000	              day of year
+0	39.22 Date of end of grain filling of main crop	     0.000	              day of year
+0	     39.23 Date of ripeness of main crop	     0.000	              day of year
+0	          40.01 Net crop carbon fixation	  1437.245	                     kg C
+0	       40.02 C from field-applied manure	     0.000	                     kg C
+0	                       40.03 C from seed	    66.470	                     kg C
+0	                40.20 C removed in grain	     0.000	                     kg C
+0	                40.21 C removed in straw	     0.000	                     kg C
+0	                  40.22 C removed in cut	     0.000	                     kg C
+0	               40.23 C removed by cattle	     0.000	                     kg C
+0	              40.40 CO2 soil respiration	  5324.981	                     kg C
+0	                   40.60 Total C in soil	209522.041	                     kg C
+0	          40.61 C in standing crop/straw	  1426.865	                     kg C
+0	           40.62 Total C in soil 0-25 cm	 78030.603	                     kg C
+0	          40.63 Total C in soil 25-50 cm	 83574.669	                     kg C
+0	          40.64 Total C in soil 50-75 cm	 15245.666	                     kg C
+0	         40.65 Total C in soil 75-250 cm	 32671.102	                     kg C
+0	              40.66 C in AOM+SMB 0-25 cm	  2076.455	                     kg C
+0	             40.67 C in AOM+SMB 25-50 cm	  1178.437	                     kg C
+0	             40.68 C in AOM+SMB 50-75 cm	   248.933	                     kg C
+0	            40.69 C in AOM+SMB 75-250 cm	   532.881	                     kg C
+0	                  40.70 C in NOM 0-25 cm	 43159.365	                     kg C
+0	                 40.71 C in NOM 25-50 cm	 22861.232	                     kg C
+0	                 40.72 C in NOM 50-75 cm	  4155.483	                     kg C
+0	                40.73 C in NOM 75-250 cm	  8906.971	                     kg C
+0	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+0	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+0	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+0	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+0	40.80 C from roots incorporated into soil	   182.022	                     kg C
+0	40.81 C from straw incorporated into soil	     0.000	                     kg C
+0	40.82 C from leaf litterfall incorporated into soil	     0.000	                     kg C
+0	40.83 C from storage incorporated into soil	     0.000	                     kg N
+0	                    40.90 AOM1 C in soil	  2040.602	                     kg C
+0	                    40.91 AOM2 C in soil	    11.366	                     kg C
+0	                    40.92 SMB1 C in soil	  1028.686	                     kg C
+0	                    40.93 SMB2 C in soil	    48.133	                     kg C
+0	                     40.94 SMR C in soil	   907.920	                     kg C
+0	                     40.95 NOM C in soil	 79083.051	                     kg C
+0	                     40.96 IOM C in soil	126402.284	                     kg C
+0	               41.01 C input into cattle	     0.000	                     kg C
+0	        41.02 C in cattle CH4 production	     0.000	                     kg C
+0	                 41.03 C in cattle urine	     0.000	                     kg C
+0	                41.04 C in cattle faeces	     0.000	                     kg C
+0	        41.05 C in cattle CO2 production	     0.000	                     kg C
+0	              41.06 C in milk production	     0.000	                     kg C
+0	         41.07 C retained in cattle body	     0.000	                     kg C
+0	           41.08 C in urine from grazing	     0.000	                     kg C
+0	          41.09 C in faeces from grazing	     0.000	                     kg C
+0	            41.10 C from grazing animals	     0.000	                     kg C
+0	        43.01 C in feed for young cattle	     0.000	                     kg C
+0	        43.02 C in feed for adult cattle	     0.000	                     kg C
+0	                43.03 C in bought cattle	     0.000	                     kg C
+0	                43.04 C grazed by cattle	     0.000	                     kg C
+0	                  43.21 C in sold cattle	     0.000	                     kg C
+0	          43.41 4 in young cattle manure	     0.000	                     kg C
+0	          43.42 C in dairy cattle manure	     0.000	                     kg C
+0	                 43.60 C bound in cattle	     0.000	                     kg C
+0	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+0	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+0	             44.01 C in feed for piglets	     0.000	                     kg C
+0	                44.02 C in feed for sows	     0.000	                     kg C
+0	            44.03 C in feed for baconers	     0.000	                     kg C
+0	                  44.04 C in bought pigs	     0.000	                     kg C
+0	                    44.20 C in sold pigs	     0.000	                     kg C
+0	                  44.40 C in sows manure	     0.000	                     kg C
+0	              44.41 C in baconers manure	     0.000	                     kg C
+0	               44.42 C in piglets manure	     0.000	                     kg C
+0	                   44.60 C bound in pigs	     0.000	                     kg C
+0	                    44.62 C in sold pigs	     0.000	                     kg C
+0	           44.63 C in pig CO2 production	     0.000	                     kg C
+0	           44.64 C in pig CH4 production	     0.000	                     kg C
+0	              45.01 C from imported feed	     0.000	                     kg C
+0	            45.02 C from imported manure	     0.000	                     kg C
+0	           45.03 C from imported bedding	     0.000	                     kg C
+0	           45.04 C from harvest to store	     0.000	                     kg C
+0	          45.20 C in sold plant products	     0.000	                     kg C
+0	     45.21 C removed from manure storage	     0.000	                     kg C
+0	              45.22 C in exported manure	     0.000	                     kg C
+0	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+0	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+0	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+0	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+0	         45.60 C bound in manure storage	     0.000	                     kg C
+0	          45.61 C bound in stable manure	     0.000	                     kg C
+0	        45.62 C in stored plant products	     0.000	                     kg C
+0	                      45.63 C in bedding	     0.000	                     kg C
+0	    45.80 C transf. from stable to store	     0.000	                     kg C
+0	45.81 C removed from stored plant products	     0.000	                     kg C
+0	45.82 C removed from stored feed products	     0.000	                     kg C
+0	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+0	                   50.02 feed-P for sows	     0.000	                     kg P
+0	               50.03 feed-P for baconers	     0.000	                     kg P
+0	                50.04 feed-P for piglets	     0.000	                     kg P
+0	                50.10 manure-P from sows	     0.000	                     kg P
+0	            50.11 manure-P from baconers	     0.000	                     kg P
+0	             50.12 manure-P from piglets	     0.000	                     kg P
+0	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+0	                   60.02 feed-K for sows	     0.000	                     kg K
+0	               60.03 feed-K for baconers	     0.000	                     kg K
+0	                60.04 feed-K for piglets	     0.000	                     kg K
+0	                60.10 manure-K from sows	     0.000	                     kg K
+0	            60.11 manure-K from baconers	     0.000	                     kg K
+0	             60.12 manure-K from piglets	     0.000	                     kg K
+0	                         70.01 Rainwater	  9449.670	              cubic meter
+0	                        70.02 Irrigation	     0.000	              cubic meter
+0	                       70.10 Percolation	  7033.363	              cubic meter
+0	                   70.11 Surface run-off	     0.000	              cubic meter
+0	                70.12 Evapotranspiration	  2507.776	              cubic meter
+0	    70.15 Water in field to balancedepth	  5480.462	              cubic meter
+0	                     70.20 Water in soil	     0.589	              cubic meter
+0	   70.40 Percolation from leaching depth	  7033.363	              cubic meter
+0	  70.41 Water in field to leaching depth	  2693.666	              cubic meter
+0	             70.42 Bare soil evaporation	  2294.199	              cubic meter
+0	                     70.50 Precipitation	     0.000	                       mm
+0	             80.01 Herbicide consumption	     0.000	                      TFI
+0	             80.02 Fungicide consumption	     0.000	                      TFI
+0	           80.03 Insecticide consumption	     0.000	                      TFI
+1	         31.01 N from mineral fertilizer	     0.000	                     kg N
+1	                 31.02 N from deposition	    19.241	                     kg N
+1	                       31.03 N from seed	     2.720	                     kg N
+1	                   31.04 N from fixation	     0.000	                     kg N
+1	           31.05 N from irrigation water	     0.000	                     kg N
+1	              31.06 N from spread manure	     0.000	                     kg N
+1	           31.07 N in urine from grazing	     0.000	                     kg N
+1	          31.08 N in faeces from grazing	     0.000	                     kg N
+1	                31.20 N removed in grain	    10.725	                     kg N
+1	                31.21 N removed in straw	    21.367	                     kg N
+1	                  31.22 N removed in cut	     0.000	                     kg N
+1	               31.23 N removed by cattle	     0.000	                     kg N
+1	                 31.40 Nitrate N leached	    76.605	                     kg N
+1	                31.41 Ammonium N leached	    17.595	                     kg N
+1	           31.42 N2 from denitrification	   127.967	                     kg N
+1	          31.43 N2O from denitrification	    20.347	                     kg N
+1	            31.44 N2O from nitrification	     0.474	                     kg N
+1	           31.45 NH3-N loss by spreading	     0.000	                     kg N
+1	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+1	              31.47 N in surface run-off	     0.000	                     kg N
+1	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+1	          31.60 N in standing crop/straw	   123.908	                     kg N
+1	          31.61 Total soil/soilsurface N	 19237.774	                     kg N
+1	31.99 Total soil/soilsurface nitrogen to 1 m depth	 17618.322	                     kg N
+1	                32.10 N uptake from soil	   129.630	                     kg N
+1	32.20 N from roots incorporated into soil	    70.136	                     kg N
+1	32.21 N from straw incorporated into soil	    17.482	                     kg N
+1	32.22 N from leaf litterfall incorporated into soil	     0.000	                     kg N
+1	32.23 N from storage incorporated into soil	     0.000	                     kg N
+1	32.30 Gross N-mineralisation from soil org. matter	   253.372	                     kg N
+1	32.40 Nitrate N leached from leaching depth	    81.634	                     kg N
+1	32.41 Ammonium N leached from leaching depth	    21.267	                     kg N
+1	                 32.60 Organic N in soil	 19160.905	                     kg N
+1	                 32.61 Mineral N in soil	    76.869	                     kg N
+1	                    32.62 AOM1 N in soil	    47.496	                     kg N
+1	                    32.63 AOM2 N in soil	     0.511	                     kg N
+1	                    32.64 SMB1 N in soil	   112.862	                     kg N
+1	                    32.65 SMB2 N in soil	     1.990	                     kg N
+1	                     32.66 SMR N in soil	    84.031	                     kg N
+1	                     32.67 NOM N in soil	  7269.705	                     kg N
+1	                     32.68 IOM N in soil	 11644.309	                     kg N
+1	         32.69 Organic N in soil 0-25 cm	  7166.972	                     kg N
+1	         32.70 Mineral N in soil 0-25 cm	    15.915	                     kg N
+1	        32.71 Organic N in soil 25-50 cm	  7621.420	                     kg N
+1	        32.72 Mineral N in soil 25-50 cm	    18.560	                     kg N
+1	        32.73 Organic N in soil 50-75 cm	  1393.160	                     kg N
+1	        32.74 Mineral N in soil 50-75 cm	     8.082	                     kg N
+1	       32.75 Organic N in soil 75-250 cm	  2979.353	                     kg N
+1	       32.76 Mineral N in soil 75-250 cm	    34.312	                     kg N
+1	              32.77 N in AOM+SMB 0-25 cm	   133.532	                     kg N
+1	             32.78 N in AOM+SMB 25-50 cm	    64.523	                     kg N
+1	             32.79 N in AOM+SMB 50-75 cm	    17.479	                     kg N
+1	            32.80 N in AOM+SMB 75-250 cm	    31.357	                     kg N
+1	                  32.81 N in NOM 0-25 cm	  3988.143	                     kg N
+1	                 32.82 N in NOM 25-50 cm	  2087.868	                     kg N
+1	                        32.83 Nmin 0-500	    34.475	                     kg N
+1	                        32.84 Nmin 0-750	    42.558	                     kg N
+1	                       32.85 Nmin 0-1000	    46.021	                     kg N
+1	                 32.90 N in NOM 50-75 cm	   379.777	                     kg N
+1	                32.91 N in NOM 75-250 cm	   813.918	                     kg N
+1	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+1	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+1	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+1	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+1	        33.01 N in feed for young cattle	     0.000	                     kg N
+1	        33.02 N in feed for adult cattle	     0.000	                     kg N
+1	                33.03 N in bought cattle	     0.000	                     kg N
+1	                33.04 N grazed by cattle	     0.000	                     kg N
+1	                         33.20 N in milk	     0.000	                     kg N
+1	                  33.21 N in sold cattle	     0.000	                     kg N
+1	           33.40 N in dairy cattle waste	     0.000	                     kg N
+1	          33.41 N in young cattle manure	     0.000	                     kg N
+1	          33.42 N in dairy cattle manure	     0.000	                     kg N
+1	                 33.60 N bound in cattle	     0.000	                     kg N
+1	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+1	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+1	             34.01 N in feed for piglets	     0.000	                     kg N
+1	                34.02 N in feed for sows	     0.000	                     kg N
+1	            34.03 N in feed for baconers	     0.000	                     kg N
+1	                  34.04 N in bought pigs	     0.000	                     kg N
+1	                    34.20 N in sold pigs	     0.000	                     kg N
+1	                  34.40 N in sows manure	     0.000	                     kg N
+1	              34.41 N in baconers manure	     0.000	                     kg N
+1	               34.42 N in piglets manure	     0.000	                     kg N
+1	                   34.60 N bound in pigs	     0.000	                     kg N
+1	              35.01 N from imported feed	     0.000	                     kg N
+1	            35.02 N from imported manure	     0.000	                     kg N
+1	           35.03 N from imported bedding	     0.000	                     kg N
+1	           35.04 N from harvest to store	     0.000	                     kg N
+1	          35.20 N in sold plant products	     0.000	                     kg N
+1	     35.21 N removed from manure storage	     0.000	                     kg N
+1	              35.22 N in exported manure	     0.000	                     kg N
+1	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+1	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+1	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+1	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+1	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+1	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+1	         35.60 N bound in manure storage	     0.000	                     kg N
+1	          35.61 N bound in stable manure	     0.000	                     kg N
+1	        35.62 N in stored plant products	     0.000	                     kg N
+1	                      35.63 N in bedding	     0.000	                     kg N
+1	    35.80 N transf. from stable to store	     0.000	                     kg N
+1	35.81 N removed from stored plant products	     0.000	                     kg N
+1	35.82 N removed from stored feed products	     0.000	                     kg N
+1	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+1	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+1	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+1	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+1	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+1	   36.05 S.barley yield (harv. bef. 1/8)	    10.725	                     kg N
+1	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+1	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+1	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+1	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+1	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+1	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+1	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+1	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+1	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+1	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+1	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+1	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+1	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+1	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+1	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+1	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+1	 37.00 N difference from area adjustment	     0.000	                     kg N
+1	37.01 N crop difference from area adjustment	     0.000	                     kg N
+1	37.02 N soil difference from area adjustment	     0.000	                     kg N
+1	              38.10 N15 harvest in grain	     0.000	                     kg N
+1	                 38.11 Total N15 harvest	     0.000	                     kg N
+1	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+1	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+1	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+1	               38.23 N15-Denitrification	     0.000	                     kg N
+1	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+1	               39.01 Catch crop DM (1/9)	     0.000	                    kg DM
+1	              39.02 Catch crop DM (1/11)	     0.000	                    kg DM
+1	                39.03 Catch crop N (1/9)	     0.000	                     kg N
+1	               39.04 Catch crop N (1/11)	     0.000	                     kg N
+1	39.10 Grain yield at environmental indicator date	     0.601	                        t
+1	39.11 Straw yield at environmental indicator date	     1.432	                        t
+1	39.12 Cut at environmental indicator date	     0.000	                        t
+1	    39.20 Date of emergence of main crop	   125.000	              day of year
+1	    39.21 Date of flowering of main crop	   166.000	              day of year
+1	39.22 Date of end of grain filling of main crop	   219.000	              day of year
+1	     39.23 Date of ripeness of main crop	     1.000	              day of year
+1	          40.01 Net crop carbon fixation	  1630.119	                     kg C
+1	       40.02 C from field-applied manure	     0.000	                     kg C
+1	                       40.03 C from seed	    66.470	                     kg C
+1	                40.20 C removed in grain	   234.328	                     kg C
+1	                40.21 C removed in straw	   558.419	                     kg C
+1	                  40.22 C removed in cut	     0.000	                     kg C
+1	               40.23 C removed by cattle	     0.000	                     kg C
+1	              40.40 CO2 soil respiration	  3285.269	                     kg C
+1	                   40.60 Total C in soil	207095.246	                     kg C
+1	          40.61 C in standing crop/straw	  1619.987	                     kg C
+1	           40.62 Total C in soil 0-25 cm	 76823.625	                     kg C
+1	          40.63 Total C in soil 25-50 cm	 82804.706	                     kg C
+1	          40.64 Total C in soil 50-75 cm	 15115.150	                     kg C
+1	         40.65 Total C in soil 75-250 cm	 32351.765	                     kg C
+1	              40.66 C in AOM+SMB 0-25 cm	  1174.718	                     kg C
+1	             40.67 C in AOM+SMB 25-50 cm	   596.583	                     kg C
+1	             40.68 C in AOM+SMB 50-75 cm	   148.914	                     kg C
+1	            40.69 C in AOM+SMB 75-250 cm	   279.105	                     kg C
+1	                  40.70 C in NOM 0-25 cm	 42854.123	                     kg C
+1	                 40.71 C in NOM 25-50 cm	 22673.123	                     kg C
+1	                 40.72 C in NOM 50-75 cm	  4124.986	                     kg C
+1	                40.73 C in NOM 75-250 cm	  8841.410	                     kg C
+1	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+1	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+1	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+1	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+1	40.80 C from roots incorporated into soil	   401.586	                     kg C
+1	40.81 C from straw incorporated into soil	   456.888	                     kg C
+1	40.82 C from leaf litterfall incorporated into soil	     0.000	                     kg C
+1	40.83 C from storage incorporated into soil	     0.000	                     kg N
+1	                    40.90 AOM1 C in soil	   919.899	                     kg C
+1	                    40.91 AOM2 C in soil	    11.777	                     kg C
+1	                    40.92 SMB1 C in soil	   744.892	                     kg C
+1	                    40.93 SMB2 C in soil	    18.566	                     kg C
+1	                     40.94 SMR C in soil	   504.186	                     kg C
+1	                     40.95 NOM C in soil	 78493.641	                     kg C
+1	                     40.96 IOM C in soil	126402.284	                     kg C
+1	               41.01 C input into cattle	     0.000	                     kg C
+1	        41.02 C in cattle CH4 production	     0.000	                     kg C
+1	                 41.03 C in cattle urine	     0.000	                     kg C
+1	                41.04 C in cattle faeces	     0.000	                     kg C
+1	        41.05 C in cattle CO2 production	     0.000	                     kg C
+1	              41.06 C in milk production	     0.000	                     kg C
+1	         41.07 C retained in cattle body	     0.000	                     kg C
+1	           41.08 C in urine from grazing	     0.000	                     kg C
+1	          41.09 C in faeces from grazing	     0.000	                     kg C
+1	            41.10 C from grazing animals	     0.000	                     kg C
+1	        43.01 C in feed for young cattle	     0.000	                     kg C
+1	        43.02 C in feed for adult cattle	     0.000	                     kg C
+1	                43.03 C in bought cattle	     0.000	                     kg C
+1	                43.04 C grazed by cattle	     0.000	                     kg C
+1	                  43.21 C in sold cattle	     0.000	                     kg C
+1	          43.41 4 in young cattle manure	     0.000	                     kg C
+1	          43.42 C in dairy cattle manure	     0.000	                     kg C
+1	                 43.60 C bound in cattle	     0.000	                     kg C
+1	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+1	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+1	             44.01 C in feed for piglets	     0.000	                     kg C
+1	                44.02 C in feed for sows	     0.000	                     kg C
+1	            44.03 C in feed for baconers	     0.000	                     kg C
+1	                  44.04 C in bought pigs	     0.000	                     kg C
+1	                    44.20 C in sold pigs	     0.000	                     kg C
+1	                  44.40 C in sows manure	     0.000	                     kg C
+1	              44.41 C in baconers manure	     0.000	                     kg C
+1	               44.42 C in piglets manure	     0.000	                     kg C
+1	                   44.60 C bound in pigs	     0.000	                     kg C
+1	                    44.62 C in sold pigs	     0.000	                     kg C
+1	           44.63 C in pig CO2 production	     0.000	                     kg C
+1	           44.64 C in pig CH4 production	     0.000	                     kg C
+1	              45.01 C from imported feed	     0.000	                     kg C
+1	            45.02 C from imported manure	     0.000	                     kg C
+1	           45.03 C from imported bedding	     0.000	                     kg C
+1	           45.04 C from harvest to store	     0.000	                     kg C
+1	          45.20 C in sold plant products	     0.000	                     kg C
+1	     45.21 C removed from manure storage	     0.000	                     kg C
+1	              45.22 C in exported manure	     0.000	                     kg C
+1	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+1	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+1	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+1	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+1	         45.60 C bound in manure storage	     0.000	                     kg C
+1	          45.61 C bound in stable manure	     0.000	                     kg C
+1	        45.62 C in stored plant products	     0.000	                     kg C
+1	                      45.63 C in bedding	     0.000	                     kg C
+1	    45.80 C transf. from stable to store	     0.000	                     kg C
+1	45.81 C removed from stored plant products	     0.000	                     kg C
+1	45.82 C removed from stored feed products	     0.000	                     kg C
+1	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+1	                   50.02 feed-P for sows	     0.000	                     kg P
+1	               50.03 feed-P for baconers	     0.000	                     kg P
+1	                50.04 feed-P for piglets	     0.000	                     kg P
+1	                50.10 manure-P from sows	     0.000	                     kg P
+1	            50.11 manure-P from baconers	     0.000	                     kg P
+1	             50.12 manure-P from piglets	     0.000	                     kg P
+1	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+1	                   60.02 feed-K for sows	     0.000	                     kg K
+1	               60.03 feed-K for baconers	     0.000	                     kg K
+1	                60.04 feed-K for piglets	     0.000	                     kg K
+1	                60.10 manure-K from sows	     0.000	                     kg K
+1	            60.11 manure-K from baconers	     0.000	                     kg K
+1	             60.12 manure-K from piglets	     0.000	                     kg K
+1	                         70.01 Rainwater	  9620.650	              cubic meter
+1	                        70.02 Irrigation	     0.000	              cubic meter
+1	                       70.10 Percolation	  6567.506	              cubic meter
+1	                   70.11 Surface run-off	     0.000	              cubic meter
+1	                70.12 Evapotranspiration	  2547.844	              cubic meter
+1	    70.15 Water in field to balancedepth	  5708.088	              cubic meter
+1	                     70.20 Water in soil	     0.000	              cubic meter
+1	   70.40 Percolation from leaching depth	  6594.703	              cubic meter
+1	  70.41 Water in field to leaching depth	  2909.258	              cubic meter
+1	             70.42 Bare soil evaporation	  2325.084	              cubic meter
+1	                     70.50 Precipitation	     0.000	                       mm
+1	             80.01 Herbicide consumption	     0.000	                      TFI
+1	             80.02 Fungicide consumption	     0.000	                      TFI
+1	           80.03 Insecticide consumption	     0.000	                      TFI
+2	         31.01 N from mineral fertilizer	     0.000	                     kg N
+2	                 31.02 N from deposition	    21.629	                     kg N
+2	                       31.03 N from seed	     2.960	                     kg N
+2	                   31.04 N from fixation	   128.351	                     kg N
+2	           31.05 N from irrigation water	     0.000	                     kg N
+2	              31.06 N from spread manure	     0.000	                     kg N
+2	           31.07 N in urine from grazing	     0.000	                     kg N
+2	          31.08 N in faeces from grazing	     0.000	                     kg N
+2	                31.20 N removed in grain	    12.932	                     kg N
+2	                31.21 N removed in straw	    23.012	                     kg N
+2	                  31.22 N removed in cut	     0.000	                     kg N
+2	               31.23 N removed by cattle	     0.000	                     kg N
+2	                 31.40 Nitrate N leached	   117.828	                     kg N
+2	                31.41 Ammonium N leached	    17.393	                     kg N
+2	           31.42 N2 from denitrification	    74.773	                     kg N
+2	          31.43 N2O from denitrification	    10.125	                     kg N
+2	            31.44 N2O from nitrification	     0.418	                     kg N
+2	           31.45 NH3-N loss by spreading	     0.000	                     kg N
+2	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+2	              31.47 N in surface run-off	     0.000	                     kg N
+2	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+2	          31.60 N in standing crop/straw	   202.857	                     kg N
+2	          31.61 Total soil/soilsurface N	 19143.283	                     kg N
+2	31.99 Total soil/soilsurface nitrogen to 1 m depth	 17535.726	                     kg N
+2	                32.10 N uptake from soil	   150.556	                     kg N
+2	32.20 N from roots incorporated into soil	    77.940	                     kg N
+2	32.21 N from straw incorporated into soil	    18.828	                     kg N
+2	32.22 N from leaf litterfall incorporated into soil	    70.206	                     kg N
+2	32.23 N from storage incorporated into soil	     0.000	                     kg N
+2	32.30 Gross N-mineralisation from soil org. matter	   227.503	                     kg N
+2	32.40 Nitrate N leached from leaching depth	   108.785	                     kg N
+2	32.41 Ammonium N leached from leaching depth	    19.893	                     kg N
+2	                 32.60 Organic N in soil	 19046.333	                     kg N
+2	                 32.61 Mineral N in soil	    42.908	                     kg N
+2	                    32.62 AOM1 N in soil	    63.463	                     kg N
+2	                    32.63 AOM2 N in soil	     5.664	                     kg N
+2	                    32.64 SMB1 N in soil	    90.703	                     kg N
+2	                    32.65 SMB2 N in soil	     3.005	                     kg N
+2	                     32.66 SMR N in soil	    46.115	                     kg N
+2	                     32.67 NOM N in soil	  7193.074	                     kg N
+2	                     32.68 IOM N in soil	 11644.309	                     kg N
+2	         32.69 Organic N in soil 0-25 cm	  7118.275	                     kg N
+2	         32.70 Mineral N in soil 0-25 cm	     4.099	                     kg N
+2	        32.71 Organic N in soil 25-50 cm	  7579.785	                     kg N
+2	        32.72 Mineral N in soil 25-50 cm	     2.807	                     kg N
+2	        32.73 Organic N in soil 50-75 cm	  1387.088	                     kg N
+2	        32.74 Mineral N in soil 50-75 cm	     1.566	                     kg N
+2	       32.75 Organic N in soil 75-250 cm	  2961.186	                     kg N
+2	       32.76 Mineral N in soil 75-250 cm	    34.436	                     kg N
+2	              32.77 N in AOM+SMB 0-25 cm	   125.390	                     kg N
+2	             32.78 N in AOM+SMB 25-50 cm	    46.875	                     kg N
+2	             32.79 N in AOM+SMB 50-75 cm	    15.097	                     kg N
+2	            32.80 N in AOM+SMB 75-250 cm	    21.588	                     kg N
+2	                  32.81 N in NOM 0-25 cm	  3947.588	                     kg N
+2	                 32.82 N in NOM 25-50 cm	  2063.881	                     kg N
+2	                        32.83 Nmin 0-500	     6.906	                     kg N
+2	                        32.84 Nmin 0-750	     8.472	                     kg N
+2	                       32.85 Nmin 0-1000	    13.752	                     kg N
+2	                 32.90 N in NOM 50-75 cm	   376.087	                     kg N
+2	                32.91 N in NOM 75-250 cm	   805.519	                     kg N
+2	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+2	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+2	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+2	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+2	        33.01 N in feed for young cattle	     0.000	                     kg N
+2	        33.02 N in feed for adult cattle	     0.000	                     kg N
+2	                33.03 N in bought cattle	     0.000	                     kg N
+2	                33.04 N grazed by cattle	     0.000	                     kg N
+2	                         33.20 N in milk	     0.000	                     kg N
+2	                  33.21 N in sold cattle	     0.000	                     kg N
+2	           33.40 N in dairy cattle waste	     0.000	                     kg N
+2	          33.41 N in young cattle manure	     0.000	                     kg N
+2	          33.42 N in dairy cattle manure	     0.000	                     kg N
+2	                 33.60 N bound in cattle	     0.000	                     kg N
+2	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+2	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+2	             34.01 N in feed for piglets	     0.000	                     kg N
+2	                34.02 N in feed for sows	     0.000	                     kg N
+2	            34.03 N in feed for baconers	     0.000	                     kg N
+2	                  34.04 N in bought pigs	     0.000	                     kg N
+2	                    34.20 N in sold pigs	     0.000	                     kg N
+2	                  34.40 N in sows manure	     0.000	                     kg N
+2	              34.41 N in baconers manure	     0.000	                     kg N
+2	               34.42 N in piglets manure	     0.000	                     kg N
+2	                   34.60 N bound in pigs	     0.000	                     kg N
+2	              35.01 N from imported feed	     0.000	                     kg N
+2	            35.02 N from imported manure	     0.000	                     kg N
+2	           35.03 N from imported bedding	     0.000	                     kg N
+2	           35.04 N from harvest to store	     0.000	                     kg N
+2	          35.20 N in sold plant products	     0.000	                     kg N
+2	     35.21 N removed from manure storage	     0.000	                     kg N
+2	              35.22 N in exported manure	     0.000	                     kg N
+2	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+2	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+2	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+2	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+2	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+2	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+2	         35.60 N bound in manure storage	     0.000	                     kg N
+2	          35.61 N bound in stable manure	     0.000	                     kg N
+2	        35.62 N in stored plant products	     0.000	                     kg N
+2	                      35.63 N in bedding	     0.000	                     kg N
+2	    35.80 N transf. from stable to store	     0.000	                     kg N
+2	35.81 N removed from stored plant products	     0.000	                     kg N
+2	35.82 N removed from stored feed products	     0.000	                     kg N
+2	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+2	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+2	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+2	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+2	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+2	   36.05 S.barley yield (harv. bef. 1/8)	    12.932	                     kg N
+2	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+2	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+2	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+2	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+2	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+2	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+2	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+2	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+2	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+2	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+2	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+2	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+2	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+2	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+2	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+2	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+2	 37.00 N difference from area adjustment	     0.000	                     kg N
+2	37.01 N crop difference from area adjustment	     0.000	                     kg N
+2	37.02 N soil difference from area adjustment	     0.000	                     kg N
+2	              38.10 N15 harvest in grain	     0.000	                     kg N
+2	                 38.11 Total N15 harvest	     0.000	                     kg N
+2	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+2	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+2	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+2	               38.23 N15-Denitrification	     0.000	                     kg N
+2	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+2	               39.01 Catch crop DM (1/9)	     0.000	                    kg DM
+2	              39.02 Catch crop DM (1/11)	     0.000	                    kg DM
+2	                39.03 Catch crop N (1/9)	     0.000	                     kg N
+2	               39.04 Catch crop N (1/11)	     0.000	                     kg N
+2	39.10 Grain yield at environmental indicator date	     0.724	                        t
+2	39.11 Straw yield at environmental indicator date	     1.635	                        t
+2	39.12 Cut at environmental indicator date	     0.000	                        t
+2	    39.20 Date of emergence of main crop	   120.000	              day of year
+2	    39.21 Date of flowering of main crop	   172.000	              day of year
+2	39.22 Date of end of grain filling of main crop	     1.000	              day of year
+2	     39.23 Date of ripeness of main crop	     1.000	              day of year
+2	          40.01 Net crop carbon fixation	  5392.216	                     kg C
+2	       40.02 C from field-applied manure	     0.000	                     kg C
+2	                       40.03 C from seed	    70.909	                     kg C
+2	                40.20 C removed in grain	   282.552	                     kg C
+2	                40.21 C removed in straw	   637.507	                     kg C
+2	                  40.22 C removed in cut	     0.000	                     kg C
+2	               40.23 C removed by cattle	     0.000	                     kg C
+2	              40.40 CO2 soil respiration	  2513.633	                     kg C
+2	                   40.60 Total C in soil	206979.696	                     kg C
+2	          40.61 C in standing crop/straw	  3588.610	                     kg C
+2	           40.62 Total C in soil 0-25 cm	 76401.885	                     kg C
+2	          40.63 Total C in soil 25-50 cm	 82290.886	                     kg C
+2	          40.64 Total C in soil 50-75 cm	 15029.227	                     kg C
+2	         40.65 Total C in soil 75-250 cm	 32133.781	                     kg C
+2	              40.66 C in AOM+SMB 0-25 cm	  1221.387	                     kg C
+2	             40.67 C in AOM+SMB 25-50 cm	   361.313	                     kg C
+2	             40.68 C in AOM+SMB 50-75 cm	   106.686	                     kg C
+2	            40.69 C in AOM+SMB 75-250 cm	   159.715	                     kg C
+2	                  40.70 C in NOM 0-25 cm	 42385.714	                     kg C
+2	                 40.71 C in NOM 25-50 cm	 22394.574	                     kg C
+2	                 40.72 C in NOM 50-75 cm	  4081.291	                     kg C
+2	                40.73 C in NOM 75-250 cm	  8742.816	                     kg C
+2	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+2	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+2	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+2	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+2	40.80 C from roots incorporated into soil	   431.321	                     kg C
+2	40.81 C from straw incorporated into soil	   521.597	                     kg C
+2	40.82 C from leaf litterfall incorporated into soil	  1445.166	                     kg C
+2	40.83 C from storage incorporated into soil	     0.000	                     kg N
+2	                    40.90 AOM1 C in soil	   832.920	                     kg C
+2	                    40.91 AOM2 C in soil	   112.805	                     kg C
+2	                    40.92 SMB1 C in soil	   598.642	                     kg C
+2	                    40.93 SMB2 C in soil	    28.040	                     kg C
+2	                     40.94 SMR C in soil	   276.693	                     kg C
+2	                     40.95 NOM C in soil	 77604.395	                     kg C
+2	                     40.96 IOM C in soil	126402.284	                     kg C
+2	               41.01 C input into cattle	     0.000	                     kg C
+2	        41.02 C in cattle CH4 production	     0.000	                     kg C
+2	                 41.03 C in cattle urine	     0.000	                     kg C
+2	                41.04 C in cattle faeces	     0.000	                     kg C
+2	        41.05 C in cattle CO2 production	     0.000	                     kg C
+2	              41.06 C in milk production	     0.000	                     kg C
+2	         41.07 C retained in cattle body	     0.000	                     kg C
+2	           41.08 C in urine from grazing	     0.000	                     kg C
+2	          41.09 C in faeces from grazing	     0.000	                     kg C
+2	            41.10 C from grazing animals	     0.000	                     kg C
+2	        43.01 C in feed for young cattle	     0.000	                     kg C
+2	        43.02 C in feed for adult cattle	     0.000	                     kg C
+2	                43.03 C in bought cattle	     0.000	                     kg C
+2	                43.04 C grazed by cattle	     0.000	                     kg C
+2	                  43.21 C in sold cattle	     0.000	                     kg C
+2	          43.41 4 in young cattle manure	     0.000	                     kg C
+2	          43.42 C in dairy cattle manure	     0.000	                     kg C
+2	                 43.60 C bound in cattle	     0.000	                     kg C
+2	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+2	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+2	             44.01 C in feed for piglets	     0.000	                     kg C
+2	                44.02 C in feed for sows	     0.000	                     kg C
+2	            44.03 C in feed for baconers	     0.000	                     kg C
+2	                  44.04 C in bought pigs	     0.000	                     kg C
+2	                    44.20 C in sold pigs	     0.000	                     kg C
+2	                  44.40 C in sows manure	     0.000	                     kg C
+2	              44.41 C in baconers manure	     0.000	                     kg C
+2	               44.42 C in piglets manure	     0.000	                     kg C
+2	                   44.60 C bound in pigs	     0.000	                     kg C
+2	                    44.62 C in sold pigs	     0.000	                     kg C
+2	           44.63 C in pig CO2 production	     0.000	                     kg C
+2	           44.64 C in pig CH4 production	     0.000	                     kg C
+2	              45.01 C from imported feed	     0.000	                     kg C
+2	            45.02 C from imported manure	     0.000	                     kg C
+2	           45.03 C from imported bedding	     0.000	                     kg C
+2	           45.04 C from harvest to store	     0.000	                     kg C
+2	          45.20 C in sold plant products	     0.000	                     kg C
+2	     45.21 C removed from manure storage	     0.000	                     kg C
+2	              45.22 C in exported manure	     0.000	                     kg C
+2	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+2	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+2	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+2	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+2	         45.60 C bound in manure storage	     0.000	                     kg C
+2	          45.61 C bound in stable manure	     0.000	                     kg C
+2	        45.62 C in stored plant products	     0.000	                     kg C
+2	                      45.63 C in bedding	     0.000	                     kg C
+2	    45.80 C transf. from stable to store	     0.000	                     kg C
+2	45.81 C removed from stored plant products	     0.000	                     kg C
+2	45.82 C removed from stored feed products	     0.000	                     kg C
+2	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+2	                   50.02 feed-P for sows	     0.000	                     kg P
+2	               50.03 feed-P for baconers	     0.000	                     kg P
+2	                50.04 feed-P for piglets	     0.000	                     kg P
+2	                50.10 manure-P from sows	     0.000	                     kg P
+2	            50.11 manure-P from baconers	     0.000	                     kg P
+2	             50.12 manure-P from piglets	     0.000	                     kg P
+2	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+2	                   60.02 feed-K for sows	     0.000	                     kg K
+2	               60.03 feed-K for baconers	     0.000	                     kg K
+2	                60.04 feed-K for piglets	     0.000	                     kg K
+2	                60.10 manure-K from sows	     0.000	                     kg K
+2	            60.11 manure-K from baconers	     0.000	                     kg K
+2	             60.12 manure-K from piglets	     0.000	                     kg K
+2	                         70.01 Rainwater	 10814.400	              cubic meter
+2	                        70.02 Irrigation	     0.000	              cubic meter
+2	                       70.10 Percolation	  7825.075	              cubic meter
+2	                   70.11 Surface run-off	     0.000	              cubic meter
+2	                70.12 Evapotranspiration	  2611.022	              cubic meter
+2	    70.15 Water in field to balancedepth	  5512.618	              cubic meter
+2	                     70.20 Water in soil	    10.198	              cubic meter
+2	   70.40 Percolation from leaching depth	  7827.854	              cubic meter
+2	  70.41 Water in field to leaching depth	  2750.210	              cubic meter
+2	             70.42 Bare soil evaporation	  1891.634	              cubic meter
+2	                     70.50 Precipitation	     0.000	                       mm
+2	             80.01 Herbicide consumption	     0.000	                      TFI
+2	             80.02 Fungicide consumption	     0.000	                      TFI
+2	           80.03 Insecticide consumption	     0.000	                      TFI
+3	         31.01 N from mineral fertilizer	     0.000	                     kg N
+3	                 31.02 N from deposition	    20.472	                     kg N
+3	                       31.03 N from seed	     0.000	                     kg N
+3	                   31.04 N from fixation	   368.806	                     kg N
+3	           31.05 N from irrigation water	     0.000	                     kg N
+3	              31.06 N from spread manure	     0.000	                     kg N
+3	           31.07 N in urine from grazing	     0.000	                     kg N
+3	          31.08 N in faeces from grazing	     0.000	                     kg N
+3	                31.20 N removed in grain	    55.495	                     kg N
+3	                31.21 N removed in straw	    45.438	                     kg N
+3	                  31.22 N removed in cut	   112.910	                     kg N
+3	               31.23 N removed by cattle	     0.000	                     kg N
+3	                 31.40 Nitrate N leached	    21.954	                     kg N
+3	                31.41 Ammonium N leached	     8.037	                     kg N
+3	           31.42 N2 from denitrification	     9.464	                     kg N
+3	          31.43 N2O from denitrification	     1.609	                     kg N
+3	            31.44 N2O from nitrification	     0.270	                     kg N
+3	           31.45 NH3-N loss by spreading	     0.000	                     kg N
+3	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+3	              31.47 N in surface run-off	     0.000	                     kg N
+3	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+3	          31.60 N in standing crop/straw	   500.329	                     kg N
+3	          31.61 Total soil/soilsurface N	 19172.912	                     kg N
+3	31.99 Total soil/soilsurface nitrogen to 1 m depth	 17597.592	                     kg N
+3	                32.10 N uptake from soil	   386.204	                     kg N
+3	32.20 N from roots incorporated into soil	   135.964	                     kg N
+3	32.21 N from straw incorporated into soil	    37.177	                     kg N
+3	32.22 N from leaf litterfall incorporated into soil	    70.555	                     kg N
+3	32.23 N from storage incorporated into soil	     0.000	                     kg N
+3	32.30 Gross N-mineralisation from soil org. matter	   194.874	                     kg N
+3	32.40 Nitrate N leached from leaching depth	     1.198	                     kg N
+3	32.41 Ammonium N leached from leaching depth	     7.741	                     kg N
+3	                 32.60 Organic N in soil	 19138.795	                     kg N
+3	                 32.61 Mineral N in soil	    23.716	                     kg N
+3	                    32.62 AOM1 N in soil	   127.640	                     kg N
+3	                    32.63 AOM2 N in soil	     8.987	                     kg N
+3	                    32.64 SMB1 N in soil	   128.283	                     kg N
+3	                    32.65 SMB2 N in soil	     6.667	                     kg N
+3	                     32.66 SMR N in soil	    99.991	                     kg N
+3	                     32.67 NOM N in soil	  7122.918	                     kg N
+3	                     32.68 IOM N in soil	 11644.309	                     kg N
+3	         32.69 Organic N in soil 0-25 cm	  7247.762	                     kg N
+3	         32.70 Mineral N in soil 0-25 cm	     5.127	                     kg N
+3	        32.71 Organic N in soil 25-50 cm	  7557.025	                     kg N
+3	        32.72 Mineral N in soil 25-50 cm	     1.708	                     kg N
+3	        32.73 Organic N in soil 50-75 cm	  1385.503	                     kg N
+3	        32.74 Mineral N in soil 50-75 cm	     1.188	                     kg N
+3	       32.75 Organic N in soil 75-250 cm	  2948.505	                     kg N
+3	       32.76 Mineral N in soil 75-250 cm	     5.527	                     kg N
+3	              32.77 N in AOM+SMB 0-25 cm	   282.311	                     kg N
+3	             32.78 N in AOM+SMB 25-50 cm	    52.757	                     kg N
+3	             32.79 N in AOM+SMB 50-75 cm	    17.787	                     kg N
+3	            32.80 N in AOM+SMB 75-250 cm	    18.712	                     kg N
+3	                  32.81 N in NOM 0-25 cm	  3920.154	                     kg N
+3	                 32.82 N in NOM 25-50 cm	  2035.238	                     kg N
+3	                        32.83 Nmin 0-500	     6.834	                     kg N
+3	                        32.84 Nmin 0-750	     8.022	                     kg N
+3	                       32.85 Nmin 0-1000	     9.111	                     kg N
+3	                 32.90 N in NOM 50-75 cm	   371.812	                     kg N
+3	                32.91 N in NOM 75-250 cm	   795.714	                     kg N
+3	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+3	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+3	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+3	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+3	        33.01 N in feed for young cattle	     0.000	                     kg N
+3	        33.02 N in feed for adult cattle	     0.000	                     kg N
+3	                33.03 N in bought cattle	     0.000	                     kg N
+3	                33.04 N grazed by cattle	     0.000	                     kg N
+3	                         33.20 N in milk	     0.000	                     kg N
+3	                  33.21 N in sold cattle	     0.000	                     kg N
+3	           33.40 N in dairy cattle waste	     0.000	                     kg N
+3	          33.41 N in young cattle manure	     0.000	                     kg N
+3	          33.42 N in dairy cattle manure	     0.000	                     kg N
+3	                 33.60 N bound in cattle	     0.000	                     kg N
+3	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+3	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+3	             34.01 N in feed for piglets	     0.000	                     kg N
+3	                34.02 N in feed for sows	     0.000	                     kg N
+3	            34.03 N in feed for baconers	     0.000	                     kg N
+3	                  34.04 N in bought pigs	     0.000	                     kg N
+3	                    34.20 N in sold pigs	     0.000	                     kg N
+3	                  34.40 N in sows manure	     0.000	                     kg N
+3	              34.41 N in baconers manure	     0.000	                     kg N
+3	               34.42 N in piglets manure	     0.000	                     kg N
+3	                   34.60 N bound in pigs	     0.000	                     kg N
+3	              35.01 N from imported feed	     0.000	                     kg N
+3	            35.02 N from imported manure	     0.000	                     kg N
+3	           35.03 N from imported bedding	     0.000	                     kg N
+3	           35.04 N from harvest to store	     0.000	                     kg N
+3	          35.20 N in sold plant products	     0.000	                     kg N
+3	     35.21 N removed from manure storage	     0.000	                     kg N
+3	              35.22 N in exported manure	     0.000	                     kg N
+3	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+3	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+3	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+3	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+3	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+3	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+3	         35.60 N bound in manure storage	     0.000	                     kg N
+3	          35.61 N bound in stable manure	     0.000	                     kg N
+3	        35.62 N in stored plant products	     0.000	                     kg N
+3	                      35.63 N in bedding	     0.000	                     kg N
+3	    35.80 N transf. from stable to store	     0.000	                     kg N
+3	35.81 N removed from stored plant products	     0.000	                     kg N
+3	35.82 N removed from stored feed products	     0.000	                     kg N
+3	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+3	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+3	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+3	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+3	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+3	   36.05 S.barley yield (harv. bef. 1/8)	     4.766	                     kg N
+3	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+3	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+3	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+3	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+3	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+3	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+3	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+3	   36.13 Ryegrass yield (harv. bef. 1/8)	    35.669	                     kg N
+3	     36.14 Clover yield (harv. bef. 1/8)	    45.011	                     kg N
+3	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+3	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+3	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+3	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+3	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+3	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+3	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+3	 37.00 N difference from area adjustment	     0.000	                     kg N
+3	37.01 N crop difference from area adjustment	     0.000	                     kg N
+3	37.02 N soil difference from area adjustment	     0.000	                     kg N
+3	              38.10 N15 harvest in grain	     0.000	                     kg N
+3	                 38.11 Total N15 harvest	     0.000	                     kg N
+3	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+3	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+3	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+3	               38.23 N15-Denitrification	     0.000	                     kg N
+3	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+3	               39.01 Catch crop DM (1/9)	   612.896	                    kg DM
+3	              39.02 Catch crop DM (1/11)	  2053.776	                    kg DM
+3	                39.03 Catch crop N (1/9)	    13.507	                     kg N
+3	               39.04 Catch crop N (1/11)	    52.836	                     kg N
+3	39.10 Grain yield at environmental indicator date	     2.992	                        t
+3	39.11 Straw yield at environmental indicator date	     2.429	                        t
+3	39.12 Cut at environmental indicator date	     0.000	                        t
+3	    39.20 Date of emergence of main crop	   133.000	              day of year
+3	    39.21 Date of flowering of main crop	   164.000	              day of year
+3	39.22 Date of end of grain filling of main crop	   218.000	              day of year
+3	     39.23 Date of ripeness of main crop	     1.000	              day of year
+3	          40.01 Net crop carbon fixation	 15411.309	                     kg C
+3	       40.02 C from field-applied manure	     0.000	                     kg C
+3	                       40.03 C from seed	     0.000	                     kg C
+3	                40.20 C removed in grain	  1166.824	                     kg C
+3	                40.21 C removed in straw	   947.390	                     kg C
+3	                  40.22 C removed in cut	  3159.345	                     kg C
+3	               40.23 C removed by cattle	     0.000	                     kg C
+3	              40.40 CO2 soil respiration	  4756.714	                     kg C
+3	                   40.60 Total C in soil	207393.819	                     kg C
+3	          40.61 C in standing crop/straw	  7579.099	                     kg C
+3	           40.62 Total C in soil 0-25 cm	 77924.310	                     kg C
+3	          40.63 Total C in soil 25-50 cm	 82055.121	                     kg C
+3	          40.64 Total C in soil 50-75 cm	 15016.232	                     kg C
+3	         40.65 Total C in soil 75-250 cm	 31997.863	                     kg C
+3	              40.66 C in AOM+SMB 0-25 cm	  3087.217	                     kg C
+3	             40.67 C in AOM+SMB 25-50 cm	   452.149	                     kg C
+3	             40.68 C in AOM+SMB 50-75 cm	   143.075	                     kg C
+3	            40.69 C in AOM+SMB 75-250 cm	   135.812	                     kg C
+3	                  40.70 C in NOM 0-25 cm	 42042.309	                     kg C
+3	                 40.71 C in NOM 25-50 cm	 22067.972	                     kg C
+3	                 40.72 C in NOM 50-75 cm	  4031.908	                     kg C
+3	                40.73 C in NOM 75-250 cm	  8630.801	                     kg C
+3	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+3	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+3	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+3	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+3	40.80 C from roots incorporated into soil	  1753.981	                     kg C
+3	40.81 C from straw incorporated into soil	   775.137	                     kg C
+3	40.82 C from leaf litterfall incorporated into soil	  2641.719	                     kg C
+3	40.83 C from storage incorporated into soil	     0.000	                     kg N
+3	                    40.90 AOM1 C in soil	  2128.320	                     kg C
+3	                    40.91 AOM2 C in soil	   181.114	                     kg C
+3	                    40.92 SMB1 C in soil	   846.669	                     kg C
+3	                    40.93 SMB2 C in soil	    62.205	                     kg C
+3	                     40.94 SMR C in soil	   599.945	                     kg C
+3	                     40.95 NOM C in soil	 76772.990	                     kg C
+3	                     40.96 IOM C in soil	126402.284	                     kg C
+3	               41.01 C input into cattle	     0.000	                     kg C
+3	        41.02 C in cattle CH4 production	     0.000	                     kg C
+3	                 41.03 C in cattle urine	     0.000	                     kg C
+3	                41.04 C in cattle faeces	     0.000	                     kg C
+3	        41.05 C in cattle CO2 production	     0.000	                     kg C
+3	              41.06 C in milk production	     0.000	                     kg C
+3	         41.07 C retained in cattle body	     0.000	                     kg C
+3	           41.08 C in urine from grazing	     0.000	                     kg C
+3	          41.09 C in faeces from grazing	     0.000	                     kg C
+3	            41.10 C from grazing animals	     0.000	                     kg C
+3	        43.01 C in feed for young cattle	     0.000	                     kg C
+3	        43.02 C in feed for adult cattle	     0.000	                     kg C
+3	                43.03 C in bought cattle	     0.000	                     kg C
+3	                43.04 C grazed by cattle	     0.000	                     kg C
+3	                  43.21 C in sold cattle	     0.000	                     kg C
+3	          43.41 4 in young cattle manure	     0.000	                     kg C
+3	          43.42 C in dairy cattle manure	     0.000	                     kg C
+3	                 43.60 C bound in cattle	     0.000	                     kg C
+3	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+3	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+3	             44.01 C in feed for piglets	     0.000	                     kg C
+3	                44.02 C in feed for sows	     0.000	                     kg C
+3	            44.03 C in feed for baconers	     0.000	                     kg C
+3	                  44.04 C in bought pigs	     0.000	                     kg C
+3	                    44.20 C in sold pigs	     0.000	                     kg C
+3	                  44.40 C in sows manure	     0.000	                     kg C
+3	              44.41 C in baconers manure	     0.000	                     kg C
+3	               44.42 C in piglets manure	     0.000	                     kg C
+3	                   44.60 C bound in pigs	     0.000	                     kg C
+3	                    44.62 C in sold pigs	     0.000	                     kg C
+3	           44.63 C in pig CO2 production	     0.000	                     kg C
+3	           44.64 C in pig CH4 production	     0.000	                     kg C
+3	              45.01 C from imported feed	     0.000	                     kg C
+3	            45.02 C from imported manure	     0.000	                     kg C
+3	           45.03 C from imported bedding	     0.000	                     kg C
+3	           45.04 C from harvest to store	     0.000	                     kg C
+3	          45.20 C in sold plant products	     0.000	                     kg C
+3	     45.21 C removed from manure storage	     0.000	                     kg C
+3	              45.22 C in exported manure	     0.000	                     kg C
+3	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+3	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+3	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+3	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+3	         45.60 C bound in manure storage	     0.000	                     kg C
+3	          45.61 C bound in stable manure	     0.000	                     kg C
+3	        45.62 C in stored plant products	     0.000	                     kg C
+3	                      45.63 C in bedding	     0.000	                     kg C
+3	    45.80 C transf. from stable to store	     0.000	                     kg C
+3	45.81 C removed from stored plant products	     0.000	                     kg C
+3	45.82 C removed from stored feed products	     0.000	                     kg C
+3	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+3	                   50.02 feed-P for sows	     0.000	                     kg P
+3	               50.03 feed-P for baconers	     0.000	                     kg P
+3	                50.04 feed-P for piglets	     0.000	                     kg P
+3	                50.10 manure-P from sows	     0.000	                     kg P
+3	            50.11 manure-P from baconers	     0.000	                     kg P
+3	             50.12 manure-P from piglets	     0.000	                     kg P
+3	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+3	                   60.02 feed-K for sows	     0.000	                     kg K
+3	               60.03 feed-K for baconers	     0.000	                     kg K
+3	                60.04 feed-K for piglets	     0.000	                     kg K
+3	                60.10 manure-K from sows	     0.000	                     kg K
+3	            60.11 manure-K from baconers	     0.000	                     kg K
+3	             60.12 manure-K from piglets	     0.000	                     kg K
+3	                         70.01 Rainwater	 10235.990	              cubic meter
+3	                        70.02 Irrigation	     0.000	              cubic meter
+3	                       70.10 Percolation	  6213.444	              cubic meter
+3	                   70.11 Surface run-off	     0.000	              cubic meter
+3	                70.12 Evapotranspiration	  3631.199	              cubic meter
+3	    70.15 Water in field to balancedepth	  4374.278	              cubic meter
+3	                     70.20 Water in soil	    15.451	              cubic meter
+3	   70.40 Percolation from leaching depth	  6425.381	              cubic meter
+3	  70.41 Water in field to leaching depth	  2100.892	              cubic meter
+3	             70.42 Bare soil evaporation	  1070.952	              cubic meter
+3	                     70.50 Precipitation	     0.000	                       mm
+3	             80.01 Herbicide consumption	     0.000	                      TFI
+3	             80.02 Fungicide consumption	     0.000	                      TFI
+3	           80.03 Insecticide consumption	     0.000	                      TFI
+4	         31.01 N from mineral fertilizer	     0.000	                     kg N
+4	                 31.02 N from deposition	    22.083	                     kg N
+4	                       31.03 N from seed	     2.880	                     kg N
+4	                   31.04 N from fixation	   178.077	                     kg N
+4	           31.05 N from irrigation water	     0.000	                     kg N
+4	              31.06 N from spread manure	     0.000	                     kg N
+4	           31.07 N in urine from grazing	     0.000	                     kg N
+4	          31.08 N in faeces from grazing	     0.000	                     kg N
+4	                31.20 N removed in grain	   160.077	                     kg N
+4	                31.21 N removed in straw	    65.516	                     kg N
+4	                  31.22 N removed in cut	     0.000	                     kg N
+4	               31.23 N removed by cattle	     0.000	                     kg N
+4	                 31.40 Nitrate N leached	    29.170	                     kg N
+4	                31.41 Ammonium N leached	    21.138	                     kg N
+4	           31.42 N2 from denitrification	   114.868	                     kg N
+4	          31.43 N2O from denitrification	    30.474	                     kg N
+4	            31.44 N2O from nitrification	     0.810	                     kg N
+4	           31.45 NH3-N loss by spreading	     0.000	                     kg N
+4	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+4	              31.47 N in surface run-off	     0.000	                     kg N
+4	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+4	          31.60 N in standing crop/straw	     0.000	                     kg N
+4	          31.61 Total soil/soilsurface N	 19619.228	                     kg N
+4	31.99 Total soil/soilsurface nitrogen to 1 m depth	 18041.149	                     kg N
+4	                32.10 N uptake from soil	   440.343	                     kg N
+4	32.20 N from roots incorporated into soil	   535.774	                     kg N
+4	32.21 N from straw incorporated into soil	   248.845	                     kg N
+4	32.22 N from leaf litterfall incorporated into soil	   111.418	                     kg N
+4	32.23 N from storage incorporated into soil	     0.000	                     kg N
+4	32.30 Gross N-mineralisation from soil org. matter	   409.992	                     kg N
+4	32.40 Nitrate N leached from leaching depth	    41.120	                     kg N
+4	32.41 Ammonium N leached from leaching depth	    28.962	                     kg N
+4	                 32.60 Organic N in soil	 19547.976	                     kg N
+4	                 32.61 Mineral N in soil	    25.648	                     kg N
+4	                    32.62 AOM1 N in soil	   290.007	                     kg N
+4	                    32.63 AOM2 N in soil	    20.535	                     kg N
+4	                    32.64 SMB1 N in soil	   206.756	                     kg N
+4	                    32.65 SMB2 N in soil	    16.067	                     kg N
+4	                     32.66 SMR N in soil	   221.488	                     kg N
+4	                     32.67 NOM N in soil	  7148.813	                     kg N
+4	                     32.68 IOM N in soil	 11644.309	                     kg N
+4	         32.69 Organic N in soil 0-25 cm	  7574.891	                     kg N
+4	         32.70 Mineral N in soil 0-25 cm	    16.432	                     kg N
+4	        32.71 Organic N in soil 25-50 cm	  7607.542	                     kg N
+4	        32.72 Mineral N in soil 25-50 cm	     1.228	                     kg N
+4	        32.73 Organic N in soil 50-75 cm	  1409.878	                     kg N
+4	        32.74 Mineral N in soil 50-75 cm	     1.058	                     kg N
+4	       32.75 Organic N in soil 75-250 cm	  2955.664	                     kg N
+4	       32.76 Mineral N in soil 75-250 cm	     6.927	                     kg N
+4	              32.77 N in AOM+SMB 0-25 cm	   556.065	                     kg N
+4	             32.78 N in AOM+SMB 25-50 cm	   120.588	                     kg N
+4	             32.79 N in AOM+SMB 50-75 cm	    44.130	                     kg N
+4	            32.80 N in AOM+SMB 75-250 cm	    34.071	                     kg N
+4	                  32.81 N in NOM 0-25 cm	  3973.529	                     kg N
+4	                 32.82 N in NOM 25-50 cm	  2017.925	                     kg N
+4	                        32.83 Nmin 0-500	    17.660	                     kg N
+4	                        32.84 Nmin 0-750	    18.718	                     kg N
+4	                       32.85 Nmin 0-1000	    19.655	                     kg N
+4	                 32.90 N in NOM 50-75 cm	   369.845	                     kg N
+4	                32.91 N in NOM 75-250 cm	   787.515	                     kg N
+4	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+4	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+4	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+4	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+4	        33.01 N in feed for young cattle	     0.000	                     kg N
+4	        33.02 N in feed for adult cattle	     0.000	                     kg N
+4	                33.03 N in bought cattle	     0.000	                     kg N
+4	                33.04 N grazed by cattle	     0.000	                     kg N
+4	                         33.20 N in milk	     0.000	                     kg N
+4	                  33.21 N in sold cattle	     0.000	                     kg N
+4	           33.40 N in dairy cattle waste	     0.000	                     kg N
+4	          33.41 N in young cattle manure	     0.000	                     kg N
+4	          33.42 N in dairy cattle manure	     0.000	                     kg N
+4	                 33.60 N bound in cattle	     0.000	                     kg N
+4	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+4	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+4	             34.01 N in feed for piglets	     0.000	                     kg N
+4	                34.02 N in feed for sows	     0.000	                     kg N
+4	            34.03 N in feed for baconers	     0.000	                     kg N
+4	                  34.04 N in bought pigs	     0.000	                     kg N
+4	                    34.20 N in sold pigs	     0.000	                     kg N
+4	                  34.40 N in sows manure	     0.000	                     kg N
+4	              34.41 N in baconers manure	     0.000	                     kg N
+4	               34.42 N in piglets manure	     0.000	                     kg N
+4	                   34.60 N bound in pigs	     0.000	                     kg N
+4	              35.01 N from imported feed	     0.000	                     kg N
+4	            35.02 N from imported manure	     0.000	                     kg N
+4	           35.03 N from imported bedding	     0.000	                     kg N
+4	           35.04 N from harvest to store	     0.000	                     kg N
+4	          35.20 N in sold plant products	     0.000	                     kg N
+4	     35.21 N removed from manure storage	     0.000	                     kg N
+4	              35.22 N in exported manure	     0.000	                     kg N
+4	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+4	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+4	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+4	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+4	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+4	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+4	         35.60 N bound in manure storage	     0.000	                     kg N
+4	          35.61 N bound in stable manure	     0.000	                     kg N
+4	        35.62 N in stored plant products	     0.000	                     kg N
+4	                      35.63 N in bedding	     0.000	                     kg N
+4	    35.80 N transf. from stable to store	     0.000	                     kg N
+4	35.81 N removed from stored plant products	     0.000	                     kg N
+4	35.82 N removed from stored feed products	     0.000	                     kg N
+4	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+4	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+4	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+4	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+4	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+4	   36.05 S.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+4	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+4	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+4	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+4	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+4	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+4	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+4	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+4	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+4	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+4	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+4	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+4	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+4	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+4	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+4	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+4	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+4	 37.00 N difference from area adjustment	     0.000	                     kg N
+4	37.01 N crop difference from area adjustment	     0.000	                     kg N
+4	37.02 N soil difference from area adjustment	     0.000	                     kg N
+4	              38.10 N15 harvest in grain	     0.000	                     kg N
+4	                 38.11 Total N15 harvest	     0.000	                     kg N
+4	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+4	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+4	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+4	               38.23 N15-Denitrification	     0.000	                     kg N
+4	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+4	               39.01 Catch crop DM (1/9)	  6674.608	                    kg DM
+4	              39.02 Catch crop DM (1/11)	     0.000	                    kg DM
+4	                39.03 Catch crop N (1/9)	   204.484	                     kg N
+4	               39.04 Catch crop N (1/11)	     0.000	                     kg N
+4	39.10 Grain yield at environmental indicator date	     9.012	                        t
+4	39.11 Straw yield at environmental indicator date	     7.751	                        t
+4	39.12 Cut at environmental indicator date	     0.000	                        t
+4	    39.20 Date of emergence of main crop	   272.000	              day of year
+4	    39.21 Date of flowering of main crop	   160.000	              day of year
+4	39.22 Date of end of grain filling of main crop	     1.000	              day of year
+4	     39.23 Date of ripeness of main crop	     1.000	              day of year
+4	          40.01 Net crop carbon fixation	 15363.221	                     kg C
+4	       40.02 C from field-applied manure	     0.000	                     kg C
+4	                       40.03 C from seed	    62.560	                     kg C
+4	                40.20 C removed in grain	  3514.630	                     kg C
+4	                40.21 C removed in straw	  3022.831	                     kg C
+4	                  40.22 C removed in cut	     0.000	                     kg C
+4	               40.23 C removed by cattle	     0.000	                     kg C
+4	              40.40 CO2 soil respiration	 10675.009	                     kg C
+4	                   40.60 Total C in soil	214150.204	                     kg C
+4	          40.61 C in standing crop/straw	     0.000	                     kg C
+4	           40.62 Total C in soil 0-25 cm	 81564.008	                     kg C
+4	          40.63 Total C in soil 25-50 cm	 82869.217	                     kg C
+4	          40.64 Total C in soil 50-75 cm	 15418.759	                     kg C
+4	         40.65 Total C in soil 75-250 cm	 32194.092	                     kg C
+4	              40.66 C in AOM+SMB 0-25 cm	  6260.046	                     kg C
+4	             40.67 C in AOM+SMB 25-50 cm	  1472.932	                     kg C
+4	             40.68 C in AOM+SMB 50-75 cm	   570.733	                     kg C
+4	            40.69 C in AOM+SMB 75-250 cm	   425.802	                     kg C
+4	                  40.70 C in NOM 0-25 cm	 42509.178	                     kg C
+4	                 40.71 C in NOM 25-50 cm	 21861.285	                     kg C
+4	                 40.72 C in NOM 50-75 cm	  4006.775	                     kg C
+4	                40.73 C in NOM 75-250 cm	  8537.040	                     kg C
+4	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+4	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+4	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+4	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+4	40.80 C from roots incorporated into soil	  8960.234	                     kg C
+4	40.81 C from straw incorporated into soil	  5594.741	                     kg C
+4	40.82 C from leaf litterfall incorporated into soil	  2876.419	                     kg C
+4	40.83 C from storage incorporated into soil	     0.000	                     kg N
+4	                    40.90 AOM1 C in soil	  5260.275	                     kg C
+4	                    40.91 AOM2 C in soil	   625.812	                     kg C
+4	                    40.92 SMB1 C in soil	  1364.591	                     kg C
+4	                    40.93 SMB2 C in soil	   149.910	                     kg C
+4	                     40.94 SMR C in soil	  1328.926	                     kg C
+4	                     40.95 NOM C in soil	 76914.279	                     kg C
+4	                     40.96 IOM C in soil	126402.284	                     kg C
+4	               41.01 C input into cattle	     0.000	                     kg C
+4	        41.02 C in cattle CH4 production	     0.000	                     kg C
+4	                 41.03 C in cattle urine	     0.000	                     kg C
+4	                41.04 C in cattle faeces	     0.000	                     kg C
+4	        41.05 C in cattle CO2 production	     0.000	                     kg C
+4	              41.06 C in milk production	     0.000	                     kg C
+4	         41.07 C retained in cattle body	     0.000	                     kg C
+4	           41.08 C in urine from grazing	     0.000	                     kg C
+4	          41.09 C in faeces from grazing	     0.000	                     kg C
+4	            41.10 C from grazing animals	     0.000	                     kg C
+4	        43.01 C in feed for young cattle	     0.000	                     kg C
+4	        43.02 C in feed for adult cattle	     0.000	                     kg C
+4	                43.03 C in bought cattle	     0.000	                     kg C
+4	                43.04 C grazed by cattle	     0.000	                     kg C
+4	                  43.21 C in sold cattle	     0.000	                     kg C
+4	          43.41 4 in young cattle manure	     0.000	                     kg C
+4	          43.42 C in dairy cattle manure	     0.000	                     kg C
+4	                 43.60 C bound in cattle	     0.000	                     kg C
+4	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+4	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+4	             44.01 C in feed for piglets	     0.000	                     kg C
+4	                44.02 C in feed for sows	     0.000	                     kg C
+4	            44.03 C in feed for baconers	     0.000	                     kg C
+4	                  44.04 C in bought pigs	     0.000	                     kg C
+4	                    44.20 C in sold pigs	     0.000	                     kg C
+4	                  44.40 C in sows manure	     0.000	                     kg C
+4	              44.41 C in baconers manure	     0.000	                     kg C
+4	               44.42 C in piglets manure	     0.000	                     kg C
+4	                   44.60 C bound in pigs	     0.000	                     kg C
+4	                    44.62 C in sold pigs	     0.000	                     kg C
+4	           44.63 C in pig CO2 production	     0.000	                     kg C
+4	           44.64 C in pig CH4 production	     0.000	                     kg C
+4	              45.01 C from imported feed	     0.000	                     kg C
+4	            45.02 C from imported manure	     0.000	                     kg C
+4	           45.03 C from imported bedding	     0.000	                     kg C
+4	           45.04 C from harvest to store	     0.000	                     kg C
+4	          45.20 C in sold plant products	     0.000	                     kg C
+4	     45.21 C removed from manure storage	     0.000	                     kg C
+4	              45.22 C in exported manure	     0.000	                     kg C
+4	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+4	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+4	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+4	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+4	         45.60 C bound in manure storage	     0.000	                     kg C
+4	          45.61 C bound in stable manure	     0.000	                     kg C
+4	        45.62 C in stored plant products	     0.000	                     kg C
+4	                      45.63 C in bedding	     0.000	                     kg C
+4	    45.80 C transf. from stable to store	     0.000	                     kg C
+4	45.81 C removed from stored plant products	     0.000	                     kg C
+4	45.82 C removed from stored feed products	     0.000	                     kg C
+4	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+4	                   50.02 feed-P for sows	     0.000	                     kg P
+4	               50.03 feed-P for baconers	     0.000	                     kg P
+4	                50.04 feed-P for piglets	     0.000	                     kg P
+4	                50.10 manure-P from sows	     0.000	                     kg P
+4	            50.11 manure-P from baconers	     0.000	                     kg P
+4	             50.12 manure-P from piglets	     0.000	                     kg P
+4	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+4	                   60.02 feed-K for sows	     0.000	                     kg K
+4	               60.03 feed-K for baconers	     0.000	                     kg K
+4	                60.04 feed-K for piglets	     0.000	                     kg K
+4	                60.10 manure-K from sows	     0.000	                     kg K
+4	            60.11 manure-K from baconers	     0.000	                     kg K
+4	             60.12 manure-K from piglets	     0.000	                     kg K
+4	                         70.01 Rainwater	 11041.700	              cubic meter
+4	                        70.02 Irrigation	     0.000	              cubic meter
+4	                       70.10 Percolation	  5999.940	              cubic meter
+4	                   70.11 Surface run-off	     0.000	              cubic meter
+4	                70.12 Evapotranspiration	  3771.104	              cubic meter
+4	    70.15 Water in field to balancedepth	  4063.195	              cubic meter
+4	                     70.20 Water in soil	     0.000	              cubic meter
+4	   70.40 Percolation from leaching depth	  6630.713	              cubic meter
+4	  70.41 Water in field to leaching depth	  1937.484	              cubic meter
+4	             70.42 Bare soil evaporation	   952.151	              cubic meter
+4	                     70.50 Precipitation	     0.000	                       mm
+4	             80.01 Herbicide consumption	     0.000	                      TFI
+4	             80.02 Fungicide consumption	     0.000	                      TFI
+4	           80.03 Insecticide consumption	     0.000	                      TFI
+5	         31.01 N from mineral fertilizer	     0.000	                     kg N
+5	                 31.02 N from deposition	    21.600	                     kg N
+5	                       31.03 N from seed	     0.170	                     kg N
+5	                   31.04 N from fixation	     0.000	                     kg N
+5	           31.05 N from irrigation water	     0.000	                     kg N
+5	              31.06 N from spread manure	   307.800	                     kg N
+5	           31.07 N in urine from grazing	     0.000	                     kg N
+5	          31.08 N in faeces from grazing	     0.000	                     kg N
+5	                31.20 N removed in grain	     0.000	                     kg N
+5	                31.21 N removed in straw	     0.000	                     kg N
+5	                  31.22 N removed in cut	     0.000	                     kg N
+5	               31.23 N removed by cattle	     0.000	                     kg N
+5	                 31.40 Nitrate N leached	    72.985	                     kg N
+5	                31.41 Ammonium N leached	    20.889	                     kg N
+5	           31.42 N2 from denitrification	   179.545	                     kg N
+5	          31.43 N2O from denitrification	    41.729	                     kg N
+5	            31.44 N2O from nitrification	     0.860	                     kg N
+5	           31.45 NH3-N loss by spreading	    48.600	                     kg N
+5	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+5	              31.47 N in surface run-off	     0.000	                     kg N
+5	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+5	          31.60 N in standing crop/straw	   156.040	                     kg N
+5	          31.61 Total soil/soilsurface N	 19518.151	                     kg N
+5	31.99 Total soil/soilsurface nitrogen to 1 m depth	 17920.746	                     kg N
+5	                32.10 N uptake from soil	   162.865	                     kg N
+5	32.20 N from roots incorporated into soil	     6.996	                     kg N
+5	32.21 N from straw incorporated into soil	     0.000	                     kg N
+5	32.22 N from leaf litterfall incorporated into soil	     0.000	                     kg N
+5	32.23 N from storage incorporated into soil	     0.000	                     kg N
+5	32.30 Gross N-mineralisation from soil org. matter	   322.579	                     kg N
+5	32.40 Nitrate N leached from leaching depth	    94.016	                     kg N
+5	32.41 Ammonium N leached from leaching depth	    29.478	                     kg N
+5	                 32.60 Organic N in soil	 19440.569	                     kg N
+5	                 32.61 Mineral N in soil	    53.853	                     kg N
+5	                    32.62 AOM1 N in soil	   231.761	                     kg N
+5	                    32.63 AOM2 N in soil	     1.555	                     kg N
+5	                    32.64 SMB1 N in soil	   172.680	                     kg N
+5	                    32.65 SMB2 N in soil	     7.595	                     kg N
+5	                     32.66 SMR N in soil	   177.368	                     kg N
+5	                     32.67 NOM N in soil	  7205.302	                     kg N
+5	                     32.68 IOM N in soil	 11644.309	                     kg N
+5	         32.69 Organic N in soil 0-25 cm	  7556.771	                     kg N
+5	         32.70 Mineral N in soil 0-25 cm	    16.650	                     kg N
+5	        32.71 Organic N in soil 25-50 cm	  7548.503	                     kg N
+5	        32.72 Mineral N in soil 25-50 cm	     1.750	                     kg N
+5	        32.73 Organic N in soil 50-75 cm	  1395.640	                     kg N
+5	        32.74 Mineral N in soil 50-75 cm	     1.274	                     kg N
+5	       32.75 Organic N in soil 75-250 cm	  2939.655	                     kg N
+5	       32.76 Mineral N in soil 75-250 cm	    34.179	                     kg N
+5	              32.77 N in AOM+SMB 0-25 cm	   452.180	                     kg N
+5	             32.78 N in AOM+SMB 25-50 cm	    81.310	                     kg N
+5	             32.79 N in AOM+SMB 50-75 cm	    31.329	                     kg N
+5	            32.80 N in AOM+SMB 75-250 cm	    26.140	                     kg N
+5	                  32.81 N in NOM 0-25 cm	  4059.294	                     kg N
+5	                 32.82 N in NOM 25-50 cm	  1998.165	                     kg N
+5	                        32.83 Nmin 0-500	    18.400	                     kg N
+5	                        32.84 Nmin 0-750	    19.674	                     kg N
+5	                       32.85 Nmin 0-1000	    20.838	                     kg N
+5	                 32.90 N in NOM 50-75 cm	   368.407	                     kg N
+5	                32.91 N in NOM 75-250 cm	   779.436	                     kg N
+5	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+5	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+5	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+5	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+5	        33.01 N in feed for young cattle	     0.000	                     kg N
+5	        33.02 N in feed for adult cattle	     0.000	                     kg N
+5	                33.03 N in bought cattle	     0.000	                     kg N
+5	                33.04 N grazed by cattle	     0.000	                     kg N
+5	                         33.20 N in milk	     0.000	                     kg N
+5	                  33.21 N in sold cattle	     0.000	                     kg N
+5	           33.40 N in dairy cattle waste	     0.000	                     kg N
+5	          33.41 N in young cattle manure	     0.000	                     kg N
+5	          33.42 N in dairy cattle manure	     0.000	                     kg N
+5	                 33.60 N bound in cattle	     0.000	                     kg N
+5	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+5	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+5	             34.01 N in feed for piglets	     0.000	                     kg N
+5	                34.02 N in feed for sows	     0.000	                     kg N
+5	            34.03 N in feed for baconers	     0.000	                     kg N
+5	                  34.04 N in bought pigs	     0.000	                     kg N
+5	                    34.20 N in sold pigs	     0.000	                     kg N
+5	                  34.40 N in sows manure	     0.000	                     kg N
+5	              34.41 N in baconers manure	     0.000	                     kg N
+5	               34.42 N in piglets manure	     0.000	                     kg N
+5	                   34.60 N bound in pigs	     0.000	                     kg N
+5	              35.01 N from imported feed	     0.000	                     kg N
+5	            35.02 N from imported manure	   307.800	                     kg N
+5	           35.03 N from imported bedding	     0.000	                     kg N
+5	           35.04 N from harvest to store	     0.000	                     kg N
+5	          35.20 N in sold plant products	     0.000	                     kg N
+5	     35.21 N removed from manure storage	     0.000	                     kg N
+5	              35.22 N in exported manure	     0.000	                     kg N
+5	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+5	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+5	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+5	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+5	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+5	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+5	         35.60 N bound in manure storage	     0.000	                     kg N
+5	          35.61 N bound in stable manure	     0.000	                     kg N
+5	        35.62 N in stored plant products	     0.000	                     kg N
+5	                      35.63 N in bedding	     0.000	                     kg N
+5	    35.80 N transf. from stable to store	     0.000	                     kg N
+5	35.81 N removed from stored plant products	     0.000	                     kg N
+5	35.82 N removed from stored feed products	     0.000	                     kg N
+5	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+5	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+5	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+5	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+5	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+5	   36.05 S.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+5	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+5	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+5	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+5	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+5	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+5	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+5	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+5	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+5	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+5	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+5	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+5	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+5	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+5	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+5	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+5	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+5	 37.00 N difference from area adjustment	     0.000	                     kg N
+5	37.01 N crop difference from area adjustment	     0.000	                     kg N
+5	37.02 N soil difference from area adjustment	     0.000	                     kg N
+5	              38.10 N15 harvest in grain	     0.000	                     kg N
+5	                 38.11 Total N15 harvest	     0.000	                     kg N
+5	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+5	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+5	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+5	               38.23 N15-Denitrification	     0.000	                     kg N
+5	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+5	               39.01 Catch crop DM (1/9)	     0.000	                    kg DM
+5	              39.02 Catch crop DM (1/11)	     0.000	                    kg DM
+5	                39.03 Catch crop N (1/9)	     0.000	                     kg N
+5	               39.04 Catch crop N (1/11)	     0.000	                     kg N
+5	39.10 Grain yield at environmental indicator date	     0.000	                        t
+5	39.11 Straw yield at environmental indicator date	     0.000	                        t
+5	39.12 Cut at environmental indicator date	     0.000	                        t
+5	    39.20 Date of emergence of main crop	     0.000	              day of year
+5	    39.21 Date of flowering of main crop	     0.000	              day of year
+5	39.22 Date of end of grain filling of main crop	     0.000	              day of year
+5	     39.23 Date of ripeness of main crop	     0.000	              day of year
+5	          40.01 Net crop carbon fixation	  3443.388	                     kg C
+5	       40.02 C from field-applied manure	  3483.000	                     kg C
+5	                       40.03 C from seed	     2.116	                     kg C
+5	                40.20 C removed in grain	     0.000	                     kg C
+5	                40.21 C removed in straw	     0.000	                     kg C
+5	                  40.22 C removed in cut	     0.000	                     kg C
+5	               40.23 C removed by cattle	     0.000	                     kg C
+5	              40.40 CO2 soil respiration	  6395.788	                     kg C
+5	                   40.60 Total C in soil	211460.800	                     kg C
+5	          40.61 C in standing crop/straw	  3472.887	                     kg C
+5	           40.62 Total C in soil 0-25 cm	 81732.927	                     kg C
+5	          40.63 Total C in soil 25-50 cm	 82127.332	                     kg C
+5	          40.64 Total C in soil 50-75 cm	 15199.984	                     kg C
+5	         40.65 Total C in soil 75-250 cm	 31956.934	                     kg C
+5	              40.66 C in AOM+SMB 0-25 cm	  5630.863	                     kg C
+5	             40.67 C in AOM+SMB 25-50 cm	   964.687	                     kg C
+5	             40.68 C in AOM+SMB 50-75 cm	   372.558	                     kg C
+5	            40.69 C in AOM+SMB 75-250 cm	   282.209	                     kg C
+5	                  40.70 C in NOM 0-25 cm	 43307.281	                     kg C
+5	                 40.71 C in NOM 25-50 cm	 21627.646	                     kg C
+5	                 40.72 C in NOM 50-75 cm	  3986.176	                     kg C
+5	                40.73 C in NOM 75-250 cm	  8443.476	                     kg C
+5	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+5	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+5	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+5	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+5	40.80 C from roots incorporated into soil	   223.383	                     kg C
+5	40.81 C from straw incorporated into soil	     0.000	                     kg C
+5	40.82 C from leaf litterfall incorporated into soil	     0.000	                     kg C
+5	40.83 C from storage incorporated into soil	     0.000	                     kg N
+5	                    40.90 AOM1 C in soil	  4929.667	                     kg C
+5	                    40.91 AOM2 C in soil	    45.897	                     kg C
+5	                    40.92 SMB1 C in soil	  1139.685	                     kg C
+5	                    40.93 SMB2 C in soil	    70.857	                     kg C
+5	                     40.94 SMR C in soil	  1064.209	                     kg C
+5	                     40.95 NOM C in soil	 77364.578	                     kg C
+5	                     40.96 IOM C in soil	126402.284	                     kg C
+5	               41.01 C input into cattle	     0.000	                     kg C
+5	        41.02 C in cattle CH4 production	     0.000	                     kg C
+5	                 41.03 C in cattle urine	     0.000	                     kg C
+5	                41.04 C in cattle faeces	     0.000	                     kg C
+5	        41.05 C in cattle CO2 production	     0.000	                     kg C
+5	              41.06 C in milk production	     0.000	                     kg C
+5	         41.07 C retained in cattle body	     0.000	                     kg C
+5	           41.08 C in urine from grazing	     0.000	                     kg C
+5	          41.09 C in faeces from grazing	     0.000	                     kg C
+5	            41.10 C from grazing animals	     0.000	                     kg C
+5	        43.01 C in feed for young cattle	     0.000	                     kg C
+5	        43.02 C in feed for adult cattle	     0.000	                     kg C
+5	                43.03 C in bought cattle	     0.000	                     kg C
+5	                43.04 C grazed by cattle	     0.000	                     kg C
+5	                  43.21 C in sold cattle	     0.000	                     kg C
+5	          43.41 4 in young cattle manure	     0.000	                     kg C
+5	          43.42 C in dairy cattle manure	     0.000	                     kg C
+5	                 43.60 C bound in cattle	     0.000	                     kg C
+5	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+5	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+5	             44.01 C in feed for piglets	     0.000	                     kg C
+5	                44.02 C in feed for sows	     0.000	                     kg C
+5	            44.03 C in feed for baconers	     0.000	                     kg C
+5	                  44.04 C in bought pigs	     0.000	                     kg C
+5	                    44.20 C in sold pigs	     0.000	                     kg C
+5	                  44.40 C in sows manure	     0.000	                     kg C
+5	              44.41 C in baconers manure	     0.000	                     kg C
+5	               44.42 C in piglets manure	     0.000	                     kg C
+5	                   44.60 C bound in pigs	     0.000	                     kg C
+5	                    44.62 C in sold pigs	     0.000	                     kg C
+5	           44.63 C in pig CO2 production	     0.000	                     kg C
+5	           44.64 C in pig CH4 production	     0.000	                     kg C
+5	              45.01 C from imported feed	     0.000	                     kg C
+5	            45.02 C from imported manure	  3483.000	                     kg C
+5	           45.03 C from imported bedding	     0.000	                     kg C
+5	           45.04 C from harvest to store	     0.000	                     kg C
+5	          45.20 C in sold plant products	     0.000	                     kg C
+5	     45.21 C removed from manure storage	     0.000	                     kg C
+5	              45.22 C in exported manure	     0.000	                     kg C
+5	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+5	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+5	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+5	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+5	         45.60 C bound in manure storage	     0.000	                     kg C
+5	          45.61 C bound in stable manure	     0.000	                     kg C
+5	        45.62 C in stored plant products	     0.000	                     kg C
+5	                      45.63 C in bedding	     0.000	                     kg C
+5	    45.80 C transf. from stable to store	     0.000	                     kg C
+5	45.81 C removed from stored plant products	     0.000	                     kg C
+5	45.82 C removed from stored feed products	     0.000	                     kg C
+5	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+5	                   50.02 feed-P for sows	     0.000	                     kg P
+5	               50.03 feed-P for baconers	     0.000	                     kg P
+5	                50.04 feed-P for piglets	     0.000	                     kg P
+5	                50.10 manure-P from sows	     0.000	                     kg P
+5	            50.11 manure-P from baconers	     0.000	                     kg P
+5	             50.12 manure-P from piglets	     0.000	                     kg P
+5	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+5	                   60.02 feed-K for sows	     0.000	                     kg K
+5	               60.03 feed-K for baconers	     0.000	                     kg K
+5	                60.04 feed-K for piglets	     0.000	                     kg K
+5	                60.10 manure-K from sows	     0.000	                     kg K
+5	            60.11 manure-K from baconers	     0.000	                     kg K
+5	             60.12 manure-K from piglets	     0.000	                     kg K
+5	                         70.01 Rainwater	 10799.800	              cubic meter
+5	                        70.02 Irrigation	     0.000	              cubic meter
+5	                       70.10 Percolation	  6550.181	              cubic meter
+5	                   70.11 Surface run-off	     0.000	              cubic meter
+5	                70.12 Evapotranspiration	  2913.276	              cubic meter
+5	    70.15 Water in field to balancedepth	  5091.935	              cubic meter
+5	                     70.20 Water in soil	     0.000	              cubic meter
+5	   70.40 Percolation from leaching depth	  7225.803	              cubic meter
+5	  70.41 Water in field to leaching depth	  2445.114	              cubic meter
+5	             70.42 Bare soil evaporation	  2176.631	              cubic meter
+5	                     70.50 Precipitation	     0.000	                       mm
+5	             80.01 Herbicide consumption	     0.000	                      TFI
+5	             80.02 Fungicide consumption	     0.000	                      TFI
+5	           80.03 Insecticide consumption	     0.000	                      TFI
+6	         31.01 N from mineral fertilizer	     0.000	                     kg N
+6	                 31.02 N from deposition	    16.614	                     kg N
+6	                       31.03 N from seed	     2.960	                     kg N
+6	                   31.04 N from fixation	   197.459	                     kg N
+6	           31.05 N from irrigation water	     0.000	                     kg N
+6	              31.06 N from spread manure	   133.000	                     kg N
+6	           31.07 N in urine from grazing	     0.000	                     kg N
+6	          31.08 N in faeces from grazing	     0.000	                     kg N
+6	                31.20 N removed in grain	   204.283	                     kg N
+6	                31.21 N removed in straw	    54.958	                     kg N
+6	                  31.22 N removed in cut	     0.000	                     kg N
+6	               31.23 N removed by cattle	     0.000	                     kg N
+6	                 31.40 Nitrate N leached	    19.103	                     kg N
+6	                31.41 Ammonium N leached	    11.824	                     kg N
+6	           31.42 N2 from denitrification	    67.686	                     kg N
+6	          31.43 N2O from denitrification	    18.138	                     kg N
+6	            31.44 N2O from nitrification	     0.602	                     kg N
+6	           31.45 NH3-N loss by spreading	    21.000	                     kg N
+6	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+6	              31.47 N in surface run-off	     0.000	                     kg N
+6	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+6	          31.60 N in standing crop/straw	    41.763	                     kg N
+6	          31.61 Total soil/soilsurface N	 19626.865	                     kg N
+6	31.99 Total soil/soilsurface nitrogen to 1 m depth	 18045.204	                     kg N
+6	                32.10 N uptake from soil	   268.693	                     kg N
+6	32.20 N from roots incorporated into soil	    74.951	                     kg N
+6	32.21 N from straw incorporated into soil	   185.537	                     kg N
+6	32.22 N from leaf litterfall incorporated into soil	    63.659	                     kg N
+6	32.23 N from storage incorporated into soil	     0.000	                     kg N
+6	32.30 Gross N-mineralisation from soil org. matter	   289.917	                     kg N
+6	32.40 Nitrate N leached from leaching depth	    17.921	                     kg N
+6	32.41 Ammonium N leached from leaching depth	    15.316	                     kg N
+6	                 32.60 Organic N in soil	 19492.220	                     kg N
+6	                 32.61 Mineral N in soil	    47.837	                     kg N
+6	                    32.62 AOM1 N in soil	   253.694	                     kg N
+6	                    32.63 AOM2 N in soil	    21.964	                     kg N
+6	                    32.64 SMB1 N in soil	   169.809	                     kg N
+6	                    32.65 SMB2 N in soil	    10.922	                     kg N
+6	                     32.66 SMR N in soil	   168.406	                     kg N
+6	                     32.67 NOM N in soil	  7223.116	                     kg N
+6	                     32.68 IOM N in soil	 11644.309	                     kg N
+6	         32.69 Organic N in soil 0-25 cm	  7649.970	                     kg N
+6	         32.70 Mineral N in soil 0-25 cm	    11.352	                     kg N
+6	        32.71 Organic N in soil 25-50 cm	  7520.315	                     kg N
+6	        32.72 Mineral N in soil 25-50 cm	     3.725	                     kg N
+6	        32.73 Organic N in soil 50-75 cm	  1391.999	                     kg N
+6	        32.74 Mineral N in soil 50-75 cm	     2.814	                     kg N
+6	       32.75 Organic N in soil 75-250 cm	  2929.936	                     kg N
+6	       32.76 Mineral N in soil 75-250 cm	    29.945	                     kg N
+6	              32.77 N in AOM+SMB 0-25 cm	   493.953	                     kg N
+6	             32.78 N in AOM+SMB 25-50 cm	    75.442	                     kg N
+6	             32.79 N in AOM+SMB 50-75 cm	    30.026	                     kg N
+6	            32.80 N in AOM+SMB 75-250 cm	    25.374	                     kg N
+6	                  32.81 N in NOM 0-25 cm	  4110.720	                     kg N
+6	                 32.82 N in NOM 25-50 cm	  1975.844	                     kg N
+6	                        32.83 Nmin 0-500	    15.077	                     kg N
+6	                        32.84 Nmin 0-750	    17.891	                     kg N
+6	                       32.85 Nmin 0-1000	    24.957	                     kg N
+6	                 32.90 N in NOM 50-75 cm	   366.069	                     kg N
+6	                32.91 N in NOM 75-250 cm	   770.483	                     kg N
+6	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+6	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+6	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+6	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+6	        33.01 N in feed for young cattle	     0.000	                     kg N
+6	        33.02 N in feed for adult cattle	     0.000	                     kg N
+6	                33.03 N in bought cattle	     0.000	                     kg N
+6	                33.04 N grazed by cattle	     0.000	                     kg N
+6	                         33.20 N in milk	     0.000	                     kg N
+6	                  33.21 N in sold cattle	     0.000	                     kg N
+6	           33.40 N in dairy cattle waste	     0.000	                     kg N
+6	          33.41 N in young cattle manure	     0.000	                     kg N
+6	          33.42 N in dairy cattle manure	     0.000	                     kg N
+6	                 33.60 N bound in cattle	     0.000	                     kg N
+6	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+6	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+6	             34.01 N in feed for piglets	     0.000	                     kg N
+6	                34.02 N in feed for sows	     0.000	                     kg N
+6	            34.03 N in feed for baconers	     0.000	                     kg N
+6	                  34.04 N in bought pigs	     0.000	                     kg N
+6	                    34.20 N in sold pigs	     0.000	                     kg N
+6	                  34.40 N in sows manure	     0.000	                     kg N
+6	              34.41 N in baconers manure	     0.000	                     kg N
+6	               34.42 N in piglets manure	     0.000	                     kg N
+6	                   34.60 N bound in pigs	     0.000	                     kg N
+6	              35.01 N from imported feed	     0.000	                     kg N
+6	            35.02 N from imported manure	   133.000	                     kg N
+6	           35.03 N from imported bedding	     0.000	                     kg N
+6	           35.04 N from harvest to store	     0.000	                     kg N
+6	          35.20 N in sold plant products	     0.000	                     kg N
+6	     35.21 N removed from manure storage	     0.000	                     kg N
+6	              35.22 N in exported manure	     0.000	                     kg N
+6	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+6	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+6	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+6	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+6	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+6	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+6	         35.60 N bound in manure storage	     0.000	                     kg N
+6	          35.61 N bound in stable manure	     0.000	                     kg N
+6	        35.62 N in stored plant products	     0.000	                     kg N
+6	                      35.63 N in bedding	     0.000	                     kg N
+6	    35.80 N transf. from stable to store	     0.000	                     kg N
+6	35.81 N removed from stored plant products	     0.000	                     kg N
+6	35.82 N removed from stored feed products	     0.000	                     kg N
+6	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+6	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+6	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+6	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+6	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+6	   36.05 S.barley yield (harv. bef. 1/8)	     8.711	                     kg N
+6	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+6	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+6	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+6	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+6	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+6	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+6	       36.12 Beet yield (harv. bef. 1/8)	   124.251	                     kg N
+6	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.747	                     kg N
+6	     36.14 Clover yield (harv. bef. 1/8)	    70.574	                     kg N
+6	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+6	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+6	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+6	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+6	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+6	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+6	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+6	 37.00 N difference from area adjustment	     0.000	                     kg N
+6	37.01 N crop difference from area adjustment	     0.000	                     kg N
+6	37.02 N soil difference from area adjustment	     0.000	                     kg N
+6	              38.10 N15 harvest in grain	     0.000	                     kg N
+6	                 38.11 Total N15 harvest	     0.000	                     kg N
+6	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+6	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+6	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+6	               38.23 N15-Denitrification	     0.000	                     kg N
+6	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+6	               39.01 Catch crop DM (1/9)	     0.000	                    kg DM
+6	              39.02 Catch crop DM (1/11)	     0.000	                    kg DM
+6	                39.03 Catch crop N (1/9)	     0.000	                     kg N
+6	               39.04 Catch crop N (1/11)	     0.000	                     kg N
+6	39.10 Grain yield at environmental indicator date	    77.707	                        t
+6	39.11 Straw yield at environmental indicator date	     6.567	                        t
+6	39.12 Cut at environmental indicator date	     0.000	                        t
+6	    39.20 Date of emergence of main crop	   276.000	              day of year
+6	    39.21 Date of flowering of main crop	   389.000	              day of year
+6	39.22 Date of end of grain filling of main crop	     2.000	              day of year
+6	     39.23 Date of ripeness of main crop	     2.000	              day of year
+6	          40.01 Net crop carbon fixation	 12002.232	                     kg C
+6	       40.02 C from field-applied manure	  1505.000	                     kg C
+6	                       40.03 C from seed	    70.909	                     kg C
+6	                40.20 C removed in grain	  7414.624	                     kg C
+6	                40.21 C removed in straw	   961.626	                     kg C
+6	                  40.22 C removed in cut	     0.000	                     kg C
+6	               40.23 C removed by cattle	     0.000	                     kg C
+6	              40.40 CO2 soil respiration	  6062.723	                     kg C
+6	                   40.60 Total C in soil	213107.936	                     kg C
+6	          40.61 C in standing crop/straw	   740.441	                     kg C
+6	           40.62 Total C in soil 0-25 cm	 82664.473	                     kg C
+6	          40.63 Total C in soil 25-50 cm	 81754.876	                     kg C
+6	          40.64 Total C in soil 50-75 cm	 15136.038	                     kg C
+6	         40.65 Total C in soil 75-250 cm	 31834.978	                     kg C
+6	              40.66 C in AOM+SMB 0-25 cm	  6103.689	                     kg C
+6	             40.67 C in AOM+SMB 25-50 cm	   849.311	                     kg C
+6	             40.68 C in AOM+SMB 50-75 cm	   337.820	                     kg C
+6	            40.69 C in AOM+SMB 75-250 cm	   262.742	                     kg C
+6	                  40.70 C in NOM 0-25 cm	 43766.000	                     kg C
+6	                 40.71 C in NOM 25-50 cm	 21370.565	                     kg C
+6	                 40.72 C in NOM 50-75 cm	  3956.968	                     kg C
+6	                40.73 C in NOM 75-250 cm	  8340.987	                     kg C
+6	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+6	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+6	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+6	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+6	40.80 C from roots incorporated into soil	  1109.292	                     kg C
+6	40.81 C from straw incorporated into soil	  3694.847	                     kg C
+6	40.82 C from leaf litterfall incorporated into soil	  1400.719	                     kg C
+6	40.83 C from storage incorporated into soil	     0.000	                     kg N
+6	                    40.90 AOM1 C in soil	  5044.337	                     kg C
+6	                    40.91 AOM2 C in soil	   276.145	                     kg C
+6	                    40.92 SMB1 C in soil	  1120.738	                     kg C
+6	                    40.93 SMB2 C in soil	   101.903	                     kg C
+6	                     40.94 SMR C in soil	  1010.438	                     kg C
+6	                     40.95 NOM C in soil	 77434.520	                     kg C
+6	                     40.96 IOM C in soil	126402.284	                     kg C
+6	               41.01 C input into cattle	     0.000	                     kg C
+6	        41.02 C in cattle CH4 production	     0.000	                     kg C
+6	                 41.03 C in cattle urine	     0.000	                     kg C
+6	                41.04 C in cattle faeces	     0.000	                     kg C
+6	        41.05 C in cattle CO2 production	     0.000	                     kg C
+6	              41.06 C in milk production	     0.000	                     kg C
+6	         41.07 C retained in cattle body	     0.000	                     kg C
+6	           41.08 C in urine from grazing	     0.000	                     kg C
+6	          41.09 C in faeces from grazing	     0.000	                     kg C
+6	            41.10 C from grazing animals	     0.000	                     kg C
+6	        43.01 C in feed for young cattle	     0.000	                     kg C
+6	        43.02 C in feed for adult cattle	     0.000	                     kg C
+6	                43.03 C in bought cattle	     0.000	                     kg C
+6	                43.04 C grazed by cattle	     0.000	                     kg C
+6	                  43.21 C in sold cattle	     0.000	                     kg C
+6	          43.41 4 in young cattle manure	     0.000	                     kg C
+6	          43.42 C in dairy cattle manure	     0.000	                     kg C
+6	                 43.60 C bound in cattle	     0.000	                     kg C
+6	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+6	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+6	             44.01 C in feed for piglets	     0.000	                     kg C
+6	                44.02 C in feed for sows	     0.000	                     kg C
+6	            44.03 C in feed for baconers	     0.000	                     kg C
+6	                  44.04 C in bought pigs	     0.000	                     kg C
+6	                    44.20 C in sold pigs	     0.000	                     kg C
+6	                  44.40 C in sows manure	     0.000	                     kg C
+6	              44.41 C in baconers manure	     0.000	                     kg C
+6	               44.42 C in piglets manure	     0.000	                     kg C
+6	                   44.60 C bound in pigs	     0.000	                     kg C
+6	                    44.62 C in sold pigs	     0.000	                     kg C
+6	           44.63 C in pig CO2 production	     0.000	                     kg C
+6	           44.64 C in pig CH4 production	     0.000	                     kg C
+6	              45.01 C from imported feed	     0.000	                     kg C
+6	            45.02 C from imported manure	  1505.000	                     kg C
+6	           45.03 C from imported bedding	     0.000	                     kg C
+6	           45.04 C from harvest to store	     0.000	                     kg C
+6	          45.20 C in sold plant products	     0.000	                     kg C
+6	     45.21 C removed from manure storage	     0.000	                     kg C
+6	              45.22 C in exported manure	     0.000	                     kg C
+6	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+6	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+6	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+6	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+6	         45.60 C bound in manure storage	     0.000	                     kg C
+6	          45.61 C bound in stable manure	     0.000	                     kg C
+6	        45.62 C in stored plant products	     0.000	                     kg C
+6	                      45.63 C in bedding	     0.000	                     kg C
+6	    45.80 C transf. from stable to store	     0.000	                     kg C
+6	45.81 C removed from stored plant products	     0.000	                     kg C
+6	45.82 C removed from stored feed products	     0.000	                     kg C
+6	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+6	                   50.02 feed-P for sows	     0.000	                     kg P
+6	               50.03 feed-P for baconers	     0.000	                     kg P
+6	                50.04 feed-P for piglets	     0.000	                     kg P
+6	                50.10 manure-P from sows	     0.000	                     kg P
+6	            50.11 manure-P from baconers	     0.000	                     kg P
+6	             50.12 manure-P from piglets	     0.000	                     kg P
+6	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+6	                   60.02 feed-K for sows	     0.000	                     kg K
+6	               60.03 feed-K for baconers	     0.000	                     kg K
+6	                60.04 feed-K for piglets	     0.000	                     kg K
+6	                60.10 manure-K from sows	     0.000	                     kg K
+6	            60.11 manure-K from baconers	     0.000	                     kg K
+6	             60.12 manure-K from piglets	     0.000	                     kg K
+6	                         70.01 Rainwater	  8306.830	              cubic meter
+6	                        70.02 Irrigation	     0.000	              cubic meter
+6	                       70.10 Percolation	  4621.905	              cubic meter
+6	                   70.11 Surface run-off	     0.000	              cubic meter
+6	                70.12 Evapotranspiration	  3559.131	              cubic meter
+6	    70.15 Water in field to balancedepth	  4324.262	              cubic meter
+6	                     70.20 Water in soil	     0.000	              cubic meter
+6	   70.40 Percolation from leaching depth	  5179.558	              cubic meter
+6	  70.41 Water in field to leaching depth	  1682.011	              cubic meter
+6	             70.42 Bare soil evaporation	  1190.949	              cubic meter
+6	                     70.50 Precipitation	     0.000	                       mm
+6	             80.01 Herbicide consumption	     0.000	                      TFI
+6	             80.02 Fungicide consumption	     0.000	                      TFI
+6	           80.03 Insecticide consumption	     0.000	                      TFI
+7	         31.01 N from mineral fertilizer	     0.000	                     kg N
+7	                 31.02 N from deposition	    18.508	                     kg N
+7	                       31.03 N from seed	     0.000	                     kg N
+7	                   31.04 N from fixation	   315.673	                     kg N
+7	           31.05 N from irrigation water	     0.000	                     kg N
+7	              31.06 N from spread manure	   186.200	                     kg N
+7	           31.07 N in urine from grazing	     0.000	                     kg N
+7	          31.08 N in faeces from grazing	     0.000	                     kg N
+7	                31.20 N removed in grain	     0.000	                     kg N
+7	                31.21 N removed in straw	     0.000	                     kg N
+7	                  31.22 N removed in cut	   263.445	                     kg N
+7	               31.23 N removed by cattle	     0.000	                     kg N
+7	                 31.40 Nitrate N leached	    17.024	                     kg N
+7	                31.41 Ammonium N leached	    13.147	                     kg N
+7	           31.42 N2 from denitrification	    43.597	                     kg N
+7	          31.43 N2O from denitrification	    10.107	                     kg N
+7	            31.44 N2O from nitrification	     0.499	                     kg N
+7	           31.45 NH3-N loss by spreading	    29.400	                     kg N
+7	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+7	              31.47 N in surface run-off	     0.000	                     kg N
+7	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+7	          31.60 N in standing crop/straw	   303.160	                     kg N
+7	          31.61 Total soil/soilsurface N	 19590.630	                     kg N
+7	31.99 Total soil/soilsurface nitrogen to 1 m depth	 18033.503	                     kg N
+7	                32.10 N uptake from soil	   375.726	                     kg N
+7	32.20 N from roots incorporated into soil	    71.784	                     kg N
+7	32.21 N from straw incorporated into soil	     0.000	                     kg N
+7	32.22 N from leaf litterfall incorporated into soil	    94.774	                     kg N
+7	32.23 N from storage incorporated into soil	     0.000	                     kg N
+7	32.30 Gross N-mineralisation from soil org. matter	   283.058	                     kg N
+7	32.40 Nitrate N leached from leaching depth	     0.778	                     kg N
+7	32.41 Ammonium N leached from leaching depth	    17.580	                     kg N
+7	                 32.60 Organic N in soil	 19563.618	                     kg N
+7	                 32.61 Mineral N in soil	    15.403	                     kg N
+7	                    32.62 AOM1 N in soil	   247.807	                     kg N
+7	                    32.63 AOM2 N in soil	     6.419	                     kg N
+7	                    32.64 SMB1 N in soil	   191.707	                     kg N
+7	                    32.65 SMB2 N in soil	    10.167	                     kg N
+7	                     32.66 SMR N in soil	   199.955	                     kg N
+7	                     32.67 NOM N in soil	  7263.254	                     kg N
+7	                     32.68 IOM N in soil	 11644.309	                     kg N
+7	         32.69 Organic N in soil 0-25 cm	  7767.572	                     kg N
+7	         32.70 Mineral N in soil 0-25 cm	     6.959	                     kg N
+7	        32.71 Organic N in soil 25-50 cm	  7493.118	                     kg N
+7	        32.72 Mineral N in soil 25-50 cm	     1.511	                     kg N
+7	        32.73 Organic N in soil 50-75 cm	  1385.228	                     kg N
+7	        32.74 Mineral N in soil 50-75 cm	     1.136	                     kg N
+7	       32.75 Organic N in soil 75-250 cm	  2917.699	                     kg N
+7	       32.76 Mineral N in soil 75-250 cm	     5.798	                     kg N
+7	              32.77 N in AOM+SMB 0-25 cm	   539.759	                     kg N
+7	             32.78 N in AOM+SMB 25-50 cm	    69.029	                     kg N
+7	             32.79 N in AOM+SMB 50-75 cm	    25.808	                     kg N
+7	            32.80 N in AOM+SMB 75-250 cm	    21.459	                     kg N
+7	                  32.81 N in NOM 0-25 cm	  4182.516	                     kg N
+7	                 32.82 N in NOM 25-50 cm	  1955.060	                     kg N
+7	                        32.83 Nmin 0-500	     8.469	                     kg N
+7	                        32.84 Nmin 0-750	     9.605	                     kg N
+7	                       32.85 Nmin 0-1000	    10.640	                     kg N
+7	                 32.90 N in NOM 50-75 cm	   363.516	                     kg N
+7	                32.91 N in NOM 75-250 cm	   762.161	                     kg N
+7	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+7	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+7	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+7	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+7	        33.01 N in feed for young cattle	     0.000	                     kg N
+7	        33.02 N in feed for adult cattle	     0.000	                     kg N
+7	                33.03 N in bought cattle	     0.000	                     kg N
+7	                33.04 N grazed by cattle	     0.000	                     kg N
+7	                         33.20 N in milk	     0.000	                     kg N
+7	                  33.21 N in sold cattle	     0.000	                     kg N
+7	           33.40 N in dairy cattle waste	     0.000	                     kg N
+7	          33.41 N in young cattle manure	     0.000	                     kg N
+7	          33.42 N in dairy cattle manure	     0.000	                     kg N
+7	                 33.60 N bound in cattle	     0.000	                     kg N
+7	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+7	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+7	             34.01 N in feed for piglets	     0.000	                     kg N
+7	                34.02 N in feed for sows	     0.000	                     kg N
+7	            34.03 N in feed for baconers	     0.000	                     kg N
+7	                  34.04 N in bought pigs	     0.000	                     kg N
+7	                    34.20 N in sold pigs	     0.000	                     kg N
+7	                  34.40 N in sows manure	     0.000	                     kg N
+7	              34.41 N in baconers manure	     0.000	                     kg N
+7	               34.42 N in piglets manure	     0.000	                     kg N
+7	                   34.60 N bound in pigs	     0.000	                     kg N
+7	              35.01 N from imported feed	     0.000	                     kg N
+7	            35.02 N from imported manure	   186.200	                     kg N
+7	           35.03 N from imported bedding	     0.000	                     kg N
+7	           35.04 N from harvest to store	     0.000	                     kg N
+7	          35.20 N in sold plant products	     0.000	                     kg N
+7	     35.21 N removed from manure storage	     0.000	                     kg N
+7	              35.22 N in exported manure	     0.000	                     kg N
+7	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+7	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+7	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+7	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+7	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+7	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+7	         35.60 N bound in manure storage	     0.000	                     kg N
+7	          35.61 N bound in stable manure	     0.000	                     kg N
+7	        35.62 N in stored plant products	     0.000	                     kg N
+7	                      35.63 N in bedding	     0.000	                     kg N
+7	    35.80 N transf. from stable to store	     0.000	                     kg N
+7	35.81 N removed from stored plant products	     0.000	                     kg N
+7	35.82 N removed from stored feed products	     0.000	                     kg N
+7	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+7	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+7	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+7	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+7	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+7	   36.05 S.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+7	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+7	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+7	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+7	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+7	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+7	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+7	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+7	   36.13 Ryegrass yield (harv. bef. 1/8)	    51.870	                     kg N
+7	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+7	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+7	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+7	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+7	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+7	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+7	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+7	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+7	 37.00 N difference from area adjustment	     0.000	                     kg N
+7	37.01 N crop difference from area adjustment	     0.000	                     kg N
+7	37.02 N soil difference from area adjustment	     0.000	                     kg N
+7	              38.10 N15 harvest in grain	     0.000	                     kg N
+7	                 38.11 Total N15 harvest	     0.000	                     kg N
+7	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+7	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+7	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+7	               38.23 N15-Denitrification	     0.000	                     kg N
+7	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+7	               39.01 Catch crop DM (1/9)	  3973.942	                    kg DM
+7	              39.02 Catch crop DM (1/11)	  1571.033	                    kg DM
+7	                39.03 Catch crop N (1/9)	   144.733	                     kg N
+7	               39.04 Catch crop N (1/11)	    59.161	                     kg N
+7	39.10 Grain yield at environmental indicator date	     0.000	                        t
+7	39.11 Straw yield at environmental indicator date	     0.000	                        t
+7	39.12 Cut at environmental indicator date	     0.000	                        t
+7	    39.20 Date of emergence of main crop	     0.000	              day of year
+7	    39.21 Date of flowering of main crop	     0.000	              day of year
+7	39.22 Date of end of grain filling of main crop	     0.000	              day of year
+7	     39.23 Date of ripeness of main crop	     0.000	              day of year
+7	          40.01 Net crop carbon fixation	 14277.175	                     kg C
+7	       40.02 C from field-applied manure	  2107.000	                     kg C
+7	                       40.03 C from seed	     0.000	                     kg C
+7	                40.20 C removed in grain	     0.000	                     kg C
+7	                40.21 C removed in straw	     0.000	                     kg C
+7	                  40.22 C removed in cut	  5566.926	                     kg C
+7	               40.23 C removed by cattle	     0.000	                     kg C
+7	              40.40 CO2 soil respiration	  6868.668	                     kg C
+7	                   40.60 Total C in soil	212164.402	                     kg C
+7	          40.61 C in standing crop/straw	  5156.335	                     kg C
+7	           40.62 Total C in soil 0-25 cm	 83533.164	                     kg C
+7	          40.63 Total C in soil 25-50 cm	 81471.118	                     kg C
+7	          40.64 Total C in soil 50-75 cm	 15071.581	                     kg C
+7	         40.65 Total C in soil 75-250 cm	 31702.849	                     kg C
+7	              40.66 C in AOM+SMB 0-25 cm	  6306.065	                     kg C
+7	             40.67 C in AOM+SMB 25-50 cm	   802.906	                     kg C
+7	             40.68 C in AOM+SMB 50-75 cm	   303.888	                     kg C
+7	            40.69 C in AOM+SMB 75-250 cm	   225.097	                     kg C
+7	                  40.70 C in NOM 0-25 cm	 44432.315	                     kg C
+7	                 40.71 C in NOM 25-50 cm	 21133.212	                     kg C
+7	                 40.72 C in NOM 50-75 cm	  3926.443	                     kg C
+7	                40.73 C in NOM 75-250 cm	  8246.501	                     kg C
+7	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+7	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+7	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+7	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+7	40.80 C from roots incorporated into soil	  1225.660	                     kg C
+7	40.81 C from straw incorporated into soil	     0.000	                     kg C
+7	40.82 C from leaf litterfall incorporated into soil	  2592.474	                     kg C
+7	40.83 C from storage incorporated into soil	     0.000	                     kg N
+7	                    40.90 AOM1 C in soil	  4933.518	                     kg C
+7	                    40.91 AOM2 C in soil	   144.585	                     kg C
+7	                    40.92 SMB1 C in soil	  1265.268	                     kg C
+7	                    40.93 SMB2 C in soil	    94.857	                     kg C
+7	                     40.94 SMR C in soil	  1199.729	                     kg C
+7	                     40.95 NOM C in soil	 77738.472	                     kg C
+7	                     40.96 IOM C in soil	126402.284	                     kg C
+7	               41.01 C input into cattle	     0.000	                     kg C
+7	        41.02 C in cattle CH4 production	     0.000	                     kg C
+7	                 41.03 C in cattle urine	     0.000	                     kg C
+7	                41.04 C in cattle faeces	     0.000	                     kg C
+7	        41.05 C in cattle CO2 production	     0.000	                     kg C
+7	              41.06 C in milk production	     0.000	                     kg C
+7	         41.07 C retained in cattle body	     0.000	                     kg C
+7	           41.08 C in urine from grazing	     0.000	                     kg C
+7	          41.09 C in faeces from grazing	     0.000	                     kg C
+7	            41.10 C from grazing animals	     0.000	                     kg C
+7	        43.01 C in feed for young cattle	     0.000	                     kg C
+7	        43.02 C in feed for adult cattle	     0.000	                     kg C
+7	                43.03 C in bought cattle	     0.000	                     kg C
+7	                43.04 C grazed by cattle	     0.000	                     kg C
+7	                  43.21 C in sold cattle	     0.000	                     kg C
+7	          43.41 4 in young cattle manure	     0.000	                     kg C
+7	          43.42 C in dairy cattle manure	     0.000	                     kg C
+7	                 43.60 C bound in cattle	     0.000	                     kg C
+7	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+7	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+7	             44.01 C in feed for piglets	     0.000	                     kg C
+7	                44.02 C in feed for sows	     0.000	                     kg C
+7	            44.03 C in feed for baconers	     0.000	                     kg C
+7	                  44.04 C in bought pigs	     0.000	                     kg C
+7	                    44.20 C in sold pigs	     0.000	                     kg C
+7	                  44.40 C in sows manure	     0.000	                     kg C
+7	              44.41 C in baconers manure	     0.000	                     kg C
+7	               44.42 C in piglets manure	     0.000	                     kg C
+7	                   44.60 C bound in pigs	     0.000	                     kg C
+7	                    44.62 C in sold pigs	     0.000	                     kg C
+7	           44.63 C in pig CO2 production	     0.000	                     kg C
+7	           44.64 C in pig CH4 production	     0.000	                     kg C
+7	              45.01 C from imported feed	     0.000	                     kg C
+7	            45.02 C from imported manure	  2107.000	                     kg C
+7	           45.03 C from imported bedding	     0.000	                     kg C
+7	           45.04 C from harvest to store	     0.000	                     kg C
+7	          45.20 C in sold plant products	     0.000	                     kg C
+7	     45.21 C removed from manure storage	     0.000	                     kg C
+7	              45.22 C in exported manure	     0.000	                     kg C
+7	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+7	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+7	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+7	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+7	         45.60 C bound in manure storage	     0.000	                     kg C
+7	          45.61 C bound in stable manure	     0.000	                     kg C
+7	        45.62 C in stored plant products	     0.000	                     kg C
+7	                      45.63 C in bedding	     0.000	                     kg C
+7	    45.80 C transf. from stable to store	     0.000	                     kg C
+7	45.81 C removed from stored plant products	     0.000	                     kg C
+7	45.82 C removed from stored feed products	     0.000	                     kg C
+7	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+7	                   50.02 feed-P for sows	     0.000	                     kg P
+7	               50.03 feed-P for baconers	     0.000	                     kg P
+7	                50.04 feed-P for piglets	     0.000	                     kg P
+7	                50.10 manure-P from sows	     0.000	                     kg P
+7	            50.11 manure-P from baconers	     0.000	                     kg P
+7	             50.12 manure-P from piglets	     0.000	                     kg P
+7	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+7	                   60.02 feed-K for sows	     0.000	                     kg K
+7	               60.03 feed-K for baconers	     0.000	                     kg K
+7	                60.04 feed-K for piglets	     0.000	                     kg K
+7	                60.10 manure-K from sows	     0.000	                     kg K
+7	            60.11 manure-K from baconers	     0.000	                     kg K
+7	             60.12 manure-K from piglets	     0.000	                     kg K
+7	                         70.01 Rainwater	  9253.910	              cubic meter
+7	                        70.02 Irrigation	     0.000	              cubic meter
+7	                       70.10 Percolation	  4597.778	              cubic meter
+7	                   70.11 Surface run-off	     0.000	              cubic meter
+7	                70.12 Evapotranspiration	  3044.725	              cubic meter
+7	    70.15 Water in field to balancedepth	  4515.744	              cubic meter
+7	                     70.20 Water in soil	     3.110	              cubic meter
+7	   70.40 Percolation from leaching depth	  4872.487	              cubic meter
+7	  70.41 Water in field to leaching depth	  2245.432	              cubic meter
+7	             70.42 Bare soil evaporation	   682.191	              cubic meter
+7	                     70.50 Precipitation	     0.000	                       mm
+7	             80.01 Herbicide consumption	     0.000	                      TFI
+7	             80.02 Fungicide consumption	     0.000	                      TFI
+7	           80.03 Insecticide consumption	     0.000	                      TFI
+8	         31.01 N from mineral fertilizer	     0.000	                     kg N
+8	                 31.02 N from deposition	    18.832	                     kg N
+8	                       31.03 N from seed	     2.720	                     kg N
+8	                   31.04 N from fixation	   129.549	                     kg N
+8	           31.05 N from irrigation water	     0.000	                     kg N
+8	              31.06 N from spread manure	     0.000	                     kg N
+8	           31.07 N in urine from grazing	     0.000	                     kg N
+8	          31.08 N in faeces from grazing	     0.000	                     kg N
+8	                31.20 N removed in grain	     0.000	                     kg N
+8	                31.21 N removed in straw	     0.000	                     kg N
+8	                  31.22 N removed in cut	     0.000	                     kg N
+8	               31.23 N removed by cattle	     0.000	                     kg N
+8	                 31.40 Nitrate N leached	     1.144	                     kg N
+8	                31.41 Ammonium N leached	     6.963	                     kg N
+8	           31.42 N2 from denitrification	   105.334	                     kg N
+8	          31.43 N2O from denitrification	    35.261	                     kg N
+8	            31.44 N2O from nitrification	     0.649	                     kg N
+8	           31.45 NH3-N loss by spreading	     0.000	                     kg N
+8	         31.46 NH3-N loss during grazing	     0.000	                     kg N
+8	              31.47 N in surface run-off	     0.000	                     kg N
+8	31.48 NH3-N loss from mineral fertiliser	     0.000	                     kg N
+8	          31.60 N in standing crop/straw	   119.535	                     kg N
+8	          31.61 Total soil/soilsurface N	 19876.005	                     kg N
+8	31.99 Total soil/soilsurface nitrogen to 1 m depth	 18320.879	                     kg N
+8	                32.10 N uptake from soil	   281.943	                     kg N
+8	32.20 N from roots incorporated into soil	   451.447	                     kg N
+8	32.21 N from straw incorporated into soil	   103.357	                     kg N
+8	32.22 N from leaf litterfall incorporated into soil	    43.034	                     kg N
+8	32.23 N from storage incorporated into soil	     0.000	                     kg N
+8	32.30 Gross N-mineralisation from soil org. matter	   335.563	                     kg N
+8	32.40 Nitrate N leached from leaching depth	     0.092	                     kg N
+8	32.41 Ammonium N leached from leaching depth	     8.320	                     kg N
+8	                 32.60 Organic N in soil	 19803.167	                     kg N
+8	                 32.61 Mineral N in soil	    72.838	                     kg N
+8	                    32.62 AOM1 N in soil	   335.051	                     kg N
+8	                    32.63 AOM2 N in soil	     0.640	                     kg N
+8	                    32.64 SMB1 N in soil	   241.941	                     kg N
+8	                    32.65 SMB2 N in soil	     8.093	                     kg N
+8	                     32.66 SMR N in soil	   287.309	                     kg N
+8	                     32.67 NOM N in soil	  7285.824	                     kg N
+8	                     32.68 IOM N in soil	 11644.309	                     kg N
+8	         32.69 Organic N in soil 0-25 cm	  7965.276	                     kg N
+8	         32.70 Mineral N in soil 0-25 cm	    50.058	                     kg N
+8	        32.71 Organic N in soil 25-50 cm	  7524.717	                     kg N
+8	        32.72 Mineral N in soil 25-50 cm	    11.300	                     kg N
+8	        32.73 Organic N in soil 50-75 cm	  1398.172	                     kg N
+8	        32.74 Mineral N in soil 50-75 cm	     3.297	                     kg N
+8	       32.75 Organic N in soil 75-250 cm	  2915.002	                     kg N
+8	       32.76 Mineral N in soil 75-250 cm	     8.183	                     kg N
+8	              32.77 N in AOM+SMB 0-25 cm	   687.680	                     kg N
+8	             32.78 N in AOM+SMB 25-50 cm	   118.243	                     kg N
+8	             32.79 N in AOM+SMB 50-75 cm	    40.683	                     kg N
+8	            32.80 N in AOM+SMB 75-250 cm	    26.428	                     kg N
+8	                  32.81 N in NOM 0-25 cm	  4232.299	                     kg N
+8	                 32.82 N in NOM 25-50 cm	  1937.445	                     kg N
+8	                        32.83 Nmin 0-500	    61.358	                     kg N
+8	                        32.84 Nmin 0-750	    64.655	                     kg N
+8	                       32.85 Nmin 0-1000	    66.895	                     kg N
+8	                 32.90 N in NOM 50-75 cm	   361.585	                     kg N
+8	                32.91 N in NOM 75-250 cm	   754.495	                     kg N
+8	                  32.92 N in IOM 0-25 cm	  3045.297	                     kg N
+8	                 32.93 N in IOM 25-50 cm	  5469.029	                     kg N
+8	                 32.94 N in IOM 50-75 cm	   995.903	                     kg N
+8	                32.95 N in IOM 75-250 cm	  2134.079	                     kg N
+8	        33.01 N in feed for young cattle	     0.000	                     kg N
+8	        33.02 N in feed for adult cattle	     0.000	                     kg N
+8	                33.03 N in bought cattle	     0.000	                     kg N
+8	                33.04 N grazed by cattle	     0.000	                     kg N
+8	                         33.20 N in milk	     0.000	                     kg N
+8	                  33.21 N in sold cattle	     0.000	                     kg N
+8	           33.40 N in dairy cattle waste	     0.000	                     kg N
+8	          33.41 N in young cattle manure	     0.000	                     kg N
+8	          33.42 N in dairy cattle manure	     0.000	                     kg N
+8	                 33.60 N bound in cattle	     0.000	                     kg N
+8	        33.80 Cattle manure N to pasture	     0.000	                     kg N
+8	 33.81 Cattle manure N to animal housing	     0.000	                     kg N
+8	             34.01 N in feed for piglets	     0.000	                     kg N
+8	                34.02 N in feed for sows	     0.000	                     kg N
+8	            34.03 N in feed for baconers	     0.000	                     kg N
+8	                  34.04 N in bought pigs	     0.000	                     kg N
+8	                    34.20 N in sold pigs	     0.000	                     kg N
+8	                  34.40 N in sows manure	     0.000	                     kg N
+8	              34.41 N in baconers manure	     0.000	                     kg N
+8	               34.42 N in piglets manure	     0.000	                     kg N
+8	                   34.60 N bound in pigs	     0.000	                     kg N
+8	              35.01 N from imported feed	     0.000	                     kg N
+8	            35.02 N from imported manure	     0.000	                     kg N
+8	           35.03 N from imported bedding	     0.000	                     kg N
+8	           35.04 N from harvest to store	     0.000	                     kg N
+8	          35.20 N in sold plant products	     0.000	                     kg N
+8	     35.21 N removed from manure storage	     0.000	                     kg N
+8	              35.22 N in exported manure	     0.000	                     kg N
+8	35.40 NH3-N volatilisation from animal house	     0.000	                     kg N
+8	35.41 N2-N volatilisation from animal house	     0.000	                     kg N
+8	35.42 N2O-N volatilisation from animal house	     0.000	                     kg N
+8	35.43 NH3-N volatilisation from manure storage	     0.000	                     kg N
+8	35.44 N2-N volatilisation from manure storage	     0.000	                     kg N
+8	35.45 N2O-N volatilisation from manure storage	     0.000	                     kg N
+8	         35.60 N bound in manure storage	     0.000	                     kg N
+8	          35.61 N bound in stable manure	     0.000	                     kg N
+8	        35.62 N in stored plant products	     0.000	                     kg N
+8	                      35.63 N in bedding	     0.000	                     kg N
+8	    35.80 N transf. from stable to store	     0.000	                     kg N
+8	35.81 N removed from stored plant products	     0.000	                     kg N
+8	35.82 N removed from stored feed products	     0.000	                     kg N
+8	    36.00 W.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+8	    36.01 S.wheat yield (harv. bef. 1/8)	     0.000	                     kg N
+8	     36.02 W.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+8	     36.03 S.rape yield (harv. bef. 1/8)	     0.000	                     kg N
+8	   36.04 W.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+8	   36.05 S.barley yield (harv. bef. 1/8)	     0.000	                     kg N
+8	        36.06 Rye yield (harv. bef. 1/8)	     0.000	                     kg N
+8	        36.07 Oat yield (harv. bef. 1/8)	     0.000	                     kg N
+8	        36.08 Pea yield (harv. bef. 1/8)	     0.000	                     kg N
+8	     36.09 Potato yield (harv. bef. 1/8)	     0.000	                     kg N
+8	36.10 Grass for seed yield (harv. bef. 1/8)	     0.000	                     kg N
+8	36.11 Grain maize yield (harv. bef. 1/8)	     0.000	                     kg N
+8	       36.12 Beet yield (harv. bef. 1/8)	     0.000	                     kg N
+8	   36.13 Ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+8	     36.14 Clover yield (harv. bef. 1/8)	     0.000	                     kg N
+8	     36.15 Fallow yield (harv. bef. 1/8)	     0.000	                     kg N
+8	36.16 Maize wholecrop yield (harv. bef. 1/8)	     0.000	                     kg N
+8	36.17 Italian ryegrass yield (harv. bef. 1/8)	     0.000	                     kg N
+8	    36.18 Soybean yield (harv. bef. 1/8)	     0.000	                     kg N
+8	  36.19 Sunflower yield (harv. bef. 1/8)	     0.000	                     kg N
+8	36.20 Wheat silage yield (harv. bef. 1/8)	     0.000	                     kg N
+8	    36.21 Lucerne yield (harv. bef. 1/8)	     0.000	                     kg N
+8	 37.00 N difference from area adjustment	     0.000	                     kg N
+8	37.01 N crop difference from area adjustment	     0.000	                     kg N
+8	37.02 N soil difference from area adjustment	     0.000	                     kg N
+8	              38.10 N15 harvest in grain	     0.000	                     kg N
+8	                 38.11 Total N15 harvest	     0.000	                     kg N
+8	   38.12 N15 leached from leaching depth	     0.000	                     kg N
+8	      38.21 N15-N2O from denitrification	     0.000	                     kg N
+8	        38.22 N15-N2O from nitrification	     0.000	                     kg N
+8	               38.23 N15-Denitrification	     0.000	                     kg N
+8	        38.24 Total soil/soilsurface 15N	     0.000	                     kg N
+8	               39.01 Catch crop DM (1/9)	  3359.482	                    kg DM
+8	              39.02 Catch crop DM (1/11)	  6559.572	                    kg DM
+8	                39.03 Catch crop N (1/9)	    86.117	                     kg N
+8	               39.04 Catch crop N (1/11)	   143.937	                     kg N
+8	39.10 Grain yield at environmental indicator date	     0.000	                        t
+8	39.11 Straw yield at environmental indicator date	     0.000	                        t
+8	39.12 Cut at environmental indicator date	     0.000	                        t
+8	    39.20 Date of emergence of main crop	     0.000	              day of year
+8	    39.21 Date of flowering of main crop	     0.000	              day of year
+8	39.22 Date of end of grain filling of main crop	     0.000	              day of year
+8	     39.23 Date of ripeness of main crop	     0.000	              day of year
+8	          40.01 Net crop carbon fixation	  7471.279	                     kg C
+8	       40.02 C from field-applied manure	     0.000	                     kg C
+8	                       40.03 C from seed	    66.470	                     kg C
+8	                40.20 C removed in grain	     0.000	                     kg C
+8	                40.21 C removed in straw	     0.000	                     kg C
+8	                  40.22 C removed in cut	     0.000	                     kg C
+8	               40.23 C removed by cattle	     0.000	                     kg C
+8	              40.40 CO2 soil respiration	  9207.325	                     kg C
+8	                   40.60 Total C in soil	213925.899	                     kg C
+8	          40.61 C in standing crop/straw	  1755.193	                     kg C
+8	           40.62 Total C in soil 0-25 cm	 85200.496	                     kg C
+8	          40.63 Total C in soil 25-50 cm	 81840.091	                     kg C
+8	          40.64 Total C in soil 50-75 cm	 15214.885	                     kg C
+8	         40.65 Total C in soil 75-250 cm	 31670.427	                     kg C
+8	              40.66 C in AOM+SMB 0-25 cm	  7526.592	                     kg C
+8	             40.67 C in AOM+SMB 25-50 cm	  1379.946	                     kg C
+8	             40.68 C in AOM+SMB 50-75 cm	   471.778	                     kg C
+8	            40.69 C in AOM+SMB 75-250 cm	   279.898	                     kg C
+8	                  40.70 C in NOM 0-25 cm	 44879.121	                     kg C
+8	                 40.71 C in NOM 25-50 cm	 20925.145	                     kg C
+8	                 40.72 C in NOM 50-75 cm	  3901.857	                     kg C
+8	                40.73 C in NOM 75-250 cm	  8159.279	                     kg C
+8	                  40.74 C in IOM 0-25 cm	 32794.784	                     kg C
+8	                 40.75 C in IOM 25-50 cm	 59535.000	                     kg C
+8	                 40.76 C in IOM 50-75 cm	 10841.250	                     kg C
+8	                40.77 C in IOM 75-250 cm	 23231.250	                     kg C
+8	40.80 C from roots incorporated into soil	  7124.219	                     kg C
+8	40.81 C from straw incorporated into soil	  2370.264	                     kg C
+8	40.82 C from leaf litterfall incorporated into soil	  1474.339	                     kg C
+8	40.83 C from storage incorporated into soil	     0.000	                     kg N
+8	                    40.90 AOM1 C in soil	  6247.616	                     kg C
+8	                    40.91 AOM2 C in soil	    14.424	                     kg C
+8	                    40.92 SMB1 C in soil	  1596.811	                     kg C
+8	                    40.93 SMB2 C in soil	    75.507	                     kg C
+8	                     40.94 SMR C in soil	  1723.857	                     kg C
+8	                     40.95 NOM C in soil	 77865.402	                     kg C
+8	                     40.96 IOM C in soil	126402.284	                     kg C
+8	               41.01 C input into cattle	     0.000	                     kg C
+8	        41.02 C in cattle CH4 production	     0.000	                     kg C
+8	                 41.03 C in cattle urine	     0.000	                     kg C
+8	                41.04 C in cattle faeces	     0.000	                     kg C
+8	        41.05 C in cattle CO2 production	     0.000	                     kg C
+8	              41.06 C in milk production	     0.000	                     kg C
+8	         41.07 C retained in cattle body	     0.000	                     kg C
+8	           41.08 C in urine from grazing	     0.000	                     kg C
+8	          41.09 C in faeces from grazing	     0.000	                     kg C
+8	            41.10 C from grazing animals	     0.000	                     kg C
+8	        43.01 C in feed for young cattle	     0.000	                     kg C
+8	        43.02 C in feed for adult cattle	     0.000	                     kg C
+8	                43.03 C in bought cattle	     0.000	                     kg C
+8	                43.04 C grazed by cattle	     0.000	                     kg C
+8	                  43.21 C in sold cattle	     0.000	                     kg C
+8	          43.41 4 in young cattle manure	     0.000	                     kg C
+8	          43.42 C in dairy cattle manure	     0.000	                     kg C
+8	                 43.60 C bound in cattle	     0.000	                     kg C
+8	        43.80 Cattle manure C to pasture	     0.000	                     kg C
+8	 43.81 Cattle manure C to animal housing	     0.000	                     kg C
+8	             44.01 C in feed for piglets	     0.000	                     kg C
+8	                44.02 C in feed for sows	     0.000	                     kg C
+8	            44.03 C in feed for baconers	     0.000	                     kg C
+8	                  44.04 C in bought pigs	     0.000	                     kg C
+8	                    44.20 C in sold pigs	     0.000	                     kg C
+8	                  44.40 C in sows manure	     0.000	                     kg C
+8	              44.41 C in baconers manure	     0.000	                     kg C
+8	               44.42 C in piglets manure	     0.000	                     kg C
+8	                   44.60 C bound in pigs	     0.000	                     kg C
+8	                    44.62 C in sold pigs	     0.000	                     kg C
+8	           44.63 C in pig CO2 production	     0.000	                     kg C
+8	           44.64 C in pig CH4 production	     0.000	                     kg C
+8	              45.01 C from imported feed	     0.000	                     kg C
+8	            45.02 C from imported manure	     0.000	                     kg C
+8	           45.03 C from imported bedding	     0.000	                     kg C
+8	           45.04 C from harvest to store	     0.000	                     kg C
+8	          45.20 C in sold plant products	     0.000	                     kg C
+8	     45.21 C removed from manure storage	     0.000	                     kg C
+8	              45.22 C in exported manure	     0.000	                     kg C
+8	45.40 CO2-C volatilisation from animal house	     0.000	                     kg C
+8	45.41 CH4-C volatilisation from animal house	     0.000	                     kg C
+8	45.43 CO2-C volatilisation from manure storage	     0.000	                     kg C
+8	45.44 CH4-C volatilisation from manure storage	     0.000	                     kg C
+8	         45.60 C bound in manure storage	     0.000	                     kg C
+8	          45.61 C bound in stable manure	     0.000	                     kg C
+8	        45.62 C in stored plant products	     0.000	                     kg C
+8	                      45.63 C in bedding	     0.000	                     kg C
+8	    45.80 C transf. from stable to store	     0.000	                     kg C
+8	45.81 C removed from stored plant products	     0.000	                     kg C
+8	45.82 C removed from stored feed products	     0.000	                     kg C
+8	50.01 Phosphorus from mineral fertilizer	     0.000	                     kg P
+8	                   50.02 feed-P for sows	     0.000	                     kg P
+8	               50.03 feed-P for baconers	     0.000	                     kg P
+8	                50.04 feed-P for piglets	     0.000	                     kg P
+8	                50.10 manure-P from sows	     0.000	                     kg P
+8	            50.11 manure-P from baconers	     0.000	                     kg P
+8	             50.12 manure-P from piglets	     0.000	                     kg P
+8	 60.01 Potassium from mineral fertilizer	     0.000	                     kg K
+8	                   60.02 feed-K for sows	     0.000	                     kg K
+8	               60.03 feed-K for baconers	     0.000	                     kg K
+8	                60.04 feed-K for piglets	     0.000	                     kg K
+8	                60.10 manure-K from sows	     0.000	                     kg K
+8	            60.11 manure-K from baconers	     0.000	                     kg K
+8	             60.12 manure-K from piglets	     0.000	                     kg K
+8	                         70.01 Rainwater	  9416.110	              cubic meter
+8	                        70.02 Irrigation	     0.000	              cubic meter
+8	                       70.10 Percolation	  5200.943	              cubic meter
+8	                   70.11 Surface run-off	     0.000	              cubic meter
+8	                70.12 Evapotranspiration	  2277.860	              cubic meter
+8	    70.15 Water in field to balancedepth	  5399.894	              cubic meter
+8	                     70.20 Water in soil	     0.154	              cubic meter
+8	   70.40 Percolation from leaching depth	  5798.015	              cubic meter
+8	  70.41 Water in field to leaching depth	  2618.804	              cubic meter
+8	             70.42 Bare soil evaporation	  1584.073	              cubic meter
+8	                     70.50 Precipitation	     0.000	                       mm
+8	             80.01 Herbicide consumption	     0.000	                      TFI
+8	             80.02 Fungicide consumption	     0.000	                      TFI
+8	           80.03 Insecticide consumption	     0.000	                      TFI

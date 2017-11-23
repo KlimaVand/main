@@ -1,0 +1,325 @@
+\hypertarget{classswine_stock}{
+\section{swineStock Class Reference}
+\label{classswine_stock}\index{swineStock@{swineStock}}
+}
+
+
+{\ttfamily \#include $<$swineStock.h$>$}Inheritance diagram for swineStock::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classswine_stock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classswine_stock_a135e6f925e3ab22a15d9f87cf8b93a1e}{swineStock} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classswine_stock_ab6aacb4f9339a5d1238fbc76d857f4ed}{$\sim$swineStock} ()
+\item 
+void \hyperlink{classswine_stock_a6e44014411d40ef8496be5bc0090c2a4}{SetStable} (\hyperlink{classpigstable}{pigstable} $\ast$aaStable)
+\item 
+\hyperlink{classpigstable}{pigstable} $\ast$ \hyperlink{classswine_stock_af63160db1074a36becd0b5dfb0859945}{GetStable} ()
+\item 
+double \hyperlink{classswine_stock_a31ae4f1e9e626423441cad2bc1328a02}{GetNumberOfpregnantSwines} ()
+\item 
+double \hyperlink{classswine_stock_ab15ee6eea81d51b18f910e2304d62837}{GetNumberOflactatingSwines} ()
+\item 
+double \hyperlink{classswine_stock_a6797f1e6e9c86ac73c08571cf8c6e3f3}{GetNumberOfmatingSwines} ()
+\item 
+double \hyperlink{classswine_stock_a10887b6ededdf74adaf16a193239a8e0}{GetNumberOfSwines} ()
+\item 
+double \hyperlink{classswine_stock_a36ba5282d1d0d0b36d04958d77c74552}{GetNumberOfbaconers} ()
+\item 
+double \hyperlink{classswine_stock_a7f919fd97ef7455eb5d124e82e0667ad}{GetNumberOfPiglets} ()
+\item 
+double \hyperlink{classswine_stock_a52a84a2970940255ff2b74c768d418e3}{GetSlaughterSwineFeedingDays} ()
+\item 
+double \hyperlink{classswine_stock_a810cd4f4ffc068a42edf008b1288606d}{GetNumber} ()
+\item 
+double \hyperlink{classswine_stock_ac7b5455c4b474d3be67c17ce9d7f61ea}{GetDE} ()
+\item 
+void \hyperlink{classswine_stock_ae8e9dfd9c03e9ba170c697f7376b82bd}{DailyUpdate} ()
+\item 
+void \hyperlink{classswine_stock_acf5744db1aac193ee2af257c4554918d}{ReceivePlan} (char $\ast$fileName)
+\item 
+void \hyperlink{classswine_stock_ae8818ed344f35b8decfb6ab9d1719952}{ReceiveFeed} (char $\ast$fileName)
+\item 
+void \hyperlink{classswine_stock_a53e9eabc6dbdd5b9a95d8aef104b3152}{InitSwines} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, \hyperlink{classbuildings}{buildings} $\ast$\hyperlink{_new_main_8cpp_a8802bc0a0e45fa6db05d71b3e4c39680}{theBuildings})
+\item 
+void \hyperlink{classswine_stock_ae916f8f1c9d3996c7708352a1ab8ab27}{CheckNbalance} ()
+\item 
+void \hyperlink{classswine_stock_afeb3c33e9c241c408aabf971a1666196}{ExportStock} ()
+\item 
+virtual void \hyperlink{classswine_stock_a473b8e850355273ad6cf37b36ae31e14}{EndBudget} (bool show=false)
+\item 
+double \hyperlink{classswine_stock_af9621b75adfaf8ab25752627dd344479}{GetAnimalN} ()
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a5ef49c2bbc4df37f13cec1d1d452ea3a}{GetStockBought} ()
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a84a354508bd5989c1d8fe53209292f63}{GetStockSold} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classswine}{swine} $\ast$ \hyperlink{classswine_stock_a54c9ef8e2d53f01b1729b4ae95474dcb}{pregnantSwines}
+\item 
+\hyperlink{classswine}{swine} $\ast$ \hyperlink{classswine_stock_a213454f9abaa9a6981fb5a2a6975bdd6}{lactatingSwines}
+\item 
+\hyperlink{classswine}{swine} $\ast$ \hyperlink{classswine_stock_a3cffe5cdb0016585304a252330ee5edf}{matingSwines}
+\item 
+\hyperlink{classslaughter_swine}{slaughterSwine} $\ast$ \hyperlink{classswine_stock_a5eec1e1062ede0cf785bbedd5ac2a5a9}{piglets}
+\item 
+\hyperlink{classslaughter_swine}{slaughterSwine} $\ast$ \hyperlink{classswine_stock_a4739d5bb2beaa609383a74f8da54ea39}{baconers}
+\item 
+\hyperlink{classslaughter_swine}{slaughterSwine} $\ast$ \hyperlink{classswine_stock_a7dca40c98b0767777d0532e39e9743e8}{newSows}
+\item 
+\hyperlink{classpigstable}{pigstable} $\ast$ \hyperlink{classswine_stock_a78239ce5b75f52957d37b09e3bb8fbb9}{aStable}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a57fbbfb80947a28f38fcda05d8bd8202}{weanersInOutPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a72f271f475a890dd470266dca393e047}{pigletsInOutPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_af838d48f89fc191c9da140838e255ed9}{pigletsPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a5974de43fdfb3a412be2ddefe1723e14}{baconersInOutPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a5e5538e17b43af6d9cfc46819311c65d}{baconersPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a3d37e7fb0bdf7ba6cab85f33016f39d0}{newsowsInOutPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a6841145e5c99f8db31c115a1022cd758}{newsowsPrDay}
+\item 
+\hyperlink{classanimal_product}{animalProduct} $\ast$ \hyperlink{classswine_stock_a904a032504459d88941e059e2a7522d3}{castsowsPrDay}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classpig}{pig} $>$ $\ast$ \hyperlink{classswine_stock_a259003746b904e3ed546e7a23fd04210}{pointyPigs}
+\item 
+double \hyperlink{classswine_stock_a30d8224d05f918effe9db2c8329245c6}{SowProductionCycle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classswine_stock_a135e6f925e3ab22a15d9f87cf8b93a1e}{
+\index{swineStock@{swineStock}!swineStock@{swineStock}}
+\index{swineStock@{swineStock}!swineStock@{swineStock}}
+\subsubsection[{swineStock}]{\setlength{\rightskip}{0pt plus 5cm}swineStock::swineStock (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classswine_stock_a135e6f925e3ab22a15d9f87cf8b93a1e}
+\hypertarget{classswine_stock_ab6aacb4f9339a5d1238fbc76d857f4ed}{
+\index{swineStock@{swineStock}!$\sim$swineStock@{$\sim$swineStock}}
+\index{$\sim$swineStock@{$\sim$swineStock}!swineStock@{swineStock}}
+\subsubsection[{$\sim$swineStock}]{\setlength{\rightskip}{0pt plus 5cm}swineStock::$\sim$swineStock ()}}
+\label{classswine_stock_ab6aacb4f9339a5d1238fbc76d857f4ed}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classswine_stock_ae916f8f1c9d3996c7708352a1ab8ab27}{
+\index{swineStock@{swineStock}!CheckNbalance@{CheckNbalance}}
+\index{CheckNbalance@{CheckNbalance}!swineStock@{swineStock}}
+\subsubsection[{CheckNbalance}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::CheckNbalance ()}}
+\label{classswine_stock_ae916f8f1c9d3996c7708352a1ab8ab27}
+\hypertarget{classswine_stock_ae8e9dfd9c03e9ba170c697f7376b82bd}{
+\index{swineStock@{swineStock}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!swineStock@{swineStock}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::DailyUpdate (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classswine_stock_ae8e9dfd9c03e9ba170c697f7376b82bd}
+
+
+Reimplemented from \hyperlink{classanimal_stock_ab95f31939d8d1cbc1bb2f567375995ae}{animalStock}.\hypertarget{classswine_stock_a473b8e850355273ad6cf37b36ae31e14}{
+\index{swineStock@{swineStock}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!swineStock@{swineStock}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::EndBudget (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classswine_stock_a473b8e850355273ad6cf37b36ae31e14}
+\hypertarget{classswine_stock_afeb3c33e9c241c408aabf971a1666196}{
+\index{swineStock@{swineStock}!ExportStock@{ExportStock}}
+\index{ExportStock@{ExportStock}!swineStock@{swineStock}}
+\subsubsection[{ExportStock}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::ExportStock ()}}
+\label{classswine_stock_afeb3c33e9c241c408aabf971a1666196}
+\hypertarget{classswine_stock_af9621b75adfaf8ab25752627dd344479}{
+\index{swineStock@{swineStock}!GetAnimalN@{GetAnimalN}}
+\index{GetAnimalN@{GetAnimalN}!swineStock@{swineStock}}
+\subsubsection[{GetAnimalN}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetAnimalN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_af9621b75adfaf8ab25752627dd344479}
+\hypertarget{classswine_stock_ac7b5455c4b474d3be67c17ce9d7f61ea}{
+\index{swineStock@{swineStock}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!swineStock@{swineStock}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetDE ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classswine_stock_ac7b5455c4b474d3be67c17ce9d7f61ea}
+
+
+Reimplemented from \hyperlink{classanimal_stock_a8bed676752d1e6414c9a73fe72e3cb85}{animalStock}.\hypertarget{classswine_stock_a810cd4f4ffc068a42edf008b1288606d}{
+\index{swineStock@{swineStock}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!swineStock@{swineStock}}
+\subsubsection[{GetNumber}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumber ()}}
+\label{classswine_stock_a810cd4f4ffc068a42edf008b1288606d}
+
+
+Reimplemented from \hyperlink{classanimal_stock_af2cf60cd12ce0376947bb5e5adab751d}{animalStock}.\hypertarget{classswine_stock_a36ba5282d1d0d0b36d04958d77c74552}{
+\index{swineStock@{swineStock}!GetNumberOfbaconers@{GetNumberOfbaconers}}
+\index{GetNumberOfbaconers@{GetNumberOfbaconers}!swineStock@{swineStock}}
+\subsubsection[{GetNumberOfbaconers}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumberOfbaconers ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a36ba5282d1d0d0b36d04958d77c74552}
+\hypertarget{classswine_stock_ab15ee6eea81d51b18f910e2304d62837}{
+\index{swineStock@{swineStock}!GetNumberOflactatingSwines@{GetNumberOflactatingSwines}}
+\index{GetNumberOflactatingSwines@{GetNumberOflactatingSwines}!swineStock@{swineStock}}
+\subsubsection[{GetNumberOflactatingSwines}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumberOflactatingSwines ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_ab15ee6eea81d51b18f910e2304d62837}
+\hypertarget{classswine_stock_a6797f1e6e9c86ac73c08571cf8c6e3f3}{
+\index{swineStock@{swineStock}!GetNumberOfmatingSwines@{GetNumberOfmatingSwines}}
+\index{GetNumberOfmatingSwines@{GetNumberOfmatingSwines}!swineStock@{swineStock}}
+\subsubsection[{GetNumberOfmatingSwines}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumberOfmatingSwines ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a6797f1e6e9c86ac73c08571cf8c6e3f3}
+\hypertarget{classswine_stock_a7f919fd97ef7455eb5d124e82e0667ad}{
+\index{swineStock@{swineStock}!GetNumberOfPiglets@{GetNumberOfPiglets}}
+\index{GetNumberOfPiglets@{GetNumberOfPiglets}!swineStock@{swineStock}}
+\subsubsection[{GetNumberOfPiglets}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumberOfPiglets ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a7f919fd97ef7455eb5d124e82e0667ad}
+\hypertarget{classswine_stock_a31ae4f1e9e626423441cad2bc1328a02}{
+\index{swineStock@{swineStock}!GetNumberOfpregnantSwines@{GetNumberOfpregnantSwines}}
+\index{GetNumberOfpregnantSwines@{GetNumberOfpregnantSwines}!swineStock@{swineStock}}
+\subsubsection[{GetNumberOfpregnantSwines}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumberOfpregnantSwines ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a31ae4f1e9e626423441cad2bc1328a02}
+\hypertarget{classswine_stock_a10887b6ededdf74adaf16a193239a8e0}{
+\index{swineStock@{swineStock}!GetNumberOfSwines@{GetNumberOfSwines}}
+\index{GetNumberOfSwines@{GetNumberOfSwines}!swineStock@{swineStock}}
+\subsubsection[{GetNumberOfSwines}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetNumberOfSwines ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a10887b6ededdf74adaf16a193239a8e0}
+\hypertarget{classswine_stock_a52a84a2970940255ff2b74c768d418e3}{
+\index{swineStock@{swineStock}!GetSlaughterSwineFeedingDays@{GetSlaughterSwineFeedingDays}}
+\index{GetSlaughterSwineFeedingDays@{GetSlaughterSwineFeedingDays}!swineStock@{swineStock}}
+\subsubsection[{GetSlaughterSwineFeedingDays}]{\setlength{\rightskip}{0pt plus 5cm}double swineStock::GetSlaughterSwineFeedingDays ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a52a84a2970940255ff2b74c768d418e3}
+\hypertarget{classswine_stock_af63160db1074a36becd0b5dfb0859945}{
+\index{swineStock@{swineStock}!GetStable@{GetStable}}
+\index{GetStable@{GetStable}!swineStock@{swineStock}}
+\subsubsection[{GetStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pigstable}$\ast$ swineStock::GetStable ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_af63160db1074a36becd0b5dfb0859945}
+
+
+Reimplemented from \hyperlink{classanimal_stock_ac12cce9260301cb684af03c4d101d3ca}{animalStock}.\hypertarget{classswine_stock_a5ef49c2bbc4df37f13cec1d1d452ea3a}{
+\index{swineStock@{swineStock}!GetStockBought@{GetStockBought}}
+\index{GetStockBought@{GetStockBought}!swineStock@{swineStock}}
+\subsubsection[{GetStockBought}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct} $\ast$ swineStock::GetStockBought ()}}
+\label{classswine_stock_a5ef49c2bbc4df37f13cec1d1d452ea3a}
+\hypertarget{classswine_stock_a84a354508bd5989c1d8fe53209292f63}{
+\index{swineStock@{swineStock}!GetStockSold@{GetStockSold}}
+\index{GetStockSold@{GetStockSold}!swineStock@{swineStock}}
+\subsubsection[{GetStockSold}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct} $\ast$ swineStock::GetStockSold ()}}
+\label{classswine_stock_a84a354508bd5989c1d8fe53209292f63}
+\hypertarget{classswine_stock_a53e9eabc6dbdd5b9a95d8aef104b3152}{
+\index{swineStock@{swineStock}!InitSwines@{InitSwines}}
+\index{InitSwines@{InitSwines}!swineStock@{swineStock}}
+\subsubsection[{InitSwines}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::InitSwines (fstream $\ast$ {\em file}, \/  {\bf buildings} $\ast$ {\em theBuildings})}}
+\label{classswine_stock_a53e9eabc6dbdd5b9a95d8aef104b3152}
+\hypertarget{classswine_stock_ae8818ed344f35b8decfb6ab9d1719952}{
+\index{swineStock@{swineStock}!ReceiveFeed@{ReceiveFeed}}
+\index{ReceiveFeed@{ReceiveFeed}!swineStock@{swineStock}}
+\subsubsection[{ReceiveFeed}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::ReceiveFeed (char $\ast$ {\em fileName})}}
+\label{classswine_stock_ae8818ed344f35b8decfb6ab9d1719952}
+\hypertarget{classswine_stock_acf5744db1aac193ee2af257c4554918d}{
+\index{swineStock@{swineStock}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!swineStock@{swineStock}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::ReceivePlan (char $\ast$ {\em fileName})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classswine_stock_acf5744db1aac193ee2af257c4554918d}
+
+
+Reimplemented from \hyperlink{classanimal_stock_a725a20b1ebac99314da9371c17aaad82}{animalStock}.\hypertarget{classswine_stock_a6e44014411d40ef8496be5bc0090c2a4}{
+\index{swineStock@{swineStock}!SetStable@{SetStable}}
+\index{SetStable@{SetStable}!swineStock@{swineStock}}
+\subsubsection[{SetStable}]{\setlength{\rightskip}{0pt plus 5cm}void swineStock::SetStable ({\bf pigstable} $\ast$ {\em aaStable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classswine_stock_a6e44014411d40ef8496be5bc0090c2a4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classswine_stock_a78239ce5b75f52957d37b09e3bb8fbb9}{
+\index{swineStock@{swineStock}!aStable@{aStable}}
+\index{aStable@{aStable}!swineStock@{swineStock}}
+\subsubsection[{aStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pigstable}$\ast$ {\bf swineStock::aStable}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a78239ce5b75f52957d37b09e3bb8fbb9}
+
+
+Reimplemented from \hyperlink{classanimal_stock_a3f463dfdca4991f4555581e8d2a7e6c0}{animalStock}.\hypertarget{classswine_stock_a4739d5bb2beaa609383a74f8da54ea39}{
+\index{swineStock@{swineStock}!baconers@{baconers}}
+\index{baconers@{baconers}!swineStock@{swineStock}}
+\subsubsection[{baconers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf slaughterSwine}$\ast$ {\bf swineStock::baconers}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a4739d5bb2beaa609383a74f8da54ea39}
+\hypertarget{classswine_stock_a5974de43fdfb3a412be2ddefe1723e14}{
+\index{swineStock@{swineStock}!baconersInOutPrDay@{baconersInOutPrDay}}
+\index{baconersInOutPrDay@{baconersInOutPrDay}!swineStock@{swineStock}}
+\subsubsection[{baconersInOutPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::baconersInOutPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a5974de43fdfb3a412be2ddefe1723e14}
+\hypertarget{classswine_stock_a5e5538e17b43af6d9cfc46819311c65d}{
+\index{swineStock@{swineStock}!baconersPrDay@{baconersPrDay}}
+\index{baconersPrDay@{baconersPrDay}!swineStock@{swineStock}}
+\subsubsection[{baconersPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::baconersPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a5e5538e17b43af6d9cfc46819311c65d}
+\hypertarget{classswine_stock_a904a032504459d88941e059e2a7522d3}{
+\index{swineStock@{swineStock}!castsowsPrDay@{castsowsPrDay}}
+\index{castsowsPrDay@{castsowsPrDay}!swineStock@{swineStock}}
+\subsubsection[{castsowsPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::castsowsPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a904a032504459d88941e059e2a7522d3}
+\hypertarget{classswine_stock_a213454f9abaa9a6981fb5a2a6975bdd6}{
+\index{swineStock@{swineStock}!lactatingSwines@{lactatingSwines}}
+\index{lactatingSwines@{lactatingSwines}!swineStock@{swineStock}}
+\subsubsection[{lactatingSwines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf swine}$\ast$ {\bf swineStock::lactatingSwines}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a213454f9abaa9a6981fb5a2a6975bdd6}
+\hypertarget{classswine_stock_a3cffe5cdb0016585304a252330ee5edf}{
+\index{swineStock@{swineStock}!matingSwines@{matingSwines}}
+\index{matingSwines@{matingSwines}!swineStock@{swineStock}}
+\subsubsection[{matingSwines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf swine}$\ast$ {\bf swineStock::matingSwines}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a3cffe5cdb0016585304a252330ee5edf}
+\hypertarget{classswine_stock_a7dca40c98b0767777d0532e39e9743e8}{
+\index{swineStock@{swineStock}!newSows@{newSows}}
+\index{newSows@{newSows}!swineStock@{swineStock}}
+\subsubsection[{newSows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf slaughterSwine}$\ast$ {\bf swineStock::newSows}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a7dca40c98b0767777d0532e39e9743e8}
+\hypertarget{classswine_stock_a3d37e7fb0bdf7ba6cab85f33016f39d0}{
+\index{swineStock@{swineStock}!newsowsInOutPrDay@{newsowsInOutPrDay}}
+\index{newsowsInOutPrDay@{newsowsInOutPrDay}!swineStock@{swineStock}}
+\subsubsection[{newsowsInOutPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::newsowsInOutPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a3d37e7fb0bdf7ba6cab85f33016f39d0}
+\hypertarget{classswine_stock_a6841145e5c99f8db31c115a1022cd758}{
+\index{swineStock@{swineStock}!newsowsPrDay@{newsowsPrDay}}
+\index{newsowsPrDay@{newsowsPrDay}!swineStock@{swineStock}}
+\subsubsection[{newsowsPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::newsowsPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a6841145e5c99f8db31c115a1022cd758}
+\hypertarget{classswine_stock_a5eec1e1062ede0cf785bbedd5ac2a5a9}{
+\index{swineStock@{swineStock}!piglets@{piglets}}
+\index{piglets@{piglets}!swineStock@{swineStock}}
+\subsubsection[{piglets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf slaughterSwine}$\ast$ {\bf swineStock::piglets}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a5eec1e1062ede0cf785bbedd5ac2a5a9}
+\hypertarget{classswine_stock_a72f271f475a890dd470266dca393e047}{
+\index{swineStock@{swineStock}!pigletsInOutPrDay@{pigletsInOutPrDay}}
+\index{pigletsInOutPrDay@{pigletsInOutPrDay}!swineStock@{swineStock}}
+\subsubsection[{pigletsInOutPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::pigletsInOutPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a72f271f475a890dd470266dca393e047}
+\hypertarget{classswine_stock_af838d48f89fc191c9da140838e255ed9}{
+\index{swineStock@{swineStock}!pigletsPrDay@{pigletsPrDay}}
+\index{pigletsPrDay@{pigletsPrDay}!swineStock@{swineStock}}
+\subsubsection[{pigletsPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::pigletsPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_af838d48f89fc191c9da140838e255ed9}
+\hypertarget{classswine_stock_a259003746b904e3ed546e7a23fd04210}{
+\index{swineStock@{swineStock}!pointyPigs@{pointyPigs}}
+\index{pointyPigs@{pointyPigs}!swineStock@{swineStock}}
+\subsubsection[{pointyPigs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf pig}$>$$\ast$ {\bf swineStock::pointyPigs}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a259003746b904e3ed546e7a23fd04210}
+\hypertarget{classswine_stock_a54c9ef8e2d53f01b1729b4ae95474dcb}{
+\index{swineStock@{swineStock}!pregnantSwines@{pregnantSwines}}
+\index{pregnantSwines@{pregnantSwines}!swineStock@{swineStock}}
+\subsubsection[{pregnantSwines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf swine}$\ast$ {\bf swineStock::pregnantSwines}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a54c9ef8e2d53f01b1729b4ae95474dcb}
+\hypertarget{classswine_stock_a30d8224d05f918effe9db2c8329245c6}{
+\index{swineStock@{swineStock}!SowProductionCycle@{SowProductionCycle}}
+\index{SowProductionCycle@{SowProductionCycle}!swineStock@{swineStock}}
+\subsubsection[{SowProductionCycle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf swineStock::SowProductionCycle}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a30d8224d05f918effe9db2c8329245c6}
+\hypertarget{classswine_stock_a57fbbfb80947a28f38fcda05d8bd8202}{
+\index{swineStock@{swineStock}!weanersInOutPrDay@{weanersInOutPrDay}}
+\index{weanersInOutPrDay@{weanersInOutPrDay}!swineStock@{swineStock}}
+\subsubsection[{weanersInOutPrDay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalProduct}$\ast$ {\bf swineStock::weanersInOutPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classswine_stock_a57fbbfb80947a28f38fcda05d8bd8202}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{swine_stock_8h}{swineStock.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{swine_stock_8cpp}{swineStock.cpp}\end{DoxyCompactItemize}

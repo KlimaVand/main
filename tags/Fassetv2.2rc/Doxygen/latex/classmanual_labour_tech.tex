@@ -1,0 +1,91 @@
+\hypertarget{classmanual_labour_tech}{
+\section{manualLabourTech Class Reference}
+\label{classmanual_labour_tech}\index{manualLabourTech@{manualLabourTech}}
+}
+
+
+{\ttfamily \#include $<$manualLabourTech.h$>$}Inheritance diagram for manualLabourTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classmanual_labour_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmanual_labour_tech_a67af82062cb5809d5e9ad37de0b1f9f7}{manualLabourTech} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classmanual_labour_tech_a7d961278e18de8feb427ab9df6734011}{$\sim$manualLabourTech} ()
+\item 
+virtual void \hyperlink{classmanual_labour_tech_a1b03a5bb1d552a3bacaeb5bb758a1e17}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classmanual_labour_tech_a672922b49eac69b5ebf765e66bdcb3ef}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+void \hyperlink{classmanual_labour_tech_a9470bcb6a62316d2aa73286c436ebb19}{SetHoursPerUnit} (const double HPU)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classmanual_labour_tech_a4947c755580db30ddaf817a7f7238600}{CalcGangHours} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classmanual_labour_tech_ac0c48d73dd0631c2623916e49a684b60}{hoursPerUnit}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmanual_labour_tech_a67af82062cb5809d5e9ad37de0b1f9f7}{
+\index{manualLabourTech@{manualLabourTech}!manualLabourTech@{manualLabourTech}}
+\index{manualLabourTech@{manualLabourTech}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{manualLabourTech}]{\setlength{\rightskip}{0pt plus 5cm}manualLabourTech::manualLabourTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classmanual_labour_tech_a67af82062cb5809d5e9ad37de0b1f9f7}
+\hypertarget{classmanual_labour_tech_a7d961278e18de8feb427ab9df6734011}{
+\index{manualLabourTech@{manualLabourTech}!$\sim$manualLabourTech@{$\sim$manualLabourTech}}
+\index{$\sim$manualLabourTech@{$\sim$manualLabourTech}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{$\sim$manualLabourTech}]{\setlength{\rightskip}{0pt plus 5cm}manualLabourTech::$\sim$manualLabourTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanual_labour_tech_a7d961278e18de8feb427ab9df6734011}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmanual_labour_tech_a672922b49eac69b5ebf765e66bdcb3ef}{
+\index{manualLabourTech@{manualLabourTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void manualLabourTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanual_labour_tech_a672922b49eac69b5ebf765e66bdcb3ef}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classmanual_labour_tech_a4947c755580db30ddaf817a7f7238600}{
+\index{manualLabourTech@{manualLabourTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void manualLabourTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classmanual_labour_tech_a4947c755580db30ddaf817a7f7238600}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classmanual_labour_tech_a1b03a5bb1d552a3bacaeb5bb758a1e17}{
+\index{manualLabourTech@{manualLabourTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void manualLabourTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanual_labour_tech_a1b03a5bb1d552a3bacaeb5bb758a1e17}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classmanual_labour_tech_a9470bcb6a62316d2aa73286c436ebb19}{
+\index{manualLabourTech@{manualLabourTech}!SetHoursPerUnit@{SetHoursPerUnit}}
+\index{SetHoursPerUnit@{SetHoursPerUnit}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{SetHoursPerUnit}]{\setlength{\rightskip}{0pt plus 5cm}void manualLabourTech::SetHoursPerUnit (const double {\em HPU})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanual_labour_tech_a9470bcb6a62316d2aa73286c436ebb19}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmanual_labour_tech_ac0c48d73dd0631c2623916e49a684b60}{
+\index{manualLabourTech@{manualLabourTech}!hoursPerUnit@{hoursPerUnit}}
+\index{hoursPerUnit@{hoursPerUnit}!manualLabourTech@{manualLabourTech}}
+\subsubsection[{hoursPerUnit}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf manualLabourTech::hoursPerUnit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmanual_labour_tech_ac0c48d73dd0631c2623916e49a684b60}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{manual_labour_tech_8h}{manualLabourTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{manual_labour_tech_8cpp}{manualLabourTech.cpp}\end{DoxyCompactItemize}

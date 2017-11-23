@@ -1,0 +1,392 @@
+\hypertarget{classproducts}{
+\section{products Class Reference}
+\label{classproducts}\index{products@{products}}
+}
+
+
+{\ttfamily \#include $<$products.h$>$}Inheritance diagram for products::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classproducts}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classproducts_a7d8600c3aa1b8a5e03e3e75b44fe9969}{products} ()
+\item 
+\hyperlink{classproducts_a2f166f5fe4998ec698692c5debaecc5a}{products} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classproducts_a645a76ba77506cb12a782ea5acefffa3}{products} (const \hyperlink{classproducts}{products} \&aproducts)
+\item 
+\hyperlink{classproducts_a5591d80f0a425a5da2bbd6e7ffa663f7}{$\sim$products} ()
+\item 
+void \hyperlink{classproducts_a5787b3bc5b31d226344648957a220079}{InitializePrices} (\hyperlink{classbs_time}{bsTime} $\ast$astoptime)
+\item 
+void \hyperlink{classproducts_a4a370f5607ce63962bff3171ce7e8a62}{InitializeProducts} (string productFileName)
+\item 
+void \hyperlink{classproducts_af5ff2786f9e1eb1131408cd8d7bd6029}{GiveIndicator} ()
+\item 
+void \hyperlink{classproducts_aa1d3d08b456680000b791f91f8238127}{resetProducts} (void)
+\item 
+void \hyperlink{classproducts_a052853a033f88f5928b69a46ef279915}{YearlyUpdate} ()
+\item 
+void \hyperlink{classproducts_a209fca31666e9abd3077b88f62e99ca9}{CalcLP} ()
+\item 
+void \hyperlink{classproducts_af814d0f34312e7f13be312349d2795aa}{SetSellthePlantProducts} (bool aVal)
+\item 
+void \hyperlink{classproducts_a4d9d3e19c3ab53930d506d69d10cf7bd}{SetSelltheStrawProducts} (bool aVal)
+\item 
+void \hyperlink{classproducts_a6ff256b2b2b02cccbeffdcf3e10daf6b}{SetSelltheNonRoughageProducts} (bool aVal)
+\item 
+void \hyperlink{classproducts_aafdc02da42b92ae8cf0bb1a24664500d}{SellPlantItems} ()
+\item 
+void \hyperlink{classproducts_a582a5c70832b8f9c53fb1103944c4bca}{SellPlantItem} (\hyperlink{classproduct}{product} $\ast$itemToSell)
+\item 
+\hyperlink{classprice}{price} $\ast$ \hyperlink{classproducts_a33388ac3221fd6116d2dae25543685c1}{GetPriceElement} (const char $\ast$ident)
+\item 
+\hyperlink{classprice}{price} $\ast$ \hyperlink{classproducts_a3a34b70e01258e1a19d8c68010c41d83}{GetPriceElement} (string aPriceName)
+\item 
+double \hyperlink{classproducts_a7d77ad348aa0f59a569c5c2debda2052}{GetActualSellPrice} (const char $\ast$ident)
+\item 
+double \hyperlink{classproducts_a9c32b675c87621466456bca5bff218f7}{GetActualBuyPrice} (const char $\ast$ident)
+\item 
+double \hyperlink{classproducts_ae122edd26460705dc0c598c8ce8cf488}{GetExpectedSellPriceYear1} (const char $\ast$ident)
+\item 
+double \hyperlink{classproducts_aca468b27ede7c7abfb58d543acd78f5e}{GetExpectedBuyPriceYear1} (const char $\ast$ident)
+\item 
+void \hyperlink{classproducts_a3b57167d8acbc0ad1d9fd4bdb1e7ce2a}{AddProduct} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+void \hyperlink{classproducts_a378d30f83ce852844803d549e13eee31}{AddHarvestGrainProducts} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classplant_item}{plantItem} $>$ $\ast$aList)
+\item 
+void \hyperlink{classproducts_a64468cfd7fcbe94794b6d22a59781781}{AddHarvestStrawProducts} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classplant_item}{plantItem} $>$ $\ast$aList)
+\item 
+void \hyperlink{classproducts_aa66cc6700d84a9bb9a88915d4b8156de}{AddForageProducts} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classplant_item}{plantItem} $>$ $\ast$aList)
+\item 
+void \hyperlink{classproducts_a4b770aa23aa5b30ceec044586c6d02b9}{AddHarvestProducts} (int feedCat, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classplant_item}{plantItem} $>$ $\ast$HarvestList)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classproducts_a9f4a3b9df4fac4f10e004bcca01fa2a0}{GetProductType} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+void \hyperlink{classproducts_a85731ae226d4e23d1b83d4fa936e12e3}{SubtractProduct} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+void \hyperlink{classproducts_a87b32cc7b19b4082bf4ee0c7f01baafc}{SubtractProduct} (\hyperlink{classproduct}{product} $\ast$aProduct, bool import)
+\item 
+double \hyperlink{classproducts_a054d0246f5e9cca276a7bc117c7fbfe5}{ImportProduct} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classproducts_aab079f48661f64c4771d87f3d867baa8}{GetproductLists} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classproducts_a0396e9f7c6e68510fb507a7af74bc5bc}{GetSubsetofProductList} (int ObjType)
+\item 
+void \hyperlink{classproducts_a1f3ef16fd1cb7ca9dc7f3e9e4c257b27}{UpdateProductPtr} (void)
+\item 
+void \hyperlink{classproducts_a8bd239aabc0a167741c02882e305d65d}{GiveProductInformation} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+void \hyperlink{classproducts_ae429268b58f42c812d1eacc2954500b2}{AddElementProductList} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classproducts_a9381e599dba699b633f183cb66c7ba12}{GetProductElement} (const char $\ast$ident)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classproducts_aab404bf964b8ae9272a30710a953e9c0}{GetProductElement} (string aProductName)
+\item 
+void \hyperlink{classproducts_ae50bd05450d23bd7d6f48f602c1b515d}{ExistsProduct} (\hyperlink{classproduct}{product} $\ast$someProduct)
+\item 
+void \hyperlink{classproducts_a4f87e6c90ed2a421f101b7a04668c5cc}{ShowProducts} (ostream $\ast$os)
+\item 
+void \hyperlink{classproducts_a74c59dd845faf4570e5a4010722cfc95}{ShowProducts} (ostream $\ast$os, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$aList)
+\item 
+void \hyperlink{classproducts_aada833a6042e21579d64f15edb742b01}{ShowPrices} (ostream $\ast$os)
+\item 
+void \hyperlink{classproducts_a04c5d318238082bbdd59023d1e499af9}{InitializeFeed} (string FeedFileName)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classproducts_a0236cbb567600326e95e323e39066190}{GetProductElement} (int feedCode)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classproducts_ac13e4e332916d2e8b6d0f6bf04cadc4d}{GetCopyStoredFeedProduct} (\hyperlink{classproduct}{product} $\ast$aProduct)
+\item 
+\hyperlink{classprice}{price} $\ast$ \hyperlink{classproducts_aa31314fc97c7604a5e092022053e5543}{GetPricePtr} (string aPriceName)
+\item 
+int \hyperlink{classproducts_a17077e1bcda62eee96530b9b4e8b0a10}{GetHarvestProductCode} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classplant_item}{plantItem} $>$ $\ast$HarvestList)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classproducts_ac69f5933f20409ff01e5bee8b7b02899}{InitializeProduct} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classproducts_a5ae92c2c7f494dc1a14e2ecd1543fd74}{theProductList}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classprice}{price} $>$ $\ast$ \hyperlink{classproducts_ab1f92b4cbe7296058a19ee473087443f}{thePriceList}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classproducts_aa678af863c41bbd404f7d8eaf3000493}{operator$<$$<$} (ostream \&os, const \hyperlink{classproducts}{products} \&aproducts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classproducts_a7d8600c3aa1b8a5e03e3e75b44fe9969}{
+\index{products@{products}!products@{products}}
+\index{products@{products}!products@{products}}
+\subsubsection[{products}]{\setlength{\rightskip}{0pt plus 5cm}products::products ()}}
+\label{classproducts_a7d8600c3aa1b8a5e03e3e75b44fe9969}
+\hypertarget{classproducts_a2f166f5fe4998ec698692c5debaecc5a}{
+\index{products@{products}!products@{products}}
+\index{products@{products}!products@{products}}
+\subsubsection[{products}]{\setlength{\rightskip}{0pt plus 5cm}products::products (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classproducts_a2f166f5fe4998ec698692c5debaecc5a}
+\hypertarget{classproducts_a645a76ba77506cb12a782ea5acefffa3}{
+\index{products@{products}!products@{products}}
+\index{products@{products}!products@{products}}
+\subsubsection[{products}]{\setlength{\rightskip}{0pt plus 5cm}products::products (const {\bf products} \& {\em aproducts})}}
+\label{classproducts_a645a76ba77506cb12a782ea5acefffa3}
+\hypertarget{classproducts_a5591d80f0a425a5da2bbd6e7ffa663f7}{
+\index{products@{products}!$\sim$products@{$\sim$products}}
+\index{$\sim$products@{$\sim$products}!products@{products}}
+\subsubsection[{$\sim$products}]{\setlength{\rightskip}{0pt plus 5cm}products::$\sim$products ()}}
+\label{classproducts_a5591d80f0a425a5da2bbd6e7ffa663f7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classproducts_ae429268b58f42c812d1eacc2954500b2}{
+\index{products@{products}!AddElementProductList@{AddElementProductList}}
+\index{AddElementProductList@{AddElementProductList}!products@{products}}
+\subsubsection[{AddElementProductList}]{\setlength{\rightskip}{0pt plus 5cm}void products::AddElementProductList ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_ae429268b58f42c812d1eacc2954500b2}
+\hypertarget{classproducts_aa66cc6700d84a9bb9a88915d4b8156de}{
+\index{products@{products}!AddForageProducts@{AddForageProducts}}
+\index{AddForageProducts@{AddForageProducts}!products@{products}}
+\subsubsection[{AddForageProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::AddForageProducts ({\bf linkList}$<$ {\bf plantItem} $>$ $\ast$ {\em aList})}}
+\label{classproducts_aa66cc6700d84a9bb9a88915d4b8156de}
+\hypertarget{classproducts_a378d30f83ce852844803d549e13eee31}{
+\index{products@{products}!AddHarvestGrainProducts@{AddHarvestGrainProducts}}
+\index{AddHarvestGrainProducts@{AddHarvestGrainProducts}!products@{products}}
+\subsubsection[{AddHarvestGrainProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::AddHarvestGrainProducts ({\bf linkList}$<$ {\bf plantItem} $>$ $\ast$ {\em aList})}}
+\label{classproducts_a378d30f83ce852844803d549e13eee31}
+\hypertarget{classproducts_a4b770aa23aa5b30ceec044586c6d02b9}{
+\index{products@{products}!AddHarvestProducts@{AddHarvestProducts}}
+\index{AddHarvestProducts@{AddHarvestProducts}!products@{products}}
+\subsubsection[{AddHarvestProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::AddHarvestProducts (int {\em feedCat}, \/  {\bf linkList}$<$ {\bf plantItem} $>$ $\ast$ {\em HarvestList})}}
+\label{classproducts_a4b770aa23aa5b30ceec044586c6d02b9}
+\hypertarget{classproducts_a64468cfd7fcbe94794b6d22a59781781}{
+\index{products@{products}!AddHarvestStrawProducts@{AddHarvestStrawProducts}}
+\index{AddHarvestStrawProducts@{AddHarvestStrawProducts}!products@{products}}
+\subsubsection[{AddHarvestStrawProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::AddHarvestStrawProducts ({\bf linkList}$<$ {\bf plantItem} $>$ $\ast$ {\em aList})}}
+\label{classproducts_a64468cfd7fcbe94794b6d22a59781781}
+\hypertarget{classproducts_a3b57167d8acbc0ad1d9fd4bdb1e7ce2a}{
+\index{products@{products}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!products@{products}}
+\subsubsection[{AddProduct}]{\setlength{\rightskip}{0pt plus 5cm}void products::AddProduct ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_a3b57167d8acbc0ad1d9fd4bdb1e7ce2a}
+\hypertarget{classproducts_a209fca31666e9abd3077b88f62e99ca9}{
+\index{products@{products}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!products@{products}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void products::CalcLP ()}}
+\label{classproducts_a209fca31666e9abd3077b88f62e99ca9}
+\hypertarget{classproducts_ae50bd05450d23bd7d6f48f602c1b515d}{
+\index{products@{products}!ExistsProduct@{ExistsProduct}}
+\index{ExistsProduct@{ExistsProduct}!products@{products}}
+\subsubsection[{ExistsProduct}]{\setlength{\rightskip}{0pt plus 5cm}void products::ExistsProduct ({\bf product} $\ast$ {\em someProduct})}}
+\label{classproducts_ae50bd05450d23bd7d6f48f602c1b515d}
+Checks if a \hyperlink{classproducts}{products} has already been added. It is compared by object, by name and feedcode. If the \hyperlink{classproduct}{product} has been added fasset will halt \hypertarget{classproducts_a9c32b675c87621466456bca5bff218f7}{
+\index{products@{products}!GetActualBuyPrice@{GetActualBuyPrice}}
+\index{GetActualBuyPrice@{GetActualBuyPrice}!products@{products}}
+\subsubsection[{GetActualBuyPrice}]{\setlength{\rightskip}{0pt plus 5cm}double products::GetActualBuyPrice (const char $\ast$ {\em ident})}}
+\label{classproducts_a9c32b675c87621466456bca5bff218f7}
+\hypertarget{classproducts_a7d77ad348aa0f59a569c5c2debda2052}{
+\index{products@{products}!GetActualSellPrice@{GetActualSellPrice}}
+\index{GetActualSellPrice@{GetActualSellPrice}!products@{products}}
+\subsubsection[{GetActualSellPrice}]{\setlength{\rightskip}{0pt plus 5cm}double products::GetActualSellPrice (const char $\ast$ {\em ident})}}
+\label{classproducts_a7d77ad348aa0f59a569c5c2debda2052}
+\hypertarget{classproducts_ac13e4e332916d2e8b6d0f6bf04cadc4d}{
+\index{products@{products}!GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}}
+\index{GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}!products@{products}}
+\subsubsection[{GetCopyStoredFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ products::GetCopyStoredFeedProduct ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_ac13e4e332916d2e8b6d0f6bf04cadc4d}
+Returns copy of a \hyperlink{classproduct}{product} if it is in a store, otherwise return NULL \hypertarget{classproducts_aca468b27ede7c7abfb58d543acd78f5e}{
+\index{products@{products}!GetExpectedBuyPriceYear1@{GetExpectedBuyPriceYear1}}
+\index{GetExpectedBuyPriceYear1@{GetExpectedBuyPriceYear1}!products@{products}}
+\subsubsection[{GetExpectedBuyPriceYear1}]{\setlength{\rightskip}{0pt plus 5cm}double products::GetExpectedBuyPriceYear1 (const char $\ast$ {\em ident})}}
+\label{classproducts_aca468b27ede7c7abfb58d543acd78f5e}
+\hypertarget{classproducts_ae122edd26460705dc0c598c8ce8cf488}{
+\index{products@{products}!GetExpectedSellPriceYear1@{GetExpectedSellPriceYear1}}
+\index{GetExpectedSellPriceYear1@{GetExpectedSellPriceYear1}!products@{products}}
+\subsubsection[{GetExpectedSellPriceYear1}]{\setlength{\rightskip}{0pt plus 5cm}double products::GetExpectedSellPriceYear1 (const char $\ast$ {\em ident})}}
+\label{classproducts_ae122edd26460705dc0c598c8ce8cf488}
+\hypertarget{classproducts_a17077e1bcda62eee96530b9b4e8b0a10}{
+\index{products@{products}!GetHarvestProductCode@{GetHarvestProductCode}}
+\index{GetHarvestProductCode@{GetHarvestProductCode}!products@{products}}
+\subsubsection[{GetHarvestProductCode}]{\setlength{\rightskip}{0pt plus 5cm}int products::GetHarvestProductCode ({\bf linkList}$<$ {\bf plantItem} $>$ $\ast$ {\em HarvestList})}}
+\label{classproducts_a17077e1bcda62eee96530b9b4e8b0a10}
+Intepret standard feed code from \hyperlink{classcrop}{crop} or \hyperlink{classcrop}{crop} mixture \hypertarget{classproducts_a3a34b70e01258e1a19d8c68010c41d83}{
+\index{products@{products}!GetPriceElement@{GetPriceElement}}
+\index{GetPriceElement@{GetPriceElement}!products@{products}}
+\subsubsection[{GetPriceElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf price} $\ast$ products::GetPriceElement (string {\em aPriceName})}}
+\label{classproducts_a3a34b70e01258e1a19d8c68010c41d83}
+return a \hyperlink{classprice}{price} with a given name. If the prices does not exist fasset will halt \hypertarget{classproducts_a33388ac3221fd6116d2dae25543685c1}{
+\index{products@{products}!GetPriceElement@{GetPriceElement}}
+\index{GetPriceElement@{GetPriceElement}!products@{products}}
+\subsubsection[{GetPriceElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf price} $\ast$ products::GetPriceElement (const char $\ast$ {\em ident})}}
+\label{classproducts_a33388ac3221fd6116d2dae25543685c1}
+return a \hyperlink{classprice}{price} with a given name. If the prices does not exist fasset will halt \hypertarget{classproducts_aa31314fc97c7604a5e092022053e5543}{
+\index{products@{products}!GetPricePtr@{GetPricePtr}}
+\index{GetPricePtr@{GetPricePtr}!products@{products}}
+\subsubsection[{GetPricePtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf price} $\ast$ products::GetPricePtr (string {\em aPriceName})}}
+\label{classproducts_aa31314fc97c7604a5e092022053e5543}
+finds a \hyperlink{classprice}{price} with a given name. If it cannot be found a null \hyperlink{classprice}{price} will be returned \hypertarget{classproducts_a0236cbb567600326e95e323e39066190}{
+\index{products@{products}!GetProductElement@{GetProductElement}}
+\index{GetProductElement@{GetProductElement}!products@{products}}
+\subsubsection[{GetProductElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ products::GetProductElement (int {\em feedCode})}}
+\label{classproducts_a0236cbb567600326e95e323e39066190}
+Returns pointer to cattlefeed, based on feed code \hypertarget{classproducts_aab404bf964b8ae9272a30710a953e9c0}{
+\index{products@{products}!GetProductElement@{GetProductElement}}
+\index{GetProductElement@{GetProductElement}!products@{products}}
+\subsubsection[{GetProductElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ products::GetProductElement (string {\em aProductName})}}
+\label{classproducts_aab404bf964b8ae9272a30710a953e9c0}
+find a \hyperlink{classproduct}{product} with a given name. If the \hyperlink{classproduct}{product} does not exist fasset will halt \hypertarget{classproducts_a9381e599dba699b633f183cb66c7ba12}{
+\index{products@{products}!GetProductElement@{GetProductElement}}
+\index{GetProductElement@{GetProductElement}!products@{products}}
+\subsubsection[{GetProductElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ products::GetProductElement (const char $\ast$ {\em ident})}}
+\label{classproducts_a9381e599dba699b633f183cb66c7ba12}
+find a \hyperlink{classproduct}{product} with a given name. If the \hyperlink{classproduct}{product} does not exist fasset will halt \hypertarget{classproducts_aab079f48661f64c4771d87f3d867baa8}{
+\index{products@{products}!GetproductLists@{GetproductLists}}
+\index{GetproductLists@{GetproductLists}!products@{products}}
+\subsubsection[{GetproductLists}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$ {\bf product} $>$ $\ast$ products::GetproductLists ()}}
+\label{classproducts_aab079f48661f64c4771d87f3d867baa8}
+\hypertarget{classproducts_a9f4a3b9df4fac4f10e004bcca01fa2a0}{
+\index{products@{products}!GetProductType@{GetProductType}}
+\index{GetProductType@{GetProductType}!products@{products}}
+\subsubsection[{GetProductType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ products::GetProductType ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_a9f4a3b9df4fac4f10e004bcca01fa2a0}
+\hypertarget{classproducts_a0396e9f7c6e68510fb507a7af74bc5bc}{
+\index{products@{products}!GetSubsetofProductList@{GetSubsetofProductList}}
+\index{GetSubsetofProductList@{GetSubsetofProductList}!products@{products}}
+\subsubsection[{GetSubsetofProductList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$ {\bf product} $>$ $\ast$ products::GetSubsetofProductList (int {\em ObjType})}}
+\label{classproducts_a0396e9f7c6e68510fb507a7af74bc5bc}
+returns a link list of \hyperlink{classproducts}{products} with the same type as ObjType \hypertarget{classproducts_af5ff2786f9e1eb1131408cd8d7bd6029}{
+\index{products@{products}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!products@{products}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void products::GiveIndicator ()}}
+\label{classproducts_af5ff2786f9e1eb1131408cd8d7bd6029}
+\hypertarget{classproducts_a8bd239aabc0a167741c02882e305d65d}{
+\index{products@{products}!GiveProductInformation@{GiveProductInformation}}
+\index{GiveProductInformation@{GiveProductInformation}!products@{products}}
+\subsubsection[{GiveProductInformation}]{\setlength{\rightskip}{0pt plus 5cm}void products::GiveProductInformation ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_a8bd239aabc0a167741c02882e305d65d}
+Find a \hyperlink{classproduct}{product} with the same name as the input \hyperlink{classproduct}{product} and replace it with input. It will hold nothing \hypertarget{classproducts_a054d0246f5e9cca276a7bc117c7fbfe5}{
+\index{products@{products}!ImportProduct@{ImportProduct}}
+\index{ImportProduct@{ImportProduct}!products@{products}}
+\subsubsection[{ImportProduct}]{\setlength{\rightskip}{0pt plus 5cm}double products::ImportProduct ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_a054d0246f5e9cca276a7bc117c7fbfe5}
+\hypertarget{classproducts_a04c5d318238082bbdd59023d1e499af9}{
+\index{products@{products}!InitializeFeed@{InitializeFeed}}
+\index{InitializeFeed@{InitializeFeed}!products@{products}}
+\subsubsection[{InitializeFeed}]{\setlength{\rightskip}{0pt plus 5cm}void products::InitializeFeed (string {\em FeedFileName})}}
+\label{classproducts_a04c5d318238082bbdd59023d1e499af9}
+Reads feed data from \hyperlink{classcattle}{cattle} feed tables (file must be output from Excel as tab-\/delimited text Cannot use comma-\/delimited format as the first \hyperlink{classfield}{field} often contains commas NJH 21.06.00 \hypertarget{classproducts_a5787b3bc5b31d226344648957a220079}{
+\index{products@{products}!InitializePrices@{InitializePrices}}
+\index{InitializePrices@{InitializePrices}!products@{products}}
+\subsubsection[{InitializePrices}]{\setlength{\rightskip}{0pt plus 5cm}void products::InitializePrices ({\bf bsTime} $\ast$ {\em astoptime})}}
+\label{classproducts_a5787b3bc5b31d226344648957a220079}
+\hypertarget{classproducts_ac69f5933f20409ff01e5bee8b7b02899}{
+\index{products@{products}!InitializeProduct@{InitializeProduct}}
+\index{InitializeProduct@{InitializeProduct}!products@{products}}
+\subsubsection[{InitializeProduct}]{\setlength{\rightskip}{0pt plus 5cm}void products::InitializeProduct (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classproducts_ac69f5933f20409ff01e5bee8b7b02899}
+\hypertarget{classproducts_a4a370f5607ce63962bff3171ce7e8a62}{
+\index{products@{products}!InitializeProducts@{InitializeProducts}}
+\index{InitializeProducts@{InitializeProducts}!products@{products}}
+\subsubsection[{InitializeProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::InitializeProducts (string {\em productFileName})}}
+\label{classproducts_a4a370f5607ce63962bff3171ce7e8a62}
+\hypertarget{classproducts_aa1d3d08b456680000b791f91f8238127}{
+\index{products@{products}!resetProducts@{resetProducts}}
+\index{resetProducts@{resetProducts}!products@{products}}
+\subsubsection[{resetProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::resetProducts (void)}}
+\label{classproducts_aa1d3d08b456680000b791f91f8238127}
+sets the amount in each \hyperlink{classproducts}{products} \hypertarget{classproducts_a582a5c70832b8f9c53fb1103944c4bca}{
+\index{products@{products}!SellPlantItem@{SellPlantItem}}
+\index{SellPlantItem@{SellPlantItem}!products@{products}}
+\subsubsection[{SellPlantItem}]{\setlength{\rightskip}{0pt plus 5cm}void products::SellPlantItem ({\bf product} $\ast$ {\em itemToSell})}}
+\label{classproducts_a582a5c70832b8f9c53fb1103944c4bca}
+\hypertarget{classproducts_aafdc02da42b92ae8cf0bb1a24664500d}{
+\index{products@{products}!SellPlantItems@{SellPlantItems}}
+\index{SellPlantItems@{SellPlantItems}!products@{products}}
+\subsubsection[{SellPlantItems}]{\setlength{\rightskip}{0pt plus 5cm}void products::SellPlantItems ()}}
+\label{classproducts_aafdc02da42b92ae8cf0bb1a24664500d}
+\hypertarget{classproducts_a6ff256b2b2b02cccbeffdcf3e10daf6b}{
+\index{products@{products}!SetSelltheNonRoughageProducts@{SetSelltheNonRoughageProducts}}
+\index{SetSelltheNonRoughageProducts@{SetSelltheNonRoughageProducts}!products@{products}}
+\subsubsection[{SetSelltheNonRoughageProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::SetSelltheNonRoughageProducts (bool {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classproducts_a6ff256b2b2b02cccbeffdcf3e10daf6b}
+\hypertarget{classproducts_af814d0f34312e7f13be312349d2795aa}{
+\index{products@{products}!SetSellthePlantProducts@{SetSellthePlantProducts}}
+\index{SetSellthePlantProducts@{SetSellthePlantProducts}!products@{products}}
+\subsubsection[{SetSellthePlantProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::SetSellthePlantProducts (bool {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classproducts_af814d0f34312e7f13be312349d2795aa}
+\hypertarget{classproducts_a4d9d3e19c3ab53930d506d69d10cf7bd}{
+\index{products@{products}!SetSelltheStrawProducts@{SetSelltheStrawProducts}}
+\index{SetSelltheStrawProducts@{SetSelltheStrawProducts}!products@{products}}
+\subsubsection[{SetSelltheStrawProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::SetSelltheStrawProducts (bool {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classproducts_a4d9d3e19c3ab53930d506d69d10cf7bd}
+\hypertarget{classproducts_aada833a6042e21579d64f15edb742b01}{
+\index{products@{products}!ShowPrices@{ShowPrices}}
+\index{ShowPrices@{ShowPrices}!products@{products}}
+\subsubsection[{ShowPrices}]{\setlength{\rightskip}{0pt plus 5cm}void products::ShowPrices (ostream $\ast$ {\em os})}}
+\label{classproducts_aada833a6042e21579d64f15edb742b01}
+\hypertarget{classproducts_a74c59dd845faf4570e5a4010722cfc95}{
+\index{products@{products}!ShowProducts@{ShowProducts}}
+\index{ShowProducts@{ShowProducts}!products@{products}}
+\subsubsection[{ShowProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::ShowProducts (ostream $\ast$ {\em os}, \/  {\bf linkList}$<$ {\bf product} $>$ $\ast$ {\em aList})}}
+\label{classproducts_a74c59dd845faf4570e5a4010722cfc95}
+\hypertarget{classproducts_a4f87e6c90ed2a421f101b7a04668c5cc}{
+\index{products@{products}!ShowProducts@{ShowProducts}}
+\index{ShowProducts@{ShowProducts}!products@{products}}
+\subsubsection[{ShowProducts}]{\setlength{\rightskip}{0pt plus 5cm}void products::ShowProducts (ostream $\ast$ {\em os})}}
+\label{classproducts_a4f87e6c90ed2a421f101b7a04668c5cc}
+print out all information about all \hyperlink{classproducts}{products} \hypertarget{classproducts_a87b32cc7b19b4082bf4ee0c7f01baafc}{
+\index{products@{products}!SubtractProduct@{SubtractProduct}}
+\index{SubtractProduct@{SubtractProduct}!products@{products}}
+\subsubsection[{SubtractProduct}]{\setlength{\rightskip}{0pt plus 5cm}void products::SubtractProduct ({\bf product} $\ast$ {\em aProduct}, \/  bool {\em import})}}
+\label{classproducts_a87b32cc7b19b4082bf4ee0c7f01baafc}
+\hypertarget{classproducts_a85731ae226d4e23d1b83d4fa936e12e3}{
+\index{products@{products}!SubtractProduct@{SubtractProduct}}
+\index{SubtractProduct@{SubtractProduct}!products@{products}}
+\subsubsection[{SubtractProduct}]{\setlength{\rightskip}{0pt plus 5cm}void products::SubtractProduct ({\bf product} $\ast$ {\em aProduct})}}
+\label{classproducts_a85731ae226d4e23d1b83d4fa936e12e3}
+\hypertarget{classproducts_a1f3ef16fd1cb7ca9dc7f3e9e4c257b27}{
+\index{products@{products}!UpdateProductPtr@{UpdateProductPtr}}
+\index{UpdateProductPtr@{UpdateProductPtr}!products@{products}}
+\subsubsection[{UpdateProductPtr}]{\setlength{\rightskip}{0pt plus 5cm}void products::UpdateProductPtr (void)}}
+\label{classproducts_a1f3ef16fd1cb7ca9dc7f3e9e4c257b27}
+find a matching \hyperlink{classprice}{price} for each \hyperlink{classproducts}{products} \hypertarget{classproducts_a052853a033f88f5928b69a46ef279915}{
+\index{products@{products}!YearlyUpdate@{YearlyUpdate}}
+\index{YearlyUpdate@{YearlyUpdate}!products@{products}}
+\subsubsection[{YearlyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void products::YearlyUpdate ()}}
+\label{classproducts_a052853a033f88f5928b69a46ef279915}
+update all the prices 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classproducts_aa678af863c41bbd404f7d8eaf3000493}{
+\index{products@{products}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!products@{products}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf products} \& {\em aproducts})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classproducts_aa678af863c41bbd404f7d8eaf3000493}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classproducts_ab1f92b4cbe7296058a19ee473087443f}{
+\index{products@{products}!thePriceList@{thePriceList}}
+\index{thePriceList@{thePriceList}!products@{products}}
+\subsubsection[{thePriceList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf price}$>$$\ast$ {\bf products::thePriceList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classproducts_ab1f92b4cbe7296058a19ee473087443f}
+\hypertarget{classproducts_a5ae92c2c7f494dc1a14e2ecd1543fd74}{
+\index{products@{products}!theProductList@{theProductList}}
+\index{theProductList@{theProductList}!products@{products}}
+\subsubsection[{theProductList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf product}$>$$\ast$ {\bf products::theProductList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classproducts_a5ae92c2c7f494dc1a14e2ecd1543fd74}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{products_8h}{products.h}\item 
+C:/main/trunk/src/products/\hyperlink{products_8cpp}{products.cpp}\end{DoxyCompactItemize}

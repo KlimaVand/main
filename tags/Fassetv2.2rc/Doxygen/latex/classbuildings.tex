@@ -1,0 +1,260 @@
+\hypertarget{classbuildings}{
+\section{buildings Class Reference}
+\label{classbuildings}\index{buildings@{buildings}}
+}
+
+
+{\ttfamily \#include $<$thebuild.h$>$}Inheritance diagram for buildings::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbuildings}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbuildings_affec7e1c753303f692e258d9adc3756a}{buildings} ()
+\item 
+\hyperlink{classbuildings_a3ed50eab88a240e472b7a26e6aaf6ecc}{buildings} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classbuildings_a73c0a2677e231fa95a78cd153dddc2ce}{buildings} (const \hyperlink{classbuildings}{buildings} \&someBuildings)
+\item 
+\hyperlink{classbuildings_a4d070dc7165028bfc384c66d54c5d41a}{$\sim$buildings} ()
+\item 
+void \hyperlink{classbuildings_aed6e79504b2bb19179d9aa4a06e1ba02}{InitializeAll} (string InputFilename, bool pigs, bool dairy, bool beef)
+\item 
+\hyperlink{classstable}{stable} $\ast$ \hyperlink{classbuildings_ab5f3304118e2662e0e53867aaf99a1dd}{GetFreeStable} (\hyperlink{classanimal_stock}{animalStock} $\ast$aHerd)
+\item 
+\hyperlink{classpigstable}{pigstable} $\ast$ \hyperlink{classbuildings_a550d0127d0d4c8a4f497b4bc9fb30bcf}{GetFreeStable} (\hyperlink{classswine_stock}{swineStock} $\ast$aHerd)
+\item 
+\hyperlink{classanimal_section}{animalSection} $\ast$ \hyperlink{classbuildings_af2943b86173a6a6049c4d52b9793e36e}{PlaceAnimal} (const char $\ast$name)
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classstable}{stable} $>$ $\ast$ \hyperlink{classbuildings_ae1d964dd1eea984f929442218a6ca587}{GettheStables} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classmanurestore}{manurestore} $>$ $\ast$ \hyperlink{classbuildings_a80de7e67dd8e3ff545151ee8a01171d4}{GettheManurestores} ()
+\item 
+void \hyperlink{classbuildings_a5ef204b7f1eace35543ea66a8a5c5a39}{StoreProduct} (\hyperlink{classproduct}{product} $\ast$p)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classbuildings_a6a0123f0dd6ed6d314e11e5b8107baf5}{ExtractProduct} (\hyperlink{classproduct}{product} $\ast$p)
+\item 
+double \hyperlink{classbuildings_a503da8794e3f43e19319e097e9b6e40c}{AmountProductStored} (\hyperlink{classproduct}{product} $\ast$p)
+\item 
+virtual void \hyperlink{classbuildings_a087a7412a9998a4bf7be6225bc38bb5c}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classbuildings_a23440e08dbfc88ebfa39a3e097f6c366}{CalcLP} ()
+\item 
+void \hyperlink{classbuildings_acd04fcf6f4eefce96875603c5d283dd4}{CalcLPmanurestore} (string filename)
+\item 
+void \hyperlink{classbuildings_ae61dd92b601d41c4b3d41dfc3aa28238}{CalcLPmanurestorecap} (string filename)
+\item 
+void \hyperlink{classbuildings_ad0c0772d201264de61f3d255850fac73}{CalcLPstables} (string filename)
+\item 
+void \hyperlink{classbuildings_a91354eb25a6b4b817034883ea0f824c3}{EndBudget} (bool show=false)
+\item 
+double \hyperlink{classbuildings_a8b590b3f7488bb7b95dcf936e54769da}{GetNInput} ()
+\item 
+double \hyperlink{classbuildings_a48d4b22d3d794acd230f9394047e4165}{GetNOutput} ()
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classbuildings_adea0a6434b66c56d04a52fad0b9b2979}{GetCopyStoredFeedProduct} (\hyperlink{classproduct}{product} $\ast$p)
+\item 
+void \hyperlink{classbuildings_a4801905be37d8b7a0ea0487879a79cc3}{ScaleBuildings} ()
+\item 
+double \hyperlink{classbuildings_a07a1880ab85c57d783b1fc5582e767de}{GetTotalManureNStored} ()
+\item 
+double \hyperlink{classbuildings_a02b582aacb2a1b00464c501a3a5635ff}{GetTotalSlurryStored} ()
+\item 
+double \hyperlink{classbuildings_a01997e6fff4a33f76068f49dd064582f}{GetTotalSlurryCap} ()
+\item 
+void \hyperlink{classbuildings_ae8225491bee18bb4647149201b24d8ba}{GetAvailableStoredFeed} (\hyperlink{classfeed_item}{feedItem} $\ast$aProduct)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classbuildings_a9b71637ed71eb2f332c3f56d774f2f6a}{GetStoredFeed} (int type)
+\item 
+\hyperlink{classproduct}{product} $\ast$ \hyperlink{classbuildings_a0e445434af31aa7d49db660a67dcfa04}{EmptyManureStores} ()
+\item 
+\hyperlink{classstable}{stable} $\ast$ \hyperlink{classbuildings_af7822b1a537bbb71b55db60c2f48b07b}{GetStable} (int stableNo)
+\item 
+\hyperlink{classmanurestore}{manurestore} $\ast$ \hyperlink{classbuildings_aba1d7b741afc477fa08d0cdcdfed7e95}{GetManurestore} (int storeNo)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classbuildings_a2af3e65c7b1426fa2dd80c658ca99cd5}{operator$<$$<$} (ostream \&os, \hyperlink{classbuildings}{buildings} $\ast$b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Should only be instantiated ONCE. MUST be initialized AFTER theProducts This class encapsulates a graph of \hyperlink{classbuildings}{buildings}. (more or less) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbuildings_affec7e1c753303f692e258d9adc3756a}{
+\index{buildings@{buildings}!buildings@{buildings}}
+\index{buildings@{buildings}!buildings@{buildings}}
+\subsubsection[{buildings}]{\setlength{\rightskip}{0pt plus 5cm}buildings::buildings ()}}
+\label{classbuildings_affec7e1c753303f692e258d9adc3756a}
+\hypertarget{classbuildings_a3ed50eab88a240e472b7a26e6aaf6ecc}{
+\index{buildings@{buildings}!buildings@{buildings}}
+\index{buildings@{buildings}!buildings@{buildings}}
+\subsubsection[{buildings}]{\setlength{\rightskip}{0pt plus 5cm}buildings::buildings (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classbuildings_a3ed50eab88a240e472b7a26e6aaf6ecc}
+\hypertarget{classbuildings_a73c0a2677e231fa95a78cd153dddc2ce}{
+\index{buildings@{buildings}!buildings@{buildings}}
+\index{buildings@{buildings}!buildings@{buildings}}
+\subsubsection[{buildings}]{\setlength{\rightskip}{0pt plus 5cm}buildings::buildings (const {\bf buildings} \& {\em someBuildings})}}
+\label{classbuildings_a73c0a2677e231fa95a78cd153dddc2ce}
+\hypertarget{classbuildings_a4d070dc7165028bfc384c66d54c5d41a}{
+\index{buildings@{buildings}!$\sim$buildings@{$\sim$buildings}}
+\index{$\sim$buildings@{$\sim$buildings}!buildings@{buildings}}
+\subsubsection[{$\sim$buildings}]{\setlength{\rightskip}{0pt plus 5cm}buildings::$\sim$buildings ()}}
+\label{classbuildings_a4d070dc7165028bfc384c66d54c5d41a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbuildings_a503da8794e3f43e19319e097e9b6e40c}{
+\index{buildings@{buildings}!AmountProductStored@{AmountProductStored}}
+\index{AmountProductStored@{AmountProductStored}!buildings@{buildings}}
+\subsubsection[{AmountProductStored}]{\setlength{\rightskip}{0pt plus 5cm}double buildings::AmountProductStored ({\bf product} $\ast$ {\em p})}}
+\label{classbuildings_a503da8794e3f43e19319e097e9b6e40c}
+Returns the amount of the \hyperlink{classproduct}{product} in the \hyperlink{classstorage}{storage} facilities. A bit unelegant, in that manurestores aren't treated as true specializations of \hyperlink{classstorage}{storage}, but what the heck. \hypertarget{classbuildings_a23440e08dbfc88ebfa39a3e097f6c366}{
+\index{buildings@{buildings}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!buildings@{buildings}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbuildings_a23440e08dbfc88ebfa39a3e097f6c366}
+\hypertarget{classbuildings_acd04fcf6f4eefce96875603c5d283dd4}{
+\index{buildings@{buildings}!CalcLPmanurestore@{CalcLPmanurestore}}
+\index{CalcLPmanurestore@{CalcLPmanurestore}!buildings@{buildings}}
+\subsubsection[{CalcLPmanurestore}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::CalcLPmanurestore (string {\em filename})}}
+\label{classbuildings_acd04fcf6f4eefce96875603c5d283dd4}
+\hypertarget{classbuildings_ae61dd92b601d41c4b3d41dfc3aa28238}{
+\index{buildings@{buildings}!CalcLPmanurestorecap@{CalcLPmanurestorecap}}
+\index{CalcLPmanurestorecap@{CalcLPmanurestorecap}!buildings@{buildings}}
+\subsubsection[{CalcLPmanurestorecap}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::CalcLPmanurestorecap (string {\em filename})}}
+\label{classbuildings_ae61dd92b601d41c4b3d41dfc3aa28238}
+\hypertarget{classbuildings_ad0c0772d201264de61f3d255850fac73}{
+\index{buildings@{buildings}!CalcLPstables@{CalcLPstables}}
+\index{CalcLPstables@{CalcLPstables}!buildings@{buildings}}
+\subsubsection[{CalcLPstables}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::CalcLPstables (string {\em filename})}}
+\label{classbuildings_ad0c0772d201264de61f3d255850fac73}
+\hypertarget{classbuildings_a087a7412a9998a4bf7be6225bc38bb5c}{
+\index{buildings@{buildings}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!buildings@{buildings}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbuildings_a087a7412a9998a4bf7be6225bc38bb5c}
+DailyUpdate Updates the stores, the stables and the \hyperlink{classmanure}{manure} stores \hypertarget{classbuildings_a0e445434af31aa7d49db660a67dcfa04}{
+\index{buildings@{buildings}!EmptyManureStores@{EmptyManureStores}}
+\index{EmptyManureStores@{EmptyManureStores}!buildings@{buildings}}
+\subsubsection[{EmptyManureStores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ buildings::EmptyManureStores ()}}
+\label{classbuildings_a0e445434af31aa7d49db660a67dcfa04}
+remove everything from the \hyperlink{classbuilding}{building} \hypertarget{classbuildings_a91354eb25a6b4b817034883ea0f824c3}{
+\index{buildings@{buildings}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!buildings@{buildings}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::EndBudget (bool {\em show} = {\ttfamily false})}}
+\label{classbuildings_a91354eb25a6b4b817034883ea0f824c3}
+Check N \hyperlink{classbudget}{budget} of all stores etc and return the amount of N remaining \hypertarget{classbuildings_a6a0123f0dd6ed6d314e11e5b8107baf5}{
+\index{buildings@{buildings}!ExtractProduct@{ExtractProduct}}
+\index{ExtractProduct@{ExtractProduct}!buildings@{buildings}}
+\subsubsection[{ExtractProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ buildings::ExtractProduct ({\bf product} $\ast$ {\em p})}}
+\label{classbuildings_a6a0123f0dd6ed6d314e11e5b8107baf5}
+remove \hyperlink{classproduct}{product} p from \hyperlink{classbuildings}{buildings} \hypertarget{classbuildings_ae8225491bee18bb4647149201b24d8ba}{
+\index{buildings@{buildings}!GetAvailableStoredFeed@{GetAvailableStoredFeed}}
+\index{GetAvailableStoredFeed@{GetAvailableStoredFeed}!buildings@{buildings}}
+\subsubsection[{GetAvailableStoredFeed}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::GetAvailableStoredFeed ({\bf feedItem} $\ast$ {\em aProduct})}}
+\label{classbuildings_ae8225491bee18bb4647149201b24d8ba}
+Get the \hyperlink{classproduct}{product} if it is available \hypertarget{classbuildings_adea0a6434b66c56d04a52fad0b9b2979}{
+\index{buildings@{buildings}!GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}}
+\index{GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}!buildings@{buildings}}
+\subsubsection[{GetCopyStoredFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ buildings::GetCopyStoredFeedProduct ({\bf product} $\ast$ {\em p})}}
+\label{classbuildings_adea0a6434b66c56d04a52fad0b9b2979}
+returns a pointer to the produced stored. If it cannot be found NULL will be returned \hypertarget{classbuildings_a550d0127d0d4c8a4f497b4bc9fb30bcf}{
+\index{buildings@{buildings}!GetFreeStable@{GetFreeStable}}
+\index{GetFreeStable@{GetFreeStable}!buildings@{buildings}}
+\subsubsection[{GetFreeStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pigstable} $\ast$ buildings::GetFreeStable ({\bf swineStock} $\ast$ {\em aHerd})}}
+\label{classbuildings_a550d0127d0d4c8a4f497b4bc9fb30bcf}
+Finds a \hyperlink{classstable}{stable} for aHerd of Pigs, inserts aHerd in it, and returns a pointer to the \hyperlink{classstable}{stable}. Making this fatal error if not usable: \char`\"{}buildings: suitable animal housing not found for animal\char`\"{} \hypertarget{classbuildings_ab5f3304118e2662e0e53867aaf99a1dd}{
+\index{buildings@{buildings}!GetFreeStable@{GetFreeStable}}
+\index{GetFreeStable@{GetFreeStable}!buildings@{buildings}}
+\subsubsection[{GetFreeStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stable} $\ast$ buildings::GetFreeStable ({\bf animalStock} $\ast$ {\em aHerd})}}
+\label{classbuildings_ab5f3304118e2662e0e53867aaf99a1dd}
+Finds a \hyperlink{classstable}{stable} for aHerd of animals, inserts aHerd in it, and returns a pointer to the \hyperlink{classstable}{stable}. If this function cannot find a \hyperlink{classstable}{stable} this warning will occur:\char`\"{}buildings:: GetFreeStable -\/ No free stable\char`\"{} \hypertarget{classbuildings_aba1d7b741afc477fa08d0cdcdfed7e95}{
+\index{buildings@{buildings}!GetManurestore@{GetManurestore}}
+\index{GetManurestore@{GetManurestore}!buildings@{buildings}}
+\subsubsection[{GetManurestore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manurestore}$\ast$ buildings::GetManurestore (int {\em storeNo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbuildings_aba1d7b741afc477fa08d0cdcdfed7e95}
+\hypertarget{classbuildings_a8b590b3f7488bb7b95dcf936e54769da}{
+\index{buildings@{buildings}!GetNInput@{GetNInput}}
+\index{GetNInput@{GetNInput}!buildings@{buildings}}
+\subsubsection[{GetNInput}]{\setlength{\rightskip}{0pt plus 5cm}double buildings::GetNInput ()}}
+\label{classbuildings_a8b590b3f7488bb7b95dcf936e54769da}
+\hypertarget{classbuildings_a48d4b22d3d794acd230f9394047e4165}{
+\index{buildings@{buildings}!GetNOutput@{GetNOutput}}
+\index{GetNOutput@{GetNOutput}!buildings@{buildings}}
+\subsubsection[{GetNOutput}]{\setlength{\rightskip}{0pt plus 5cm}double buildings::GetNOutput ()}}
+\label{classbuildings_a48d4b22d3d794acd230f9394047e4165}
+\hypertarget{classbuildings_af7822b1a537bbb71b55db60c2f48b07b}{
+\index{buildings@{buildings}!GetStable@{GetStable}}
+\index{GetStable@{GetStable}!buildings@{buildings}}
+\subsubsection[{GetStable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stable}$\ast$ buildings::GetStable (int {\em stableNo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbuildings_af7822b1a537bbb71b55db60c2f48b07b}
+\hypertarget{classbuildings_a9b71637ed71eb2f332c3f56d774f2f6a}{
+\index{buildings@{buildings}!GetStoredFeed@{GetStoredFeed}}
+\index{GetStoredFeed@{GetStoredFeed}!buildings@{buildings}}
+\subsubsection[{GetStoredFeed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ buildings::GetStoredFeed (int {\em type})}}
+\label{classbuildings_a9b71637ed71eb2f332c3f56d774f2f6a}
+Get the \hyperlink{classproduct}{product} if it is available \hypertarget{classbuildings_a80de7e67dd8e3ff545151ee8a01171d4}{
+\index{buildings@{buildings}!GettheManurestores@{GettheManurestores}}
+\index{GettheManurestores@{GettheManurestores}!buildings@{buildings}}
+\subsubsection[{GettheManurestores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf manurestore}$>$$\ast$ buildings::GettheManurestores ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbuildings_a80de7e67dd8e3ff545151ee8a01171d4}
+\hypertarget{classbuildings_ae1d964dd1eea984f929442218a6ca587}{
+\index{buildings@{buildings}!GettheStables@{GettheStables}}
+\index{GettheStables@{GettheStables}!buildings@{buildings}}
+\subsubsection[{GettheStables}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf stable}$>$$\ast$ buildings::GettheStables ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbuildings_ae1d964dd1eea984f929442218a6ca587}
+\hypertarget{classbuildings_a07a1880ab85c57d783b1fc5582e767de}{
+\index{buildings@{buildings}!GetTotalManureNStored@{GetTotalManureNStored}}
+\index{GetTotalManureNStored@{GetTotalManureNStored}!buildings@{buildings}}
+\subsubsection[{GetTotalManureNStored}]{\setlength{\rightskip}{0pt plus 5cm}double buildings::GetTotalManureNStored ()}}
+\label{classbuildings_a07a1880ab85c57d783b1fc5582e767de}
+Get N in all \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} (including \hyperlink{classanimal}{animal} housing) \hypertarget{classbuildings_a01997e6fff4a33f76068f49dd064582f}{
+\index{buildings@{buildings}!GetTotalSlurryCap@{GetTotalSlurryCap}}
+\index{GetTotalSlurryCap@{GetTotalSlurryCap}!buildings@{buildings}}
+\subsubsection[{GetTotalSlurryCap}]{\setlength{\rightskip}{0pt plus 5cm}double buildings::GetTotalSlurryCap ()}}
+\label{classbuildings_a01997e6fff4a33f76068f49dd064582f}
+Get total capacity of slurry tanks \hypertarget{classbuildings_a02b582aacb2a1b00464c501a3a5635ff}{
+\index{buildings@{buildings}!GetTotalSlurryStored@{GetTotalSlurryStored}}
+\index{GetTotalSlurryStored@{GetTotalSlurryStored}!buildings@{buildings}}
+\subsubsection[{GetTotalSlurryStored}]{\setlength{\rightskip}{0pt plus 5cm}double buildings::GetTotalSlurryStored ()}}
+\label{classbuildings_a02b582aacb2a1b00464c501a3a5635ff}
+Get N in all \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} (including \hyperlink{classanimal}{animal} housing) \hypertarget{classbuildings_aed6e79504b2bb19179d9aa4a06e1ba02}{
+\index{buildings@{buildings}!InitializeAll@{InitializeAll}}
+\index{InitializeAll@{InitializeAll}!buildings@{buildings}}
+\subsubsection[{InitializeAll}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::InitializeAll (string {\em InputFilename}, \/  bool {\em pigs}, \/  bool {\em dairy}, \/  bool {\em beef})}}
+\label{classbuildings_aed6e79504b2bb19179d9aa4a06e1ba02}
+initialization of user defines, that is stored in InputFilename Cattlestable is only Initialize if dairy or beef is true. Slurrystore is only Initialize if there is anymal on the farm \hypertarget{classbuildings_af2943b86173a6a6049c4d52b9793e36e}{
+\index{buildings@{buildings}!PlaceAnimal@{PlaceAnimal}}
+\index{PlaceAnimal@{PlaceAnimal}!buildings@{buildings}}
+\subsubsection[{PlaceAnimal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalSection} $\ast$ buildings::PlaceAnimal (const char $\ast$ {\em name})}}
+\label{classbuildings_af2943b86173a6a6049c4d52b9793e36e}
+Looks through \hyperlink{classanimal}{animal} housing to find an \hyperlink{classanimal}{animal} section that matches requirements \hypertarget{classbuildings_a4801905be37d8b7a0ea0487879a79cc3}{
+\index{buildings@{buildings}!ScaleBuildings@{ScaleBuildings}}
+\index{ScaleBuildings@{ScaleBuildings}!buildings@{buildings}}
+\subsubsection[{ScaleBuildings}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::ScaleBuildings ()}}
+\label{classbuildings_a4801905be37d8b7a0ea0487879a79cc3}
+ScaleBuildings is called by Initialise function in Event and scales \hyperlink{classanimal}{animal} housing and \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} to \hyperlink{classanimal}{animal} numbers \hypertarget{classbuildings_a5ef204b7f1eace35543ea66a8a5c5a39}{
+\index{buildings@{buildings}!StoreProduct@{StoreProduct}}
+\index{StoreProduct@{StoreProduct}!buildings@{buildings}}
+\subsubsection[{StoreProduct}]{\setlength{\rightskip}{0pt plus 5cm}void buildings::StoreProduct ({\bf product} $\ast$ {\em p})}}
+\label{classbuildings_a5ef204b7f1eace35543ea66a8a5c5a39}
+inserting \hyperlink{classproducts}{products} in the \hyperlink{classstorage}{storage} facilities. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbuildings_a2af3e65c7b1426fa2dd80c658ca99cd5}{
+\index{buildings@{buildings}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!buildings@{buildings}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf buildings} $\ast$ {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbuildings_a2af3e65c7b1426fa2dd80c658ca99cd5}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{thebuild_8h}{thebuild.h}\item 
+C:/main/trunk/src/building/\hyperlink{thebuild_8cpp}{thebuild.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,297 @@
+\hypertarget{classpig}{
+\section{pig Class Reference}
+\label{classpig}\index{pig@{pig}}
+}
+
+
+{\ttfamily \#include $<$pig.h$>$}Inheritance diagram for pig::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classpig}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpig_a6da82d7be7f29bba53eb9cb1081091ca}{pig} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual \hyperlink{classpig_a12bb73819ea97c7df4c7dba0cbcaa819}{$\sim$pig} ()
+\item 
+double \hyperlink{classpig_a907a151f7a0f59dd2c9b02da72ae43e9}{GetNumberPrDay} () const 
+\item 
+double \hyperlink{classpig_a39f938b4e819af79b288eadaf19e9f35}{GetNumberPrYear} () const 
+\item 
+double \hyperlink{classpig_aee9f42652f0f9a71fdcc5b65df555a97}{GetvariableCosts} () const 
+\item 
+void \hyperlink{classpig_abfc2a5b80d56f3e886e1e5649f3b9820}{SetNumberPrDay} (double aNumberPrDay)
+\item 
+void \hyperlink{classpig_a5ada344ee9223275a5dec61f71ce7bb4}{SetNumberPrYear} (double aNumberPrYear)
+\item 
+void \hyperlink{classpig_ab7ee804807152f9528421430af56e740}{SetaveWeight} (double aVal)
+\item 
+double \hyperlink{classpig_a27465927a51b581287c7e13e84c1c5c8}{GetaveWeight} ()
+\item 
+virtual double \hyperlink{classpig_aeb56ca7a77c1f27b7bc90ee4df0d4d1f}{GetDE} ()
+\item 
+virtual \hyperlink{classpigstysection}{pigstysection} $\ast$ \hyperlink{classpig_a2320d7f431264ffed833fc93182787bb}{GetStableSection} ()
+\item 
+virtual void \hyperlink{classpig_a43fbf15dc40e35fbfd5939c1748ff71b}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classpig_ace82dae0cc5b75ed3051b145e12d1803}{DailyUpdate} ()
+\item 
+void \hyperlink{classpig_a08c3cb7e3cbffe06466eade9e044157e}{GetExtraFeed} (double NRequired)
+\item 
+void \hyperlink{classpig_a093788c67f8ab28b6e9da95bca443b89}{ReceivePlan} (char $\ast$fileName)
+\item 
+virtual double \hyperlink{classpig_a5ab403443122aaaeb16d82c5844b75f6}{feedingDays} ()
+\item 
+double \hyperlink{classpig_af55a83b472d29ba2a254bd1ed6e2c4b5}{ProduceManure} (\hyperlink{classmanure}{manure} $\ast$fluidManure, \hyperlink{classmanure}{manure} $\ast$solidManure)
+\item 
+void \hyperlink{classpig_a3f4680b212a968f2e69c75b17dbd1010}{ManureProduction} (fstream $\ast$fileStream)
+\item 
+void \hyperlink{classpig_ab80efe296b0c878904a5cc98d7e12b32}{FeedMax} (fstream $\ast$fileStream)
+\item 
+void \hyperlink{classpig_aeb272e66e57b3dbc93ebdef9dbec7916}{FeedMin} (fstream $\ast$fileStream)
+\item 
+virtual void \hyperlink{classpig_aa3f9514039eb69dbe5ce8b44a398930e}{EndBudget} (bool show=false)
+\item 
+bool \hyperlink{classpig_ad9d9dc4d357e5cf07350b1681e67eca5}{TruncateName} (string $\ast$ret\_\-string)
+\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classpig_aafe346132ff6ab66abcb11400b41eac4}{GetFeedItem} (\hyperlink{classproduct}{product} $\ast$menuPtr)
+\item 
+virtual void \hyperlink{classpig_a8838d76bf26c0517ef1c79c0ff3c8988}{GetDiet} (\hyperlink{classfeed_item}{feedItem} $\ast$theDiet)
+\item 
+virtual double \hyperlink{classpig_a2c7c1a356646211e31753de053977520}{GetSensibleHeatProduction} (double weight, double n)
+\item 
+double \hyperlink{classpig_a054e084f2dd4b4db9ac06fb8eac96603}{CalcMaintenanceEnergy} (double weight)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpig_af941f59904d0c80142ef3dd970c00e17}{pig} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classpig_abcbba53abf12eb308dc0222c6d4ce98a}{NumberPrDay}
+\item 
+double \hyperlink{classpig_afb0194a6ded917d3d286165e25cec0cd}{NumberPrYear}
+\item 
+double \hyperlink{classpig_a63e7cb037c0c044934a7fbd10506fb4f}{lysin\_\-need}
+\item 
+double \hyperlink{classpig_aaf0ac7abae7bd899541a8d2bc678f663}{meth\_\-need}
+\item 
+double \hyperlink{classpig_a075e78b1499a2a990cfc8ca062e8654b}{treo\_\-need}
+\item 
+double \hyperlink{classpig_ad0d49e469ffa3c79f23862863ec04735}{aveWeight}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classpig_aed511510eabc8fc25f1048f0528b86cf}{feedItemList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpig_af941f59904d0c80142ef3dd970c00e17}{
+\index{pig@{pig}!pig@{pig}}
+\index{pig@{pig}!pig@{pig}}
+\subsubsection[{pig}]{\setlength{\rightskip}{0pt plus 5cm}pig::pig ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classpig_af941f59904d0c80142ef3dd970c00e17}
+\hypertarget{classpig_a6da82d7be7f29bba53eb9cb1081091ca}{
+\index{pig@{pig}!pig@{pig}}
+\index{pig@{pig}!pig@{pig}}
+\subsubsection[{pig}]{\setlength{\rightskip}{0pt plus 5cm}pig::pig (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classpig_a6da82d7be7f29bba53eb9cb1081091ca}
+\hypertarget{classpig_a12bb73819ea97c7df4c7dba0cbcaa819}{
+\index{pig@{pig}!$\sim$pig@{$\sim$pig}}
+\index{$\sim$pig@{$\sim$pig}!pig@{pig}}
+\subsubsection[{$\sim$pig}]{\setlength{\rightskip}{0pt plus 5cm}pig::$\sim$pig ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpig_a12bb73819ea97c7df4c7dba0cbcaa819}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpig_a054e084f2dd4b4db9ac06fb8eac96603}{
+\index{pig@{pig}!CalcMaintenanceEnergy@{CalcMaintenanceEnergy}}
+\index{CalcMaintenanceEnergy@{CalcMaintenanceEnergy}!pig@{pig}}
+\subsubsection[{CalcMaintenanceEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double pig::CalcMaintenanceEnergy (double {\em weight})}}
+\label{classpig_a054e084f2dd4b4db9ac06fb8eac96603}
+\hypertarget{classpig_ace82dae0cc5b75ed3051b145e12d1803}{
+\index{pig@{pig}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!pig@{pig}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void pig::DailyUpdate (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpig_ace82dae0cc5b75ed3051b145e12d1803}
+
+
+Reimplemented from \hyperlink{classanimal_a96c8db4af03ae55b4acb96ed250ea065}{animal}.
+
+Reimplemented in \hyperlink{classslaughter_swine_a878b44d9124ee9a550f86ecf353e1401}{slaughterSwine}, and \hyperlink{classswine_aa5b1551767e9bc33a2dad33ef32627fb}{swine}.\hypertarget{classpig_aa3f9514039eb69dbe5ce8b44a398930e}{
+\index{pig@{pig}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!pig@{pig}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void pig::EndBudget (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpig_aa3f9514039eb69dbe5ce8b44a398930e}
+\hypertarget{classpig_a5ab403443122aaaeb16d82c5844b75f6}{
+\index{pig@{pig}!feedingDays@{feedingDays}}
+\index{feedingDays@{feedingDays}!pig@{pig}}
+\subsubsection[{feedingDays}]{\setlength{\rightskip}{0pt plus 5cm}virtual double pig::feedingDays ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classpig_a5ab403443122aaaeb16d82c5844b75f6}
+
+
+Reimplemented in \hyperlink{classslaughter_swine_ada8ac1126ab09ff0e2077598b57aedb7}{slaughterSwine}.\hypertarget{classpig_ab80efe296b0c878904a5cc98d7e12b32}{
+\index{pig@{pig}!FeedMax@{FeedMax}}
+\index{FeedMax@{FeedMax}!pig@{pig}}
+\subsubsection[{FeedMax}]{\setlength{\rightskip}{0pt plus 5cm}void pig::FeedMax (fstream $\ast$ {\em fileStream})}}
+\label{classpig_ab80efe296b0c878904a5cc98d7e12b32}
+\hypertarget{classpig_aeb272e66e57b3dbc93ebdef9dbec7916}{
+\index{pig@{pig}!FeedMin@{FeedMin}}
+\index{FeedMin@{FeedMin}!pig@{pig}}
+\subsubsection[{FeedMin}]{\setlength{\rightskip}{0pt plus 5cm}void pig::FeedMin (fstream $\ast$ {\em fileStream})}}
+\label{classpig_aeb272e66e57b3dbc93ebdef9dbec7916}
+\hypertarget{classpig_a27465927a51b581287c7e13e84c1c5c8}{
+\index{pig@{pig}!GetaveWeight@{GetaveWeight}}
+\index{GetaveWeight@{GetaveWeight}!pig@{pig}}
+\subsubsection[{GetaveWeight}]{\setlength{\rightskip}{0pt plus 5cm}double pig::GetaveWeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_a27465927a51b581287c7e13e84c1c5c8}
+\hypertarget{classpig_aeb56ca7a77c1f27b7bc90ee4df0d4d1f}{
+\index{pig@{pig}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!pig@{pig}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}virtual double pig::GetDE ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classpig_aeb56ca7a77c1f27b7bc90ee4df0d4d1f}
+
+
+Reimplemented from \hyperlink{classanimal_aef7118b0c94cb1bc05aa8783d80e10f0}{animal}.\hypertarget{classpig_a8838d76bf26c0517ef1c79c0ff3c8988}{
+\index{pig@{pig}!GetDiet@{GetDiet}}
+\index{GetDiet@{GetDiet}!pig@{pig}}
+\subsubsection[{GetDiet}]{\setlength{\rightskip}{0pt plus 5cm}void pig::GetDiet ({\bf feedItem} $\ast$ {\em theDiet})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpig_a8838d76bf26c0517ef1c79c0ff3c8988}
+\hypertarget{classpig_a08c3cb7e3cbffe06466eade9e044157e}{
+\index{pig@{pig}!GetExtraFeed@{GetExtraFeed}}
+\index{GetExtraFeed@{GetExtraFeed}!pig@{pig}}
+\subsubsection[{GetExtraFeed}]{\setlength{\rightskip}{0pt plus 5cm}void pig::GetExtraFeed (double {\em NRequired})}}
+\label{classpig_a08c3cb7e3cbffe06466eade9e044157e}
+\hypertarget{classpig_aafe346132ff6ab66abcb11400b41eac4}{
+\index{pig@{pig}!GetFeedItem@{GetFeedItem}}
+\index{GetFeedItem@{GetFeedItem}!pig@{pig}}
+\subsubsection[{GetFeedItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem} $\ast$ pig::GetFeedItem ({\bf product} $\ast$ {\em menuPtr})}}
+\label{classpig_aafe346132ff6ab66abcb11400b41eac4}
+\hypertarget{classpig_a907a151f7a0f59dd2c9b02da72ae43e9}{
+\index{pig@{pig}!GetNumberPrDay@{GetNumberPrDay}}
+\index{GetNumberPrDay@{GetNumberPrDay}!pig@{pig}}
+\subsubsection[{GetNumberPrDay}]{\setlength{\rightskip}{0pt plus 5cm}double pig::GetNumberPrDay () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_a907a151f7a0f59dd2c9b02da72ae43e9}
+\hypertarget{classpig_a39f938b4e819af79b288eadaf19e9f35}{
+\index{pig@{pig}!GetNumberPrYear@{GetNumberPrYear}}
+\index{GetNumberPrYear@{GetNumberPrYear}!pig@{pig}}
+\subsubsection[{GetNumberPrYear}]{\setlength{\rightskip}{0pt plus 5cm}double pig::GetNumberPrYear () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_a39f938b4e819af79b288eadaf19e9f35}
+\hypertarget{classpig_a2c7c1a356646211e31753de053977520}{
+\index{pig@{pig}!GetSensibleHeatProduction@{GetSensibleHeatProduction}}
+\index{GetSensibleHeatProduction@{GetSensibleHeatProduction}!pig@{pig}}
+\subsubsection[{GetSensibleHeatProduction}]{\setlength{\rightskip}{0pt plus 5cm}virtual double pig::GetSensibleHeatProduction (double {\em weight}, \/  double {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classpig_a2c7c1a356646211e31753de053977520}
+
+
+Reimplemented in \hyperlink{classslaughter_swine_a46e7d9f7b8959aaf973d82cced115232}{slaughterSwine}, and \hyperlink{classswine_ab379109f2fea2e0fe5e649b8c59df202}{swine}.\hypertarget{classpig_a2320d7f431264ffed833fc93182787bb}{
+\index{pig@{pig}!GetStableSection@{GetStableSection}}
+\index{GetStableSection@{GetStableSection}!pig@{pig}}
+\subsubsection[{GetStableSection}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf pigstysection}$\ast$ pig::GetStableSection ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classpig_a2320d7f431264ffed833fc93182787bb}
+
+
+Reimplemented from \hyperlink{classanimal_a99d20eac6b06d781c35cf3f6fa9f5139}{animal}.\hypertarget{classpig_aee9f42652f0f9a71fdcc5b65df555a97}{
+\index{pig@{pig}!GetvariableCosts@{GetvariableCosts}}
+\index{GetvariableCosts@{GetvariableCosts}!pig@{pig}}
+\subsubsection[{GetvariableCosts}]{\setlength{\rightskip}{0pt plus 5cm}double pig::GetvariableCosts () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_aee9f42652f0f9a71fdcc5b65df555a97}
+\hypertarget{classpig_a3f4680b212a968f2e69c75b17dbd1010}{
+\index{pig@{pig}!ManureProduction@{ManureProduction}}
+\index{ManureProduction@{ManureProduction}!pig@{pig}}
+\subsubsection[{ManureProduction}]{\setlength{\rightskip}{0pt plus 5cm}void pig::ManureProduction (fstream $\ast$ {\em fileStream})}}
+\label{classpig_a3f4680b212a968f2e69c75b17dbd1010}
+\hypertarget{classpig_af55a83b472d29ba2a254bd1ed6e2c4b5}{
+\index{pig@{pig}!ProduceManure@{ProduceManure}}
+\index{ProduceManure@{ProduceManure}!pig@{pig}}
+\subsubsection[{ProduceManure}]{\setlength{\rightskip}{0pt plus 5cm}double pig::ProduceManure ({\bf manure} $\ast$ {\em fluidManure}, \/  {\bf manure} $\ast$ {\em solidManure})}}
+\label{classpig_af55a83b472d29ba2a254bd1ed6e2c4b5}
+\hypertarget{classpig_a43fbf15dc40e35fbfd5939c1748ff71b}{
+\index{pig@{pig}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!pig@{pig}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void pig::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpig_a43fbf15dc40e35fbfd5939c1748ff71b}
+Initialize of variables from files 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]need to point a the file \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classanimal_ad7a71ab5ae87becfa921f70501cf4ee1}{animal}.
+
+Reimplemented in \hyperlink{classswine_a57668c3c30994f0c3969dcef6d7280db}{swine}.\hypertarget{classpig_a093788c67f8ab28b6e9da95bca443b89}{
+\index{pig@{pig}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!pig@{pig}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void pig::ReceivePlan (char $\ast$ {\em fileName})}}
+\label{classpig_a093788c67f8ab28b6e9da95bca443b89}
+
+
+Reimplemented in \hyperlink{classslaughter_swine_aeaaac01b283e4bc09d60b4f4bd65c442}{slaughterSwine}, and \hyperlink{classswine_af290612a28b7676522d5ae1f450c44ec}{swine}.\hypertarget{classpig_ab7ee804807152f9528421430af56e740}{
+\index{pig@{pig}!SetaveWeight@{SetaveWeight}}
+\index{SetaveWeight@{SetaveWeight}!pig@{pig}}
+\subsubsection[{SetaveWeight}]{\setlength{\rightskip}{0pt plus 5cm}void pig::SetaveWeight (double {\em aVal})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_ab7ee804807152f9528421430af56e740}
+\hypertarget{classpig_abfc2a5b80d56f3e886e1e5649f3b9820}{
+\index{pig@{pig}!SetNumberPrDay@{SetNumberPrDay}}
+\index{SetNumberPrDay@{SetNumberPrDay}!pig@{pig}}
+\subsubsection[{SetNumberPrDay}]{\setlength{\rightskip}{0pt plus 5cm}void pig::SetNumberPrDay (double {\em aNumberPrDay})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_abfc2a5b80d56f3e886e1e5649f3b9820}
+\hypertarget{classpig_a5ada344ee9223275a5dec61f71ce7bb4}{
+\index{pig@{pig}!SetNumberPrYear@{SetNumberPrYear}}
+\index{SetNumberPrYear@{SetNumberPrYear}!pig@{pig}}
+\subsubsection[{SetNumberPrYear}]{\setlength{\rightskip}{0pt plus 5cm}void pig::SetNumberPrYear (double {\em aNumberPrYear})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classpig_a5ada344ee9223275a5dec61f71ce7bb4}
+
+
+Reimplemented in \hyperlink{classslaughter_swine_a5d9ea11f9aaf40490cdd27baceb91e91}{slaughterSwine}.\hypertarget{classpig_ad9d9dc4d357e5cf07350b1681e67eca5}{
+\index{pig@{pig}!TruncateName@{TruncateName}}
+\index{TruncateName@{TruncateName}!pig@{pig}}
+\subsubsection[{TruncateName}]{\setlength{\rightskip}{0pt plus 5cm}bool pig::TruncateName (string $\ast$ {\em ret\_\-string})}}
+\label{classpig_ad9d9dc4d357e5cf07350b1681e67eca5}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpig_ad0d49e469ffa3c79f23862863ec04735}{
+\index{pig@{pig}!aveWeight@{aveWeight}}
+\index{aveWeight@{aveWeight}!pig@{pig}}
+\subsubsection[{aveWeight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf pig::aveWeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_ad0d49e469ffa3c79f23862863ec04735}
+\hypertarget{classpig_aed511510eabc8fc25f1048f0528b86cf}{
+\index{pig@{pig}!feedItemList@{feedItemList}}
+\index{feedItemList@{feedItemList}!pig@{pig}}
+\subsubsection[{feedItemList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf product}$>$$\ast$ {\bf pig::feedItemList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_aed511510eabc8fc25f1048f0528b86cf}
+\hypertarget{classpig_a63e7cb037c0c044934a7fbd10506fb4f}{
+\index{pig@{pig}!lysin\_\-need@{lysin\_\-need}}
+\index{lysin\_\-need@{lysin\_\-need}!pig@{pig}}
+\subsubsection[{lysin\_\-need}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf pig::lysin\_\-need}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_a63e7cb037c0c044934a7fbd10506fb4f}
+\hypertarget{classpig_aaf0ac7abae7bd899541a8d2bc678f663}{
+\index{pig@{pig}!meth\_\-need@{meth\_\-need}}
+\index{meth\_\-need@{meth\_\-need}!pig@{pig}}
+\subsubsection[{meth\_\-need}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf pig::meth\_\-need}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_aaf0ac7abae7bd899541a8d2bc678f663}
+\hypertarget{classpig_abcbba53abf12eb308dc0222c6d4ce98a}{
+\index{pig@{pig}!NumberPrDay@{NumberPrDay}}
+\index{NumberPrDay@{NumberPrDay}!pig@{pig}}
+\subsubsection[{NumberPrDay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf pig::NumberPrDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_abcbba53abf12eb308dc0222c6d4ce98a}
+\hypertarget{classpig_afb0194a6ded917d3d286165e25cec0cd}{
+\index{pig@{pig}!NumberPrYear@{NumberPrYear}}
+\index{NumberPrYear@{NumberPrYear}!pig@{pig}}
+\subsubsection[{NumberPrYear}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf pig::NumberPrYear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_afb0194a6ded917d3d286165e25cec0cd}
+\hypertarget{classpig_a075e78b1499a2a990cfc8ca062e8654b}{
+\index{pig@{pig}!treo\_\-need@{treo\_\-need}}
+\index{treo\_\-need@{treo\_\-need}!pig@{pig}}
+\subsubsection[{treo\_\-need}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf pig::treo\_\-need}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classpig_a075e78b1499a2a990cfc8ca062e8654b}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{pig_8h}{pig.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{pig_8cpp}{pig.cpp}\end{DoxyCompactItemize}

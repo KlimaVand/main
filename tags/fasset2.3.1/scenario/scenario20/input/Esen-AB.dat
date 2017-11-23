@@ -1,0 +1,73 @@
+[SoilParameters]
+Nodes           40
+NodeThickness  50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        200
+SoilType         4
+DryBulkDensity   1.34        ' measured                    
+ClayContent      0.08        ' measured
+SiltContent      0.229       ' measured
+MualemVanGenucten 1
+
+CarbonPct        1.6        ' measured
+CNRatio          12        
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.045395925
+IOM	0.405174
+IOM.N	0.034360366
+
+[SoilLayer(2)]			// Assumes identical to top layer
+Thickness        200
+SoilType         4
+DryBulkDensity   1.34        ' assumed the same as top                    
+ClayContent      0.08        ' assumed the same as top 
+SiltContent      0.229       ' assumed the same as top 
+MualemVanGenucten 1
+
+CarbonPct        1.28        ' assumed 80% of top layer
+CNRatio          12
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.02269319
+IOM	0.7
+IOM.N	0.058836592
+
+
+[SoilLayer(3)]
+Thickness        2000
+SoilType         4
+DryBulkDensity   1.34        ' assumed the same as top                    
+ClayContent      0.08        ' assumed the same as top 
+SiltContent      0.229       ' assumed the same as top 
+MualemVanGenucten 1
+
+CarbonPct        0.1        ' assumed 10% of top layer
+CNRatio          12 	' assumed 
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.02269319
+IOM	0.7
+IOM.N	0.058836592
+
+[end]

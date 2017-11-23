@@ -1,0 +1,107 @@
+\hypertarget{classlivestock}{
+\section{livestock Class Reference}
+\label{classlivestock}\index{livestock@{livestock}}
+}
+
+
+{\ttfamily \#include $<$livestock.h$>$}Inheritance diagram for livestock::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classlivestock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlivestock_a44943a16d8334d50dba2f804092effcb}{livestock} ()
+\item 
+\hyperlink{classlivestock_a95bbe104d3e28f65652b6dc49eb959da}{$\sim$livestock} ()
+\item 
+void \hyperlink{classlivestock_a8c295c86b0d0a7f216289f90da298645}{Initialize} (string filename, bool pigfarm, bool dairyfarm, bool beeffarm, \hyperlink{classbuildings}{buildings} $\ast$\hyperlink{_new_main_8cpp_a8802bc0a0e45fa6db05d71b3e4c39680}{theBuildings}, char $\ast$filenameCattle)
+\item 
+void \hyperlink{classlivestock_ac94281ef5c9118aad90e6d722130cff5}{ReceivePlan} (char $\ast$fileExtension)
+\item 
+void \hyperlink{classlivestock_a34799a6605eb906b492063c2ba2c5a2f}{CalcLP} (int \hyperlink{classperiod}{period})
+\item 
+void \hyperlink{classlivestock_a76b9eb4389d589791cc8fbd6a6551c07}{DailyUpdate} ()
+\item 
+double \hyperlink{classlivestock_a516359c2727c3410e49f93381eb81655}{GetDE} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classanimal_stock}{animalStock} $>$ $\ast$ \hyperlink{classlivestock_a99ae9948a427d2119fbc60ee9a64bf75}{getanimalStock} ()
+\item 
+void \hyperlink{classlivestock_a943ce10cdce6cdbba61e39bdae6dea8e}{checkBalances} (bool show=false)
+\item 
+void \hyperlink{classlivestock_aae415bfbff87815b91ae3968a6859f30}{GiveIndicator} (int indicatorType)
+\item 
+void \hyperlink{classlivestock_a1a71246b0cb2650ea78da26ad87ca4f9}{FlushIndicator} (\hyperlink{typer_8h_af7c21877c7448b813184ececcc1af13c}{indicatorTypes} indicatorType)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlivestock_a44943a16d8334d50dba2f804092effcb}{
+\index{livestock@{livestock}!livestock@{livestock}}
+\index{livestock@{livestock}!livestock@{livestock}}
+\subsubsection[{livestock}]{\setlength{\rightskip}{0pt plus 5cm}livestock::livestock ()}}
+\label{classlivestock_a44943a16d8334d50dba2f804092effcb}
+Default Constructor \hypertarget{classlivestock_a95bbe104d3e28f65652b6dc49eb959da}{
+\index{livestock@{livestock}!$\sim$livestock@{$\sim$livestock}}
+\index{$\sim$livestock@{$\sim$livestock}!livestock@{livestock}}
+\subsubsection[{$\sim$livestock}]{\setlength{\rightskip}{0pt plus 5cm}livestock::$\sim$livestock ()}}
+\label{classlivestock_a95bbe104d3e28f65652b6dc49eb959da}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlivestock_a34799a6605eb906b492063c2ba2c5a2f}{
+\index{livestock@{livestock}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!livestock@{livestock}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::CalcLP (int {\em period})}}
+\label{classlivestock_a34799a6605eb906b492063c2ba2c5a2f}
+Function: CalcLP \hypertarget{classlivestock_a943ce10cdce6cdbba61e39bdae6dea8e}{
+\index{livestock@{livestock}!checkBalances@{checkBalances}}
+\index{checkBalances@{checkBalances}!livestock@{livestock}}
+\subsubsection[{checkBalances}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::checkBalances (bool {\em show} = {\ttfamily false})}}
+\label{classlivestock_a943ce10cdce6cdbba61e39bdae6dea8e}
+\hypertarget{classlivestock_a76b9eb4389d589791cc8fbd6a6551c07}{
+\index{livestock@{livestock}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!livestock@{livestock}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::DailyUpdate (void)}}
+\label{classlivestock_a76b9eb4389d589791cc8fbd6a6551c07}
+\hypertarget{classlivestock_a1a71246b0cb2650ea78da26ad87ca4f9}{
+\index{livestock@{livestock}!FlushIndicator@{FlushIndicator}}
+\index{FlushIndicator@{FlushIndicator}!livestock@{livestock}}
+\subsubsection[{FlushIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::FlushIndicator ({\bf indicatorTypes} {\em indicatorType})}}
+\label{classlivestock_a1a71246b0cb2650ea78da26ad87ca4f9}
+\hypertarget{classlivestock_a99ae9948a427d2119fbc60ee9a64bf75}{
+\index{livestock@{livestock}!getanimalStock@{getanimalStock}}
+\index{getanimalStock@{getanimalStock}!livestock@{livestock}}
+\subsubsection[{getanimalStock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf animalStock}$>$$\ast$ livestock::getanimalStock ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classlivestock_a99ae9948a427d2119fbc60ee9a64bf75}
+\hypertarget{classlivestock_a516359c2727c3410e49f93381eb81655}{
+\index{livestock@{livestock}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!livestock@{livestock}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}double livestock::GetDE ()}}
+\label{classlivestock_a516359c2727c3410e49f93381eb81655}
+\hypertarget{classlivestock_aae415bfbff87815b91ae3968a6859f30}{
+\index{livestock@{livestock}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!livestock@{livestock}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::GiveIndicator (int {\em indicatorType})}}
+\label{classlivestock_aae415bfbff87815b91ae3968a6859f30}
+\hypertarget{classlivestock_a8c295c86b0d0a7f216289f90da298645}{
+\index{livestock@{livestock}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!livestock@{livestock}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::Initialize (string {\em filename}, \/  bool {\em pigfarm}, \/  bool {\em dairyfarm}, \/  bool {\em beeffarm}, \/  {\bf buildings} $\ast$ {\em theBuildings}, \/  char $\ast$ {\em filenameCattle})}}
+\label{classlivestock_a8c295c86b0d0a7f216289f90da298645}
+Initialize a live stock 
+\begin{DoxyParams}{Parameters}
+\item[{\em filename}]is the filename where is variable is stored \item[{\em pigfarm}]symbolize if SwineStock section should be read or not \item[{\em dairyfarm}]symbolize if DairyStock section should be read or not \item[{\em beeffarm}]symbolize if BeefStock section should be read or not \item[{\em beeffarm}]symbolize if BeefStock section should be read or not \item[{\em theBuildings}]is where the SwineStock is stored \item[{\em filenameCattle}]filename where there is extra \hyperlink{classcattle}{cattle} information \end{DoxyParams}
+\hypertarget{classlivestock_ac94281ef5c9118aad90e6d722130cff5}{
+\index{livestock@{livestock}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!livestock@{livestock}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void livestock::ReceivePlan (char $\ast$ {\em fileExtension})}}
+\label{classlivestock_ac94281ef5c9118aad90e6d722130cff5}
+update each \hyperlink{classanimal}{animal} stock in theStockList 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{livestock_8h}{livestock.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{livestock_8cpp}{livestock.cpp}\end{DoxyCompactItemize}

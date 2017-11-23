@@ -1,0 +1,177 @@
+\hypertarget{classanimal_fert_tech}{
+\section{animalFertTech Class Reference}
+\label{classanimal_fert_tech}\index{animalFertTech@{animalFertTech}}
+}
+
+
+{\ttfamily \#include $<$animalFertTech.h$>$}Inheritance diagram for animalFertTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classanimal_fert_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_fert_tech_a57e661e6eb7baae179ceade5a9ea5271}{animalFertTech} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classanimal_fert_tech_a09f5c3ecb3cbffb70da9f76e2f280b17}{$\sim$animalFertTech} ()
+\item 
+virtual void \hyperlink{classanimal_fert_tech_ace0ed6c38236d05cd521f98624431767}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classanimal_fert_tech_a70363b032f8bfba796448c7fd4ec0d24}{SetTheManure} (\hyperlink{classmanure}{manure} $\ast$aManure)
+\item 
+void \hyperlink{classanimal_fert_tech_ad39aff03d336eaa172e7a6e272368165}{ClearTheManure} ()
+\item 
+virtual void \hyperlink{classanimal_fert_tech_ab2e8f130cf259ed4c7669e92ff1bfebe}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+\hyperlink{classtech_equip}{techEquip} $\ast$ \hyperlink{classanimal_fert_tech_a41b5b0183a8047217d79a6bf5c779545}{GetApplicationTech} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classanimal_fert_tech_a44124a413ec4871546323878c2782380}{CalcGangHours} ()
+\item 
+virtual void \hyperlink{classanimal_fert_tech_a3847a22b473b9a09f5e524c165ae0484}{CalcGangFuel} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classanimal_fert_tech_af2ca2d5414e89442073a1b46f5e315b8}{prepLoading}
+\item 
+double \hyperlink{classanimal_fert_tech_a146f70bdb7472097e215faba9936396f}{roadSpeed}
+\item 
+double \hyperlink{classanimal_fert_tech_aeb6873df46d03d1b78f31198ad4cf6a1}{fuelPerAmount}
+\item 
+double \hyperlink{classanimal_fert_tech_a3efcf646ccd9fa24f059889de001a400}{spreadingCapacity}
+\item 
+double \hyperlink{classanimal_fert_tech_a8c42f4fcb4633c38d43c367b09ee1fbd}{loadingCapacity}
+\item 
+double \hyperlink{classanimal_fert_tech_affe6aa2c2c0e08887a1b3f5b8690cd69}{prepForSpreading}
+\item 
+int \hyperlink{classanimal_fert_tech_a6692fe2b1bb0935b3eab56dc38f69963}{f}
+\item 
+int \hyperlink{classanimal_fert_tech_acebfd541ba0220e8aa692defae5d2445}{g}
+\item 
+double \hyperlink{classanimal_fert_tech_a5b982f4c6c23715c6dc580c6b3f6c69e}{j}
+\item 
+\hyperlink{classmanure}{manure} $\ast$ \hyperlink{classanimal_fert_tech_ac0b8fa8db716140c87f147dbd65bca53}{theManure}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classanimal_fert_tech_a57e661e6eb7baae179ceade5a9ea5271}{
+\index{animalFertTech@{animalFertTech}!animalFertTech@{animalFertTech}}
+\index{animalFertTech@{animalFertTech}!animalFertTech@{animalFertTech}}
+\subsubsection[{animalFertTech}]{\setlength{\rightskip}{0pt plus 5cm}animalFertTech::animalFertTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classanimal_fert_tech_a57e661e6eb7baae179ceade5a9ea5271}
+\hypertarget{classanimal_fert_tech_a09f5c3ecb3cbffb70da9f76e2f280b17}{
+\index{animalFertTech@{animalFertTech}!$\sim$animalFertTech@{$\sim$animalFertTech}}
+\index{$\sim$animalFertTech@{$\sim$animalFertTech}!animalFertTech@{animalFertTech}}
+\subsubsection[{$\sim$animalFertTech}]{\setlength{\rightskip}{0pt plus 5cm}animalFertTech::$\sim$animalFertTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_tech_a09f5c3ecb3cbffb70da9f76e2f280b17}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classanimal_fert_tech_ab2e8f130cf259ed4c7669e92ff1bfebe}{
+\index{animalFertTech@{animalFertTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!animalFertTech@{animalFertTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_tech_ab2e8f130cf259ed4c7669e92ff1bfebe}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classanimal_fert_tech_a3847a22b473b9a09f5e524c165ae0484}{
+\index{animalFertTech@{animalFertTech}!CalcGangFuel@{CalcGangFuel}}
+\index{CalcGangFuel@{CalcGangFuel}!animalFertTech@{animalFertTech}}
+\subsubsection[{CalcGangFuel}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertTech::CalcGangFuel ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classanimal_fert_tech_a3847a22b473b9a09f5e524c165ae0484}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a530d49b4cf06668121b80eba679b7e98}{fieldOperationTech}.\hypertarget{classanimal_fert_tech_a44124a413ec4871546323878c2782380}{
+\index{animalFertTech@{animalFertTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!animalFertTech@{animalFertTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classanimal_fert_tech_a44124a413ec4871546323878c2782380}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classanimal_fert_tech_ad39aff03d336eaa172e7a6e272368165}{
+\index{animalFertTech@{animalFertTech}!ClearTheManure@{ClearTheManure}}
+\index{ClearTheManure@{ClearTheManure}!animalFertTech@{animalFertTech}}
+\subsubsection[{ClearTheManure}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertTech::ClearTheManure ()}}
+\label{classanimal_fert_tech_ad39aff03d336eaa172e7a6e272368165}
+\hypertarget{classanimal_fert_tech_a41b5b0183a8047217d79a6bf5c779545}{
+\index{animalFertTech@{animalFertTech}!GetApplicationTech@{GetApplicationTech}}
+\index{GetApplicationTech@{GetApplicationTech}!animalFertTech@{animalFertTech}}
+\subsubsection[{GetApplicationTech}]{\setlength{\rightskip}{0pt plus 5cm}{\bf techEquip} $\ast$ animalFertTech::GetApplicationTech ()}}
+\label{classanimal_fert_tech_a41b5b0183a8047217d79a6bf5c779545}
+\hypertarget{classanimal_fert_tech_ace0ed6c38236d05cd521f98624431767}{
+\index{animalFertTech@{animalFertTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!animalFertTech@{animalFertTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_tech_ace0ed6c38236d05cd521f98624431767}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classanimal_fert_tech_a70363b032f8bfba796448c7fd4ec0d24}{
+\index{animalFertTech@{animalFertTech}!SetTheManure@{SetTheManure}}
+\index{SetTheManure@{SetTheManure}!animalFertTech@{animalFertTech}}
+\subsubsection[{SetTheManure}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertTech::SetTheManure ({\bf manure} $\ast$ {\em aManure})}}
+\label{classanimal_fert_tech_a70363b032f8bfba796448c7fd4ec0d24}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classanimal_fert_tech_a6692fe2b1bb0935b3eab56dc38f69963}{
+\index{animalFertTech@{animalFertTech}!f@{f}}
+\index{f@{f}!animalFertTech@{animalFertTech}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf animalFertTech::f}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_a6692fe2b1bb0935b3eab56dc38f69963}
+\hypertarget{classanimal_fert_tech_aeb6873df46d03d1b78f31198ad4cf6a1}{
+\index{animalFertTech@{animalFertTech}!fuelPerAmount@{fuelPerAmount}}
+\index{fuelPerAmount@{fuelPerAmount}!animalFertTech@{animalFertTech}}
+\subsubsection[{fuelPerAmount}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::fuelPerAmount}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_aeb6873df46d03d1b78f31198ad4cf6a1}
+\hypertarget{classanimal_fert_tech_acebfd541ba0220e8aa692defae5d2445}{
+\index{animalFertTech@{animalFertTech}!g@{g}}
+\index{g@{g}!animalFertTech@{animalFertTech}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf animalFertTech::g}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_acebfd541ba0220e8aa692defae5d2445}
+\hypertarget{classanimal_fert_tech_a5b982f4c6c23715c6dc580c6b3f6c69e}{
+\index{animalFertTech@{animalFertTech}!j@{j}}
+\index{j@{j}!animalFertTech@{animalFertTech}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::j}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_a5b982f4c6c23715c6dc580c6b3f6c69e}
+\hypertarget{classanimal_fert_tech_a8c42f4fcb4633c38d43c367b09ee1fbd}{
+\index{animalFertTech@{animalFertTech}!loadingCapacity@{loadingCapacity}}
+\index{loadingCapacity@{loadingCapacity}!animalFertTech@{animalFertTech}}
+\subsubsection[{loadingCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::loadingCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_a8c42f4fcb4633c38d43c367b09ee1fbd}
+\hypertarget{classanimal_fert_tech_affe6aa2c2c0e08887a1b3f5b8690cd69}{
+\index{animalFertTech@{animalFertTech}!prepForSpreading@{prepForSpreading}}
+\index{prepForSpreading@{prepForSpreading}!animalFertTech@{animalFertTech}}
+\subsubsection[{prepForSpreading}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::prepForSpreading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_affe6aa2c2c0e08887a1b3f5b8690cd69}
+\hypertarget{classanimal_fert_tech_af2ca2d5414e89442073a1b46f5e315b8}{
+\index{animalFertTech@{animalFertTech}!prepLoading@{prepLoading}}
+\index{prepLoading@{prepLoading}!animalFertTech@{animalFertTech}}
+\subsubsection[{prepLoading}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::prepLoading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_af2ca2d5414e89442073a1b46f5e315b8}
+\hypertarget{classanimal_fert_tech_a146f70bdb7472097e215faba9936396f}{
+\index{animalFertTech@{animalFertTech}!roadSpeed@{roadSpeed}}
+\index{roadSpeed@{roadSpeed}!animalFertTech@{animalFertTech}}
+\subsubsection[{roadSpeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::roadSpeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_a146f70bdb7472097e215faba9936396f}
+\hypertarget{classanimal_fert_tech_a3efcf646ccd9fa24f059889de001a400}{
+\index{animalFertTech@{animalFertTech}!spreadingCapacity@{spreadingCapacity}}
+\index{spreadingCapacity@{spreadingCapacity}!animalFertTech@{animalFertTech}}
+\subsubsection[{spreadingCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf animalFertTech::spreadingCapacity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_a3efcf646ccd9fa24f059889de001a400}
+\hypertarget{classanimal_fert_tech_ac0b8fa8db716140c87f147dbd65bca53}{
+\index{animalFertTech@{animalFertTech}!theManure@{theManure}}
+\index{theManure@{theManure}!animalFertTech@{animalFertTech}}
+\subsubsection[{theManure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure}$\ast$ {\bf animalFertTech::theManure}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classanimal_fert_tech_ac0b8fa8db716140c87f147dbd65bca53}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{animal_fert_tech_8h}{animalFertTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{animal_fert_tech_8cpp}{animalFertTech.cpp}\end{DoxyCompactItemize}

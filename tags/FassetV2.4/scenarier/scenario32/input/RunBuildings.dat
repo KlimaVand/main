@@ -1,0 +1,103 @@
+[all]	
+scalable	true
+[Store(0)]	
+Alias	Default
+[Slurrystore(0)]	
+Alias	Slurrystore
+StorageCapacity	270
+[Pigstable(0)]	
+Alias	Default
+[Pigstable(0).Section(0)]	
+Alias	FinisherPartiallySlatted
+Contains	Mating(0)
+[Pigstable(0).Section(0).floor(0)]	
+Alias	FinisherSolidFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.55
+ExcretaPartition	0.4
+[Pigstable(0).Section(0).floor(1)]	
+Alias	FinisherSlattedFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.45
+ExcretaPartition	0.6
+[Pigstable(0).Section(1)]	
+Alias	FinisherPartiallySlatted
+Contains	Finisher(0)
+[Pigstable(0).Section(1).floor(0)]	
+Alias	FinisherSolidFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.55
+ExcretaPartition	0.4
+[Pigstable(0).Section(1).floor(1)]	
+Alias	FinisherSlattedFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.45
+ExcretaPartition	0.6
+[Pigstable(0).Section(2)]	
+Alias	FinisherPartiallySlatted
+Contains	Pregnant(0)
+[Pigstable(0).Section(2).floor(0)]	
+Alias	FinisherSolidFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.55
+ExcretaPartition	0.4
+[Pigstable(0).Section(2).floor(1)]	
+Alias	FinisherSlattedFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.45
+ExcretaPartition	0.6
+[Pigstable(0).Section(3)]	
+Alias	FinisherPartiallySlatted
+Contains	Lactating(0)
+[Pigstable(0).Section(3).floor(0)]	
+Alias	FinisherSolidFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.55
+ExcretaPartition	0.4
+[Pigstable(0).Section(3).floor(1)]	
+Alias	FinisherSlattedFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.45
+ExcretaPartition	0.6
+[Pigstable(0).Section(4)]	
+Alias	FinisherPartiallySlatted
+Contains	Weaner(0)
+[Pigstable(0).Section(4).floor(0)]	
+Alias	FinisherSolidFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.55
+ExcretaPartition	0.4
+[Pigstable(0).Section(4).floor(1)]	
+Alias	FinisherSlattedFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.45
+ExcretaPartition	0.6
+[Pigstable(0).Section(5)]	
+Alias	FinisherPartiallySlatted
+Contains	NewSow(0)
+[Pigstable(0).Section(5).floor(0)]	
+Alias	FinisherSolidFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.55
+ExcretaPartition	0.4
+[Pigstable(0).Section(5).floor(1)]	
+Alias	FinisherSlattedFloor
+ManureToName	Pigstable(0).inhouse
+ManureToIndex	0
+AreaPartition	0.45
+ExcretaPartition	0.6
+[Pigstable(0).inhouse(0)]	
+Alias	Slurrypit
+StorageCapacity	30
+[end]

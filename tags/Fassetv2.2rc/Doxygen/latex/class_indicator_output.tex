@@ -1,0 +1,122 @@
+\hypertarget{class_indicator_output}{
+\section{IndicatorOutput Class Reference}
+\label{class_indicator_output}\index{IndicatorOutput@{IndicatorOutput}}
+}
+
+
+{\ttfamily \#include $<$IndicatorOutput.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_indicator_output_a16d7c595d15f04e8234858ff6cb2b82d}{IndicatorOutput} ()
+\item 
+\hyperlink{class_indicator_output_a48fb1af294aefcf7bbcdc4e9f1b04c57}{$\sim$IndicatorOutput} ()
+\item 
+void \hyperlink{class_indicator_output_a580f364c5b0f365955f47a44fac302e3}{Initialize} (char $\ast$filenameCSV)
+\item 
+void \hyperlink{class_indicator_output_a50aa53ae58d243f6eef65a360e1196c8}{AddIndicator} (int indicatorType, string aName, string aUnit, double aAmount)
+\item 
+void \hyperlink{class_indicator_output_a1a631aa0f783160f5c12f0ad12e67c37}{AddStateIndicator} (int indicatorType, string aName, string aUnit, double aAmount)
+\item 
+void \hyperlink{class_indicator_output_a2b07637be2883b515b05d538a7b444de}{AddIndicator} (int indicatorType, string aName, string aUnit, \hyperlink{classnitrogen}{nitrogen} aAmount)
+\item 
+void \hyperlink{class_indicator_output_ab31b639c00e3801c90b4faef370602e1}{AddStateIndicator} (int indicatorType, string aName, string aUnit, \hyperlink{classnitrogen}{nitrogen} aAmount)
+\item 
+void \hyperlink{class_indicator_output_abd79068b0443ed1c4eb43c5f88664111}{FlushIndicator} (int indicatorType, int aYearNumber)
+\item 
+double \hyperlink{class_indicator_output_a129e8b80f7102730a2103b879c486168}{GetAmount} (int indicatorType, string aName)
+\item 
+void \hyperlink{class_indicator_output_a15264189fefc34768726420283bd1ebc}{DailyUpdate} ()
+\item 
+void \hyperlink{class_indicator_output_a457faed0a5693358f7c0eb9db2d8dc4b}{CheckBalance} ()
+\item 
+void \hyperlink{class_indicator_output_aa849c5243c889dd83b0f07e8bc72b4da}{SetMaxErrorN} (double maxE)
+\item 
+void \hyperlink{class_indicator_output_a1269716d2ca0c1a260e033dfda4a1b7e}{SetMaxErrorC} (double maxE)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_indicator_output_a72be7008e52ebb04fedbffad9b75ae74}{OutCSV} (\hyperlink{classitem}{item} $\ast$aItem)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_indicator_output_a16d7c595d15f04e8234858ff6cb2b82d}{
+\index{IndicatorOutput@{IndicatorOutput}!IndicatorOutput@{IndicatorOutput}}
+\index{IndicatorOutput@{IndicatorOutput}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{IndicatorOutput}]{\setlength{\rightskip}{0pt plus 5cm}IndicatorOutput::IndicatorOutput ()}}
+\label{class_indicator_output_a16d7c595d15f04e8234858ff6cb2b82d}
+\hypertarget{class_indicator_output_a48fb1af294aefcf7bbcdc4e9f1b04c57}{
+\index{IndicatorOutput@{IndicatorOutput}!$\sim$IndicatorOutput@{$\sim$IndicatorOutput}}
+\index{$\sim$IndicatorOutput@{$\sim$IndicatorOutput}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{$\sim$IndicatorOutput}]{\setlength{\rightskip}{0pt plus 5cm}IndicatorOutput::$\sim$IndicatorOutput ()}}
+\label{class_indicator_output_a48fb1af294aefcf7bbcdc4e9f1b04c57}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_indicator_output_a2b07637be2883b515b05d538a7b444de}{
+\index{IndicatorOutput@{IndicatorOutput}!AddIndicator@{AddIndicator}}
+\index{AddIndicator@{AddIndicator}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{AddIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::AddIndicator (int {\em indicatorType}, \/  string {\em aName}, \/  string {\em aUnit}, \/  {\bf nitrogen} {\em aAmount})}}
+\label{class_indicator_output_a2b07637be2883b515b05d538a7b444de}
+\hypertarget{class_indicator_output_a50aa53ae58d243f6eef65a360e1196c8}{
+\index{IndicatorOutput@{IndicatorOutput}!AddIndicator@{AddIndicator}}
+\index{AddIndicator@{AddIndicator}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{AddIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::AddIndicator (int {\em indicatorType}, \/  string {\em aName}, \/  string {\em aUnit}, \/  double {\em aAmount})}}
+\label{class_indicator_output_a50aa53ae58d243f6eef65a360e1196c8}
+\hypertarget{class_indicator_output_ab31b639c00e3801c90b4faef370602e1}{
+\index{IndicatorOutput@{IndicatorOutput}!AddStateIndicator@{AddStateIndicator}}
+\index{AddStateIndicator@{AddStateIndicator}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{AddStateIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::AddStateIndicator (int {\em indicatorType}, \/  string {\em aName}, \/  string {\em aUnit}, \/  {\bf nitrogen} {\em aAmount})}}
+\label{class_indicator_output_ab31b639c00e3801c90b4faef370602e1}
+\hypertarget{class_indicator_output_a1a631aa0f783160f5c12f0ad12e67c37}{
+\index{IndicatorOutput@{IndicatorOutput}!AddStateIndicator@{AddStateIndicator}}
+\index{AddStateIndicator@{AddStateIndicator}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{AddStateIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::AddStateIndicator (int {\em indicatorType}, \/  string {\em aName}, \/  string {\em aUnit}, \/  double {\em aAmount})}}
+\label{class_indicator_output_a1a631aa0f783160f5c12f0ad12e67c37}
+\hypertarget{class_indicator_output_a457faed0a5693358f7c0eb9db2d8dc4b}{
+\index{IndicatorOutput@{IndicatorOutput}!CheckBalance@{CheckBalance}}
+\index{CheckBalance@{CheckBalance}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{CheckBalance}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::CheckBalance ()}}
+\label{class_indicator_output_a457faed0a5693358f7c0eb9db2d8dc4b}
+\hypertarget{class_indicator_output_a15264189fefc34768726420283bd1ebc}{
+\index{IndicatorOutput@{IndicatorOutput}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::DailyUpdate ()}}
+\label{class_indicator_output_a15264189fefc34768726420283bd1ebc}
+\hypertarget{class_indicator_output_abd79068b0443ed1c4eb43c5f88664111}{
+\index{IndicatorOutput@{IndicatorOutput}!FlushIndicator@{FlushIndicator}}
+\index{FlushIndicator@{FlushIndicator}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{FlushIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::FlushIndicator (int {\em indicatorType}, \/  int {\em aYearNumber})}}
+\label{class_indicator_output_abd79068b0443ed1c4eb43c5f88664111}
+\hypertarget{class_indicator_output_a129e8b80f7102730a2103b879c486168}{
+\index{IndicatorOutput@{IndicatorOutput}!GetAmount@{GetAmount}}
+\index{GetAmount@{GetAmount}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{GetAmount}]{\setlength{\rightskip}{0pt plus 5cm}double IndicatorOutput::GetAmount (int {\em indicatorType}, \/  string {\em aName})}}
+\label{class_indicator_output_a129e8b80f7102730a2103b879c486168}
+\hypertarget{class_indicator_output_a580f364c5b0f365955f47a44fac302e3}{
+\index{IndicatorOutput@{IndicatorOutput}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::Initialize (char $\ast$ {\em filenameCSV})}}
+\label{class_indicator_output_a580f364c5b0f365955f47a44fac302e3}
+\hypertarget{class_indicator_output_a72be7008e52ebb04fedbffad9b75ae74}{
+\index{IndicatorOutput@{IndicatorOutput}!OutCSV@{OutCSV}}
+\index{OutCSV@{OutCSV}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{OutCSV}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::OutCSV ({\bf item} $\ast$ {\em aItem})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_indicator_output_a72be7008e52ebb04fedbffad9b75ae74}
+\hypertarget{class_indicator_output_a1269716d2ca0c1a260e033dfda4a1b7e}{
+\index{IndicatorOutput@{IndicatorOutput}!SetMaxErrorC@{SetMaxErrorC}}
+\index{SetMaxErrorC@{SetMaxErrorC}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{SetMaxErrorC}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::SetMaxErrorC (double {\em maxE})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_indicator_output_a1269716d2ca0c1a260e033dfda4a1b7e}
+\hypertarget{class_indicator_output_aa849c5243c889dd83b0f07e8bc72b4da}{
+\index{IndicatorOutput@{IndicatorOutput}!SetMaxErrorN@{SetMaxErrorN}}
+\index{SetMaxErrorN@{SetMaxErrorN}!IndicatorOutput@{IndicatorOutput}}
+\subsubsection[{SetMaxErrorN}]{\setlength{\rightskip}{0pt plus 5cm}void IndicatorOutput::SetMaxErrorN (double {\em maxE})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_indicator_output_aa849c5243c889dd83b0f07e8bc72b4da}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{_indicator_output_8h}{IndicatorOutput.h}\item 
+C:/main/trunk/src/base/\hyperlink{_indicator_output_8cpp}{IndicatorOutput.cpp}\end{DoxyCompactItemize}

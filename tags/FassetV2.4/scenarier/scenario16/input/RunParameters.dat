@@ -1,0 +1,55 @@
+[Potato]	
+TS0	50
+TS1	600
+TS2	700
+TS3	200
+TB0	5
+TB1	8
+TB2	8
+TB3	8
+[Pea]	
+MinN_Store	0.04
+MaxN_Store	0.06
+MaxFixPerDM	0.026
+MaxRadUseEff	3.0
+TS0	50
+TS1	600
+TS2	700
+TS3	200
+TB0	5
+TB1	8
+TB2	8
+TB3	8
+[SpringBarley]	
+TS0	50
+TS1	600
+TS2	700
+TS3	200
+TB0	5
+TB1	8
+TB2	8
+TB3	8
+FillFactor	0.6
+MinN_Store	0.015
+MaxN_Store	0.025
+MaxRadUseEff	3.7
+LAIDMRatio	0.015
+LAINitrogenRatio	0.4
+NitrateUptakeRate	0.000036;
+k	0.65
+[WinterWheat]	
+TS0	50
+TS1	600
+TS2	700
+TS3	200
+TB0	5
+TB1	8
+TB2	8
+TB3	8
+WaterDeficitVegGrowth	0.0
+MaxRadUseEff	3.4
+k	0.44
+LAIDMRatio	0.011
+FillFactor	0.57
+NitrateUptakeRate	0.000036;
+[endl]

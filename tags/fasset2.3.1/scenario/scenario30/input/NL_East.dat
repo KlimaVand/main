@@ -1,0 +1,130 @@
+[SoilParameters]              // Data for "jordprofildatabasen" DJF+HYDRES model
+Nodes           40
+NodeThickness   50
+PloughingDepth 100
+
+[SoilLayer(1)]
+Thickness        300
+SoilType         10
+*ConductivityFC  -8.22                 // log10(m/s) from O.H.Jacobsen p 60
+DryBulkDensity   1.30                   
+ClayContent      0.20
+SiltContent      0.46
+MualemVanGenucten 1
+
+CarbonPct        1.70
+CNRatio		11.30
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.049707917
+IOM	0.405174
+IOM.N	0.037624131
+
+RelativeWater(0)	0.48
+PFValue(0)	0.01
+RelativeWater(1)	0.35
+PFValue(1)	2.0
+RelativeWater(2)	0.01
+PFValue(2)	4.2
+
+
+[SoilLayer(2)]
+Thickness        300
+SoilType         10
+*ConductivityFC  -8.76
+DryBulkDensity   1.10                     
+ClayContent      0.10
+SiltContent      0.65
+MualemVanGenucten 1
+
+CarbonPct        1.16
+CNRatio		11.60
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0)	0.52
+PFValue(0)	0.01
+RelativeWater(1)	0.42
+PFValue(1)	2.0
+RelativeWater(2)	0.014
+PFValue(2)	4.2
+
+
+[SoilLayer(3)]
+Thickness        400
+SoilType         10
+*ConductivityFC  -8.76
+DryBulkDensity   1.00                    
+ClayContent      0.10
+SiltContent      0.65
+MualemVanGenucten 1
+
+CarbonPct        1.05
+CNRatio		11.6
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+
+RelativeWater(0)	0.52
+PFValue(0)	0.01
+RelativeWater(1)	0.38
+PFValue(1)	2.0
+RelativeWater(2)	0.015
+PFValue(2)	4.2
+
+
+
+[SoilLayer(4)]
+Thickness        2000
+SoilType         10
+*ConductivityFC  -8.77
+DryBulkDensity   1.1                  
+ClayContent      0.10
+SiltContent      0.65
+MualemVanGenucten 1
+
+CarbonPct        0.80
+CNRatio		11.2
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0)	0.52
+PFValue(0)	0.01
+RelativeWater(1)	0.38
+PFValue(1)	2.0
+RelativeWater(2)	0.015
+PFValue(2)	4.2
+[end]

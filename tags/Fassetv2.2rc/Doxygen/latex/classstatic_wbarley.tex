@@ -1,0 +1,211 @@
+\hypertarget{classstatic_wbarley}{
+\section{staticWbarley Class Reference}
+\label{classstatic_wbarley}\index{staticWbarley@{staticWbarley}}
+}
+
+
+{\ttfamily \#include $<$staticWbarley.h$>$}Inheritance diagram for staticWbarley::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstatic_wbarley}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatic_wbarley_acec00af600f34672e3aadf804c1815fd}{staticWbarley} ()
+\item 
+virtual int \hyperlink{classstatic_wbarley_a6abd8574805399b475df1488198bdd0f}{SpeciesCanGiveUsableStraw} ()
+\item 
+virtual double \hyperlink{classstatic_wbarley_a2d54e7d2ac7b1ca840dcb5d3780543b2}{PVstratFactor} (int PV\_\-strat)
+\item 
+void \hyperlink{classstatic_wbarley_a27f5a783e0d40a5114a80da6d68649ef}{SpecifiedPlan} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, char $\ast$crop\_\-id)
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$ \hyperlink{classstatic_wbarley_a6bfa41145c475ecf8c8dba2e4956f07b}{MakeOpList} (\hyperlink{classfield_order}{fieldOrder} $\ast$PP, int JB\_\-NO, double reduction)
+\item 
+virtual int \hyperlink{classstatic_wbarley_a2c42b2ae215233e89c866bdf9bb8b395}{NumOfProtectStrat\_\-} ()
+\item 
+virtual int \hyperlink{classstatic_wbarley_a77ecffa309df198f3479313e7aabfb27}{NitrogenLevels\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wbarley_a8a889b049e3d78285a74ccf0bb0145a2}{NitrogenAmount} (int soil\_\-type, double free\_\-N, int N\_\-level)
+\item 
+virtual double \hyperlink{classstatic_wbarley_a247a23ce822b41692fb07633cd332423}{ExpectedYield\_\-} (int soil\_\-type, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_wbarley_a6393940adf0cf43b69854fc2050e5eda}{ExpectedStrawYield\_\-} (int JB\_\-NO, int N\_\-level, int PV\_\-strat)
+\item 
+virtual double \hyperlink{classstatic_wbarley_a35b376e9216edc2f8ac37916e657308f}{PhosphorAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wbarley_ac92789d3d8a25132f60546b85f92400b}{PotassiumAmount\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wbarley_a7d37987b485ea121e57e3fdacb015673}{ExtraNRelease\_\-} ()
+\item 
+virtual double \hyperlink{classstatic_wbarley_a13213cb1959283fc557cb0ff49e8c587}{NUseSlurrySpring} ()
+\item 
+virtual int \hyperlink{classstatic_wbarley_a800178fb5dca9585040d0b9abd92d6b9}{SlyrryPossibleThisPeriod} (\hyperlink{classperiod}{period} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1ae112e4a2619609825645b7cb4ac4d010}{Num\_\-of\_\-pr\_\-str} = 3, 
+\hyperlink{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1ae49369cc26748d5b4c314e24eb9c4325}{Nitrogen\_\-levels} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classstatic_wbarley_aad6467e5da8fe1083d81d3534d3aee0f}{Nopt} (int JB\_\-NO)
+\item 
+double \hyperlink{classstatic_wbarley_a59813209533f8f0ce14ad345d748de59}{Ymin} (int JB\_\-NO)
+\item 
+double \hyperlink{classstatic_wbarley_adef88f6c141b39f5067652b7c28dcbc6}{Ymax} (int JB\_\-NO)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1}{
+\subsubsection[{"@27}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}!staticWbarley@{staticWbarley}}\index{staticWbarley@{staticWbarley}!Num\_\-of\_\-pr\_\-str@{Num\_\-of\_\-pr\_\-str}}\item[{\em 
+\hypertarget{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1ae112e4a2619609825645b7cb4ac4d010}{
+Num\_\-of\_\-pr\_\-str}
+\label{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1ae112e4a2619609825645b7cb4ac4d010}
+}]\index{Nitrogen\_\-levels@{Nitrogen\_\-levels}!staticWbarley@{staticWbarley}}\index{staticWbarley@{staticWbarley}!Nitrogen\_\-levels@{Nitrogen\_\-levels}}\item[{\em 
+\hypertarget{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1ae49369cc26748d5b4c314e24eb9c4325}{
+Nitrogen\_\-levels}
+\label{classstatic_wbarley_a782309385f7e5edcb7fda691ab9030a1ae49369cc26748d5b4c314e24eb9c4325}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstatic_wbarley_acec00af600f34672e3aadf804c1815fd}{
+\index{staticWbarley@{staticWbarley}!staticWbarley@{staticWbarley}}
+\index{staticWbarley@{staticWbarley}!staticWbarley@{staticWbarley}}
+\subsubsection[{staticWbarley}]{\setlength{\rightskip}{0pt plus 5cm}staticWbarley::staticWbarley ()}}
+\label{classstatic_wbarley_acec00af600f34672e3aadf804c1815fd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatic_wbarley_a6393940adf0cf43b69854fc2050e5eda}{
+\index{staticWbarley@{staticWbarley}!ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}}
+\index{ExpectedStrawYield\_\-@{ExpectedStrawYield\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{ExpectedStrawYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::ExpectedStrawYield\_\- (int {\em JB\_\-NO}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a6393940adf0cf43b69854fc2050e5eda}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a884a8335aebc5effa3fecdb75af3ca85}{staticCrop}.\hypertarget{classstatic_wbarley_a247a23ce822b41692fb07633cd332423}{
+\index{staticWbarley@{staticWbarley}!ExpectedYield\_\-@{ExpectedYield\_\-}}
+\index{ExpectedYield\_\-@{ExpectedYield\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{ExpectedYield\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::ExpectedYield\_\- (int {\em soil\_\-type}, \/  int {\em N\_\-level}, \/  int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a247a23ce822b41692fb07633cd332423}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7b9a8ecb31b10c4dcf44f13000e2f8c}{staticCrop}.\hypertarget{classstatic_wbarley_a7d37987b485ea121e57e3fdacb015673}{
+\index{staticWbarley@{staticWbarley}!ExtraNRelease\_\-@{ExtraNRelease\_\-}}
+\index{ExtraNRelease\_\-@{ExtraNRelease\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{ExtraNRelease\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::ExtraNRelease\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a7d37987b485ea121e57e3fdacb015673}
+
+
+Reimplemented from \hyperlink{classstatic_crop_afe0cb8a7831afa941a37338f05227d67}{staticCrop}.\hypertarget{classstatic_wbarley_a6bfa41145c475ecf8c8dba2e4956f07b}{
+\index{staticWbarley@{staticWbarley}!MakeOpList@{MakeOpList}}
+\index{MakeOpList@{MakeOpList}!staticWbarley@{staticWbarley}}
+\subsubsection[{MakeOpList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ staticWbarley::MakeOpList ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  double {\em reduction})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a6bfa41145c475ecf8c8dba2e4956f07b}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a9b67ef1ae531a3afb32b63a4aeb5916b}{staticCrop}.\hypertarget{classstatic_wbarley_a8a889b049e3d78285a74ccf0bb0145a2}{
+\index{staticWbarley@{staticWbarley}!NitrogenAmount@{NitrogenAmount}}
+\index{NitrogenAmount@{NitrogenAmount}!staticWbarley@{staticWbarley}}
+\subsubsection[{NitrogenAmount}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::NitrogenAmount (int {\em soil\_\-type}, \/  double {\em free\_\-N}, \/  int {\em N\_\-level})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a8a889b049e3d78285a74ccf0bb0145a2}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af3aa85321a8a75406f8a0751b71587d0}{staticCrop}.\hypertarget{classstatic_wbarley_a77ecffa309df198f3479313e7aabfb27}{
+\index{staticWbarley@{staticWbarley}!NitrogenLevels\_\-@{NitrogenLevels\_\-}}
+\index{NitrogenLevels\_\-@{NitrogenLevels\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{NitrogenLevels\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticWbarley::NitrogenLevels\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a77ecffa309df198f3479313e7aabfb27}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a32b69ed138beaed150efa74d18e82d8e}{staticCrop}.\hypertarget{classstatic_wbarley_aad6467e5da8fe1083d81d3534d3aee0f}{
+\index{staticWbarley@{staticWbarley}!Nopt@{Nopt}}
+\index{Nopt@{Nopt}!staticWbarley@{staticWbarley}}
+\subsubsection[{Nopt}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::Nopt (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wbarley_aad6467e5da8fe1083d81d3534d3aee0f}
+\hypertarget{classstatic_wbarley_a2c42b2ae215233e89c866bdf9bb8b395}{
+\index{staticWbarley@{staticWbarley}!NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}}
+\index{NumOfProtectStrat\_\-@{NumOfProtectStrat\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{NumOfProtectStrat\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int staticWbarley::NumOfProtectStrat\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a2c42b2ae215233e89c866bdf9bb8b395}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a4d3d767f569f48eb68ffa76822302467}{staticCrop}.\hypertarget{classstatic_wbarley_a13213cb1959283fc557cb0ff49e8c587}{
+\index{staticWbarley@{staticWbarley}!NUseSlurrySpring@{NUseSlurrySpring}}
+\index{NUseSlurrySpring@{NUseSlurrySpring}!staticWbarley@{staticWbarley}}
+\subsubsection[{NUseSlurrySpring}]{\setlength{\rightskip}{0pt plus 5cm}virtual double staticWbarley::NUseSlurrySpring ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_wbarley_a13213cb1959283fc557cb0ff49e8c587}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae7d21ab4afc8d8355d231566e8d87b1b}{staticCrop}.\hypertarget{classstatic_wbarley_a35b376e9216edc2f8ac37916e657308f}{
+\index{staticWbarley@{staticWbarley}!PhosphorAmount\_\-@{PhosphorAmount\_\-}}
+\index{PhosphorAmount\_\-@{PhosphorAmount\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{PhosphorAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::PhosphorAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a35b376e9216edc2f8ac37916e657308f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_abaa5c59d4074d47dedc79172f8326e08}{staticCrop}.\hypertarget{classstatic_wbarley_ac92789d3d8a25132f60546b85f92400b}{
+\index{staticWbarley@{staticWbarley}!PotassiumAmount\_\-@{PotassiumAmount\_\-}}
+\index{PotassiumAmount\_\-@{PotassiumAmount\_\-}!staticWbarley@{staticWbarley}}
+\subsubsection[{PotassiumAmount\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::PotassiumAmount\_\- ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_ac92789d3d8a25132f60546b85f92400b}
+
+
+Reimplemented from \hyperlink{classstatic_crop_a41fee98d728c7670e6acb504a9b3459d}{staticCrop}.\hypertarget{classstatic_wbarley_a2d54e7d2ac7b1ca840dcb5d3780543b2}{
+\index{staticWbarley@{staticWbarley}!PVstratFactor@{PVstratFactor}}
+\index{PVstratFactor@{PVstratFactor}!staticWbarley@{staticWbarley}}
+\subsubsection[{PVstratFactor}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::PVstratFactor (int {\em PV\_\-strat})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a2d54e7d2ac7b1ca840dcb5d3780543b2}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ae4f07498c1616eab212386faf352d348}{staticCrop}.\hypertarget{classstatic_wbarley_a800178fb5dca9585040d0b9abd92d6b9}{
+\index{staticWbarley@{staticWbarley}!SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}}
+\index{SlyrryPossibleThisPeriod@{SlyrryPossibleThisPeriod}!staticWbarley@{staticWbarley}}
+\subsubsection[{SlyrryPossibleThisPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int staticWbarley::SlyrryPossibleThisPeriod ({\bf period} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a800178fb5dca9585040d0b9abd92d6b9}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ada7c8c797de629277a5ba0b0a4a3c17e}{staticCrop}.\hypertarget{classstatic_wbarley_a6abd8574805399b475df1488198bdd0f}{
+\index{staticWbarley@{staticWbarley}!SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}}
+\index{SpeciesCanGiveUsableStraw@{SpeciesCanGiveUsableStraw}!staticWbarley@{staticWbarley}}
+\subsubsection[{SpeciesCanGiveUsableStraw}]{\setlength{\rightskip}{0pt plus 5cm}virtual int staticWbarley::SpeciesCanGiveUsableStraw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classstatic_wbarley_a6abd8574805399b475df1488198bdd0f}
+
+
+Reimplemented from \hyperlink{classstatic_crop_ab7763e4e6a0b9eff1788cb86ebad8170}{staticCrop}.\hypertarget{classstatic_wbarley_a27f5a783e0d40a5114a80da6d68649ef}{
+\index{staticWbarley@{staticWbarley}!SpecifiedPlan@{SpecifiedPlan}}
+\index{SpecifiedPlan@{SpecifiedPlan}!staticWbarley@{staticWbarley}}
+\subsubsection[{SpecifiedPlan}]{\setlength{\rightskip}{0pt plus 5cm}void staticWbarley::SpecifiedPlan ({\bf fieldOrder} $\ast$ {\em PP}, \/  int {\em JB\_\-NO}, \/  char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classstatic_wbarley_a27f5a783e0d40a5114a80da6d68649ef}
+
+
+Reimplemented from \hyperlink{classstatic_crop_af19d8a1e4f4833325f6712c22ede8b45}{staticCrop}.\hypertarget{classstatic_wbarley_adef88f6c141b39f5067652b7c28dcbc6}{
+\index{staticWbarley@{staticWbarley}!Ymax@{Ymax}}
+\index{Ymax@{Ymax}!staticWbarley@{staticWbarley}}
+\subsubsection[{Ymax}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::Ymax (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wbarley_adef88f6c141b39f5067652b7c28dcbc6}
+\hypertarget{classstatic_wbarley_a59813209533f8f0ce14ad345d748de59}{
+\index{staticWbarley@{staticWbarley}!Ymin@{Ymin}}
+\index{Ymin@{Ymin}!staticWbarley@{staticWbarley}}
+\subsubsection[{Ymin}]{\setlength{\rightskip}{0pt plus 5cm}double staticWbarley::Ymin (int {\em JB\_\-NO})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classstatic_wbarley_a59813209533f8f0ce14ad345d748de59}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_wbarley_8h}{staticWbarley.h}\item 
+C:/main/trunk/src/fields/staticCrops/\hyperlink{static_wbarley_8cpp}{staticWbarley.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,288 @@
+\hypertarget{classdairy_stock}{
+\section{dairyStock Class Reference}
+\label{classdairy_stock}\index{dairyStock@{dairyStock}}
+}
+
+
+{\ttfamily \#include $<$dairyStock.h$>$}Inheritance diagram for dairyStock::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classdairy_stock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdairy_stock_aad9f7ae81dd17f7c347fcafbcfc94dda}{dairyStock} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual \hyperlink{classdairy_stock_a9fe818e95a63fe96cc6f3b6da29c52cc}{$\sim$dairyStock} ()
+\item 
+void \hyperlink{classdairy_stock_a815b14e99987eef68185b0380086c1d2}{Setindividual} (bool isIndividual)
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classanimal}{animal} $>$ $\ast$ \hyperlink{classdairy_stock_af2ccb2b39af72516a6b917c13db1e7cd}{GettheStock} ()
+\item 
+bool \hyperlink{classdairy_stock_a61d3ed76c3e663bf7da37257bc6a3ff3}{Getindividual} ()
+\item 
+double \hyperlink{classdairy_stock_aad94cb740f4ee70763adede5f4c4844c}{GetDE} ()
+\item 
+void \hyperlink{classdairy_stock_aa06e97a86fe280ee6b23ea2985317b65}{ReceivePlan} (char $\ast$fileExtension)
+\item 
+void \hyperlink{classdairy_stock_a6650864514247ac49a701d3e40cdad9a}{DailyUpdate} ()
+\item 
+void \hyperlink{classdairy_stock_a12912676a0472206a16c98bbba037887}{InitCattle} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, int anAnimalModel, int anAggregation, char $\ast$filenameCattle)
+\item 
+virtual void \hyperlink{classdairy_stock_a5bc23504c268f65736035b37b94af54a}{checkBalances} (bool show=false)
+\item 
+double \hyperlink{classdairy_stock_a15856795254b0a1e9d5fb82925647899}{GetAnimalN} ()
+\item 
+void \hyperlink{classdairy_stock_ac675c0d6567e2a68d63b5e63dd9cf5a2}{GetData} (char $\ast$FileName)
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$ \hyperlink{classdairy_stock_a58e319d3fd9eb8d586d9e2b85279f379}{GetpointyCalves} () const 
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle_group}{cattleGroup} $>$ $\ast$ \hyperlink{classdairy_stock_aa0df5d9ea7cd74dd41369e4830548fb8}{GetCattleGroup} () const 
+\item 
+void \hyperlink{classdairy_stock_ab6fa75b8d046e8de37589b02829fb50e}{CheckBirth} ()
+\item 
+void \hyperlink{classdairy_stock_a0de0c3cb5055c9eeeb9d30a039ec0774}{CheckAge} ()
+\item 
+void \hyperlink{classdairy_stock_a4642b99f0f7e88a41d99071a915d3f8f}{SeedGroups} ()
+\item 
+void \hyperlink{classdairy_stock_aa404f38c38a68b7cecd44b8fd96229ee}{Cull} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$victims)
+\item 
+double \hyperlink{classdairy_stock_a8db1921052fd00477cf26d15a965cda3}{GetTotalAnimals} ()
+\item 
+void \hyperlink{classdairy_stock_a86008d68d20074f0261eec2e8e2ed9a0}{AutoRecruit} ()
+\item 
+void \hyperlink{classdairy_stock_a3d06c27cd2651c99b1fdf1273d0f6289}{GiveIndicator} (int indicatorType)
+\item 
+void \hyperlink{classdairy_stock_a19f2b3a2ee8d65b4b7419e327baa2eb0}{CheckWean} (bool stopLactation)
+\item 
+double \hyperlink{classdairy_stock_a1e7445e8dc3f08acecfd0d22c8e097f3}{GetHerdN} ()
+\item 
+double \hyperlink{classdairy_stock_aef1627aca995e99f7abecf477ef02be9}{GetHerdC} ()
+\item 
+void \hyperlink{classdairy_stock_a77965d4b6f503d4ef330214e814355ef}{theSorting} (bool canCull)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle_group}{cattleGroup} $>$ $\ast$ \hyperlink{classdairy_stock_ae22ba85aaf48cccf4c75117c270ece97}{grouplist}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$ \hyperlink{classdairy_stock_aafba61b39765bdecf0a0e05281e5740c}{pointyCalves}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$ \hyperlink{classdairy_stock_add52dfd62ac394215c6f9e6c9cac2f0f}{oldies}
+\item 
+bool \hyperlink{classdairy_stock_a4d15475e1ceb1b1108df48f0ed64b41e}{wasFemale}
+\item 
+bool \hyperlink{classdairy_stock_a01fc75f09a995c8a581ad7fc3f6b6c82}{individual}
+\item 
+int \hyperlink{classdairy_stock_aafdf20c05ee5cdb2981c917ce88feeb9}{aggregateNumber}
+\item 
+int \hyperlink{classdairy_stock_a65acaa98372497299dd6ff5790b75de2}{animalModel}
+\item 
+int \hyperlink{classdairy_stock_a53d25ed710cd6b61a960ca8694607ceb}{aggregation}
+\item 
+int \hyperlink{classdairy_stock_ac3387bde3c980dc1ff428d746e654aae}{IDnumber}
+\item 
+fstream $\ast$ \hyperlink{classdairy_stock_a90690d91a012a2e4db298b27b8751f9b}{CattlefileStream}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdairy_stock_aad9f7ae81dd17f7c347fcafbcfc94dda}{
+\index{dairyStock@{dairyStock}!dairyStock@{dairyStock}}
+\index{dairyStock@{dairyStock}!dairyStock@{dairyStock}}
+\subsubsection[{dairyStock}]{\setlength{\rightskip}{0pt plus 5cm}dairyStock::dairyStock (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classdairy_stock_aad9f7ae81dd17f7c347fcafbcfc94dda}
+Constructor with arguments \hypertarget{classdairy_stock_a9fe818e95a63fe96cc6f3b6da29c52cc}{
+\index{dairyStock@{dairyStock}!$\sim$dairyStock@{$\sim$dairyStock}}
+\index{$\sim$dairyStock@{$\sim$dairyStock}!dairyStock@{dairyStock}}
+\subsubsection[{$\sim$dairyStock}]{\setlength{\rightskip}{0pt plus 5cm}dairyStock::$\sim$dairyStock ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdairy_stock_a9fe818e95a63fe96cc6f3b6da29c52cc}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classdairy_stock_a86008d68d20074f0261eec2e8e2ed9a0}{
+\index{dairyStock@{dairyStock}!AutoRecruit@{AutoRecruit}}
+\index{AutoRecruit@{AutoRecruit}!dairyStock@{dairyStock}}
+\subsubsection[{AutoRecruit}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::AutoRecruit ()}}
+\label{classdairy_stock_a86008d68d20074f0261eec2e8e2ed9a0}
+Recruit new animals if necessary -\/ currently only works for calves \hypertarget{classdairy_stock_a0de0c3cb5055c9eeeb9d30a039ec0774}{
+\index{dairyStock@{dairyStock}!CheckAge@{CheckAge}}
+\index{CheckAge@{CheckAge}!dairyStock@{dairyStock}}
+\subsubsection[{CheckAge}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::CheckAge ()}}
+\label{classdairy_stock_a0de0c3cb5055c9eeeb9d30a039ec0774}
+Check to see if animals have out-\/aged their age class and move them if necessary Cast animals (those moving out of the oldest age class) are left in oldies \hyperlink{classlink_list}{linkList} \hypertarget{classdairy_stock_a5bc23504c268f65736035b37b94af54a}{
+\index{dairyStock@{dairyStock}!checkBalances@{checkBalances}}
+\index{checkBalances@{checkBalances}!dairyStock@{dairyStock}}
+\subsubsection[{checkBalances}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::checkBalances (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdairy_stock_a5bc23504c268f65736035b37b94af54a}
+For each element in grouplist the balance is check 
+
+Reimplemented from \hyperlink{classanimal_stock_aa52ee60094491bbcf82325fd5479f109}{animalStock}.\hypertarget{classdairy_stock_ab6fa75b8d046e8de37589b02829fb50e}{
+\index{dairyStock@{dairyStock}!CheckBirth@{CheckBirth}}
+\index{CheckBirth@{CheckBirth}!dairyStock@{dairyStock}}
+\subsubsection[{CheckBirth}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::CheckBirth ()}}
+\label{classdairy_stock_ab6fa75b8d046e8de37589b02829fb50e}
+Check to see if any calves are to be born \hypertarget{classdairy_stock_a19f2b3a2ee8d65b4b7419e327baa2eb0}{
+\index{dairyStock@{dairyStock}!CheckWean@{CheckWean}}
+\index{CheckWean@{CheckWean}!dairyStock@{dairyStock}}
+\subsubsection[{CheckWean}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::CheckWean (bool {\em stopLactation})}}
+\label{classdairy_stock_a19f2b3a2ee8d65b4b7419e327baa2eb0}
+Check to see if any calves are to be weaned and put them into pointyCalves \hypertarget{classdairy_stock_aa404f38c38a68b7cecd44b8fd96229ee}{
+\index{dairyStock@{dairyStock}!Cull@{Cull}}
+\index{Cull@{Cull}!dairyStock@{dairyStock}}
+\subsubsection[{Cull}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::Cull ({\bf linkList}$<$ {\bf cattle} $>$ $\ast$ {\em victims})}}
+\label{classdairy_stock_aa404f38c38a68b7cecd44b8fd96229ee}
+Sell cast animals, delete instances and record sale \hypertarget{classdairy_stock_a6650864514247ac49a701d3e40cdad9a}{
+\index{dairyStock@{dairyStock}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!dairyStock@{dairyStock}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::DailyUpdate (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdairy_stock_a6650864514247ac49a701d3e40cdad9a}
+DailyUpdate is the daily execution of \hyperlink{classcattle}{cattle} 
+
+Reimplemented from \hyperlink{classanimal_stock_ab95f31939d8d1cbc1bb2f567375995ae}{animalStock}.\hypertarget{classdairy_stock_a15856795254b0a1e9d5fb82925647899}{
+\index{dairyStock@{dairyStock}!GetAnimalN@{GetAnimalN}}
+\index{GetAnimalN@{GetAnimalN}!dairyStock@{dairyStock}}
+\subsubsection[{GetAnimalN}]{\setlength{\rightskip}{0pt plus 5cm}double dairyStock::GetAnimalN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdairy_stock_a15856795254b0a1e9d5fb82925647899}
+\hypertarget{classdairy_stock_aa0df5d9ea7cd74dd41369e4830548fb8}{
+\index{dairyStock@{dairyStock}!GetCattleGroup@{GetCattleGroup}}
+\index{GetCattleGroup@{GetCattleGroup}!dairyStock@{dairyStock}}
+\subsubsection[{GetCattleGroup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattleGroup}$>$$\ast$ dairyStock::GetCattleGroup () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdairy_stock_aa0df5d9ea7cd74dd41369e4830548fb8}
+\hypertarget{classdairy_stock_ac675c0d6567e2a68d63b5e63dd9cf5a2}{
+\index{dairyStock@{dairyStock}!GetData@{GetData}}
+\index{GetData@{GetData}!dairyStock@{dairyStock}}
+\subsubsection[{GetData}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::GetData (char $\ast$ {\em FileName})}}
+\label{classdairy_stock_ac675c0d6567e2a68d63b5e63dd9cf5a2}
+\hypertarget{classdairy_stock_aad94cb740f4ee70763adede5f4c4844c}{
+\index{dairyStock@{dairyStock}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!dairyStock@{dairyStock}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}double dairyStock::GetDE ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdairy_stock_aad94cb740f4ee70763adede5f4c4844c}
+Calculate the DE amount in group, pointy and oldies 
+
+Reimplemented from \hyperlink{classanimal_stock_a8bed676752d1e6414c9a73fe72e3cb85}{animalStock}.\hypertarget{classdairy_stock_aef1627aca995e99f7abecf477ef02be9}{
+\index{dairyStock@{dairyStock}!GetHerdC@{GetHerdC}}
+\index{GetHerdC@{GetHerdC}!dairyStock@{dairyStock}}
+\subsubsection[{GetHerdC}]{\setlength{\rightskip}{0pt plus 5cm}double dairyStock::GetHerdC ()}}
+\label{classdairy_stock_aef1627aca995e99f7abecf477ef02be9}
+Calculate the Carbon amount in group, pointy and oldies \hypertarget{classdairy_stock_a1e7445e8dc3f08acecfd0d22c8e097f3}{
+\index{dairyStock@{dairyStock}!GetHerdN@{GetHerdN}}
+\index{GetHerdN@{GetHerdN}!dairyStock@{dairyStock}}
+\subsubsection[{GetHerdN}]{\setlength{\rightskip}{0pt plus 5cm}double dairyStock::GetHerdN ()}}
+\label{classdairy_stock_a1e7445e8dc3f08acecfd0d22c8e097f3}
+Calculate the Nitrogen amount in group, pointy and oldies \hypertarget{classdairy_stock_a61d3ed76c3e663bf7da37257bc6a3ff3}{
+\index{dairyStock@{dairyStock}!Getindividual@{Getindividual}}
+\index{Getindividual@{Getindividual}!dairyStock@{dairyStock}}
+\subsubsection[{Getindividual}]{\setlength{\rightskip}{0pt plus 5cm}bool dairyStock::Getindividual ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdairy_stock_a61d3ed76c3e663bf7da37257bc6a3ff3}
+\hypertarget{classdairy_stock_a58e319d3fd9eb8d586d9e2b85279f379}{
+\index{dairyStock@{dairyStock}!GetpointyCalves@{GetpointyCalves}}
+\index{GetpointyCalves@{GetpointyCalves}!dairyStock@{dairyStock}}
+\subsubsection[{GetpointyCalves}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattle}$>$$\ast$ dairyStock::GetpointyCalves () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdairy_stock_a58e319d3fd9eb8d586d9e2b85279f379}
+\hypertarget{classdairy_stock_af2ccb2b39af72516a6b917c13db1e7cd}{
+\index{dairyStock@{dairyStock}!GettheStock@{GettheStock}}
+\index{GettheStock@{GettheStock}!dairyStock@{dairyStock}}
+\subsubsection[{GettheStock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf animal}$>$$\ast$ dairyStock::GettheStock ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdairy_stock_af2ccb2b39af72516a6b917c13db1e7cd}
+\hypertarget{classdairy_stock_a8db1921052fd00477cf26d15a965cda3}{
+\index{dairyStock@{dairyStock}!GetTotalAnimals@{GetTotalAnimals}}
+\index{GetTotalAnimals@{GetTotalAnimals}!dairyStock@{dairyStock}}
+\subsubsection[{GetTotalAnimals}]{\setlength{\rightskip}{0pt plus 5cm}double dairyStock::GetTotalAnimals ()}}
+\label{classdairy_stock_a8db1921052fd00477cf26d15a965cda3}
+Return total number of animals \hypertarget{classdairy_stock_a3d06c27cd2651c99b1fdf1273d0f6289}{
+\index{dairyStock@{dairyStock}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!dairyStock@{dairyStock}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdairy_stock_a3d06c27cd2651c99b1fdf1273d0f6289}
+Give extra information in indicat.xml 
+
+Reimplemented from \hyperlink{classanimal_stock_a7d6f9b68a88f2e5399f8dcdb3965a4f6}{animalStock}.\hypertarget{classdairy_stock_a12912676a0472206a16c98bbba037887}{
+\index{dairyStock@{dairyStock}!InitCattle@{InitCattle}}
+\index{InitCattle@{InitCattle}!dairyStock@{dairyStock}}
+\subsubsection[{InitCattle}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::InitCattle (fstream $\ast$ {\em file}, \/  int {\em anAnimalModel}, \/  int {\em anAggregation}, \/  char $\ast$ {\em filenameCattle})}}
+\label{classdairy_stock_a12912676a0472206a16c98bbba037887}
+Initializes a new \hyperlink{classdairy_stock}{dairyStock} \hypertarget{classdairy_stock_aa06e97a86fe280ee6b23ea2985317b65}{
+\index{dairyStock@{dairyStock}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!dairyStock@{dairyStock}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::ReceivePlan (char $\ast$ {\em fileExtension})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdairy_stock_aa06e97a86fe280ee6b23ea2985317b65}
+ReceivePlan read the \hyperlink{classplan}{plan} for all animals 
+
+Reimplemented from \hyperlink{classanimal_stock_a725a20b1ebac99314da9371c17aaad82}{animalStock}.\hypertarget{classdairy_stock_a4642b99f0f7e88a41d99071a915d3f8f}{
+\index{dairyStock@{dairyStock}!SeedGroups@{SeedGroups}}
+\index{SeedGroups@{SeedGroups}!dairyStock@{dairyStock}}
+\subsubsection[{SeedGroups}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::SeedGroups ()}}
+\label{classdairy_stock_a4642b99f0f7e88a41d99071a915d3f8f}
+Creates a set of Cattle in each \hyperlink{classcattle}{cattle} group stored in grouplist \hypertarget{classdairy_stock_a815b14e99987eef68185b0380086c1d2}{
+\index{dairyStock@{dairyStock}!Setindividual@{Setindividual}}
+\index{Setindividual@{Setindividual}!dairyStock@{dairyStock}}
+\subsubsection[{Setindividual}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::Setindividual (bool {\em isIndividual})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdairy_stock_a815b14e99987eef68185b0380086c1d2}
+\hypertarget{classdairy_stock_a77965d4b6f503d4ef330214e814355ef}{
+\index{dairyStock@{dairyStock}!theSorting@{theSorting}}
+\index{theSorting@{theSorting}!dairyStock@{dairyStock}}
+\subsubsection[{theSorting}]{\setlength{\rightskip}{0pt plus 5cm}void dairyStock::theSorting (bool {\em canCull})}}
+\label{classdairy_stock_a77965d4b6f503d4ef330214e814355ef}
+Sells Old \hyperlink{classanimal}{animal} and buy new 
+
+\subsection{Member Data Documentation}
+\hypertarget{classdairy_stock_aafdf20c05ee5cdb2981c917ce88feeb9}{
+\index{dairyStock@{dairyStock}!aggregateNumber@{aggregateNumber}}
+\index{aggregateNumber@{aggregateNumber}!dairyStock@{dairyStock}}
+\subsubsection[{aggregateNumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dairyStock::aggregateNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_aafdf20c05ee5cdb2981c917ce88feeb9}
+\hypertarget{classdairy_stock_a53d25ed710cd6b61a960ca8694607ceb}{
+\index{dairyStock@{dairyStock}!aggregation@{aggregation}}
+\index{aggregation@{aggregation}!dairyStock@{dairyStock}}
+\subsubsection[{aggregation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dairyStock::aggregation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_a53d25ed710cd6b61a960ca8694607ceb}
+\hypertarget{classdairy_stock_a65acaa98372497299dd6ff5790b75de2}{
+\index{dairyStock@{dairyStock}!animalModel@{animalModel}}
+\index{animalModel@{animalModel}!dairyStock@{dairyStock}}
+\subsubsection[{animalModel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dairyStock::animalModel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_a65acaa98372497299dd6ff5790b75de2}
+\hypertarget{classdairy_stock_a90690d91a012a2e4db298b27b8751f9b}{
+\index{dairyStock@{dairyStock}!CattlefileStream@{CattlefileStream}}
+\index{CattlefileStream@{CattlefileStream}!dairyStock@{dairyStock}}
+\subsubsection[{CattlefileStream}]{\setlength{\rightskip}{0pt plus 5cm}fstream$\ast$ {\bf dairyStock::CattlefileStream}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_a90690d91a012a2e4db298b27b8751f9b}
+\hypertarget{classdairy_stock_ae22ba85aaf48cccf4c75117c270ece97}{
+\index{dairyStock@{dairyStock}!grouplist@{grouplist}}
+\index{grouplist@{grouplist}!dairyStock@{dairyStock}}
+\subsubsection[{grouplist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattleGroup}$>$$\ast$ {\bf dairyStock::grouplist}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_ae22ba85aaf48cccf4c75117c270ece97}
+\hypertarget{classdairy_stock_ac3387bde3c980dc1ff428d746e654aae}{
+\index{dairyStock@{dairyStock}!IDnumber@{IDnumber}}
+\index{IDnumber@{IDnumber}!dairyStock@{dairyStock}}
+\subsubsection[{IDnumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dairyStock::IDnumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_ac3387bde3c980dc1ff428d746e654aae}
+\hypertarget{classdairy_stock_a01fc75f09a995c8a581ad7fc3f6b6c82}{
+\index{dairyStock@{dairyStock}!individual@{individual}}
+\index{individual@{individual}!dairyStock@{dairyStock}}
+\subsubsection[{individual}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf dairyStock::individual}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_a01fc75f09a995c8a581ad7fc3f6b6c82}
+\hypertarget{classdairy_stock_add52dfd62ac394215c6f9e6c9cac2f0f}{
+\index{dairyStock@{dairyStock}!oldies@{oldies}}
+\index{oldies@{oldies}!dairyStock@{dairyStock}}
+\subsubsection[{oldies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattle}$>$$\ast$ {\bf dairyStock::oldies}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_add52dfd62ac394215c6f9e6c9cac2f0f}
+\hypertarget{classdairy_stock_aafba61b39765bdecf0a0e05281e5740c}{
+\index{dairyStock@{dairyStock}!pointyCalves@{pointyCalves}}
+\index{pointyCalves@{pointyCalves}!dairyStock@{dairyStock}}
+\subsubsection[{pointyCalves}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattle}$>$$\ast$ {\bf dairyStock::pointyCalves}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_aafba61b39765bdecf0a0e05281e5740c}
+\hypertarget{classdairy_stock_a4d15475e1ceb1b1108df48f0ed64b41e}{
+\index{dairyStock@{dairyStock}!wasFemale@{wasFemale}}
+\index{wasFemale@{wasFemale}!dairyStock@{dairyStock}}
+\subsubsection[{wasFemale}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf dairyStock::wasFemale}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classdairy_stock_a4d15475e1ceb1b1108df48f0ed64b41e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{dairy_stock_8h}{dairyStock.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{dairy_stock_8cpp}{dairyStock.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,340 @@
+\hypertarget{classpigstable}{
+\section{pigstable Class Reference}
+\label{classpigstable}\index{pigstable@{pigstable}}
+}
+
+
+{\ttfamily \#include $<$pigstabl.h$>$}Inheritance diagram for pigstable::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classpigstable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpigstable_a364d33fa370fb478387009b95dae4cea}{pigstable} (char $\ast$aname, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner, \hyperlink{classanimal_stock}{animalStock} $\ast$alivestock=NULL)
+\item 
+virtual \hyperlink{classpigstable_a938464fcff82c03e1597eda101754d8e}{$\sim$pigstable} ()
+\item 
+virtual string \hyperlink{classpigstable_af4e59e6d7864795569365be2ccdd2d6b}{GetAnimalType} ()
+\item 
+double \hyperlink{classpigstable_ac14a3ded55664bd4c44841044e787d15}{GetLabour} ()
+\item 
+double \hyperlink{classpigstable_a66c14d2be32d4dba34a32ece913a3073}{GetSowsProductionCyclus} ()
+\item 
+double \hyperlink{classpigstable_a68a621406eb37f6ec5c701da6a08573a}{GetBaconersProductionCyclus} ()
+\item 
+double \hyperlink{classpigstable_aabcb52218fd513e64a754db978910ac5}{GetSowsCapacity} ()
+\item 
+double \hyperlink{classpigstable_a44362a0d046f2c41ac1603e953b8f471}{GetBaconersCapacity} ()
+\item 
+void \hyperlink{classpigstable_a9ad970c3d281c92caea8010ac353bbd1}{SetLivestock} (\hyperlink{classswine_stock}{swineStock} $\ast$aLivestock)
+\item 
+virtual void \hyperlink{classpigstable_a971c427391124e56a4374ace16c461df}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classpigstable_a97e3706555a93da782e5418df532078c}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Reads information from file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classpigstable_a9e56606838c623a05cb2f6e0b721cc47}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em OBSOLETE. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classpigstable_a55806be52263692f12d10870d9ee86eb}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpigstable_ab741568ab92b4d23205c5c19c749b574}{CapacityOverflow} ()
+\begin{DoxyCompactList}\small\item\em check if \hyperlink{classstable}{stable} capacity is overflowed \item\end{DoxyCompactList}\item 
+void \hyperlink{classpigstable_ab314ba2d59e6a782d7bf8dcd5a367a0a}{PutStockInSection} ()
+\item 
+virtual double \hyperlink{classpigstable_ae93e1ef050422ae6e4e156b888a56330}{CalcMinimumVentilationRate} ()
+\begin{DoxyCompactList}\small\item\em Calculates the minimum ventilation rate (will be overloaded). \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classpigstable_a8b3e2aff62122c23b6b6e95829731b80}{CalcMaximumVentilationRate} ()
+\begin{DoxyCompactList}\small\item\em Calculates the maximum ventilation rate (will be overloaded). \item\end{DoxyCompactList}\item 
+\hyperlink{classpigstable_a364d33fa370fb478387009b95dae4cea}{pigstable} (char $\ast$aname, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner, \hyperlink{classanimal_stock}{animalStock} $\ast$alivestock=NULL)
+\item 
+virtual \hyperlink{classpigstable_a6295ed8b464d850128818d052a29bcb7}{$\sim$pigstable} ()
+\item 
+virtual string \hyperlink{classpigstable_a1078430122dd7afe16b4294b9b969467}{GetAnimalType} ()
+\begin{DoxyCompactList}\small\item\em get the type of \hyperlink{classanimal}{animal} housed (will be overloaded) \item\end{DoxyCompactList}\item 
+double \hyperlink{classpigstable_ac14a3ded55664bd4c44841044e787d15}{GetLabour} ()
+\item 
+double \hyperlink{classpigstable_a66c14d2be32d4dba34a32ece913a3073}{GetSowsProductionCyclus} ()
+\item 
+double \hyperlink{classpigstable_a68a621406eb37f6ec5c701da6a08573a}{GetBaconersProductionCyclus} ()
+\item 
+double \hyperlink{classpigstable_aabcb52218fd513e64a754db978910ac5}{GetSowsCapacity} ()
+\item 
+double \hyperlink{classpigstable_a44362a0d046f2c41ac1603e953b8f471}{GetBaconersCapacity} ()
+\item 
+void \hyperlink{classpigstable_a9ad970c3d281c92caea8010ac353bbd1}{SetLivestock} (\hyperlink{classswine_stock}{swineStock} $\ast$aLivestock)
+\item 
+virtual void \hyperlink{classpigstable_a0339646d96e17f62b6e745be279ec633}{DailyUpdate} ()
+\begin{DoxyCompactList}\small\item\em Handles all daily actions of the \hyperlink{classstable}{stable}; should be called by the manager. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classpigstable_aa31308b795d7a454e5156e8c2f49fe47}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Reads information from file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classpigstable_aff8c1aa84a8727d9a5c6d060bf6fe323}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em OBSOLETE. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classpigstable_a809943d3ff6f8314d92bfc1b29dec8af}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpigstable_a952f12bb06ab3080002183709010b0e9}{CapacityOverflow} ()
+\begin{DoxyCompactList}\small\item\em check if \hyperlink{classstable}{stable} capacity is overflowed \item\end{DoxyCompactList}\item 
+void \hyperlink{classpigstable_ab314ba2d59e6a782d7bf8dcd5a367a0a}{PutStockInSection} ()
+\item 
+virtual double \hyperlink{classpigstable_a9dc314d78207fccac503793e8fa4885d}{CalcMinimumVentilationRate} ()
+\begin{DoxyCompactList}\small\item\em Calculates the minimum ventilation rate (will be overloaded). \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classpigstable_a1695437806e4b3d9a68c0ec872a4f846}{CalcMaximumVentilationRate} ()
+\begin{DoxyCompactList}\small\item\em Calculates the maximum ventilation rate (will be overloaded). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpigstable_a364d33fa370fb478387009b95dae4cea}{
+\index{pigstable@{pigstable}!pigstable@{pigstable}}
+\index{pigstable@{pigstable}!pigstable@{pigstable}}
+\subsubsection[{pigstable}]{\setlength{\rightskip}{0pt plus 5cm}pigstable::pigstable (char $\ast$ {\em aname}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner}, \/  {\bf animalStock} $\ast$ {\em alivestock} = {\ttfamily NULL})}}
+\label{classpigstable_a364d33fa370fb478387009b95dae4cea}
+\hypertarget{classpigstable_a938464fcff82c03e1597eda101754d8e}{
+\index{pigstable@{pigstable}!$\sim$pigstable@{$\sim$pigstable}}
+\index{$\sim$pigstable@{$\sim$pigstable}!pigstable@{pigstable}}
+\subsubsection[{$\sim$pigstable}]{\setlength{\rightskip}{0pt plus 5cm}pigstable::$\sim$pigstable ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a938464fcff82c03e1597eda101754d8e}
+\hypertarget{classpigstable_a364d33fa370fb478387009b95dae4cea}{
+\index{pigstable@{pigstable}!pigstable@{pigstable}}
+\index{pigstable@{pigstable}!pigstable@{pigstable}}
+\subsubsection[{pigstable}]{\setlength{\rightskip}{0pt plus 5cm}pigstable::pigstable (char $\ast$ {\em aname}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner}, \/  {\bf animalStock} $\ast$ {\em alivestock} = {\ttfamily NULL})}}
+\label{classpigstable_a364d33fa370fb478387009b95dae4cea}
+\hypertarget{classpigstable_a6295ed8b464d850128818d052a29bcb7}{
+\index{pigstable@{pigstable}!$\sim$pigstable@{$\sim$pigstable}}
+\index{$\sim$pigstable@{$\sim$pigstable}!pigstable@{pigstable}}
+\subsubsection[{$\sim$pigstable}]{\setlength{\rightskip}{0pt plus 5cm}virtual pigstable::$\sim$pigstable ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a6295ed8b464d850128818d052a29bcb7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpigstable_aff8c1aa84a8727d9a5c6d060bf6fe323}{
+\index{pigstable@{pigstable}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!pigstable@{pigstable}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pigstable::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_aff8c1aa84a8727d9a5c6d060bf6fe323}
+
+
+OBSOLETE. CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classstable_acaf566bef659f0a671e27afa6244df4b}{stable}.\hypertarget{classpigstable_a9e56606838c623a05cb2f6e0b721cc47}{
+\index{pigstable@{pigstable}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!pigstable@{pigstable}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a9e56606838c623a05cb2f6e0b721cc47}
+
+
+OBSOLETE. CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classstable_acaf566bef659f0a671e27afa6244df4b}{stable}.\hypertarget{classpigstable_a1695437806e4b3d9a68c0ec872a4f846}{
+\index{pigstable@{pigstable}!CalcMaximumVentilationRate@{CalcMaximumVentilationRate}}
+\index{CalcMaximumVentilationRate@{CalcMaximumVentilationRate}!pigstable@{pigstable}}
+\subsubsection[{CalcMaximumVentilationRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double pigstable::CalcMaximumVentilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a1695437806e4b3d9a68c0ec872a4f846}
+
+
+Calculates the maximum ventilation rate (will be overloaded). 
+
+Reimplemented from \hyperlink{classstable_a40ccfa66db782fe4bb8fdcb19ef20f00}{stable}.\hypertarget{classpigstable_a8b3e2aff62122c23b6b6e95829731b80}{
+\index{pigstable@{pigstable}!CalcMaximumVentilationRate@{CalcMaximumVentilationRate}}
+\index{CalcMaximumVentilationRate@{CalcMaximumVentilationRate}!pigstable@{pigstable}}
+\subsubsection[{CalcMaximumVentilationRate}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::CalcMaximumVentilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a8b3e2aff62122c23b6b6e95829731b80}
+
+
+Calculates the maximum ventilation rate (will be overloaded). 
+
+Reimplemented from \hyperlink{classstable_a40ccfa66db782fe4bb8fdcb19ef20f00}{stable}.\hypertarget{classpigstable_a9dc314d78207fccac503793e8fa4885d}{
+\index{pigstable@{pigstable}!CalcMinimumVentilationRate@{CalcMinimumVentilationRate}}
+\index{CalcMinimumVentilationRate@{CalcMinimumVentilationRate}!pigstable@{pigstable}}
+\subsubsection[{CalcMinimumVentilationRate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double pigstable::CalcMinimumVentilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a9dc314d78207fccac503793e8fa4885d}
+
+
+Calculates the minimum ventilation rate (will be overloaded). 
+
+Reimplemented from \hyperlink{classstable_a9bd7855c10c562f9ea785d6ba3608dcc}{stable}.\hypertarget{classpigstable_ae93e1ef050422ae6e4e156b888a56330}{
+\index{pigstable@{pigstable}!CalcMinimumVentilationRate@{CalcMinimumVentilationRate}}
+\index{CalcMinimumVentilationRate@{CalcMinimumVentilationRate}!pigstable@{pigstable}}
+\subsubsection[{CalcMinimumVentilationRate}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::CalcMinimumVentilationRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_ae93e1ef050422ae6e4e156b888a56330}
+
+
+Calculates the minimum ventilation rate (will be overloaded). 
+
+Reimplemented from \hyperlink{classstable_a9bd7855c10c562f9ea785d6ba3608dcc}{stable}.\hypertarget{classpigstable_a952f12bb06ab3080002183709010b0e9}{
+\index{pigstable@{pigstable}!CapacityOverflow@{CapacityOverflow}}
+\index{CapacityOverflow@{CapacityOverflow}!pigstable@{pigstable}}
+\subsubsection[{CapacityOverflow}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool pigstable::CapacityOverflow ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a952f12bb06ab3080002183709010b0e9}
+
+
+check if \hyperlink{classstable}{stable} capacity is overflowed \hyperlink{classpigstable_ab741568ab92b4d23205c5c19c749b574}{CapacityOverflow()} returns true if there isn't enough space in the \hyperlink{classstable}{stable} for the animals 
+
+Reimplemented from \hyperlink{classstable_a2014aabbb54c1309c936c527f3d385e8}{stable}.\hypertarget{classpigstable_ab741568ab92b4d23205c5c19c749b574}{
+\index{pigstable@{pigstable}!CapacityOverflow@{CapacityOverflow}}
+\index{CapacityOverflow@{CapacityOverflow}!pigstable@{pigstable}}
+\subsubsection[{CapacityOverflow}]{\setlength{\rightskip}{0pt plus 5cm}bool pigstable::CapacityOverflow ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_ab741568ab92b4d23205c5c19c749b574}
+
+
+check if \hyperlink{classstable}{stable} capacity is overflowed \hyperlink{classpigstable_ab741568ab92b4d23205c5c19c749b574}{CapacityOverflow()} returns true if there isn't enough space in the \hyperlink{classstable}{stable} for the animals 
+
+Reimplemented from \hyperlink{classstable_a2014aabbb54c1309c936c527f3d385e8}{stable}.\hypertarget{classpigstable_a0339646d96e17f62b6e745be279ec633}{
+\index{pigstable@{pigstable}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!pigstable@{pigstable}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pigstable::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a0339646d96e17f62b6e745be279ec633}
+
+
+Handles all daily actions of the \hyperlink{classstable}{stable}; should be called by the manager. bool \hyperlink{classstable_a556b940db4c05999073d72bfee6adbbc}{GetinUse()} \{return inUse;\};
+
+\hyperlink{classpigstable_a971c427391124e56a4374ace16c461df}{DailyUpdate()} should be called everyday Updates every \hyperlink{classanimal_section}{animalSection} in the \hyperlink{classstable}{stable}. Update the Ammonia, \hyperlink{classwater}{water}, N2, N2O, CH4Emission and CO2Emission in the \hyperlink{classmanure}{manure}. 
+
+Reimplemented from \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable}.\hypertarget{classpigstable_a971c427391124e56a4374ace16c461df}{
+\index{pigstable@{pigstable}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!pigstable@{pigstable}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a971c427391124e56a4374ace16c461df}
+Update the \hyperlink{classstable}{stable} 
+
+Reimplemented from \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable}.\hypertarget{classpigstable_a1078430122dd7afe16b4294b9b969467}{
+\index{pigstable@{pigstable}!GetAnimalType@{GetAnimalType}}
+\index{GetAnimalType@{GetAnimalType}!pigstable@{pigstable}}
+\subsubsection[{GetAnimalType}]{\setlength{\rightskip}{0pt plus 5cm}virtual string pigstable::GetAnimalType ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a1078430122dd7afe16b4294b9b969467}
+
+
+get the type of \hyperlink{classanimal}{animal} housed (will be overloaded) 
+
+Reimplemented from \hyperlink{classstable_af11653ccffcdc3bfb928d47485fc39b4}{stable}.\hypertarget{classpigstable_af4e59e6d7864795569365be2ccdd2d6b}{
+\index{pigstable@{pigstable}!GetAnimalType@{GetAnimalType}}
+\index{GetAnimalType@{GetAnimalType}!pigstable@{pigstable}}
+\subsubsection[{GetAnimalType}]{\setlength{\rightskip}{0pt plus 5cm}string pigstable::GetAnimalType ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_af4e59e6d7864795569365be2ccdd2d6b}
+return \char`\"{}PIGS\char`\"{} 
+
+Reimplemented from \hyperlink{classstable_af11653ccffcdc3bfb928d47485fc39b4}{stable}.\hypertarget{classpigstable_a44362a0d046f2c41ac1603e953b8f471}{
+\index{pigstable@{pigstable}!GetBaconersCapacity@{GetBaconersCapacity}}
+\index{GetBaconersCapacity@{GetBaconersCapacity}!pigstable@{pigstable}}
+\subsubsection[{GetBaconersCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetBaconersCapacity ()}}
+\label{classpigstable_a44362a0d046f2c41ac1603e953b8f471}
+\hypertarget{classpigstable_a44362a0d046f2c41ac1603e953b8f471}{
+\index{pigstable@{pigstable}!GetBaconersCapacity@{GetBaconersCapacity}}
+\index{GetBaconersCapacity@{GetBaconersCapacity}!pigstable@{pigstable}}
+\subsubsection[{GetBaconersCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetBaconersCapacity ()}}
+\label{classpigstable_a44362a0d046f2c41ac1603e953b8f471}
+Should Calculate the capacity for finished \hyperlink{classpig}{pig} production but will trough a fatal error because of wrong implementation \hypertarget{classpigstable_a68a621406eb37f6ec5c701da6a08573a}{
+\index{pigstable@{pigstable}!GetBaconersProductionCyclus@{GetBaconersProductionCyclus}}
+\index{GetBaconersProductionCyclus@{GetBaconersProductionCyclus}!pigstable@{pigstable}}
+\subsubsection[{GetBaconersProductionCyclus}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetBaconersProductionCyclus ()}}
+\label{classpigstable_a68a621406eb37f6ec5c701da6a08573a}
+\hypertarget{classpigstable_a68a621406eb37f6ec5c701da6a08573a}{
+\index{pigstable@{pigstable}!GetBaconersProductionCyclus@{GetBaconersProductionCyclus}}
+\index{GetBaconersProductionCyclus@{GetBaconersProductionCyclus}!pigstable@{pigstable}}
+\subsubsection[{GetBaconersProductionCyclus}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetBaconersProductionCyclus ()}}
+\label{classpigstable_a68a621406eb37f6ec5c701da6a08573a}
+Should calculate Calculate the total time required for a finished \hyperlink{classpig}{pig} production cycle but will trough a fatal error because of wrong implementation \hypertarget{classpigstable_ac14a3ded55664bd4c44841044e787d15}{
+\index{pigstable@{pigstable}!GetLabour@{GetLabour}}
+\index{GetLabour@{GetLabour}!pigstable@{pigstable}}
+\subsubsection[{GetLabour}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetLabour ()}}
+\label{classpigstable_ac14a3ded55664bd4c44841044e787d15}
+\hypertarget{classpigstable_ac14a3ded55664bd4c44841044e787d15}{
+\index{pigstable@{pigstable}!GetLabour@{GetLabour}}
+\index{GetLabour@{GetLabour}!pigstable@{pigstable}}
+\subsubsection[{GetLabour}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetLabour ()}}
+\label{classpigstable_ac14a3ded55664bd4c44841044e787d15}
+Summarize how many hours is needed to clean and feed the \hyperlink{classanimal}{animal} \hypertarget{classpigstable_aabcb52218fd513e64a754db978910ac5}{
+\index{pigstable@{pigstable}!GetSowsCapacity@{GetSowsCapacity}}
+\index{GetSowsCapacity@{GetSowsCapacity}!pigstable@{pigstable}}
+\subsubsection[{GetSowsCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetSowsCapacity ()}}
+\label{classpigstable_aabcb52218fd513e64a754db978910ac5}
+\hypertarget{classpigstable_aabcb52218fd513e64a754db978910ac5}{
+\index{pigstable@{pigstable}!GetSowsCapacity@{GetSowsCapacity}}
+\index{GetSowsCapacity@{GetSowsCapacity}!pigstable@{pigstable}}
+\subsubsection[{GetSowsCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetSowsCapacity ()}}
+\label{classpigstable_aabcb52218fd513e64a754db978910ac5}
+\hypertarget{classpigstable_a66c14d2be32d4dba34a32ece913a3073}{
+\index{pigstable@{pigstable}!GetSowsProductionCyclus@{GetSowsProductionCyclus}}
+\index{GetSowsProductionCyclus@{GetSowsProductionCyclus}!pigstable@{pigstable}}
+\subsubsection[{GetSowsProductionCyclus}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetSowsProductionCyclus ()}}
+\label{classpigstable_a66c14d2be32d4dba34a32ece913a3073}
+\hypertarget{classpigstable_a66c14d2be32d4dba34a32ece913a3073}{
+\index{pigstable@{pigstable}!GetSowsProductionCyclus@{GetSowsProductionCyclus}}
+\index{GetSowsProductionCyclus@{GetSowsProductionCyclus}!pigstable@{pigstable}}
+\subsubsection[{GetSowsProductionCyclus}]{\setlength{\rightskip}{0pt plus 5cm}double pigstable::GetSowsProductionCyclus ()}}
+\label{classpigstable_a66c14d2be32d4dba34a32ece913a3073}
+Should calculate Calculate the total time required for a sow production cycle but will trough a fatal error because of wrong implementation \hypertarget{classpigstable_a809943d3ff6f8314d92bfc1b29dec8af}{
+\index{pigstable@{pigstable}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!pigstable@{pigstable}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pigstable::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a809943d3ff6f8314d92bfc1b29dec8af}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{stable}.\hypertarget{classpigstable_a55806be52263692f12d10870d9ee86eb}{
+\index{pigstable@{pigstable}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!pigstable@{pigstable}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a55806be52263692f12d10870d9ee86eb}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{stable}.\hypertarget{classpigstable_ab314ba2d59e6a782d7bf8dcd5a367a0a}{
+\index{pigstable@{pigstable}!PutStockInSection@{PutStockInSection}}
+\index{PutStockInSection@{PutStockInSection}!pigstable@{pigstable}}
+\subsubsection[{PutStockInSection}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::PutStockInSection ()}}
+\label{classpigstable_ab314ba2d59e6a782d7bf8dcd5a367a0a}
+\hypertarget{classpigstable_ab314ba2d59e6a782d7bf8dcd5a367a0a}{
+\index{pigstable@{pigstable}!PutStockInSection@{PutStockInSection}}
+\index{PutStockInSection@{PutStockInSection}!pigstable@{pigstable}}
+\subsubsection[{PutStockInSection}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::PutStockInSection ()}}
+\label{classpigstable_ab314ba2d59e6a782d7bf8dcd5a367a0a}
+\hypertarget{classpigstable_aa31308b795d7a454e5156e8c2f49fe47}{
+\index{pigstable@{pigstable}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!pigstable@{pigstable}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pigstable::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_aa31308b795d7a454e5156e8c2f49fe47}
+
+
+Reads information from file. 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]pointer to the file to be read\end{DoxyParams}
+\hyperlink{classpigstable_a97e3706555a93da782e5418df532078c}{ReadParameters()} reads information from file. 
+
+Reimplemented from \hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{stable}.\hypertarget{classpigstable_a97e3706555a93da782e5418df532078c}{
+\index{pigstable@{pigstable}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!pigstable@{pigstable}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classpigstable_a97e3706555a93da782e5418df532078c}
+
+
+Reads information from file. 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]pointer to the file to be read\end{DoxyParams}
+\hyperlink{classpigstable_a97e3706555a93da782e5418df532078c}{ReadParameters()} reads information from file. 
+
+Reimplemented from \hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{stable}.\hypertarget{classpigstable_a9ad970c3d281c92caea8010ac353bbd1}{
+\index{pigstable@{pigstable}!SetLivestock@{SetLivestock}}
+\index{SetLivestock@{SetLivestock}!pigstable@{pigstable}}
+\subsubsection[{SetLivestock}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::SetLivestock ({\bf swineStock} $\ast$ {\em aLivestock})}}
+\label{classpigstable_a9ad970c3d281c92caea8010ac353bbd1}
+\hypertarget{classpigstable_a9ad970c3d281c92caea8010ac353bbd1}{
+\index{pigstable@{pigstable}!SetLivestock@{SetLivestock}}
+\index{SetLivestock@{SetLivestock}!pigstable@{pigstable}}
+\subsubsection[{SetLivestock}]{\setlength{\rightskip}{0pt plus 5cm}void pigstable::SetLivestock ({\bf swineStock} $\ast$ {\em aLivestock})}}
+\label{classpigstable_a9ad970c3d281c92caea8010ac353bbd1}
+Set \hyperlink{classlivestock}{livestock} pointer, so that the \hyperlink{classanimal}{animal} house can find out about the animals it has 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{pigstabl_8h}{pigstabl.h}\item 
+C:/main/trunk/src/building/\hyperlink{pigstable_8h}{pigstable.h}\item 
+C:/main/trunk/src/building/\hyperlink{pigstable_8cpp}{pigstable.cpp}\end{DoxyCompactItemize}

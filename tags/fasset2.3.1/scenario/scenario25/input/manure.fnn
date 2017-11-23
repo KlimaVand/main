@@ -1,0 +1,7 @@
+[farm]
+MaxManureImp       1E+30   //maximum import in tonnes per farm per year
+MinManureImp       0       //minimum import in tonnes per farm per year
+MinManureExp       0       //minimum export in tonnes per farm per year
+adjustManure	true
+
+[end]

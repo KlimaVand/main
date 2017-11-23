@@ -1,0 +1,268 @@
+\hypertarget{classbarn_storage}{
+\section{barnStorage Class Reference}
+\label{classbarn_storage}\index{barnStorage@{barnStorage}}
+}
+
+
+Superclass for all \hyperlink{classstorage}{storage}.  
+
+
+{\ttfamily \#include $<$barnStorage.h$>$}Inheritance diagram for barnStorage::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classbarn_storage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbarn_storage_afa9fc669647e848edbb6d32475be7a22}{barnStorage} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. \item\end{DoxyCompactList}\item 
+\hyperlink{classbarn_storage_ae77c49e50fc296f74857e4dd5a127e6e}{barnStorage} (const \hyperlink{classbarn_storage}{barnStorage} \&s)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classbarn_storage_a62d94a9580e2fdfcd040e9262fb683ba}{$\sim$barnStorage} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbarn_storage_a04a2ab71aceafb10d6f4a51ed59960e5}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classstorage}{storage} from file. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classbarn_storage_a7e11082a34b3ffdaad4426e926355e4a}{GetCapacity} (const int storenum)
+\begin{DoxyCompactList}\small\item\em Return capacity of a particular store. \item\end{DoxyCompactList}\item 
+double \hyperlink{classbarn_storage_a727f13788856da203570834247a7b475}{GetArea} ()
+\begin{DoxyCompactList}\small\item\em Return area of \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classstorage}{storage} $>$ $\ast$ \hyperlink{classbarn_storage_a8cae788f50f74e49bbaa5c1fbfc397a7}{Getstorage} ()
+\begin{DoxyCompactList}\small\item\em Return pointer to the list of stores. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classbarn_storage_a37fc55dbb7648f0890efdc342a4d29e6}{GetAvailableAmountOf} (const \hyperlink{classproduct}{product} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Return amount available in \hyperlink{classstorage}{storage} of a given \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classbarn_storage_a95bcaa3c5e29432ec990578e100f36d3}{GetFromStore} (double amount, \hyperlink{classproduct}{product} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Request an amount of a \hyperlink{classproduct}{product} from \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classbarn_storage_af10d75ac33adcdd0f6ebe63d25b9d2b3}{SendToStore} (\hyperlink{classproduct}{product} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Send an amount of a \hyperlink{classproduct}{product} to a store. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbarn_storage_ac98e6005a3cb00a07d128931d2a6feb1}{DailyUpdate} ()
+\begin{DoxyCompactList}\small\item\em Handles all daily actions of the \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbarn_storage_a26ffc2da0bfc8f9efd9e0c75e42d22e2}{GiveValueOfInventory} ()
+\begin{DoxyCompactList}\small\item\em no idea what this does \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbarn_storage_a5c4a88279dcfa290b08db30d075e1756}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em probably obsolete \item\end{DoxyCompactList}\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classstorage}{storage} $>$ $\ast$ \hyperlink{classbarn_storage_a8d42662925ead9f3bdd9dfdd3ade9c46}{GetStorageClone} ()
+\begin{DoxyCompactList}\small\item\em Returns a clone of the list of \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbarn_storage_a0b4aeb51dd52aff5b8f543528f6bd45c}{EndBudget} (bool show=false)
+\begin{DoxyCompactList}\small\item\em Check nutrient budgets. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbarn_storage_a679ed8112c05c5bdbda203a65dcf6cf8}{GetAvailableFeedProduct} (\hyperlink{classfeed_item}{feedItem} $\ast$aProduct)
+\begin{DoxyCompactList}\small\item\em Return in the amount of a feed \hyperlink{classproduct}{product} that is available. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classbarn_storage_aecf6b68a80f1e0f0b8f2f8d9eaed63d1}{GetCopyStoredFeedProduct} (const \hyperlink{classproduct}{product} $\ast$aProduct)
+\begin{DoxyCompactList}\small\item\em Returned a copy of a stored feed \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classbarn_storage_a181a94edd100406b138a55c77aa15c79}{GetCopyStoredFeedProduct} (int type)
+\begin{DoxyCompactList}\small\item\em Returned a copy of a stored feed \hyperlink{classproduct}{product}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbarn_storage_add4a5961a82e36e01d6905e01ac274de}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classstorage}{storage} $>$ $\ast$ \hyperlink{classbarn_storage_aaa021946ef9b068d958da554fe693709}{stores}
+\begin{DoxyCompactList}\small\item\em List of stores. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classbarn_storage_a9ff04c29ec440b29edf27d2f31c8bcea}{operator$<$$<$} (ostream \&os, \hyperlink{classbarn_storage}{barnStorage} s)
+\begin{DoxyCompactList}\small\item\em Outputs streaming. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Superclass for all \hyperlink{classstorage}{storage}. Superclass for \hyperlink{classstorage}{storage}. Should not be instanted. Use one of the derived \hyperlink{classstorage}{storage} classes instead or derive one of your own. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbarn_storage_afa9fc669647e848edbb6d32475be7a22}{
+\index{barnStorage@{barnStorage}!barnStorage@{barnStorage}}
+\index{barnStorage@{barnStorage}!barnStorage@{barnStorage}}
+\subsubsection[{barnStorage}]{\setlength{\rightskip}{0pt plus 5cm}barnStorage::barnStorage (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classbarn_storage_afa9fc669647e848edbb6d32475be7a22}
+
+
+Constructor with arguments. \hypertarget{classbarn_storage_ae77c49e50fc296f74857e4dd5a127e6e}{
+\index{barnStorage@{barnStorage}!barnStorage@{barnStorage}}
+\index{barnStorage@{barnStorage}!barnStorage@{barnStorage}}
+\subsubsection[{barnStorage}]{\setlength{\rightskip}{0pt plus 5cm}barnStorage::barnStorage (const {\bf barnStorage} \& {\em s})}}
+\label{classbarn_storage_ae77c49e50fc296f74857e4dd5a127e6e}
+
+
+Copy constructor. \hypertarget{classbarn_storage_a62d94a9580e2fdfcd040e9262fb683ba}{
+\index{barnStorage@{barnStorage}!$\sim$barnStorage@{$\sim$barnStorage}}
+\index{$\sim$barnStorage@{$\sim$barnStorage}!barnStorage@{barnStorage}}
+\subsubsection[{$\sim$barnStorage}]{\setlength{\rightskip}{0pt plus 5cm}barnStorage::$\sim$barnStorage ()}}
+\label{classbarn_storage_a62d94a9580e2fdfcd040e9262fb683ba}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbarn_storage_a5c4a88279dcfa290b08db30d075e1756}{
+\index{barnStorage@{barnStorage}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!barnStorage@{barnStorage}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a5c4a88279dcfa290b08db30d075e1756}
+
+
+probably obsolete CalcLP output for Linear model 
+
+Reimplemented from \hyperlink{classbuilding_af1f27cbf72295547af61edc9e02a7e61}{building}.\hypertarget{classbarn_storage_ac98e6005a3cb00a07d128931d2a6feb1}{
+\index{barnStorage@{barnStorage}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!barnStorage@{barnStorage}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_ac98e6005a3cb00a07d128931d2a6feb1}
+
+
+Handles all daily actions of the \hyperlink{classstorage}{storage}. DailyUpdate handles all \char`\"{}automated\char`\"{} daily activity 
+
+Reimplemented from \hyperlink{classbuilding_a584ba300427d2a648f478b68065b7a18}{building}.\hypertarget{classbarn_storage_a0b4aeb51dd52aff5b8f543528f6bd45c}{
+\index{barnStorage@{barnStorage}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!barnStorage@{barnStorage}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::EndBudget (bool {\em show} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a0b4aeb51dd52aff5b8f543528f6bd45c}
+
+
+Check nutrient budgets. calculate how much N that is left in seedObj, fertilizerObj and feedItemObj \hypertarget{classbarn_storage_a727f13788856da203570834247a7b475}{
+\index{barnStorage@{barnStorage}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!barnStorage@{barnStorage}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}double barnStorage::GetArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classbarn_storage_a727f13788856da203570834247a7b475}
+
+
+Return area of \hyperlink{classstorage}{storage}. 
+
+Reimplemented from \hyperlink{classbuilding_a930bf40915b04b091ce5fa00cf15c58e}{building}.\hypertarget{classbarn_storage_a37fc55dbb7648f0890efdc342a4d29e6}{
+\index{barnStorage@{barnStorage}!GetAvailableAmountOf@{GetAvailableAmountOf}}
+\index{GetAvailableAmountOf@{GetAvailableAmountOf}!barnStorage@{barnStorage}}
+\subsubsection[{GetAvailableAmountOf}]{\setlength{\rightskip}{0pt plus 5cm}double barnStorage::GetAvailableAmountOf (const {\bf product} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a37fc55dbb7648f0890efdc342a4d29e6}
+
+
+Return amount available in \hyperlink{classstorage}{storage} of a given \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]contains details of the target \hyperlink{classproduct}{product}\end{DoxyParams}
+returns the amount of \hyperlink{classproduct}{product} p stored in this \hyperlink{classbuilding}{building} \hypertarget{classbarn_storage_a679ed8112c05c5bdbda203a65dcf6cf8}{
+\index{barnStorage@{barnStorage}!GetAvailableFeedProduct@{GetAvailableFeedProduct}}
+\index{GetAvailableFeedProduct@{GetAvailableFeedProduct}!barnStorage@{barnStorage}}
+\subsubsection[{GetAvailableFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::GetAvailableFeedProduct ({\bf feedItem} $\ast$ {\em aProduct})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a679ed8112c05c5bdbda203a65dcf6cf8}
+
+
+Return in the amount of a feed \hyperlink{classproduct}{product} that is available. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aProduct}]the \hyperlink{classproduct}{product} of interest\end{DoxyParams}
+Adds amount in store to aProduct \hypertarget{classbarn_storage_a7e11082a34b3ffdaad4426e926355e4a}{
+\index{barnStorage@{barnStorage}!GetCapacity@{GetCapacity}}
+\index{GetCapacity@{GetCapacity}!barnStorage@{barnStorage}}
+\subsubsection[{GetCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double barnStorage::GetCapacity (const int {\em storenum})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a7e11082a34b3ffdaad4426e926355e4a}
+
+
+Return capacity of a particular store. Return capacity of particular store 
+\begin{DoxyParams}{Parameters}
+\item[{\em storenum}]logical number of the store whose capacity should be returned\end{DoxyParams}
+returning the Capacity of a specified area in barrenStorage \hypertarget{classbarn_storage_a181a94edd100406b138a55c77aa15c79}{
+\index{barnStorage@{barnStorage}!GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}}
+\index{GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}!barnStorage@{barnStorage}}
+\subsubsection[{GetCopyStoredFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ barnStorage::GetCopyStoredFeedProduct (int {\em type})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a181a94edd100406b138a55c77aa15c79}
+
+
+Returned a copy of a stored feed \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em type}]reference number of the feed \hyperlink{classproduct}{product}\end{DoxyParams}
+return a copy of what is stored if it is a feedItemObj, feedType and there is something stored. Else it returns NULL \hypertarget{classbarn_storage_aecf6b68a80f1e0f0b8f2f8d9eaed63d1}{
+\index{barnStorage@{barnStorage}!GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}}
+\index{GetCopyStoredFeedProduct@{GetCopyStoredFeedProduct}!barnStorage@{barnStorage}}
+\subsubsection[{GetCopyStoredFeedProduct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ barnStorage::GetCopyStoredFeedProduct (const {\bf product} $\ast$ {\em aProduct})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_aecf6b68a80f1e0f0b8f2f8d9eaed63d1}
+
+
+Returned a copy of a stored feed \hyperlink{classproduct}{product}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aProduct}]the feed \hyperlink{classproduct}{product} to be copied\end{DoxyParams}
+Returns const \hyperlink{classproduct}{product} pointer from first store that contains the target \hyperlink{classproduct}{product} \hypertarget{classbarn_storage_a95bcaa3c5e29432ec990578e100f36d3}{
+\index{barnStorage@{barnStorage}!GetFromStore@{GetFromStore}}
+\index{GetFromStore@{GetFromStore}!barnStorage@{barnStorage}}
+\subsubsection[{GetFromStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ barnStorage::GetFromStore (double {\em RequestedAmount}, \/  {\bf product} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a95bcaa3c5e29432ec990578e100f36d3}
+
+
+Request an amount of a \hyperlink{classproduct}{product} from \hyperlink{classstorage}{storage}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em amount}]the amount requested \item[{\em p}]the \hyperlink{classproduct}{product} requested\end{DoxyParams}
+Remove RequestedAmount from \hyperlink{classbarn_storage}{barnStorage} of \hyperlink{classproduct}{product} p. \hypertarget{classbarn_storage_a8cae788f50f74e49bbaa5c1fbfc397a7}{
+\index{barnStorage@{barnStorage}!Getstorage@{Getstorage}}
+\index{Getstorage@{Getstorage}!barnStorage@{barnStorage}}
+\subsubsection[{Getstorage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$ {\bf storage} $>$ $\ast$ barnStorage::Getstorage ()}}
+\label{classbarn_storage_a8cae788f50f74e49bbaa5c1fbfc397a7}
+
+
+Return pointer to the list of stores. Return a list of stores in this \hyperlink{classbuilding}{building} \hypertarget{classbarn_storage_a8d42662925ead9f3bdd9dfdd3ade9c46}{
+\index{barnStorage@{barnStorage}!GetStorageClone@{GetStorageClone}}
+\index{GetStorageClone@{GetStorageClone}!barnStorage@{barnStorage}}
+\subsubsection[{GetStorageClone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$ {\bf storage} $>$ $\ast$ barnStorage::GetStorageClone ()}}
+\label{classbarn_storage_a8d42662925ead9f3bdd9dfdd3ade9c46}
+
+
+Returns a clone of the list of \hyperlink{classstorage}{storage}. GetStorageClone returns a pointer to a clone of this-\/$>$stores. \hypertarget{classbarn_storage_add4a5961a82e36e01d6905e01ac274de}{
+\index{barnStorage@{barnStorage}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!barnStorage@{barnStorage}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_add4a5961a82e36e01d6905e01ac274de}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested\end{DoxyParams}
+Calculate N and C for plantItemObj and feedItemObj that is stored. The input describe witch kind of output is written to the indicat file(only environmentalIndicator and economicIndicatoris implemented) 
+
+Reimplemented from \hyperlink{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{building}.\hypertarget{classbarn_storage_a26ffc2da0bfc8f9efd9e0c75e42d22e2}{
+\index{barnStorage@{barnStorage}!GiveValueOfInventory@{GiveValueOfInventory}}
+\index{GiveValueOfInventory@{GiveValueOfInventory}!barnStorage@{barnStorage}}
+\subsubsection[{GiveValueOfInventory}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::GiveValueOfInventory ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a26ffc2da0bfc8f9efd9e0c75e42d22e2}
+
+
+no idea what this does Adding the value for everything stored to in indicat file. Does also calculate N and C stored for plantItemObj and feedItemObj \hypertarget{classbarn_storage_a04a2ab71aceafb10d6f4a51ed59960e5}{
+\index{barnStorage@{barnStorage}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!barnStorage@{barnStorage}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void barnStorage::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_a04a2ab71aceafb10d6f4a51ed59960e5}
+
+
+Initialize \hyperlink{classstorage}{storage} from file. read user define parameters from file 
+
+Reimplemented from \hyperlink{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{building}.\hypertarget{classbarn_storage_af10d75ac33adcdd0f6ebe63d25b9d2b3}{
+\index{barnStorage@{barnStorage}!SendToStore@{SendToStore}}
+\index{SendToStore@{SendToStore}!barnStorage@{barnStorage}}
+\subsubsection[{SendToStore}]{\setlength{\rightskip}{0pt plus 5cm}int barnStorage::SendToStore ({\bf product} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbarn_storage_af10d75ac33adcdd0f6ebe63d25b9d2b3}
+
+
+Send an amount of a \hyperlink{classproduct}{product} to a store. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]the \hyperlink{classproduct}{product} to be sent\end{DoxyParams}
+Adding amount \hyperlink{classproduct}{product} p to the store. If there there is not enough room for it and \hyperlink{classbarn_storage}{barnStorage} is scalable there will be made room for it If \hyperlink{classbarn_storage}{barnStorage} cannot bescale and there is not enough room Fasset will halt halt with this error: \hyperlink{classbarn_storage_af10d75ac33adcdd0f6ebe63d25b9d2b3}{barnStorage::SendToStore}: not enoug room in store for \hyperlink{classproduct}{product}: \hyperlink{classproduct}{product} name 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbarn_storage_a9ff04c29ec440b29edf27d2f31c8bcea}{
+\index{barnStorage@{barnStorage}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!barnStorage@{barnStorage}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf barnStorage} {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbarn_storage_a9ff04c29ec440b29edf27d2f31c8bcea}
+
+
+Outputs streaming. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classbarn_storage_aaa021946ef9b068d958da554fe693709}{
+\index{barnStorage@{barnStorage}!stores@{stores}}
+\index{stores@{stores}!barnStorage@{barnStorage}}
+\subsubsection[{stores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf storage}$>$$\ast$ {\bf barnStorage::stores}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbarn_storage_aaa021946ef9b068d958da554fe693709}
+
+
+List of stores. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{barn_storage_8h}{barnStorage.h}\item 
+C:/main/trunk/src/building/\hyperlink{barn_storage_8cpp}{barnStorage.cpp}\end{DoxyCompactItemize}

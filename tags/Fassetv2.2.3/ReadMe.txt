@@ -1,0 +1,1 @@
+A small change in base so it can handle string with size of 0 in base.cpp

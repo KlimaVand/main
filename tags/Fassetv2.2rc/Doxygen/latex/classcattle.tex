@@ -1,0 +1,1299 @@
+\hypertarget{classcattle}{
+\section{cattle Class Reference}
+\label{classcattle}\index{cattle@{cattle}}
+}
+
+
+{\ttfamily \#include $<$cattle.h$>$}Inheritance diagram for cattle::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classcattle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcattle_adf9d179e58cd2a02b9b5e0f8a1668bb9}{cattle} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classcattle_a1588b725bd7fe6e3fe250007ebfc0785}{cattle} (const \hyperlink{classcattle}{cattle} \&anAnimal)
+\item 
+virtual \hyperlink{classcattle_ab9a244e71daafd2dec8ecaf18aa0c081}{$\sim$cattle} ()
+\item 
+virtual void \hyperlink{classcattle_ad80178c5a27de60a10542207d47ec2c2}{Setmother} (\hyperlink{classcattle}{cattle} $\ast$aMother)
+\item 
+virtual void \hyperlink{classcattle_aa064459116b771e6a3c9b2dac34ce0bf}{Setage} (int anAge)
+\item 
+virtual void \hyperlink{classcattle_a36dd85ccca1fde2101b13e148951e280}{Setcode} (int aCode)
+\item 
+virtual void \hyperlink{classcattle_a89311923c18e5e7abbd67339f150a077}{Setweight} (double aWeight)
+\item 
+virtual void \hyperlink{classcattle_a3277350bb7f701195d624d9ee10a2f5b}{SetisFemale} (bool isaFemale)
+\item 
+virtual void \hyperlink{classcattle_a1a2411237f113c80e1b8aff941aa937c}{SetfeedPlanList} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$aFeedPlan)
+\item 
+virtual void \hyperlink{classcattle_a5bb985f9fe851b8850c06a6457e9f8c7}{SetfeedUseList} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$aFeedUseList)
+\item 
+virtual void \hyperlink{classcattle_a4c094d809f6ea65502d06a96dc42e08d}{SetisYoung} (bool isItYoung)
+\item 
+virtual void \hyperlink{classcattle_a70296e4b60d7540a8be2be7beca964ca}{SetisSuckling} (bool isItSuckling)
+\item 
+virtual void \hyperlink{classcattle_a9040755a92eba6fcd6a71b907e06ef95}{SetisFoetus} (bool itIsAFoetus)
+\item 
+virtual void \hyperlink{classcattle_ad9f7a3fc99cb90f4634ea36a8af5b15d}{SetbodyProtein} (double aProtein)
+\item 
+virtual void \hyperlink{classcattle_a356e6940e7396a01a860fbc853ecc144}{SetbodyFat} (double abodyFat)
+\item 
+void \hyperlink{classcattle_a2656ed54ea449daa5272f721379da95b}{SetFoetus} (\hyperlink{classcattle}{cattle} $\ast$aFoetus)
+\item 
+virtual void \hyperlink{classcattle_abc88c494953dc706add28e0839bdef40}{SethoursHoused} (double aValue)
+\item 
+virtual void \hyperlink{classcattle_a9756ddb6e5fdf7b732690455d067bcee}{SetfeedingGroup} (int afeedingGroup)
+\item 
+virtual void \hyperlink{classcattle_a75e4074bb40b9683fcf0b5053247164f}{SetfieldList} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfield}{field} $>$ $\ast$afieldList)
+\item 
+virtual double \hyperlink{classcattle_ac0d5f90c27a81005db97ff5d58d5607d}{GetvariableCosts} () const 
+\item 
+virtual double \hyperlink{classcattle_ab014adfe186a96d87be23df0c4bf47eb}{Getage} ()
+\item 
+virtual int \hyperlink{classcattle_ad6b3b02f1b9c39b7872c5b4b875b987d}{Getcode} () const 
+\item 
+virtual double \hyperlink{classcattle_a32f9c2c17b16e891f8e208754865d734}{Getweight} () const 
+\item 
+virtual \hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_acc71b376de54129fb52a75aa17476cb0}{Getmother} ()
+\item 
+virtual bool \hyperlink{classcattle_a1f53f6f6b44193909bd6524df7c90169}{GetisFemale} () const 
+\item 
+virtual \hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classcattle_ac087867a732ba9ae7821d1d61928908f}{GetfeedPlanList} ()
+\item 
+virtual \hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classcattle_a0e993d2a22fd76bb0d1adfb0164eb5d8}{Getmilk} ()
+\item 
+virtual bool \hyperlink{classcattle_a1894bf94cd8490350bd5f927aa4453b4}{GetisSuckling} ()
+\item 
+virtual bool \hyperlink{classcattle_aa137de147bb60b1f2cc1558167a0220d}{GetisFoetus} ()
+\item 
+virtual double \hyperlink{classcattle_a7bda83b3832babf60809ada5e9e785ab}{GetgestationPeriod} ()
+\item 
+virtual double \hyperlink{classcattle_a119738767d9cf6ef205a9e097f5f0fd6}{GetCattleN} ()
+\item 
+virtual double \hyperlink{classcattle_a8603e5213d0e6f8fecf19151c391d682}{GetCowN} ()
+\item 
+virtual double \hyperlink{classcattle_ae19ec8afe91d65ef9b60eecc36acbffd}{GetbodyProtein} () const 
+\item 
+virtual double \hyperlink{classcattle_a0ef7cd4d80ad3abf2d95f792d7d84ea4}{GetbodyFat} () const 
+\item 
+virtual double \hyperlink{classcattle_aee7aea077f7f8fd48035eae6308bdabc}{GetPotentialMilkIntake} ()
+\item 
+virtual int \hyperlink{classcattle_a2f1b1ea50c4b0bd9aaea20a3f715645a}{GetfeedingGroup} ()
+\item 
+int \hyperlink{classcattle_a3166b570f41005f2806018d06d04bd0b}{GetFieldsGrazed} ()
+\item 
+double \hyperlink{classcattle_a8211a2fdbecf994a39ab695be7a2bfb0}{GetlastMilkYield} ()
+\item 
+void \hyperlink{classcattle_aec62f7edf9677935504583181c378966}{Setlactating} (bool aLactation)
+\item 
+void \hyperlink{classcattle_ad253d77a1a672d0ebc2b4e7093aad228}{Setpregnant} (bool aPregnant)
+\item 
+void \hyperlink{classcattle_aeed22677fe5975db88ee1788b5d27670}{SetlactationNumber} (int aNumber)
+\item 
+void \hyperlink{classcattle_a41da605e6ff1f29060cd6b67899946f1}{SetCalf} (\hyperlink{classcattle}{cattle} $\ast$aCalf)
+\item 
+void \hyperlink{classcattle_ac2b8f179d21f9b6e11f803e68a43f607}{SetdaysFromParturition} (double days)
+\item 
+void \hyperlink{classcattle_a914dbca3cb615490a696d4a63aaab37a}{SetdaysFromConception} (double days)
+\item 
+bool \hyperlink{classcattle_a45e30956734fd3fba35da661cf4198e2}{isLactating} () const 
+\item 
+bool \hyperlink{classcattle_abbe4b4f1b07cee30b41122bcad34ea48}{isPregnant} () const 
+\item 
+virtual bool \hyperlink{classcattle_a059b9c483e37fa36a43773026d07fd92}{GetisYoung} ()
+\item 
+int \hyperlink{classcattle_a4fef6fdeb96e7a68e7e351c638f8fa13}{GetlactationNumber} ()
+\item 
+\hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_ac37916ffd8ad3a51956838cf35a51e94}{GetFoetus} ()
+\item 
+\hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_a0db754787fa065708f8d1d54afa51883}{GetCalf} ()
+\item 
+double \hyperlink{classcattle_af860df7afb8d4e32b24cd63ddd8db9a1}{GetdaysFromParturition} () const 
+\item 
+double \hyperlink{classcattle_add4227ea5e41412332ae7baa499cc54e}{GetdaysFromConception} () const 
+\item 
+virtual double \hyperlink{classcattle_ab885604f6912a5bfadc8a71d42e72328}{GetPotentialMilkYield} (int \hyperlink{classcattle_a6a51852f30326c7e77ac430c89033d0f}{daysFromParturition})
+\item 
+virtual double \hyperlink{classcattle_a325c1edad49aee895e01d87f0c44bf64}{GetPotentialMilkYield} ()
+\item 
+double \hyperlink{classcattle_a8b0fca6e07ddb7aadda529b88c1f1f8d}{GetaminoAcidSupply} ()
+\item 
+double \hyperlink{classcattle_af0ab4f6ff6d9da66b7f5cd3af963d769}{GetaminoAcidDemand} ()
+\item 
+double \hyperlink{classcattle_aec2bd44f7a6519163a4bc66a4616b0bf}{GetdungN} ()
+\item 
+double \hyperlink{classcattle_a5959426fa68c0093242785ddd0a928d2}{GeturineN} ()
+\item 
+double \hyperlink{classcattle_a025d988cdff86a92ff8bb87d8f918cd5}{GetrumenNsurplus} ()
+\item 
+double \hyperlink{classcattle_ad3bde990fd7b51e67af6ba7c202f6235}{GetGrazed\_\-DM} ()
+\item 
+double \hyperlink{classcattle_ad841e565dad1037d1ad59967d7d70600}{GetGrazed\_\-FE} ()
+\item 
+double \hyperlink{classcattle_a8c031732fac4876031f777b1222fb765}{GetDM\_\-intake} ()
+\item 
+double \hyperlink{classcattle_a808e0639e48ba92d545d83ca1fd21834}{GetFE\_\-intake} ()
+\item 
+double \hyperlink{classcattle_ae44a251b975bfb404a8c01bdccc1fb22}{GetFEDemand} ()
+\item 
+double \hyperlink{classcattle_ac5a17c14e1bbb07428588e7638eee47f}{GetME\_\-intake} ()
+\item 
+virtual void \hyperlink{classcattle_a13ca8c9803fc7d414933e0cacb5e398c}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classcattle_a418e7ccadab4a1b2b71d5687c4f22373}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classcattle_abbfdc707ceb6778a0e335acdcf8e24d4}{ReceivePlan} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$afeedPlanList)
+\item 
+virtual double \hyperlink{classcattle_a6baa384415f687dbe7fa420cb46bb62e}{Production} ()
+\item 
+void \hyperlink{classcattle_abbfa3e590fcb00ff39222a765f8cf608}{ManureProduction} (fstream $\ast$fileStream)
+\item 
+void \hyperlink{classcattle_a65484ea0fdd7d59d96108c6ecc50e323}{FeedMax} (fstream $\ast$fileStream)
+\item 
+void \hyperlink{classcattle_a9aff531955828de8e998e2e44ba6f935}{FeedMin} (fstream $\ast$fileStream)
+\item 
+void \hyperlink{classcattle_a79f811501b724b91335646e7c7452602}{ChangeName} (char $\ast$newname)
+\item 
+void \hyperlink{classcattle_ae68f10b2d5e32d120b4d90b5922534cf}{IncrementIndex} ()
+\item 
+double \hyperlink{classcattle_a2aefe7556df04aa4cff0e773d6c50db4}{GetPotentialIntake} ()
+\item 
+virtual \hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_a0f0686111d6eb6ba5dec8b3b92cecb76}{CheckBirth} ()
+\item 
+virtual void \hyperlink{classcattle_a4c5d739e38ea76e5615b53e5f588d771}{DryOff} ()
+\item 
+virtual void \hyperlink{classcattle_adec0490651ec7d3cfb5b90250dd42dc0}{MakePregnant} (bool isAFemale)
+\item 
+virtual void \hyperlink{classcattle_ab606ffff933142bc469c151721050d2d}{Initialise} (int aCode, int anAge, double LU, double numPrCohort, bool isAYoung)
+\item 
+virtual void \hyperlink{classcattle_a7a2111adbacdb6ec477005ac5779077b}{Initialise} ()
+\item 
+virtual void \hyperlink{classcattle_a1ff860afd88aa3c58c66a5291ccbacb5}{Initialise} (double anAge, int thedaysFromConception, int thelactationNumber)
+\item 
+virtual double \hyperlink{classcattle_a5b3d8710accc9b14ac6881ed758fe4ae}{Get\_\-norm\_\-weight} ()
+\item 
+virtual double \hyperlink{classcattle_a8643521d1530588eeff5d92013063038}{CalcFoetusProtein} (double offset)
+\item 
+virtual double \hyperlink{classcattle_a46b5f1e591b420acb2e2ce0e69aef5fe}{GetFoetusWeight} (double offset)
+\item 
+virtual void \hyperlink{classcattle_af266fc5caa824f4449d443228c39bd9c}{AddBodyProtein} (double someProtein)
+\item 
+virtual void \hyperlink{classcattle_ac747b39751d40739d2b1c00246e65c7d}{ShowCurrentDiet} (fstream $\ast$fs)
+\item 
+virtual void \hyperlink{classcattle_a583babf76f49e8ab7dab411195bcda2e}{checkBalances} (bool show)
+\item 
+virtual double \hyperlink{classcattle_ababba75682af1059250b4a92eedd4a64}{CalcGravidUterusProtein} (double offset)
+\item 
+virtual void \hyperlink{classcattle_a66a96c0c6ec89204ed6b11b8393f8014}{WriteCowOutput} (bool header)
+\item 
+virtual void \hyperlink{classcattle_a3d331307509c0f26ab8ae6b2f890f889}{CreateDetailFile} (int Num)
+\item 
+virtual void \hyperlink{classcattle_a046831ac9ac76d46a2fc281301d07469}{CreateDetailFile} (char $\ast$filename)
+\item 
+virtual void \hyperlink{classcattle_a19fcd794dfdaba6c37698d04a5056423}{GrowFoetus} (double newFoetusProtein, double newFoetusFat, double newFoetus)
+\item 
+virtual \hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classcattle_a31cf342857dea26371d0da77baec3b99}{Getgrowth} ()
+\item 
+virtual double \hyperlink{classcattle_a8053c5118595709cf95a6e54b2560024}{GetMethaneProduction} ()
+\item 
+virtual double \hyperlink{classcattle_ab26f4af3dee792b5979ef58083c46f58}{CalcFoetusEnergy} (double offset)
+\item 
+virtual double \hyperlink{classcattle_ad24d13fc2005a194019309ce8f47f7d2}{CalcFoetusFat} (double offset)
+\item 
+virtual double \hyperlink{classcattle_a2b592878b7c6d87baff5414c008e9015}{CalcGravidUterusEnergy} (double offset)
+\item 
+virtual double \hyperlink{classcattle_a795f803883c77aae60e3c722fed59e6d}{CalcGravidUterusFat} (double offset)
+\item 
+virtual void \hyperlink{classcattle_a4998e90c175bd1e1aa4b57fcfcc5b281}{GrowGravidUterus} (double newProtein, double newFat)
+\item 
+virtual double \hyperlink{classcattle_a68445d9f0e164038d9046facfe259610}{GetCattleC} ()
+\item 
+virtual double \hyperlink{classcattle_a01c489501d6d56cb3af7bd22e266bd1f}{GetCowC} ()
+\item 
+virtual void \hyperlink{classcattle_ab41b2206b12b2f5bd16dd817960315bd}{InitialiseFoetus} ()
+\item 
+virtual double \hyperlink{classcattle_a6301f605944f6071be0c63421353c375}{GetMilkCconc} ()
+\item 
+virtual void \hyperlink{classcattle_a684a6bc701b487ecb37887a81c72f52e}{CalcHeatProduction} (\hyperlink{classmanure}{manure} $\ast$urine)
+\item 
+virtual double \hyperlink{classcattle_add87f09e9b8ef0ed3ca7dcf9e4ac7172}{GetUrineVolume} ()
+\item 
+virtual void \hyperlink{classcattle_addc79a7896cb2c8207f26971cdd57d48}{WriteFeedingError} ()
+\item 
+virtual void \hyperlink{classcattle_a680668c3ea07844f0dce5193f2f85b69}{WeanCalf} ()
+\item 
+virtual double \hyperlink{classcattle_aeac6984f3aed6a1b0c37b609ffdbc02a}{GetPalatability} (\hyperlink{classfeed__resource}{feed\_\-resource} $\ast$aFeed\_\-resource)
+\item 
+double \hyperlink{classcattle_a532030c30439fc60896d2a6018b877ad}{GetAcceptanceFactor} (\hyperlink{classfeed__resource}{feed\_\-resource} $\ast$aFeed\_\-resource)
+\item 
+void \hyperlink{classcattle_a380c56c03be73c2b0bc0ce6f999a499e}{loadAnimalProduct} (\hyperlink{classanimal_product}{animalProduct} $\ast$anAnimalProduct)
+\item 
+virtual double \hyperlink{classcattle_a4de5ef9578b7f00f7fd0135001d2bf0f}{GetPotentialAnnualMilkProduction} (int durationOfLactation)
+\item 
+virtual double \hyperlink{classcattle_a8c3fee12050228b91b4f8a6aeeaae178}{GetEnergyRequirement} ()
+\item 
+virtual double \hyperlink{classcattle_a96d6a13910c586fc522ae1dbb11730d8}{GetSensibleHeatProduction} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classcattle_a268ab4ca694f20f0207125ef11992933}{intake} ()
+\item 
+virtual void \hyperlink{classcattle_a88117c15ba8d100cc4489d7f8f125b76}{ProteinDigestion} (double $\ast$availableN)
+\item 
+virtual void \hyperlink{classcattle_af6ad25c3e883a183b1470d6b7e534406}{Partition} ()
+\item 
+virtual double \hyperlink{classcattle_a2a2b2e95eed78862af8cc6dda71c7d03}{CalcMaintenanceN} ()
+\item 
+virtual double \hyperlink{classcattle_adc0149dd773e4a12265c5e144eef6064}{NinEBWchange} ()
+\item 
+virtual \hyperlink{classfeed__resource}{feed\_\-resource} $\ast$ \hyperlink{classcattle_a30cf96265a9fbfec7859bd1e62730088}{GetFeedItem} (\hyperlink{classproduct}{product} $\ast$menuPtr)
+\item 
+virtual double \hyperlink{classcattle_aa66ca48a07bdaec8a2b280c47f6cc509}{Get\_\-availability\_\-factor} (double herbage\_\-mass)
+\item 
+virtual double \hyperlink{classcattle_a2ca11504c1a120f1b36f6bbf1572ae23}{Get\_\-quality\_\-factor} (double digestibility)
+\item 
+virtual double \hyperlink{classcattle_ad2dd5d5a563d9b421d4c3cf46e563df3}{SucklingCalfMilkIntake} ()
+\item 
+virtual void \hyperlink{classcattle_abefde6a746b3d6d1d699225494f93022}{DoSelection} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfeed__resource}{feed\_\-resource} $>$ $\ast$, int $\ast$count)
+\item 
+virtual void \hyperlink{classcattle_a42b73eb64c061427ced81f8524ea76a9}{Createfoetus} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcattle_adc9375abcc182c384874998ba6bfb91b}{bodyProtein}
+\item 
+double \hyperlink{classcattle_ace40244cf83a23b5a874f5f0185807fa}{bodyFat}
+\item 
+int \hyperlink{classcattle_abffa75c5af0af11f66f1217329dc71b2}{age}
+\item 
+double \hyperlink{classcattle_aad8eac52b29c71be5b0f6da7b4b76a6c}{MBW}
+\item 
+double \hyperlink{classcattle_a16519b87deea03a710cd5ce401fdb7ba}{weight}
+\item 
+int \hyperlink{classcattle_abeb37ebde95fcf8f746364102f91c94c}{code}
+\item 
+bool \hyperlink{classcattle_ae28249dd21e1e0f2978c5cad7bf3f53f}{isFemale}
+\item 
+bool \hyperlink{classcattle_a737451b41bd16074e295e3c395d17745}{isFoetus}
+\item 
+bool \hyperlink{classcattle_a40126fbf9c2ac40d3578b473e1ba37d1}{isSuckling}
+\item 
+bool \hyperlink{classcattle_a9fe83aba5038189445bbcf6e96fd4977}{isYoung}
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classcattle_ae291a15ac3fdf87ec6821d460d819b77}{feedPlanList}
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classproduct}{product} $>$ $\ast$ \hyperlink{classcattle_a80820ab424613acc46294b15335b7507}{feedUseList}
+\item 
+double \hyperlink{classcattle_a6a51852f30326c7e77ac430c89033d0f}{daysFromParturition}
+\item 
+double \hyperlink{classcattle_a7e36c3531d8ae149261394dbfd8f3a51}{daysFromConception}
+\item 
+int \hyperlink{classcattle_ae67ed13b4012cda6f63a11098520ff07}{lactationNumber}
+\item 
+int \hyperlink{classcattle_a7cf86b18583399992fc6d0ed510a6b95}{feedingGroup}
+\item 
+bool \hyperlink{classcattle_a9d5b8f99a41523eb8c0792e49492e350}{lactating}
+\item 
+bool \hyperlink{classcattle_a457bb28e06317045be5fd9ebbac78d7e}{pregnant}
+\item 
+\hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_acf6345c41d725963b2bb91a744039050}{mother}
+\item 
+\hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_a98e2eb85c986738249c5ee54efcbdeba}{calf}
+\item 
+\hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_a6b3f173720e6c3c4fd533edce88b7301}{foetus}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfield}{field} $>$ $\ast$ \hyperlink{classcattle_aac3175b986188a50d979ab1cac4af3ea}{fieldList}
+\item 
+double \hyperlink{classcattle_aaf87eabecd0e08dcee9d848227c83cd3}{fieldOfftakeList} \mbox{[}500\mbox{]}
+\item 
+double \hyperlink{classcattle_a57f185cfef76fec68f325e0197edc51b}{DM\_\-intake}
+\item 
+\hyperlink{classfeed__resource}{feed\_\-resource} $\ast$ \hyperlink{classcattle_a1793c177cc739ddb54c8b0f21e1b83f9}{currentDiet}
+\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classcattle_a5242362db2f5a4411f19ec2163eabc4e}{milk}
+\item 
+double \hyperlink{classcattle_a363b662f01ef25b47283840fd205c9e9}{lastMilkYield}
+\item 
+double \hyperlink{classcattle_ae5c1f207860f644db590c44eb6ae082b}{hoursHoused}
+\item 
+double \hyperlink{classcattle_a59856200751c49a71847fa421bfada3c}{gestationPeriod}
+\item 
+double \hyperlink{classcattle_a1d6da32047ee60f0cbdacee9519f16e3}{milkProteinConc}
+\item 
+double \hyperlink{classcattle_aa5a4f55d7d0575a6e828c212c84bc909}{milkFatConc}
+\item 
+double \hyperlink{classcattle_a426bdf1c322f7dc4c5447fae45c259eb}{lactoseConc}
+\item 
+double \hyperlink{classcattle_a54c41c4168fa7a8bf51dbab9c79c9b61}{acceptanceCoefficient}
+\item 
+fstream $\ast$ \hyperlink{classcattle_a484fc80eeb5bf6fdcc1e4f0a43a647b0}{detailsFile}
+\item 
+char \hyperlink{classcattle_a70bffbbd0dba38315fa124c06b4c8814}{detailsFileName} \mbox{[}100\mbox{]}
+\item 
+int \hyperlink{classcattle_a00961d35073fae6a1a1e81dfaad97d12}{limitation}
+\item 
+double \hyperlink{classcattle_a0579aa4830ea3b218896c017e61fc904}{ME\_\-intake}
+\item 
+double \hyperlink{classcattle_aabaeb5143d3c02eebe3ef676319fb5a0}{FE\_\-intake}
+\item 
+double \hyperlink{classcattle_a63d4959fc2ec85e12dce81130e1829dc}{FEDemand}
+\item 
+\hyperlink{classfeed_item}{feedItem} $\ast$ \hyperlink{classcattle_adda7b2882e426ad63090673d102d27bc}{growth}
+\item 
+double \hyperlink{classcattle_ad77f647e607efacadcec9aa8ef82de2c}{aminoAcidSupply}
+\item 
+double \hyperlink{classcattle_abd8875c6b64433fd2dbd14593c8bd961}{aminoAcidDemand}
+\item 
+double \hyperlink{classcattle_a3abd49d3221dd7a38255a4bffd7770b3}{dungN}
+\item 
+double \hyperlink{classcattle_a6743facaa4de4b92350ef52cc2e6b8ed}{urineN}
+\item 
+double \hyperlink{classcattle_ad2e1f9f817dc243c4ca19136e0871b77}{rumenNsurplus}
+\item 
+double \hyperlink{classcattle_a8d36e025177454054e92c45378279615}{Grazed\_\-DM}
+\item 
+double \hyperlink{classcattle_a6c58edc9e56731094dd5a097f058c2ea}{Grazed\_\-FE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcattle_adf9d179e58cd2a02b9b5e0f8a1668bb9}{
+\index{cattle@{cattle}!cattle@{cattle}}
+\index{cattle@{cattle}!cattle@{cattle}}
+\subsubsection[{cattle}]{\setlength{\rightskip}{0pt plus 5cm}cattle::cattle (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcattle_adf9d179e58cd2a02b9b5e0f8a1668bb9}
+Constructor with arguments Also calles: \hyperlink{classcattle_a7a2111adbacdb6ec477005ac5779077b}{Initialise()} and \hyperlink{classbase}{base}(const char $\ast$ aName, const int aIndex = -\/1, const \hyperlink{classbase}{base} $\ast$ aOwner = NULL); \hypertarget{classcattle_a1588b725bd7fe6e3fe250007ebfc0785}{
+\index{cattle@{cattle}!cattle@{cattle}}
+\index{cattle@{cattle}!cattle@{cattle}}
+\subsubsection[{cattle}]{\setlength{\rightskip}{0pt plus 5cm}cattle::cattle (const {\bf cattle} \& {\em anAnimal})}}
+\label{classcattle_a1588b725bd7fe6e3fe250007ebfc0785}
+Copy Constructor -\/ is shallow. Should it ever be caled then ???!!! BMP \hypertarget{classcattle_ab9a244e71daafd2dec8ecaf18aa0c081}{
+\index{cattle@{cattle}!$\sim$cattle@{$\sim$cattle}}
+\index{$\sim$cattle@{$\sim$cattle}!cattle@{cattle}}
+\subsubsection[{$\sim$cattle}]{\setlength{\rightskip}{0pt plus 5cm}cattle::$\sim$cattle ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ab9a244e71daafd2dec8ecaf18aa0c081}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcattle_af266fc5caa824f4449d443228c39bd9c}{
+\index{cattle@{cattle}!AddBodyProtein@{AddBodyProtein}}
+\index{AddBodyProtein@{AddBodyProtein}!cattle@{cattle}}
+\subsubsection[{AddBodyProtein}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::AddBodyProtein (double {\em someProtein})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_af266fc5caa824f4449d443228c39bd9c}
+Adds protein to foetus or calf and updates N \hyperlink{classbudget}{budget} \hypertarget{classcattle_ab26f4af3dee792b5979ef58083c46f58}{
+\index{cattle@{cattle}!CalcFoetusEnergy@{CalcFoetusEnergy}}
+\index{CalcFoetusEnergy@{CalcFoetusEnergy}!cattle@{cattle}}
+\subsubsection[{CalcFoetusEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcFoetusEnergy (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ab26f4af3dee792b5979ef58083c46f58}
+Calculate foetus \hyperlink{classenergy}{energy} in MJ. Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_ad24d13fc2005a194019309ce8f47f7d2}{
+\index{cattle@{cattle}!CalcFoetusFat@{CalcFoetusFat}}
+\index{CalcFoetusFat@{CalcFoetusFat}!cattle@{cattle}}
+\subsubsection[{CalcFoetusFat}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcFoetusFat (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ad24d13fc2005a194019309ce8f47f7d2}
+Calculate fat in foetus (g) . Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_a8643521d1530588eeff5d92013063038}{
+\index{cattle@{cattle}!CalcFoetusProtein@{CalcFoetusProtein}}
+\index{CalcFoetusProtein@{CalcFoetusProtein}!cattle@{cattle}}
+\subsubsection[{CalcFoetusProtein}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcFoetusProtein (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a8643521d1530588eeff5d92013063038}
+Calculate Foetus Protein \hyperlink{classenergy}{energy} in MJ. Nice to know: why those default values and where does the fomula come from? 
+
+Reimplemented in \hyperlink{classdk__cattle_a717bc099891c28ae2f35203a23bc1b12}{dk\_\-cattle}.\hypertarget{classcattle_a2b592878b7c6d87baff5414c008e9015}{
+\index{cattle@{cattle}!CalcGravidUterusEnergy@{CalcGravidUterusEnergy}}
+\index{CalcGravidUterusEnergy@{CalcGravidUterusEnergy}!cattle@{cattle}}
+\subsubsection[{CalcGravidUterusEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcGravidUterusEnergy (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a2b592878b7c6d87baff5414c008e9015}
+Calculate gravid uterus \hyperlink{classenergy}{energy} in MJ. Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_a795f803883c77aae60e3c722fed59e6d}{
+\index{cattle@{cattle}!CalcGravidUterusFat@{CalcGravidUterusFat}}
+\index{CalcGravidUterusFat@{CalcGravidUterusFat}!cattle@{cattle}}
+\subsubsection[{CalcGravidUterusFat}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcGravidUterusFat (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a795f803883c77aae60e3c722fed59e6d}
+Calculate fat in gravid uterus (g). Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_ababba75682af1059250b4a92eedd4a64}{
+\index{cattle@{cattle}!CalcGravidUterusProtein@{CalcGravidUterusProtein}}
+\index{CalcGravidUterusProtein@{CalcGravidUterusProtein}!cattle@{cattle}}
+\subsubsection[{CalcGravidUterusProtein}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcGravidUterusProtein (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ababba75682af1059250b4a92eedd4a64}
+Calculate gravid uterus protein in grams. Nice to know: why those default values and where does the fomula come from? 
+
+Reimplemented in \hyperlink{classdk__cattle_a86bb4b01472df3578ac25b97d39af5b8}{dk\_\-cattle}.\hypertarget{classcattle_a684a6bc701b487ecb37887a81c72f52e}{
+\index{cattle@{cattle}!CalcHeatProduction@{CalcHeatProduction}}
+\index{CalcHeatProduction@{CalcHeatProduction}!cattle@{cattle}}
+\subsubsection[{CalcHeatProduction}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::CalcHeatProduction ({\bf manure} $\ast$ {\em urine})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a684a6bc701b487ecb37887a81c72f52e}
+
+
+Reimplemented in \hyperlink{classdk__cattle_af224d866e6cffe1530ecd307d518c4e7}{dk\_\-cattle}.\hypertarget{classcattle_a2a2b2e95eed78862af8cc6dda71c7d03}{
+\index{cattle@{cattle}!CalcMaintenanceN@{CalcMaintenanceN}}
+\index{CalcMaintenanceN@{CalcMaintenanceN}!cattle@{cattle}}
+\subsubsection[{CalcMaintenanceN}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::CalcMaintenanceN ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcattle_a2a2b2e95eed78862af8cc6dda71c7d03}
+Returns the maintenance N requirement in g. Calculated by 3.02 $\ast$ weight$^\wedge$0.7)/6.25. Nice to know: why this fomular and those numbers \hypertarget{classcattle_a79f811501b724b91335646e7c7452602}{
+\index{cattle@{cattle}!ChangeName@{ChangeName}}
+\index{ChangeName@{ChangeName}!cattle@{cattle}}
+\subsubsection[{ChangeName}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::ChangeName (char $\ast$ {\em newname})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a79f811501b724b91335646e7c7452602}
+\hypertarget{classcattle_a583babf76f49e8ab7dab411195bcda2e}{
+\index{cattle@{cattle}!checkBalances@{checkBalances}}
+\index{checkBalances@{checkBalances}!cattle@{cattle}}
+\subsubsection[{checkBalances}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::checkBalances (bool {\em show})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a583babf76f49e8ab7dab411195bcda2e}
+Check all balances. Note that the balance for a suckling cow will include the calf. The calf balance will be checked separately. 
+
+Reimplemented from \hyperlink{classanimal_a393e6582d15379a0dd58c0d7e1faf9a7}{animal}.\hypertarget{classcattle_a0f0686111d6eb6ba5dec8b3b92cecb76}{
+\index{cattle@{cattle}!CheckBirth@{CheckBirth}}
+\index{CheckBirth@{CheckBirth}!cattle@{cattle}}
+\subsubsection[{CheckBirth}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cattle}$\ast$ cattle::CheckBirth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a0f0686111d6eb6ba5dec8b3b92cecb76}
+
+
+Reimplemented in \hyperlink{classdk__cattle_af4ba40d77f7e6e452b022554793a5fd9}{dk\_\-cattle}.\hypertarget{classcattle_a046831ac9ac76d46a2fc281301d07469}{
+\index{cattle@{cattle}!CreateDetailFile@{CreateDetailFile}}
+\index{CreateDetailFile@{CreateDetailFile}!cattle@{cattle}}
+\subsubsection[{CreateDetailFile}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::CreateDetailFile (char $\ast$ {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a046831ac9ac76d46a2fc281301d07469}
+Create and open a file for details of cow production (only called if cowDetails set in output) Obsolete??? \hypertarget{classcattle_a3d331307509c0f26ab8ae6b2f890f889}{
+\index{cattle@{cattle}!CreateDetailFile@{CreateDetailFile}}
+\index{CreateDetailFile@{CreateDetailFile}!cattle@{cattle}}
+\subsubsection[{CreateDetailFile}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::CreateDetailFile (int {\em Num})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a3d331307509c0f26ab8ae6b2f890f889}
+Create and open a file for details of cow production (only called if cowDetails set in output) \hypertarget{classcattle_a42b73eb64c061427ced81f8524ea76a9}{
+\index{cattle@{cattle}!Createfoetus@{Createfoetus}}
+\index{Createfoetus@{Createfoetus}!cattle@{cattle}}
+\subsubsection[{Createfoetus}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Createfoetus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcattle_a42b73eb64c061427ced81f8524ea76a9}
+
+
+Reimplemented in \hyperlink{classdk__cattle_ab5538cedcf88ec9337c48fe35eaf75aa}{dk\_\-cattle}.\hypertarget{classcattle_a418e7ccadab4a1b2b71d5687c4f22373}{
+\index{cattle@{cattle}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!cattle@{cattle}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::DailyUpdate (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a418e7ccadab4a1b2b71d5687c4f22373}
+Update what happens with a cow on a daly basis 
+
+Reimplemented from \hyperlink{classanimal_a96c8db4af03ae55b4acb96ed250ea065}{animal}.
+
+Reimplemented in \hyperlink{classdk__cattle_a33ea8994d985d00a3c0910a44e7c5d15}{dk\_\-cattle}.\hypertarget{classcattle_abefde6a746b3d6d1d699225494f93022}{
+\index{cattle@{cattle}!DoSelection@{DoSelection}}
+\index{DoSelection@{DoSelection}!cattle@{cattle}}
+\subsubsection[{DoSelection}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::DoSelection ({\bf linkList}$<$ {\bf feed\_\-resource} $>$ $\ast$ {\em alist}, \/  int $\ast$ {\em count})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcattle_abefde6a746b3d6d1d699225494f93022}
+Makes a list of \hyperlink{classfeed__resource}{feed\_\-resource} based upon nr of notes in feedPlanList combined with number if patches. Sorted in the end using quicksort2 
+\begin{DoxyParams}{Parameters}
+\item[{\em alist}]is the sorted list\item[{\em count}]is the size of the list\end{DoxyParams}
+\hypertarget{classcattle_a4c5d739e38ea76e5615b53e5f588d771}{
+\index{cattle@{cattle}!DryOff@{DryOff}}
+\index{DryOff@{DryOff}!cattle@{cattle}}
+\subsubsection[{DryOff}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::DryOff ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a4c5d739e38ea76e5615b53e5f588d771}
+Setting to lactating false \hypertarget{classcattle_a65484ea0fdd7d59d96108c6ecc50e323}{
+\index{cattle@{cattle}!FeedMax@{FeedMax}}
+\index{FeedMax@{FeedMax}!cattle@{cattle}}
+\subsubsection[{FeedMax}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::FeedMax (fstream $\ast$ {\em fileStream})}}
+\label{classcattle_a65484ea0fdd7d59d96108c6ecc50e323}
+\hypertarget{classcattle_a9aff531955828de8e998e2e44ba6f935}{
+\index{cattle@{cattle}!FeedMin@{FeedMin}}
+\index{FeedMin@{FeedMin}!cattle@{cattle}}
+\subsubsection[{FeedMin}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::FeedMin (fstream $\ast$ {\em fileStream})}}
+\label{classcattle_a9aff531955828de8e998e2e44ba6f935}
+\hypertarget{classcattle_aa66ca48a07bdaec8a2b280c47f6cc509}{
+\index{cattle@{cattle}!Get\_\-availability\_\-factor@{Get\_\-availability\_\-factor}}
+\index{Get\_\-availability\_\-factor@{Get\_\-availability\_\-factor}!cattle@{cattle}}
+\subsubsection[{Get\_\-availability\_\-factor}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::Get\_\-availability\_\-factor (double {\em herbage\_\-mass})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcattle_aa66ca48a07bdaec8a2b280c47f6cc509}
+return a factor based on herbage\_\-mass. The factor represent how much grass on a \hyperlink{classfield}{field} a cow can eat. Wrong calculation is used!! 
+\begin{DoxyParams}{Parameters}
+\item[{\em herbage\_\-mass}]is a plant\end{DoxyParams}
+\hypertarget{classcattle_a5b3d8710accc9b14ac6881ed758fe4ae}{
+\index{cattle@{cattle}!Get\_\-norm\_\-weight@{Get\_\-norm\_\-weight}}
+\index{Get\_\-norm\_\-weight@{Get\_\-norm\_\-weight}!cattle@{cattle}}
+\subsubsection[{Get\_\-norm\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::Get\_\-norm\_\-weight ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a5b3d8710accc9b14ac6881ed758fe4ae}
+Generate a fatal Error. Should not be called 
+
+Reimplemented in \hyperlink{classdk__cattle_a2188892a4f9630ccb5ee58ef7fdf26b3}{dk\_\-cattle}.\hypertarget{classcattle_a2ca11504c1a120f1b36f6bbf1572ae23}{
+\index{cattle@{cattle}!Get\_\-quality\_\-factor@{Get\_\-quality\_\-factor}}
+\index{Get\_\-quality\_\-factor@{Get\_\-quality\_\-factor}!cattle@{cattle}}
+\subsubsection[{Get\_\-quality\_\-factor}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::Get\_\-quality\_\-factor (double {\em digestibility})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcattle_a2ca11504c1a120f1b36f6bbf1572ae23}
+\hypertarget{classcattle_a532030c30439fc60896d2a6018b877ad}{
+\index{cattle@{cattle}!GetAcceptanceFactor@{GetAcceptanceFactor}}
+\index{GetAcceptanceFactor@{GetAcceptanceFactor}!cattle@{cattle}}
+\subsubsection[{GetAcceptanceFactor}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetAcceptanceFactor ({\bf feed\_\-resource} $\ast$ {\em aFeed\_\-resource})}}
+\label{classcattle_a532030c30439fc60896d2a6018b877ad}
+Calculate the factor used to reduce palatability in the presence of dung \hypertarget{classcattle_ab014adfe186a96d87be23df0c4bf47eb}{
+\index{cattle@{cattle}!Getage@{Getage}}
+\index{Getage@{Getage}!cattle@{cattle}}
+\subsubsection[{Getage}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::Getage ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ab014adfe186a96d87be23df0c4bf47eb}
+\hypertarget{classcattle_af0ab4f6ff6d9da66b7f5cd3af963d769}{
+\index{cattle@{cattle}!GetaminoAcidDemand@{GetaminoAcidDemand}}
+\index{GetaminoAcidDemand@{GetaminoAcidDemand}!cattle@{cattle}}
+\subsubsection[{GetaminoAcidDemand}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetaminoAcidDemand ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_af0ab4f6ff6d9da66b7f5cd3af963d769}
+\hypertarget{classcattle_a8b0fca6e07ddb7aadda529b88c1f1f8d}{
+\index{cattle@{cattle}!GetaminoAcidSupply@{GetaminoAcidSupply}}
+\index{GetaminoAcidSupply@{GetaminoAcidSupply}!cattle@{cattle}}
+\subsubsection[{GetaminoAcidSupply}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetaminoAcidSupply ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a8b0fca6e07ddb7aadda529b88c1f1f8d}
+\hypertarget{classcattle_a0ef7cd4d80ad3abf2d95f792d7d84ea4}{
+\index{cattle@{cattle}!GetbodyFat@{GetbodyFat}}
+\index{GetbodyFat@{GetbodyFat}!cattle@{cattle}}
+\subsubsection[{GetbodyFat}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetbodyFat () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a0ef7cd4d80ad3abf2d95f792d7d84ea4}
+\hypertarget{classcattle_ae19ec8afe91d65ef9b60eecc36acbffd}{
+\index{cattle@{cattle}!GetbodyProtein@{GetbodyProtein}}
+\index{GetbodyProtein@{GetbodyProtein}!cattle@{cattle}}
+\subsubsection[{GetbodyProtein}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetbodyProtein () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ae19ec8afe91d65ef9b60eecc36acbffd}
+\hypertarget{classcattle_a0db754787fa065708f8d1d54afa51883}{
+\index{cattle@{cattle}!GetCalf@{GetCalf}}
+\index{GetCalf@{GetCalf}!cattle@{cattle}}
+\subsubsection[{GetCalf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattle}$\ast$ cattle::GetCalf ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a0db754787fa065708f8d1d54afa51883}
+\hypertarget{classcattle_a68445d9f0e164038d9046facfe259610}{
+\index{cattle@{cattle}!GetCattleC@{GetCattleC}}
+\index{GetCattleC@{GetCattleC}!cattle@{cattle}}
+\subsubsection[{GetCattleC}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetCattleC ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a68445d9f0e164038d9046facfe259610}
+Get carbon in \hyperlink{classcattle}{cattle}. Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_a119738767d9cf6ef205a9e097f5f0fd6}{
+\index{cattle@{cattle}!GetCattleN@{GetCattleN}}
+\index{GetCattleN@{GetCattleN}!cattle@{cattle}}
+\subsubsection[{GetCattleN}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetCattleN ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a119738767d9cf6ef205a9e097f5f0fd6}
+Get all N in \hyperlink{classcattle}{cattle} -\/ takes account of whether the individual cow instances represent more than one \hyperlink{classanimal}{animal} \hypertarget{classcattle_ad6b3b02f1b9c39b7872c5b4b875b987d}{
+\index{cattle@{cattle}!Getcode@{Getcode}}
+\index{Getcode@{Getcode}!cattle@{cattle}}
+\subsubsection[{Getcode}]{\setlength{\rightskip}{0pt plus 5cm}virtual int cattle::Getcode () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ad6b3b02f1b9c39b7872c5b4b875b987d}
+\hypertarget{classcattle_a01c489501d6d56cb3af7bd22e266bd1f}{
+\index{cattle@{cattle}!GetCowC@{GetCowC}}
+\index{GetCowC@{GetCowC}!cattle@{cattle}}
+\subsubsection[{GetCowC}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetCowC ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a01c489501d6d56cb3af7bd22e266bd1f}
+Get carbon in cow. Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_a8603e5213d0e6f8fecf19151c391d682}{
+\index{cattle@{cattle}!GetCowN@{GetCowN}}
+\index{GetCowN@{GetCowN}!cattle@{cattle}}
+\subsubsection[{GetCowN}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetCowN ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a8603e5213d0e6f8fecf19151c391d682}
+Get all N in a cow -\/ takes no account of whether the cow represents one or several animals \hypertarget{classcattle_add4227ea5e41412332ae7baa499cc54e}{
+\index{cattle@{cattle}!GetdaysFromConception@{GetdaysFromConception}}
+\index{GetdaysFromConception@{GetdaysFromConception}!cattle@{cattle}}
+\subsubsection[{GetdaysFromConception}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetdaysFromConception () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_add4227ea5e41412332ae7baa499cc54e}
+\hypertarget{classcattle_af860df7afb8d4e32b24cd63ddd8db9a1}{
+\index{cattle@{cattle}!GetdaysFromParturition@{GetdaysFromParturition}}
+\index{GetdaysFromParturition@{GetdaysFromParturition}!cattle@{cattle}}
+\subsubsection[{GetdaysFromParturition}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetdaysFromParturition () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_af860df7afb8d4e32b24cd63ddd8db9a1}
+\hypertarget{classcattle_a8c031732fac4876031f777b1222fb765}{
+\index{cattle@{cattle}!GetDM\_\-intake@{GetDM\_\-intake}}
+\index{GetDM\_\-intake@{GetDM\_\-intake}!cattle@{cattle}}
+\subsubsection[{GetDM\_\-intake}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetDM\_\-intake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a8c031732fac4876031f777b1222fb765}
+\hypertarget{classcattle_aec2bd44f7a6519163a4bc66a4616b0bf}{
+\index{cattle@{cattle}!GetdungN@{GetdungN}}
+\index{GetdungN@{GetdungN}!cattle@{cattle}}
+\subsubsection[{GetdungN}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetdungN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_aec2bd44f7a6519163a4bc66a4616b0bf}
+\hypertarget{classcattle_a8c3fee12050228b91b4f8a6aeeaae178}{
+\index{cattle@{cattle}!GetEnergyRequirement@{GetEnergyRequirement}}
+\index{GetEnergyRequirement@{GetEnergyRequirement}!cattle@{cattle}}
+\subsubsection[{GetEnergyRequirement}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetEnergyRequirement ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a8c3fee12050228b91b4f8a6aeeaae178}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a95c52a8ad9b041ebbf28613c7f1b144a}{dk\_\-cattle}.\hypertarget{classcattle_a808e0639e48ba92d545d83ca1fd21834}{
+\index{cattle@{cattle}!GetFE\_\-intake@{GetFE\_\-intake}}
+\index{GetFE\_\-intake@{GetFE\_\-intake}!cattle@{cattle}}
+\subsubsection[{GetFE\_\-intake}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetFE\_\-intake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a808e0639e48ba92d545d83ca1fd21834}
+\hypertarget{classcattle_ae44a251b975bfb404a8c01bdccc1fb22}{
+\index{cattle@{cattle}!GetFEDemand@{GetFEDemand}}
+\index{GetFEDemand@{GetFEDemand}!cattle@{cattle}}
+\subsubsection[{GetFEDemand}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetFEDemand ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ae44a251b975bfb404a8c01bdccc1fb22}
+\hypertarget{classcattle_a2f1b1ea50c4b0bd9aaea20a3f715645a}{
+\index{cattle@{cattle}!GetfeedingGroup@{GetfeedingGroup}}
+\index{GetfeedingGroup@{GetfeedingGroup}!cattle@{cattle}}
+\subsubsection[{GetfeedingGroup}]{\setlength{\rightskip}{0pt plus 5cm}virtual int cattle::GetfeedingGroup ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a2f1b1ea50c4b0bd9aaea20a3f715645a}
+\hypertarget{classcattle_a30cf96265a9fbfec7859bd1e62730088}{
+\index{cattle@{cattle}!GetFeedItem@{GetFeedItem}}
+\index{GetFeedItem@{GetFeedItem}!cattle@{cattle}}
+\subsubsection[{GetFeedItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feed\_\-resource} $\ast$ cattle::GetFeedItem ({\bf product} $\ast$ {\em menuPtr})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcattle_a30cf96265a9fbfec7859bd1e62730088}
+Makes a \hyperlink{classfeed__resource}{feed\_\-resource} with default values if aStoredProduct is true or with the same values as menuPtr \hypertarget{classcattle_ac087867a732ba9ae7821d1d61928908f}{
+\index{cattle@{cattle}!GetfeedPlanList@{GetfeedPlanList}}
+\index{GetfeedPlanList@{GetfeedPlanList}!cattle@{cattle}}
+\subsubsection[{GetfeedPlanList}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cloneList}$<${\bf product}$>$$\ast$ cattle::GetfeedPlanList ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ac087867a732ba9ae7821d1d61928908f}
+\hypertarget{classcattle_a3166b570f41005f2806018d06d04bd0b}{
+\index{cattle@{cattle}!GetFieldsGrazed@{GetFieldsGrazed}}
+\index{GetFieldsGrazed@{GetFieldsGrazed}!cattle@{cattle}}
+\subsubsection[{GetFieldsGrazed}]{\setlength{\rightskip}{0pt plus 5cm}int cattle::GetFieldsGrazed ()}}
+\label{classcattle_a3166b570f41005f2806018d06d04bd0b}
+Return the number of Fields \hypertarget{classcattle_ac37916ffd8ad3a51956838cf35a51e94}{
+\index{cattle@{cattle}!GetFoetus@{GetFoetus}}
+\index{GetFoetus@{GetFoetus}!cattle@{cattle}}
+\subsubsection[{GetFoetus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattle}$\ast$ cattle::GetFoetus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ac37916ffd8ad3a51956838cf35a51e94}
+\hypertarget{classcattle_a46b5f1e591b420acb2e2ce0e69aef5fe}{
+\index{cattle@{cattle}!GetFoetusWeight@{GetFoetusWeight}}
+\index{GetFoetusWeight@{GetFoetusWeight}!cattle@{cattle}}
+\subsubsection[{GetFoetusWeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetFoetusWeight (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a46b5f1e591b420acb2e2ce0e69aef5fe}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a360aab1d0df345d99791e00292999a94}{dk\_\-cattle}.\hypertarget{classcattle_a7bda83b3832babf60809ada5e9e785ab}{
+\index{cattle@{cattle}!GetgestationPeriod@{GetgestationPeriod}}
+\index{GetgestationPeriod@{GetgestationPeriod}!cattle@{cattle}}
+\subsubsection[{GetgestationPeriod}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetgestationPeriod ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a7bda83b3832babf60809ada5e9e785ab}
+\hypertarget{classcattle_ad3bde990fd7b51e67af6ba7c202f6235}{
+\index{cattle@{cattle}!GetGrazed\_\-DM@{GetGrazed\_\-DM}}
+\index{GetGrazed\_\-DM@{GetGrazed\_\-DM}!cattle@{cattle}}
+\subsubsection[{GetGrazed\_\-DM}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetGrazed\_\-DM ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ad3bde990fd7b51e67af6ba7c202f6235}
+\hypertarget{classcattle_ad841e565dad1037d1ad59967d7d70600}{
+\index{cattle@{cattle}!GetGrazed\_\-FE@{GetGrazed\_\-FE}}
+\index{GetGrazed\_\-FE@{GetGrazed\_\-FE}!cattle@{cattle}}
+\subsubsection[{GetGrazed\_\-FE}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetGrazed\_\-FE ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ad841e565dad1037d1ad59967d7d70600}
+\hypertarget{classcattle_a31cf342857dea26371d0da77baec3b99}{
+\index{cattle@{cattle}!Getgrowth@{Getgrowth}}
+\index{Getgrowth@{Getgrowth}!cattle@{cattle}}
+\subsubsection[{Getgrowth}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf feedItem}$\ast$ cattle::Getgrowth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a31cf342857dea26371d0da77baec3b99}
+\hypertarget{classcattle_a1f53f6f6b44193909bd6524df7c90169}{
+\index{cattle@{cattle}!GetisFemale@{GetisFemale}}
+\index{GetisFemale@{GetisFemale}!cattle@{cattle}}
+\subsubsection[{GetisFemale}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cattle::GetisFemale () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a1f53f6f6b44193909bd6524df7c90169}
+\hypertarget{classcattle_aa137de147bb60b1f2cc1558167a0220d}{
+\index{cattle@{cattle}!GetisFoetus@{GetisFoetus}}
+\index{GetisFoetus@{GetisFoetus}!cattle@{cattle}}
+\subsubsection[{GetisFoetus}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cattle::GetisFoetus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_aa137de147bb60b1f2cc1558167a0220d}
+\hypertarget{classcattle_a1894bf94cd8490350bd5f927aa4453b4}{
+\index{cattle@{cattle}!GetisSuckling@{GetisSuckling}}
+\index{GetisSuckling@{GetisSuckling}!cattle@{cattle}}
+\subsubsection[{GetisSuckling}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cattle::GetisSuckling ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a1894bf94cd8490350bd5f927aa4453b4}
+\hypertarget{classcattle_a059b9c483e37fa36a43773026d07fd92}{
+\index{cattle@{cattle}!GetisYoung@{GetisYoung}}
+\index{GetisYoung@{GetisYoung}!cattle@{cattle}}
+\subsubsection[{GetisYoung}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool cattle::GetisYoung ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a059b9c483e37fa36a43773026d07fd92}
+\hypertarget{classcattle_a4fef6fdeb96e7a68e7e351c638f8fa13}{
+\index{cattle@{cattle}!GetlactationNumber@{GetlactationNumber}}
+\index{GetlactationNumber@{GetlactationNumber}!cattle@{cattle}}
+\subsubsection[{GetlactationNumber}]{\setlength{\rightskip}{0pt plus 5cm}int cattle::GetlactationNumber ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a4fef6fdeb96e7a68e7e351c638f8fa13}
+\hypertarget{classcattle_a8211a2fdbecf994a39ab695be7a2bfb0}{
+\index{cattle@{cattle}!GetlastMilkYield@{GetlastMilkYield}}
+\index{GetlastMilkYield@{GetlastMilkYield}!cattle@{cattle}}
+\subsubsection[{GetlastMilkYield}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetlastMilkYield ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a8211a2fdbecf994a39ab695be7a2bfb0}
+\hypertarget{classcattle_ac5a17c14e1bbb07428588e7638eee47f}{
+\index{cattle@{cattle}!GetME\_\-intake@{GetME\_\-intake}}
+\index{GetME\_\-intake@{GetME\_\-intake}!cattle@{cattle}}
+\subsubsection[{GetME\_\-intake}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetME\_\-intake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ac5a17c14e1bbb07428588e7638eee47f}
+\hypertarget{classcattle_a8053c5118595709cf95a6e54b2560024}{
+\index{cattle@{cattle}!GetMethaneProduction@{GetMethaneProduction}}
+\index{GetMethaneProduction@{GetMethaneProduction}!cattle@{cattle}}
+\subsubsection[{GetMethaneProduction}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetMethaneProduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a8053c5118595709cf95a6e54b2560024}
+\hypertarget{classcattle_a0e993d2a22fd76bb0d1adfb0164eb5d8}{
+\index{cattle@{cattle}!Getmilk@{Getmilk}}
+\index{Getmilk@{Getmilk}!cattle@{cattle}}
+\subsubsection[{Getmilk}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf feedItem}$\ast$ cattle::Getmilk ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a0e993d2a22fd76bb0d1adfb0164eb5d8}
+\hypertarget{classcattle_a6301f605944f6071be0c63421353c375}{
+\index{cattle@{cattle}!GetMilkCconc@{GetMilkCconc}}
+\index{GetMilkCconc@{GetMilkCconc}!cattle@{cattle}}
+\subsubsection[{GetMilkCconc}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetMilkCconc ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a6301f605944f6071be0c63421353c375}
+Get carbon in \hyperlink{classmilk}{milk}. Nice to know: why those default values and where does the fomula come from? \hypertarget{classcattle_acc71b376de54129fb52a75aa17476cb0}{
+\index{cattle@{cattle}!Getmother@{Getmother}}
+\index{Getmother@{Getmother}!cattle@{cattle}}
+\subsubsection[{Getmother}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf cattle}$\ast$ cattle::Getmother ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_acc71b376de54129fb52a75aa17476cb0}
+\hypertarget{classcattle_aeac6984f3aed6a1b0c37b609ffdbc02a}{
+\index{cattle@{cattle}!GetPalatability@{GetPalatability}}
+\index{GetPalatability@{GetPalatability}!cattle@{cattle}}
+\subsubsection[{GetPalatability}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetPalatability ({\bf feed\_\-resource} $\ast$ {\em aFeed\_\-resource})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_aeac6984f3aed6a1b0c37b609ffdbc02a}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a7ab0e6b1bce961a575452a47d6ac5650}{dk\_\-cattle}.\hypertarget{classcattle_a4de5ef9578b7f00f7fd0135001d2bf0f}{
+\index{cattle@{cattle}!GetPotentialAnnualMilkProduction@{GetPotentialAnnualMilkProduction}}
+\index{GetPotentialAnnualMilkProduction@{GetPotentialAnnualMilkProduction}!cattle@{cattle}}
+\subsubsection[{GetPotentialAnnualMilkProduction}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetPotentialAnnualMilkProduction (int {\em durationOfLactation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a4de5ef9578b7f00f7fd0135001d2bf0f}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a21fa59d45d64b1aa106d3e4e2912550a}{dk\_\-cattle}.\hypertarget{classcattle_a2aefe7556df04aa4cff0e773d6c50db4}{
+\index{cattle@{cattle}!GetPotentialIntake@{GetPotentialIntake}}
+\index{GetPotentialIntake@{GetPotentialIntake}!cattle@{cattle}}
+\subsubsection[{GetPotentialIntake}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetPotentialIntake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a2aefe7556df04aa4cff0e773d6c50db4}
+\hypertarget{classcattle_aee7aea077f7f8fd48035eae6308bdabc}{
+\index{cattle@{cattle}!GetPotentialMilkIntake@{GetPotentialMilkIntake}}
+\index{GetPotentialMilkIntake@{GetPotentialMilkIntake}!cattle@{cattle}}
+\subsubsection[{GetPotentialMilkIntake}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetPotentialMilkIntake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_aee7aea077f7f8fd48035eae6308bdabc}
+
+
+Reimplemented in \hyperlink{classdk__cattle_ac3beb86fb1736f85fc2330f31bb5bfee}{dk\_\-cattle}.\hypertarget{classcattle_a325c1edad49aee895e01d87f0c44bf64}{
+\index{cattle@{cattle}!GetPotentialMilkYield@{GetPotentialMilkYield}}
+\index{GetPotentialMilkYield@{GetPotentialMilkYield}!cattle@{cattle}}
+\subsubsection[{GetPotentialMilkYield}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetPotentialMilkYield ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a325c1edad49aee895e01d87f0c44bf64}
+
+
+Reimplemented in \hyperlink{classdk__cattle_aba7df82a62a25f831a662e6377f97224}{dk\_\-cattle}.\hypertarget{classcattle_ab885604f6912a5bfadc8a71d42e72328}{
+\index{cattle@{cattle}!GetPotentialMilkYield@{GetPotentialMilkYield}}
+\index{GetPotentialMilkYield@{GetPotentialMilkYield}!cattle@{cattle}}
+\subsubsection[{GetPotentialMilkYield}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetPotentialMilkYield (int {\em daysFromParturition})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ab885604f6912a5bfadc8a71d42e72328}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a33782ebe3783a6ef6ff393b0803c53b4}{dk\_\-cattle}.\hypertarget{classcattle_a025d988cdff86a92ff8bb87d8f918cd5}{
+\index{cattle@{cattle}!GetrumenNsurplus@{GetrumenNsurplus}}
+\index{GetrumenNsurplus@{GetrumenNsurplus}!cattle@{cattle}}
+\subsubsection[{GetrumenNsurplus}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetrumenNsurplus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a025d988cdff86a92ff8bb87d8f918cd5}
+\hypertarget{classcattle_a96d6a13910c586fc522ae1dbb11730d8}{
+\index{cattle@{cattle}!GetSensibleHeatProduction@{GetSensibleHeatProduction}}
+\index{GetSensibleHeatProduction@{GetSensibleHeatProduction}!cattle@{cattle}}
+\subsubsection[{GetSensibleHeatProduction}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetSensibleHeatProduction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a96d6a13910c586fc522ae1dbb11730d8}
+Calculated Heat Production. There are 4 scenarios: young and non-\/pregnant female, male, female with lactation, pregnent with no lactation \hypertarget{classcattle_a5959426fa68c0093242785ddd0a928d2}{
+\index{cattle@{cattle}!GeturineN@{GeturineN}}
+\index{GeturineN@{GeturineN}!cattle@{cattle}}
+\subsubsection[{GeturineN}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GeturineN ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a5959426fa68c0093242785ddd0a928d2}
+\hypertarget{classcattle_add87f09e9b8ef0ed3ca7dcf9e4ac7172}{
+\index{cattle@{cattle}!GetUrineVolume@{GetUrineVolume}}
+\index{GetUrineVolume@{GetUrineVolume}!cattle@{cattle}}
+\subsubsection[{GetUrineVolume}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::GetUrineVolume ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_add87f09e9b8ef0ed3ca7dcf9e4ac7172}
+Calculate urine volume -\/ from Bannink et al, J of Dairy Sci, 82 p1008 \hypertarget{classcattle_ac0d5f90c27a81005db97ff5d58d5607d}{
+\index{cattle@{cattle}!GetvariableCosts@{GetvariableCosts}}
+\index{GetvariableCosts@{GetvariableCosts}!cattle@{cattle}}
+\subsubsection[{GetvariableCosts}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::GetvariableCosts () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ac0d5f90c27a81005db97ff5d58d5607d}
+\hypertarget{classcattle_a32f9c2c17b16e891f8e208754865d734}{
+\index{cattle@{cattle}!Getweight@{Getweight}}
+\index{Getweight@{Getweight}!cattle@{cattle}}
+\subsubsection[{Getweight}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::Getweight () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a32f9c2c17b16e891f8e208754865d734}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a2c73fdc5a59294459de1a0a193e9ea3a}{dk\_\-cattle}.\hypertarget{classcattle_a19fcd794dfdaba6c37698d04a5056423}{
+\index{cattle@{cattle}!GrowFoetus@{GrowFoetus}}
+\index{GrowFoetus@{GrowFoetus}!cattle@{cattle}}
+\subsubsection[{GrowFoetus}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::GrowFoetus (double {\em newFoetusProtein}, \/  double {\em newFoetusFat}, \/  double {\em newFoetus})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a19fcd794dfdaba6c37698d04a5056423}
+Add weight and protein to foetus \hypertarget{classcattle_a4998e90c175bd1e1aa4b57fcfcc5b281}{
+\index{cattle@{cattle}!GrowGravidUterus@{GrowGravidUterus}}
+\index{GrowGravidUterus@{GrowGravidUterus}!cattle@{cattle}}
+\subsubsection[{GrowGravidUterus}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::GrowGravidUterus (double {\em newProtein}, \/  double {\em newFat})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a4998e90c175bd1e1aa4b57fcfcc5b281}
+
+
+Reimplemented in \hyperlink{classdk__cattle_aa008034a90d25b2682169fc87651a45b}{dk\_\-cattle}.\hypertarget{classcattle_ae68f10b2d5e32d120b4d90b5922534cf}{
+\index{cattle@{cattle}!IncrementIndex@{IncrementIndex}}
+\index{IncrementIndex@{IncrementIndex}!cattle@{cattle}}
+\subsubsection[{IncrementIndex}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::IncrementIndex ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ae68f10b2d5e32d120b4d90b5922534cf}
+\hypertarget{classcattle_a1ff860afd88aa3c58c66a5291ccbacb5}{
+\index{cattle@{cattle}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!cattle@{cattle}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Initialise (double {\em anAge}, \/  int {\em thedaysFromConception}, \/  int {\em thelactationNumber})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a1ff860afd88aa3c58c66a5291ccbacb5}
+\hypertarget{classcattle_a7a2111adbacdb6ec477005ac5779077b}{
+\index{cattle@{cattle}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!cattle@{cattle}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::Initialise ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a7a2111adbacdb6ec477005ac5779077b}
+Initializing of variable 
+
+Reimplemented from \hyperlink{classanimal_a06e14e53c94c2184ec43993b78b8d74b}{animal}.\hypertarget{classcattle_ab606ffff933142bc469c151721050d2d}{
+\index{cattle@{cattle}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!cattle@{cattle}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::Initialise (int {\em aCode}, \/  int {\em anAge}, \/  double {\em LU}, \/  double {\em numPrCohort}, \/  bool {\em isAYoung})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ab606ffff933142bc469c151721050d2d}
+Initialise \hyperlink{classcattle}{cattle} \hypertarget{classcattle_ab41b2206b12b2f5bd16dd817960315bd}{
+\index{cattle@{cattle}!InitialiseFoetus@{InitialiseFoetus}}
+\index{InitialiseFoetus@{InitialiseFoetus}!cattle@{cattle}}
+\subsubsection[{InitialiseFoetus}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::InitialiseFoetus ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ab41b2206b12b2f5bd16dd817960315bd}
+
+
+Reimplemented in \hyperlink{classdk__cattle_aa0979fed4c6facc5d1dbd86c38faaa13}{dk\_\-cattle}.\hypertarget{classcattle_a268ab4ca694f20f0207125ef11992933}{
+\index{cattle@{cattle}!intake@{intake}}
+\index{intake@{intake}!cattle@{cattle}}
+\subsubsection[{intake}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::intake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcattle_a268ab4ca694f20f0207125ef11992933}
+
+
+Reimplemented in \hyperlink{classdk__cattle_ac26882672df3b641aa96104dcb4eccef}{dk\_\-cattle}.\hypertarget{classcattle_a45e30956734fd3fba35da661cf4198e2}{
+\index{cattle@{cattle}!isLactating@{isLactating}}
+\index{isLactating@{isLactating}!cattle@{cattle}}
+\subsubsection[{isLactating}]{\setlength{\rightskip}{0pt plus 5cm}bool cattle::isLactating () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a45e30956734fd3fba35da661cf4198e2}
+\hypertarget{classcattle_abbe4b4f1b07cee30b41122bcad34ea48}{
+\index{cattle@{cattle}!isPregnant@{isPregnant}}
+\index{isPregnant@{isPregnant}!cattle@{cattle}}
+\subsubsection[{isPregnant}]{\setlength{\rightskip}{0pt plus 5cm}bool cattle::isPregnant () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_abbe4b4f1b07cee30b41122bcad34ea48}
+\hypertarget{classcattle_a380c56c03be73c2b0bc0ce6f999a499e}{
+\index{cattle@{cattle}!loadAnimalProduct@{loadAnimalProduct}}
+\index{loadAnimalProduct@{loadAnimalProduct}!cattle@{cattle}}
+\subsubsection[{loadAnimalProduct}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::loadAnimalProduct ({\bf animalProduct} $\ast$ {\em anAnimalProduct})}}
+\label{classcattle_a380c56c03be73c2b0bc0ce6f999a499e}
+Update anAnimalProduct \hypertarget{classcattle_adec0490651ec7d3cfb5b90250dd42dc0}{
+\index{cattle@{cattle}!MakePregnant@{MakePregnant}}
+\index{MakePregnant@{MakePregnant}!cattle@{cattle}}
+\subsubsection[{MakePregnant}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::MakePregnant (bool {\em isAFemale})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_adec0490651ec7d3cfb5b90250dd42dc0}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a015a7a7fd47f94af868165d276d26142}{dk\_\-cattle}.\hypertarget{classcattle_abbfa3e590fcb00ff39222a765f8cf608}{
+\index{cattle@{cattle}!ManureProduction@{ManureProduction}}
+\index{ManureProduction@{ManureProduction}!cattle@{cattle}}
+\subsubsection[{ManureProduction}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::ManureProduction (fstream $\ast$ {\em fileStream})}}
+\label{classcattle_abbfa3e590fcb00ff39222a765f8cf608}
+Makes a Fatal Error and stops Fasset. Should not be called \hypertarget{classcattle_adc0149dd773e4a12265c5e144eef6064}{
+\index{cattle@{cattle}!NinEBWchange@{NinEBWchange}}
+\index{NinEBWchange@{NinEBWchange}!cattle@{cattle}}
+\subsubsection[{NinEBWchange}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::NinEBWchange ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcattle_adc0149dd773e4a12265c5e144eef6064}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a15d4305d06c0046414ba06a00904c0b9}{dk\_\-cattle}.\hypertarget{classcattle_af6ad25c3e883a183b1470d6b7e534406}{
+\index{cattle@{cattle}!Partition@{Partition}}
+\index{Partition@{Partition}!cattle@{cattle}}
+\subsubsection[{Partition}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Partition ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcattle_af6ad25c3e883a183b1470d6b7e534406}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a2d6a1d109141cc874f41d4e462eaa728}{dk\_\-cattle}.\hypertarget{classcattle_a6baa384415f687dbe7fa420cb46bb62e}{
+\index{cattle@{cattle}!Production@{Production}}
+\index{Production@{Production}!cattle@{cattle}}
+\subsubsection[{Production}]{\setlength{\rightskip}{0pt plus 5cm}double cattle::Production ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a6baa384415f687dbe7fa420cb46bb62e}
+Calls functions to calc growth + production of dung and urine, returns N surplus in \hyperlink{classdiet}{diet} For dairy \hyperlink{classcattle}{cattle}, functions also calc foetus growth and \hyperlink{classmilk}{milk} production \hypertarget{classcattle_a88117c15ba8d100cc4489d7f8f125b76}{
+\index{cattle@{cattle}!ProteinDigestion@{ProteinDigestion}}
+\index{ProteinDigestion@{ProteinDigestion}!cattle@{cattle}}
+\subsubsection[{ProteinDigestion}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::ProteinDigestion (double $\ast$ {\em availableN})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classcattle_a88117c15ba8d100cc4489d7f8f125b76}
+Simulates digestion of protein in gut -\/ returns the amount of N in dung, surplus rumen N and N available for metabolism \hypertarget{classcattle_a13ca8c9803fc7d414933e0cacb5e398c}{
+\index{cattle@{cattle}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cattle@{cattle}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::ReadParameters (fstream $\ast$ {\em afile})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a13ca8c9803fc7d414933e0cacb5e398c}
+Initialize a \hyperlink{classcattle}{cattle} from a file 
+\begin{DoxyParams}{Parameters}
+\item[{\em afile}]must be initialize with correct file \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classanimal_ad7a71ab5ae87becfa921f70501cf4ee1}{animal}.
+
+Reimplemented in \hyperlink{classdk__cattle_a7b51caf022492f303671bc80780bc49c}{dk\_\-cattle}.\hypertarget{classcattle_abbfdc707ceb6778a0e335acdcf8e24d4}{
+\index{cattle@{cattle}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!cattle@{cattle}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::ReceivePlan ({\bf cloneList}$<$ {\bf product} $>$ $\ast$ {\em afeedPlanList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_abbfdc707ceb6778a0e335acdcf8e24d4}
+makes afeedPlanList the new feedPlanList. Is no longer used in Fasset \hypertarget{classcattle_aa064459116b771e6a3c9b2dac34ce0bf}{
+\index{cattle@{cattle}!Setage@{Setage}}
+\index{Setage@{Setage}!cattle@{cattle}}
+\subsubsection[{Setage}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Setage (int {\em anAge})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_aa064459116b771e6a3c9b2dac34ce0bf}
+\hypertarget{classcattle_a356e6940e7396a01a860fbc853ecc144}{
+\index{cattle@{cattle}!SetbodyFat@{SetbodyFat}}
+\index{SetbodyFat@{SetbodyFat}!cattle@{cattle}}
+\subsubsection[{SetbodyFat}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetbodyFat (double {\em abodyFat})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a356e6940e7396a01a860fbc853ecc144}
+\hypertarget{classcattle_ad9f7a3fc99cb90f4634ea36a8af5b15d}{
+\index{cattle@{cattle}!SetbodyProtein@{SetbodyProtein}}
+\index{SetbodyProtein@{SetbodyProtein}!cattle@{cattle}}
+\subsubsection[{SetbodyProtein}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetbodyProtein (double {\em aProtein})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ad9f7a3fc99cb90f4634ea36a8af5b15d}
+\hypertarget{classcattle_a41da605e6ff1f29060cd6b67899946f1}{
+\index{cattle@{cattle}!SetCalf@{SetCalf}}
+\index{SetCalf@{SetCalf}!cattle@{cattle}}
+\subsubsection[{SetCalf}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::SetCalf ({\bf cattle} $\ast$ {\em aCalf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a41da605e6ff1f29060cd6b67899946f1}
+\hypertarget{classcattle_a36dd85ccca1fde2101b13e148951e280}{
+\index{cattle@{cattle}!Setcode@{Setcode}}
+\index{Setcode@{Setcode}!cattle@{cattle}}
+\subsubsection[{Setcode}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Setcode (int {\em aCode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a36dd85ccca1fde2101b13e148951e280}
+\hypertarget{classcattle_a914dbca3cb615490a696d4a63aaab37a}{
+\index{cattle@{cattle}!SetdaysFromConception@{SetdaysFromConception}}
+\index{SetdaysFromConception@{SetdaysFromConception}!cattle@{cattle}}
+\subsubsection[{SetdaysFromConception}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::SetdaysFromConception (double {\em days})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a914dbca3cb615490a696d4a63aaab37a}
+\hypertarget{classcattle_ac2b8f179d21f9b6e11f803e68a43f607}{
+\index{cattle@{cattle}!SetdaysFromParturition@{SetdaysFromParturition}}
+\index{SetdaysFromParturition@{SetdaysFromParturition}!cattle@{cattle}}
+\subsubsection[{SetdaysFromParturition}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::SetdaysFromParturition (double {\em days})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ac2b8f179d21f9b6e11f803e68a43f607}
+\hypertarget{classcattle_a9756ddb6e5fdf7b732690455d067bcee}{
+\index{cattle@{cattle}!SetfeedingGroup@{SetfeedingGroup}}
+\index{SetfeedingGroup@{SetfeedingGroup}!cattle@{cattle}}
+\subsubsection[{SetfeedingGroup}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetfeedingGroup (int {\em afeedingGroup})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a9756ddb6e5fdf7b732690455d067bcee}
+\hypertarget{classcattle_a1a2411237f113c80e1b8aff941aa937c}{
+\index{cattle@{cattle}!SetfeedPlanList@{SetfeedPlanList}}
+\index{SetfeedPlanList@{SetfeedPlanList}!cattle@{cattle}}
+\subsubsection[{SetfeedPlanList}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetfeedPlanList ({\bf cloneList}$<$ {\bf product} $>$ $\ast$ {\em aFeedPlan})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a1a2411237f113c80e1b8aff941aa937c}
+\hypertarget{classcattle_a5bb985f9fe851b8850c06a6457e9f8c7}{
+\index{cattle@{cattle}!SetfeedUseList@{SetfeedUseList}}
+\index{SetfeedUseList@{SetfeedUseList}!cattle@{cattle}}
+\subsubsection[{SetfeedUseList}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetfeedUseList ({\bf cloneList}$<$ {\bf product} $>$ $\ast$ {\em aFeedUseList})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a5bb985f9fe851b8850c06a6457e9f8c7}
+\hypertarget{classcattle_a75e4074bb40b9683fcf0b5053247164f}{
+\index{cattle@{cattle}!SetfieldList@{SetfieldList}}
+\index{SetfieldList@{SetfieldList}!cattle@{cattle}}
+\subsubsection[{SetfieldList}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetfieldList ({\bf linkList}$<$ {\bf field} $>$ $\ast$ {\em afieldList})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a75e4074bb40b9683fcf0b5053247164f}
+\hypertarget{classcattle_a2656ed54ea449daa5272f721379da95b}{
+\index{cattle@{cattle}!SetFoetus@{SetFoetus}}
+\index{SetFoetus@{SetFoetus}!cattle@{cattle}}
+\subsubsection[{SetFoetus}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::SetFoetus ({\bf cattle} $\ast$ {\em aFoetus})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_a2656ed54ea449daa5272f721379da95b}
+\hypertarget{classcattle_abc88c494953dc706add28e0839bdef40}{
+\index{cattle@{cattle}!SethoursHoused@{SethoursHoused}}
+\index{SethoursHoused@{SethoursHoused}!cattle@{cattle}}
+\subsubsection[{SethoursHoused}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SethoursHoused (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_abc88c494953dc706add28e0839bdef40}
+\hypertarget{classcattle_a3277350bb7f701195d624d9ee10a2f5b}{
+\index{cattle@{cattle}!SetisFemale@{SetisFemale}}
+\index{SetisFemale@{SetisFemale}!cattle@{cattle}}
+\subsubsection[{SetisFemale}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetisFemale (bool {\em isaFemale})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a3277350bb7f701195d624d9ee10a2f5b}
+\hypertarget{classcattle_a9040755a92eba6fcd6a71b907e06ef95}{
+\index{cattle@{cattle}!SetisFoetus@{SetisFoetus}}
+\index{SetisFoetus@{SetisFoetus}!cattle@{cattle}}
+\subsubsection[{SetisFoetus}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetisFoetus (bool {\em itIsAFoetus})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a9040755a92eba6fcd6a71b907e06ef95}
+\hypertarget{classcattle_a70296e4b60d7540a8be2be7beca964ca}{
+\index{cattle@{cattle}!SetisSuckling@{SetisSuckling}}
+\index{SetisSuckling@{SetisSuckling}!cattle@{cattle}}
+\subsubsection[{SetisSuckling}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetisSuckling (bool {\em isItSuckling})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a70296e4b60d7540a8be2be7beca964ca}
+\hypertarget{classcattle_a4c094d809f6ea65502d06a96dc42e08d}{
+\index{cattle@{cattle}!SetisYoung@{SetisYoung}}
+\index{SetisYoung@{SetisYoung}!cattle@{cattle}}
+\subsubsection[{SetisYoung}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::SetisYoung (bool {\em isItYoung})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a4c094d809f6ea65502d06a96dc42e08d}
+\hypertarget{classcattle_aec62f7edf9677935504583181c378966}{
+\index{cattle@{cattle}!Setlactating@{Setlactating}}
+\index{Setlactating@{Setlactating}!cattle@{cattle}}
+\subsubsection[{Setlactating}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::Setlactating (bool {\em aLactation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_aec62f7edf9677935504583181c378966}
+\hypertarget{classcattle_aeed22677fe5975db88ee1788b5d27670}{
+\index{cattle@{cattle}!SetlactationNumber@{SetlactationNumber}}
+\index{SetlactationNumber@{SetlactationNumber}!cattle@{cattle}}
+\subsubsection[{SetlactationNumber}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::SetlactationNumber (int {\em aNumber})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_aeed22677fe5975db88ee1788b5d27670}
+\hypertarget{classcattle_ad80178c5a27de60a10542207d47ec2c2}{
+\index{cattle@{cattle}!Setmother@{Setmother}}
+\index{Setmother@{Setmother}!cattle@{cattle}}
+\subsubsection[{Setmother}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Setmother ({\bf cattle} $\ast$ {\em aMother})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_ad80178c5a27de60a10542207d47ec2c2}
+\hypertarget{classcattle_ad253d77a1a672d0ebc2b4e7093aad228}{
+\index{cattle@{cattle}!Setpregnant@{Setpregnant}}
+\index{Setpregnant@{Setpregnant}!cattle@{cattle}}
+\subsubsection[{Setpregnant}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::Setpregnant (bool {\em aPregnant})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_ad253d77a1a672d0ebc2b4e7093aad228}
+\hypertarget{classcattle_a89311923c18e5e7abbd67339f150a077}{
+\index{cattle@{cattle}!Setweight@{Setweight}}
+\index{Setweight@{Setweight}!cattle@{cattle}}
+\subsubsection[{Setweight}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cattle::Setweight (double {\em aWeight})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_a89311923c18e5e7abbd67339f150a077}
+\hypertarget{classcattle_ac747b39751d40739d2b1c00246e65c7d}{
+\index{cattle@{cattle}!ShowCurrentDiet@{ShowCurrentDiet}}
+\index{ShowCurrentDiet@{ShowCurrentDiet}!cattle@{cattle}}
+\subsubsection[{ShowCurrentDiet}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::ShowCurrentDiet (fstream $\ast$ {\em fs})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_ac747b39751d40739d2b1c00246e65c7d}
+printing all items of feedPlanList out to fs if it is available or else to cout 
+\begin{DoxyParams}{Parameters}
+\item[{\em fs}]a filestream witch feedPlanList can be printet to if it is available\end{DoxyParams}
+\hypertarget{classcattle_ad2dd5d5a563d9b421d4c3cf46e563df3}{
+\index{cattle@{cattle}!SucklingCalfMilkIntake@{SucklingCalfMilkIntake}}
+\index{SucklingCalfMilkIntake@{SucklingCalfMilkIntake}!cattle@{cattle}}
+\subsubsection[{SucklingCalfMilkIntake}]{\setlength{\rightskip}{0pt plus 5cm}virtual double cattle::SucklingCalfMilkIntake ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classcattle_ad2dd5d5a563d9b421d4c3cf46e563df3}
+
+
+Reimplemented in \hyperlink{classdk__cattle_a448e3a99c61a223770c53dd023e1a9da}{dk\_\-cattle}.\hypertarget{classcattle_a680668c3ea07844f0dce5193f2f85b69}{
+\index{cattle@{cattle}!WeanCalf@{WeanCalf}}
+\index{WeanCalf@{WeanCalf}!cattle@{cattle}}
+\subsubsection[{WeanCalf}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::WeanCalf ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a680668c3ea07844f0dce5193f2f85b69}
+Wean a calf \hypertarget{classcattle_a66a96c0c6ec89204ed6b11b8393f8014}{
+\index{cattle@{cattle}!WriteCowOutput@{WriteCowOutput}}
+\index{WriteCowOutput@{WriteCowOutput}!cattle@{cattle}}
+\subsubsection[{WriteCowOutput}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::WriteCowOutput (bool {\em header})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_a66a96c0c6ec89204ed6b11b8393f8014}
+Detailed data output to file -\/ used in standalone version \hypertarget{classcattle_addc79a7896cb2c8207f26971cdd57d48}{
+\index{cattle@{cattle}!WriteFeedingError@{WriteFeedingError}}
+\index{WriteFeedingError@{WriteFeedingError}!cattle@{cattle}}
+\subsubsection[{WriteFeedingError}]{\setlength{\rightskip}{0pt plus 5cm}void cattle::WriteFeedingError ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_addc79a7896cb2c8207f26971cdd57d48}
+Called if feeding is insufficient to cover some basic requirement (\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{e.g}. maintenance or pregnancy) 
+
+\subsection{Member Data Documentation}
+\hypertarget{classcattle_a54c41c4168fa7a8bf51dbab9c79c9b61}{
+\index{cattle@{cattle}!acceptanceCoefficient@{acceptanceCoefficient}}
+\index{acceptanceCoefficient@{acceptanceCoefficient}!cattle@{cattle}}
+\subsubsection[{acceptanceCoefficient}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::acceptanceCoefficient}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a54c41c4168fa7a8bf51dbab9c79c9b61}
+\hypertarget{classcattle_abffa75c5af0af11f66f1217329dc71b2}{
+\index{cattle@{cattle}!age@{age}}
+\index{age@{age}!cattle@{cattle}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattle::age}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_abffa75c5af0af11f66f1217329dc71b2}
+\hypertarget{classcattle_abd8875c6b64433fd2dbd14593c8bd961}{
+\index{cattle@{cattle}!aminoAcidDemand@{aminoAcidDemand}}
+\index{aminoAcidDemand@{aminoAcidDemand}!cattle@{cattle}}
+\subsubsection[{aminoAcidDemand}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::aminoAcidDemand}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_abd8875c6b64433fd2dbd14593c8bd961}
+\hypertarget{classcattle_ad77f647e607efacadcec9aa8ef82de2c}{
+\index{cattle@{cattle}!aminoAcidSupply@{aminoAcidSupply}}
+\index{aminoAcidSupply@{aminoAcidSupply}!cattle@{cattle}}
+\subsubsection[{aminoAcidSupply}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::aminoAcidSupply}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ad77f647e607efacadcec9aa8ef82de2c}
+\hypertarget{classcattle_ace40244cf83a23b5a874f5f0185807fa}{
+\index{cattle@{cattle}!bodyFat@{bodyFat}}
+\index{bodyFat@{bodyFat}!cattle@{cattle}}
+\subsubsection[{bodyFat}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::bodyFat}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ace40244cf83a23b5a874f5f0185807fa}
+\hypertarget{classcattle_adc9375abcc182c384874998ba6bfb91b}{
+\index{cattle@{cattle}!bodyProtein@{bodyProtein}}
+\index{bodyProtein@{bodyProtein}!cattle@{cattle}}
+\subsubsection[{bodyProtein}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::bodyProtein}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_adc9375abcc182c384874998ba6bfb91b}
+\hypertarget{classcattle_a98e2eb85c986738249c5ee54efcbdeba}{
+\index{cattle@{cattle}!calf@{calf}}
+\index{calf@{calf}!cattle@{cattle}}
+\subsubsection[{calf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattle}$\ast$ {\bf cattle::calf}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a98e2eb85c986738249c5ee54efcbdeba}
+\hypertarget{classcattle_abeb37ebde95fcf8f746364102f91c94c}{
+\index{cattle@{cattle}!code@{code}}
+\index{code@{code}!cattle@{cattle}}
+\subsubsection[{code}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattle::code}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_abeb37ebde95fcf8f746364102f91c94c}
+\hypertarget{classcattle_a1793c177cc739ddb54c8b0f21e1b83f9}{
+\index{cattle@{cattle}!currentDiet@{currentDiet}}
+\index{currentDiet@{currentDiet}!cattle@{cattle}}
+\subsubsection[{currentDiet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feed\_\-resource}$\ast$ {\bf cattle::currentDiet}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a1793c177cc739ddb54c8b0f21e1b83f9}
+\hypertarget{classcattle_a7e36c3531d8ae149261394dbfd8f3a51}{
+\index{cattle@{cattle}!daysFromConception@{daysFromConception}}
+\index{daysFromConception@{daysFromConception}!cattle@{cattle}}
+\subsubsection[{daysFromConception}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::daysFromConception}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a7e36c3531d8ae149261394dbfd8f3a51}
+\hypertarget{classcattle_a6a51852f30326c7e77ac430c89033d0f}{
+\index{cattle@{cattle}!daysFromParturition@{daysFromParturition}}
+\index{daysFromParturition@{daysFromParturition}!cattle@{cattle}}
+\subsubsection[{daysFromParturition}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::daysFromParturition}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a6a51852f30326c7e77ac430c89033d0f}
+\hypertarget{classcattle_a484fc80eeb5bf6fdcc1e4f0a43a647b0}{
+\index{cattle@{cattle}!detailsFile@{detailsFile}}
+\index{detailsFile@{detailsFile}!cattle@{cattle}}
+\subsubsection[{detailsFile}]{\setlength{\rightskip}{0pt plus 5cm}fstream$\ast$ {\bf cattle::detailsFile}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a484fc80eeb5bf6fdcc1e4f0a43a647b0}
+\hypertarget{classcattle_a70bffbbd0dba38315fa124c06b4c8814}{
+\index{cattle@{cattle}!detailsFileName@{detailsFileName}}
+\index{detailsFileName@{detailsFileName}!cattle@{cattle}}
+\subsubsection[{detailsFileName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf cattle::detailsFileName}\mbox{[}100\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a70bffbbd0dba38315fa124c06b4c8814}
+\hypertarget{classcattle_a57f185cfef76fec68f325e0197edc51b}{
+\index{cattle@{cattle}!DM\_\-intake@{DM\_\-intake}}
+\index{DM\_\-intake@{DM\_\-intake}!cattle@{cattle}}
+\subsubsection[{DM\_\-intake}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::DM\_\-intake}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a57f185cfef76fec68f325e0197edc51b}
+\hypertarget{classcattle_a3abd49d3221dd7a38255a4bffd7770b3}{
+\index{cattle@{cattle}!dungN@{dungN}}
+\index{dungN@{dungN}!cattle@{cattle}}
+\subsubsection[{dungN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::dungN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a3abd49d3221dd7a38255a4bffd7770b3}
+\hypertarget{classcattle_aabaeb5143d3c02eebe3ef676319fb5a0}{
+\index{cattle@{cattle}!FE\_\-intake@{FE\_\-intake}}
+\index{FE\_\-intake@{FE\_\-intake}!cattle@{cattle}}
+\subsubsection[{FE\_\-intake}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::FE\_\-intake}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_aabaeb5143d3c02eebe3ef676319fb5a0}
+\hypertarget{classcattle_a63d4959fc2ec85e12dce81130e1829dc}{
+\index{cattle@{cattle}!FEDemand@{FEDemand}}
+\index{FEDemand@{FEDemand}!cattle@{cattle}}
+\subsubsection[{FEDemand}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::FEDemand}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a63d4959fc2ec85e12dce81130e1829dc}
+\hypertarget{classcattle_a7cf86b18583399992fc6d0ed510a6b95}{
+\index{cattle@{cattle}!feedingGroup@{feedingGroup}}
+\index{feedingGroup@{feedingGroup}!cattle@{cattle}}
+\subsubsection[{feedingGroup}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattle::feedingGroup}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a7cf86b18583399992fc6d0ed510a6b95}
+\hypertarget{classcattle_ae291a15ac3fdf87ec6821d460d819b77}{
+\index{cattle@{cattle}!feedPlanList@{feedPlanList}}
+\index{feedPlanList@{feedPlanList}!cattle@{cattle}}
+\subsubsection[{feedPlanList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf product}$>$$\ast$ {\bf cattle::feedPlanList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ae291a15ac3fdf87ec6821d460d819b77}
+\hypertarget{classcattle_a80820ab424613acc46294b15335b7507}{
+\index{cattle@{cattle}!feedUseList@{feedUseList}}
+\index{feedUseList@{feedUseList}!cattle@{cattle}}
+\subsubsection[{feedUseList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf product}$>$$\ast$ {\bf cattle::feedUseList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a80820ab424613acc46294b15335b7507}
+\hypertarget{classcattle_aac3175b986188a50d979ab1cac4af3ea}{
+\index{cattle@{cattle}!fieldList@{fieldList}}
+\index{fieldList@{fieldList}!cattle@{cattle}}
+\subsubsection[{fieldList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf field}$>$$\ast$ {\bf cattle::fieldList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_aac3175b986188a50d979ab1cac4af3ea}
+\hypertarget{classcattle_aaf87eabecd0e08dcee9d848227c83cd3}{
+\index{cattle@{cattle}!fieldOfftakeList@{fieldOfftakeList}}
+\index{fieldOfftakeList@{fieldOfftakeList}!cattle@{cattle}}
+\subsubsection[{fieldOfftakeList}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::fieldOfftakeList}\mbox{[}500\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_aaf87eabecd0e08dcee9d848227c83cd3}
+\hypertarget{classcattle_a6b3f173720e6c3c4fd533edce88b7301}{
+\index{cattle@{cattle}!foetus@{foetus}}
+\index{foetus@{foetus}!cattle@{cattle}}
+\subsubsection[{foetus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattle}$\ast$ {\bf cattle::foetus}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a6b3f173720e6c3c4fd533edce88b7301}
+\hypertarget{classcattle_a59856200751c49a71847fa421bfada3c}{
+\index{cattle@{cattle}!gestationPeriod@{gestationPeriod}}
+\index{gestationPeriod@{gestationPeriod}!cattle@{cattle}}
+\subsubsection[{gestationPeriod}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::gestationPeriod}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a59856200751c49a71847fa421bfada3c}
+\hypertarget{classcattle_a8d36e025177454054e92c45378279615}{
+\index{cattle@{cattle}!Grazed\_\-DM@{Grazed\_\-DM}}
+\index{Grazed\_\-DM@{Grazed\_\-DM}!cattle@{cattle}}
+\subsubsection[{Grazed\_\-DM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::Grazed\_\-DM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a8d36e025177454054e92c45378279615}
+\hypertarget{classcattle_a6c58edc9e56731094dd5a097f058c2ea}{
+\index{cattle@{cattle}!Grazed\_\-FE@{Grazed\_\-FE}}
+\index{Grazed\_\-FE@{Grazed\_\-FE}!cattle@{cattle}}
+\subsubsection[{Grazed\_\-FE}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::Grazed\_\-FE}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a6c58edc9e56731094dd5a097f058c2ea}
+\hypertarget{classcattle_adda7b2882e426ad63090673d102d27bc}{
+\index{cattle@{cattle}!growth@{growth}}
+\index{growth@{growth}!cattle@{cattle}}
+\subsubsection[{growth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem}$\ast$ {\bf cattle::growth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_adda7b2882e426ad63090673d102d27bc}
+\hypertarget{classcattle_ae5c1f207860f644db590c44eb6ae082b}{
+\index{cattle@{cattle}!hoursHoused@{hoursHoused}}
+\index{hoursHoused@{hoursHoused}!cattle@{cattle}}
+\subsubsection[{hoursHoused}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::hoursHoused}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ae5c1f207860f644db590c44eb6ae082b}
+\hypertarget{classcattle_ae28249dd21e1e0f2978c5cad7bf3f53f}{
+\index{cattle@{cattle}!isFemale@{isFemale}}
+\index{isFemale@{isFemale}!cattle@{cattle}}
+\subsubsection[{isFemale}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattle::isFemale}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ae28249dd21e1e0f2978c5cad7bf3f53f}
+\hypertarget{classcattle_a737451b41bd16074e295e3c395d17745}{
+\index{cattle@{cattle}!isFoetus@{isFoetus}}
+\index{isFoetus@{isFoetus}!cattle@{cattle}}
+\subsubsection[{isFoetus}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattle::isFoetus}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a737451b41bd16074e295e3c395d17745}
+\hypertarget{classcattle_a40126fbf9c2ac40d3578b473e1ba37d1}{
+\index{cattle@{cattle}!isSuckling@{isSuckling}}
+\index{isSuckling@{isSuckling}!cattle@{cattle}}
+\subsubsection[{isSuckling}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattle::isSuckling}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a40126fbf9c2ac40d3578b473e1ba37d1}
+\hypertarget{classcattle_a9fe83aba5038189445bbcf6e96fd4977}{
+\index{cattle@{cattle}!isYoung@{isYoung}}
+\index{isYoung@{isYoung}!cattle@{cattle}}
+\subsubsection[{isYoung}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattle::isYoung}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a9fe83aba5038189445bbcf6e96fd4977}
+\hypertarget{classcattle_a9d5b8f99a41523eb8c0792e49492e350}{
+\index{cattle@{cattle}!lactating@{lactating}}
+\index{lactating@{lactating}!cattle@{cattle}}
+\subsubsection[{lactating}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattle::lactating}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a9d5b8f99a41523eb8c0792e49492e350}
+\hypertarget{classcattle_ae67ed13b4012cda6f63a11098520ff07}{
+\index{cattle@{cattle}!lactationNumber@{lactationNumber}}
+\index{lactationNumber@{lactationNumber}!cattle@{cattle}}
+\subsubsection[{lactationNumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattle::lactationNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ae67ed13b4012cda6f63a11098520ff07}
+\hypertarget{classcattle_a426bdf1c322f7dc4c5447fae45c259eb}{
+\index{cattle@{cattle}!lactoseConc@{lactoseConc}}
+\index{lactoseConc@{lactoseConc}!cattle@{cattle}}
+\subsubsection[{lactoseConc}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::lactoseConc}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a426bdf1c322f7dc4c5447fae45c259eb}
+\hypertarget{classcattle_a363b662f01ef25b47283840fd205c9e9}{
+\index{cattle@{cattle}!lastMilkYield@{lastMilkYield}}
+\index{lastMilkYield@{lastMilkYield}!cattle@{cattle}}
+\subsubsection[{lastMilkYield}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::lastMilkYield}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a363b662f01ef25b47283840fd205c9e9}
+\hypertarget{classcattle_a00961d35073fae6a1a1e81dfaad97d12}{
+\index{cattle@{cattle}!limitation@{limitation}}
+\index{limitation@{limitation}!cattle@{cattle}}
+\subsubsection[{limitation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattle::limitation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a00961d35073fae6a1a1e81dfaad97d12}
+\hypertarget{classcattle_aad8eac52b29c71be5b0f6da7b4b76a6c}{
+\index{cattle@{cattle}!MBW@{MBW}}
+\index{MBW@{MBW}!cattle@{cattle}}
+\subsubsection[{MBW}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::MBW}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_aad8eac52b29c71be5b0f6da7b4b76a6c}
+\hypertarget{classcattle_a0579aa4830ea3b218896c017e61fc904}{
+\index{cattle@{cattle}!ME\_\-intake@{ME\_\-intake}}
+\index{ME\_\-intake@{ME\_\-intake}!cattle@{cattle}}
+\subsubsection[{ME\_\-intake}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::ME\_\-intake}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a0579aa4830ea3b218896c017e61fc904}
+\hypertarget{classcattle_a5242362db2f5a4411f19ec2163eabc4e}{
+\index{cattle@{cattle}!milk@{milk}}
+\index{milk@{milk}!cattle@{cattle}}
+\subsubsection[{milk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf feedItem}$\ast$ {\bf cattle::milk}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a5242362db2f5a4411f19ec2163eabc4e}
+\hypertarget{classcattle_aa5a4f55d7d0575a6e828c212c84bc909}{
+\index{cattle@{cattle}!milkFatConc@{milkFatConc}}
+\index{milkFatConc@{milkFatConc}!cattle@{cattle}}
+\subsubsection[{milkFatConc}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::milkFatConc}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_aa5a4f55d7d0575a6e828c212c84bc909}
+\hypertarget{classcattle_a1d6da32047ee60f0cbdacee9519f16e3}{
+\index{cattle@{cattle}!milkProteinConc@{milkProteinConc}}
+\index{milkProteinConc@{milkProteinConc}!cattle@{cattle}}
+\subsubsection[{milkProteinConc}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::milkProteinConc}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a1d6da32047ee60f0cbdacee9519f16e3}
+\hypertarget{classcattle_acf6345c41d725963b2bb91a744039050}{
+\index{cattle@{cattle}!mother@{mother}}
+\index{mother@{mother}!cattle@{cattle}}
+\subsubsection[{mother}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattle}$\ast$ {\bf cattle::mother}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_acf6345c41d725963b2bb91a744039050}
+\hypertarget{classcattle_a457bb28e06317045be5fd9ebbac78d7e}{
+\index{cattle@{cattle}!pregnant@{pregnant}}
+\index{pregnant@{pregnant}!cattle@{cattle}}
+\subsubsection[{pregnant}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattle::pregnant}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a457bb28e06317045be5fd9ebbac78d7e}
+\hypertarget{classcattle_ad2e1f9f817dc243c4ca19136e0871b77}{
+\index{cattle@{cattle}!rumenNsurplus@{rumenNsurplus}}
+\index{rumenNsurplus@{rumenNsurplus}!cattle@{cattle}}
+\subsubsection[{rumenNsurplus}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::rumenNsurplus}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_ad2e1f9f817dc243c4ca19136e0871b77}
+\hypertarget{classcattle_a6743facaa4de4b92350ef52cc2e6b8ed}{
+\index{cattle@{cattle}!urineN@{urineN}}
+\index{urineN@{urineN}!cattle@{cattle}}
+\subsubsection[{urineN}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::urineN}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a6743facaa4de4b92350ef52cc2e6b8ed}
+\hypertarget{classcattle_a16519b87deea03a710cd5ce401fdb7ba}{
+\index{cattle@{cattle}!weight@{weight}}
+\index{weight@{weight}!cattle@{cattle}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattle::weight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_a16519b87deea03a710cd5ce401fdb7ba}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{cattle_8h}{cattle.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{cattle_8cpp}{cattle.cpp}\end{DoxyCompactItemize}

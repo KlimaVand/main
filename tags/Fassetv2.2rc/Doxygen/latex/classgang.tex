@@ -1,0 +1,169 @@
+\hypertarget{classgang}{
+\section{gang Class Reference}
+\label{classgang}\index{gang@{gang}}
+}
+
+
+{\ttfamily \#include $<$gang.h$>$}Inheritance diagram for gang::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classgang}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgang_aa992d6dc400e7d4d5b0b8b38f92d97de}{gang} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classgang_af922aa6f04ccfb6357dd2037ec1ff928}{$\sim$gang} ()
+\item 
+void \hyperlink{classgang_aca944833959e462beb2801d5b273a7b9}{SetgangElectricity} (int agangElectricity)
+\item 
+void \hyperlink{classgang_a40c3667685b17ddae65b055982ab3b27}{SetgangHours} (double agangHours)
+\item 
+void \hyperlink{classgang_a60d3a0bae152f5da29c7d71f4be9d568}{SetgangMaintenance} (double agangMaintenance)
+\item 
+void \hyperlink{classgang_a698911d3a759dda027bb1d4bcce89efb}{SetgangFuel} (double agangFuel)
+\item 
+double \hyperlink{classgang_a1d704760d4f83677e6214af6a9c79641}{GetgangMaintenance} ()
+\item 
+int \hyperlink{classgang_aed0d1e381d8520daab677912f58bf85e}{GetgangElectricity} ()
+\item 
+double \hyperlink{classgang_a30f188627195f0f90350619d64d250bf}{GetgangFuel} ()
+\item 
+double \hyperlink{classgang_a153812d5d4b4264d6dfb4d1c79e8c32f}{GetgangHours} ()
+\item 
+int \hyperlink{classgang_adbf1bed16c842b8ee84bdbfe03eba946}{Initialize} (\hyperlink{classlink_list}{linkList}$<$ string $>$ $\ast$aStringList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList)
+\item 
+\hyperlink{classtech_equip}{techEquip} $\ast$ \hyperlink{classgang_ae69e199073ca33ab13840f5009e3ba5e}{GetMainTechEquip} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$ \hyperlink{classgang_ae3744dbd5a9cd0a5ad109317b3f1e339}{GetTechEquipList} ()
+\item 
+void \hyperlink{classgang_a3d919f05f8cd6c73a64aa7a6de067870}{OutputGang} (string aOperationName)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgang_a458435f79e861ed5bbe4315636557000}{AppendTechEquipList} (\hyperlink{classtech_equip}{techEquip} $\ast$aTechEquip)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classgang_aa4dcaa4f57f2795993a4d9b4257733c4}{gangHours}
+\item 
+double \hyperlink{classgang_a194b6fd27c1716b1937270669a7957d3}{gangFuel}
+\item 
+double \hyperlink{classgang_a1b89302ca15faa1cb6d1a281ba3792cc}{gangMaintenance}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$ \hyperlink{classgang_a42b0369cb27b2979e0f038e85339b8b8}{techEquipList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgang_aa992d6dc400e7d4d5b0b8b38f92d97de}{
+\index{gang@{gang}!gang@{gang}}
+\index{gang@{gang}!gang@{gang}}
+\subsubsection[{gang}]{\setlength{\rightskip}{0pt plus 5cm}gang::gang (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classgang_aa992d6dc400e7d4d5b0b8b38f92d97de}
+\hypertarget{classgang_af922aa6f04ccfb6357dd2037ec1ff928}{
+\index{gang@{gang}!$\sim$gang@{$\sim$gang}}
+\index{$\sim$gang@{$\sim$gang}!gang@{gang}}
+\subsubsection[{$\sim$gang}]{\setlength{\rightskip}{0pt plus 5cm}gang::$\sim$gang ()}}
+\label{classgang_af922aa6f04ccfb6357dd2037ec1ff928}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classgang_a458435f79e861ed5bbe4315636557000}{
+\index{gang@{gang}!AppendTechEquipList@{AppendTechEquipList}}
+\index{AppendTechEquipList@{AppendTechEquipList}!gang@{gang}}
+\subsubsection[{AppendTechEquipList}]{\setlength{\rightskip}{0pt plus 5cm}void gang::AppendTechEquipList ({\bf techEquip} $\ast$ {\em aTechEquip})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classgang_a458435f79e861ed5bbe4315636557000}
+\hypertarget{classgang_aed0d1e381d8520daab677912f58bf85e}{
+\index{gang@{gang}!GetgangElectricity@{GetgangElectricity}}
+\index{GetgangElectricity@{GetgangElectricity}!gang@{gang}}
+\subsubsection[{GetgangElectricity}]{\setlength{\rightskip}{0pt plus 5cm}int gang::GetgangElectricity ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_aed0d1e381d8520daab677912f58bf85e}
+\hypertarget{classgang_a30f188627195f0f90350619d64d250bf}{
+\index{gang@{gang}!GetgangFuel@{GetgangFuel}}
+\index{GetgangFuel@{GetgangFuel}!gang@{gang}}
+\subsubsection[{GetgangFuel}]{\setlength{\rightskip}{0pt plus 5cm}double gang::GetgangFuel ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_a30f188627195f0f90350619d64d250bf}
+\hypertarget{classgang_a153812d5d4b4264d6dfb4d1c79e8c32f}{
+\index{gang@{gang}!GetgangHours@{GetgangHours}}
+\index{GetgangHours@{GetgangHours}!gang@{gang}}
+\subsubsection[{GetgangHours}]{\setlength{\rightskip}{0pt plus 5cm}double gang::GetgangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_a153812d5d4b4264d6dfb4d1c79e8c32f}
+\hypertarget{classgang_a1d704760d4f83677e6214af6a9c79641}{
+\index{gang@{gang}!GetgangMaintenance@{GetgangMaintenance}}
+\index{GetgangMaintenance@{GetgangMaintenance}!gang@{gang}}
+\subsubsection[{GetgangMaintenance}]{\setlength{\rightskip}{0pt plus 5cm}double gang::GetgangMaintenance ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_a1d704760d4f83677e6214af6a9c79641}
+\hypertarget{classgang_ae69e199073ca33ab13840f5009e3ba5e}{
+\index{gang@{gang}!GetMainTechEquip@{GetMainTechEquip}}
+\index{GetMainTechEquip@{GetMainTechEquip}!gang@{gang}}
+\subsubsection[{GetMainTechEquip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf techEquip} $\ast$ gang::GetMainTechEquip ()}}
+\label{classgang_ae69e199073ca33ab13840f5009e3ba5e}
+\hypertarget{classgang_ae3744dbd5a9cd0a5ad109317b3f1e339}{
+\index{gang@{gang}!GetTechEquipList@{GetTechEquipList}}
+\index{GetTechEquipList@{GetTechEquipList}!gang@{gang}}
+\subsubsection[{GetTechEquipList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ gang::GetTechEquipList ()}}
+\label{classgang_ae3744dbd5a9cd0a5ad109317b3f1e339}
+\hypertarget{classgang_adbf1bed16c842b8ee84bdbfe03eba946}{
+\index{gang@{gang}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!gang@{gang}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}int gang::Initialize ({\bf linkList}$<$ string $>$ $\ast$ {\em aStringList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList})}}
+\label{classgang_adbf1bed16c842b8ee84bdbfe03eba946}
+\hypertarget{classgang_a3d919f05f8cd6c73a64aa7a6de067870}{
+\index{gang@{gang}!OutputGang@{OutputGang}}
+\index{OutputGang@{OutputGang}!gang@{gang}}
+\subsubsection[{OutputGang}]{\setlength{\rightskip}{0pt plus 5cm}void gang::OutputGang (string {\em aOperationName})}}
+\label{classgang_a3d919f05f8cd6c73a64aa7a6de067870}
+\hypertarget{classgang_aca944833959e462beb2801d5b273a7b9}{
+\index{gang@{gang}!SetgangElectricity@{SetgangElectricity}}
+\index{SetgangElectricity@{SetgangElectricity}!gang@{gang}}
+\subsubsection[{SetgangElectricity}]{\setlength{\rightskip}{0pt plus 5cm}void gang::SetgangElectricity (int {\em agangElectricity})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_aca944833959e462beb2801d5b273a7b9}
+\hypertarget{classgang_a698911d3a759dda027bb1d4bcce89efb}{
+\index{gang@{gang}!SetgangFuel@{SetgangFuel}}
+\index{SetgangFuel@{SetgangFuel}!gang@{gang}}
+\subsubsection[{SetgangFuel}]{\setlength{\rightskip}{0pt plus 5cm}void gang::SetgangFuel (double {\em agangFuel})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_a698911d3a759dda027bb1d4bcce89efb}
+\hypertarget{classgang_a40c3667685b17ddae65b055982ab3b27}{
+\index{gang@{gang}!SetgangHours@{SetgangHours}}
+\index{SetgangHours@{SetgangHours}!gang@{gang}}
+\subsubsection[{SetgangHours}]{\setlength{\rightskip}{0pt plus 5cm}void gang::SetgangHours (double {\em agangHours})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_a40c3667685b17ddae65b055982ab3b27}
+\hypertarget{classgang_a60d3a0bae152f5da29c7d71f4be9d568}{
+\index{gang@{gang}!SetgangMaintenance@{SetgangMaintenance}}
+\index{SetgangMaintenance@{SetgangMaintenance}!gang@{gang}}
+\subsubsection[{SetgangMaintenance}]{\setlength{\rightskip}{0pt plus 5cm}void gang::SetgangMaintenance (double {\em agangMaintenance})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgang_a60d3a0bae152f5da29c7d71f4be9d568}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classgang_a194b6fd27c1716b1937270669a7957d3}{
+\index{gang@{gang}!gangFuel@{gangFuel}}
+\index{gangFuel@{gangFuel}!gang@{gang}}
+\subsubsection[{gangFuel}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf gang::gangFuel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classgang_a194b6fd27c1716b1937270669a7957d3}
+\hypertarget{classgang_aa4dcaa4f57f2795993a4d9b4257733c4}{
+\index{gang@{gang}!gangHours@{gangHours}}
+\index{gangHours@{gangHours}!gang@{gang}}
+\subsubsection[{gangHours}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf gang::gangHours}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classgang_aa4dcaa4f57f2795993a4d9b4257733c4}
+\hypertarget{classgang_a1b89302ca15faa1cb6d1a281ba3792cc}{
+\index{gang@{gang}!gangMaintenance@{gangMaintenance}}
+\index{gangMaintenance@{gangMaintenance}!gang@{gang}}
+\subsubsection[{gangMaintenance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf gang::gangMaintenance}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classgang_a1b89302ca15faa1cb6d1a281ba3792cc}
+\hypertarget{classgang_a42b0369cb27b2979e0f038e85339b8b8}{
+\index{gang@{gang}!techEquipList@{techEquipList}}
+\index{techEquipList@{techEquipList}!gang@{gang}}
+\subsubsection[{techEquipList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf techEquip}$>$$\ast$ {\bf gang::techEquipList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classgang_a42b0369cb27b2979e0f038e85339b8b8}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{gang_8h}{gang.h}\item 
+C:/main/trunk/src/technics/\hyperlink{gang_8cpp}{gang.cpp}\end{DoxyCompactItemize}

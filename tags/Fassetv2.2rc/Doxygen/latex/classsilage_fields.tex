@@ -1,0 +1,87 @@
+\hypertarget{classsilage_fields}{
+\section{silageFields Class Reference}
+\label{classsilage_fields}\index{silageFields@{silageFields}}
+}
+
+
+{\ttfamily \#include $<$silageFields.h$>$}Inheritance diagram for silageFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classsilage_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsilage_fields_ab882102171c0ffffc6a96677c726f906}{silageFields} ()
+\item 
+\hyperlink{classsilage_fields_a20ef91f1391296a1bd9440e13c7b3c94}{silageFields} (const \hyperlink{classsilage_fields}{silageFields} \&h)
+\item 
+virtual \hyperlink{classsilage_fields_aa84e406a91dbfd1b553cec61b399085d}{$\sim$silageFields} ()
+\item 
+virtual \hyperlink{classsilage_fields}{silageFields} $\ast$ \hyperlink{classsilage_fields_a143ee0ad2ae333fe8f9b8b6c119bf46d}{clone} () const 
+\item 
+void \hyperlink{classsilage_fields_a51348396a66041b5d841d27fadac970e}{DefinesilageFieldsOper} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, \hyperlink{classplant_item}{plantItem} $\ast$thePlantItem)
+\item 
+\hyperlink{classplant_item}{plantItem} $\ast$ \hyperlink{classsilage_fields_abf8908c6ba3f05c32dcfee9e7ff07c8a}{GetPlantItem} ()
+\item 
+void \hyperlink{classsilage_fields_abdc01c52adbfc4947b8bc13550d55a1e}{SetPlantItem} (\hyperlink{classplant_item}{plantItem} $\ast$newPlantItem)
+\item 
+virtual bool \hyperlink{classsilage_fields_a5ae420a0878bc7f89c3a6fe03f585163}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsilage_fields_ab882102171c0ffffc6a96677c726f906}{
+\index{silageFields@{silageFields}!silageFields@{silageFields}}
+\index{silageFields@{silageFields}!silageFields@{silageFields}}
+\subsubsection[{silageFields}]{\setlength{\rightskip}{0pt plus 5cm}silageFields::silageFields ()}}
+\label{classsilage_fields_ab882102171c0ffffc6a96677c726f906}
+\hypertarget{classsilage_fields_a20ef91f1391296a1bd9440e13c7b3c94}{
+\index{silageFields@{silageFields}!silageFields@{silageFields}}
+\index{silageFields@{silageFields}!silageFields@{silageFields}}
+\subsubsection[{silageFields}]{\setlength{\rightskip}{0pt plus 5cm}silageFields::silageFields (const {\bf silageFields} \& {\em h})}}
+\label{classsilage_fields_a20ef91f1391296a1bd9440e13c7b3c94}
+\hypertarget{classsilage_fields_aa84e406a91dbfd1b553cec61b399085d}{
+\index{silageFields@{silageFields}!$\sim$silageFields@{$\sim$silageFields}}
+\index{$\sim$silageFields@{$\sim$silageFields}!silageFields@{silageFields}}
+\subsubsection[{$\sim$silageFields}]{\setlength{\rightskip}{0pt plus 5cm}silageFields::$\sim$silageFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsilage_fields_aa84e406a91dbfd1b553cec61b399085d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsilage_fields_a5ae420a0878bc7f89c3a6fe03f585163}{
+\index{silageFields@{silageFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!silageFields@{silageFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool silageFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsilage_fields_a5ae420a0878bc7f89c3a6fe03f585163}
+is not implemented 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classsilage_fields_a143ee0ad2ae333fe8f9b8b6c119bf46d}{
+\index{silageFields@{silageFields}!clone@{clone}}
+\index{clone@{clone}!silageFields@{silageFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf silageFields} $\ast$ silageFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsilage_fields_a143ee0ad2ae333fe8f9b8b6c119bf46d}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classsilage_fields_a51348396a66041b5d841d27fadac970e}{
+\index{silageFields@{silageFields}!DefinesilageFieldsOper@{DefinesilageFieldsOper}}
+\index{DefinesilageFieldsOper@{DefinesilageFieldsOper}!silageFields@{silageFields}}
+\subsubsection[{DefinesilageFieldsOper}]{\setlength{\rightskip}{0pt plus 5cm}void silageFields::DefinesilageFieldsOper ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  {\bf plantItem} $\ast$ {\em thePlantItem})}}
+\label{classsilage_fields_a51348396a66041b5d841d27fadac970e}
+\hypertarget{classsilage_fields_abf8908c6ba3f05c32dcfee9e7ff07c8a}{
+\index{silageFields@{silageFields}!GetPlantItem@{GetPlantItem}}
+\index{GetPlantItem@{GetPlantItem}!silageFields@{silageFields}}
+\subsubsection[{GetPlantItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantItem}$\ast$ silageFields::GetPlantItem ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsilage_fields_abf8908c6ba3f05c32dcfee9e7ff07c8a}
+\hypertarget{classsilage_fields_abdc01c52adbfc4947b8bc13550d55a1e}{
+\index{silageFields@{silageFields}!SetPlantItem@{SetPlantItem}}
+\index{SetPlantItem@{SetPlantItem}!silageFields@{silageFields}}
+\subsubsection[{SetPlantItem}]{\setlength{\rightskip}{0pt plus 5cm}void silageFields::SetPlantItem ({\bf plantItem} $\ast$ {\em newPlantItem})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classsilage_fields_abdc01c52adbfc4947b8bc13550d55a1e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{silage_fields_8h}{silageFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{silage_fields_8cpp}{silageFields.cpp}\end{DoxyCompactItemize}

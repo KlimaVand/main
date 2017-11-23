@@ -1,0 +1,139 @@
+\hypertarget{classslurrystore}{
+\section{slurrystore Class Reference}
+\label{classslurrystore}\index{slurrystore@{slurrystore}}
+}
+
+
+{\ttfamily \#include $<$slurrystore.h$>$}Inheritance diagram for slurrystore::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classslurrystore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classslurrystore_a57c19869f0be17c2dcf209918d75bb59}{slurrystore} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classslurrystore_aa6fa3b3251ee847887d5e2a24e1453b9}{slurrystore} (\hyperlink{classslurrystore}{slurrystore} \&s)
+\item 
+virtual \hyperlink{classslurrystore_a167fb914f18444bb763597eed3928aa6}{$\sim$slurrystore} ()
+\item 
+virtual void \hyperlink{classslurrystore_a20975780b58214d7a091cbc2573c910c}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classslurrystore_a0e660eb43b403bef8aaefb8188a73d4f}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classslurrystore_a6142751bab2ade200478ce49cc21dc2d}{VolatizeSlurry} (double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission})
+\item 
+virtual void \hyperlink{classslurrystore_a982183d9d72019736bfdb792c4cb5d78}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classslurrystore_a307b2de3fb81bd7adfa90335f6371816}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em probably obsolete \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classslurrystore_af99a5bbcf35c6845fcf989809c5347fa}{RcvManure} (const \hyperlink{classmanure}{manure} $\ast$someManure)
+\item 
+virtual void \hyperlink{classslurrystore_a72711544587a5024eeaa072c43a4840a}{Scale} (double annualAmount)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classslurrystore_a74247370258ba08c974e190aca4ed0a5}{operator$<$$<$} (ostream \&os, \hyperlink{classslurrystore}{slurrystore} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classslurrystore_a57c19869f0be17c2dcf209918d75bb59}{
+\index{slurrystore@{slurrystore}!slurrystore@{slurrystore}}
+\index{slurrystore@{slurrystore}!slurrystore@{slurrystore}}
+\subsubsection[{slurrystore}]{\setlength{\rightskip}{0pt plus 5cm}slurrystore::slurrystore (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classslurrystore_a57c19869f0be17c2dcf209918d75bb59}
+\hypertarget{classslurrystore_aa6fa3b3251ee847887d5e2a24e1453b9}{
+\index{slurrystore@{slurrystore}!slurrystore@{slurrystore}}
+\index{slurrystore@{slurrystore}!slurrystore@{slurrystore}}
+\subsubsection[{slurrystore}]{\setlength{\rightskip}{0pt plus 5cm}slurrystore::slurrystore ({\bf slurrystore} \& {\em s})}}
+\label{classslurrystore_aa6fa3b3251ee847887d5e2a24e1453b9}
+\hypertarget{classslurrystore_a167fb914f18444bb763597eed3928aa6}{
+\index{slurrystore@{slurrystore}!$\sim$slurrystore@{$\sim$slurrystore}}
+\index{$\sim$slurrystore@{$\sim$slurrystore}!slurrystore@{slurrystore}}
+\subsubsection[{$\sim$slurrystore}]{\setlength{\rightskip}{0pt plus 5cm}slurrystore::$\sim$slurrystore ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a167fb914f18444bb763597eed3928aa6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classslurrystore_a307b2de3fb81bd7adfa90335f6371816}{
+\index{slurrystore@{slurrystore}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!slurrystore@{slurrystore}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a307b2de3fb81bd7adfa90335f6371816}
+
+
+probably obsolete CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classbuilding_af1f27cbf72295547af61edc9e02a7e61}{building}.\hypertarget{classslurrystore_a0e660eb43b403bef8aaefb8188a73d4f}{
+\index{slurrystore@{slurrystore}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!slurrystore@{slurrystore}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a0e660eb43b403bef8aaefb8188a73d4f}
+Dailyactions that updates volatAmmonia, N2Emission, N2OEmission, CO2Emission and CH4Emission. Does update Indicat-\/file with that information 
+
+Reimplemented from \hyperlink{classbuilding_a584ba300427d2a648f478b68065b7a18}{building}.
+
+Reimplemented in \hyperlink{classdigestate_store_a209611f25ea14ad07c9de42fa46eea05}{digestateStore}.\hypertarget{classslurrystore_a982183d9d72019736bfdb792c4cb5d78}{
+\index{slurrystore@{slurrystore}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!slurrystore@{slurrystore}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a982183d9d72019736bfdb792c4cb5d78}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{building}.
+
+Reimplemented in \hyperlink{classdigestate_store_ae1402687e7bf67b150bf01e97c4798b9}{digestateStore}.\hypertarget{classslurrystore_af99a5bbcf35c6845fcf989809c5347fa}{
+\index{slurrystore@{slurrystore}!RcvManure@{RcvManure}}
+\index{RcvManure@{RcvManure}!slurrystore@{slurrystore}}
+\subsubsection[{RcvManure}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::RcvManure (const {\bf manure} $\ast$ {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_af99a5bbcf35c6845fcf989809c5347fa}
+Calls manurestore's routine -\/ is defined in \hyperlink{classslurrystore}{slurrystore} to help in debugging 
+
+Reimplemented from \hyperlink{classmanurestore_ab32685c2f4be9bb58269655cab7c96ee}{manurestore}.
+
+Reimplemented in \hyperlink{classdigestate_store_a840cf55a8a893f089c8c39a36cc3defe}{digestateStore}.\hypertarget{classslurrystore_a20975780b58214d7a091cbc2573c910c}{
+\index{slurrystore@{slurrystore}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!slurrystore@{slurrystore}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a20975780b58214d7a091cbc2573c910c}
+Init reads the relevant values from its owners file 
+
+Reimplemented from \hyperlink{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{building}.
+
+Reimplemented in \hyperlink{classdigestate_store_a93cdf55c94956f5e817ad386ea0c2a4b}{digestateStore}.\hypertarget{classslurrystore_a72711544587a5024eeaa072c43a4840a}{
+\index{slurrystore@{slurrystore}!Scale@{Scale}}
+\index{Scale@{Scale}!slurrystore@{slurrystore}}
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::Scale (double {\em annualAmount})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a72711544587a5024eeaa072c43a4840a}
+Scale the \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} that receives material from this \hyperlink{classinstore}{instore} Note the cumulative effect on capacity 
+
+Reimplemented from \hyperlink{classmanurestore_a1efaaee1df384e1eb1705c104d8567c7}{manurestore}.\hypertarget{classslurrystore_a6142751bab2ade200478ce49cc21dc2d}{
+\index{slurrystore@{slurrystore}!VolatizeSlurry@{VolatizeSlurry}}
+\index{VolatizeSlurry@{VolatizeSlurry}!slurrystore@{slurrystore}}
+\subsubsection[{VolatizeSlurry}]{\setlength{\rightskip}{0pt plus 5cm}void slurrystore::VolatizeSlurry (double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CO2Emission}, \/  double $\ast$ {\em CH4Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classslurrystore_a6142751bab2ade200478ce49cc21dc2d}
+Does callculate volatAmmonia, N2Emission ,N2OEmission, CO2Emission and CH4Emission 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classslurrystore_a74247370258ba08c974e190aca4ed0a5}{
+\index{slurrystore@{slurrystore}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!slurrystore@{slurrystore}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf slurrystore} {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classslurrystore_a74247370258ba08c974e190aca4ed0a5}
+
+
+Reimplemented in \hyperlink{classdigestate_store_afe43a1f833661ff0491a2b3f4a2a0c24}{digestateStore}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{slurrystore_8h}{slurrystore.h}\item 
+C:/main/trunk/src/building/\hyperlink{slurrystore_8cpp}{slurrystore.cpp}\end{DoxyCompactItemize}

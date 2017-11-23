@@ -1,0 +1,331 @@
+\hypertarget{classfloorstore}{
+\section{floorstore Class Reference}
+\label{classfloorstore}\index{floorstore@{floorstore}}
+}
+
+
+Describes the flooring in an \hyperlink{classanimal}{animal} section.  
+
+
+{\ttfamily \#include $<$floorstore.h$>$}Inheritance diagram for floorstore::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classfloorstore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfloorstore_a4abf691b90bf18a3025e0f0e96dec9c7}{floorstore} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. \item\end{DoxyCompactList}\item 
+\hyperlink{classfloorstore_a0f20ffd8a3e31dce925bf0959b7cf70b}{floorstore} (\hyperlink{classfloorstore}{floorstore} \&s)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classfloorstore_ac9fb0eaa78651fdf80a8effbeb77bdd3}{$\sim$floorstore} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_ac5c125d05321b8e7e26111d51f17f30c}{GetexcretaPartition} () const 
+\begin{DoxyCompactList}\small\item\em Returns the proportion of the excreta deposited in the \hyperlink{classanimal}{animal} section that is partitioned to this floor. \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classfloorstore_a5222c3797cf8a2f443ab387478e9946d}{GetStoreNumber} () const 
+\begin{DoxyCompactList}\small\item\em Returns the number of stores on the floor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classmanurestore}{manurestore} $\ast$ \hyperlink{classfloorstore_af05d6f52ff047513b85b5cd660b8e8fc}{GetaStore} (int aStoreNumber) const 
+\begin{DoxyCompactList}\small\item\em Returns a pointer to given the logical \hyperlink{classstorage}{storage} number. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_ad6d22909cdeef814833b7e37d136fca6}{GetcleaningInterval} ()
+\begin{DoxyCompactList}\small\item\em Returned the cleaning interval in days. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a93f174dcbbf14e77c16d482dbb46a464}{GettimeUncleaned} ()
+\begin{DoxyCompactList}\small\item\em Return time since last cleaned in days. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a6bcde59d5cf3b9c00f87eefbd675faa2}{GetAreaPrAnimal} ()
+\begin{DoxyCompactList}\small\item\em Returned the surface area per \hyperlink{classanimal}{animal} -\/ used if \hyperlink{classmanure}{manure} store is to be scaled to \hyperlink{classanimal}{animal} numbers present. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a90e0034ad69a88d43933153640ec7661}{GetStrawAdded} ()
+\begin{DoxyCompactList}\small\item\em Returned the amount of Straw added in kilograms per day. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a0b3cedc553507a2a14ba4e3bbc4bc850}{GetArea} ()
+\begin{DoxyCompactList}\small\item\em Returned the area of the floor. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a5b13ea82d1f8662ac8b117574cb24e6d}{GetWashingWater} ()
+\begin{DoxyCompactList}\small\item\em Returned the amount of washing \hyperlink{classwater}{water} in litres per day. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_a7279c61e34129cafea8b4d690b8c79b8}{SettimeUncleaned} (double aTime)
+\begin{DoxyCompactList}\small\item\em Set the the time since cleaned in days. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_a8bb97cc7cc0551e3b726f3d8292090e9}{DailyUpdate} ()
+\begin{DoxyCompactList}\small\item\em daily update routine \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_aef2345c78fe8a0c36209d53678fba90c}{GiveIndicator} ()
+\begin{DoxyCompactList}\small\item\em Calculate indicators for floor \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_ae328e740c794853624644db230175f0c}{Volatize} (double airVelocity, double humidity, double temperature, double $\ast$volatAmmonia, double $\ast$waterEvap, double $\ast$N2Emission, double $\ast$N2OEmission, double $\ast$CH4Emission, double $\ast$CO2Emission)
+\begin{DoxyCompactList}\small\item\em Dynamic modelling of the gaseous losses from the floor \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_aeaade97a9f21a03bd2f5bc5acd916056}{Volatize} (double $\ast$volatAmmonia, double $\ast$N2Emission, double $\ast$N2OEmission, double $\ast$CH4Emission, double $\ast$CO2Emission)
+\begin{DoxyCompactList}\small\item\em Static modelling of gaseous losses from floor \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_a68ddc9791279945f7a42b3c643dd7e1c}{RcvManure} (\hyperlink{classmanure}{manure} $\ast$aManure)
+\begin{DoxyCompactList}\small\item\em Receives \hyperlink{classmanure}{manure}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_af2c0a2cfbe80ae99b8a25202f2d285b5}{RcvBedding} (\hyperlink{classplant_item}{plantItem} $\ast$aBeddingMaterial)
+\item 
+virtual \hyperlink{classmanure}{manure} $\ast$ \hyperlink{classfloorstore_ac45898f14f9fe4c06c43bcd95dc30dfd}{CleanFloor} (double numberOfAnimals)
+\begin{DoxyCompactList}\small\item\em Clean the floor, sending \hyperlink{classmanure}{manure} to \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_aead39ccc3f6e82ecc1f62d1b570c312a}{GetManureAmount} ()
+\begin{DoxyCompactList}\small\item\em Return the amount of \hyperlink{classmanure}{manure} in the floor store in tonnes. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a62fa4a2efc876c2500010395619fbd5d}{GetTotalNStored} ()
+\begin{DoxyCompactList}\small\item\em Return the amount of \hyperlink{classnitrogen}{nitrogen} stored in kilograms. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_af6c7892c3ec1811e49d62c9875987792}{GetTotalCStored} ()
+\begin{DoxyCompactList}\small\item\em Return the amount of carbon stored in kilograms. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{classfloorstore_a70c102d9fd6b4c562075531fea3b520e}{GetTotalDMStored} ()
+\begin{DoxyCompactList}\small\item\em Returned the amount of dry \hyperlink{classmatter}{matter} stored in kilograms. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_a6ed09e1a63924c96ab2da073a89b83db}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em probably obsolete \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_ae1b9e00c23f4730f3f117a9e1000d2f6}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Reads initialisation data, text file. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classproduct}{product} $\ast$ \hyperlink{classfloorstore_a24e0d595a9a68e3a7cc2c6bf8ee1bee1}{GetFromManureStore} (double RequestedAmount, \hyperlink{classproduct}{product} $\ast$p, bool checkAccess=false)
+\begin{DoxyCompactList}\small\item\em Return an amount of \hyperlink{classmanure}{manure} from the floor \hyperlink{classstorage}{storage}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_a159e81c24a93fc32a230461b5e1ef161}{EndBudget} (bool show)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classbudget}{budget} function \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classfloorstore_a568e6257a1fb9f6ca2a3c6113316aa3d}{ScaleSize} (double numberOfAnimals, double annualManure)
+\begin{DoxyCompactList}\small\item\em Scales the floor \hyperlink{classstorage}{storage} to a number of animals present. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classfloorstore_a2f4c08f25a5535c62d3d780806d5ce0b}{operator$<$$<$} (ostream \&os, const \hyperlink{classfloorstore}{floorstore} \&s)
+\begin{DoxyCompactList}\small\item\em Outputs streaming. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes the flooring in an \hyperlink{classanimal}{animal} section. Describes the flooring in an \hyperlink{classanimal}{animal} section. Mainly used to manage the flow of \hyperlink{classmanure}{manure} and \hyperlink{classwater}{water}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfloorstore_a4abf691b90bf18a3025e0f0e96dec9c7}{
+\index{floorstore@{floorstore}!floorstore@{floorstore}}
+\index{floorstore@{floorstore}!floorstore@{floorstore}}
+\subsubsection[{floorstore}]{\setlength{\rightskip}{0pt plus 5cm}floorstore::floorstore (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classfloorstore_a4abf691b90bf18a3025e0f0e96dec9c7}
+
+
+Constructor with arguments. Constructor with arguments \hypertarget{classfloorstore_a0f20ffd8a3e31dce925bf0959b7cf70b}{
+\index{floorstore@{floorstore}!floorstore@{floorstore}}
+\index{floorstore@{floorstore}!floorstore@{floorstore}}
+\subsubsection[{floorstore}]{\setlength{\rightskip}{0pt plus 5cm}floorstore::floorstore ({\bf floorstore} \& {\em s})}}
+\label{classfloorstore_a0f20ffd8a3e31dce925bf0959b7cf70b}
+
+
+Copy constructor. Copy Constructor \hypertarget{classfloorstore_ac9fb0eaa78651fdf80a8effbeb77bdd3}{
+\index{floorstore@{floorstore}!$\sim$floorstore@{$\sim$floorstore}}
+\index{$\sim$floorstore@{$\sim$floorstore}!floorstore@{floorstore}}
+\subsubsection[{$\sim$floorstore}]{\setlength{\rightskip}{0pt plus 5cm}floorstore::$\sim$floorstore ()}}
+\label{classfloorstore_ac9fb0eaa78651fdf80a8effbeb77bdd3}
+
+
+Destructor. Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classfloorstore_a6ed09e1a63924c96ab2da073a89b83db}{
+\index{floorstore@{floorstore}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!floorstore@{floorstore}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a6ed09e1a63924c96ab2da073a89b83db}
+
+
+probably obsolete Operator $<$$<$ for output \hypertarget{classfloorstore_ac45898f14f9fe4c06c43bcd95dc30dfd}{
+\index{floorstore@{floorstore}!CleanFloor@{CleanFloor}}
+\index{CleanFloor@{CleanFloor}!floorstore@{floorstore}}
+\subsubsection[{CleanFloor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manure} $\ast$ floorstore::CleanFloor (double {\em numberOfAnimals})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_ac45898f14f9fe4c06c43bcd95dc30dfd}
+
+
+Clean the floor, sending \hyperlink{classmanure}{manure} to \hyperlink{classstorage}{storage}. Cleans the floor, with the amount of washing \hyperlink{classwater}{water} used depending on the number of animals present 
+\begin{DoxyParams}{Parameters}
+\item[{\em numberOfAnimals}]number of animals present\end{DoxyParams}
+Clean the floor of all \hyperlink{classmanure}{manure} -\/ \hyperlink{classmanure}{manure} sent to the relevant store \hypertarget{classfloorstore_a8bb97cc7cc0551e3b726f3d8292090e9}{
+\index{floorstore@{floorstore}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!floorstore@{floorstore}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a8bb97cc7cc0551e3b726f3d8292090e9}
+
+
+daily update routine Dailyactions \hypertarget{classfloorstore_a159e81c24a93fc32a230461b5e1ef161}{
+\index{floorstore@{floorstore}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!floorstore@{floorstore}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::EndBudget (bool {\em show})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a159e81c24a93fc32a230461b5e1ef161}
+
+
+\hyperlink{classbudget}{budget} function Check if all N is accounted for \hypertarget{classfloorstore_a0b3cedc553507a2a14ba4e3bbc4bc850}{
+\index{floorstore@{floorstore}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!floorstore@{floorstore}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GetArea ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a0b3cedc553507a2a14ba4e3bbc4bc850}
+
+
+Returned the area of the floor. \hypertarget{classfloorstore_a6bcde59d5cf3b9c00f87eefbd675faa2}{
+\index{floorstore@{floorstore}!GetAreaPrAnimal@{GetAreaPrAnimal}}
+\index{GetAreaPrAnimal@{GetAreaPrAnimal}!floorstore@{floorstore}}
+\subsubsection[{GetAreaPrAnimal}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GetAreaPrAnimal ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a6bcde59d5cf3b9c00f87eefbd675faa2}
+
+
+Returned the surface area per \hyperlink{classanimal}{animal} -\/ used if \hyperlink{classmanure}{manure} store is to be scaled to \hyperlink{classanimal}{animal} numbers present. \hypertarget{classfloorstore_af05d6f52ff047513b85b5cd660b8e8fc}{
+\index{floorstore@{floorstore}!GetaStore@{GetaStore}}
+\index{GetaStore@{GetaStore}!floorstore@{floorstore}}
+\subsubsection[{GetaStore}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf manurestore}$\ast$ floorstore::GetaStore (int {\em aStoreNumber}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_af05d6f52ff047513b85b5cd660b8e8fc}
+
+
+Returns a pointer to given the logical \hyperlink{classstorage}{storage} number. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aStoreNumber}]the logical number of the \hyperlink{classstorage}{storage} that is of interest \end{DoxyParams}
+\hypertarget{classfloorstore_ad6d22909cdeef814833b7e37d136fca6}{
+\index{floorstore@{floorstore}!GetcleaningInterval@{GetcleaningInterval}}
+\index{GetcleaningInterval@{GetcleaningInterval}!floorstore@{floorstore}}
+\subsubsection[{GetcleaningInterval}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GetcleaningInterval ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_ad6d22909cdeef814833b7e37d136fca6}
+
+
+Returned the cleaning interval in days. \hypertarget{classfloorstore_ac5c125d05321b8e7e26111d51f17f30c}{
+\index{floorstore@{floorstore}!GetexcretaPartition@{GetexcretaPartition}}
+\index{GetexcretaPartition@{GetexcretaPartition}!floorstore@{floorstore}}
+\subsubsection[{GetexcretaPartition}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GetexcretaPartition () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_ac5c125d05321b8e7e26111d51f17f30c}
+
+
+Returns the proportion of the excreta deposited in the \hyperlink{classanimal}{animal} section that is partitioned to this floor. \hypertarget{classfloorstore_a24e0d595a9a68e3a7cc2c6bf8ee1bee1}{
+\index{floorstore@{floorstore}!GetFromManureStore@{GetFromManureStore}}
+\index{GetFromManureStore@{GetFromManureStore}!floorstore@{floorstore}}
+\subsubsection[{GetFromManureStore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf product} $\ast$ floorstore::GetFromManureStore (double {\em RequestedAmount}, \/  {\bf product} $\ast$ {\em p}, \/  bool {\em checkAccess} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a24e0d595a9a68e3a7cc2c6bf8ee1bee1}
+
+
+Return an amount of \hyperlink{classmanure}{manure} from the floor \hyperlink{classstorage}{storage}. Returns the amount that is requested or the amount present, whichever is the lesser 
+\begin{DoxyParams}{Parameters}
+\item[{\em RequestedAmount}]the amount requested \item[{\em p}]the \hyperlink{classmanure}{manure} type requested \item[{\em checkAccess}]set true if wishing to check the renewal is accessible\end{DoxyParams}
+Get some \hyperlink{classmanure}{manure} from store \hypertarget{classfloorstore_aead39ccc3f6e82ecc1f62d1b570c312a}{
+\index{floorstore@{floorstore}!GetManureAmount@{GetManureAmount}}
+\index{GetManureAmount@{GetManureAmount}!floorstore@{floorstore}}
+\subsubsection[{GetManureAmount}]{\setlength{\rightskip}{0pt plus 5cm}double floorstore::GetManureAmount ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_aead39ccc3f6e82ecc1f62d1b570c312a}
+
+
+Return the amount of \hyperlink{classmanure}{manure} in the floor store in tonnes. Get total amount of \hyperlink{classmanure}{manure} in store \hypertarget{classfloorstore_a5222c3797cf8a2f443ab387478e9946d}{
+\index{floorstore@{floorstore}!GetStoreNumber@{GetStoreNumber}}
+\index{GetStoreNumber@{GetStoreNumber}!floorstore@{floorstore}}
+\subsubsection[{GetStoreNumber}]{\setlength{\rightskip}{0pt plus 5cm}virtual int floorstore::GetStoreNumber () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a5222c3797cf8a2f443ab387478e9946d}
+
+
+Returns the number of stores on the floor. \hypertarget{classfloorstore_a90e0034ad69a88d43933153640ec7661}{
+\index{floorstore@{floorstore}!GetStrawAdded@{GetStrawAdded}}
+\index{GetStrawAdded@{GetStrawAdded}!floorstore@{floorstore}}
+\subsubsection[{GetStrawAdded}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GetStrawAdded ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a90e0034ad69a88d43933153640ec7661}
+
+
+Returned the amount of Straw added in kilograms per day. \hypertarget{classfloorstore_a93f174dcbbf14e77c16d482dbb46a464}{
+\index{floorstore@{floorstore}!GettimeUncleaned@{GettimeUncleaned}}
+\index{GettimeUncleaned@{GettimeUncleaned}!floorstore@{floorstore}}
+\subsubsection[{GettimeUncleaned}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GettimeUncleaned ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a93f174dcbbf14e77c16d482dbb46a464}
+
+
+Return time since last cleaned in days. \hypertarget{classfloorstore_af6c7892c3ec1811e49d62c9875987792}{
+\index{floorstore@{floorstore}!GetTotalCStored@{GetTotalCStored}}
+\index{GetTotalCStored@{GetTotalCStored}!floorstore@{floorstore}}
+\subsubsection[{GetTotalCStored}]{\setlength{\rightskip}{0pt plus 5cm}double floorstore::GetTotalCStored ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_af6c7892c3ec1811e49d62c9875987792}
+
+
+Return the amount of carbon stored in kilograms. Return total amount of C in store \hypertarget{classfloorstore_a70c102d9fd6b4c562075531fea3b520e}{
+\index{floorstore@{floorstore}!GetTotalDMStored@{GetTotalDMStored}}
+\index{GetTotalDMStored@{GetTotalDMStored}!floorstore@{floorstore}}
+\subsubsection[{GetTotalDMStored}]{\setlength{\rightskip}{0pt plus 5cm}double floorstore::GetTotalDMStored ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a70c102d9fd6b4c562075531fea3b520e}
+
+
+Returned the amount of dry \hyperlink{classmatter}{matter} stored in kilograms. Return total amount of DM in store \hypertarget{classfloorstore_a62fa4a2efc876c2500010395619fbd5d}{
+\index{floorstore@{floorstore}!GetTotalNStored@{GetTotalNStored}}
+\index{GetTotalNStored@{GetTotalNStored}!floorstore@{floorstore}}
+\subsubsection[{GetTotalNStored}]{\setlength{\rightskip}{0pt plus 5cm}double floorstore::GetTotalNStored ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a62fa4a2efc876c2500010395619fbd5d}
+
+
+Return the amount of \hyperlink{classnitrogen}{nitrogen} stored in kilograms. Return total amount of N in store \hypertarget{classfloorstore_a5b13ea82d1f8662ac8b117574cb24e6d}{
+\index{floorstore@{floorstore}!GetWashingWater@{GetWashingWater}}
+\index{GetWashingWater@{GetWashingWater}!floorstore@{floorstore}}
+\subsubsection[{GetWashingWater}]{\setlength{\rightskip}{0pt plus 5cm}virtual double floorstore::GetWashingWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a5b13ea82d1f8662ac8b117574cb24e6d}
+
+
+Returned the amount of washing \hyperlink{classwater}{water} in litres per day. \hypertarget{classfloorstore_aef2345c78fe8a0c36209d53678fba90c}{
+\index{floorstore@{floorstore}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!floorstore@{floorstore}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::GiveIndicator ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_aef2345c78fe8a0c36209d53678fba90c}
+
+
+Calculate indicators for floor \hyperlink{classstorage}{storage}. GiveIndicator, called daily from DailyUpdate. Does not do anything \hypertarget{classfloorstore_af2c0a2cfbe80ae99b8a25202f2d285b5}{
+\index{floorstore@{floorstore}!RcvBedding@{RcvBedding}}
+\index{RcvBedding@{RcvBedding}!floorstore@{floorstore}}
+\subsubsection[{RcvBedding}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::RcvBedding ({\bf plantItem} $\ast$ {\em aBeddingMaterial})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_af2c0a2cfbe80ae99b8a25202f2d285b5}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em aBeddingMaterial}]the bedding to be added to the floor \hyperlink{classstorage}{storage}\end{DoxyParams}
+Receive bedding \hypertarget{classfloorstore_a68ddc9791279945f7a42b3c643dd7e1c}{
+\index{floorstore@{floorstore}!RcvManure@{RcvManure}}
+\index{RcvManure@{RcvManure}!floorstore@{floorstore}}
+\subsubsection[{RcvManure}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::RcvManure ({\bf manure} $\ast$ {\em aManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a68ddc9791279945f7a42b3c643dd7e1c}
+
+
+Receives \hyperlink{classmanure}{manure}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em aManure}]the \hyperlink{classmanure}{manure} to be added to the floor \hyperlink{classstorage}{storage}\end{DoxyParams}
+Receive \hyperlink{classmanure}{manure} from animals \hypertarget{classfloorstore_ae1b9e00c23f4730f3f117a9e1000d2f6}{
+\index{floorstore@{floorstore}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!floorstore@{floorstore}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_ae1b9e00c23f4730f3f117a9e1000d2f6}
+
+
+Reads initialisation data, text file. Init reads the relevant values from its owners file \hypertarget{classfloorstore_a568e6257a1fb9f6ca2a3c6113316aa3d}{
+\index{floorstore@{floorstore}!ScaleSize@{ScaleSize}}
+\index{ScaleSize@{ScaleSize}!floorstore@{floorstore}}
+\subsubsection[{ScaleSize}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::ScaleSize (double {\em numberOfAnimals}, \/  double {\em annualManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_a568e6257a1fb9f6ca2a3c6113316aa3d}
+
+
+Scales the floor \hyperlink{classstorage}{storage} to a number of animals present. 
+\begin{DoxyParams}{Parameters}
+\item[{\em numberOfAnimals}]number of animals present \item[{\em annualManure}]total annual deposition of \hyperlink{classanimal}{animal} \hyperlink{classmanure}{manure} to this floor\end{DoxyParams}
+Scale floor to number of animals present \hypertarget{classfloorstore_a7279c61e34129cafea8b4d690b8c79b8}{
+\index{floorstore@{floorstore}!SettimeUncleaned@{SettimeUncleaned}}
+\index{SettimeUncleaned@{SettimeUncleaned}!floorstore@{floorstore}}
+\subsubsection[{SettimeUncleaned}]{\setlength{\rightskip}{0pt plus 5cm}virtual void floorstore::SettimeUncleaned (double {\em aTime})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classfloorstore_a7279c61e34129cafea8b4d690b8c79b8}
+
+
+Set the the time since cleaned in days. \hypertarget{classfloorstore_aeaade97a9f21a03bd2f5bc5acd916056}{
+\index{floorstore@{floorstore}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!floorstore@{floorstore}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::Volatize (double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_aeaade97a9f21a03bd2f5bc5acd916056}
+
+
+Static modelling of gaseous losses from floor \hyperlink{classstorage}{storage}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em volatAmmonia}]ammonia volatilised in kilograms \item[{\em N2Emission}]emission of \hyperlink{classnitrogen}{nitrogen} gas in kilograms \item[{\em N2OEmission}]emission of nitrous oxide in kilograms \item[{\em CH4Emission}]emission of methane in kilograms \item[{\em CO2Emission}]emission of carbon dioxide in kilograms\end{DoxyParams}
+Volatize ammonia from the \hyperlink{classfloorstore}{floorstore} -\/ static model \hypertarget{classfloorstore_ae328e740c794853624644db230175f0c}{
+\index{floorstore@{floorstore}!Volatize@{Volatize}}
+\index{Volatize@{Volatize}!floorstore@{floorstore}}
+\subsubsection[{Volatize}]{\setlength{\rightskip}{0pt plus 5cm}void floorstore::Volatize (double {\em airVelocity}, \/  double {\em humidity}, \/  double {\em temperature}, \/  double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em waterEvap}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CH4Emission}, \/  double $\ast$ {\em CO2Emission})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classfloorstore_ae328e740c794853624644db230175f0c}
+
+
+Dynamic modelling of the gaseous losses from the floor \hyperlink{classstorage}{storage}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em airVelocity}]air velocity across the floor surface in metres per second \item[{\em humidity}]relative humidity of the air passing over the floor surface \item[{\em temperature}]temperature of the air passing of the floor surface in degrees Celsius \item[{\em volatAmmonia}]ammonia volatilised in kilograms \item[{\em waterEvap}]evaporation of \hyperlink{classwater}{water} in kilograms \item[{\em N2Emission}]emission of \hyperlink{classnitrogen}{nitrogen} gas in kilograms \item[{\em N2OEmission}]emission of nitrous oxide in kilograms \item[{\em CH4Emission}]emission of methane in kilograms \item[{\em CO2Emission}]emission of carbon dioxide in kilograms\end{DoxyParams}
+Volatize from the \hyperlink{classfloorstore}{floorstore} 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classfloorstore_a2f4c08f25a5535c62d3d780806d5ce0b}{
+\index{floorstore@{floorstore}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!floorstore@{floorstore}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf floorstore} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classfloorstore_a2f4c08f25a5535c62d3d780806d5ce0b}
+
+
+Outputs streaming. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{floorstore_8h}{floorstore.h}\item 
+C:/main/trunk/src/building/\hyperlink{floorstore_8cpp}{floorstore.cpp}\end{DoxyCompactItemize}

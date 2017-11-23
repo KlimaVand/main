@@ -1,0 +1,307 @@
+\hypertarget{classgrazing_manager}{
+\section{grazingManager Class Reference}
+\label{classgrazing_manager}\index{grazingManager@{grazingManager}}
+}
+
+
+{\ttfamily \#include $<$grazingManager.h$>$}Inheritance diagram for grazingManager::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classgrazing_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgrazing_manager_a278deab30e954617cdd90a482e309f3f}{grazingManager} ()
+\item 
+\hyperlink{classgrazing_manager_ae9e0a96a199a9e571fed2f9728444885}{$\sim$grazingManager} ()
+\item 
+double \hyperlink{classgrazing_manager_abfbe66462e43096b46212a43593c7946}{GetminEnergyConc} ()
+\item 
+double \hyperlink{classgrazing_manager_a9f6be4124bbe7f6c22d102ed1fe24822}{GetminProteinConc} ()
+\item 
+double \hyperlink{classgrazing_manager_a464823a852c221687853e2978baa70e0}{GetminHarvestable} ()
+\item 
+bool \hyperlink{classgrazing_manager_a434fb905e1ade1610778a54baebb3cb3}{GetenableGrazing} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classfield}{field} $>$ $\ast$ \hyperlink{classgrazing_manager_add090eda9935ad4665d5388587aa5801}{daily\_\-update} (int $\ast$numOthers)
+\item 
+void \hyperlink{classgrazing_manager_a8929fd866876ba054eeeb2dfd02e688b}{Initialize} (\hyperlink{classlivestock}{livestock} $\ast$theLivestockptr, \hyperlink{classcrop_rotation}{cropRotation} $\ast$theCropRotationptr, \hyperlink{classbuildings}{buildings} $\ast$theBuildingsptr, \hyperlink{classcattle_feeding_manager}{cattleFeedingManager} $\ast$theCattleFeedingManagerptr)
+\item 
+void \hyperlink{classgrazing_manager_a0790c1be6eea4fbc391a89814b7dac99}{HouseAnimals} ()
+\item 
+void \hyperlink{classgrazing_manager_a9f1919dad1cc77b8d229ed9b13a470d9}{ReceivePlan} (char $\ast$fileName)
+\item 
+void \hyperlink{classgrazing_manager_a84c7728ec93315511d221ae456e997dd}{SetGrazableFields} ()
+\item 
+double \hyperlink{classgrazing_manager_a17ced3f230c570a362648df3d519b3fa}{calcSilageRequirement} ()
+\item 
+void \hyperlink{classgrazing_manager_a2e2fd9f45d1eb2136fd4ee7e1fc5d8fd}{checkSilageHolding} ()
+\item 
+void \hyperlink{classgrazing_manager_ad37ec0ac24feb05e89ea2af7ad547d0c}{checkPasture} ()
+\item 
+double \hyperlink{classgrazing_manager_a9d3a5982adf0406463307e6b25a62f0c}{GetHerbageAvailability} (bool restricted)
+\item 
+double \hyperlink{classgrazing_manager_a4f0ad2c2781ed63cc717059d3780d548}{GetHerbageAvailability} (bool restricted, int fieldNo)
+\item 
+double \hyperlink{classgrazing_manager_a4523eb886c59064baeb1bf9d87ddbe50}{GetGrazingAreaAvailable} ()
+\item 
+double \hyperlink{classgrazing_manager_a9838ae6a2502cdcd82be4915c358f339}{GetturnoutThreshold} ()
+\item 
+int \hyperlink{classgrazing_manager_aaaedb1e74f765f6501d7bc7772ea8600}{CalcGrazingPeriod} (\hyperlink{classbs_time}{bsTime} $\ast$aDate, int growthPeriod)
+\item 
+void \hyperlink{classgrazing_manager_a602265e7f9501cf92722f06623365d89}{SetFieldsGrazed} (\hyperlink{classbs_time}{bsTime} $\ast$aDate, int duration, double herbageRequired)
+\item 
+void \hyperlink{classgrazing_manager_a27aa5c8d71dc9f1baca7d2209e63fe3b}{SetFieldsGrazed} (double herbageRequired)
+\item 
+void \hyperlink{classgrazing_manager_a6f01332621905d316bb39c5f51169dd9}{InsertCut} (\hyperlink{classfield}{field} $\ast$aField, bool harvestCut)
+\item 
+double \hyperlink{classgrazing_manager_a92d31c0f475ac2aaed6b01b1b72d5a57}{GetAverageGrowthRate} (\hyperlink{classbs_time}{bsTime} $\ast$aDate, int fieldNo, int duration)
+\item 
+void \hyperlink{classgrazing_manager_a65c9a2762d9760f899bba4cb65b1e024}{InitialiseGrowthEstimates} ()
+\item 
+void \hyperlink{classgrazing_manager_a52d950e97efbe047f9fec1493a0ce62e}{StartGrazingManagement} ()
+\item 
+void \hyperlink{classgrazing_manager_ab0930ab0af01943e76429ecdbb9d9dfd}{SortFields} ()
+\item 
+void \hyperlink{classgrazing_manager_af4d75fc52160ba2df1afa74db9727e5c}{SetGrazing} (\hyperlink{classbs_time}{bsTime} $\ast$aDate, int duration, int $\ast$numOthers)
+\item 
+double \hyperlink{classgrazing_manager_aa45455953b5da3c6c7898c9e99bb274b}{GetExpectedGrowthRate} (\hyperlink{classbs_time}{bsTime} $\ast$aDate, int fieldNo)
+\item 
+bool \hyperlink{classgrazing_manager_abc0c9f087272175f7d3f7f7d099c7fd8}{CutConservationFields} (bool forceCut)
+\item 
+void \hyperlink{classgrazing_manager_a6d936f90c10dfc4f5bf7e7eddc3b85c0}{EndOfSeason} (bool topping)
+\item 
+void \hyperlink{classgrazing_manager_a6f11fda1e9b60ffac195adb3d93d6ca7}{SetGrazingAll} ()
+\item 
+bool \hyperlink{classgrazing_manager_aa831a26148a1171fce3f1e2971135d34}{CheckGrazingTheshold} ()
+\item 
+void \hyperlink{classgrazing_manager_a2facc8dfbfbbcd8f9fec21fe5d58c942}{InitialiseFileOutput} ()
+\item 
+void \hyperlink{classgrazing_manager_ac5d9211b46dabde68fb3038bfad1752b}{GetStatus} ()
+\item 
+bool \hyperlink{classgrazing_manager_a7e94949ab9bfb77da28ac2c3dcd79aaa}{CheckConservationFields} ()
+\item 
+int \hyperlink{classgrazing_manager_a2e8c040172f02e13bf9642b493ea1ab0}{GetGrazingSupplyStatus} (double numberOfDaysSupply)
+\item 
+int \hyperlink{classgrazing_manager_abba248d53777abb444403613dccd77c3}{GetNumGrazableFields} ()
+\item 
+void \hyperlink{classgrazing_manager_a782edbd814727753f68ea5d041f79c9d}{AutoGrazingPossible} ()
+\item 
+void \hyperlink{classgrazing_manager_a6fc495736362d8f4b2da023fecae5259}{ClearTemporaryVariables} ()
+\item 
+void \hyperlink{classgrazing_manager_ad4339322398af753da757bcebc3a085c}{CheckOpStopsGrazing} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgrazing_manager_a278deab30e954617cdd90a482e309f3f}{
+\index{grazingManager@{grazingManager}!grazingManager@{grazingManager}}
+\index{grazingManager@{grazingManager}!grazingManager@{grazingManager}}
+\subsubsection[{grazingManager}]{\setlength{\rightskip}{0pt plus 5cm}grazingManager::grazingManager ()}}
+\label{classgrazing_manager_a278deab30e954617cdd90a482e309f3f}
+\hypertarget{classgrazing_manager_ae9e0a96a199a9e571fed2f9728444885}{
+\index{grazingManager@{grazingManager}!$\sim$grazingManager@{$\sim$grazingManager}}
+\index{$\sim$grazingManager@{$\sim$grazingManager}!grazingManager@{grazingManager}}
+\subsubsection[{$\sim$grazingManager}]{\setlength{\rightskip}{0pt plus 5cm}grazingManager::$\sim$grazingManager ()}}
+\label{classgrazing_manager_ae9e0a96a199a9e571fed2f9728444885}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classgrazing_manager_a782edbd814727753f68ea5d041f79c9d}{
+\index{grazingManager@{grazingManager}!AutoGrazingPossible@{AutoGrazingPossible}}
+\index{AutoGrazingPossible@{AutoGrazingPossible}!grazingManager@{grazingManager}}
+\subsubsection[{AutoGrazingPossible}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::AutoGrazingPossible ()}}
+\label{classgrazing_manager_a782edbd814727753f68ea5d041f79c9d}
+\hypertarget{classgrazing_manager_aaaedb1e74f765f6501d7bc7772ea8600}{
+\index{grazingManager@{grazingManager}!CalcGrazingPeriod@{CalcGrazingPeriod}}
+\index{CalcGrazingPeriod@{CalcGrazingPeriod}!grazingManager@{grazingManager}}
+\subsubsection[{CalcGrazingPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int grazingManager::CalcGrazingPeriod ({\bf bsTime} $\ast$ {\em aDate}, \/  int {\em growthPeriod})}}
+\label{classgrazing_manager_aaaedb1e74f765f6501d7bc7772ea8600}
+\hypertarget{classgrazing_manager_a17ced3f230c570a362648df3d519b3fa}{
+\index{grazingManager@{grazingManager}!calcSilageRequirement@{calcSilageRequirement}}
+\index{calcSilageRequirement@{calcSilageRequirement}!grazingManager@{grazingManager}}
+\subsubsection[{calcSilageRequirement}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::calcSilageRequirement ()}}
+\label{classgrazing_manager_a17ced3f230c570a362648df3d519b3fa}
+\hypertarget{classgrazing_manager_a7e94949ab9bfb77da28ac2c3dcd79aaa}{
+\index{grazingManager@{grazingManager}!CheckConservationFields@{CheckConservationFields}}
+\index{CheckConservationFields@{CheckConservationFields}!grazingManager@{grazingManager}}
+\subsubsection[{CheckConservationFields}]{\setlength{\rightskip}{0pt plus 5cm}bool grazingManager::CheckConservationFields ()}}
+\label{classgrazing_manager_a7e94949ab9bfb77da28ac2c3dcd79aaa}
+\hypertarget{classgrazing_manager_aa831a26148a1171fce3f1e2971135d34}{
+\index{grazingManager@{grazingManager}!CheckGrazingTheshold@{CheckGrazingTheshold}}
+\index{CheckGrazingTheshold@{CheckGrazingTheshold}!grazingManager@{grazingManager}}
+\subsubsection[{CheckGrazingTheshold}]{\setlength{\rightskip}{0pt plus 5cm}bool grazingManager::CheckGrazingTheshold ()}}
+\label{classgrazing_manager_aa831a26148a1171fce3f1e2971135d34}
+\hypertarget{classgrazing_manager_ad4339322398af753da757bcebc3a085c}{
+\index{grazingManager@{grazingManager}!CheckOpStopsGrazing@{CheckOpStopsGrazing}}
+\index{CheckOpStopsGrazing@{CheckOpStopsGrazing}!grazingManager@{grazingManager}}
+\subsubsection[{CheckOpStopsGrazing}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::CheckOpStopsGrazing ()}}
+\label{classgrazing_manager_ad4339322398af753da757bcebc3a085c}
+\hypertarget{classgrazing_manager_ad37ec0ac24feb05e89ea2af7ad547d0c}{
+\index{grazingManager@{grazingManager}!checkPasture@{checkPasture}}
+\index{checkPasture@{checkPasture}!grazingManager@{grazingManager}}
+\subsubsection[{checkPasture}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::checkPasture ()}}
+\label{classgrazing_manager_ad37ec0ac24feb05e89ea2af7ad547d0c}
+\hypertarget{classgrazing_manager_a2e2fd9f45d1eb2136fd4ee7e1fc5d8fd}{
+\index{grazingManager@{grazingManager}!checkSilageHolding@{checkSilageHolding}}
+\index{checkSilageHolding@{checkSilageHolding}!grazingManager@{grazingManager}}
+\subsubsection[{checkSilageHolding}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::checkSilageHolding ()}}
+\label{classgrazing_manager_a2e2fd9f45d1eb2136fd4ee7e1fc5d8fd}
+\hypertarget{classgrazing_manager_a6fc495736362d8f4b2da023fecae5259}{
+\index{grazingManager@{grazingManager}!ClearTemporaryVariables@{ClearTemporaryVariables}}
+\index{ClearTemporaryVariables@{ClearTemporaryVariables}!grazingManager@{grazingManager}}
+\subsubsection[{ClearTemporaryVariables}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::ClearTemporaryVariables ()}}
+\label{classgrazing_manager_a6fc495736362d8f4b2da023fecae5259}
+\hypertarget{classgrazing_manager_abc0c9f087272175f7d3f7f7d099c7fd8}{
+\index{grazingManager@{grazingManager}!CutConservationFields@{CutConservationFields}}
+\index{CutConservationFields@{CutConservationFields}!grazingManager@{grazingManager}}
+\subsubsection[{CutConservationFields}]{\setlength{\rightskip}{0pt plus 5cm}bool grazingManager::CutConservationFields (bool {\em forceCut})}}
+\label{classgrazing_manager_abc0c9f087272175f7d3f7f7d099c7fd8}
+\hypertarget{classgrazing_manager_add090eda9935ad4665d5388587aa5801}{
+\index{grazingManager@{grazingManager}!daily\_\-update@{daily\_\-update}}
+\index{daily\_\-update@{daily\_\-update}!grazingManager@{grazingManager}}
+\subsubsection[{daily\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<$ {\bf field} $>$ $\ast$ grazingManager::daily\_\-update (int $\ast$ {\em numOthers})}}
+\label{classgrazing_manager_add090eda9935ad4665d5388587aa5801}
+\hypertarget{classgrazing_manager_a6d936f90c10dfc4f5bf7e7eddc3b85c0}{
+\index{grazingManager@{grazingManager}!EndOfSeason@{EndOfSeason}}
+\index{EndOfSeason@{EndOfSeason}!grazingManager@{grazingManager}}
+\subsubsection[{EndOfSeason}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::EndOfSeason (bool {\em topping})}}
+\label{classgrazing_manager_a6d936f90c10dfc4f5bf7e7eddc3b85c0}
+\hypertarget{classgrazing_manager_a92d31c0f475ac2aaed6b01b1b72d5a57}{
+\index{grazingManager@{grazingManager}!GetAverageGrowthRate@{GetAverageGrowthRate}}
+\index{GetAverageGrowthRate@{GetAverageGrowthRate}!grazingManager@{grazingManager}}
+\subsubsection[{GetAverageGrowthRate}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetAverageGrowthRate ({\bf bsTime} $\ast$ {\em aDate}, \/  int {\em fieldNo}, \/  int {\em duration})}}
+\label{classgrazing_manager_a92d31c0f475ac2aaed6b01b1b72d5a57}
+\hypertarget{classgrazing_manager_a434fb905e1ade1610778a54baebb3cb3}{
+\index{grazingManager@{grazingManager}!GetenableGrazing@{GetenableGrazing}}
+\index{GetenableGrazing@{GetenableGrazing}!grazingManager@{grazingManager}}
+\subsubsection[{GetenableGrazing}]{\setlength{\rightskip}{0pt plus 5cm}bool grazingManager::GetenableGrazing ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgrazing_manager_a434fb905e1ade1610778a54baebb3cb3}
+\hypertarget{classgrazing_manager_aa45455953b5da3c6c7898c9e99bb274b}{
+\index{grazingManager@{grazingManager}!GetExpectedGrowthRate@{GetExpectedGrowthRate}}
+\index{GetExpectedGrowthRate@{GetExpectedGrowthRate}!grazingManager@{grazingManager}}
+\subsubsection[{GetExpectedGrowthRate}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetExpectedGrowthRate ({\bf bsTime} $\ast$ {\em aDate}, \/  int {\em fieldNo})}}
+\label{classgrazing_manager_aa45455953b5da3c6c7898c9e99bb274b}
+\hypertarget{classgrazing_manager_a4523eb886c59064baeb1bf9d87ddbe50}{
+\index{grazingManager@{grazingManager}!GetGrazingAreaAvailable@{GetGrazingAreaAvailable}}
+\index{GetGrazingAreaAvailable@{GetGrazingAreaAvailable}!grazingManager@{grazingManager}}
+\subsubsection[{GetGrazingAreaAvailable}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetGrazingAreaAvailable ()}}
+\label{classgrazing_manager_a4523eb886c59064baeb1bf9d87ddbe50}
+\hypertarget{classgrazing_manager_a2e8c040172f02e13bf9642b493ea1ab0}{
+\index{grazingManager@{grazingManager}!GetGrazingSupplyStatus@{GetGrazingSupplyStatus}}
+\index{GetGrazingSupplyStatus@{GetGrazingSupplyStatus}!grazingManager@{grazingManager}}
+\subsubsection[{GetGrazingSupplyStatus}]{\setlength{\rightskip}{0pt plus 5cm}int grazingManager::GetGrazingSupplyStatus (double {\em numberOfDaysSupply})}}
+\label{classgrazing_manager_a2e8c040172f02e13bf9642b493ea1ab0}
+\hypertarget{classgrazing_manager_a4f0ad2c2781ed63cc717059d3780d548}{
+\index{grazingManager@{grazingManager}!GetHerbageAvailability@{GetHerbageAvailability}}
+\index{GetHerbageAvailability@{GetHerbageAvailability}!grazingManager@{grazingManager}}
+\subsubsection[{GetHerbageAvailability}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetHerbageAvailability (bool {\em restricted}, \/  int {\em fieldNo})}}
+\label{classgrazing_manager_a4f0ad2c2781ed63cc717059d3780d548}
+\hypertarget{classgrazing_manager_a9d3a5982adf0406463307e6b25a62f0c}{
+\index{grazingManager@{grazingManager}!GetHerbageAvailability@{GetHerbageAvailability}}
+\index{GetHerbageAvailability@{GetHerbageAvailability}!grazingManager@{grazingManager}}
+\subsubsection[{GetHerbageAvailability}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetHerbageAvailability (bool {\em restricted})}}
+\label{classgrazing_manager_a9d3a5982adf0406463307e6b25a62f0c}
+\hypertarget{classgrazing_manager_abfbe66462e43096b46212a43593c7946}{
+\index{grazingManager@{grazingManager}!GetminEnergyConc@{GetminEnergyConc}}
+\index{GetminEnergyConc@{GetminEnergyConc}!grazingManager@{grazingManager}}
+\subsubsection[{GetminEnergyConc}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetminEnergyConc ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgrazing_manager_abfbe66462e43096b46212a43593c7946}
+\hypertarget{classgrazing_manager_a464823a852c221687853e2978baa70e0}{
+\index{grazingManager@{grazingManager}!GetminHarvestable@{GetminHarvestable}}
+\index{GetminHarvestable@{GetminHarvestable}!grazingManager@{grazingManager}}
+\subsubsection[{GetminHarvestable}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetminHarvestable ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgrazing_manager_a464823a852c221687853e2978baa70e0}
+\hypertarget{classgrazing_manager_a9f6be4124bbe7f6c22d102ed1fe24822}{
+\index{grazingManager@{grazingManager}!GetminProteinConc@{GetminProteinConc}}
+\index{GetminProteinConc@{GetminProteinConc}!grazingManager@{grazingManager}}
+\subsubsection[{GetminProteinConc}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetminProteinConc ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgrazing_manager_a9f6be4124bbe7f6c22d102ed1fe24822}
+\hypertarget{classgrazing_manager_abba248d53777abb444403613dccd77c3}{
+\index{grazingManager@{grazingManager}!GetNumGrazableFields@{GetNumGrazableFields}}
+\index{GetNumGrazableFields@{GetNumGrazableFields}!grazingManager@{grazingManager}}
+\subsubsection[{GetNumGrazableFields}]{\setlength{\rightskip}{0pt plus 5cm}int grazingManager::GetNumGrazableFields ()}}
+\label{classgrazing_manager_abba248d53777abb444403613dccd77c3}
+\hypertarget{classgrazing_manager_ac5d9211b46dabde68fb3038bfad1752b}{
+\index{grazingManager@{grazingManager}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!grazingManager@{grazingManager}}
+\subsubsection[{GetStatus}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::GetStatus ()}}
+\label{classgrazing_manager_ac5d9211b46dabde68fb3038bfad1752b}
+\hypertarget{classgrazing_manager_a9838ae6a2502cdcd82be4915c358f339}{
+\index{grazingManager@{grazingManager}!GetturnoutThreshold@{GetturnoutThreshold}}
+\index{GetturnoutThreshold@{GetturnoutThreshold}!grazingManager@{grazingManager}}
+\subsubsection[{GetturnoutThreshold}]{\setlength{\rightskip}{0pt plus 5cm}double grazingManager::GetturnoutThreshold ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgrazing_manager_a9838ae6a2502cdcd82be4915c358f339}
+\hypertarget{classgrazing_manager_a0790c1be6eea4fbc391a89814b7dac99}{
+\index{grazingManager@{grazingManager}!HouseAnimals@{HouseAnimals}}
+\index{HouseAnimals@{HouseAnimals}!grazingManager@{grazingManager}}
+\subsubsection[{HouseAnimals}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::HouseAnimals ()}}
+\label{classgrazing_manager_a0790c1be6eea4fbc391a89814b7dac99}
+\hypertarget{classgrazing_manager_a2facc8dfbfbbcd8f9fec21fe5d58c942}{
+\index{grazingManager@{grazingManager}!InitialiseFileOutput@{InitialiseFileOutput}}
+\index{InitialiseFileOutput@{InitialiseFileOutput}!grazingManager@{grazingManager}}
+\subsubsection[{InitialiseFileOutput}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::InitialiseFileOutput ()}}
+\label{classgrazing_manager_a2facc8dfbfbbcd8f9fec21fe5d58c942}
+\hypertarget{classgrazing_manager_a65c9a2762d9760f899bba4cb65b1e024}{
+\index{grazingManager@{grazingManager}!InitialiseGrowthEstimates@{InitialiseGrowthEstimates}}
+\index{InitialiseGrowthEstimates@{InitialiseGrowthEstimates}!grazingManager@{grazingManager}}
+\subsubsection[{InitialiseGrowthEstimates}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::InitialiseGrowthEstimates ()}}
+\label{classgrazing_manager_a65c9a2762d9760f899bba4cb65b1e024}
+\hypertarget{classgrazing_manager_a8929fd866876ba054eeeb2dfd02e688b}{
+\index{grazingManager@{grazingManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!grazingManager@{grazingManager}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::Initialize ({\bf livestock} $\ast$ {\em theLivestockptr}, \/  {\bf cropRotation} $\ast$ {\em theCropRotationptr}, \/  {\bf buildings} $\ast$ {\em theBuildingsptr}, \/  {\bf cattleFeedingManager} $\ast$ {\em theCattleFeedingManagerptr})}}
+\label{classgrazing_manager_a8929fd866876ba054eeeb2dfd02e688b}
+\hypertarget{classgrazing_manager_a6f01332621905d316bb39c5f51169dd9}{
+\index{grazingManager@{grazingManager}!InsertCut@{InsertCut}}
+\index{InsertCut@{InsertCut}!grazingManager@{grazingManager}}
+\subsubsection[{InsertCut}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::InsertCut ({\bf field} $\ast$ {\em aField}, \/  bool {\em harvestCut})}}
+\label{classgrazing_manager_a6f01332621905d316bb39c5f51169dd9}
+\hypertarget{classgrazing_manager_a9f1919dad1cc77b8d229ed9b13a470d9}{
+\index{grazingManager@{grazingManager}!ReceivePlan@{ReceivePlan}}
+\index{ReceivePlan@{ReceivePlan}!grazingManager@{grazingManager}}
+\subsubsection[{ReceivePlan}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::ReceivePlan (char $\ast$ {\em fileName})}}
+\label{classgrazing_manager_a9f1919dad1cc77b8d229ed9b13a470d9}
+\hypertarget{classgrazing_manager_a27aa5c8d71dc9f1baca7d2209e63fe3b}{
+\index{grazingManager@{grazingManager}!SetFieldsGrazed@{SetFieldsGrazed}}
+\index{SetFieldsGrazed@{SetFieldsGrazed}!grazingManager@{grazingManager}}
+\subsubsection[{SetFieldsGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::SetFieldsGrazed (double {\em herbageRequired})}}
+\label{classgrazing_manager_a27aa5c8d71dc9f1baca7d2209e63fe3b}
+\hypertarget{classgrazing_manager_a602265e7f9501cf92722f06623365d89}{
+\index{grazingManager@{grazingManager}!SetFieldsGrazed@{SetFieldsGrazed}}
+\index{SetFieldsGrazed@{SetFieldsGrazed}!grazingManager@{grazingManager}}
+\subsubsection[{SetFieldsGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::SetFieldsGrazed ({\bf bsTime} $\ast$ {\em aDate}, \/  int {\em duration}, \/  double {\em herbageRequired})}}
+\label{classgrazing_manager_a602265e7f9501cf92722f06623365d89}
+\hypertarget{classgrazing_manager_a84c7728ec93315511d221ae456e997dd}{
+\index{grazingManager@{grazingManager}!SetGrazableFields@{SetGrazableFields}}
+\index{SetGrazableFields@{SetGrazableFields}!grazingManager@{grazingManager}}
+\subsubsection[{SetGrazableFields}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::SetGrazableFields ()}}
+\label{classgrazing_manager_a84c7728ec93315511d221ae456e997dd}
+\hypertarget{classgrazing_manager_af4d75fc52160ba2df1afa74db9727e5c}{
+\index{grazingManager@{grazingManager}!SetGrazing@{SetGrazing}}
+\index{SetGrazing@{SetGrazing}!grazingManager@{grazingManager}}
+\subsubsection[{SetGrazing}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::SetGrazing ({\bf bsTime} $\ast$ {\em aDate}, \/  int {\em duration}, \/  int $\ast$ {\em numOthers})}}
+\label{classgrazing_manager_af4d75fc52160ba2df1afa74db9727e5c}
+\hypertarget{classgrazing_manager_a6f11fda1e9b60ffac195adb3d93d6ca7}{
+\index{grazingManager@{grazingManager}!SetGrazingAll@{SetGrazingAll}}
+\index{SetGrazingAll@{SetGrazingAll}!grazingManager@{grazingManager}}
+\subsubsection[{SetGrazingAll}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::SetGrazingAll ()}}
+\label{classgrazing_manager_a6f11fda1e9b60ffac195adb3d93d6ca7}
+\hypertarget{classgrazing_manager_ab0930ab0af01943e76429ecdbb9d9dfd}{
+\index{grazingManager@{grazingManager}!SortFields@{SortFields}}
+\index{SortFields@{SortFields}!grazingManager@{grazingManager}}
+\subsubsection[{SortFields}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::SortFields ()}}
+\label{classgrazing_manager_ab0930ab0af01943e76429ecdbb9d9dfd}
+\hypertarget{classgrazing_manager_a52d950e97efbe047f9fec1493a0ce62e}{
+\index{grazingManager@{grazingManager}!StartGrazingManagement@{StartGrazingManagement}}
+\index{StartGrazingManagement@{StartGrazingManagement}!grazingManager@{grazingManager}}
+\subsubsection[{StartGrazingManagement}]{\setlength{\rightskip}{0pt plus 5cm}void grazingManager::StartGrazingManagement ()}}
+\label{classgrazing_manager_a52d950e97efbe047f9fec1493a0ce62e}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/manager/\hyperlink{grazing_manager_8h}{grazingManager.h}\item 
+C:/main/trunk/src/manager/\hyperlink{grazing_manager_8cpp}{grazingManager.cpp}\end{DoxyCompactItemize}

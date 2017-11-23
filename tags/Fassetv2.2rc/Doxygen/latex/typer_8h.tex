@@ -1,0 +1,490 @@
+\hypertarget{typer_8h}{
+\section{C:/main/trunk/src/base/typer.h File Reference}
+\label{typer_8h}\index{C:/main/trunk/src/base/typer.h@{C:/main/trunk/src/base/typer.h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtech_econ_resp}{techEconResp}
+\item 
+struct \hyperlink{structroot_structure}{rootStructure}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{typer_8h_a61dadd085c1777f559549e05962b2c9ea77839917df0939cf87a42beb671106e8}{BackScope} = 4, 
+\hyperlink{typer_8h_a61dadd085c1777f559549e05962b2c9ea3356ee33e1fa352fb2d508aaba564dcf}{id\_\-len} = 9
+ \}
+\item 
+enum \{ \hyperlink{typer_8h_a726ca809ffd3d67ab4b8476646f26635a1f37f2cf718636fd4290eea4cbbfaf6d}{MaxPlants} =  10
+ \}
+\item 
+enum \{ \hyperlink{typer_8h_a0411cd49bb5b71852cecd93bcbf0ca2da489863aec95253fced254923e4cb8148}{MaxSoilLayers} = 100
+ \}
+\item 
+enum \{ \hyperlink{typer_8h_abed82baf7f470b522273a3e37c24c600a38c7aed71fad7d05f5ca479aea57961d}{nameLength} =  40, 
+\hyperlink{typer_8h_abed82baf7f470b522273a3e37c24c600a656d304129ec160a5d700279b87f5053}{unitLength} =  25
+ \}
+\item 
+enum \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} \{ \par
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813fa50bc6fb651fafc4aa47ca338ee215691}{noCalcLP}, 
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813faf837bc2ff335624950119efb9c0fb4e0}{hoursTotalNotCombineNotFert}, 
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813fa74a866ee0a38c882ba521242a5d7af96}{hoursCombine}, 
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813fae8c6484a6e04817834a346f0aa7fc3e0}{hoursAnimalFert}, 
+\par
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813fa08f7da7ff3939ef218976adcf0fccab1}{hoursMineralFert}, 
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813fa27592addaf1e1bdfa349074fc973e269}{hoursPlantCare}, 
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813faf9587c8aa8da354f1adad6c4bd13bde9}{varCostTotalNotFert}, 
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813faa368dfb0274c6abf412ee40e3303f19a}{varCostAnimalFert}, 
+\par
+\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813fa92063497af58ddc66d33a144ff1e34b3}{varCostMineralFert}
+ \}
+\item 
+enum \hyperlink{typer_8h_a74e289adaa38a655bd68482967f86cfd}{maxSearchModeType} \{ \hyperlink{typer_8h_a74e289adaa38a655bd68482967f86cfdaa4500e61db092c2e1719b5d68b047ec3}{first}, 
+\hyperlink{typer_8h_a74e289adaa38a655bd68482967f86cfdaa1a074a72eb46dfdde53e589d946ab98}{last}
+ \}
+\item 
+enum \hyperlink{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8}{techEqpSourceType} \{ \hyperlink{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8ab8afdd4d79172e82d7ab9af53376b630}{farm}, 
+\hyperlink{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8a6aef01ed9b1c198e6944f87e370f00b2}{external}
+ \}
+\item 
+enum \hyperlink{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04d}{chemicalType} \{ \par
+\hyperlink{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04daaa79fc4e397e7f45d1bef42670d94a72}{herbicide}, 
+\hyperlink{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da440125fe115bd252cbc5f774275dd423}{fungicide}, 
+\hyperlink{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da0453f93d5e46c74fd32a9ca328b959b5}{insecticide}, 
+\hyperlink{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da65bd48d83891437b3d99fcbf223a163d}{pesticide}, 
+\par
+\hyperlink{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da8692bf2401a8fcc15dcca837e5be7953}{microfertilizer}
+ \}
+\item 
+enum \hyperlink{typer_8h_af7c21877c7448b813184ececcc1af13c}{indicatorTypes} \{ \hyperlink{typer_8h_af7c21877c7448b813184ececcc1af13ca7361be8d586650bac7f248153f94f6f2}{environmentalIndicator}, 
+\hyperlink{typer_8h_af7c21877c7448b813184ececcc1af13cadcfea84ffbf1780d7036c4014e4d5be6}{economicIndicator}, 
+\hyperlink{typer_8h_af7c21877c7448b813184ececcc1af13cae1e1f2af0184ac5fa40380545412fc1c}{noType}
+ \}
+\item 
+enum \hyperlink{typer_8h_afed5140a40dab0a128a50bb57c0e82d4}{investStrategyType} \{ \hyperlink{typer_8h_afed5140a40dab0a128a50bb57c0e82d4aa4ce9113b0f4ae961a2a382aa3a5c3f7}{constReinvest}, 
+\hyperlink{typer_8h_afed5140a40dab0a128a50bb57c0e82d4a6c6a26a121270163afb50cf39b52c9e4}{dynamicReinvest}
+ \}
+\item 
+enum \hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6c}{unitType} \{ \par
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca97603755e1989148bcf6afd0df31d88a}{kwh}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca254cdae5230f36adaa5dfd8156eb07e3}{tfi}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca0247320c476fffeaa81ffa7836e08dee}{t}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca8835e1c0ac1481cc67747c2ffb4dfbcd}{kg}, 
+\par
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{g}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cae93ae8cc5cd826dd0639a6f227327aa4}{m3}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cafec48674e69529e52b1724bc9164052f}{l}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caadeaf4194590a58aa4dcedb3dae7e566}{ha}, 
+\par
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca7d7031afd6ab8c32f22c9ffe66318ec4}{m2}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caca3cf2ca9e0e7f4e96f2bbc362b9353a}{m}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca9b2d7688fc6394a3f52163b317043936}{mm}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caf65ef99cda0cb9b61d25c7cdf791634b}{sfu}, 
+\par
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca0c8f8663af5d02dd407beb7decb7df37}{day}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca9cc62dad91865f6f7e2506ff1b566566}{hour}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca82f3147bf147fb8e01df5f050cf72911}{kr}, 
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cab10366ecc76133a0a4a4712a5ee26f65}{fraction}, 
+\par
+\hyperlink{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cad0ab84d64ade1f97c944835b0636998d}{pcs}
+ \}
+\item 
+enum \hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047}{productObjType} \{ \par
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a8b761b2cd71c9e04a55edd1bd49c6cc4}{productObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047ab6c22e88bde22ddc843aa894fecf7f17}{animalObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047ad413f8c34883ecacfdaf716100291455}{chemicalObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a1780e07b7437331b3b2068f654f820e5}{waterObj}, 
+\par
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047ab87fe109a5da182f6fe92e485c4b5dfe}{seedObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a6543272d50df98f0aee3a884ad1afa78}{energyObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a4c0453c55a1cf804725974502b16c6fa}{decomposableObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a51d268ca1c7308847c30946a5e119abd}{plantItemObj}, 
+\par
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a32d294982ee2e1748ec001fb08563b7b}{feedItemObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a4591e4582b7aa867439ea50bfaa34c36}{manureObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a46bc0716fc4a3e027124ea52a38db148}{milkObj}, 
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a281a22a1be2127a20831a660b63f9c70}{fertilizerObj}, 
+\par
+\hyperlink{typer_8h_a3e272b4d234d0ce067866b1b95610047a660c2d33e53f35e245e3a2164c7982c4}{premiumObj}
+ \}
+\item 
+enum \{ \hyperlink{typer_8h_ab04a0655cd1e3bcac5e8f48c18df1a57ad1babff6aa9d1e88e477e72fa4875fc5}{MAX\_\-TXT} = 255
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{typer_8h_a61dadd085c1777f559549e05962b2c9e}{
+\subsubsection[{"@5}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{typer_8h_a61dadd085c1777f559549e05962b2c9e}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{BackScope@{BackScope}!typer.h@{typer.h}}\index{typer.h@{typer.h}!BackScope@{BackScope}}\item[{\em 
+\hypertarget{typer_8h_a61dadd085c1777f559549e05962b2c9ea77839917df0939cf87a42beb671106e8}{
+BackScope}
+\label{typer_8h_a61dadd085c1777f559549e05962b2c9ea77839917df0939cf87a42beb671106e8}
+}]\index{id\_\-len@{id\_\-len}!typer.h@{typer.h}}\index{typer.h@{typer.h}!id\_\-len@{id\_\-len}}\item[{\em 
+\hypertarget{typer_8h_a61dadd085c1777f559549e05962b2c9ea3356ee33e1fa352fb2d508aaba564dcf}{
+id\_\-len}
+\label{typer_8h_a61dadd085c1777f559549e05962b2c9ea3356ee33e1fa352fb2d508aaba564dcf}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_a726ca809ffd3d67ab4b8476646f26635}{
+\subsubsection[{"@6}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{typer_8h_a726ca809ffd3d67ab4b8476646f26635}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MaxPlants@{MaxPlants}!typer.h@{typer.h}}\index{typer.h@{typer.h}!MaxPlants@{MaxPlants}}\item[{\em 
+\hypertarget{typer_8h_a726ca809ffd3d67ab4b8476646f26635a1f37f2cf718636fd4290eea4cbbfaf6d}{
+MaxPlants}
+\label{typer_8h_a726ca809ffd3d67ab4b8476646f26635a1f37f2cf718636fd4290eea4cbbfaf6d}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}{
+\subsubsection[{"@7}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{typer_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MaxSoilLayers@{MaxSoilLayers}!typer.h@{typer.h}}\index{typer.h@{typer.h}!MaxSoilLayers@{MaxSoilLayers}}\item[{\em 
+\hypertarget{typer_8h_a0411cd49bb5b71852cecd93bcbf0ca2da489863aec95253fced254923e4cb8148}{
+MaxSoilLayers}
+\label{typer_8h_a0411cd49bb5b71852cecd93bcbf0ca2da489863aec95253fced254923e4cb8148}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_abed82baf7f470b522273a3e37c24c600}{
+\subsubsection[{"@8}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{typer_8h_abed82baf7f470b522273a3e37c24c600}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{nameLength@{nameLength}!typer.h@{typer.h}}\index{typer.h@{typer.h}!nameLength@{nameLength}}\item[{\em 
+\hypertarget{typer_8h_abed82baf7f470b522273a3e37c24c600a38c7aed71fad7d05f5ca479aea57961d}{
+nameLength}
+\label{typer_8h_abed82baf7f470b522273a3e37c24c600a38c7aed71fad7d05f5ca479aea57961d}
+}]\index{unitLength@{unitLength}!typer.h@{typer.h}}\index{typer.h@{typer.h}!unitLength@{unitLength}}\item[{\em 
+\hypertarget{typer_8h_abed82baf7f470b522273a3e37c24c600a656d304129ec160a5d700279b87f5053}{
+unitLength}
+\label{typer_8h_abed82baf7f470b522273a3e37c24c600a656d304129ec160a5d700279b87f5053}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}{
+\subsubsection[{"@9}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{typer_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MAX\_\-TXT@{MAX\_\-TXT}!typer.h@{typer.h}}\index{typer.h@{typer.h}!MAX\_\-TXT@{MAX\_\-TXT}}\item[{\em 
+\hypertarget{typer_8h_ab04a0655cd1e3bcac5e8f48c18df1a57ad1babff6aa9d1e88e477e72fa4875fc5}{
+MAX\_\-TXT}
+\label{typer_8h_ab04a0655cd1e3bcac5e8f48c18df1a57ad1babff6aa9d1e88e477e72fa4875fc5}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{
+\index{typer.h@{typer.h}!calcLPType@{calcLPType}}
+\index{calcLPType@{calcLPType}!typer.h@{typer.h}}
+\subsubsection[{calcLPType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf calcLPType}}}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813f}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{noCalcLP@{noCalcLP}!typer.h@{typer.h}}\index{typer.h@{typer.h}!noCalcLP@{noCalcLP}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813fa50bc6fb651fafc4aa47ca338ee215691}{
+noCalcLP}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813fa50bc6fb651fafc4aa47ca338ee215691}
+}]\index{hoursTotalNotCombineNotFert@{hoursTotalNotCombineNotFert}!typer.h@{typer.h}}\index{typer.h@{typer.h}!hoursTotalNotCombineNotFert@{hoursTotalNotCombineNotFert}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813faf837bc2ff335624950119efb9c0fb4e0}{
+hoursTotalNotCombineNotFert}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813faf837bc2ff335624950119efb9c0fb4e0}
+}]\index{hoursCombine@{hoursCombine}!typer.h@{typer.h}}\index{typer.h@{typer.h}!hoursCombine@{hoursCombine}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813fa74a866ee0a38c882ba521242a5d7af96}{
+hoursCombine}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813fa74a866ee0a38c882ba521242a5d7af96}
+}]\index{hoursAnimalFert@{hoursAnimalFert}!typer.h@{typer.h}}\index{typer.h@{typer.h}!hoursAnimalFert@{hoursAnimalFert}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813fae8c6484a6e04817834a346f0aa7fc3e0}{
+hoursAnimalFert}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813fae8c6484a6e04817834a346f0aa7fc3e0}
+}]\index{hoursMineralFert@{hoursMineralFert}!typer.h@{typer.h}}\index{typer.h@{typer.h}!hoursMineralFert@{hoursMineralFert}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813fa08f7da7ff3939ef218976adcf0fccab1}{
+hoursMineralFert}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813fa08f7da7ff3939ef218976adcf0fccab1}
+}]\index{hoursPlantCare@{hoursPlantCare}!typer.h@{typer.h}}\index{typer.h@{typer.h}!hoursPlantCare@{hoursPlantCare}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813fa27592addaf1e1bdfa349074fc973e269}{
+hoursPlantCare}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813fa27592addaf1e1bdfa349074fc973e269}
+}]\index{varCostTotalNotFert@{varCostTotalNotFert}!typer.h@{typer.h}}\index{typer.h@{typer.h}!varCostTotalNotFert@{varCostTotalNotFert}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813faf9587c8aa8da354f1adad6c4bd13bde9}{
+varCostTotalNotFert}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813faf9587c8aa8da354f1adad6c4bd13bde9}
+}]\index{varCostAnimalFert@{varCostAnimalFert}!typer.h@{typer.h}}\index{typer.h@{typer.h}!varCostAnimalFert@{varCostAnimalFert}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813faa368dfb0274c6abf412ee40e3303f19a}{
+varCostAnimalFert}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813faa368dfb0274c6abf412ee40e3303f19a}
+}]\index{varCostMineralFert@{varCostMineralFert}!typer.h@{typer.h}}\index{typer.h@{typer.h}!varCostMineralFert@{varCostMineralFert}}\item[{\em 
+\hypertarget{typer_8h_af05cf854fc14086a0d6404be5ae9813fa92063497af58ddc66d33a144ff1e34b3}{
+varCostMineralFert}
+\label{typer_8h_af05cf854fc14086a0d6404be5ae9813fa92063497af58ddc66d33a144ff1e34b3}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04d}{
+\index{typer.h@{typer.h}!chemicalType@{chemicalType}}
+\index{chemicalType@{chemicalType}!typer.h@{typer.h}}
+\subsubsection[{chemicalType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf chemicalType}}}
+\label{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04d}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{herbicide@{herbicide}!typer.h@{typer.h}}\index{typer.h@{typer.h}!herbicide@{herbicide}}\item[{\em 
+\hypertarget{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04daaa79fc4e397e7f45d1bef42670d94a72}{
+herbicide}
+\label{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04daaa79fc4e397e7f45d1bef42670d94a72}
+}]\index{fungicide@{fungicide}!typer.h@{typer.h}}\index{typer.h@{typer.h}!fungicide@{fungicide}}\item[{\em 
+\hypertarget{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da440125fe115bd252cbc5f774275dd423}{
+fungicide}
+\label{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da440125fe115bd252cbc5f774275dd423}
+}]\index{insecticide@{insecticide}!typer.h@{typer.h}}\index{typer.h@{typer.h}!insecticide@{insecticide}}\item[{\em 
+\hypertarget{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da0453f93d5e46c74fd32a9ca328b959b5}{
+insecticide}
+\label{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da0453f93d5e46c74fd32a9ca328b959b5}
+}]\index{pesticide@{pesticide}!typer.h@{typer.h}}\index{typer.h@{typer.h}!pesticide@{pesticide}}\item[{\em 
+\hypertarget{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da65bd48d83891437b3d99fcbf223a163d}{
+pesticide}
+\label{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da65bd48d83891437b3d99fcbf223a163d}
+}]\index{microfertilizer@{microfertilizer}!typer.h@{typer.h}}\index{typer.h@{typer.h}!microfertilizer@{microfertilizer}}\item[{\em 
+\hypertarget{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da8692bf2401a8fcc15dcca837e5be7953}{
+microfertilizer}
+\label{typer_8h_ab9e75c1fcae0ba1ccecdb94f48d9e04da8692bf2401a8fcc15dcca837e5be7953}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_af7c21877c7448b813184ececcc1af13c}{
+\index{typer.h@{typer.h}!indicatorTypes@{indicatorTypes}}
+\index{indicatorTypes@{indicatorTypes}!typer.h@{typer.h}}
+\subsubsection[{indicatorTypes}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf indicatorTypes}}}
+\label{typer_8h_af7c21877c7448b813184ececcc1af13c}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{environmentalIndicator@{environmentalIndicator}!typer.h@{typer.h}}\index{typer.h@{typer.h}!environmentalIndicator@{environmentalIndicator}}\item[{\em 
+\hypertarget{typer_8h_af7c21877c7448b813184ececcc1af13ca7361be8d586650bac7f248153f94f6f2}{
+environmentalIndicator}
+\label{typer_8h_af7c21877c7448b813184ececcc1af13ca7361be8d586650bac7f248153f94f6f2}
+}]\index{economicIndicator@{economicIndicator}!typer.h@{typer.h}}\index{typer.h@{typer.h}!economicIndicator@{economicIndicator}}\item[{\em 
+\hypertarget{typer_8h_af7c21877c7448b813184ececcc1af13cadcfea84ffbf1780d7036c4014e4d5be6}{
+economicIndicator}
+\label{typer_8h_af7c21877c7448b813184ececcc1af13cadcfea84ffbf1780d7036c4014e4d5be6}
+}]\index{noType@{noType}!typer.h@{typer.h}}\index{typer.h@{typer.h}!noType@{noType}}\item[{\em 
+\hypertarget{typer_8h_af7c21877c7448b813184ececcc1af13cae1e1f2af0184ac5fa40380545412fc1c}{
+noType}
+\label{typer_8h_af7c21877c7448b813184ececcc1af13cae1e1f2af0184ac5fa40380545412fc1c}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_afed5140a40dab0a128a50bb57c0e82d4}{
+\index{typer.h@{typer.h}!investStrategyType@{investStrategyType}}
+\index{investStrategyType@{investStrategyType}!typer.h@{typer.h}}
+\subsubsection[{investStrategyType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf investStrategyType}}}
+\label{typer_8h_afed5140a40dab0a128a50bb57c0e82d4}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{constReinvest@{constReinvest}!typer.h@{typer.h}}\index{typer.h@{typer.h}!constReinvest@{constReinvest}}\item[{\em 
+\hypertarget{typer_8h_afed5140a40dab0a128a50bb57c0e82d4aa4ce9113b0f4ae961a2a382aa3a5c3f7}{
+constReinvest}
+\label{typer_8h_afed5140a40dab0a128a50bb57c0e82d4aa4ce9113b0f4ae961a2a382aa3a5c3f7}
+}]\index{dynamicReinvest@{dynamicReinvest}!typer.h@{typer.h}}\index{typer.h@{typer.h}!dynamicReinvest@{dynamicReinvest}}\item[{\em 
+\hypertarget{typer_8h_afed5140a40dab0a128a50bb57c0e82d4a6c6a26a121270163afb50cf39b52c9e4}{
+dynamicReinvest}
+\label{typer_8h_afed5140a40dab0a128a50bb57c0e82d4a6c6a26a121270163afb50cf39b52c9e4}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_a74e289adaa38a655bd68482967f86cfd}{
+\index{typer.h@{typer.h}!maxSearchModeType@{maxSearchModeType}}
+\index{maxSearchModeType@{maxSearchModeType}!typer.h@{typer.h}}
+\subsubsection[{maxSearchModeType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf maxSearchModeType}}}
+\label{typer_8h_a74e289adaa38a655bd68482967f86cfd}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{first@{first}!typer.h@{typer.h}}\index{typer.h@{typer.h}!first@{first}}\item[{\em 
+\hypertarget{typer_8h_a74e289adaa38a655bd68482967f86cfdaa4500e61db092c2e1719b5d68b047ec3}{
+first}
+\label{typer_8h_a74e289adaa38a655bd68482967f86cfdaa4500e61db092c2e1719b5d68b047ec3}
+}]\index{last@{last}!typer.h@{typer.h}}\index{typer.h@{typer.h}!last@{last}}\item[{\em 
+\hypertarget{typer_8h_a74e289adaa38a655bd68482967f86cfdaa1a074a72eb46dfdde53e589d946ab98}{
+last}
+\label{typer_8h_a74e289adaa38a655bd68482967f86cfdaa1a074a72eb46dfdde53e589d946ab98}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047}{
+\index{typer.h@{typer.h}!productObjType@{productObjType}}
+\index{productObjType@{productObjType}!typer.h@{typer.h}}
+\subsubsection[{productObjType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf productObjType}}}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{productObj@{productObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!productObj@{productObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a8b761b2cd71c9e04a55edd1bd49c6cc4}{
+productObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a8b761b2cd71c9e04a55edd1bd49c6cc4}
+}]\index{animalObj@{animalObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!animalObj@{animalObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047ab6c22e88bde22ddc843aa894fecf7f17}{
+animalObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047ab6c22e88bde22ddc843aa894fecf7f17}
+}]\index{chemicalObj@{chemicalObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!chemicalObj@{chemicalObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047ad413f8c34883ecacfdaf716100291455}{
+chemicalObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047ad413f8c34883ecacfdaf716100291455}
+}]\index{waterObj@{waterObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!waterObj@{waterObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a1780e07b7437331b3b2068f654f820e5}{
+waterObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a1780e07b7437331b3b2068f654f820e5}
+}]\index{seedObj@{seedObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!seedObj@{seedObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047ab87fe109a5da182f6fe92e485c4b5dfe}{
+seedObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047ab87fe109a5da182f6fe92e485c4b5dfe}
+}]\index{energyObj@{energyObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!energyObj@{energyObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a6543272d50df98f0aee3a884ad1afa78}{
+energyObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a6543272d50df98f0aee3a884ad1afa78}
+}]\index{decomposableObj@{decomposableObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!decomposableObj@{decomposableObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a4c0453c55a1cf804725974502b16c6fa}{
+decomposableObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a4c0453c55a1cf804725974502b16c6fa}
+}]\index{plantItemObj@{plantItemObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!plantItemObj@{plantItemObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a51d268ca1c7308847c30946a5e119abd}{
+plantItemObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a51d268ca1c7308847c30946a5e119abd}
+}]\index{feedItemObj@{feedItemObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!feedItemObj@{feedItemObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a32d294982ee2e1748ec001fb08563b7b}{
+feedItemObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a32d294982ee2e1748ec001fb08563b7b}
+}]\index{manureObj@{manureObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!manureObj@{manureObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a4591e4582b7aa867439ea50bfaa34c36}{
+manureObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a4591e4582b7aa867439ea50bfaa34c36}
+}]\index{milkObj@{milkObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!milkObj@{milkObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a46bc0716fc4a3e027124ea52a38db148}{
+milkObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a46bc0716fc4a3e027124ea52a38db148}
+}]\index{fertilizerObj@{fertilizerObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!fertilizerObj@{fertilizerObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a281a22a1be2127a20831a660b63f9c70}{
+fertilizerObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a281a22a1be2127a20831a660b63f9c70}
+}]\index{premiumObj@{premiumObj}!typer.h@{typer.h}}\index{typer.h@{typer.h}!premiumObj@{premiumObj}}\item[{\em 
+\hypertarget{typer_8h_a3e272b4d234d0ce067866b1b95610047a660c2d33e53f35e245e3a2164c7982c4}{
+premiumObj}
+\label{typer_8h_a3e272b4d234d0ce067866b1b95610047a660c2d33e53f35e245e3a2164c7982c4}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8}{
+\index{typer.h@{typer.h}!techEqpSourceType@{techEqpSourceType}}
+\index{techEqpSourceType@{techEqpSourceType}!typer.h@{typer.h}}
+\subsubsection[{techEqpSourceType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf techEqpSourceType}}}
+\label{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{farm@{farm}!typer.h@{typer.h}}\index{typer.h@{typer.h}!farm@{farm}}\item[{\em 
+\hypertarget{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8ab8afdd4d79172e82d7ab9af53376b630}{
+farm}
+\label{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8ab8afdd4d79172e82d7ab9af53376b630}
+}]\index{external@{external}!typer.h@{typer.h}}\index{typer.h@{typer.h}!external@{external}}\item[{\em 
+\hypertarget{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8a6aef01ed9b1c198e6944f87e370f00b2}{
+external}
+\label{typer_8h_ac9a4f909bb56a8add5d5e4673fcc02e8a6aef01ed9b1c198e6944f87e370f00b2}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6c}{
+\index{typer.h@{typer.h}!unitType@{unitType}}
+\index{unitType@{unitType}!typer.h@{typer.h}}
+\subsubsection[{unitType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf unitType}}}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6c}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{kwh@{kwh}!typer.h@{typer.h}}\index{typer.h@{typer.h}!kwh@{kwh}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca97603755e1989148bcf6afd0df31d88a}{
+kwh}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca97603755e1989148bcf6afd0df31d88a}
+}]\index{tfi@{tfi}!typer.h@{typer.h}}\index{typer.h@{typer.h}!tfi@{tfi}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca254cdae5230f36adaa5dfd8156eb07e3}{
+tfi}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca254cdae5230f36adaa5dfd8156eb07e3}
+}]\index{t@{t}!typer.h@{typer.h}}\index{typer.h@{typer.h}!t@{t}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca0247320c476fffeaa81ffa7836e08dee}{
+t}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca0247320c476fffeaa81ffa7836e08dee}
+}]\index{kg@{kg}!typer.h@{typer.h}}\index{typer.h@{typer.h}!kg@{kg}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca8835e1c0ac1481cc67747c2ffb4dfbcd}{
+kg}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca8835e1c0ac1481cc67747c2ffb4dfbcd}
+}]\index{g@{g}!typer.h@{typer.h}}\index{typer.h@{typer.h}!g@{g}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}{
+g}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca35c0bb7088830963c73dcf0470ab8922}
+}]\index{m3@{m3}!typer.h@{typer.h}}\index{typer.h@{typer.h}!m3@{m3}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cae93ae8cc5cd826dd0639a6f227327aa4}{
+m3}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cae93ae8cc5cd826dd0639a6f227327aa4}
+}]\index{l@{l}!typer.h@{typer.h}}\index{typer.h@{typer.h}!l@{l}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cafec48674e69529e52b1724bc9164052f}{
+l}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cafec48674e69529e52b1724bc9164052f}
+}]\index{ha@{ha}!typer.h@{typer.h}}\index{typer.h@{typer.h}!ha@{ha}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caadeaf4194590a58aa4dcedb3dae7e566}{
+ha}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caadeaf4194590a58aa4dcedb3dae7e566}
+}]\index{m2@{m2}!typer.h@{typer.h}}\index{typer.h@{typer.h}!m2@{m2}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca7d7031afd6ab8c32f22c9ffe66318ec4}{
+m2}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca7d7031afd6ab8c32f22c9ffe66318ec4}
+}]\index{m@{m}!typer.h@{typer.h}}\index{typer.h@{typer.h}!m@{m}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caca3cf2ca9e0e7f4e96f2bbc362b9353a}{
+m}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caca3cf2ca9e0e7f4e96f2bbc362b9353a}
+}]\index{mm@{mm}!typer.h@{typer.h}}\index{typer.h@{typer.h}!mm@{mm}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca9b2d7688fc6394a3f52163b317043936}{
+mm}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca9b2d7688fc6394a3f52163b317043936}
+}]\index{sfu@{sfu}!typer.h@{typer.h}}\index{typer.h@{typer.h}!sfu@{sfu}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caf65ef99cda0cb9b61d25c7cdf791634b}{
+sfu}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6caf65ef99cda0cb9b61d25c7cdf791634b}
+}]\index{day@{day}!typer.h@{typer.h}}\index{typer.h@{typer.h}!day@{day}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca0c8f8663af5d02dd407beb7decb7df37}{
+day}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca0c8f8663af5d02dd407beb7decb7df37}
+}]\index{hour@{hour}!typer.h@{typer.h}}\index{typer.h@{typer.h}!hour@{hour}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca9cc62dad91865f6f7e2506ff1b566566}{
+hour}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca9cc62dad91865f6f7e2506ff1b566566}
+}]\index{kr@{kr}!typer.h@{typer.h}}\index{typer.h@{typer.h}!kr@{kr}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca82f3147bf147fb8e01df5f050cf72911}{
+kr}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6ca82f3147bf147fb8e01df5f050cf72911}
+}]\index{fraction@{fraction}!typer.h@{typer.h}}\index{typer.h@{typer.h}!fraction@{fraction}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cab10366ecc76133a0a4a4712a5ee26f65}{
+fraction}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cab10366ecc76133a0a4a4712a5ee26f65}
+}]\index{pcs@{pcs}!typer.h@{typer.h}}\index{typer.h@{typer.h}!pcs@{pcs}}\item[{\em 
+\hypertarget{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cad0ab84d64ade1f97c944835b0636998d}{
+pcs}
+\label{typer_8h_ae4c405e5c68c6ec2c44bb6d6adfc2f6cad0ab84d64ade1f97c944835b0636998d}
+}]\end{description}
+\end{Desc}
+

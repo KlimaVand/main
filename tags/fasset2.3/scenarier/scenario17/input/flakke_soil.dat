@@ -1,0 +1,129 @@
+[SoilParameters]                         // Ecological arable field trial (JB oct-2002)
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         6
+ConductivityFC  -8.0            // log(m/s) from Tystofte (O.H.Jacobsen p 46)
+DryBulkDensity   1.70                     
+ClayContent      0.155
+SiltContent      0.124
+
+CarbonPct        0.95
+CNRatio           9.9
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.05545724
+IOM	0.405174
+IOM.N	0.041975818
+
+RelativeWater(0) 0.322
+PFValue(0)       1.0
+RelativeWater(1) 0.259
+PFValue(1)       2.0
+RelativeWater(2) 0.197
+PFValue(2)       3.0
+RelativeWater(3) 0.086
+PFValue(3)       4.2
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         6
+ConductivityFC  -8.3            // log(m/s) from Tystofte (O.H.Jacobsen p 46)
+DryBulkDensity   1.68                     
+ClayContent      0.172
+SiltContent      0.126
+
+CarbonPct        0.51
+CNRatio          9.1
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.030085066
+IOM	0.7
+IOM.N	0.078001493
+
+RelativeWater(0) 0.322
+PFValue(0)       1.0
+RelativeWater(1) 0.259
+PFValue(1)       2.0
+RelativeWater(2) 0.178
+PFValue(2)       3.0
+RelativeWater(3) 0.097
+PFValue(3)       4.2
+
+[SoilLayer(3)]
+Thickness        250
+SoilType         6
+ConductivityFC  -9.4            // log(m/s) from Tystofte (O.H.Jacobsen p 46)
+DryBulkDensity   1.67                     
+ClayContent      0.190
+SiltContent      0.121
+
+CarbonPct        0.34
+CNRatio           8.1
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.033861247
+IOM	0.7
+IOM.N	0.087791992
+
+RelativeWater(0) 0.314
+PFValue(0)       1.0
+RelativeWater(1) 0.178
+PFValue(1)       2.0
+RelativeWater(2) 0.135
+PFValue(2)       3.0
+RelativeWater(3) 0.066
+PFValue(3)       4.2
+
+[SoilLayer(4)]
+Thickness        1500
+SoilType         6
+ConductivityFC  -8.7            // log(m/s) from Tystofte (O.H.Jacobsen p 46)
+DryBulkDensity   1.72                      
+ClayContent      0.194
+SiltContent      0.119
+
+CarbonPct        0.21
+CNRatio               7.1
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.038701142
+IOM	0.7
+IOM.N	0.100340378
+
+RelativeWater(0) 0.314
+PFValue(0)       1.0
+RelativeWater(1) 0.178
+PFValue(1)       2.0
+RelativeWater(2) 0.135
+PFValue(2)       3.0
+RelativeWater(3) 0.066
+PFValue(3)       4.2
+[end]

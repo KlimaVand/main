@@ -1,0 +1,104 @@
+\hypertarget{classdigestate_store}{
+\section{digestateStore Class Reference}
+\label{classdigestate_store}\index{digestateStore@{digestateStore}}
+}
+
+
+{\ttfamily \#include $<$digestateStore.h$>$}Inheritance diagram for digestateStore::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classdigestate_store}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdigestate_store_ac64748835b5217088a548eac36df37b9}{digestateStore} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classdigestate_store_ae72cb0da7e28d9b0c9c46cfca42cc7fd}{digestateStore} (\hyperlink{classdigestate_store}{digestateStore} \&s)
+\item 
+virtual \hyperlink{classdigestate_store_a61a67d4df48d66416fbabb1941075329}{$\sim$digestateStore} ()
+\item 
+virtual void \hyperlink{classdigestate_store_a93cdf55c94956f5e817ad386ea0c2a4b}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classdigestate_store_a209611f25ea14ad07c9de42fa46eea05}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classdigestate_store_ae1402687e7bf67b150bf01e97c4798b9}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+void \hyperlink{classdigestate_store_a840cf55a8a893f089c8c39a36cc3defe}{RcvManure} (const \hyperlink{classmanure}{manure} $\ast$someManure)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classdigestate_store_afe43a1f833661ff0491a2b3f4a2a0c24}{operator$<$$<$} (ostream \&os, \hyperlink{classdigestate_store}{digestateStore} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdigestate_store_ac64748835b5217088a548eac36df37b9}{
+\index{digestateStore@{digestateStore}!digestateStore@{digestateStore}}
+\index{digestateStore@{digestateStore}!digestateStore@{digestateStore}}
+\subsubsection[{digestateStore}]{\setlength{\rightskip}{0pt plus 5cm}digestateStore::digestateStore (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classdigestate_store_ac64748835b5217088a548eac36df37b9}
+\hypertarget{classdigestate_store_ae72cb0da7e28d9b0c9c46cfca42cc7fd}{
+\index{digestateStore@{digestateStore}!digestateStore@{digestateStore}}
+\index{digestateStore@{digestateStore}!digestateStore@{digestateStore}}
+\subsubsection[{digestateStore}]{\setlength{\rightskip}{0pt plus 5cm}digestateStore::digestateStore ({\bf digestateStore} \& {\em s})}}
+\label{classdigestate_store_ae72cb0da7e28d9b0c9c46cfca42cc7fd}
+\hypertarget{classdigestate_store_a61a67d4df48d66416fbabb1941075329}{
+\index{digestateStore@{digestateStore}!$\sim$digestateStore@{$\sim$digestateStore}}
+\index{$\sim$digestateStore@{$\sim$digestateStore}!digestateStore@{digestateStore}}
+\subsubsection[{$\sim$digestateStore}]{\setlength{\rightskip}{0pt plus 5cm}digestateStore::$\sim$digestateStore ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdigestate_store_a61a67d4df48d66416fbabb1941075329}
+Describes a separate free-\/standing store) 
+
+\subsection{Member Function Documentation}
+\hypertarget{classdigestate_store_a209611f25ea14ad07c9de42fa46eea05}{
+\index{digestateStore@{digestateStore}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!digestateStore@{digestateStore}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void digestateStore::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdigestate_store_a209611f25ea14ad07c9de42fa46eea05}
+Dailyactions 
+
+Reimplemented from \hyperlink{classslurrystore_a0e660eb43b403bef8aaefb8188a73d4f}{slurrystore}.\hypertarget{classdigestate_store_ae1402687e7bf67b150bf01e97c4798b9}{
+\index{digestateStore@{digestateStore}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!digestateStore@{digestateStore}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void digestateStore::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdigestate_store_ae1402687e7bf67b150bf01e97c4798b9}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classslurrystore_a982183d9d72019736bfdb792c4cb5d78}{slurrystore}.\hypertarget{classdigestate_store_a840cf55a8a893f089c8c39a36cc3defe}{
+\index{digestateStore@{digestateStore}!RcvManure@{RcvManure}}
+\index{RcvManure@{RcvManure}!digestateStore@{digestateStore}}
+\subsubsection[{RcvManure}]{\setlength{\rightskip}{0pt plus 5cm}void digestateStore::RcvManure (const {\bf manure} $\ast$ {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdigestate_store_a840cf55a8a893f089c8c39a36cc3defe}
+Calling \hyperlink{classmanurestore_ab32685c2f4be9bb58269655cab7c96ee}{manurestore::RcvManure(const manure$\ast$ someManure)} 
+
+Reimplemented from \hyperlink{classslurrystore_af99a5bbcf35c6845fcf989809c5347fa}{slurrystore}.\hypertarget{classdigestate_store_a93cdf55c94956f5e817ad386ea0c2a4b}{
+\index{digestateStore@{digestateStore}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!digestateStore@{digestateStore}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void digestateStore::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdigestate_store_a93cdf55c94956f5e817ad386ea0c2a4b}
+Init reads the relevant values from its owners file 
+
+Reimplemented from \hyperlink{classslurrystore_a20975780b58214d7a091cbc2573c910c}{slurrystore}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classdigestate_store_afe43a1f833661ff0491a2b3f4a2a0c24}{
+\index{digestateStore@{digestateStore}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!digestateStore@{digestateStore}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf digestateStore} {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classdigestate_store_afe43a1f833661ff0491a2b3f4a2a0c24}
+
+
+Reimplemented from \hyperlink{classslurrystore_a74247370258ba08c974e190aca4ed0a5}{slurrystore}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{digestate_store_8h}{digestateStore.h}\item 
+C:/main/trunk/src/building/\hyperlink{digestate_store_8cpp}{digestateStore.cpp}\end{DoxyCompactItemize}

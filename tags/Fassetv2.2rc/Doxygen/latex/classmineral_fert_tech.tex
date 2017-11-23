@@ -1,0 +1,177 @@
+\hypertarget{classmineral_fert_tech}{
+\section{mineralFertTech Class Reference}
+\label{classmineral_fert_tech}\index{mineralFertTech@{mineralFertTech}}
+}
+
+
+{\ttfamily \#include $<$mineralFertTech.h$>$}Inheritance diagram for mineralFertTech::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classmineral_fert_tech}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmineral_fert_tech_a674bb0d21206f21d0f1be4dfb2f51c23}{mineralFertTech} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+virtual \hyperlink{classmineral_fert_tech_a50a838abe5a9ada44346633c11f9df65}{$\sim$mineralFertTech} ()
+\item 
+virtual void \hyperlink{classmineral_fert_tech_a25acfef0b5b6f2a6463fe9249d13cb9a}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classmineral_fert_tech_a462e4b0506bfd8ac6a13a4289e3dc19e}{SetTheFertilizers} (\hyperlink{classfertilizer}{fertilizer} $\ast$aFertilizer1, \hyperlink{classfertilizer}{fertilizer} $\ast$aFertilizer2, \hyperlink{classfertilizer}{fertilizer} $\ast$aFertilizer3)
+\item 
+void \hyperlink{classmineral_fert_tech_ad5c4b3218a84dfd14c05eddb9d686d52}{ClearTheFertilizers} ()
+\item 
+virtual void \hyperlink{classmineral_fert_tech_a0b0d6226496238a9c11637a3c70429ee}{CalcCost} (\hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode)
+\item 
+void \hyperlink{classmineral_fert_tech_aeaae651d9f15846abd36be1a03e782db}{UpdateProducts} (bool contractor=false)
+\item 
+void \hyperlink{classmineral_fert_tech_a33be3a005effa3e1420d9b4d97004445}{UpdateFertilizer} (\hyperlink{classfertilizer}{fertilizer} $\ast$aFertilizer)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classmineral_fert_tech_a60aff267f8d7906833524bbd0edcc39b}{CalcGangHours} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classmineral_fert_tech_a7c9bd299c03af4bdb13b3c8cbddd09e4}{prepLoading}
+\item 
+double \hyperlink{classmineral_fert_tech_a64d5f31461d62feb770da147e70d3c55}{roadSpeed}
+\item 
+double \hyperlink{classmineral_fert_tech_a5efd688c8112069834436a3a5b2f9915}{vol}
+\item 
+double \hyperlink{classmineral_fert_tech_adb73615336cace4cd67b3eaabb8f7512}{fillingTimeSpreader}
+\item 
+double \hyperlink{classmineral_fert_tech_adc35fbe91fe47afc7475b1912829bb57}{prepFilling}
+\item 
+double \hyperlink{classmineral_fert_tech_a5429bcb9cc9008ad8f0dfeac5da05439}{changingTrailer}
+\item 
+double \hyperlink{classmineral_fert_tech_acf32966a1aa9ce9f10469a48278c21b7}{loadingTime}
+\item 
+\hyperlink{classfertilizer}{fertilizer} $\ast$ \hyperlink{classmineral_fert_tech_a3d1eedcd67caf7308bfe7f9cdd3b18a1}{theFertilizer1}
+\item 
+\hyperlink{classfertilizer}{fertilizer} $\ast$ \hyperlink{classmineral_fert_tech_a18a5a6fa87be4cc1ca2ef3b6a1be1487}{theFertilizer2}
+\item 
+\hyperlink{classfertilizer}{fertilizer} $\ast$ \hyperlink{classmineral_fert_tech_a0aee75fa1b75ebd90d1d807ba5f5808c}{theFertilizer3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmineral_fert_tech_a674bb0d21206f21d0f1be4dfb2f51c23}{
+\index{mineralFertTech@{mineralFertTech}!mineralFertTech@{mineralFertTech}}
+\index{mineralFertTech@{mineralFertTech}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{mineralFertTech}]{\setlength{\rightskip}{0pt plus 5cm}mineralFertTech::mineralFertTech (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classmineral_fert_tech_a674bb0d21206f21d0f1be4dfb2f51c23}
+\hypertarget{classmineral_fert_tech_a50a838abe5a9ada44346633c11f9df65}{
+\index{mineralFertTech@{mineralFertTech}!$\sim$mineralFertTech@{$\sim$mineralFertTech}}
+\index{$\sim$mineralFertTech@{$\sim$mineralFertTech}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{$\sim$mineralFertTech}]{\setlength{\rightskip}{0pt plus 5cm}mineralFertTech::$\sim$mineralFertTech ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_tech_a50a838abe5a9ada44346633c11f9df65}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmineral_fert_tech_a0b0d6226496238a9c11637a3c70429ee}{
+\index{mineralFertTech@{mineralFertTech}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::CalcCost ({\bf calcLPType} {\em mode})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_tech_a0b0d6226496238a9c11637a3c70429ee}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a908e81a53479de1a6768d58964dbc57c}{fieldOperationTech}.\hypertarget{classmineral_fert_tech_a60aff267f8d7906833524bbd0edcc39b}{
+\index{mineralFertTech@{mineralFertTech}!CalcGangHours@{CalcGangHours}}
+\index{CalcGangHours@{CalcGangHours}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{CalcGangHours}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::CalcGangHours ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classmineral_fert_tech_a60aff267f8d7906833524bbd0edcc39b}
+
+
+Reimplemented from \hyperlink{classoperation_a51c5612f29519bc82050ffccf089bc07}{operation}.\hypertarget{classmineral_fert_tech_ad5c4b3218a84dfd14c05eddb9d686d52}{
+\index{mineralFertTech@{mineralFertTech}!ClearTheFertilizers@{ClearTheFertilizers}}
+\index{ClearTheFertilizers@{ClearTheFertilizers}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{ClearTheFertilizers}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::ClearTheFertilizers ()}}
+\label{classmineral_fert_tech_ad5c4b3218a84dfd14c05eddb9d686d52}
+\hypertarget{classmineral_fert_tech_a25acfef0b5b6f2a6463fe9249d13cb9a}{
+\index{mineralFertTech@{mineralFertTech}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_tech_a25acfef0b5b6f2a6463fe9249d13cb9a}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_a2a2c416f3f3fe8ceb2f1f1b63c149a09}{fieldOperationTech}.\hypertarget{classmineral_fert_tech_a462e4b0506bfd8ac6a13a4289e3dc19e}{
+\index{mineralFertTech@{mineralFertTech}!SetTheFertilizers@{SetTheFertilizers}}
+\index{SetTheFertilizers@{SetTheFertilizers}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{SetTheFertilizers}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::SetTheFertilizers ({\bf fertilizer} $\ast$ {\em aFertilizer1}, \/  {\bf fertilizer} $\ast$ {\em aFertilizer2}, \/  {\bf fertilizer} $\ast$ {\em aFertilizer3})}}
+\label{classmineral_fert_tech_a462e4b0506bfd8ac6a13a4289e3dc19e}
+\hypertarget{classmineral_fert_tech_a33be3a005effa3e1420d9b4d97004445}{
+\index{mineralFertTech@{mineralFertTech}!UpdateFertilizer@{UpdateFertilizer}}
+\index{UpdateFertilizer@{UpdateFertilizer}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{UpdateFertilizer}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::UpdateFertilizer ({\bf fertilizer} $\ast$ {\em aFertilizer})}}
+\label{classmineral_fert_tech_a33be3a005effa3e1420d9b4d97004445}
+\hypertarget{classmineral_fert_tech_aeaae651d9f15846abd36be1a03e782db}{
+\index{mineralFertTech@{mineralFertTech}!UpdateProducts@{UpdateProducts}}
+\index{UpdateProducts@{UpdateProducts}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{UpdateProducts}]{\setlength{\rightskip}{0pt plus 5cm}void mineralFertTech::UpdateProducts (bool {\em contractor} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmineral_fert_tech_aeaae651d9f15846abd36be1a03e782db}
+
+
+Reimplemented from \hyperlink{classfield_operation_tech_ab0b2bf71efca78b637837fc4d0e3a9d4}{fieldOperationTech}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classmineral_fert_tech_a5429bcb9cc9008ad8f0dfeac5da05439}{
+\index{mineralFertTech@{mineralFertTech}!changingTrailer@{changingTrailer}}
+\index{changingTrailer@{changingTrailer}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{changingTrailer}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::changingTrailer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a5429bcb9cc9008ad8f0dfeac5da05439}
+\hypertarget{classmineral_fert_tech_adb73615336cace4cd67b3eaabb8f7512}{
+\index{mineralFertTech@{mineralFertTech}!fillingTimeSpreader@{fillingTimeSpreader}}
+\index{fillingTimeSpreader@{fillingTimeSpreader}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{fillingTimeSpreader}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::fillingTimeSpreader}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_adb73615336cace4cd67b3eaabb8f7512}
+\hypertarget{classmineral_fert_tech_acf32966a1aa9ce9f10469a48278c21b7}{
+\index{mineralFertTech@{mineralFertTech}!loadingTime@{loadingTime}}
+\index{loadingTime@{loadingTime}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{loadingTime}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::loadingTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_acf32966a1aa9ce9f10469a48278c21b7}
+\hypertarget{classmineral_fert_tech_adc35fbe91fe47afc7475b1912829bb57}{
+\index{mineralFertTech@{mineralFertTech}!prepFilling@{prepFilling}}
+\index{prepFilling@{prepFilling}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{prepFilling}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::prepFilling}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_adc35fbe91fe47afc7475b1912829bb57}
+\hypertarget{classmineral_fert_tech_a7c9bd299c03af4bdb13b3c8cbddd09e4}{
+\index{mineralFertTech@{mineralFertTech}!prepLoading@{prepLoading}}
+\index{prepLoading@{prepLoading}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{prepLoading}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::prepLoading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a7c9bd299c03af4bdb13b3c8cbddd09e4}
+\hypertarget{classmineral_fert_tech_a64d5f31461d62feb770da147e70d3c55}{
+\index{mineralFertTech@{mineralFertTech}!roadSpeed@{roadSpeed}}
+\index{roadSpeed@{roadSpeed}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{roadSpeed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::roadSpeed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a64d5f31461d62feb770da147e70d3c55}
+\hypertarget{classmineral_fert_tech_a3d1eedcd67caf7308bfe7f9cdd3b18a1}{
+\index{mineralFertTech@{mineralFertTech}!theFertilizer1@{theFertilizer1}}
+\index{theFertilizer1@{theFertilizer1}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{theFertilizer1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fertilizer}$\ast$ {\bf mineralFertTech::theFertilizer1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a3d1eedcd67caf7308bfe7f9cdd3b18a1}
+\hypertarget{classmineral_fert_tech_a18a5a6fa87be4cc1ca2ef3b6a1be1487}{
+\index{mineralFertTech@{mineralFertTech}!theFertilizer2@{theFertilizer2}}
+\index{theFertilizer2@{theFertilizer2}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{theFertilizer2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fertilizer}$\ast$ {\bf mineralFertTech::theFertilizer2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a18a5a6fa87be4cc1ca2ef3b6a1be1487}
+\hypertarget{classmineral_fert_tech_a0aee75fa1b75ebd90d1d807ba5f5808c}{
+\index{mineralFertTech@{mineralFertTech}!theFertilizer3@{theFertilizer3}}
+\index{theFertilizer3@{theFertilizer3}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{theFertilizer3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fertilizer}$\ast$ {\bf mineralFertTech::theFertilizer3}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a0aee75fa1b75ebd90d1d807ba5f5808c}
+\hypertarget{classmineral_fert_tech_a5efd688c8112069834436a3a5b2f9915}{
+\index{mineralFertTech@{mineralFertTech}!vol@{vol}}
+\index{vol@{vol}!mineralFertTech@{mineralFertTech}}
+\subsubsection[{vol}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf mineralFertTech::vol}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmineral_fert_tech_a5efd688c8112069834436a3a5b2f9915}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{mineral_fert_tech_8h}{mineralFertTech.h}\item 
+C:/main/trunk/src/technics/\hyperlink{mineral_fert_tech_8cpp}{mineralFertTech.cpp}\end{DoxyCompactItemize}

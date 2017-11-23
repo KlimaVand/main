@@ -1,0 +1,101 @@
+\hypertarget{classplant_care_fields}{
+\section{plantCareFields Class Reference}
+\label{classplant_care_fields}\index{plantCareFields@{plantCareFields}}
+}
+
+
+{\ttfamily \#include $<$plantCareFields.h$>$}Inheritance diagram for plantCareFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classplant_care_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classplant_care_fields_ac0019b8e6264ef0ddfa4e7470ab78a47}{plantCareFields} ()
+\item 
+\hyperlink{classplant_care_fields_a1f59456f19d39adae604e13b5bc2e9d0}{plantCareFields} (const \hyperlink{classplant_care_fields}{plantCareFields} \&p)
+\item 
+virtual \hyperlink{classplant_care_fields_a0b65b66f22596fd0742bb89c891069a1}{$\sim$plantCareFields} ()
+\item 
+virtual \hyperlink{classplant_care_fields}{plantCareFields} $\ast$ \hyperlink{classplant_care_fields_a9fc0efabe5abf7359f56514c889ca743}{clone} () const 
+\item 
+void \hyperlink{classplant_care_fields_ad77b3f991a2d5fbc396fc524fb77eb4e}{DefinePlantCareFieldsOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, \hyperlink{classchemical}{chemical} $\ast$chem1, \hyperlink{classchemical}{chemical} $\ast$chem2, \hyperlink{classchemical}{chemical} $\ast$chem3, \hyperlink{classwater}{water} $\ast$wat)
+\item 
+\hyperlink{classchemical}{chemical} $\ast$ \hyperlink{classplant_care_fields_a03226f11e808ffa15fb3f02b271109e4}{Get1stChemical} ()
+\item 
+\hyperlink{classchemical}{chemical} $\ast$ \hyperlink{classplant_care_fields_a8f8e515e160373683a252690cc5f5cb2}{Get2ndChemical} ()
+\item 
+\hyperlink{classchemical}{chemical} $\ast$ \hyperlink{classplant_care_fields_a2b8d91a57e0e212f7384093b53d20413}{Get3rdChemical} ()
+\item 
+\hyperlink{classwater}{water} $\ast$ \hyperlink{classplant_care_fields_ab9f4b5a42d87b3b47e1ac6772da03888}{GetWater} ()
+\item 
+virtual bool \hyperlink{classplant_care_fields_a14bb648891c128209ae40889534b4257}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classplant_care_fields_ac0019b8e6264ef0ddfa4e7470ab78a47}{
+\index{plantCareFields@{plantCareFields}!plantCareFields@{plantCareFields}}
+\index{plantCareFields@{plantCareFields}!plantCareFields@{plantCareFields}}
+\subsubsection[{plantCareFields}]{\setlength{\rightskip}{0pt plus 5cm}plantCareFields::plantCareFields ()}}
+\label{classplant_care_fields_ac0019b8e6264ef0ddfa4e7470ab78a47}
+\hypertarget{classplant_care_fields_a1f59456f19d39adae604e13b5bc2e9d0}{
+\index{plantCareFields@{plantCareFields}!plantCareFields@{plantCareFields}}
+\index{plantCareFields@{plantCareFields}!plantCareFields@{plantCareFields}}
+\subsubsection[{plantCareFields}]{\setlength{\rightskip}{0pt plus 5cm}plantCareFields::plantCareFields (const {\bf plantCareFields} \& {\em p})}}
+\label{classplant_care_fields_a1f59456f19d39adae604e13b5bc2e9d0}
+\hypertarget{classplant_care_fields_a0b65b66f22596fd0742bb89c891069a1}{
+\index{plantCareFields@{plantCareFields}!$\sim$plantCareFields@{$\sim$plantCareFields}}
+\index{$\sim$plantCareFields@{$\sim$plantCareFields}!plantCareFields@{plantCareFields}}
+\subsubsection[{$\sim$plantCareFields}]{\setlength{\rightskip}{0pt plus 5cm}plantCareFields::$\sim$plantCareFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_fields_a0b65b66f22596fd0742bb89c891069a1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classplant_care_fields_a14bb648891c128209ae40889534b4257}{
+\index{plantCareFields@{plantCareFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!plantCareFields@{plantCareFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool plantCareFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_fields_a14bb648891c128209ae40889534b4257}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it will return the cost in the cost variable 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classplant_care_fields_a9fc0efabe5abf7359f56514c889ca743}{
+\index{plantCareFields@{plantCareFields}!clone@{clone}}
+\index{clone@{clone}!plantCareFields@{plantCareFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plantCareFields} $\ast$ plantCareFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplant_care_fields_a9fc0efabe5abf7359f56514c889ca743}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classplant_care_fields_ad77b3f991a2d5fbc396fc524fb77eb4e}{
+\index{plantCareFields@{plantCareFields}!DefinePlantCareFieldsOp@{DefinePlantCareFieldsOp}}
+\index{DefinePlantCareFieldsOp@{DefinePlantCareFieldsOp}!plantCareFields@{plantCareFields}}
+\subsubsection[{DefinePlantCareFieldsOp}]{\setlength{\rightskip}{0pt plus 5cm}void plantCareFields::DefinePlantCareFieldsOp ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  {\bf chemical} $\ast$ {\em chem1}, \/  {\bf chemical} $\ast$ {\em chem2}, \/  {\bf chemical} $\ast$ {\em chem3}, \/  {\bf water} $\ast$ {\em wat})}}
+\label{classplant_care_fields_ad77b3f991a2d5fbc396fc524fb77eb4e}
+\hypertarget{classplant_care_fields_a03226f11e808ffa15fb3f02b271109e4}{
+\index{plantCareFields@{plantCareFields}!Get1stChemical@{Get1stChemical}}
+\index{Get1stChemical@{Get1stChemical}!plantCareFields@{plantCareFields}}
+\subsubsection[{Get1stChemical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chemical}$\ast$ plantCareFields::Get1stChemical ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_care_fields_a03226f11e808ffa15fb3f02b271109e4}
+\hypertarget{classplant_care_fields_a8f8e515e160373683a252690cc5f5cb2}{
+\index{plantCareFields@{plantCareFields}!Get2ndChemical@{Get2ndChemical}}
+\index{Get2ndChemical@{Get2ndChemical}!plantCareFields@{plantCareFields}}
+\subsubsection[{Get2ndChemical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chemical}$\ast$ plantCareFields::Get2ndChemical ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_care_fields_a8f8e515e160373683a252690cc5f5cb2}
+\hypertarget{classplant_care_fields_a2b8d91a57e0e212f7384093b53d20413}{
+\index{plantCareFields@{plantCareFields}!Get3rdChemical@{Get3rdChemical}}
+\index{Get3rdChemical@{Get3rdChemical}!plantCareFields@{plantCareFields}}
+\subsubsection[{Get3rdChemical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chemical}$\ast$ plantCareFields::Get3rdChemical ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_care_fields_a2b8d91a57e0e212f7384093b53d20413}
+\hypertarget{classplant_care_fields_ab9f4b5a42d87b3b47e1ac6772da03888}{
+\index{plantCareFields@{plantCareFields}!GetWater@{GetWater}}
+\index{GetWater@{GetWater}!plantCareFields@{plantCareFields}}
+\subsubsection[{GetWater}]{\setlength{\rightskip}{0pt plus 5cm}{\bf water}$\ast$ plantCareFields::GetWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplant_care_fields_ab9f4b5a42d87b3b47e1ac6772da03888}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{plant_care_fields_8h}{plantCareFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{plant_care_fields_8cpp}{plantCareFields.cpp}\end{DoxyCompactItemize}

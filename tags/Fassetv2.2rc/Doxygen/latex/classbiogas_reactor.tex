@@ -1,0 +1,102 @@
+\hypertarget{classbiogas_reactor}{
+\section{biogasReactor Class Reference}
+\label{classbiogas_reactor}\index{biogasReactor@{biogasReactor}}
+}
+
+
+{\ttfamily \#include $<$biogasReactor.h$>$}Inheritance diagram for biogasReactor::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classbiogas_reactor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbiogas_reactor_a5e4dd42a6bd6ad49460dd9581bdc599f}{biogasReactor} (char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classbiogas_reactor_afdb23c10eef5692834128bfcff11d9f5}{biogasReactor} (\hyperlink{classbiogas_reactor}{biogasReactor} \&s)
+\item 
+virtual \hyperlink{classbiogas_reactor_abef592b8c00da8bdf44067f049babfc4}{$\sim$biogasReactor} ()
+\item 
+virtual void \hyperlink{classbiogas_reactor_aafc4e774b0d67a08d3f55c566e5a58b7}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+virtual void \hyperlink{classbiogas_reactor_ae8242ee2ab7dd6495125af9720b54aa4}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classbiogas_reactor_ab2482d657ec9095da5aef508d0841e0e}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbiogas_reactor_a479439eabed31849643a005f9f6eb66d}{Scale} (double annualAmount)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classbiogas_reactor_a84f4451be8bd18d8be52ecd0da4337ca}{operator$<$$<$} (ostream \&os, \hyperlink{classbiogas_reactor}{biogasReactor} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbiogas_reactor_a5e4dd42a6bd6ad49460dd9581bdc599f}{
+\index{biogasReactor@{biogasReactor}!biogasReactor@{biogasReactor}}
+\index{biogasReactor@{biogasReactor}!biogasReactor@{biogasReactor}}
+\subsubsection[{biogasReactor}]{\setlength{\rightskip}{0pt plus 5cm}biogasReactor::biogasReactor (char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classbiogas_reactor_a5e4dd42a6bd6ad49460dd9581bdc599f}
+\hypertarget{classbiogas_reactor_afdb23c10eef5692834128bfcff11d9f5}{
+\index{biogasReactor@{biogasReactor}!biogasReactor@{biogasReactor}}
+\index{biogasReactor@{biogasReactor}!biogasReactor@{biogasReactor}}
+\subsubsection[{biogasReactor}]{\setlength{\rightskip}{0pt plus 5cm}biogasReactor::biogasReactor ({\bf biogasReactor} \& {\em s})}}
+\label{classbiogas_reactor_afdb23c10eef5692834128bfcff11d9f5}
+\hypertarget{classbiogas_reactor_abef592b8c00da8bdf44067f049babfc4}{
+\index{biogasReactor@{biogasReactor}!$\sim$biogasReactor@{$\sim$biogasReactor}}
+\index{$\sim$biogasReactor@{$\sim$biogasReactor}!biogasReactor@{biogasReactor}}
+\subsubsection[{$\sim$biogasReactor}]{\setlength{\rightskip}{0pt plus 5cm}biogasReactor::$\sim$biogasReactor ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbiogas_reactor_abef592b8c00da8bdf44067f049babfc4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbiogas_reactor_ae8242ee2ab7dd6495125af9720b54aa4}{
+\index{biogasReactor@{biogasReactor}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!biogasReactor@{biogasReactor}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void biogasReactor::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbiogas_reactor_ae8242ee2ab7dd6495125af9720b54aa4}
+Dailyactions 
+
+Reimplemented from \hyperlink{classbuilding_a584ba300427d2a648f478b68065b7a18}{building}.\hypertarget{classbiogas_reactor_ab2482d657ec9095da5aef508d0841e0e}{
+\index{biogasReactor@{biogasReactor}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!biogasReactor@{biogasReactor}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void biogasReactor::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbiogas_reactor_ab2482d657ec9095da5aef508d0841e0e}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{building}.\hypertarget{classbiogas_reactor_aafc4e774b0d67a08d3f55c566e5a58b7}{
+\index{biogasReactor@{biogasReactor}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!biogasReactor@{biogasReactor}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void biogasReactor::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbiogas_reactor_aafc4e774b0d67a08d3f55c566e5a58b7}
+Init reads the relevant values from its owners file 
+
+Reimplemented from \hyperlink{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{building}.\hypertarget{classbiogas_reactor_a479439eabed31849643a005f9f6eb66d}{
+\index{biogasReactor@{biogasReactor}!Scale@{Scale}}
+\index{Scale@{Scale}!biogasReactor@{biogasReactor}}
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}void biogasReactor::Scale (double {\em annualAmount})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbiogas_reactor_a479439eabed31849643a005f9f6eb66d}
+Scale the \hyperlink{classmanure}{manure} \hyperlink{classstorage}{storage} that receives material from this \hyperlink{classinstore}{instore} Note this sets capacity 
+
+Reimplemented from \hyperlink{classmanurestore_a1efaaee1df384e1eb1705c104d8567c7}{manurestore}.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbiogas_reactor_a84f4451be8bd18d8be52ecd0da4337ca}{
+\index{biogasReactor@{biogasReactor}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!biogasReactor@{biogasReactor}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf biogasReactor} {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbiogas_reactor_a84f4451be8bd18d8be52ecd0da4337ca}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{biogas_reactor_8h}{biogasReactor.h}\item 
+C:/main/trunk/src/building/\hyperlink{biogas_reactor_8cpp}{biogasReactor.cpp}\end{DoxyCompactItemize}

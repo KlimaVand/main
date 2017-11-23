@@ -1,0 +1,854 @@
+\hypertarget{classecosystem}{
+\section{ecosystem Class Reference}
+\label{classecosystem}\index{ecosystem@{ecosystem}}
+}
+
+
+{\ttfamily \#include $<$ecosystem.h$>$}Inheritance diagram for ecosystem::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classecosystem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classecosystem_a8e76a426eca95f2e287545e7e1ab745e}{ecosystem} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\begin{DoxyCompactList}\small\item\em construct with arguments \item\end{DoxyCompactList}\item 
+\hyperlink{classecosystem_a02e07277b33df4f149726d8cb91d1fcc}{ecosystem} (const \hyperlink{classecosystem}{ecosystem} \&p)
+\begin{DoxyCompactList}\small\item\em copy constructor \item\end{DoxyCompactList}\item 
+\hyperlink{classecosystem_a7d57023334e0fbdded2d5a02f1053015}{$\sim$ecosystem} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+\hyperlink{classecosystem}{ecosystem} $\ast$ \hyperlink{classecosystem_a7d32ec71de4a7d66fb7edb4510a38f66}{clone} () const 
+\begin{DoxyCompactList}\small\item\em creates a clone of the current \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a265f6108d61a5607dd0d46f679126fd1}{SetFingerFlow} (int aFlow)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classwater}{water} transport model in the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_aef0ef46a098200f4cf5b24b497508412}{Initialise} (char $\ast$soilFileName, int theIndex=0, double anArea=0.0)
+\begin{DoxyCompactList}\small\item\em initialises the \hyperlink{classsoil}{soil} module \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a7d05455c8cb304e1a4207462f386bdc8}{CropSoilExchange} ()
+\begin{DoxyCompactList}\small\item\em performs all major interactions between crops and \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a2765e63a5da7ecd965342068e69bd10c}{GiveIndicators} ()
+\begin{DoxyCompactList}\small\item\em complete indicator values \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a423bd890e368dff9c00300691212d79e}{StandingWater} ()
+\begin{DoxyCompactList}\small\item\em returns the depth of \hyperlink{classwater}{water} on the surface of the \hyperlink{classsoil}{soil} (in millimetres) \item\end{DoxyCompactList}\item 
+bool \hyperlink{classecosystem_a724c7931285236c1d1f0a55ce17b8295}{GetIrrigationDemand} ()
+\begin{DoxyCompactList}\small\item\em returns whether irrigation is required \item\end{DoxyCompactList}\item 
+bool \hyperlink{classecosystem_aa4ce724310a879de8e2d242f5cfe4308}{GetReadyForHarvestOrLater} ()
+\begin{DoxyCompactList}\small\item\em returns true if the main \hyperlink{classcrop}{crop} is ready for harvesting \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a6b64028f9210f9b93d8edd22daae15d4}{GetAbovegroundCropN} ()
+\begin{DoxyCompactList}\small\item\em handles all major \hyperlink{classfield}{field} operations \item\end{DoxyCompactList}\item 
+\hyperlink{classsoil}{soil} $\ast$ \hyperlink{classecosystem_a53ac5ef44ba55f24a4210492d909f0d9}{GetSoil} ()
+\begin{DoxyCompactList}\small\item\em returns a pointerto the ecosystem's \hyperlink{classsoil}{soil} object \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a8aadfc5e6b887347617e3b7e73ced238}{GetTotalLAI} ()
+\begin{DoxyCompactList}\small\item\em return the total leaf area index of \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a6278ea87551559c0f4c5deb803e13b33}{CloverPercentage} ()
+\begin{DoxyCompactList}\small\item\em returned percentage contribution of clover to aboveground \hyperlink{classcrop}{crop} dry \hyperlink{classmatter}{matter} \item\end{DoxyCompactList}\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classcrop}{crop} $>$ $\ast$ \hyperlink{classecosystem_a76aa55a306d04f87b0acff0c405d3352}{GetCrops} ()
+\begin{DoxyCompactList}\small\item\em returns a list of pointers to the \hyperlink{classcrop}{crop} objects in the \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_adf56761a03f7ca49ee67b0dfc79d032e}{StartBudget} ()
+\begin{DoxyCompactList}\small\item\em initialised the budgets of those elements or compounds that are being budgeted \item\end{DoxyCompactList}\item 
+bool \hyperlink{classecosystem_a9560c609a6cd01430c2ebb44a65a4358}{EndBudget} ()
+\begin{DoxyCompactList}\small\item\em check the budgets of those elements or compounds that are being budgeted \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_acfb7342a6031a4451c885cf8ee9b365e}{NitrogenInSystem} ()
+\begin{DoxyCompactList}\small\item\em return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a37510ceb9f78738a84d1155ffa592f12}{NitrogenInCrops} ()
+\begin{DoxyCompactList}\small\item\em return the total amount of \hyperlink{classnitrogen}{nitrogen} in the crops \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a8ffb63ec540734dcba14fd0d74ba7d14}{NitrogenInSoil} ()
+\begin{DoxyCompactList}\small\item\em return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a34442a209e38774eead5221826c31a61}{TerminateCrop} (\hyperlink{classcrop}{crop} $\ast$aCrop)
+\begin{DoxyCompactList}\small\item\em terminate a \hyperlink{classcrop}{crop} and add its organic \hyperlink{classmatter}{matter} to the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a10bf498ff7059db7f8a37a057e8924c4}{GetMaxCropHeight} ()
+\begin{DoxyCompactList}\small\item\em it turns the maximum height of the vegetation in the \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a93d176ab8d86edc9eca29a1d831648c4}{GetFeedResource} (\hyperlink{classfeed_item}{feedItem} $\ast$my\_\-resource, double grazing\_\-height, int animalType)
+\begin{DoxyCompactList}\small\item\em calculates then returns an object describing the \hyperlink{classanimal}{animal} feed available within the \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a19d2a4505dee6b26659406de948dc0af}{GetStandingDM} ()
+\begin{DoxyCompactList}\small\item\em returns the total amount of standing dry \hyperlink{classmatter}{matter} in the \hyperlink{classecosystem}{ecosystem}, in grams \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a34f12fd834cd50eef38b2c0bfae4b0fa}{GetStandingDMdensity} ()
+\begin{DoxyCompactList}\small\item\em returns the standing dry \hyperlink{classmatter}{matter} density in the \hyperlink{classecosystem}{ecosystem}, in grams/m$\ast$$\ast$2 \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_af86ff12086792509461b7ada09a1572e}{SetGrazed} (double grazing\_\-height, double DMGrazed)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classcrop}{crop} variables that record the material grazed. \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a59d0051172bd35dfd8d3189b0cd5d490}{SetName} (char $\ast$aName)
+\begin{DoxyCompactList}\small\item\em set the name of the \hyperlink{classecosystem}{ecosystem} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a0fb0b24e9d254fd625f42b881afbebc7}{WriteNitrogen} (double f)
+\begin{DoxyCompactList}\small\item\em writes details of the \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classecosystem}{ecosystem} to the console. Used only in debugging. \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a3dbc48b9f16c1e7e0b8f6aa7aef3ea83}{GetNFixationThisDay} ()
+\begin{DoxyCompactList}\small\item\em returns the amount of \hyperlink{classnitrogen}{nitrogen} fixed within the \hyperlink{classecosystem}{ecosystem} during the day (in grams per square metre) \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a7ba741f8baf9bc7a8fc5f95cb308c7d2}{GetAvailableStandingDM} (double height)
+\begin{DoxyCompactList}\small\item\em Get mass of dry \hyperlink{classmatter}{matter} (g DM)of \hyperlink{classecosystem}{ecosystem} that is above a certain cutting or grazing height (m). \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_af149c5955062135fb6cff4174e6b82ba}{GetGrazedDM} ()
+\begin{DoxyCompactList}\small\item\em Get amount grazed from this \hyperlink{classecosystem}{ecosystem} during the current \hyperlink{classperiod}{period} (kg). \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_abbe9518375cd9faa312a57df3e5e3a05}{GetDailyDMProduction} ()
+\begin{DoxyCompactList}\small\item\em returns the daily dry \hyperlink{classmatter}{matter} production in kilograms per hectare \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a132f9c1d410dd62f121e7ec0bd0e8d88}{GetPotentialGrowthRate} (double radiation, double temperature)
+\begin{DoxyCompactList}\small\item\em returns the dry \hyperlink{classmatter}{matter} growth rate of the \hyperlink{classecosystem}{ecosystem} the absence of nutrient or \hyperlink{classwater}{water} limitations \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a9c22bfb95a0505d8c17a352a47c2c743}{clearGrazingRecords} ()
+\begin{DoxyCompactList}\small\item\em zeroes all \hyperlink{classecosystem}{ecosystem} variables related to grazing \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_aa3bf9115a761ece998311118bfad8973}{AddDecomposable} (\hyperlink{classdecomposable}{decomposable} $\ast$produc)
+\item 
+void \hyperlink{classecosystem_a5fb59e12490ad702d87765d64ce74ba2}{Incorporate} (double depth, double frac, bool tillage, const char $\ast$tillagetype)
+\item 
+void \hyperlink{classecosystem_a36762ab8f1b4b4239c6bbe00c7214701}{AddNutrient} (\hyperlink{classnitrogen}{nitrogen} surfNitrate, \hyperlink{classnitrogen}{nitrogen} surfAmmonium, \hyperlink{classnitrogen}{nitrogen} soilNitrate, \hyperlink{classnitrogen}{nitrogen} soilAmmonium)
+\item 
+void \hyperlink{classecosystem_a963c60e4ca14481915f72ff7cfbe7eaf}{AddChloride} (double amount)
+\item 
+void \hyperlink{classecosystem_aee78909c3c7389e4393b13755e2bb6e1}{SetirrigationWater} (\hyperlink{classwater}{water} $\ast$aWater)
+\item 
+void \hyperlink{classecosystem_ac50dd34f13319a8e97c7009b11d19a5d}{Sow} (char $\ast$cropID, double SeedDensDryMatt, double RelativeDensity, double NitrogenInSeed)
+\item 
+void \hyperlink{classecosystem_ae27dd7b646f92381708692d7b840a81e}{HarvestOperations} (\hyperlink{classharvest_fields}{harvestFields} $\ast$hrv)
+\begin{DoxyCompactList}\small\item\em handles all major \hyperlink{classfield}{field} operations \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_ae5431fb2c02834e47a7f8540b1ee6e15}{HarvestOp} (\hyperlink{classharvest_fields}{harvestFields} $\ast$hrv)
+\item 
+void \hyperlink{classecosystem_a4568fb9f9ba3632f8ae23cdab062059a}{HarvestGrasslandOp} (\hyperlink{classharvest_fields}{harvestFields} $\ast$hrv)
+\item 
+void \hyperlink{classecosystem_aabf317448ce162f6c103aea18ca05970}{Gathering} (\hyperlink{classharvest_fields}{harvestFields} $\ast$hrv)
+\item 
+void \hyperlink{classecosystem_ae978ad3f949181bffc509034f73f61f4}{KillAllCrops} ()
+\begin{DoxyCompactList}\small\item\em terminates all crops present and adds their organic \hyperlink{classmatter}{matter} to the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a4b7c3eb9b9c14b213e9862854dda23ab}{Tillage} (\hyperlink{classsoil_treat_fields}{soilTreatFields} $\ast$FOP)
+\item 
+double \hyperlink{classecosystem_a3bc724205cfe7821bb4cbf468b339d9c}{GetTotalNitrogen} ()
+\item 
+void \hyperlink{classecosystem_aeded9da6bd5084389b3740acf00b871c}{SimpleGraze} ()
+\begin{DoxyCompactList}\small\item\em simple grazing routine \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a77d52404322e889afa3ba3f877e6c688}{GetTotalAbovegroundN} ()
+\begin{DoxyCompactList}\small\item\em it turns the total amount of aboveground \hyperlink{classnitrogen}{nitrogen}, including \hyperlink{classmanure}{manure} \hyperlink{classnitrogen}{nitrogen} on \hyperlink{classsoil}{soil} and plant surfaces \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a5b1f3bbeed25c72f36d6e0ef552a9182}{SetRUEfactor} (double aVal)
+\item 
+void \hyperlink{classecosystem_a86e66b4cea99a0c47c8fef670d4e4a15}{outputCropDetails} (fstream $\ast$afile)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{classecosystem_aba225e015239959504f5d8eb23064948}{str} \mbox{[}id\_\-len\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classecosystem_aa4a78b7909049a2e4a0208e446e0028c}{ecosystem} ()
+\begin{DoxyCompactList}\small\item\em default constructor \item\end{DoxyCompactList}\item 
+\hyperlink{classecosystem}{ecosystem} \& \hyperlink{classecosystem_a5970455f5f04fa5382ebc534c3149185}{operator=} (const \hyperlink{classecosystem}{ecosystem} \&p)
+\begin{DoxyCompactList}\small\item\em default assignment operator \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_abc7a644bdde090e99a70f5a34d6dfe8b}{AddHarvestedAreaToIndicators} (const char $\ast$cid, double a)
+\begin{DoxyCompactList}\small\item\em updates harvest area indicators \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a12089f5ede359af7641a52c456d257a6}{AddYieldToIndicators} (const char $\ast$cid, double y, double n)
+\begin{DoxyCompactList}\small\item\em updates harvest yield indicators \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_ae1107288d1b4c6749be48752cd319487}{AddExpectedYieldToIndicators} (const char $\ast$cid, double y)
+\begin{DoxyCompactList}\small\item\em an expected yield to indicate the list \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a326b1b05494d4637c425a256dd6fed4c}{UpdateInterception} (double $\ast$surplus, double temperature, double globalRadiation, double $\ast$ePotGreenLeaves, double ePotDeadLeaves, double $\ast$ePotSoil, double interceptCapacity, double $\ast$greenEvap)
+\item 
+void \hyperlink{classecosystem_a8355ba8e9658dde9faed9a4e90ac6548}{TransferRootMatter} (\hyperlink{classdecomposable}{decomposable} $\ast$rootMatter, double $\ast$RootLengthList)
+\begin{DoxyCompactList}\small\item\em adds dead root \hyperlink{classmatter}{matter} to the \hyperlink{classsoil}{soil} pools \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a2176cebabe57a848605f4ecce56615e0}{fPAR} (double k, double gLAI)
+\begin{DoxyCompactList}\small\item\em returns the proportion of light intercepted by green leaf area \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a225153ac450b442797c2485c0cd991a4}{FractionEPotToSoil} (double gLAI, double yLAI)
+\begin{DoxyCompactList}\small\item\em calculates the fraction of potential evapotranspiration that is partitioned to the \hyperlink{classsoil}{soil} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_afcfa64eac43a10c5a4bedcc74ce933ce}{FractionEPotToGreenLeaves} (double gLAI)
+\begin{DoxyCompactList}\small\item\em calculates the fraction of potential evapotranspiration that is partitioned to the green leaves \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a247d1f0772f29aed1a37a277f15eecf6}{FractionEPotToYellowLeaves} (double gLAI, double yLAI)
+\begin{DoxyCompactList}\small\item\em calculates the fraction of potential evapotranspiration that is partitioned to the yellow leaves \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_aaa5cad8de95fb94e74a33295332efe18}{CheckNfromSoil} (\hyperlink{classnitrogen}{nitrogen} \&NfromSoil, double NitrogenDemand)
+\begin{DoxyCompactList}\small\item\em checks to ensure the \hyperlink{classnitrogen}{nitrogen} released by the \hyperlink{classsoil}{soil} to the plants does not exceed demand or is less than zero \item\end{DoxyCompactList}\item 
+void \hyperlink{classecosystem_a6ae575e9cd3cadaca579108ea01be675}{CheckTranspirationRatio} (double \&TranspirationRatio)
+\begin{DoxyCompactList}\small\item\em checks for an error in the calculation of transpiration \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a546f8786d6c5965b960fd3de1988863e}{CO2ConcentrationFactor} (double CO2conc)
+\begin{DoxyCompactList}\small\item\em calculates the relative effects of carbon dioxide concentration on the transpiration rate. Returns 1 at ppmCO2=377 \item\end{DoxyCompactList}\item 
+\hyperlink{classcrop}{crop} $\ast$ \hyperlink{classecosystem_a44c464a87c2f3e32ef0d874d53c2635b}{AllocateCrop} (char $\ast$crop\_\-id)
+\begin{DoxyCompactList}\small\item\em call up the appropriate \hyperlink{classcrop}{crop} model \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsoil}{soil} $\ast$ \hyperlink{classecosystem_a875bd0393f05bb6a71e5194459498038}{aSoil}
+\begin{DoxyCompactList}\small\item\em pointer to the patches \hyperlink{classsoil}{soil} object \item\end{DoxyCompactList}\item 
+\hyperlink{classwater}{water} \hyperlink{classecosystem_a887cf0ec7ec752882a3ee9d59d814d72}{irrigationWater}
+\begin{DoxyCompactList}\small\item\em amount of irrigation \hyperlink{classwater}{water} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a80b27b606e2c7ce413e10ea7d783469e}{nFixThisDay}
+\begin{DoxyCompactList}\small\item\em amount of \hyperlink{classnitrogen}{nitrogen} fixed during the day \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a4aeb89d26c705346cfdb14914d0b0aaa}{totalGrazed\_\-DM}
+\begin{DoxyCompactList}\small\item\em total amount of dry \hyperlink{classmatter}{matter} grazed \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a77bd4dfe78513840eb8c15a0206880a5}{totalGrazed\_\-N}
+\begin{DoxyCompactList}\small\item\em total amount \hyperlink{classnitrogen}{nitrogen} grazed \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a57fe8b0f42a7b0aa153ff9a628d2fae2}{grazingEffiency}
+\begin{DoxyCompactList}\small\item\em percentage of dry \hyperlink{classmatter}{matter} grazed (may be obsolete) \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a1fe02670ff76be100568aa00aeb123c4}{leachingDepth}
+\begin{DoxyCompactList}\small\item\em depth below which it is assumed that nitrate cannot be subsequently recovered by the \hyperlink{classcrop}{crop} (mm) \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a622df48397a634ab7d4d9df06bf64688}{balanceDepth}
+\begin{DoxyCompactList}\small\item\em depth below which \hyperlink{classnitrogen}{nitrogen} to use the system (mm) \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a8324bc15b82ac900c54afceed501d57d}{area}
+\begin{DoxyCompactList}\small\item\em area of \hyperlink{classecosystem}{ecosystem} (ha) \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a2dd8b085d6e0a7d3308640fa4ab837fb}{nLoad}
+\item 
+double \hyperlink{classecosystem_a3e9deac833c64aa8764e5bbcf0e96a99}{k1}
+\item 
+double \hyperlink{classecosystem_a34e09ac34adc98d3c5269845fdd23e4b}{waterContent}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classwater}{water} content in the interception layer (millimetres) \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a4de898c78ce48f74bd668c5a6fb0cbfe}{snowContent}
+\begin{DoxyCompactList}\small\item\em Snow content in Snow Reservoir (millimetres). \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_adafee4145128b86c471661c5ad889054}{totalgLAI}
+\begin{DoxyCompactList}\small\item\em total green leaf area index \item\end{DoxyCompactList}\item 
+int \hyperlink{classecosystem_a33c5d59a1b021f453ffad961f46cd0b7}{type}
+\begin{DoxyCompactList}\small\item\em type of \hyperlink{classecosystem}{ecosystem} (= 0 for no type or urine, = 1 for dung) \item\end{DoxyCompactList}\item 
+int \hyperlink{classecosystem_a27a6796874903c016e6cb3de4ec8a9d2}{fingerFlow}
+\begin{DoxyCompactList}\small\item\em 0 = no finger flow, 1 = finger flow and \hyperlink{classecosystem}{ecosystem} receives 3/2 \hyperlink{classwater}{water}, 2 = finger flow and \hyperlink{classecosystem}{ecosystem} receives no \hyperlink{classwater}{water} \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a45ea3a5ece526455d6bc5942c90ac021}{tempSnowFall1}
+\begin{DoxyCompactList}\small\item\em Base temperature for snowfall \mbox{[}�C\mbox{]}. \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_aaad4a3984f8adec87aaac91fb8c153a1}{tempSnowFall2}
+\begin{DoxyCompactList}\small\item\em High temperature for snowfall \mbox{[}�C\mbox{]}. \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a1ad645dd127e20417f1ad8e97ae75338}{snowMeltRate1}
+\begin{DoxyCompactList}\small\item\em Melt rate for snow \mbox{[}mm/(�Cd)\mbox{]}. \item\end{DoxyCompactList}\item 
+double \hyperlink{classecosystem_a5b694778f4af8dc19151098d90640fd8}{snowMeltRate2}
+\begin{DoxyCompactList}\small\item\em Melt rate for snow \mbox{[}mm/(MJ/m2)\mbox{]}. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classecosystem_ae02968a4af70884e35543b24d2f3b17a}{autoGraze}
+\item 
+\hyperlink{classbudget}{budget} \hyperlink{classecosystem_a08137c3fd93a93cc284bf3e8ad217222}{WaterBudget}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classwater}{water} \hyperlink{classbudget}{budget} \item\end{DoxyCompactList}\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classcrop}{crop} $>$ $\ast$ \hyperlink{classecosystem_a5b32df2d08cd4a986e3e0773b858dfdf}{theCrops}
+\begin{DoxyCompactList}\small\item\em list of pointers to the \hyperlink{classcrop}{crop} objects present \item\end{DoxyCompactList}\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classplant_item}{plantItem} $>$ $\ast$ \hyperlink{classecosystem_a5ed20a16967029b1bd8cbd5d03af0223}{cutPlantProducts}
+\begin{DoxyCompactList}\small\item\em list of pointers to the \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} objects that have yet to be gathered \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classecosystem_aba225e015239959504f5d8eb23064948}{
+\index{ecosystem@{ecosystem}!str@{str}}
+\index{str@{str}!ecosystem@{ecosystem}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf ecosystem::str}\mbox{[}id\_\-len\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_aba225e015239959504f5d8eb23064948}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classecosystem_aa4a78b7909049a2e4a0208e446e0028c}{
+\index{ecosystem@{ecosystem}!ecosystem@{ecosystem}}
+\index{ecosystem@{ecosystem}!ecosystem@{ecosystem}}
+\subsubsection[{ecosystem}]{\setlength{\rightskip}{0pt plus 5cm}ecosystem::ecosystem ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_aa4a78b7909049a2e4a0208e446e0028c}
+
+
+default constructor \hypertarget{classecosystem_a8e76a426eca95f2e287545e7e1ab745e}{
+\index{ecosystem@{ecosystem}!ecosystem@{ecosystem}}
+\index{ecosystem@{ecosystem}!ecosystem@{ecosystem}}
+\subsubsection[{ecosystem}]{\setlength{\rightskip}{0pt plus 5cm}ecosystem::ecosystem (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classecosystem_a8e76a426eca95f2e287545e7e1ab745e}
+
+
+construct with arguments \hypertarget{classecosystem_a02e07277b33df4f149726d8cb91d1fcc}{
+\index{ecosystem@{ecosystem}!ecosystem@{ecosystem}}
+\index{ecosystem@{ecosystem}!ecosystem@{ecosystem}}
+\subsubsection[{ecosystem}]{\setlength{\rightskip}{0pt plus 5cm}ecosystem::ecosystem (const {\bf ecosystem} \& {\em p})}}
+\label{classecosystem_a02e07277b33df4f149726d8cb91d1fcc}
+
+
+copy constructor \hypertarget{classecosystem_a7d57023334e0fbdded2d5a02f1053015}{
+\index{ecosystem@{ecosystem}!$\sim$ecosystem@{$\sim$ecosystem}}
+\index{$\sim$ecosystem@{$\sim$ecosystem}!ecosystem@{ecosystem}}
+\subsubsection[{$\sim$ecosystem}]{\setlength{\rightskip}{0pt plus 5cm}ecosystem::$\sim$ecosystem ()}}
+\label{classecosystem_a7d57023334e0fbdded2d5a02f1053015}
+
+
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classecosystem_a963c60e4ca14481915f72ff7cfbe7eaf}{
+\index{ecosystem@{ecosystem}!AddChloride@{AddChloride}}
+\index{AddChloride@{AddChloride}!ecosystem@{ecosystem}}
+\subsubsection[{AddChloride}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::AddChloride (double {\em amount})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a963c60e4ca14481915f72ff7cfbe7eaf}
+\hypertarget{classecosystem_aa3bf9115a761ece998311118bfad8973}{
+\index{ecosystem@{ecosystem}!AddDecomposable@{AddDecomposable}}
+\index{AddDecomposable@{AddDecomposable}!ecosystem@{ecosystem}}
+\subsubsection[{AddDecomposable}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::AddDecomposable ({\bf decomposable} $\ast$ {\em produc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_aa3bf9115a761ece998311118bfad8973}
+\hypertarget{classecosystem_ae1107288d1b4c6749be48752cd319487}{
+\index{ecosystem@{ecosystem}!AddExpectedYieldToIndicators@{AddExpectedYieldToIndicators}}
+\index{AddExpectedYieldToIndicators@{AddExpectedYieldToIndicators}!ecosystem@{ecosystem}}
+\subsubsection[{AddExpectedYieldToIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::AddExpectedYieldToIndicators (const char $\ast$ {\em cid}, \/  double {\em y})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_ae1107288d1b4c6749be48752cd319487}
+
+
+an expected yield to indicate the list \hypertarget{classecosystem_abc7a644bdde090e99a70f5a34d6dfe8b}{
+\index{ecosystem@{ecosystem}!AddHarvestedAreaToIndicators@{AddHarvestedAreaToIndicators}}
+\index{AddHarvestedAreaToIndicators@{AddHarvestedAreaToIndicators}!ecosystem@{ecosystem}}
+\subsubsection[{AddHarvestedAreaToIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::AddHarvestedAreaToIndicators (const char $\ast$ {\em cid}, \/  double {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_abc7a644bdde090e99a70f5a34d6dfe8b}
+
+
+updates harvest area indicators Perform addition of \hyperlink{classwater}{water} and evaporation from interception layer \hypertarget{classecosystem_a36762ab8f1b4b4239c6bbe00c7214701}{
+\index{ecosystem@{ecosystem}!AddNutrient@{AddNutrient}}
+\index{AddNutrient@{AddNutrient}!ecosystem@{ecosystem}}
+\subsubsection[{AddNutrient}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::AddNutrient ({\bf nitrogen} {\em surfNitrate}, \/  {\bf nitrogen} {\em surfAmmonium}, \/  {\bf nitrogen} {\em soilNitrate}, \/  {\bf nitrogen} {\em soilAmmonium})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a36762ab8f1b4b4239c6bbe00c7214701}
+\hypertarget{classecosystem_a12089f5ede359af7641a52c456d257a6}{
+\index{ecosystem@{ecosystem}!AddYieldToIndicators@{AddYieldToIndicators}}
+\index{AddYieldToIndicators@{AddYieldToIndicators}!ecosystem@{ecosystem}}
+\subsubsection[{AddYieldToIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::AddYieldToIndicators (const char $\ast$ {\em cid}, \/  double {\em y}, \/  double {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a12089f5ede359af7641a52c456d257a6}
+
+
+updates harvest yield indicators \hypertarget{classecosystem_a44c464a87c2f3e32ef0d874d53c2635b}{
+\index{ecosystem@{ecosystem}!AllocateCrop@{AllocateCrop}}
+\index{AllocateCrop@{AllocateCrop}!ecosystem@{ecosystem}}
+\subsubsection[{AllocateCrop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf crop} $\ast$ ecosystem::AllocateCrop (char $\ast$ {\em crop\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a44c464a87c2f3e32ef0d874d53c2635b}
+
+
+call up the appropriate \hyperlink{classcrop}{crop} model 
+\begin{DoxyParams}{Parameters}
+\item[{\em crop\_\-id}]contains a character identifier for the \hyperlink{classcrop}{crop} \end{DoxyParams}
+\hypertarget{classecosystem_aaa5cad8de95fb94e74a33295332efe18}{
+\index{ecosystem@{ecosystem}!CheckNfromSoil@{CheckNfromSoil}}
+\index{CheckNfromSoil@{CheckNfromSoil}!ecosystem@{ecosystem}}
+\subsubsection[{CheckNfromSoil}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::CheckNfromSoil ({\bf nitrogen} \& {\em NfromSoil}, \/  double {\em NitrogenDemand})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_aaa5cad8de95fb94e74a33295332efe18}
+
+
+checks to ensure the \hyperlink{classnitrogen}{nitrogen} released by the \hyperlink{classsoil}{soil} to the plants does not exceed demand or is less than zero \hypertarget{classecosystem_a6ae575e9cd3cadaca579108ea01be675}{
+\index{ecosystem@{ecosystem}!CheckTranspirationRatio@{CheckTranspirationRatio}}
+\index{CheckTranspirationRatio@{CheckTranspirationRatio}!ecosystem@{ecosystem}}
+\subsubsection[{CheckTranspirationRatio}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::CheckTranspirationRatio (double \& {\em TranspirationRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a6ae575e9cd3cadaca579108ea01be675}
+
+
+checks for an error in the calculation of transpiration \hypertarget{classecosystem_a9c22bfb95a0505d8c17a352a47c2c743}{
+\index{ecosystem@{ecosystem}!clearGrazingRecords@{clearGrazingRecords}}
+\index{clearGrazingRecords@{clearGrazingRecords}!ecosystem@{ecosystem}}
+\subsubsection[{clearGrazingRecords}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::clearGrazingRecords ()}}
+\label{classecosystem_a9c22bfb95a0505d8c17a352a47c2c743}
+
+
+zeroes all \hyperlink{classecosystem}{ecosystem} variables related to grazing \hypertarget{classecosystem_a7d32ec71de4a7d66fb7edb4510a38f66}{
+\index{ecosystem@{ecosystem}!clone@{clone}}
+\index{clone@{clone}!ecosystem@{ecosystem}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ecosystem} $\ast$ ecosystem::clone () const}}
+\label{classecosystem_a7d32ec71de4a7d66fb7edb4510a38f66}
+
+
+creates a clone of the current \hyperlink{classecosystem}{ecosystem} \hypertarget{classecosystem_a6278ea87551559c0f4c5deb803e13b33}{
+\index{ecosystem@{ecosystem}!CloverPercentage@{CloverPercentage}}
+\index{CloverPercentage@{CloverPercentage}!ecosystem@{ecosystem}}
+\subsubsection[{CloverPercentage}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::CloverPercentage ()}}
+\label{classecosystem_a6278ea87551559c0f4c5deb803e13b33}
+
+
+returned percentage contribution of clover to aboveground \hyperlink{classcrop}{crop} dry \hyperlink{classmatter}{matter} \hypertarget{classecosystem_a546f8786d6c5965b960fd3de1988863e}{
+\index{ecosystem@{ecosystem}!CO2ConcentrationFactor@{CO2ConcentrationFactor}}
+\index{CO2ConcentrationFactor@{CO2ConcentrationFactor}!ecosystem@{ecosystem}}
+\subsubsection[{CO2ConcentrationFactor}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::CO2ConcentrationFactor (double {\em CO2conc})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a546f8786d6c5965b960fd3de1988863e}
+
+
+calculates the relative effects of carbon dioxide concentration on the transpiration rate. Returns 1 at ppmCO2=377 \hypertarget{classecosystem_a7d05455c8cb304e1a4207462f386bdc8}{
+\index{ecosystem@{ecosystem}!CropSoilExchange@{CropSoilExchange}}
+\index{CropSoilExchange@{CropSoilExchange}!ecosystem@{ecosystem}}
+\subsubsection[{CropSoilExchange}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::CropSoilExchange ()}}
+\label{classecosystem_a7d05455c8cb304e1a4207462f386bdc8}
+
+
+performs all major interactions between crops and \hyperlink{classsoil}{soil} \hypertarget{classecosystem_a9560c609a6cd01430c2ebb44a65a4358}{
+\index{ecosystem@{ecosystem}!EndBudget@{EndBudget}}
+\index{EndBudget@{EndBudget}!ecosystem@{ecosystem}}
+\subsubsection[{EndBudget}]{\setlength{\rightskip}{0pt plus 5cm}bool ecosystem::EndBudget ()}}
+\label{classecosystem_a9560c609a6cd01430c2ebb44a65a4358}
+
+
+check the budgets of those elements or compounds that are being budgeted \hypertarget{classecosystem_a2176cebabe57a848605f4ecce56615e0}{
+\index{ecosystem@{ecosystem}!fPAR@{fPAR}}
+\index{fPAR@{fPAR}!ecosystem@{ecosystem}}
+\subsubsection[{fPAR}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::fPAR (double {\em k}, \/  double {\em gLAI})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a2176cebabe57a848605f4ecce56615e0}
+
+
+returns the proportion of light intercepted by green leaf area \hypertarget{classecosystem_afcfa64eac43a10c5a4bedcc74ce933ce}{
+\index{ecosystem@{ecosystem}!FractionEPotToGreenLeaves@{FractionEPotToGreenLeaves}}
+\index{FractionEPotToGreenLeaves@{FractionEPotToGreenLeaves}!ecosystem@{ecosystem}}
+\subsubsection[{FractionEPotToGreenLeaves}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::FractionEPotToGreenLeaves (double {\em gLAI})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_afcfa64eac43a10c5a4bedcc74ce933ce}
+
+
+calculates the fraction of potential evapotranspiration that is partitioned to the green leaves \hypertarget{classecosystem_a225153ac450b442797c2485c0cd991a4}{
+\index{ecosystem@{ecosystem}!FractionEPotToSoil@{FractionEPotToSoil}}
+\index{FractionEPotToSoil@{FractionEPotToSoil}!ecosystem@{ecosystem}}
+\subsubsection[{FractionEPotToSoil}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::FractionEPotToSoil (double {\em gLAI}, \/  double {\em yLAI})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a225153ac450b442797c2485c0cd991a4}
+
+
+calculates the fraction of potential evapotranspiration that is partitioned to the \hyperlink{classsoil}{soil} \hypertarget{classecosystem_a247d1f0772f29aed1a37a277f15eecf6}{
+\index{ecosystem@{ecosystem}!FractionEPotToYellowLeaves@{FractionEPotToYellowLeaves}}
+\index{FractionEPotToYellowLeaves@{FractionEPotToYellowLeaves}!ecosystem@{ecosystem}}
+\subsubsection[{FractionEPotToYellowLeaves}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::FractionEPotToYellowLeaves (double {\em gLAI}, \/  double {\em yLAI})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a247d1f0772f29aed1a37a277f15eecf6}
+
+
+calculates the fraction of potential evapotranspiration that is partitioned to the yellow leaves \hypertarget{classecosystem_aabf317448ce162f6c103aea18ca05970}{
+\index{ecosystem@{ecosystem}!Gathering@{Gathering}}
+\index{Gathering@{Gathering}!ecosystem@{ecosystem}}
+\subsubsection[{Gathering}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::Gathering ({\bf harvestFields} $\ast$ {\em hrv})}}
+\label{classecosystem_aabf317448ce162f6c103aea18ca05970}
+\hypertarget{classecosystem_a6b64028f9210f9b93d8edd22daae15d4}{
+\index{ecosystem@{ecosystem}!GetAbovegroundCropN@{GetAbovegroundCropN}}
+\index{GetAbovegroundCropN@{GetAbovegroundCropN}!ecosystem@{ecosystem}}
+\subsubsection[{GetAbovegroundCropN}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetAbovegroundCropN ()}}
+\label{classecosystem_a6b64028f9210f9b93d8edd22daae15d4}
+
+
+handles all major \hyperlink{classfield}{field} operations it turns the total amount of \hyperlink{classnitrogen}{nitrogen} in the aboveground \hyperlink{classcrop}{crop} \hypertarget{classecosystem_a7ba741f8baf9bc7a8fc5f95cb308c7d2}{
+\index{ecosystem@{ecosystem}!GetAvailableStandingDM@{GetAvailableStandingDM}}
+\index{GetAvailableStandingDM@{GetAvailableStandingDM}!ecosystem@{ecosystem}}
+\subsubsection[{GetAvailableStandingDM}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetAvailableStandingDM (double {\em height})}}
+\label{classecosystem_a7ba741f8baf9bc7a8fc5f95cb308c7d2}
+
+
+Get mass of dry \hyperlink{classmatter}{matter} (g DM)of \hyperlink{classecosystem}{ecosystem} that is above a certain cutting or grazing height (m). \hypertarget{classecosystem_a76aa55a306d04f87b0acff0c405d3352}{
+\index{ecosystem@{ecosystem}!GetCrops@{GetCrops}}
+\index{GetCrops@{GetCrops}!ecosystem@{ecosystem}}
+\subsubsection[{GetCrops}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf crop}$>$$\ast$ ecosystem::GetCrops ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a76aa55a306d04f87b0acff0c405d3352}
+
+
+returns a list of pointers to the \hyperlink{classcrop}{crop} objects in the \hyperlink{classecosystem}{ecosystem} \hypertarget{classecosystem_abbe9518375cd9faa312a57df3e5e3a05}{
+\index{ecosystem@{ecosystem}!GetDailyDMProduction@{GetDailyDMProduction}}
+\index{GetDailyDMProduction@{GetDailyDMProduction}!ecosystem@{ecosystem}}
+\subsubsection[{GetDailyDMProduction}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetDailyDMProduction ()}}
+\label{classecosystem_abbe9518375cd9faa312a57df3e5e3a05}
+
+
+returns the daily dry \hyperlink{classmatter}{matter} production in kilograms per hectare \hypertarget{classecosystem_a93d176ab8d86edc9eca29a1d831648c4}{
+\index{ecosystem@{ecosystem}!GetFeedResource@{GetFeedResource}}
+\index{GetFeedResource@{GetFeedResource}!ecosystem@{ecosystem}}
+\subsubsection[{GetFeedResource}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::GetFeedResource ({\bf feedItem} $\ast$ {\em my\_\-resource}, \/  double {\em grazing\_\-height}, \/  int {\em animalType})}}
+\label{classecosystem_a93d176ab8d86edc9eca29a1d831648c4}
+
+
+calculates then returns an object describing the \hyperlink{classanimal}{animal} feed available within the \hyperlink{classecosystem}{ecosystem} 
+\begin{DoxyParams}{Parameters}
+\item[{\em bite\_\-depth\_\-factor}]depth to which animals graze, as a proportion of the canopy height \item[{\em min\_\-stubble\_\-ht}]minimum height of plant canopy of the grazing -\/ limits the depth of grazing \item[{\em animalType}]identifies the type of \hyperlink{classanimal}{animal} that is grazing \end{DoxyParams}
+\hypertarget{classecosystem_af149c5955062135fb6cff4174e6b82ba}{
+\index{ecosystem@{ecosystem}!GetGrazedDM@{GetGrazedDM}}
+\index{GetGrazedDM@{GetGrazedDM}!ecosystem@{ecosystem}}
+\subsubsection[{GetGrazedDM}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetGrazedDM ()}}
+\label{classecosystem_af149c5955062135fb6cff4174e6b82ba}
+
+
+Get amount grazed from this \hyperlink{classecosystem}{ecosystem} during the current \hyperlink{classperiod}{period} (kg). \hypertarget{classecosystem_a724c7931285236c1d1f0a55ce17b8295}{
+\index{ecosystem@{ecosystem}!GetIrrigationDemand@{GetIrrigationDemand}}
+\index{GetIrrigationDemand@{GetIrrigationDemand}!ecosystem@{ecosystem}}
+\subsubsection[{GetIrrigationDemand}]{\setlength{\rightskip}{0pt plus 5cm}bool ecosystem::GetIrrigationDemand ()}}
+\label{classecosystem_a724c7931285236c1d1f0a55ce17b8295}
+
+
+returns whether irrigation is required \hypertarget{classecosystem_a10bf498ff7059db7f8a37a057e8924c4}{
+\index{ecosystem@{ecosystem}!GetMaxCropHeight@{GetMaxCropHeight}}
+\index{GetMaxCropHeight@{GetMaxCropHeight}!ecosystem@{ecosystem}}
+\subsubsection[{GetMaxCropHeight}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetMaxCropHeight ()}}
+\label{classecosystem_a10bf498ff7059db7f8a37a057e8924c4}
+
+
+it turns the maximum height of the vegetation in the \hyperlink{classecosystem}{ecosystem} \hypertarget{classecosystem_a3dbc48b9f16c1e7e0b8f6aa7aef3ea83}{
+\index{ecosystem@{ecosystem}!GetNFixationThisDay@{GetNFixationThisDay}}
+\index{GetNFixationThisDay@{GetNFixationThisDay}!ecosystem@{ecosystem}}
+\subsubsection[{GetNFixationThisDay}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetNFixationThisDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a3dbc48b9f16c1e7e0b8f6aa7aef3ea83}
+
+
+returns the amount of \hyperlink{classnitrogen}{nitrogen} fixed within the \hyperlink{classecosystem}{ecosystem} during the day (in grams per square metre) \hypertarget{classecosystem_a132f9c1d410dd62f121e7ec0bd0e8d88}{
+\index{ecosystem@{ecosystem}!GetPotentialGrowthRate@{GetPotentialGrowthRate}}
+\index{GetPotentialGrowthRate@{GetPotentialGrowthRate}!ecosystem@{ecosystem}}
+\subsubsection[{GetPotentialGrowthRate}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetPotentialGrowthRate (double {\em radiation}, \/  double {\em temperature})}}
+\label{classecosystem_a132f9c1d410dd62f121e7ec0bd0e8d88}
+
+
+returns the dry \hyperlink{classmatter}{matter} growth rate of the \hyperlink{classecosystem}{ecosystem} the absence of nutrient or \hyperlink{classwater}{water} limitations 
+\begin{DoxyParams}{Parameters}
+\item[{\em radiation}]radiation in megajoules per metre squared \item[{\em temperature}]mean daily air temperature \end{DoxyParams}
+\hypertarget{classecosystem_aa4ce724310a879de8e2d242f5cfe4308}{
+\index{ecosystem@{ecosystem}!GetReadyForHarvestOrLater@{GetReadyForHarvestOrLater}}
+\index{GetReadyForHarvestOrLater@{GetReadyForHarvestOrLater}!ecosystem@{ecosystem}}
+\subsubsection[{GetReadyForHarvestOrLater}]{\setlength{\rightskip}{0pt plus 5cm}bool ecosystem::GetReadyForHarvestOrLater ()}}
+\label{classecosystem_aa4ce724310a879de8e2d242f5cfe4308}
+
+
+returns true if the main \hyperlink{classcrop}{crop} is ready for harvesting \hypertarget{classecosystem_a53ac5ef44ba55f24a4210492d909f0d9}{
+\index{ecosystem@{ecosystem}!GetSoil@{GetSoil}}
+\index{GetSoil@{GetSoil}!ecosystem@{ecosystem}}
+\subsubsection[{GetSoil}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soil}$\ast$ ecosystem::GetSoil ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a53ac5ef44ba55f24a4210492d909f0d9}
+
+
+returns a pointerto the ecosystem's \hyperlink{classsoil}{soil} object \hypertarget{classecosystem_a19d2a4505dee6b26659406de948dc0af}{
+\index{ecosystem@{ecosystem}!GetStandingDM@{GetStandingDM}}
+\index{GetStandingDM@{GetStandingDM}!ecosystem@{ecosystem}}
+\subsubsection[{GetStandingDM}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetStandingDM ()}}
+\label{classecosystem_a19d2a4505dee6b26659406de948dc0af}
+
+
+returns the total amount of standing dry \hyperlink{classmatter}{matter} in the \hyperlink{classecosystem}{ecosystem}, in grams \hypertarget{classecosystem_a34f12fd834cd50eef38b2c0bfae4b0fa}{
+\index{ecosystem@{ecosystem}!GetStandingDMdensity@{GetStandingDMdensity}}
+\index{GetStandingDMdensity@{GetStandingDMdensity}!ecosystem@{ecosystem}}
+\subsubsection[{GetStandingDMdensity}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetStandingDMdensity ()}}
+\label{classecosystem_a34f12fd834cd50eef38b2c0bfae4b0fa}
+
+
+returns the standing dry \hyperlink{classmatter}{matter} density in the \hyperlink{classecosystem}{ecosystem}, in grams/m$\ast$$\ast$2 \hypertarget{classecosystem_a77d52404322e889afa3ba3f877e6c688}{
+\index{ecosystem@{ecosystem}!GetTotalAbovegroundN@{GetTotalAbovegroundN}}
+\index{GetTotalAbovegroundN@{GetTotalAbovegroundN}!ecosystem@{ecosystem}}
+\subsubsection[{GetTotalAbovegroundN}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetTotalAbovegroundN ()}}
+\label{classecosystem_a77d52404322e889afa3ba3f877e6c688}
+
+
+it turns the total amount of aboveground \hyperlink{classnitrogen}{nitrogen}, including \hyperlink{classmanure}{manure} \hyperlink{classnitrogen}{nitrogen} on \hyperlink{classsoil}{soil} and plant surfaces \hypertarget{classecosystem_a8aadfc5e6b887347617e3b7e73ced238}{
+\index{ecosystem@{ecosystem}!GetTotalLAI@{GetTotalLAI}}
+\index{GetTotalLAI@{GetTotalLAI}!ecosystem@{ecosystem}}
+\subsubsection[{GetTotalLAI}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetTotalLAI ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a8aadfc5e6b887347617e3b7e73ced238}
+
+
+return the total leaf area index of \hyperlink{classecosystem}{ecosystem} \hypertarget{classecosystem_a3bc724205cfe7821bb4cbf468b339d9c}{
+\index{ecosystem@{ecosystem}!GetTotalNitrogen@{GetTotalNitrogen}}
+\index{GetTotalNitrogen@{GetTotalNitrogen}!ecosystem@{ecosystem}}
+\subsubsection[{GetTotalNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::GetTotalNitrogen ()}}
+\label{classecosystem_a3bc724205cfe7821bb4cbf468b339d9c}
+\hypertarget{classecosystem_a2765e63a5da7ecd965342068e69bd10c}{
+\index{ecosystem@{ecosystem}!GiveIndicators@{GiveIndicators}}
+\index{GiveIndicators@{GiveIndicators}!ecosystem@{ecosystem}}
+\subsubsection[{GiveIndicators}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::GiveIndicators ()}}
+\label{classecosystem_a2765e63a5da7ecd965342068e69bd10c}
+
+
+complete indicator values \hypertarget{classecosystem_a4568fb9f9ba3632f8ae23cdab062059a}{
+\index{ecosystem@{ecosystem}!HarvestGrasslandOp@{HarvestGrasslandOp}}
+\index{HarvestGrasslandOp@{HarvestGrasslandOp}!ecosystem@{ecosystem}}
+\subsubsection[{HarvestGrasslandOp}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::HarvestGrasslandOp ({\bf harvestFields} $\ast$ {\em hrv})}}
+\label{classecosystem_a4568fb9f9ba3632f8ae23cdab062059a}
+\hypertarget{classecosystem_ae5431fb2c02834e47a7f8540b1ee6e15}{
+\index{ecosystem@{ecosystem}!HarvestOp@{HarvestOp}}
+\index{HarvestOp@{HarvestOp}!ecosystem@{ecosystem}}
+\subsubsection[{HarvestOp}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::HarvestOp ({\bf harvestFields} $\ast$ {\em hrv})}}
+\label{classecosystem_ae5431fb2c02834e47a7f8540b1ee6e15}
+\hypertarget{classecosystem_ae27dd7b646f92381708692d7b840a81e}{
+\index{ecosystem@{ecosystem}!HarvestOperations@{HarvestOperations}}
+\index{HarvestOperations@{HarvestOperations}!ecosystem@{ecosystem}}
+\subsubsection[{HarvestOperations}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::HarvestOperations ({\bf harvestFields} $\ast$ {\em hrv})}}
+\label{classecosystem_ae27dd7b646f92381708692d7b840a81e}
+
+
+handles all major \hyperlink{classfield}{field} operations \hypertarget{classecosystem_a5fb59e12490ad702d87765d64ce74ba2}{
+\index{ecosystem@{ecosystem}!Incorporate@{Incorporate}}
+\index{Incorporate@{Incorporate}!ecosystem@{ecosystem}}
+\subsubsection[{Incorporate}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::Incorporate (double {\em depth}, \/  double {\em frac}, \/  bool {\em tillage}, \/  const char $\ast$ {\em tillagetype})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a5fb59e12490ad702d87765d64ce74ba2}
+\hypertarget{classecosystem_aef0ef46a098200f4cf5b24b497508412}{
+\index{ecosystem@{ecosystem}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!ecosystem@{ecosystem}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::Initialise (char $\ast$ {\em soilFileName}, \/  int {\em theIndex} = {\ttfamily 0}, \/  double {\em anArea} = {\ttfamily 0.0})}}
+\label{classecosystem_aef0ef46a098200f4cf5b24b497508412}
+
+
+initialises the \hyperlink{classsoil}{soil} module 
+\begin{DoxyParams}{Parameters}
+\item[{\em soilFileName}]name of the file containing \hyperlink{classsoil}{soil} initialisation parameters \item[{\em aIndex}]value to be given to the \hyperlink{classsoil}{soil} object's Index parameter (currently set to parent field's Index value) \} \end{DoxyParams}
+\hypertarget{classecosystem_ae978ad3f949181bffc509034f73f61f4}{
+\index{ecosystem@{ecosystem}!KillAllCrops@{KillAllCrops}}
+\index{KillAllCrops@{KillAllCrops}!ecosystem@{ecosystem}}
+\subsubsection[{KillAllCrops}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::KillAllCrops ()}}
+\label{classecosystem_ae978ad3f949181bffc509034f73f61f4}
+
+
+terminates all crops present and adds their organic \hyperlink{classmatter}{matter} to the \hyperlink{classsoil}{soil} \hypertarget{classecosystem_a37510ceb9f78738a84d1155ffa592f12}{
+\index{ecosystem@{ecosystem}!NitrogenInCrops@{NitrogenInCrops}}
+\index{NitrogenInCrops@{NitrogenInCrops}!ecosystem@{ecosystem}}
+\subsubsection[{NitrogenInCrops}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::NitrogenInCrops ()}}
+\label{classecosystem_a37510ceb9f78738a84d1155ffa592f12}
+
+
+return the total amount of \hyperlink{classnitrogen}{nitrogen} in the crops \hypertarget{classecosystem_a8ffb63ec540734dcba14fd0d74ba7d14}{
+\index{ecosystem@{ecosystem}!NitrogenInSoil@{NitrogenInSoil}}
+\index{NitrogenInSoil@{NitrogenInSoil}!ecosystem@{ecosystem}}
+\subsubsection[{NitrogenInSoil}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::NitrogenInSoil ()}}
+\label{classecosystem_a8ffb63ec540734dcba14fd0d74ba7d14}
+
+
+return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classsoil}{soil} \hypertarget{classecosystem_acfb7342a6031a4451c885cf8ee9b365e}{
+\index{ecosystem@{ecosystem}!NitrogenInSystem@{NitrogenInSystem}}
+\index{NitrogenInSystem@{NitrogenInSystem}!ecosystem@{ecosystem}}
+\subsubsection[{NitrogenInSystem}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::NitrogenInSystem ()}}
+\label{classecosystem_acfb7342a6031a4451c885cf8ee9b365e}
+
+
+return the total amount of \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classecosystem}{ecosystem} \hypertarget{classecosystem_a5970455f5f04fa5382ebc534c3149185}{
+\index{ecosystem@{ecosystem}!operator=@{operator=}}
+\index{operator=@{operator=}!ecosystem@{ecosystem}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ecosystem}\& ecosystem::operator= (const {\bf ecosystem} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a5970455f5f04fa5382ebc534c3149185}
+
+
+default assignment operator 
+
+Reimplemented from \hyperlink{classbase_abd18e2130f975aacfde1833ad137e3c5}{base}.\hypertarget{classecosystem_a86e66b4cea99a0c47c8fef670d4e4a15}{
+\index{ecosystem@{ecosystem}!outputCropDetails@{outputCropDetails}}
+\index{outputCropDetails@{outputCropDetails}!ecosystem@{ecosystem}}
+\subsubsection[{outputCropDetails}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::outputCropDetails (fstream $\ast$ {\em afile})}}
+\label{classecosystem_a86e66b4cea99a0c47c8fef670d4e4a15}
+\hypertarget{classecosystem_a265f6108d61a5607dd0d46f679126fd1}{
+\index{ecosystem@{ecosystem}!SetFingerFlow@{SetFingerFlow}}
+\index{SetFingerFlow@{SetFingerFlow}!ecosystem@{ecosystem}}
+\subsubsection[{SetFingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::SetFingerFlow (int {\em aFlow})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a265f6108d61a5607dd0d46f679126fd1}
+
+
+\hyperlink{classwater}{water} transport model in the \hyperlink{classsoil}{soil} \hypertarget{classecosystem_af86ff12086792509461b7ada09a1572e}{
+\index{ecosystem@{ecosystem}!SetGrazed@{SetGrazed}}
+\index{SetGrazed@{SetGrazed}!ecosystem@{ecosystem}}
+\subsubsection[{SetGrazed}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::SetGrazed (double {\em grazing\_\-height}, \/  double {\em DMGrazed})}}
+\label{classecosystem_af86ff12086792509461b7ada09a1572e}
+
+
+Sets the \hyperlink{classcrop}{crop} variables that record the material grazed. Sets the \hyperlink{classcrop}{crop} variables that record the material grazed Called by each \hyperlink{classanimal}{animal} that grazes this \hyperlink{classecosystem}{ecosystem} 
+\begin{DoxyParams}{Parameters}
+\item[{\em bite\_\-depth\_\-factor}]depth of biting as a proportion of canopy height \item[{\em DMGrazed}]kilograms of dry \hyperlink{classmatter}{matter} grazed by the \hyperlink{classanimal}{animal} \end{DoxyParams}
+\hypertarget{classecosystem_aee78909c3c7389e4393b13755e2bb6e1}{
+\index{ecosystem@{ecosystem}!SetirrigationWater@{SetirrigationWater}}
+\index{SetirrigationWater@{SetirrigationWater}!ecosystem@{ecosystem}}
+\subsubsection[{SetirrigationWater}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::SetirrigationWater ({\bf water} $\ast$ {\em aWater})}}
+\label{classecosystem_aee78909c3c7389e4393b13755e2bb6e1}
+\hypertarget{classecosystem_a59d0051172bd35dfd8d3189b0cd5d490}{
+\index{ecosystem@{ecosystem}!SetName@{SetName}}
+\index{SetName@{SetName}!ecosystem@{ecosystem}}
+\subsubsection[{SetName}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::SetName (char $\ast$ {\em aName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a59d0051172bd35dfd8d3189b0cd5d490}
+
+
+set the name of the \hyperlink{classecosystem}{ecosystem} \hypertarget{classecosystem_a5b1f3bbeed25c72f36d6e0ef552a9182}{
+\index{ecosystem@{ecosystem}!SetRUEfactor@{SetRUEfactor}}
+\index{SetRUEfactor@{SetRUEfactor}!ecosystem@{ecosystem}}
+\subsubsection[{SetRUEfactor}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::SetRUEfactor (double {\em aVal})}}
+\label{classecosystem_a5b1f3bbeed25c72f36d6e0ef552a9182}
+\hypertarget{classecosystem_aeded9da6bd5084389b3740acf00b871c}{
+\index{ecosystem@{ecosystem}!SimpleGraze@{SimpleGraze}}
+\index{SimpleGraze@{SimpleGraze}!ecosystem@{ecosystem}}
+\subsubsection[{SimpleGraze}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::SimpleGraze ()}}
+\label{classecosystem_aeded9da6bd5084389b3740acf00b871c}
+
+
+simple grazing routine \hypertarget{classecosystem_ac50dd34f13319a8e97c7009b11d19a5d}{
+\index{ecosystem@{ecosystem}!Sow@{Sow}}
+\index{Sow@{Sow}!ecosystem@{ecosystem}}
+\subsubsection[{Sow}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::Sow (char $\ast$ {\em cropID}, \/  double {\em SeedDensDryMatt}, \/  double {\em RelativeDensity}, \/  double {\em NitrogenInSeed})}}
+\label{classecosystem_ac50dd34f13319a8e97c7009b11d19a5d}
+\hypertarget{classecosystem_a423bd890e368dff9c00300691212d79e}{
+\index{ecosystem@{ecosystem}!StandingWater@{StandingWater}}
+\index{StandingWater@{StandingWater}!ecosystem@{ecosystem}}
+\subsubsection[{StandingWater}]{\setlength{\rightskip}{0pt plus 5cm}double ecosystem::StandingWater ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classecosystem_a423bd890e368dff9c00300691212d79e}
+
+
+returns the depth of \hyperlink{classwater}{water} on the surface of the \hyperlink{classsoil}{soil} (in millimetres) \hypertarget{classecosystem_adf56761a03f7ca49ee67b0dfc79d032e}{
+\index{ecosystem@{ecosystem}!StartBudget@{StartBudget}}
+\index{StartBudget@{StartBudget}!ecosystem@{ecosystem}}
+\subsubsection[{StartBudget}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::StartBudget ()}}
+\label{classecosystem_adf56761a03f7ca49ee67b0dfc79d032e}
+
+
+initialised the budgets of those elements or compounds that are being budgeted \hypertarget{classecosystem_a34442a209e38774eead5221826c31a61}{
+\index{ecosystem@{ecosystem}!TerminateCrop@{TerminateCrop}}
+\index{TerminateCrop@{TerminateCrop}!ecosystem@{ecosystem}}
+\subsubsection[{TerminateCrop}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::TerminateCrop ({\bf crop} $\ast$ {\em aCrop})}}
+\label{classecosystem_a34442a209e38774eead5221826c31a61}
+
+
+terminate a \hyperlink{classcrop}{crop} and add its organic \hyperlink{classmatter}{matter} to the \hyperlink{classsoil}{soil} \hypertarget{classecosystem_a4b7c3eb9b9c14b213e9862854dda23ab}{
+\index{ecosystem@{ecosystem}!Tillage@{Tillage}}
+\index{Tillage@{Tillage}!ecosystem@{ecosystem}}
+\subsubsection[{Tillage}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::Tillage ({\bf soilTreatFields} $\ast$ {\em FOP})}}
+\label{classecosystem_a4b7c3eb9b9c14b213e9862854dda23ab}
+\hypertarget{classecosystem_a8355ba8e9658dde9faed9a4e90ac6548}{
+\index{ecosystem@{ecosystem}!TransferRootMatter@{TransferRootMatter}}
+\index{TransferRootMatter@{TransferRootMatter}!ecosystem@{ecosystem}}
+\subsubsection[{TransferRootMatter}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::TransferRootMatter ({\bf decomposable} $\ast$ {\em rootMatter}, \/  double $\ast$ {\em RootLengthList})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a8355ba8e9658dde9faed9a4e90ac6548}
+
+
+adds dead root \hyperlink{classmatter}{matter} to the \hyperlink{classsoil}{soil} pools \hypertarget{classecosystem_a326b1b05494d4637c425a256dd6fed4c}{
+\index{ecosystem@{ecosystem}!UpdateInterception@{UpdateInterception}}
+\index{UpdateInterception@{UpdateInterception}!ecosystem@{ecosystem}}
+\subsubsection[{UpdateInterception}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::UpdateInterception (double $\ast$ {\em surplus}, \/  double {\em temperature}, \/  double {\em globalRadiation}, \/  double $\ast$ {\em ePotGreenLeaves}, \/  double {\em ePotDeadLeaves}, \/  double $\ast$ {\em ePotSoil}, \/  double {\em interceptCapacity}, \/  double $\ast$ {\em greenEvap})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a326b1b05494d4637c425a256dd6fed4c}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em surplus}]-\/ Water to be added to interception layer and resulting drainage from the layer \mbox{[}mm\mbox{]} \item[{\em temperature}]-\/ Mean air temperature \mbox{[}�C\mbox{]} \item[{\em globalRadiation}]-\/ Global solar radiation \mbox{[}MJ/m�\mbox{]} \item[{\em ePotGreenLeaves}]-\/ Potential evapotranspiration from green leaves \mbox{[}mm\mbox{]} \item[{\em ePotDeadLeaves}]-\/ Potential evapotranspiration from dead leaves \mbox{[}mm\mbox{]} \item[{\em ePotSoil}]-\/ Potential evapotranspiration from \hyperlink{classsoil}{soil} \mbox{[}mm\mbox{]} \item[{\em interCeptCapacity}]-\/ Interception capacity \mbox{[}mm\mbox{]} \end{DoxyParams}
+\hypertarget{classecosystem_a0fb0b24e9d254fd625f42b881afbebc7}{
+\index{ecosystem@{ecosystem}!WriteNitrogen@{WriteNitrogen}}
+\index{WriteNitrogen@{WriteNitrogen}!ecosystem@{ecosystem}}
+\subsubsection[{WriteNitrogen}]{\setlength{\rightskip}{0pt plus 5cm}void ecosystem::WriteNitrogen (double {\em f})}}
+\label{classecosystem_a0fb0b24e9d254fd625f42b881afbebc7}
+
+
+writes details of the \hyperlink{classnitrogen}{nitrogen} in the \hyperlink{classecosystem}{ecosystem} to the console. Used only in debugging. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classecosystem_a8324bc15b82ac900c54afceed501d57d}{
+\index{ecosystem@{ecosystem}!area@{area}}
+\index{area@{area}!ecosystem@{ecosystem}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::area}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a8324bc15b82ac900c54afceed501d57d}
+
+
+area of \hyperlink{classecosystem}{ecosystem} (ha) \hypertarget{classecosystem_a875bd0393f05bb6a71e5194459498038}{
+\index{ecosystem@{ecosystem}!aSoil@{aSoil}}
+\index{aSoil@{aSoil}!ecosystem@{ecosystem}}
+\subsubsection[{aSoil}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soil}$\ast$ {\bf ecosystem::aSoil}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a875bd0393f05bb6a71e5194459498038}
+
+
+pointer to the patches \hyperlink{classsoil}{soil} object \hypertarget{classecosystem_ae02968a4af70884e35543b24d2f3b17a}{
+\index{ecosystem@{ecosystem}!autoGraze@{autoGraze}}
+\index{autoGraze@{autoGraze}!ecosystem@{ecosystem}}
+\subsubsection[{autoGraze}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ecosystem::autoGraze}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_ae02968a4af70884e35543b24d2f3b17a}
+\hypertarget{classecosystem_a622df48397a634ab7d4d9df06bf64688}{
+\index{ecosystem@{ecosystem}!balanceDepth@{balanceDepth}}
+\index{balanceDepth@{balanceDepth}!ecosystem@{ecosystem}}
+\subsubsection[{balanceDepth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::balanceDepth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a622df48397a634ab7d4d9df06bf64688}
+
+
+depth below which \hyperlink{classnitrogen}{nitrogen} to use the system (mm) \hypertarget{classecosystem_a5ed20a16967029b1bd8cbd5d03af0223}{
+\index{ecosystem@{ecosystem}!cutPlantProducts@{cutPlantProducts}}
+\index{cutPlantProducts@{cutPlantProducts}!ecosystem@{ecosystem}}
+\subsubsection[{cutPlantProducts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf plantItem}$>$$\ast$ {\bf ecosystem::cutPlantProducts}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a5ed20a16967029b1bd8cbd5d03af0223}
+
+
+list of pointers to the \hyperlink{classcrop}{crop} \hyperlink{classproduct}{product} objects that have yet to be gathered \hypertarget{classecosystem_a27a6796874903c016e6cb3de4ec8a9d2}{
+\index{ecosystem@{ecosystem}!fingerFlow@{fingerFlow}}
+\index{fingerFlow@{fingerFlow}!ecosystem@{ecosystem}}
+\subsubsection[{fingerFlow}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf ecosystem::fingerFlow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a27a6796874903c016e6cb3de4ec8a9d2}
+
+
+0 = no finger flow, 1 = finger flow and \hyperlink{classecosystem}{ecosystem} receives 3/2 \hyperlink{classwater}{water}, 2 = finger flow and \hyperlink{classecosystem}{ecosystem} receives no \hyperlink{classwater}{water} \hypertarget{classecosystem_a57fe8b0f42a7b0aa153ff9a628d2fae2}{
+\index{ecosystem@{ecosystem}!grazingEffiency@{grazingEffiency}}
+\index{grazingEffiency@{grazingEffiency}!ecosystem@{ecosystem}}
+\subsubsection[{grazingEffiency}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::grazingEffiency}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a57fe8b0f42a7b0aa153ff9a628d2fae2}
+
+
+percentage of dry \hyperlink{classmatter}{matter} grazed (may be obsolete) \hypertarget{classecosystem_a887cf0ec7ec752882a3ee9d59d814d72}{
+\index{ecosystem@{ecosystem}!irrigationWater@{irrigationWater}}
+\index{irrigationWater@{irrigationWater}!ecosystem@{ecosystem}}
+\subsubsection[{irrigationWater}]{\setlength{\rightskip}{0pt plus 5cm}{\bf water} {\bf ecosystem::irrigationWater}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a887cf0ec7ec752882a3ee9d59d814d72}
+
+
+amount of irrigation \hyperlink{classwater}{water} \hypertarget{classecosystem_a3e9deac833c64aa8764e5bbcf0e96a99}{
+\index{ecosystem@{ecosystem}!k1@{k1}}
+\index{k1@{k1}!ecosystem@{ecosystem}}
+\subsubsection[{k1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::k1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a3e9deac833c64aa8764e5bbcf0e96a99}
+\hypertarget{classecosystem_a1fe02670ff76be100568aa00aeb123c4}{
+\index{ecosystem@{ecosystem}!leachingDepth@{leachingDepth}}
+\index{leachingDepth@{leachingDepth}!ecosystem@{ecosystem}}
+\subsubsection[{leachingDepth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::leachingDepth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a1fe02670ff76be100568aa00aeb123c4}
+
+
+depth below which it is assumed that nitrate cannot be subsequently recovered by the \hyperlink{classcrop}{crop} (mm) \hypertarget{classecosystem_a80b27b606e2c7ce413e10ea7d783469e}{
+\index{ecosystem@{ecosystem}!nFixThisDay@{nFixThisDay}}
+\index{nFixThisDay@{nFixThisDay}!ecosystem@{ecosystem}}
+\subsubsection[{nFixThisDay}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::nFixThisDay}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a80b27b606e2c7ce413e10ea7d783469e}
+
+
+amount of \hyperlink{classnitrogen}{nitrogen} fixed during the day \hypertarget{classecosystem_a2dd8b085d6e0a7d3308640fa4ab837fb}{
+\index{ecosystem@{ecosystem}!nLoad@{nLoad}}
+\index{nLoad@{nLoad}!ecosystem@{ecosystem}}
+\subsubsection[{nLoad}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::nLoad}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a2dd8b085d6e0a7d3308640fa4ab837fb}
+\hypertarget{classecosystem_a4de898c78ce48f74bd668c5a6fb0cbfe}{
+\index{ecosystem@{ecosystem}!snowContent@{snowContent}}
+\index{snowContent@{snowContent}!ecosystem@{ecosystem}}
+\subsubsection[{snowContent}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::snowContent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a4de898c78ce48f74bd668c5a6fb0cbfe}
+
+
+Snow content in Snow Reservoir (millimetres). \hypertarget{classecosystem_a1ad645dd127e20417f1ad8e97ae75338}{
+\index{ecosystem@{ecosystem}!snowMeltRate1@{snowMeltRate1}}
+\index{snowMeltRate1@{snowMeltRate1}!ecosystem@{ecosystem}}
+\subsubsection[{snowMeltRate1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::snowMeltRate1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a1ad645dd127e20417f1ad8e97ae75338}
+
+
+Melt rate for snow \mbox{[}mm/(�Cd)\mbox{]}. \hypertarget{classecosystem_a5b694778f4af8dc19151098d90640fd8}{
+\index{ecosystem@{ecosystem}!snowMeltRate2@{snowMeltRate2}}
+\index{snowMeltRate2@{snowMeltRate2}!ecosystem@{ecosystem}}
+\subsubsection[{snowMeltRate2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::snowMeltRate2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a5b694778f4af8dc19151098d90640fd8}
+
+
+Melt rate for snow \mbox{[}mm/(MJ/m2)\mbox{]}. \hypertarget{classecosystem_a45ea3a5ece526455d6bc5942c90ac021}{
+\index{ecosystem@{ecosystem}!tempSnowFall1@{tempSnowFall1}}
+\index{tempSnowFall1@{tempSnowFall1}!ecosystem@{ecosystem}}
+\subsubsection[{tempSnowFall1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::tempSnowFall1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a45ea3a5ece526455d6bc5942c90ac021}
+
+
+Base temperature for snowfall \mbox{[}�C\mbox{]}. \hypertarget{classecosystem_aaad4a3984f8adec87aaac91fb8c153a1}{
+\index{ecosystem@{ecosystem}!tempSnowFall2@{tempSnowFall2}}
+\index{tempSnowFall2@{tempSnowFall2}!ecosystem@{ecosystem}}
+\subsubsection[{tempSnowFall2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::tempSnowFall2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_aaad4a3984f8adec87aaac91fb8c153a1}
+
+
+High temperature for snowfall \mbox{[}�C\mbox{]}. \hypertarget{classecosystem_a5b32df2d08cd4a986e3e0773b858dfdf}{
+\index{ecosystem@{ecosystem}!theCrops@{theCrops}}
+\index{theCrops@{theCrops}!ecosystem@{ecosystem}}
+\subsubsection[{theCrops}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf crop}$>$$\ast$ {\bf ecosystem::theCrops}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a5b32df2d08cd4a986e3e0773b858dfdf}
+
+
+list of pointers to the \hyperlink{classcrop}{crop} objects present \hypertarget{classecosystem_adafee4145128b86c471661c5ad889054}{
+\index{ecosystem@{ecosystem}!totalgLAI@{totalgLAI}}
+\index{totalgLAI@{totalgLAI}!ecosystem@{ecosystem}}
+\subsubsection[{totalgLAI}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::totalgLAI}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_adafee4145128b86c471661c5ad889054}
+
+
+total green leaf area index \hypertarget{classecosystem_a4aeb89d26c705346cfdb14914d0b0aaa}{
+\index{ecosystem@{ecosystem}!totalGrazed\_\-DM@{totalGrazed\_\-DM}}
+\index{totalGrazed\_\-DM@{totalGrazed\_\-DM}!ecosystem@{ecosystem}}
+\subsubsection[{totalGrazed\_\-DM}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::totalGrazed\_\-DM}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a4aeb89d26c705346cfdb14914d0b0aaa}
+
+
+total amount of dry \hyperlink{classmatter}{matter} grazed \hypertarget{classecosystem_a77bd4dfe78513840eb8c15a0206880a5}{
+\index{ecosystem@{ecosystem}!totalGrazed\_\-N@{totalGrazed\_\-N}}
+\index{totalGrazed\_\-N@{totalGrazed\_\-N}!ecosystem@{ecosystem}}
+\subsubsection[{totalGrazed\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::totalGrazed\_\-N}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a77bd4dfe78513840eb8c15a0206880a5}
+
+
+total amount \hyperlink{classnitrogen}{nitrogen} grazed \hypertarget{classecosystem_a33c5d59a1b021f453ffad961f46cd0b7}{
+\index{ecosystem@{ecosystem}!type@{type}}
+\index{type@{type}!ecosystem@{ecosystem}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf ecosystem::type}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a33c5d59a1b021f453ffad961f46cd0b7}
+
+
+type of \hyperlink{classecosystem}{ecosystem} (= 0 for no type or urine, = 1 for dung) \hypertarget{classecosystem_a08137c3fd93a93cc284bf3e8ad217222}{
+\index{ecosystem@{ecosystem}!WaterBudget@{WaterBudget}}
+\index{WaterBudget@{WaterBudget}!ecosystem@{ecosystem}}
+\subsubsection[{WaterBudget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf budget} {\bf ecosystem::WaterBudget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a08137c3fd93a93cc284bf3e8ad217222}
+
+
+\hyperlink{classwater}{water} \hyperlink{classbudget}{budget} \hypertarget{classecosystem_a34e09ac34adc98d3c5269845fdd23e4b}{
+\index{ecosystem@{ecosystem}!waterContent@{waterContent}}
+\index{waterContent@{waterContent}!ecosystem@{ecosystem}}
+\subsubsection[{waterContent}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf ecosystem::waterContent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classecosystem_a34e09ac34adc98d3c5269845fdd23e4b}
+
+
+\hyperlink{classwater}{water} content in the interception layer (millimetres) 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/\hyperlink{ecosystem_8h}{ecosystem.h}\item 
+C:/main/trunk/src/fields/\hyperlink{ecosystem_8cpp}{ecosystem.cpp}\end{DoxyCompactItemize}

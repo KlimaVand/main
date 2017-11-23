@@ -1,0 +1,341 @@
+\hypertarget{classclimate}{
+\section{climate Class Reference}
+\label{classclimate}\index{climate@{climate}}
+}
+
+
+{\ttfamily \#include $<$climate.h$>$}Inheritance diagram for climate::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classclimate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classclimate_a36f8f651987de205d69337c77b0b5b4c}{climate} ()
+\item 
+\hyperlink{classclimate_a1aa74cca9a2e637a100ed24830f312b1}{climate} (int aType)
+\item 
+\hyperlink{classclimate_ae0c8369f72a3801988c9cc3798db4503}{climate} (int aType, int aMethod)
+\item 
+\hyperlink{classclimate_ab145ad6b1f8d82e8ab385386e25eb9c2}{$\sim$climate} ()
+\item 
+void \hyperlink{classclimate_a9395948a8e53f92bf3a56074f337c3e2}{SetEpotCalculationMethod} (int aMethod)
+\item 
+double \hyperlink{classclimate_a14e9a0d27f51b514217508b04f53ca04}{GetCO2Concentration} ()
+\item 
+double \hyperlink{classclimate_ab8a4bb39891b9e00f8e9f06645e7b8de}{GetNitrogenInRain} ()
+\item 
+double \hyperlink{classclimate_a2f109ffd62417e7151c7c816291bdbc8}{GetnormRad} (int monthNo)
+\item 
+double \hyperlink{classclimate_acabf247267712ae1a2d35358e3cc03f7}{GetnormTemp} (int monthNo)
+\item 
+void \hyperlink{classclimate_a60376d9b9f2a73043315165121d970d4}{SetClimateDirectory} (char $\ast$aDir)
+\item 
+double \hyperlink{classclimate_a0df68cae9a2272f9b45e6d9006c932b5}{GetLattitude} ()
+\item 
+void \hyperlink{classclimate_af5d7b934fee70b30e504080310c4989e}{InitClimate} (char $\ast$filename, int filetype, int firstobs)
+\item 
+void \hyperlink{classclimate_a29094eda7fd66a0aa17883633df94cce}{InitClimate} (char $\ast$aDirectory, char $\ast$filename)
+\item 
+void \hyperlink{classclimate_ab8380f4e16a95955cb1707899166e65d}{Update} ()
+\item 
+void \hyperlink{classclimate_ab7d0b27317c6e374e52c945da88ef74a}{GetClimate} (int year, int month, int day, double \&temp, double \&min\_\-temp, double \&max\_\-temp, double \&\hyperlink{classclimate_ac1c70fe3427c4e4aa014997eccc069e3}{precip}, double \&radiation, double \&EPot, double \&windspeed, double \&relHumidity, int \&found)
+\item 
+double \hyperlink{classclimate_adf16cf971faa070a3a1f52cca3f25686}{Evaporation} (double radiation, double temp, double \hyperlink{classclimate_a06eef65b4caa3f2fd845f5f0e28420d8}{humidity}, double transferCoefficient)
+\item 
+double \hyperlink{classclimate_a4efc44cd76e875cd44151c54814a3dff}{Evaporation} (double temp, double \hyperlink{classclimate_a06eef65b4caa3f2fd845f5f0e28420d8}{humidity}, double transferCoefficient)
+\item 
+bool \hyperlink{classclimate_ac56dc5d8331fa48207444eb12bf8cfef}{FindClimate} (int year, int month, int day)
+\item 
+void \hyperlink{classclimate_a6b1e57f9fef9480cbd10b8f90a53828b}{GetClimate} (double \&temp, double \&min\_\-temp, double \&max\_\-temp, double \&prec, double \&radiation, double \&EPot, double \&windspeed, double \&relHumidity)
+\item 
+double \hyperlink{classclimate_a11e09f183aa8f5cd0514972bab9b4a22}{GetMeanTemperature} ()
+\item 
+double \hyperlink{classclimate_a8c93caa7c165cb2956fccdb29056ebda}{DayAngle} ()
+\item 
+double \hyperlink{classclimate_a063a1aa7e8e9cdc58c781e67d012c2d3}{SunDeclination} ()
+\item 
+double \hyperlink{classclimate_a2a5a0fd4f393d95c69ecf170d06513fb}{PhotoPeriod} ()
+\item 
+double \hyperlink{classclimate_a7aca9683881d45a8bd1111da605adaca}{GetNextSoilTemperature} ()
+\item 
+double \hyperlink{classclimate_aaa69759553b20e8a2e81d3c9eeabaf53}{GetdegreeDays} ()
+\item 
+void \hyperlink{classclimate_acd7a190f36febe69da0a91de788c304e}{ResetdegreeDays} ()
+\item 
+void \hyperlink{classclimate_ae42dad7e08de795d5acdd7a9ebea4996}{SetdegreeDays} (double aValue)
+\item 
+void \hyperlink{classclimate_a6216fa871a7b4d608ad6587301afc876}{Update} (\hyperlink{classbs_time}{bsTime} $\ast$aTime)
+\item 
+void \hyperlink{classclimate_a959c6049cbb0c3d517966ef11f0cf0bc}{CalcAverageClimate} ()
+\item 
+void \hyperlink{classclimate_a315fd3212ace7b479f8abf1b983306df}{CalcAverageClimateForPeriod} (\hyperlink{classbs_time}{bsTime} $\ast$startDate, int numOfDays, double $\ast$aveTemperature, double $\ast$aveWindspeed)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classclimate_a2ea6785177ec472ee70009382089f396}{tmin}
+\item 
+double \hyperlink{classclimate_a652fda0b5a1fb00e2eb576aebea2eeda}{tmax}
+\item 
+double \hyperlink{classclimate_a679acf82733860fad71dac0769ae16be}{tmean}
+\item 
+double \hyperlink{classclimate_a06eef65b4caa3f2fd845f5f0e28420d8}{humidity}
+\item 
+double \hyperlink{classclimate_a2539daeb81ead0aa228f96cb5702e5c7}{rad}
+\item 
+double \hyperlink{classclimate_ac1c70fe3427c4e4aa014997eccc069e3}{precip}
+\item 
+double \hyperlink{classclimate_a0fdb19390d0caddd676c737e5f72eaea}{windVelocity}
+\item 
+double \hyperlink{classclimate_a351a558d1f1df4dda77edf981a436c07}{epot}
+\item 
+double \hyperlink{classclimate_a6d40dd2d63e74f09b8faa398ce4a4123}{YearlyAverage}
+\item 
+double \hyperlink{classclimate_a65129fa9985c1632cabdfbe0acb7f3b3}{co2}
+\item 
+double \hyperlink{classclimate_a2f19a73386166431b453c98dc49605d8}{CO2Concentration}
+\item 
+double \hyperlink{classclimate_ac25ae8ee995005172b66a7176fe536b0}{NitrogenInRain}
+\item 
+double \hyperlink{classclimate_adfc5281b9c32f6aabffc6636998ada60}{degreeDays}
+\item 
+double \hyperlink{classclimate_a60a6dc47a31d34a212865825bed24352}{latitude}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classclimate_a36f8f651987de205d69337c77b0b5b4c}{
+\index{climate@{climate}!climate@{climate}}
+\index{climate@{climate}!climate@{climate}}
+\subsubsection[{climate}]{\setlength{\rightskip}{0pt plus 5cm}climate::climate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a36f8f651987de205d69337c77b0b5b4c}
+\hypertarget{classclimate_a1aa74cca9a2e637a100ed24830f312b1}{
+\index{climate@{climate}!climate@{climate}}
+\index{climate@{climate}!climate@{climate}}
+\subsubsection[{climate}]{\setlength{\rightskip}{0pt plus 5cm}climate::climate (int {\em aType})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a1aa74cca9a2e637a100ed24830f312b1}
+\hypertarget{classclimate_ae0c8369f72a3801988c9cc3798db4503}{
+\index{climate@{climate}!climate@{climate}}
+\index{climate@{climate}!climate@{climate}}
+\subsubsection[{climate}]{\setlength{\rightskip}{0pt plus 5cm}climate::climate (int {\em aType}, \/  int {\em aMethod})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_ae0c8369f72a3801988c9cc3798db4503}
+\hypertarget{classclimate_ab145ad6b1f8d82e8ab385386e25eb9c2}{
+\index{climate@{climate}!$\sim$climate@{$\sim$climate}}
+\index{$\sim$climate@{$\sim$climate}!climate@{climate}}
+\subsubsection[{$\sim$climate}]{\setlength{\rightskip}{0pt plus 5cm}climate::$\sim$climate ()}}
+\label{classclimate_ab145ad6b1f8d82e8ab385386e25eb9c2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classclimate_a959c6049cbb0c3d517966ef11f0cf0bc}{
+\index{climate@{climate}!CalcAverageClimate@{CalcAverageClimate}}
+\index{CalcAverageClimate@{CalcAverageClimate}!climate@{climate}}
+\subsubsection[{CalcAverageClimate}]{\setlength{\rightskip}{0pt plus 5cm}void climate::CalcAverageClimate ()}}
+\label{classclimate_a959c6049cbb0c3d517966ef11f0cf0bc}
+\hypertarget{classclimate_a315fd3212ace7b479f8abf1b983306df}{
+\index{climate@{climate}!CalcAverageClimateForPeriod@{CalcAverageClimateForPeriod}}
+\index{CalcAverageClimateForPeriod@{CalcAverageClimateForPeriod}!climate@{climate}}
+\subsubsection[{CalcAverageClimateForPeriod}]{\setlength{\rightskip}{0pt plus 5cm}void climate::CalcAverageClimateForPeriod ({\bf bsTime} $\ast$ {\em startDate}, \/  int {\em numOfDays}, \/  double $\ast$ {\em aveTemperature}, \/  double $\ast$ {\em aveWindspeed})}}
+\label{classclimate_a315fd3212ace7b479f8abf1b983306df}
+\hypertarget{classclimate_a8c93caa7c165cb2956fccdb29056ebda}{
+\index{climate@{climate}!DayAngle@{DayAngle}}
+\index{DayAngle@{DayAngle}!climate@{climate}}
+\subsubsection[{DayAngle}]{\setlength{\rightskip}{0pt plus 5cm}double climate::DayAngle ()}}
+\label{classclimate_a8c93caa7c165cb2956fccdb29056ebda}
+\hypertarget{classclimate_a4efc44cd76e875cd44151c54814a3dff}{
+\index{climate@{climate}!Evaporation@{Evaporation}}
+\index{Evaporation@{Evaporation}!climate@{climate}}
+\subsubsection[{Evaporation}]{\setlength{\rightskip}{0pt plus 5cm}double climate::Evaporation (double {\em temp}, \/  double {\em humidity}, \/  double {\em transferCoefficient})}}
+\label{classclimate_a4efc44cd76e875cd44151c54814a3dff}
+\hypertarget{classclimate_adf16cf971faa070a3a1f52cca3f25686}{
+\index{climate@{climate}!Evaporation@{Evaporation}}
+\index{Evaporation@{Evaporation}!climate@{climate}}
+\subsubsection[{Evaporation}]{\setlength{\rightskip}{0pt plus 5cm}double climate::Evaporation (double {\em radiation}, \/  double {\em temp}, \/  double {\em humidity}, \/  double {\em transferCoefficient})}}
+\label{classclimate_adf16cf971faa070a3a1f52cca3f25686}
+\hypertarget{classclimate_ac56dc5d8331fa48207444eb12bf8cfef}{
+\index{climate@{climate}!FindClimate@{FindClimate}}
+\index{FindClimate@{FindClimate}!climate@{climate}}
+\subsubsection[{FindClimate}]{\setlength{\rightskip}{0pt plus 5cm}bool climate::FindClimate (int {\em year}, \/  int {\em month}, \/  int {\em day})}}
+\label{classclimate_ac56dc5d8331fa48207444eb12bf8cfef}
+\hypertarget{classclimate_a6b1e57f9fef9480cbd10b8f90a53828b}{
+\index{climate@{climate}!GetClimate@{GetClimate}}
+\index{GetClimate@{GetClimate}!climate@{climate}}
+\subsubsection[{GetClimate}]{\setlength{\rightskip}{0pt plus 5cm}void climate::GetClimate (double \& {\em temp}, \/  double \& {\em min\_\-temp}, \/  double \& {\em max\_\-temp}, \/  double \& {\em prec}, \/  double \& {\em radiation}, \/  double \& {\em EPot}, \/  double \& {\em windspeed}, \/  double \& {\em relHumidity})}}
+\label{classclimate_a6b1e57f9fef9480cbd10b8f90a53828b}
+\hypertarget{classclimate_ab7d0b27317c6e374e52c945da88ef74a}{
+\index{climate@{climate}!GetClimate@{GetClimate}}
+\index{GetClimate@{GetClimate}!climate@{climate}}
+\subsubsection[{GetClimate}]{\setlength{\rightskip}{0pt plus 5cm}void climate::GetClimate (int {\em year}, \/  int {\em month}, \/  int {\em day}, \/  double \& {\em temp}, \/  double \& {\em min\_\-temp}, \/  double \& {\em max\_\-temp}, \/  double \& {\em precip}, \/  double \& {\em radiation}, \/  double \& {\em EPot}, \/  double \& {\em windspeed}, \/  double \& {\em relHumidity}, \/  int \& {\em found})}}
+\label{classclimate_ab7d0b27317c6e374e52c945da88ef74a}
+\hypertarget{classclimate_a14e9a0d27f51b514217508b04f53ca04}{
+\index{climate@{climate}!GetCO2Concentration@{GetCO2Concentration}}
+\index{GetCO2Concentration@{GetCO2Concentration}!climate@{climate}}
+\subsubsection[{GetCO2Concentration}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetCO2Concentration ()}}
+\label{classclimate_a14e9a0d27f51b514217508b04f53ca04}
+\hypertarget{classclimate_aaa69759553b20e8a2e81d3c9eeabaf53}{
+\index{climate@{climate}!GetdegreeDays@{GetdegreeDays}}
+\index{GetdegreeDays@{GetdegreeDays}!climate@{climate}}
+\subsubsection[{GetdegreeDays}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetdegreeDays ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_aaa69759553b20e8a2e81d3c9eeabaf53}
+\hypertarget{classclimate_a0df68cae9a2272f9b45e6d9006c932b5}{
+\index{climate@{climate}!GetLattitude@{GetLattitude}}
+\index{GetLattitude@{GetLattitude}!climate@{climate}}
+\subsubsection[{GetLattitude}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetLattitude ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a0df68cae9a2272f9b45e6d9006c932b5}
+\hypertarget{classclimate_a11e09f183aa8f5cd0514972bab9b4a22}{
+\index{climate@{climate}!GetMeanTemperature@{GetMeanTemperature}}
+\index{GetMeanTemperature@{GetMeanTemperature}!climate@{climate}}
+\subsubsection[{GetMeanTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetMeanTemperature ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a11e09f183aa8f5cd0514972bab9b4a22}
+\hypertarget{classclimate_a7aca9683881d45a8bd1111da605adaca}{
+\index{climate@{climate}!GetNextSoilTemperature@{GetNextSoilTemperature}}
+\index{GetNextSoilTemperature@{GetNextSoilTemperature}!climate@{climate}}
+\subsubsection[{GetNextSoilTemperature}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetNextSoilTemperature ()}}
+\label{classclimate_a7aca9683881d45a8bd1111da605adaca}
+\hypertarget{classclimate_ab8a4bb39891b9e00f8e9f06645e7b8de}{
+\index{climate@{climate}!GetNitrogenInRain@{GetNitrogenInRain}}
+\index{GetNitrogenInRain@{GetNitrogenInRain}!climate@{climate}}
+\subsubsection[{GetNitrogenInRain}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetNitrogenInRain ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_ab8a4bb39891b9e00f8e9f06645e7b8de}
+\hypertarget{classclimate_a2f109ffd62417e7151c7c816291bdbc8}{
+\index{climate@{climate}!GetnormRad@{GetnormRad}}
+\index{GetnormRad@{GetnormRad}!climate@{climate}}
+\subsubsection[{GetnormRad}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetnormRad (int {\em monthNo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a2f109ffd62417e7151c7c816291bdbc8}
+\hypertarget{classclimate_acabf247267712ae1a2d35358e3cc03f7}{
+\index{climate@{climate}!GetnormTemp@{GetnormTemp}}
+\index{GetnormTemp@{GetnormTemp}!climate@{climate}}
+\subsubsection[{GetnormTemp}]{\setlength{\rightskip}{0pt plus 5cm}double climate::GetnormTemp (int {\em monthNo})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_acabf247267712ae1a2d35358e3cc03f7}
+\hypertarget{classclimate_a29094eda7fd66a0aa17883633df94cce}{
+\index{climate@{climate}!InitClimate@{InitClimate}}
+\index{InitClimate@{InitClimate}!climate@{climate}}
+\subsubsection[{InitClimate}]{\setlength{\rightskip}{0pt plus 5cm}void climate::InitClimate (char $\ast$ {\em aDirectory}, \/  char $\ast$ {\em filename})}}
+\label{classclimate_a29094eda7fd66a0aa17883633df94cce}
+\hypertarget{classclimate_af5d7b934fee70b30e504080310c4989e}{
+\index{climate@{climate}!InitClimate@{InitClimate}}
+\index{InitClimate@{InitClimate}!climate@{climate}}
+\subsubsection[{InitClimate}]{\setlength{\rightskip}{0pt plus 5cm}void climate::InitClimate (char $\ast$ {\em filename}, \/  int {\em filetype}, \/  int {\em firstobs})}}
+\label{classclimate_af5d7b934fee70b30e504080310c4989e}
+\hypertarget{classclimate_a2a5a0fd4f393d95c69ecf170d06513fb}{
+\index{climate@{climate}!PhotoPeriod@{PhotoPeriod}}
+\index{PhotoPeriod@{PhotoPeriod}!climate@{climate}}
+\subsubsection[{PhotoPeriod}]{\setlength{\rightskip}{0pt plus 5cm}double climate::PhotoPeriod ()}}
+\label{classclimate_a2a5a0fd4f393d95c69ecf170d06513fb}
+\hypertarget{classclimate_acd7a190f36febe69da0a91de788c304e}{
+\index{climate@{climate}!ResetdegreeDays@{ResetdegreeDays}}
+\index{ResetdegreeDays@{ResetdegreeDays}!climate@{climate}}
+\subsubsection[{ResetdegreeDays}]{\setlength{\rightskip}{0pt plus 5cm}void climate::ResetdegreeDays ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_acd7a190f36febe69da0a91de788c304e}
+\hypertarget{classclimate_a60376d9b9f2a73043315165121d970d4}{
+\index{climate@{climate}!SetClimateDirectory@{SetClimateDirectory}}
+\index{SetClimateDirectory@{SetClimateDirectory}!climate@{climate}}
+\subsubsection[{SetClimateDirectory}]{\setlength{\rightskip}{0pt plus 5cm}void climate::SetClimateDirectory (char $\ast$ {\em aDir})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a60376d9b9f2a73043315165121d970d4}
+\hypertarget{classclimate_ae42dad7e08de795d5acdd7a9ebea4996}{
+\index{climate@{climate}!SetdegreeDays@{SetdegreeDays}}
+\index{SetdegreeDays@{SetdegreeDays}!climate@{climate}}
+\subsubsection[{SetdegreeDays}]{\setlength{\rightskip}{0pt plus 5cm}void climate::SetdegreeDays (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_ae42dad7e08de795d5acdd7a9ebea4996}
+\hypertarget{classclimate_a9395948a8e53f92bf3a56074f337c3e2}{
+\index{climate@{climate}!SetEpotCalculationMethod@{SetEpotCalculationMethod}}
+\index{SetEpotCalculationMethod@{SetEpotCalculationMethod}!climate@{climate}}
+\subsubsection[{SetEpotCalculationMethod}]{\setlength{\rightskip}{0pt plus 5cm}void climate::SetEpotCalculationMethod (int {\em aMethod})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classclimate_a9395948a8e53f92bf3a56074f337c3e2}
+\hypertarget{classclimate_a063a1aa7e8e9cdc58c781e67d012c2d3}{
+\index{climate@{climate}!SunDeclination@{SunDeclination}}
+\index{SunDeclination@{SunDeclination}!climate@{climate}}
+\subsubsection[{SunDeclination}]{\setlength{\rightskip}{0pt plus 5cm}double climate::SunDeclination ()}}
+\label{classclimate_a063a1aa7e8e9cdc58c781e67d012c2d3}
+\hypertarget{classclimate_a6216fa871a7b4d608ad6587301afc876}{
+\index{climate@{climate}!Update@{Update}}
+\index{Update@{Update}!climate@{climate}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void climate::Update ({\bf bsTime} $\ast$ {\em aTime})}}
+\label{classclimate_a6216fa871a7b4d608ad6587301afc876}
+\hypertarget{classclimate_ab8380f4e16a95955cb1707899166e65d}{
+\index{climate@{climate}!Update@{Update}}
+\index{Update@{Update}!climate@{climate}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void climate::Update ()}}
+\label{classclimate_ab8380f4e16a95955cb1707899166e65d}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classclimate_a65129fa9985c1632cabdfbe0acb7f3b3}{
+\index{climate@{climate}!co2@{co2}}
+\index{co2@{co2}!climate@{climate}}
+\subsubsection[{co2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::co2}}}
+\label{classclimate_a65129fa9985c1632cabdfbe0acb7f3b3}
+\hypertarget{classclimate_a2f19a73386166431b453c98dc49605d8}{
+\index{climate@{climate}!CO2Concentration@{CO2Concentration}}
+\index{CO2Concentration@{CO2Concentration}!climate@{climate}}
+\subsubsection[{CO2Concentration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::CO2Concentration}}}
+\label{classclimate_a2f19a73386166431b453c98dc49605d8}
+\hypertarget{classclimate_adfc5281b9c32f6aabffc6636998ada60}{
+\index{climate@{climate}!degreeDays@{degreeDays}}
+\index{degreeDays@{degreeDays}!climate@{climate}}
+\subsubsection[{degreeDays}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::degreeDays}}}
+\label{classclimate_adfc5281b9c32f6aabffc6636998ada60}
+\hypertarget{classclimate_a351a558d1f1df4dda77edf981a436c07}{
+\index{climate@{climate}!epot@{epot}}
+\index{epot@{epot}!climate@{climate}}
+\subsubsection[{epot}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::epot}}}
+\label{classclimate_a351a558d1f1df4dda77edf981a436c07}
+\hypertarget{classclimate_a06eef65b4caa3f2fd845f5f0e28420d8}{
+\index{climate@{climate}!humidity@{humidity}}
+\index{humidity@{humidity}!climate@{climate}}
+\subsubsection[{humidity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::humidity}}}
+\label{classclimate_a06eef65b4caa3f2fd845f5f0e28420d8}
+\hypertarget{classclimate_a60a6dc47a31d34a212865825bed24352}{
+\index{climate@{climate}!latitude@{latitude}}
+\index{latitude@{latitude}!climate@{climate}}
+\subsubsection[{latitude}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::latitude}}}
+\label{classclimate_a60a6dc47a31d34a212865825bed24352}
+\hypertarget{classclimate_ac25ae8ee995005172b66a7176fe536b0}{
+\index{climate@{climate}!NitrogenInRain@{NitrogenInRain}}
+\index{NitrogenInRain@{NitrogenInRain}!climate@{climate}}
+\subsubsection[{NitrogenInRain}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::NitrogenInRain}}}
+\label{classclimate_ac25ae8ee995005172b66a7176fe536b0}
+\hypertarget{classclimate_ac1c70fe3427c4e4aa014997eccc069e3}{
+\index{climate@{climate}!precip@{precip}}
+\index{precip@{precip}!climate@{climate}}
+\subsubsection[{precip}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::precip}}}
+\label{classclimate_ac1c70fe3427c4e4aa014997eccc069e3}
+\hypertarget{classclimate_a2539daeb81ead0aa228f96cb5702e5c7}{
+\index{climate@{climate}!rad@{rad}}
+\index{rad@{rad}!climate@{climate}}
+\subsubsection[{rad}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::rad}}}
+\label{classclimate_a2539daeb81ead0aa228f96cb5702e5c7}
+\hypertarget{classclimate_a652fda0b5a1fb00e2eb576aebea2eeda}{
+\index{climate@{climate}!tmax@{tmax}}
+\index{tmax@{tmax}!climate@{climate}}
+\subsubsection[{tmax}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::tmax}}}
+\label{classclimate_a652fda0b5a1fb00e2eb576aebea2eeda}
+\hypertarget{classclimate_a679acf82733860fad71dac0769ae16be}{
+\index{climate@{climate}!tmean@{tmean}}
+\index{tmean@{tmean}!climate@{climate}}
+\subsubsection[{tmean}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::tmean}}}
+\label{classclimate_a679acf82733860fad71dac0769ae16be}
+\hypertarget{classclimate_a2ea6785177ec472ee70009382089f396}{
+\index{climate@{climate}!tmin@{tmin}}
+\index{tmin@{tmin}!climate@{climate}}
+\subsubsection[{tmin}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::tmin}}}
+\label{classclimate_a2ea6785177ec472ee70009382089f396}
+\hypertarget{classclimate_a0fdb19390d0caddd676c737e5f72eaea}{
+\index{climate@{climate}!windVelocity@{windVelocity}}
+\index{windVelocity@{windVelocity}!climate@{climate}}
+\subsubsection[{windVelocity}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::windVelocity}}}
+\label{classclimate_a0fdb19390d0caddd676c737e5f72eaea}
+\hypertarget{classclimate_a6d40dd2d63e74f09b8faa398ce4a4123}{
+\index{climate@{climate}!YearlyAverage@{YearlyAverage}}
+\index{YearlyAverage@{YearlyAverage}!climate@{climate}}
+\subsubsection[{YearlyAverage}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf climate::YearlyAverage}}}
+\label{classclimate_a6d40dd2d63e74f09b8faa398ce4a4123}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{climate_8h}{climate.h}\item 
+C:/main/trunk/src/base/\hyperlink{climate_8cpp}{climate.cpp}\end{DoxyCompactItemize}

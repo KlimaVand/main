@@ -1,0 +1,118 @@
+\hypertarget{classtechnics}{
+\section{technics Class Reference}
+\label{classtechnics}\index{technics@{technics}}
+}
+
+
+{\ttfamily \#include $<$technics.h$>$}Inheritance diagram for technics::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classtechnics}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtechnics_a47b746b0d44d885fe95cadf0f4e7c0a1}{technics} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classtechnics_a82e253113692a5bec7627f9b20f4b943}{$\sim$technics} ()
+\item 
+\hyperlink{classperiods}{periods} $\ast$ \hyperlink{classtechnics_a9c1e0dbe77fc4d0b0e5574a3a4bcc036}{GetTechnicsPeriods} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$ \hyperlink{classtechnics_ad2b4807ba763ac388ab4d6c234924824}{GetFarmList} ()
+\item 
+void \hyperlink{classtechnics_ac3119cfc01ae6232db8bbd5b0d0b3167}{Initialize} (string opFileName, string techFileNameFarm)
+\item 
+void \hyperlink{classtechnics_a2eb11f92d4788a35a493d238b1c2dab5}{CalcLP} ()
+\item 
+double \hyperlink{classtechnics_a3df73c58483ecfca1efdccc7e296bc20}{CalcLPFields} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$aFieldOpList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, \hyperlink{classperiod}{period} $\ast$per)
+\item 
+void \hyperlink{classtechnics_ae0675e9047b1367a29954b723afb2494}{ExecuteFields} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$aFieldOp)
+\item 
+void \hyperlink{classtechnics_a881455e5f5a830ccc89f53df17f6fc78}{ExecuteAnimals} ()
+\item 
+void \hyperlink{classtechnics_a14c35cb20c7f722efbc95b314f63ad19}{Reset} ()
+\item 
+void \hyperlink{classtechnics_ab3e5249c76b64203b756a9f561a9d4e4}{YearlyCalc} ()
+\item 
+void \hyperlink{classtechnics_a6ea8c7844295bb257bfefdea2d9987de}{UpdateFieldLabour} (double hours)
+\item 
+\hyperlink{classoperation}{operation} $\ast$ \hyperlink{classtechnics_a5d57f2ddaeab8b58d29541bf99918434}{GetFieldTechnique} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$aFieldOp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtechnics_a47b746b0d44d885fe95cadf0f4e7c0a1}{
+\index{technics@{technics}!technics@{technics}}
+\index{technics@{technics}!technics@{technics}}
+\subsubsection[{technics}]{\setlength{\rightskip}{0pt plus 5cm}technics::technics (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classtechnics_a47b746b0d44d885fe95cadf0f4e7c0a1}
+\hypertarget{classtechnics_a82e253113692a5bec7627f9b20f4b943}{
+\index{technics@{technics}!$\sim$technics@{$\sim$technics}}
+\index{$\sim$technics@{$\sim$technics}!technics@{technics}}
+\subsubsection[{$\sim$technics}]{\setlength{\rightskip}{0pt plus 5cm}technics::$\sim$technics ()}}
+\label{classtechnics_a82e253113692a5bec7627f9b20f4b943}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtechnics_a2eb11f92d4788a35a493d238b1c2dab5}{
+\index{technics@{technics}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!technics@{technics}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void technics::CalcLP ()}}
+\label{classtechnics_a2eb11f92d4788a35a493d238b1c2dab5}
+\hypertarget{classtechnics_a3df73c58483ecfca1efdccc7e296bc20}{
+\index{technics@{technics}!CalcLPFields@{CalcLPFields}}
+\index{CalcLPFields@{CalcLPFields}!technics@{technics}}
+\subsubsection[{CalcLPFields}]{\setlength{\rightskip}{0pt plus 5cm}double technics::CalcLPFields ({\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ {\em aFieldOpList}, \/  {\bf calcLPType} {\em mode}, \/  {\bf period} $\ast$ {\em per})}}
+\label{classtechnics_a3df73c58483ecfca1efdccc7e296bc20}
+\hypertarget{classtechnics_a881455e5f5a830ccc89f53df17f6fc78}{
+\index{technics@{technics}!ExecuteAnimals@{ExecuteAnimals}}
+\index{ExecuteAnimals@{ExecuteAnimals}!technics@{technics}}
+\subsubsection[{ExecuteAnimals}]{\setlength{\rightskip}{0pt plus 5cm}void technics::ExecuteAnimals ()}}
+\label{classtechnics_a881455e5f5a830ccc89f53df17f6fc78}
+\hypertarget{classtechnics_ae0675e9047b1367a29954b723afb2494}{
+\index{technics@{technics}!ExecuteFields@{ExecuteFields}}
+\index{ExecuteFields@{ExecuteFields}!technics@{technics}}
+\subsubsection[{ExecuteFields}]{\setlength{\rightskip}{0pt plus 5cm}void technics::ExecuteFields ({\bf fieldOperationFields} $\ast$ {\em aFieldOp})}}
+\label{classtechnics_ae0675e9047b1367a29954b723afb2494}
+\hypertarget{classtechnics_ad2b4807ba763ac388ab4d6c234924824}{
+\index{technics@{technics}!GetFarmList@{GetFarmList}}
+\index{GetFarmList@{GetFarmList}!technics@{technics}}
+\subsubsection[{GetFarmList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf techEquip}$>$$\ast$ technics::GetFarmList ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtechnics_ad2b4807ba763ac388ab4d6c234924824}
+\hypertarget{classtechnics_a5d57f2ddaeab8b58d29541bf99918434}{
+\index{technics@{technics}!GetFieldTechnique@{GetFieldTechnique}}
+\index{GetFieldTechnique@{GetFieldTechnique}!technics@{technics}}
+\subsubsection[{GetFieldTechnique}]{\setlength{\rightskip}{0pt plus 5cm}{\bf operation} $\ast$ technics::GetFieldTechnique ({\bf fieldOperationFields} $\ast$ {\em aFieldOp})}}
+\label{classtechnics_a5d57f2ddaeab8b58d29541bf99918434}
+\hypertarget{classtechnics_a9c1e0dbe77fc4d0b0e5574a3a4bcc036}{
+\index{technics@{technics}!GetTechnicsPeriods@{GetTechnicsPeriods}}
+\index{GetTechnicsPeriods@{GetTechnicsPeriods}!technics@{technics}}
+\subsubsection[{GetTechnicsPeriods}]{\setlength{\rightskip}{0pt plus 5cm}{\bf periods}$\ast$ technics::GetTechnicsPeriods ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtechnics_a9c1e0dbe77fc4d0b0e5574a3a4bcc036}
+\hypertarget{classtechnics_ac3119cfc01ae6232db8bbd5b0d0b3167}{
+\index{technics@{technics}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!technics@{technics}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void technics::Initialize (string {\em opFileName}, \/  string {\em techFileNameFarm})}}
+\label{classtechnics_ac3119cfc01ae6232db8bbd5b0d0b3167}
+\hypertarget{classtechnics_a14c35cb20c7f722efbc95b314f63ad19}{
+\index{technics@{technics}!Reset@{Reset}}
+\index{Reset@{Reset}!technics@{technics}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void technics::Reset ()}}
+\label{classtechnics_a14c35cb20c7f722efbc95b314f63ad19}
+\hypertarget{classtechnics_a6ea8c7844295bb257bfefdea2d9987de}{
+\index{technics@{technics}!UpdateFieldLabour@{UpdateFieldLabour}}
+\index{UpdateFieldLabour@{UpdateFieldLabour}!technics@{technics}}
+\subsubsection[{UpdateFieldLabour}]{\setlength{\rightskip}{0pt plus 5cm}void technics::UpdateFieldLabour (double {\em hours})}}
+\label{classtechnics_a6ea8c7844295bb257bfefdea2d9987de}
+\hypertarget{classtechnics_ab3e5249c76b64203b756a9f561a9d4e4}{
+\index{technics@{technics}!YearlyCalc@{YearlyCalc}}
+\index{YearlyCalc@{YearlyCalc}!technics@{technics}}
+\subsubsection[{YearlyCalc}]{\setlength{\rightskip}{0pt plus 5cm}void technics::YearlyCalc ()}}
+\label{classtechnics_ab3e5249c76b64203b756a9f561a9d4e4}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/technics/\hyperlink{technics_8h}{technics.h}\item 
+C:/main/trunk/src/technics/\hyperlink{technics_8cpp}{technics.cpp}\end{DoxyCompactItemize}

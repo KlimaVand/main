@@ -1,0 +1,119 @@
+\hypertarget{classperiod}{
+\section{period Class Reference}
+\label{classperiod}\index{period@{period}}
+}
+
+
+{\ttfamily \#include $<$period.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classperiod_a8dba558cbe5839a6cafaa56190a181b2}{period} (char $\ast$aName, int firstMonth, int firstDay, int lastMonth, int lastDay)
+\item 
+\hyperlink{classperiod_ae724d1884ef14f0c62c3ca070216dcf8}{period} (int firstMonth, int firstDay, int lastMonth, int lastDay)
+\item 
+\hyperlink{classperiod_ad8c2607a3f178c1fbe14c85a77adf936}{$\sim$period} ()
+\item 
+\hyperlink{classperiod}{period} \& \hyperlink{classperiod_a977b1a065d2fac945da835e2baa1ce88}{operator=} (const \hyperlink{classperiod}{period} \&p)
+\item 
+\hyperlink{classperiod_a83a82ed64e5c82168451e978fc253556}{period} (const \hyperlink{classperiod}{period} \&p)
+\item 
+int \hyperlink{classperiod_a1036b3c6da47c233381926627e8b2e4e}{IsDateInPeriod} (int month, int day) const 
+\item 
+const char $\ast$ \hyperlink{classperiod_a8136239b5db53fc0321d3d7a52c015ac}{GetName} ()
+\item 
+int \hyperlink{classperiod_a82ce05d97cf5ba02cb6045cd746d502f}{GetFirstMonth} ()
+\item 
+int \hyperlink{classperiod_ab37ca75242f6032b529e8e1d6ccfa2ef}{GetFirstDay} ()
+\item 
+int \hyperlink{classperiod_a44a437719b012f10621691d2249068a1}{GetLastMonth} ()
+\item 
+int \hyperlink{classperiod_a9df06cfc009724e0d2ca926b8d161062}{GetLastDay} ()
+\item 
+int \hyperlink{classperiod_a1bb8fa04824fbe9309a2debd265c7b90}{GetLength} ()
+\item 
+int \hyperlink{classperiod_adfabc7cac131ab21bd24e488a2813ee8}{FullyContained} (const \hyperlink{classperiod}{period} \&per)
+\item 
+int \hyperlink{classperiod_a8cf7f0182e0718ee31c366981beda3c6}{Overlap} (const \hyperlink{classperiod}{period} \&per)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classperiod_a8dba558cbe5839a6cafaa56190a181b2}{
+\index{period@{period}!period@{period}}
+\index{period@{period}!period@{period}}
+\subsubsection[{period}]{\setlength{\rightskip}{0pt plus 5cm}period::period (char $\ast$ {\em aName}, \/  int {\em firstMonth}, \/  int {\em firstDay}, \/  int {\em lastMonth}, \/  int {\em lastDay})}}
+\label{classperiod_a8dba558cbe5839a6cafaa56190a181b2}
+\hypertarget{classperiod_ae724d1884ef14f0c62c3ca070216dcf8}{
+\index{period@{period}!period@{period}}
+\index{period@{period}!period@{period}}
+\subsubsection[{period}]{\setlength{\rightskip}{0pt plus 5cm}period::period (int {\em firstMonth}, \/  int {\em firstDay}, \/  int {\em lastMonth}, \/  int {\em lastDay})}}
+\label{classperiod_ae724d1884ef14f0c62c3ca070216dcf8}
+\hypertarget{classperiod_ad8c2607a3f178c1fbe14c85a77adf936}{
+\index{period@{period}!$\sim$period@{$\sim$period}}
+\index{$\sim$period@{$\sim$period}!period@{period}}
+\subsubsection[{$\sim$period}]{\setlength{\rightskip}{0pt plus 5cm}period::$\sim$period ()}}
+\label{classperiod_ad8c2607a3f178c1fbe14c85a77adf936}
+\hypertarget{classperiod_a83a82ed64e5c82168451e978fc253556}{
+\index{period@{period}!period@{period}}
+\index{period@{period}!period@{period}}
+\subsubsection[{period}]{\setlength{\rightskip}{0pt plus 5cm}period::period (const {\bf period} \& {\em p})}}
+\label{classperiod_a83a82ed64e5c82168451e978fc253556}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classperiod_adfabc7cac131ab21bd24e488a2813ee8}{
+\index{period@{period}!FullyContained@{FullyContained}}
+\index{FullyContained@{FullyContained}!period@{period}}
+\subsubsection[{FullyContained}]{\setlength{\rightskip}{0pt plus 5cm}int period::FullyContained (const {\bf period} \& {\em per})}}
+\label{classperiod_adfabc7cac131ab21bd24e488a2813ee8}
+\hypertarget{classperiod_ab37ca75242f6032b529e8e1d6ccfa2ef}{
+\index{period@{period}!GetFirstDay@{GetFirstDay}}
+\index{GetFirstDay@{GetFirstDay}!period@{period}}
+\subsubsection[{GetFirstDay}]{\setlength{\rightskip}{0pt plus 5cm}int period::GetFirstDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classperiod_ab37ca75242f6032b529e8e1d6ccfa2ef}
+\hypertarget{classperiod_a82ce05d97cf5ba02cb6045cd746d502f}{
+\index{period@{period}!GetFirstMonth@{GetFirstMonth}}
+\index{GetFirstMonth@{GetFirstMonth}!period@{period}}
+\subsubsection[{GetFirstMonth}]{\setlength{\rightskip}{0pt plus 5cm}int period::GetFirstMonth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classperiod_a82ce05d97cf5ba02cb6045cd746d502f}
+\hypertarget{classperiod_a9df06cfc009724e0d2ca926b8d161062}{
+\index{period@{period}!GetLastDay@{GetLastDay}}
+\index{GetLastDay@{GetLastDay}!period@{period}}
+\subsubsection[{GetLastDay}]{\setlength{\rightskip}{0pt plus 5cm}int period::GetLastDay ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classperiod_a9df06cfc009724e0d2ca926b8d161062}
+\hypertarget{classperiod_a44a437719b012f10621691d2249068a1}{
+\index{period@{period}!GetLastMonth@{GetLastMonth}}
+\index{GetLastMonth@{GetLastMonth}!period@{period}}
+\subsubsection[{GetLastMonth}]{\setlength{\rightskip}{0pt plus 5cm}int period::GetLastMonth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classperiod_a44a437719b012f10621691d2249068a1}
+\hypertarget{classperiod_a1bb8fa04824fbe9309a2debd265c7b90}{
+\index{period@{period}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!period@{period}}
+\subsubsection[{GetLength}]{\setlength{\rightskip}{0pt plus 5cm}int period::GetLength ()}}
+\label{classperiod_a1bb8fa04824fbe9309a2debd265c7b90}
+\hypertarget{classperiod_a8136239b5db53fc0321d3d7a52c015ac}{
+\index{period@{period}!GetName@{GetName}}
+\index{GetName@{GetName}!period@{period}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ period::GetName ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classperiod_a8136239b5db53fc0321d3d7a52c015ac}
+\hypertarget{classperiod_a1036b3c6da47c233381926627e8b2e4e}{
+\index{period@{period}!IsDateInPeriod@{IsDateInPeriod}}
+\index{IsDateInPeriod@{IsDateInPeriod}!period@{period}}
+\subsubsection[{IsDateInPeriod}]{\setlength{\rightskip}{0pt plus 5cm}int period::IsDateInPeriod (int {\em month}, \/  int {\em day}) const}}
+\label{classperiod_a1036b3c6da47c233381926627e8b2e4e}
+\hypertarget{classperiod_a977b1a065d2fac945da835e2baa1ce88}{
+\index{period@{period}!operator=@{operator=}}
+\index{operator=@{operator=}!period@{period}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf period} \& period::operator= (const {\bf period} \& {\em p})}}
+\label{classperiod_a977b1a065d2fac945da835e2baa1ce88}
+\hypertarget{classperiod_a8cf7f0182e0718ee31c366981beda3c6}{
+\index{period@{period}!Overlap@{Overlap}}
+\index{Overlap@{Overlap}!period@{period}}
+\subsubsection[{Overlap}]{\setlength{\rightskip}{0pt plus 5cm}int period::Overlap (const {\bf period} \& {\em per})}}
+\label{classperiod_a8cf7f0182e0718ee31c366981beda3c6}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/base/\hyperlink{period_8h}{period.h}\item 
+C:/main/trunk/src/base/\hyperlink{period_8cpp}{period.cpp}\end{DoxyCompactItemize}

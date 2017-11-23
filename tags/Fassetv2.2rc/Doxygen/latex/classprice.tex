@@ -1,0 +1,254 @@
+\hypertarget{classprice}{
+\section{price Class Reference}
+\label{classprice}\index{price@{price}}
+}
+
+
+{\ttfamily \#include $<$price.h$>$}Inheritance diagram for price::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classprice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprice_ad7e902e9521e51b2988740890e8fcf2d}{price} ()
+\item 
+\hyperlink{classprice_ab8fd5e10683db852f47f63e280fbaec2}{price} (const char $\ast$aName, const int aIndex=-\/1, const \hyperlink{classbase}{base} $\ast$aOwner=NULL)
+\item 
+\hyperlink{classprice_a91c82c0d64e08f44f6a2d8944a8b5ece}{price} (const \hyperlink{classprice}{price} \&aprice)
+\item 
+virtual \hyperlink{classprice_a235c7d258bc22c052fc07e7c63a59c20}{$\sim$price} ()
+\item 
+double \hyperlink{classprice_a0283d3c7b5eb0ccfc117ee456ea40119}{GetbaseSellPrice} (void)
+\item 
+double \hyperlink{classprice_a15cd3b8464d303c662dee82cae26abc5}{GetactualSellPrice} (void)
+\item 
+double \hyperlink{classprice_a11fd350967bdb33a8594f14c02bfcdd5}{GetbaseBuyPrice} (void)
+\item 
+double \hyperlink{classprice_accf6ccdd9b9233912ee97522fdd591b3}{GetactualBuyPrice} (void)
+\item 
+double \hyperlink{classprice_a3ec175e5f77e1c47f377fc5313b7361f}{GetExpectedSellPriceYear} (int year)
+\item 
+double \hyperlink{classprice_a9bed928f8d0992ca3dd2f140985427a6}{GetExpectedBuyPriceYear} (int year)
+\item 
+string \hyperlink{classprice_aa5a8b15495994fd4d7c615938f8f76c1}{Getname} (void)
+\item 
+void \hyperlink{classprice_a279b89717aee067acf170b8e7f858d42}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file}, int duration)
+\item 
+virtual void \hyperlink{classprice_a1599203e7ec6ad2dd1f8c0ee185e2d38}{UpdatePrices} (int simulationYear)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classprice_a84cb52c47624df899791468c95eb2795}{InitVariables} ()
+\item 
+double \hyperlink{classprice_a90af5d98d40acceec149c02cd627e1f5}{GetPseudo} (double \hyperlink{classprice_a11c455e9b6de902a4783857a77023ff9}{leftRange}, double \hyperlink{classprice_a63c86ef8691125451415316a12ab27d6}{rightRange}, double basePrice)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \hyperlink{classprice_a11a4ea5a1276f0b76a5de77996a08c57}{sellPriceSet}
+\item 
+double $\ast$ \hyperlink{classprice_a47707ef8bd8a9a461a52997048b7c793}{buyPriceSet}
+\item 
+double \hyperlink{classprice_a17cc243dcdc8e2de14a5365e7ce733dd}{baseSellPrice}
+\item 
+double \hyperlink{classprice_a56b644fc355c61a06c563e83587562f8}{actualSellPrice}
+\item 
+double \hyperlink{classprice_abb334aaef5a8e3aeb9df5edf865265b7}{expectedSellPrice}
+\item 
+double \hyperlink{classprice_a9b5a8957965dbf9864e0c21f007dab1d}{baseBuyPrice}
+\item 
+double \hyperlink{classprice_ad5017cef2e0f61e7cca4c501daf0c8f1}{actualBuyPrice}
+\item 
+double \hyperlink{classprice_a04ddcd6b09b1b4aa70a064d57519753e}{expectedBuyPrice}
+\item 
+double \hyperlink{classprice_af9b587a47c6db2a06ccac564b586d9bc}{lambda}
+\item 
+double \hyperlink{classprice_ad71f7d198361764503defc6c0f5205eb}{alpha}
+\item 
+int \hyperlink{classprice_a9ad87ecbc5d76b3ceaa1e664cca3f6ab}{useNormalization}
+\item 
+double \hyperlink{classprice_a63c86ef8691125451415316a12ab27d6}{rightRange}
+\item 
+double \hyperlink{classprice_a11c455e9b6de902a4783857a77023ff9}{leftRange}
+\item 
+string \hyperlink{classprice_a210d75a2f9bbb32dcefabf169aadea87}{name}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classprice_ac7c80f9b2cbaaff0824af0e37f65ce86}{operator$<$$<$} (ostream \&os, const \hyperlink{classprice}{price} \&aprice)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classprice_ad7e902e9521e51b2988740890e8fcf2d}{
+\index{price@{price}!price@{price}}
+\index{price@{price}!price@{price}}
+\subsubsection[{price}]{\setlength{\rightskip}{0pt plus 5cm}price::price ()}}
+\label{classprice_ad7e902e9521e51b2988740890e8fcf2d}
+\hypertarget{classprice_ab8fd5e10683db852f47f63e280fbaec2}{
+\index{price@{price}!price@{price}}
+\index{price@{price}!price@{price}}
+\subsubsection[{price}]{\setlength{\rightskip}{0pt plus 5cm}price::price (const char $\ast$ {\em aName}, \/  const int {\em aIndex} = {\ttfamily -\/1}, \/  const {\bf base} $\ast$ {\em aOwner} = {\ttfamily NULL})}}
+\label{classprice_ab8fd5e10683db852f47f63e280fbaec2}
+\hypertarget{classprice_a91c82c0d64e08f44f6a2d8944a8b5ece}{
+\index{price@{price}!price@{price}}
+\index{price@{price}!price@{price}}
+\subsubsection[{price}]{\setlength{\rightskip}{0pt plus 5cm}price::price (const {\bf price} \& {\em aprice})}}
+\label{classprice_a91c82c0d64e08f44f6a2d8944a8b5ece}
+\hypertarget{classprice_a235c7d258bc22c052fc07e7c63a59c20}{
+\index{price@{price}!$\sim$price@{$\sim$price}}
+\index{$\sim$price@{$\sim$price}!price@{price}}
+\subsubsection[{$\sim$price}]{\setlength{\rightskip}{0pt plus 5cm}price::$\sim$price ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classprice_a235c7d258bc22c052fc07e7c63a59c20}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classprice_accf6ccdd9b9233912ee97522fdd591b3}{
+\index{price@{price}!GetactualBuyPrice@{GetactualBuyPrice}}
+\index{GetactualBuyPrice@{GetactualBuyPrice}!price@{price}}
+\subsubsection[{GetactualBuyPrice}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetactualBuyPrice (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classprice_accf6ccdd9b9233912ee97522fdd591b3}
+\hypertarget{classprice_a15cd3b8464d303c662dee82cae26abc5}{
+\index{price@{price}!GetactualSellPrice@{GetactualSellPrice}}
+\index{GetactualSellPrice@{GetactualSellPrice}!price@{price}}
+\subsubsection[{GetactualSellPrice}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetactualSellPrice (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classprice_a15cd3b8464d303c662dee82cae26abc5}
+\hypertarget{classprice_a11fd350967bdb33a8594f14c02bfcdd5}{
+\index{price@{price}!GetbaseBuyPrice@{GetbaseBuyPrice}}
+\index{GetbaseBuyPrice@{GetbaseBuyPrice}!price@{price}}
+\subsubsection[{GetbaseBuyPrice}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetbaseBuyPrice (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classprice_a11fd350967bdb33a8594f14c02bfcdd5}
+\hypertarget{classprice_a0283d3c7b5eb0ccfc117ee456ea40119}{
+\index{price@{price}!GetbaseSellPrice@{GetbaseSellPrice}}
+\index{GetbaseSellPrice@{GetbaseSellPrice}!price@{price}}
+\subsubsection[{GetbaseSellPrice}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetbaseSellPrice (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classprice_a0283d3c7b5eb0ccfc117ee456ea40119}
+\hypertarget{classprice_a9bed928f8d0992ca3dd2f140985427a6}{
+\index{price@{price}!GetExpectedBuyPriceYear@{GetExpectedBuyPriceYear}}
+\index{GetExpectedBuyPriceYear@{GetExpectedBuyPriceYear}!price@{price}}
+\subsubsection[{GetExpectedBuyPriceYear}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetExpectedBuyPriceYear (int {\em year})}}
+\label{classprice_a9bed928f8d0992ca3dd2f140985427a6}
+\hypertarget{classprice_a3ec175e5f77e1c47f377fc5313b7361f}{
+\index{price@{price}!GetExpectedSellPriceYear@{GetExpectedSellPriceYear}}
+\index{GetExpectedSellPriceYear@{GetExpectedSellPriceYear}!price@{price}}
+\subsubsection[{GetExpectedSellPriceYear}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetExpectedSellPriceYear (int {\em year})}}
+\label{classprice_a3ec175e5f77e1c47f377fc5313b7361f}
+\hypertarget{classprice_aa5a8b15495994fd4d7c615938f8f76c1}{
+\index{price@{price}!Getname@{Getname}}
+\index{Getname@{Getname}!price@{price}}
+\subsubsection[{Getname}]{\setlength{\rightskip}{0pt plus 5cm}string price::Getname (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classprice_aa5a8b15495994fd4d7c615938f8f76c1}
+\hypertarget{classprice_a90af5d98d40acceec149c02cd627e1f5}{
+\index{price@{price}!GetPseudo@{GetPseudo}}
+\index{GetPseudo@{GetPseudo}!price@{price}}
+\subsubsection[{GetPseudo}]{\setlength{\rightskip}{0pt plus 5cm}double price::GetPseudo (double {\em leftRange}, \/  double {\em rightRange}, \/  double {\em basePrice})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a90af5d98d40acceec149c02cd627e1f5}
+\hypertarget{classprice_a84cb52c47624df899791468c95eb2795}{
+\index{price@{price}!InitVariables@{InitVariables}}
+\index{InitVariables@{InitVariables}!price@{price}}
+\subsubsection[{InitVariables}]{\setlength{\rightskip}{0pt plus 5cm}void price::InitVariables ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a84cb52c47624df899791468c95eb2795}
+
+
+Reimplemented from \hyperlink{classbase_ad2f5f5c9ec517641f63e52646cf49ad9}{base}.\hypertarget{classprice_a279b89717aee067acf170b8e7f858d42}{
+\index{price@{price}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!price@{price}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void price::ReadParameters (fstream $\ast$ {\em file}, \/  int {\em duration})}}
+\label{classprice_a279b89717aee067acf170b8e7f858d42}
+\hypertarget{classprice_a1599203e7ec6ad2dd1f8c0ee185e2d38}{
+\index{price@{price}!UpdatePrices@{UpdatePrices}}
+\index{UpdatePrices@{UpdatePrices}!price@{price}}
+\subsubsection[{UpdatePrices}]{\setlength{\rightskip}{0pt plus 5cm}void price::UpdatePrices (int {\em simulationYear})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classprice_a1599203e7ec6ad2dd1f8c0ee185e2d38}
+updates baseprices according to whether it's fixed or inflation. ActualPrice baseprice with noise, expectedPrice \hyperlink{classprice}{price} next year where you expectation is corrected according to the actual \hyperlink{classprice}{price} this year 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classprice_ac7c80f9b2cbaaff0824af0e37f65ce86}{
+\index{price@{price}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!price@{price}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf price} \& {\em aprice})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classprice_ac7c80f9b2cbaaff0824af0e37f65ce86}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classprice_ad5017cef2e0f61e7cca4c501daf0c8f1}{
+\index{price@{price}!actualBuyPrice@{actualBuyPrice}}
+\index{actualBuyPrice@{actualBuyPrice}!price@{price}}
+\subsubsection[{actualBuyPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::actualBuyPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_ad5017cef2e0f61e7cca4c501daf0c8f1}
+\hypertarget{classprice_a56b644fc355c61a06c563e83587562f8}{
+\index{price@{price}!actualSellPrice@{actualSellPrice}}
+\index{actualSellPrice@{actualSellPrice}!price@{price}}
+\subsubsection[{actualSellPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::actualSellPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a56b644fc355c61a06c563e83587562f8}
+\hypertarget{classprice_ad71f7d198361764503defc6c0f5205eb}{
+\index{price@{price}!alpha@{alpha}}
+\index{alpha@{alpha}!price@{price}}
+\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::alpha}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_ad71f7d198361764503defc6c0f5205eb}
+\hypertarget{classprice_a9b5a8957965dbf9864e0c21f007dab1d}{
+\index{price@{price}!baseBuyPrice@{baseBuyPrice}}
+\index{baseBuyPrice@{baseBuyPrice}!price@{price}}
+\subsubsection[{baseBuyPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::baseBuyPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a9b5a8957965dbf9864e0c21f007dab1d}
+\hypertarget{classprice_a17cc243dcdc8e2de14a5365e7ce733dd}{
+\index{price@{price}!baseSellPrice@{baseSellPrice}}
+\index{baseSellPrice@{baseSellPrice}!price@{price}}
+\subsubsection[{baseSellPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::baseSellPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a17cc243dcdc8e2de14a5365e7ce733dd}
+\hypertarget{classprice_a47707ef8bd8a9a461a52997048b7c793}{
+\index{price@{price}!buyPriceSet@{buyPriceSet}}
+\index{buyPriceSet@{buyPriceSet}!price@{price}}
+\subsubsection[{buyPriceSet}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ {\bf price::buyPriceSet}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a47707ef8bd8a9a461a52997048b7c793}
+\hypertarget{classprice_a04ddcd6b09b1b4aa70a064d57519753e}{
+\index{price@{price}!expectedBuyPrice@{expectedBuyPrice}}
+\index{expectedBuyPrice@{expectedBuyPrice}!price@{price}}
+\subsubsection[{expectedBuyPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::expectedBuyPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a04ddcd6b09b1b4aa70a064d57519753e}
+\hypertarget{classprice_abb334aaef5a8e3aeb9df5edf865265b7}{
+\index{price@{price}!expectedSellPrice@{expectedSellPrice}}
+\index{expectedSellPrice@{expectedSellPrice}!price@{price}}
+\subsubsection[{expectedSellPrice}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::expectedSellPrice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_abb334aaef5a8e3aeb9df5edf865265b7}
+\hypertarget{classprice_af9b587a47c6db2a06ccac564b586d9bc}{
+\index{price@{price}!lambda@{lambda}}
+\index{lambda@{lambda}!price@{price}}
+\subsubsection[{lambda}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::lambda}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_af9b587a47c6db2a06ccac564b586d9bc}
+\hypertarget{classprice_a11c455e9b6de902a4783857a77023ff9}{
+\index{price@{price}!leftRange@{leftRange}}
+\index{leftRange@{leftRange}!price@{price}}
+\subsubsection[{leftRange}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::leftRange}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a11c455e9b6de902a4783857a77023ff9}
+\hypertarget{classprice_a210d75a2f9bbb32dcefabf169aadea87}{
+\index{price@{price}!name@{name}}
+\index{name@{name}!price@{price}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf price::name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a210d75a2f9bbb32dcefabf169aadea87}
+\hypertarget{classprice_a63c86ef8691125451415316a12ab27d6}{
+\index{price@{price}!rightRange@{rightRange}}
+\index{rightRange@{rightRange}!price@{price}}
+\subsubsection[{rightRange}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf price::rightRange}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a63c86ef8691125451415316a12ab27d6}
+\hypertarget{classprice_a11a4ea5a1276f0b76a5de77996a08c57}{
+\index{price@{price}!sellPriceSet@{sellPriceSet}}
+\index{sellPriceSet@{sellPriceSet}!price@{price}}
+\subsubsection[{sellPriceSet}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ {\bf price::sellPriceSet}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a11a4ea5a1276f0b76a5de77996a08c57}
+\hypertarget{classprice_a9ad87ecbc5d76b3ceaa1e664cca3f6ab}{
+\index{price@{price}!useNormalization@{useNormalization}}
+\index{useNormalization@{useNormalization}!price@{price}}
+\subsubsection[{useNormalization}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf price::useNormalization}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classprice_a9ad87ecbc5d76b3ceaa1e664cca3f6ab}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/products/\hyperlink{price_8h}{price.h}\item 
+C:/main/trunk/src/products/\hyperlink{price_8cpp}{price.cpp}\end{DoxyCompactItemize}

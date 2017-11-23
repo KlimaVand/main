@@ -1,0 +1,123 @@
+\hypertarget{classhard_standing_class}{
+\section{hardStandingClass Class Reference}
+\label{classhard_standing_class}\index{hardStandingClass@{hardStandingClass}}
+}
+
+
+{\ttfamily \#include $<$hardstandingclass.h$>$}Inheritance diagram for hardStandingClass::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classhard_standing_class}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhard_standing_class_a9bd9a22eddef5eaa90c3035c65fe1dd2}{hardStandingClass} (char $\ast$aname, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner, \hyperlink{classanimal_stock}{animalStock} $\ast$alivestock=NULL)
+\item 
+\hyperlink{classhard_standing_class_af7253b376b9969d983126583cec5504b}{$\sim$hardStandingClass} ()
+\item 
+string \hyperlink{classhard_standing_class_a3fb5297a67e0d2af40b940c22e2d2408}{GetAnimalType} ()
+\begin{DoxyCompactList}\small\item\em get the type of \hyperlink{classanimal}{animal} housed (will be overloaded) \item\end{DoxyCompactList}\item 
+void \hyperlink{classhard_standing_class_aa54411fdc0bdbf3e4cb043ca1b0ce765}{SetLivestock} (\hyperlink{classdairy_stock}{dairyStock} $\ast$aLivestock)
+\item 
+virtual void \hyperlink{classhard_standing_class_ac182354be245579d4b8ec936add0c0be}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classhard_standing_class_a87b03d8140b5d5913fc8e79cc8229410}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\begin{DoxyCompactList}\small\item\em Reads information from file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classhard_standing_class_a03f3703e524d927cbf930e47bebd846d}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em OBSOLETE. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classhard_standing_class_a2a5c5d0905de0042918e0829e24145a3}{GiveIndicator} (int indicatorType)
+\begin{DoxyCompactList}\small\item\em Generate indicator output. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhard_standing_class_a458d101f2c4346d2e019d284f273181b}{CapacityOverflow} ()
+\item 
+void \hyperlink{classhard_standing_class_af7a8835dd1b368aa443af8f9ad7fd677}{PutStockInSection} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhard_standing_class_a9bd9a22eddef5eaa90c3035c65fe1dd2}{
+\index{hardStandingClass@{hardStandingClass}!hardStandingClass@{hardStandingClass}}
+\index{hardStandingClass@{hardStandingClass}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{hardStandingClass}]{\setlength{\rightskip}{0pt plus 5cm}hardStandingClass::hardStandingClass (char $\ast$ {\em aname}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner}, \/  {\bf animalStock} $\ast$ {\em alivestock} = {\ttfamily NULL})}}
+\label{classhard_standing_class_a9bd9a22eddef5eaa90c3035c65fe1dd2}
+\hypertarget{classhard_standing_class_af7253b376b9969d983126583cec5504b}{
+\index{hardStandingClass@{hardStandingClass}!$\sim$hardStandingClass@{$\sim$hardStandingClass}}
+\index{$\sim$hardStandingClass@{$\sim$hardStandingClass}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{$\sim$hardStandingClass}]{\setlength{\rightskip}{0pt plus 5cm}hardStandingClass::$\sim$hardStandingClass ()}}
+\label{classhard_standing_class_af7253b376b9969d983126583cec5504b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classhard_standing_class_a03f3703e524d927cbf930e47bebd846d}{
+\index{hardStandingClass@{hardStandingClass}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void hardStandingClass::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classhard_standing_class_a03f3703e524d927cbf930e47bebd846d}
+
+
+OBSOLETE. CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classstable_acaf566bef659f0a671e27afa6244df4b}{stable}.\hypertarget{classhard_standing_class_a458d101f2c4346d2e019d284f273181b}{
+\index{hardStandingClass@{hardStandingClass}!CapacityOverflow@{CapacityOverflow}}
+\index{CapacityOverflow@{CapacityOverflow}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{CapacityOverflow}]{\setlength{\rightskip}{0pt plus 5cm}bool hardStandingClass::CapacityOverflow ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classhard_standing_class_a458d101f2c4346d2e019d284f273181b}
+Return false 
+
+Reimplemented from \hyperlink{classstable_a2014aabbb54c1309c936c527f3d385e8}{stable}.\hypertarget{classhard_standing_class_ac182354be245579d4b8ec936add0c0be}{
+\index{hardStandingClass@{hardStandingClass}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void hardStandingClass::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classhard_standing_class_ac182354be245579d4b8ec936add0c0be}
+Do only call \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable::DailyUpdate()}; 
+
+Reimplemented from \hyperlink{classstable_a8bdbc59976ddb6c324e7b629794ff388}{stable}.\hypertarget{classhard_standing_class_a3fb5297a67e0d2af40b940c22e2d2408}{
+\index{hardStandingClass@{hardStandingClass}!GetAnimalType@{GetAnimalType}}
+\index{GetAnimalType@{GetAnimalType}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{GetAnimalType}]{\setlength{\rightskip}{0pt plus 5cm}string hardStandingClass::GetAnimalType ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classhard_standing_class_a3fb5297a67e0d2af40b940c22e2d2408}
+
+
+get the type of \hyperlink{classanimal}{animal} housed (will be overloaded) 
+
+Reimplemented from \hyperlink{classstable_af11653ccffcdc3bfb928d47485fc39b4}{stable}.\hypertarget{classhard_standing_class_a2a5c5d0905de0042918e0829e24145a3}{
+\index{hardStandingClass@{hardStandingClass}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void hardStandingClass::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classhard_standing_class_a2a5c5d0905de0042918e0829e24145a3}
+
+
+Generate indicator output. 
+\begin{DoxyParams}{Parameters}
+\item[{\em indicatorType}]the type of indicating requested \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classstable_a2911ffc8041366d46674bf48a6b4d6c5}{stable}.\hypertarget{classhard_standing_class_af7a8835dd1b368aa443af8f9ad7fd677}{
+\index{hardStandingClass@{hardStandingClass}!PutStockInSection@{PutStockInSection}}
+\index{PutStockInSection@{PutStockInSection}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{PutStockInSection}]{\setlength{\rightskip}{0pt plus 5cm}void hardStandingClass::PutStockInSection ()}}
+\label{classhard_standing_class_af7a8835dd1b368aa443af8f9ad7fd677}
+Trough a warning if there are not any Livestock available \hypertarget{classhard_standing_class_a87b03d8140b5d5913fc8e79cc8229410}{
+\index{hardStandingClass@{hardStandingClass}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void hardStandingClass::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classhard_standing_class_a87b03d8140b5d5913fc8e79cc8229410}
+
+
+Reads information from file. 
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]pointer to the file to be read\end{DoxyParams}
+\hyperlink{classhard_standing_class_a87b03d8140b5d5913fc8e79cc8229410}{ReadParameters()} reads information from file. 
+
+Reimplemented from \hyperlink{classstable_ab0195f308a48e008485cf5d04955a741}{stable}.\hypertarget{classhard_standing_class_aa54411fdc0bdbf3e4cb043ca1b0ce765}{
+\index{hardStandingClass@{hardStandingClass}!SetLivestock@{SetLivestock}}
+\index{SetLivestock@{SetLivestock}!hardStandingClass@{hardStandingClass}}
+\subsubsection[{SetLivestock}]{\setlength{\rightskip}{0pt plus 5cm}void hardStandingClass::SetLivestock ({\bf dairyStock} $\ast$ {\em aLivestock})}}
+\label{classhard_standing_class_aa54411fdc0bdbf3e4cb043ca1b0ce765}
+Set \hyperlink{classlivestock}{livestock} pointer, so that the \hyperlink{classanimal}{animal} house can find out about the animals it has 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{hardstandingclass_8h}{hardstandingclass.h}\item 
+C:/main/trunk/src/building/\hyperlink{hardstandingclass_8cpp}{hardstandingclass.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+\hypertarget{classanimal_fert_fields}{
+\section{animalFertFields Class Reference}
+\label{classanimal_fert_fields}\index{animalFertFields@{animalFertFields}}
+}
+
+
+{\ttfamily \#include $<$animalFertFields.h$>$}Inheritance diagram for animalFertFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classanimal_fert_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classanimal_fert_fields_aaa7642ddd0eaf9c7cb73bb950daf1d9c}{animalFertFields} ()
+\item 
+\hyperlink{classanimal_fert_fields_ab09ac431c3b6c3f7d63d646b65f88d59}{animalFertFields} (const \hyperlink{classanimal_fert_fields}{animalFertFields} \&a)
+\item 
+virtual \hyperlink{classanimal_fert_fields_a74d1573043fe70ee33287f010c156ab1}{$\sim$animalFertFields} ()
+\item 
+virtual \hyperlink{classanimal_fert_fields}{animalFertFields} $\ast$ \hyperlink{classanimal_fert_fields_a086028dc45ec7c9624e80ddbb59b5271}{clone} () const 
+\item 
+virtual bool \hyperlink{classanimal_fert_fields_a793fca221cb66cef70bbfcb1cf124680}{IsFertilizingOp} ()
+\begin{DoxyCompactList}\small\item\em return true \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classanimal_fert_fields_a010ea67729173cb9e0de5aca455da205}{DefineAnimalFertFieldsOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, \hyperlink{classmanure}{manure} $\ast$theManure, double anExposeTime=24.0)
+\item 
+virtual \hyperlink{classmanure}{manure} $\ast$ \hyperlink{classanimal_fert_fields_ab175469d12d422d2f96d60374b96402c}{GetManure} ()
+\item 
+virtual double \hyperlink{classanimal_fert_fields_a226a783cf10a154797837a99dc6a6896}{GetExposeTime} ()
+\item 
+virtual bool \hyperlink{classanimal_fert_fields_a45dd2c78a88e638206b14b82616c8e90}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\item 
+virtual \hyperlink{classfield_operation_tech}{fieldOperationTech} $\ast$ \hyperlink{classanimal_fert_fields_a92bb741105761340a580dba156326c93}{GetfieldOperationTech} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList)
+\item 
+virtual void \hyperlink{classanimal_fert_fields_acd88dcd5d81b63d622a6ff1d30bd72ff}{AdjustManure} (double adjustmentFactor)
+\item 
+void \hyperlink{classanimal_fert_fields_a486ecb469147fbfd89dc4461c202ca36}{Output} (ofstream $\ast$fs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describe what happens when one use \hyperlink{classanimal}{animal} Manure on a \hyperlink{classfield}{field} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classanimal_fert_fields_aaa7642ddd0eaf9c7cb73bb950daf1d9c}{
+\index{animalFertFields@{animalFertFields}!animalFertFields@{animalFertFields}}
+\index{animalFertFields@{animalFertFields}!animalFertFields@{animalFertFields}}
+\subsubsection[{animalFertFields}]{\setlength{\rightskip}{0pt plus 5cm}animalFertFields::animalFertFields ()}}
+\label{classanimal_fert_fields_aaa7642ddd0eaf9c7cb73bb950daf1d9c}
+\hypertarget{classanimal_fert_fields_ab09ac431c3b6c3f7d63d646b65f88d59}{
+\index{animalFertFields@{animalFertFields}!animalFertFields@{animalFertFields}}
+\index{animalFertFields@{animalFertFields}!animalFertFields@{animalFertFields}}
+\subsubsection[{animalFertFields}]{\setlength{\rightskip}{0pt plus 5cm}animalFertFields::animalFertFields (const {\bf animalFertFields} \& {\em a})}}
+\label{classanimal_fert_fields_ab09ac431c3b6c3f7d63d646b65f88d59}
+\hypertarget{classanimal_fert_fields_a74d1573043fe70ee33287f010c156ab1}{
+\index{animalFertFields@{animalFertFields}!$\sim$animalFertFields@{$\sim$animalFertFields}}
+\index{$\sim$animalFertFields@{$\sim$animalFertFields}!animalFertFields@{animalFertFields}}
+\subsubsection[{$\sim$animalFertFields}]{\setlength{\rightskip}{0pt plus 5cm}animalFertFields::$\sim$animalFertFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a74d1573043fe70ee33287f010c156ab1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classanimal_fert_fields_acd88dcd5d81b63d622a6ff1d30bd72ff}{
+\index{animalFertFields@{animalFertFields}!AdjustManure@{AdjustManure}}
+\index{AdjustManure@{AdjustManure}!animalFertFields@{animalFertFields}}
+\subsubsection[{AdjustManure}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertFields::AdjustManure (double {\em adjustmentFactor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_acd88dcd5d81b63d622a6ff1d30bd72ff}
+multiply the amount of \hyperlink{classmanure}{manure} with adjustmentFactor \hypertarget{classanimal_fert_fields_a45dd2c78a88e638206b14b82616c8e90}{
+\index{animalFertFields@{animalFertFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!animalFertFields@{animalFertFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool animalFertFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a45dd2c78a88e638206b14b82616c8e90}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it will return the cost in the cost variable (this part is never called) 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classanimal_fert_fields_a086028dc45ec7c9624e80ddbb59b5271}{
+\index{animalFertFields@{animalFertFields}!clone@{clone}}
+\index{clone@{clone}!animalFertFields@{animalFertFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalFertFields} $\ast$ animalFertFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a086028dc45ec7c9624e80ddbb59b5271}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classanimal_fert_fields_a010ea67729173cb9e0de5aca455da205}{
+\index{animalFertFields@{animalFertFields}!DefineAnimalFertFieldsOp@{DefineAnimalFertFieldsOp}}
+\index{DefineAnimalFertFieldsOp@{DefineAnimalFertFieldsOp}!animalFertFields@{animalFertFields}}
+\subsubsection[{DefineAnimalFertFieldsOp}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertFields::DefineAnimalFertFieldsOp ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  {\bf manure} $\ast$ {\em theManure}, \/  double {\em anExposeTime} = {\ttfamily 24.0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a010ea67729173cb9e0de5aca455da205}
+Changing the time, \hyperlink{classcrop}{crop} information, \hyperlink{classoperation}{operation} information and expose time. Does also create a new Manure \hypertarget{classanimal_fert_fields_a226a783cf10a154797837a99dc6a6896}{
+\index{animalFertFields@{animalFertFields}!GetExposeTime@{GetExposeTime}}
+\index{GetExposeTime@{GetExposeTime}!animalFertFields@{animalFertFields}}
+\subsubsection[{GetExposeTime}]{\setlength{\rightskip}{0pt plus 5cm}virtual double animalFertFields::GetExposeTime ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a226a783cf10a154797837a99dc6a6896}
+\hypertarget{classanimal_fert_fields_a92bb741105761340a580dba156326c93}{
+\index{animalFertFields@{animalFertFields}!GetfieldOperationTech@{GetfieldOperationTech}}
+\index{GetfieldOperationTech@{GetfieldOperationTech}!animalFertFields@{animalFertFields}}
+\subsubsection[{GetfieldOperationTech}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fieldOperationTech} $\ast$ animalFertFields::GetfieldOperationTech ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a92bb741105761340a580dba156326c93}
+Return a \hyperlink{classfield_operation_tech}{fieldOperationTech} if it can be found in aOperationList and has the same op\_\-id as this instance of \hyperlink{classanimal_fert_fields}{animalFertFields} 
+
+Reimplemented from \hyperlink{classfield_operation_fields_a0b7b1a0da8d7bbc651bf9256fc3eef9f}{fieldOperationFields}.\hypertarget{classanimal_fert_fields_ab175469d12d422d2f96d60374b96402c}{
+\index{animalFertFields@{animalFertFields}!GetManure@{GetManure}}
+\index{GetManure@{GetManure}!animalFertFields@{animalFertFields}}
+\subsubsection[{GetManure}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf manure}$\ast$ animalFertFields::GetManure ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_fert_fields_ab175469d12d422d2f96d60374b96402c}
+\hypertarget{classanimal_fert_fields_a793fca221cb66cef70bbfcb1cf124680}{
+\index{animalFertFields@{animalFertFields}!IsFertilizingOp@{IsFertilizingOp}}
+\index{IsFertilizingOp@{IsFertilizingOp}!animalFertFields@{animalFertFields}}
+\subsubsection[{IsFertilizingOp}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool animalFertFields::IsFertilizingOp ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a793fca221cb66cef70bbfcb1cf124680}
+
+
+return true 
+
+Reimplemented from \hyperlink{classfield_operation_fields_ae21a07b4ab147829465e5b79418708f7}{fieldOperationFields}.\hypertarget{classanimal_fert_fields_a486ecb469147fbfd89dc4461c202ca36}{
+\index{animalFertFields@{animalFertFields}!Output@{Output}}
+\index{Output@{Output}!animalFertFields@{animalFertFields}}
+\subsubsection[{Output}]{\setlength{\rightskip}{0pt plus 5cm}void animalFertFields::Output (ofstream $\ast$ {\em fs})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classanimal_fert_fields_a486ecb469147fbfd89dc4461c202ca36}
+Write how much \hyperlink{classmanure}{manure}, \hyperlink{classmanure}{manure} name and how much N used 
+
+Reimplemented from \hyperlink{classfield_operation_fields_a8dff595b832bca540dda946639f7f47a}{fieldOperationFields}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{animal_fert_fields_8h}{animalFertFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{animal_fert_fields_8cpp}{animalFertFields.cpp}\end{DoxyCompactItemize}

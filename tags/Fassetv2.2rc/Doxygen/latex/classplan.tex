@@ -1,0 +1,210 @@
+\hypertarget{classplan}{
+\section{plan Class Reference}
+\label{classplan}\index{plan@{plan}}
+}
+
+
+{\ttfamily \#include $<$plan.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classplan_a266f45990dd94064d40cb8e5722120e6}{plan} ()
+\item 
+\hyperlink{classplan_a74c8e47a3643fc7cc2613d8ad9a05dbb}{plan} (const \hyperlink{classplan}{plan} \&p)
+\item 
+virtual \hyperlink{classplan_ab23766d95b648190c091e88baa118076}{$\sim$plan} ()
+\item 
+\hyperlink{classplan}{plan} $\ast$ \hyperlink{classplan_a1734515ada7c0e24914487ddf59268dc}{clone} () const 
+\item 
+void \hyperlink{classplan_ac480e9366949237b6904a397bfb8b57c}{HandPlanOver} (\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classfield_operation_fields}{fieldOperationFields} $>$ $\ast$OP, string crop\_\-id, int futrNum)
+\item 
+\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$ \hyperlink{classplan_a5bb316264b932ad51c4af2441691b61d}{ReturnOperation} (int year, int month, int day, bool upddate)
+\item 
+bool \hyperlink{classplan_ad28041911ab26c91eefbd1105d5922ed}{Irrigation} ()
+\item 
+bool \hyperlink{classplan_a44d27c54c440253db2ce50369826b3cf}{AutomaticIrrigation} ()
+\item 
+bool \hyperlink{classplan_aed8d97934d5b9ecb7a30ed937343d7b9}{FirstOperationToday} (int year, int month, int day)
+\item 
+bool \hyperlink{classplan_adee3da0790a24dcf45690ab53482e45f}{IsThisTheFirst} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$aOperation)
+\item 
+void \hyperlink{classplan_a0020926c3203f9d541b259a88b9fed9c}{FlushPlan} ()
+\item 
+void \hyperlink{classplan_aa904d6cb1887fb97f8e4a10fc13df74b}{ShowContent} (ostream $\ast$fs)
+\item 
+void \hyperlink{classplan_acc3eb4e92df8fa1142fb2885c15d35de}{DisplayContent} ()
+\item 
+bool \hyperlink{classplan_a336d1b751be876cf584e47d44826d8ac}{Finished} ()
+\item 
+double \hyperlink{classplan_a69ef07aba789edb9d649427e73dcc19c}{GiveArea} ()
+\item 
+double \hyperlink{classplan_aeac34b2dea2e779cf73477c0f9f263bb}{GetAdjustArea} ()
+\item 
+void \hyperlink{classplan_a46ca446bb7d23eff9d7f39d36b56d58b}{GiveCrop} (string $\ast$crop\_\-id)
+\item 
+bool \hyperlink{classplan_ad3c70afeed1b7ed1d00046ebbe3db961}{NextIsHarvestOp} ()
+\item 
+bool \hyperlink{classplan_aee2a49d25d0d0d0019d0b55465d3e4b1}{NextIsForageHarvestOp} ()
+\item 
+bool \hyperlink{classplan_a0d5099abca46e3a99902a0d333ce8a4d}{NextIsFertilizing} ()
+\item 
+bool \hyperlink{classplan_a5b8c3cccd2e9709b4d64d2910f778f9d}{NextIsForcedHarvest} ()
+\item 
+int \hyperlink{classplan_a8cd7e925bf86d2d2350a962b0392ae74}{GetFutureNumber} ()
+\item 
+virtual void \hyperlink{classplan_a1c083fe4c2f06097b7b57daf985996f1}{DoManureAdjustment} (double aValue)
+\item 
+virtual \hyperlink{classclone_list}{OpListPType} \hyperlink{classplan_a986121f5ba3cd52b3a728da6ccc9ce5b}{GiveOpListP} ()
+\item 
+void \hyperlink{classplan_a66bc896a7b501149627955ae025d62b0}{InsertAsNextOperation} (\hyperlink{classfield_operation_fields}{fieldOperationFields} $\ast$anOperation)
+\item 
+int \hyperlink{classplan_a2e5057eb3ec7c4ad4b20ac628f7ad1e9}{GiveNumOps} ()
+\item 
+void \hyperlink{classplan_a8a7b5b42e4b3ff4a705390733b2e38e2}{RemoveHerbageHarvests} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classplan_a266f45990dd94064d40cb8e5722120e6}{
+\index{plan@{plan}!plan@{plan}}
+\index{plan@{plan}!plan@{plan}}
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}plan::plan ()}}
+\label{classplan_a266f45990dd94064d40cb8e5722120e6}
+\hypertarget{classplan_a74c8e47a3643fc7cc2613d8ad9a05dbb}{
+\index{plan@{plan}!plan@{plan}}
+\index{plan@{plan}!plan@{plan}}
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}plan::plan (const {\bf plan} \& {\em p})}}
+\label{classplan_a74c8e47a3643fc7cc2613d8ad9a05dbb}
+\hypertarget{classplan_ab23766d95b648190c091e88baa118076}{
+\index{plan@{plan}!$\sim$plan@{$\sim$plan}}
+\index{$\sim$plan@{$\sim$plan}!plan@{plan}}
+\subsubsection[{$\sim$plan}]{\setlength{\rightskip}{0pt plus 5cm}plan::$\sim$plan ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplan_ab23766d95b648190c091e88baa118076}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classplan_a44d27c54c440253db2ce50369826b3cf}{
+\index{plan@{plan}!AutomaticIrrigation@{AutomaticIrrigation}}
+\index{AutomaticIrrigation@{AutomaticIrrigation}!plan@{plan}}
+\subsubsection[{AutomaticIrrigation}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::AutomaticIrrigation ()}}
+\label{classplan_a44d27c54c440253db2ce50369826b3cf}
+\hypertarget{classplan_a1734515ada7c0e24914487ddf59268dc}{
+\index{plan@{plan}!clone@{clone}}
+\index{clone@{clone}!plan@{plan}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plan} $\ast$ plan::clone () const}}
+\label{classplan_a1734515ada7c0e24914487ddf59268dc}
+\hypertarget{classplan_acc3eb4e92df8fa1142fb2885c15d35de}{
+\index{plan@{plan}!DisplayContent@{DisplayContent}}
+\index{DisplayContent@{DisplayContent}!plan@{plan}}
+\subsubsection[{DisplayContent}]{\setlength{\rightskip}{0pt plus 5cm}void plan::DisplayContent ()}}
+\label{classplan_acc3eb4e92df8fa1142fb2885c15d35de}
+\hypertarget{classplan_a1c083fe4c2f06097b7b57daf985996f1}{
+\index{plan@{plan}!DoManureAdjustment@{DoManureAdjustment}}
+\index{DoManureAdjustment@{DoManureAdjustment}!plan@{plan}}
+\subsubsection[{DoManureAdjustment}]{\setlength{\rightskip}{0pt plus 5cm}void plan::DoManureAdjustment (double {\em aValue})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classplan_a1c083fe4c2f06097b7b57daf985996f1}
+\hypertarget{classplan_a336d1b751be876cf584e47d44826d8ac}{
+\index{plan@{plan}!Finished@{Finished}}
+\index{Finished@{Finished}!plan@{plan}}
+\subsubsection[{Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::Finished ()}}
+\label{classplan_a336d1b751be876cf584e47d44826d8ac}
+\hypertarget{classplan_aed8d97934d5b9ecb7a30ed937343d7b9}{
+\index{plan@{plan}!FirstOperationToday@{FirstOperationToday}}
+\index{FirstOperationToday@{FirstOperationToday}!plan@{plan}}
+\subsubsection[{FirstOperationToday}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::FirstOperationToday (int {\em year}, \/  int {\em month}, \/  int {\em day})}}
+\label{classplan_aed8d97934d5b9ecb7a30ed937343d7b9}
+\hypertarget{classplan_a0020926c3203f9d541b259a88b9fed9c}{
+\index{plan@{plan}!FlushPlan@{FlushPlan}}
+\index{FlushPlan@{FlushPlan}!plan@{plan}}
+\subsubsection[{FlushPlan}]{\setlength{\rightskip}{0pt plus 5cm}void plan::FlushPlan ()}}
+\label{classplan_a0020926c3203f9d541b259a88b9fed9c}
+\hypertarget{classplan_aeac34b2dea2e779cf73477c0f9f263bb}{
+\index{plan@{plan}!GetAdjustArea@{GetAdjustArea}}
+\index{GetAdjustArea@{GetAdjustArea}!plan@{plan}}
+\subsubsection[{GetAdjustArea}]{\setlength{\rightskip}{0pt plus 5cm}double plan::GetAdjustArea ()}}
+\label{classplan_aeac34b2dea2e779cf73477c0f9f263bb}
+\hypertarget{classplan_a8cd7e925bf86d2d2350a962b0392ae74}{
+\index{plan@{plan}!GetFutureNumber@{GetFutureNumber}}
+\index{GetFutureNumber@{GetFutureNumber}!plan@{plan}}
+\subsubsection[{GetFutureNumber}]{\setlength{\rightskip}{0pt plus 5cm}int plan::GetFutureNumber ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplan_a8cd7e925bf86d2d2350a962b0392ae74}
+\hypertarget{classplan_a69ef07aba789edb9d649427e73dcc19c}{
+\index{plan@{plan}!GiveArea@{GiveArea}}
+\index{GiveArea@{GiveArea}!plan@{plan}}
+\subsubsection[{GiveArea}]{\setlength{\rightskip}{0pt plus 5cm}double plan::GiveArea ()}}
+\label{classplan_a69ef07aba789edb9d649427e73dcc19c}
+\hypertarget{classplan_a46ca446bb7d23eff9d7f39d36b56d58b}{
+\index{plan@{plan}!GiveCrop@{GiveCrop}}
+\index{GiveCrop@{GiveCrop}!plan@{plan}}
+\subsubsection[{GiveCrop}]{\setlength{\rightskip}{0pt plus 5cm}void plan::GiveCrop (string $\ast$ {\em crop\_\-id})}}
+\label{classplan_a46ca446bb7d23eff9d7f39d36b56d58b}
+\hypertarget{classplan_a2e5057eb3ec7c4ad4b20ac628f7ad1e9}{
+\index{plan@{plan}!GiveNumOps@{GiveNumOps}}
+\index{GiveNumOps@{GiveNumOps}!plan@{plan}}
+\subsubsection[{GiveNumOps}]{\setlength{\rightskip}{0pt plus 5cm}int plan::GiveNumOps ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classplan_a2e5057eb3ec7c4ad4b20ac628f7ad1e9}
+\hypertarget{classplan_a986121f5ba3cd52b3a728da6ccc9ce5b}{
+\index{plan@{plan}!GiveOpListP@{GiveOpListP}}
+\index{GiveOpListP@{GiveOpListP}!plan@{plan}}
+\subsubsection[{GiveOpListP}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf OpListPType} plan::GiveOpListP ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classplan_a986121f5ba3cd52b3a728da6ccc9ce5b}
+\hypertarget{classplan_ac480e9366949237b6904a397bfb8b57c}{
+\index{plan@{plan}!HandPlanOver@{HandPlanOver}}
+\index{HandPlanOver@{HandPlanOver}!plan@{plan}}
+\subsubsection[{HandPlanOver}]{\setlength{\rightskip}{0pt plus 5cm}void plan::HandPlanOver ({\bf cloneList}$<$ {\bf fieldOperationFields} $>$ $\ast$ {\em OP}, \/  string {\em crop\_\-id}, \/  int {\em futrNum})}}
+\label{classplan_ac480e9366949237b6904a397bfb8b57c}
+Make object ready for use. \hypertarget{classplan_a66bc896a7b501149627955ae025d62b0}{
+\index{plan@{plan}!InsertAsNextOperation@{InsertAsNextOperation}}
+\index{InsertAsNextOperation@{InsertAsNextOperation}!plan@{plan}}
+\subsubsection[{InsertAsNextOperation}]{\setlength{\rightskip}{0pt plus 5cm}void plan::InsertAsNextOperation ({\bf fieldOperationFields} $\ast$ {\em anOperation})}}
+\label{classplan_a66bc896a7b501149627955ae025d62b0}
+\hypertarget{classplan_ad28041911ab26c91eefbd1105d5922ed}{
+\index{plan@{plan}!Irrigation@{Irrigation}}
+\index{Irrigation@{Irrigation}!plan@{plan}}
+\subsubsection[{Irrigation}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::Irrigation ()}}
+\label{classplan_ad28041911ab26c91eefbd1105d5922ed}
+\hypertarget{classplan_adee3da0790a24dcf45690ab53482e45f}{
+\index{plan@{plan}!IsThisTheFirst@{IsThisTheFirst}}
+\index{IsThisTheFirst@{IsThisTheFirst}!plan@{plan}}
+\subsubsection[{IsThisTheFirst}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::IsThisTheFirst ({\bf fieldOperationFields} $\ast$ {\em aOperation})}}
+\label{classplan_adee3da0790a24dcf45690ab53482e45f}
+see if a given \hyperlink{classfield_operation_fields}{fieldOperationFields} has the same day as current \hyperlink{classfield_operation_fields}{fieldOperationFields} \hypertarget{classplan_a0d5099abca46e3a99902a0d333ce8a4d}{
+\index{plan@{plan}!NextIsFertilizing@{NextIsFertilizing}}
+\index{NextIsFertilizing@{NextIsFertilizing}!plan@{plan}}
+\subsubsection[{NextIsFertilizing}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::NextIsFertilizing ()}}
+\label{classplan_a0d5099abca46e3a99902a0d333ce8a4d}
+\hypertarget{classplan_aee2a49d25d0d0d0019d0b55465d3e4b1}{
+\index{plan@{plan}!NextIsForageHarvestOp@{NextIsForageHarvestOp}}
+\index{NextIsForageHarvestOp@{NextIsForageHarvestOp}!plan@{plan}}
+\subsubsection[{NextIsForageHarvestOp}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::NextIsForageHarvestOp ()}}
+\label{classplan_aee2a49d25d0d0d0019d0b55465d3e4b1}
+\hypertarget{classplan_a5b8c3cccd2e9709b4d64d2910f778f9d}{
+\index{plan@{plan}!NextIsForcedHarvest@{NextIsForcedHarvest}}
+\index{NextIsForcedHarvest@{NextIsForcedHarvest}!plan@{plan}}
+\subsubsection[{NextIsForcedHarvest}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::NextIsForcedHarvest ()}}
+\label{classplan_a5b8c3cccd2e9709b4d64d2910f778f9d}
+\hypertarget{classplan_ad3c70afeed1b7ed1d00046ebbe3db961}{
+\index{plan@{plan}!NextIsHarvestOp@{NextIsHarvestOp}}
+\index{NextIsHarvestOp@{NextIsHarvestOp}!plan@{plan}}
+\subsubsection[{NextIsHarvestOp}]{\setlength{\rightskip}{0pt plus 5cm}bool plan::NextIsHarvestOp ()}}
+\label{classplan_ad3c70afeed1b7ed1d00046ebbe3db961}
+\hypertarget{classplan_a8a7b5b42e4b3ff4a705390733b2e38e2}{
+\index{plan@{plan}!RemoveHerbageHarvests@{RemoveHerbageHarvests}}
+\index{RemoveHerbageHarvests@{RemoveHerbageHarvests}!plan@{plan}}
+\subsubsection[{RemoveHerbageHarvests}]{\setlength{\rightskip}{0pt plus 5cm}void plan::RemoveHerbageHarvests ()}}
+\label{classplan_a8a7b5b42e4b3ff4a705390733b2e38e2}
+\hypertarget{classplan_a5bb316264b932ad51c4af2441691b61d}{
+\index{plan@{plan}!ReturnOperation@{ReturnOperation}}
+\index{ReturnOperation@{ReturnOperation}!plan@{plan}}
+\subsubsection[{ReturnOperation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fieldOperationFields} $\ast$ plan::ReturnOperation (int {\em year}, \/  int {\em month}, \/  int {\em day}, \/  bool {\em update})}}
+\label{classplan_a5bb316264b932ad51c4af2441691b61d}
+If a \hyperlink{classoperation}{operation} for the date in question exists, a pointer to the corresponding object is returned, otherwise NULL is returned. \hypertarget{classplan_aa904d6cb1887fb97f8e4a10fc13df74b}{
+\index{plan@{plan}!ShowContent@{ShowContent}}
+\index{ShowContent@{ShowContent}!plan@{plan}}
+\subsubsection[{ShowContent}]{\setlength{\rightskip}{0pt plus 5cm}void plan::ShowContent (ostream $\ast$ {\em fs})}}
+\label{classplan_aa904d6cb1887fb97f8e4a10fc13df74b}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/\hyperlink{plan_8h}{plan.h}\item 
+C:/main/trunk/src/fields/\hyperlink{plan_8cpp}{plan.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+[fieldOrder(0)]
+Automatic	1
+Ha                           1
+Automatic                    0
+CROP                         B2____00
+SowDate(0)                   10/04/2004
+SowCrop(0)                   PE
+SowAmount(0)                  140 
+SowDate(1)                   10/04/2004
+SowCrop(1)                   B2
+SowAmount(1)                  98 
+TillageDate(0)               04/03/2004
+TillageType(0)               ROTOVATE
+TillageDepth(0)               5 
+TillageDate(1)               17/03/2004
+TillageType(1)               ROTOVATE
+TillageDepth(1)               22 
+TillageDate(2)               10/04/2004
+TillageType(2)               SEED BED PREP
+TillageDepth(2)               5 
+IrrigationDate(0)            19/08/2003
+IrrigationAmount(0)           18 
+IrrigationNcontent(0)        0.000200
+IrrigationDate(1)            19/05/2004
+IrrigationAmount(1)           18 
+IrrigationNcontent(1)        0.000200
+IrrigationDate(2)            21/05/2004
+IrrigationAmount(2)           15 
+IrrigationNcontent(2)        0.000200
+IrrigationDate(3)            24/05/2004
+IrrigationAmount(3)           19 
+IrrigationNcontent(3)        0.000200
+IrrigationDate(4)            03/06/2004
+IrrigationAmount(4)           20 
+IrrigationNcontent(4)        0.000200
+IrrigationDate(5)            14/06/2004
+IrrigationAmount(5)           20 
+IrrigationNcontent(5)        0.000200
+HarvestDate(0)               29/08/2004
+HarvestRemoveStraw(0)         0 
+FertilizerDate(0)            30/03/2004
+FertilizerType(0)            MINERAL
+FertilizerN(0)               0
+NH4_fraction(0)              0
+MineralForm(0)               SOLID
+[end]

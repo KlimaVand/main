@@ -1,0 +1,80 @@
+\hypertarget{classmanual_labour_fields}{
+\section{manualLabourFields Class Reference}
+\label{classmanual_labour_fields}\index{manualLabourFields@{manualLabourFields}}
+}
+
+
+{\ttfamily \#include $<$manualLabourFields.h$>$}Inheritance diagram for manualLabourFields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classmanual_labour_fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmanual_labour_fields_aeabdab1cf334d123fe11a352c4f8bc33}{manualLabourFields} ()
+\item 
+\hyperlink{classmanual_labour_fields_abcd9a37e403784a25de34159eeeb023f}{manualLabourFields} (const \hyperlink{classmanual_labour_fields}{manualLabourFields} \&h)
+\item 
+virtual \hyperlink{classmanual_labour_fields_ad3312d15fd806538137091964d612c36}{$\sim$manualLabourFields} ()
+\item 
+virtual \hyperlink{classmanual_labour_fields}{manualLabourFields} $\ast$ \hyperlink{classmanual_labour_fields_acbf577ca188715bf0e4413f08e6d2861}{clone} () const 
+\item 
+void \hyperlink{classmanual_labour_fields_ad4e466fe839f838862782a76ac05f063}{DefineManualLabourFieldsOp} (\hyperlink{operation_names_8h_a77d40de6faa131199a5de6df3d9c7e3d}{operationNames} op, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} \hyperlink{classcrop}{crop}, \hyperlink{classfield_operation_fields_a65517d20c09329343461131d07d48ecb}{id\_\-string} cropNm, int yr, int mon, int d, double ar, int fieldn, double dist, double len, double HoursPerUnit)
+\item 
+double \hyperlink{classmanual_labour_fields_a136c2e2de43635528689f68b6bd8083f}{GetHoursPerUnit} ()
+\item 
+virtual bool \hyperlink{classmanual_labour_fields_a1baebed54c58272b5127e0fe713b1eea}{CalcCost} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classoperation}{operation} $>$ $\ast$aOperationList, \hyperlink{classlink_list}{linkList}$<$ \hyperlink{classtech_equip}{techEquip} $>$ $\ast$aTechFarmList, \hyperlink{typer_8h_af05cf854fc14086a0d6404be5ae9813f}{calcLPType} mode, double $\ast$cost, bool update)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmanual_labour_fields_aeabdab1cf334d123fe11a352c4f8bc33}{
+\index{manualLabourFields@{manualLabourFields}!manualLabourFields@{manualLabourFields}}
+\index{manualLabourFields@{manualLabourFields}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{manualLabourFields}]{\setlength{\rightskip}{0pt plus 5cm}manualLabourFields::manualLabourFields ()}}
+\label{classmanual_labour_fields_aeabdab1cf334d123fe11a352c4f8bc33}
+\hypertarget{classmanual_labour_fields_abcd9a37e403784a25de34159eeeb023f}{
+\index{manualLabourFields@{manualLabourFields}!manualLabourFields@{manualLabourFields}}
+\index{manualLabourFields@{manualLabourFields}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{manualLabourFields}]{\setlength{\rightskip}{0pt plus 5cm}manualLabourFields::manualLabourFields (const {\bf manualLabourFields} \& {\em h})}}
+\label{classmanual_labour_fields_abcd9a37e403784a25de34159eeeb023f}
+\hypertarget{classmanual_labour_fields_ad3312d15fd806538137091964d612c36}{
+\index{manualLabourFields@{manualLabourFields}!$\sim$manualLabourFields@{$\sim$manualLabourFields}}
+\index{$\sim$manualLabourFields@{$\sim$manualLabourFields}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{$\sim$manualLabourFields}]{\setlength{\rightskip}{0pt plus 5cm}manualLabourFields::$\sim$manualLabourFields ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanual_labour_fields_ad3312d15fd806538137091964d612c36}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmanual_labour_fields_a1baebed54c58272b5127e0fe713b1eea}{
+\index{manualLabourFields@{manualLabourFields}!CalcCost@{CalcCost}}
+\index{CalcCost@{CalcCost}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{CalcCost}]{\setlength{\rightskip}{0pt plus 5cm}bool manualLabourFields::CalcCost ({\bf linkList}$<$ {\bf operation} $>$ $\ast$ {\em aOperationList}, \/  {\bf linkList}$<$ {\bf techEquip} $>$ $\ast$ {\em aTechFarmList}, \/  {\bf calcLPType} {\em mode}, \/  double $\ast$ {\em cost}, \/  bool {\em update})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanual_labour_fields_a1baebed54c58272b5127e0fe713b1eea}
+Calculate the cost of this \hyperlink{classoperation}{operation}. If update is true it will write the cost to the indicate file. If update is false it does not do anything) 
+
+Reimplemented from \hyperlink{classfield_operation_fields_aeb2bce9d4612033dbab366d870e432a6}{fieldOperationFields}.\hypertarget{classmanual_labour_fields_acbf577ca188715bf0e4413f08e6d2861}{
+\index{manualLabourFields@{manualLabourFields}!clone@{clone}}
+\index{clone@{clone}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf manualLabourFields} $\ast$ manualLabourFields::clone () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmanual_labour_fields_acbf577ca188715bf0e4413f08e6d2861}
+
+
+Implements \hyperlink{classfield_operation_fields_ae5d8585b7e57196ce3801eed29677b3e}{fieldOperationFields}.\hypertarget{classmanual_labour_fields_ad4e466fe839f838862782a76ac05f063}{
+\index{manualLabourFields@{manualLabourFields}!DefineManualLabourFieldsOp@{DefineManualLabourFieldsOp}}
+\index{DefineManualLabourFieldsOp@{DefineManualLabourFieldsOp}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{DefineManualLabourFieldsOp}]{\setlength{\rightskip}{0pt plus 5cm}void manualLabourFields::DefineManualLabourFieldsOp ({\bf operationNames} {\em op}, \/  {\bf id\_\-string} {\em crop}, \/  {\bf id\_\-string} {\em cropNm}, \/  int {\em yr}, \/  int {\em mon}, \/  int {\em d}, \/  double {\em ar}, \/  int {\em fieldn}, \/  double {\em dist}, \/  double {\em len}, \/  double {\em HoursPerUnit})}}
+\label{classmanual_labour_fields_ad4e466fe839f838862782a76ac05f063}
+\hypertarget{classmanual_labour_fields_a136c2e2de43635528689f68b6bd8083f}{
+\index{manualLabourFields@{manualLabourFields}!GetHoursPerUnit@{GetHoursPerUnit}}
+\index{GetHoursPerUnit@{GetHoursPerUnit}!manualLabourFields@{manualLabourFields}}
+\subsubsection[{GetHoursPerUnit}]{\setlength{\rightskip}{0pt plus 5cm}double manualLabourFields::GetHoursPerUnit ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmanual_labour_fields_a136c2e2de43635528689f68b6bd8083f}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{manual_labour_fields_8h}{manualLabourFields.h}\item 
+C:/main/trunk/src/fields/fieldOperation/\hyperlink{manual_labour_fields_8cpp}{manualLabourFields.cpp}\end{DoxyCompactItemize}

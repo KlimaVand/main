@@ -1,0 +1,115 @@
+\hypertarget{classdungheap}{
+\section{dungheap Class Reference}
+\label{classdungheap}\index{dungheap@{dungheap}}
+}
+
+
+{\ttfamily \#include $<$dungheap.h$>$}Inheritance diagram for dungheap::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classdungheap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdungheap_afa14e95ebc5010c87c5436a1f8dee864}{dungheap} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+\hyperlink{classdungheap_ae85a443b5115bd4b0106dbd199812b7b}{dungheap} (\hyperlink{classdungheap}{dungheap} \&s)
+\item 
+virtual \hyperlink{classdungheap_ab819ea784b8f0af38dce38b8697498d8}{$\sim$dungheap} ()
+\item 
+virtual void \hyperlink{classdungheap_a369749ce14a7061f1c1f4e0c6973d68f}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classdungheap_ab901a0eba5e5cb9164042bbfad350435}{DailyUpdate} ()
+\item 
+virtual void \hyperlink{classdungheap_ac8c6b260da69dabe3a0019f9a5d8d499}{GiveIndicator} (int indicatorType)
+\item 
+virtual void \hyperlink{classdungheap_af4b63f00620c98cefc7008b5bc6b2170}{CalcLP} ()
+\begin{DoxyCompactList}\small\item\em probably obsolete \item\end{DoxyCompactList}\item 
+void \hyperlink{classdungheap_ac5ed38db9dc9fd3be29ebec8d5034402}{VolatizeDung} (double $\ast$\hyperlink{classmanurestore_ac9d398e432684fb02bfaf52c2f0e9ae8}{volatAmmonia}, double $\ast$\hyperlink{classmanurestore_a9a8d525f55145b43f2ab275fb9b5f35f}{N2Emission}, double $\ast$\hyperlink{classmanurestore_aca5ad359219f1f6c9a957f03156136ab}{N2OEmission}, double $\ast$\hyperlink{classmanurestore_aebc6ae97114292e973c57cbc2ecc4f84}{CO2Emission}, double $\ast$\hyperlink{classmanurestore_ae472072caaaea49932fe2152e6a4fb09}{CH4Emission})
+\item 
+void \hyperlink{classdungheap_a852054912c04f101c0a3310e80d6d53b}{RcvManure} (const \hyperlink{classmanure}{manure} $\ast$someManure)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classdungheap_a90fa119f05925fe4eaa6d738c3db6f65}{operator$<$$<$} (ostream \&os, \hyperlink{classdungheap}{dungheap} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdungheap_afa14e95ebc5010c87c5436a1f8dee864}{
+\index{dungheap@{dungheap}!dungheap@{dungheap}}
+\index{dungheap@{dungheap}!dungheap@{dungheap}}
+\subsubsection[{dungheap}]{\setlength{\rightskip}{0pt plus 5cm}dungheap::dungheap (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classdungheap_afa14e95ebc5010c87c5436a1f8dee864}
+\hypertarget{classdungheap_ae85a443b5115bd4b0106dbd199812b7b}{
+\index{dungheap@{dungheap}!dungheap@{dungheap}}
+\index{dungheap@{dungheap}!dungheap@{dungheap}}
+\subsubsection[{dungheap}]{\setlength{\rightskip}{0pt plus 5cm}dungheap::dungheap ({\bf dungheap} \& {\em s})}}
+\label{classdungheap_ae85a443b5115bd4b0106dbd199812b7b}
+\hypertarget{classdungheap_ab819ea784b8f0af38dce38b8697498d8}{
+\index{dungheap@{dungheap}!$\sim$dungheap@{$\sim$dungheap}}
+\index{$\sim$dungheap@{$\sim$dungheap}!dungheap@{dungheap}}
+\subsubsection[{$\sim$dungheap}]{\setlength{\rightskip}{0pt plus 5cm}dungheap::$\sim$dungheap ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdungheap_ab819ea784b8f0af38dce38b8697498d8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdungheap_af4b63f00620c98cefc7008b5bc6b2170}{
+\index{dungheap@{dungheap}!CalcLP@{CalcLP}}
+\index{CalcLP@{CalcLP}!dungheap@{dungheap}}
+\subsubsection[{CalcLP}]{\setlength{\rightskip}{0pt plus 5cm}void dungheap::CalcLP ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdungheap_af4b63f00620c98cefc7008b5bc6b2170}
+
+
+probably obsolete CalcLP indicators for LP-\/model (not implemented yet) 
+
+Reimplemented from \hyperlink{classbuilding_af1f27cbf72295547af61edc9e02a7e61}{building}.\hypertarget{classdungheap_ab901a0eba5e5cb9164042bbfad350435}{
+\index{dungheap@{dungheap}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!dungheap@{dungheap}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void dungheap::DailyUpdate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdungheap_ab901a0eba5e5cb9164042bbfad350435}
+Calculated the Ammonia Emission, N2 Emission, N2 OEmission, CO2 Emission and CH4 Emission. Those are added to the Indicat file 
+
+Reimplemented from \hyperlink{classbuilding_a584ba300427d2a648f478b68065b7a18}{building}.\hypertarget{classdungheap_ac8c6b260da69dabe3a0019f9a5d8d499}{
+\index{dungheap@{dungheap}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!dungheap@{dungheap}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void dungheap::GiveIndicator (int {\em indicatorType})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdungheap_ac8c6b260da69dabe3a0019f9a5d8d499}
+Calculate the total amount of slurry, n and c. Used for the indicat 
+
+Reimplemented from \hyperlink{classbuilding_ae0e21d6fc26978c65a980676ddf4fcdf}{building}.\hypertarget{classdungheap_a852054912c04f101c0a3310e80d6d53b}{
+\index{dungheap@{dungheap}!RcvManure@{RcvManure}}
+\index{RcvManure@{RcvManure}!dungheap@{dungheap}}
+\subsubsection[{RcvManure}]{\setlength{\rightskip}{0pt plus 5cm}void dungheap::RcvManure (const {\bf manure} $\ast$ {\em someManure})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdungheap_a852054912c04f101c0a3310e80d6d53b}
+receive \hyperlink{classmanure}{manure}. Accepted \hyperlink{classmanure}{manure} is:\char`\"{}FLUID-\/MANURE\char`\"{},\char`\"{}SOLID-\/MANURE\char`\"{},\char`\"{}WASHWATER\char`\"{},\char`\"{}STRAW\char`\"{},\char`\"{}WATER\char`\"{},\char`\"{}PIG-\/FYM\char`\"{} and \char`\"{}CATTLE-\/FYM\char`\"{} It cannot mix \char`\"{}CATTLE-\/FYM\char`\"{} and \char`\"{}PIG-\/FYM\char`\"{}. If there is not enough room for it on the surface some \hyperlink{classmanure}{manure} will be transfered to the store 
+
+Reimplemented from \hyperlink{classmanurestore_ab32685c2f4be9bb58269655cab7c96ee}{manurestore}.\hypertarget{classdungheap_a369749ce14a7061f1c1f4e0c6973d68f}{
+\index{dungheap@{dungheap}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!dungheap@{dungheap}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void dungheap::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classdungheap_a369749ce14a7061f1c1f4e0c6973d68f}
+Init reads the relevant values from its owners file 
+
+Reimplemented from \hyperlink{classbuilding_a5649b5598b63c3a4cf7a4e6e7d452d5d}{building}.\hypertarget{classdungheap_ac5ed38db9dc9fd3be29ebec8d5034402}{
+\index{dungheap@{dungheap}!VolatizeDung@{VolatizeDung}}
+\index{VolatizeDung@{VolatizeDung}!dungheap@{dungheap}}
+\subsubsection[{VolatizeDung}]{\setlength{\rightskip}{0pt plus 5cm}void dungheap::VolatizeDung (double $\ast$ {\em volatAmmonia}, \/  double $\ast$ {\em N2Emission}, \/  double $\ast$ {\em N2OEmission}, \/  double $\ast$ {\em CO2Emission}, \/  double $\ast$ {\em CH4Emission})}}
+\label{classdungheap_ac5ed38db9dc9fd3be29ebec8d5034402}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classdungheap_a90fa119f05925fe4eaa6d738c3db6f65}{
+\index{dungheap@{dungheap}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!dungheap@{dungheap}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  {\bf dungheap} {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classdungheap_a90fa119f05925fe4eaa6d738c3db6f65}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/building/\hyperlink{dungheap_8h}{dungheap.h}\item 
+C:/main/trunk/src/building/\hyperlink{dungheap_8cpp}{dungheap.cpp}\end{DoxyCompactItemize}

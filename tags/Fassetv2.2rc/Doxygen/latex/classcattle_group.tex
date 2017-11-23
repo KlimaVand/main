@@ -1,0 +1,438 @@
+\hypertarget{classcattle_group}{
+\section{cattleGroup Class Reference}
+\label{classcattle_group}\index{cattleGroup@{cattleGroup}}
+}
+
+
+{\ttfamily \#include $<$cattleGroup.h$>$}Inheritance diagram for cattleGroup::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classcattle_group}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcattle_group_a102bb5873e737914585e0e224df5af39}{cattleGroup} (const char $\ast$aName, const int aIndex, const \hyperlink{classbase}{base} $\ast$aOwner)
+\item 
+virtual \hyperlink{classcattle_group_a219cd352f81d78c80e2db2db42115759}{$\sim$cattleGroup} ()
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$ \hyperlink{classcattle_group_a47b11b9e0be1fb80820d8f86977ec707}{GetGroup} ()
+\item 
+void \hyperlink{classcattle_group_a14ec1ee0cbb551779d345f32ef826fe9}{SetnumberOfCohorts} (int aNumber)
+\item 
+void \hyperlink{classcattle_group_a1a4190031a49739e70822028a0579260}{SetnumberPerCohort} (double aNumber)
+\item 
+void \hyperlink{classcattle_group_ad530749d37d2e4c8af575699c79adb65}{SetminAge} (double anAge)
+\item 
+void \hyperlink{classcattle_group_aae729884313654275cbc05971e104637}{SetanimalSection} (\hyperlink{classanimal_section}{animalSection} $\ast$aStableSection)
+\item 
+void \hyperlink{classcattle_group_a43dfb891301a9a4c1452f2c8937c206f}{SettheCurrentDiet} (\hyperlink{classdiet}{diet} $\ast$aDiet)
+\item 
+void \hyperlink{classcattle_group_a8a49f4292ec8181467cdc9a1155d6782}{SetareYoung} (bool young)
+\item 
+void \hyperlink{classcattle_group_a17c74ae8a19301ebad46f82c82d4e188}{SetanimalModel} (int aModel)
+\item 
+\hyperlink{classdiet}{diet} $\ast$ \hyperlink{classcattle_group_a002c57c86825dcb46870c50ce97f9d79}{GettheCurrentDiet} () const 
+\item 
+int \hyperlink{classcattle_group_abd59eca5138e783ad615b0944915e072}{GetnumberOfCohorts} ()
+\item 
+int \hyperlink{classcattle_group_ac3b718d495e6af88eb4b9e26ec3bf795}{GetnumberInstances} ()
+\item 
+double \hyperlink{classcattle_group_a8c1f3939bebff589498dde95743927a6}{GetnumberPerCohort} ()
+\item 
+double \hyperlink{classcattle_group_aeb189fcd248d7444d6e23a3f5c36a8ef}{GetnumberOfAnimals} ()
+\item 
+\hyperlink{classcattle}{cattleptr} \hyperlink{classcattle_group_a2242557ba924ba92be1cbf0d25b6f422}{GetGroupMember} (int elementNum)
+\item 
+virtual string \hyperlink{classcattle_group_abc9e83055bbfc774f2cd1900cff76c5b}{GetAlias} ()
+\item 
+int \hyperlink{classcattle_group_a28dcd27ede1d2e379ac9393fbfe6bf3a}{Getcode} () const 
+\item 
+double \hyperlink{classcattle_group_ad9430200dcf4bbad6566b60680834a63}{GetmaxAge} () const 
+\item 
+double \hyperlink{classcattle_group_af902b9fb5f7c68c47a19f2858b96fa6f}{GetminAge} () const 
+\item 
+bool \hyperlink{classcattle_group_ac312442c56d183c4fff3c6b3a520a54f}{GetareFemale} () const 
+\item 
+int \hyperlink{classcattle_group_a86e0db44ae65503c4288b8f0f00caa0d}{GetanimalModel} ()
+\item 
+\hyperlink{classanimal_section}{animalSection} $\ast$ \hyperlink{classcattle_group_a1822e1d26e286df36a7f307e379cc684}{GetanimalSection} ()
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classdiet}{diet} $>$ $\ast$ \hyperlink{classcattle_group_a0eeb9f3381e384d990fbedf6a5fd5b16}{GetfeedPlanList} () const 
+\item 
+virtual void \hyperlink{classcattle_group_aa82f6f64e7b90b317c8178f11199e0f7}{ReadParameters} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classcattle_group_ae73c8abf22391b3baee45b5785c20653}{AddAnimal} (\hyperlink{classcattle}{cattle} $\ast$anAnimal)
+\item 
+void \hyperlink{classcattle_group_a727a18c5ed01a68ab343ec6688f618aa}{checkBalances} (bool show=false)
+\item 
+void \hyperlink{classcattle_group_a9f984d5505fca52ed79f950bc9c01a78}{InitCattleGrp} (fstream $\ast$\hyperlink{classbase_a3af52ee9891719d09b8b19b42450b6f6}{file})
+\item 
+void \hyperlink{classcattle_group_a50e5f5559c7f8ae9e0a4163ba0e6d602}{DailyUpdate} (void)
+\item 
+void \hyperlink{classcattle_group_a8b9c6a787edfd3af498b2637d7447f50}{CheckBirth} ()
+\item 
+void \hyperlink{classcattle_group_ab90b18a82f05308c895fd72e5d5447c4}{CheckAge} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$oldies)
+\item 
+void \hyperlink{classcattle_group_a0f7c6c00ebef0008d2206dde4b2430db}{SeedGroup} (double startAge, double endAge, int aggregation, int $\ast$IDnumber)
+\item 
+void \hyperlink{classcattle_group_aef414c795b55a4b9add2402bc6cf0aaa}{CullAnimals} (int numberToCull)
+\item 
+bool \hyperlink{classcattle_group_a29c365d2a7e0aa8fa2d2c09936306839}{CullAnimalFromGroup} (\hyperlink{classcattle}{cattle} $\ast$theVictim)
+\item 
+void \hyperlink{classcattle_group_aac8d50c5b32a65a1afd0ff10ea12503e}{CullAnimal} (\hyperlink{classcattle}{cattle} $\ast$theVictim, bool deleteAnimal)
+\item 
+void \hyperlink{classcattle_group_ab4dfc6412c67bd4c37cf793a611418bb}{AutoRecruit} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$recruitmentList, int $\ast$IDnumber)
+\item 
+double \hyperlink{classcattle_group_a3c3c4ab462568c477f17a3842f828559}{GetCattleGroupN} ()
+\item 
+double \hyperlink{classcattle_group_ae47b260227ef5e23c24491c3958121d1}{GetCattleGroupC} ()
+\item 
+void \hyperlink{classcattle_group_a9ed58662cb74b50fb0cd4bc4ebd4864a}{CheckWean} (\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$calves, bool stopLactation)
+\item 
+double \hyperlink{classcattle_group_a8ca2bba9c9b426014ad7ea7f87df06f3}{GetDE} ()
+\item 
+void \hyperlink{classcattle_group_a302e7ade98ec5f4c60c32f4123d14b09}{GiveIndicator} (int indicatorType)
+\item 
+\hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_group_a441a8a788280bfd2330560fae7fd7079}{buyNewAnimal} (double currentAge, int $\ast$IDnumber, bool logit)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classcattle}{cattle} $\ast$ \hyperlink{classcattle_group_ab46f6051e0fca98c9771d4cefa0e8804}{cattleptr}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlink_list}{linkList}$<$ \hyperlink{classcattle}{cattle} $>$ $\ast$ \hyperlink{classcattle_group_a1c789faa51d78a698838f6bed968bf18}{group}
+\item 
+string \hyperlink{classcattle_group_a4c70beb9810cf524d61e750781a1aaf6}{Alias}
+\item 
+double \hyperlink{classcattle_group_a7b4e3d4605387018845a000bb8721cb8}{LivestockUnits}
+\item 
+int \hyperlink{classcattle_group_a5cd24310ad3a445124c635e5ba4e3664}{numberOfCohorts}
+\item 
+double \hyperlink{classcattle_group_a33953aa20c4d369b4ea2d34aadfa7611}{numberPerCohort}
+\item 
+double \hyperlink{classcattle_group_afdc5fd94822e9734eff0f298cc5d7a21}{maxAge}
+\item 
+double \hyperlink{classcattle_group_aa1b9dd62ca0a63632fd7ae743c893b09}{minAge}
+\item 
+int \hyperlink{classcattle_group_a19e433886e9ece2f2005ade6b28f6b2b}{code}
+\item 
+bool \hyperlink{classcattle_group_a1748b0591b31f5aa3071dd05d8ad06af}{areFemale}
+\item 
+bool \hyperlink{classcattle_group_acb05bccffb8970efd702940d4bd27b2a}{areYoung}
+\item 
+int \hyperlink{classcattle_group_a801aff18209e94bd90e17ffa336fc504}{animalModel}
+\item 
+\hyperlink{classclone_list}{cloneList}$<$ \hyperlink{classdiet}{diet} $>$ $\ast$ \hyperlink{classcattle_group_ab56b9562942c055255babfb640612261}{feedPlanList}
+\item 
+\hyperlink{classdiet}{diet} $\ast$ \hyperlink{classcattle_group_ae11a48f54c12141636ea3bb1a47481ee}{theCurrentDiet}
+\item 
+\hyperlink{classanimal_section}{animalSection} $\ast$ \hyperlink{classcattle_group_a5af469b87a56a3051f06d3318266cc34}{StableSection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classcattle_group_ab46f6051e0fca98c9771d4cefa0e8804}{
+\index{cattleGroup@{cattleGroup}!cattleptr@{cattleptr}}
+\index{cattleptr@{cattleptr}!cattleGroup@{cattleGroup}}
+\subsubsection[{cattleptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf cattle}$\ast$ {\bf cattleGroup::cattleptr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_ab46f6051e0fca98c9771d4cefa0e8804}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcattle_group_a102bb5873e737914585e0e224df5af39}{
+\index{cattleGroup@{cattleGroup}!cattleGroup@{cattleGroup}}
+\index{cattleGroup@{cattleGroup}!cattleGroup@{cattleGroup}}
+\subsubsection[{cattleGroup}]{\setlength{\rightskip}{0pt plus 5cm}cattleGroup::cattleGroup (const char $\ast$ {\em aName}, \/  const int {\em aIndex}, \/  const {\bf base} $\ast$ {\em aOwner})}}
+\label{classcattle_group_a102bb5873e737914585e0e224df5af39}
+Constructor with arguments. Also call \hyperlink{classbase}{base}(const char $\ast$ aName, const int aIndex = -\/1, const \hyperlink{classbase}{base} $\ast$ aOwner = NULL); \hypertarget{classcattle_group_a219cd352f81d78c80e2db2db42115759}{
+\index{cattleGroup@{cattleGroup}!$\sim$cattleGroup@{$\sim$cattleGroup}}
+\index{$\sim$cattleGroup@{$\sim$cattleGroup}!cattleGroup@{cattleGroup}}
+\subsubsection[{$\sim$cattleGroup}]{\setlength{\rightskip}{0pt plus 5cm}cattleGroup::$\sim$cattleGroup ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_group_a219cd352f81d78c80e2db2db42115759}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcattle_group_ae73c8abf22391b3baee45b5785c20653}{
+\index{cattleGroup@{cattleGroup}!AddAnimal@{AddAnimal}}
+\index{AddAnimal@{AddAnimal}!cattleGroup@{cattleGroup}}
+\subsubsection[{AddAnimal}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::AddAnimal ({\bf cattle} $\ast$ {\em anAnimal})}}
+\label{classcattle_group_ae73c8abf22391b3baee45b5785c20653}
+Adds an Cattle to the group \hypertarget{classcattle_group_ab4dfc6412c67bd4c37cf793a611418bb}{
+\index{cattleGroup@{cattleGroup}!AutoRecruit@{AutoRecruit}}
+\index{AutoRecruit@{AutoRecruit}!cattleGroup@{cattleGroup}}
+\subsubsection[{AutoRecruit}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::AutoRecruit ({\bf linkList}$<$ {\bf cattle} $>$ $\ast$ {\em recruitmentList}, \/  int $\ast$ {\em IDnumber})}}
+\label{classcattle_group_ab4dfc6412c67bd4c37cf793a611418bb}
+Recruits animals to group if numbers are lacking. If recruitment list is not NULL then it will attempt to recruit from this list, otherwise it will buy animals \hypertarget{classcattle_group_a441a8a788280bfd2330560fae7fd7079}{
+\index{cattleGroup@{cattleGroup}!buyNewAnimal@{buyNewAnimal}}
+\index{buyNewAnimal@{buyNewAnimal}!cattleGroup@{cattleGroup}}
+\subsubsection[{buyNewAnimal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattle} $\ast$ cattleGroup::buyNewAnimal (double {\em currentAge}, \/  int $\ast$ {\em IDnumber}, \/  bool {\em logit})}}
+\label{classcattle_group_a441a8a788280bfd2330560fae7fd7079}
+Create a new Cattle \hypertarget{classcattle_group_ab90b18a82f05308c895fd72e5d5447c4}{
+\index{cattleGroup@{cattleGroup}!CheckAge@{CheckAge}}
+\index{CheckAge@{CheckAge}!cattleGroup@{cattleGroup}}
+\subsubsection[{CheckAge}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::CheckAge ({\bf linkList}$<$ {\bf cattle} $>$ $\ast$ {\em oldies})}}
+\label{classcattle_group_ab90b18a82f05308c895fd72e5d5447c4}
+See if any animals have out-\/aged their group and if so, extract them \hypertarget{classcattle_group_a727a18c5ed01a68ab343ec6688f618aa}{
+\index{cattleGroup@{cattleGroup}!checkBalances@{checkBalances}}
+\index{checkBalances@{checkBalances}!cattleGroup@{cattleGroup}}
+\subsubsection[{checkBalances}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::checkBalances (bool {\em show} = {\ttfamily false})}}
+\label{classcattle_group_a727a18c5ed01a68ab343ec6688f618aa}
+Check N \hyperlink{classbudget}{budget} for the animals \hypertarget{classcattle_group_a8b9c6a787edfd3af498b2637d7447f50}{
+\index{cattleGroup@{cattleGroup}!CheckBirth@{CheckBirth}}
+\index{CheckBirth@{CheckBirth}!cattleGroup@{cattleGroup}}
+\subsubsection[{CheckBirth}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::CheckBirth ()}}
+\label{classcattle_group_a8b9c6a787edfd3af498b2637d7447f50}
+Check to see if any calves are to be born \hypertarget{classcattle_group_a9ed58662cb74b50fb0cd4bc4ebd4864a}{
+\index{cattleGroup@{cattleGroup}!CheckWean@{CheckWean}}
+\index{CheckWean@{CheckWean}!cattleGroup@{cattleGroup}}
+\subsubsection[{CheckWean}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::CheckWean ({\bf linkList}$<$ {\bf cattle} $>$ $\ast$ {\em calves}, \/  bool {\em stopLactation})}}
+\label{classcattle_group_a9ed58662cb74b50fb0cd4bc4ebd4864a}
+Checks to see if any calves should be weaned and if so, punts them into pointycalves Note: Up to another function (currently in grazing manager) to set suckling to false and therefore prompt weaning. \hypertarget{classcattle_group_aac8d50c5b32a65a1afd0ff10ea12503e}{
+\index{cattleGroup@{cattleGroup}!CullAnimal@{CullAnimal}}
+\index{CullAnimal@{CullAnimal}!cattleGroup@{cattleGroup}}
+\subsubsection[{CullAnimal}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::CullAnimal ({\bf cattle} $\ast$ {\em theVictim}, \/  bool {\em deleteAnimal})}}
+\label{classcattle_group_aac8d50c5b32a65a1afd0ff10ea12503e}
+Cull an \hyperlink{classanimal}{animal}. Delete \hyperlink{classanimal}{animal} if deleteAnimal is true, otherwise it will be done elsewhere \hypertarget{classcattle_group_a29c365d2a7e0aa8fa2d2c09936306839}{
+\index{cattleGroup@{cattleGroup}!CullAnimalFromGroup@{CullAnimalFromGroup}}
+\index{CullAnimalFromGroup@{CullAnimalFromGroup}!cattleGroup@{cattleGroup}}
+\subsubsection[{CullAnimalFromGroup}]{\setlength{\rightskip}{0pt plus 5cm}bool cattleGroup::CullAnimalFromGroup ({\bf cattle} $\ast$ {\em theVictim})}}
+\label{classcattle_group_a29c365d2a7e0aa8fa2d2c09936306839}
+Culls specific a \hyperlink{classanimal}{animal}. If \hyperlink{classanimal}{animal} is in this group then returns true, otherwise false \hypertarget{classcattle_group_aef414c795b55a4b9add2402bc6cf0aaa}{
+\index{cattleGroup@{cattleGroup}!CullAnimals@{CullAnimals}}
+\index{CullAnimals@{CullAnimals}!cattleGroup@{cattleGroup}}
+\subsubsection[{CullAnimals}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::CullAnimals (int {\em numberToCull})}}
+\label{classcattle_group_aef414c795b55a4b9add2402bc6cf0aaa}
+Culls animals (oldest go first) \hypertarget{classcattle_group_a50e5f5559c7f8ae9e0a4163ba0e6d602}{
+\index{cattleGroup@{cattleGroup}!DailyUpdate@{DailyUpdate}}
+\index{DailyUpdate@{DailyUpdate}!cattleGroup@{cattleGroup}}
+\subsubsection[{DailyUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::DailyUpdate (void)}}
+\label{classcattle_group_a50e5f5559c7f8ae9e0a4163ba0e6d602}
+DailyUpdate is called daily \hypertarget{classcattle_group_abc9e83055bbfc774f2cd1900cff76c5b}{
+\index{cattleGroup@{cattleGroup}!GetAlias@{GetAlias}}
+\index{GetAlias@{GetAlias}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetAlias}]{\setlength{\rightskip}{0pt plus 5cm}virtual string cattleGroup::GetAlias ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classcattle_group_abc9e83055bbfc774f2cd1900cff76c5b}
+\hypertarget{classcattle_group_a86e0db44ae65503c4288b8f0f00caa0d}{
+\index{cattleGroup@{cattleGroup}!GetanimalModel@{GetanimalModel}}
+\index{GetanimalModel@{GetanimalModel}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetanimalModel}]{\setlength{\rightskip}{0pt plus 5cm}int cattleGroup::GetanimalModel ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a86e0db44ae65503c4288b8f0f00caa0d}
+\hypertarget{classcattle_group_a1822e1d26e286df36a7f307e379cc684}{
+\index{cattleGroup@{cattleGroup}!GetanimalSection@{GetanimalSection}}
+\index{GetanimalSection@{GetanimalSection}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetanimalSection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalSection}$\ast$ cattleGroup::GetanimalSection ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a1822e1d26e286df36a7f307e379cc684}
+\hypertarget{classcattle_group_ac312442c56d183c4fff3c6b3a520a54f}{
+\index{cattleGroup@{cattleGroup}!GetareFemale@{GetareFemale}}
+\index{GetareFemale@{GetareFemale}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetareFemale}]{\setlength{\rightskip}{0pt plus 5cm}bool cattleGroup::GetareFemale () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_ac312442c56d183c4fff3c6b3a520a54f}
+\hypertarget{classcattle_group_ae47b260227ef5e23c24491c3958121d1}{
+\index{cattleGroup@{cattleGroup}!GetCattleGroupC@{GetCattleGroupC}}
+\index{GetCattleGroupC@{GetCattleGroupC}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetCattleGroupC}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetCattleGroupC ()}}
+\label{classcattle_group_ae47b260227ef5e23c24491c3958121d1}
+Returns the total C contained in the group \hypertarget{classcattle_group_a3c3c4ab462568c477f17a3842f828559}{
+\index{cattleGroup@{cattleGroup}!GetCattleGroupN@{GetCattleGroupN}}
+\index{GetCattleGroupN@{GetCattleGroupN}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetCattleGroupN}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetCattleGroupN ()}}
+\label{classcattle_group_a3c3c4ab462568c477f17a3842f828559}
+Returns the total N contained in the group \hypertarget{classcattle_group_a28dcd27ede1d2e379ac9393fbfe6bf3a}{
+\index{cattleGroup@{cattleGroup}!Getcode@{Getcode}}
+\index{Getcode@{Getcode}!cattleGroup@{cattleGroup}}
+\subsubsection[{Getcode}]{\setlength{\rightskip}{0pt plus 5cm}int cattleGroup::Getcode () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a28dcd27ede1d2e379ac9393fbfe6bf3a}
+\hypertarget{classcattle_group_a8ca2bba9c9b426014ad7ea7f87df06f3}{
+\index{cattleGroup@{cattleGroup}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetDE}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetDE ()}}
+\label{classcattle_group_a8ca2bba9c9b426014ad7ea7f87df06f3}
+return the sum of all Cattle \hypertarget{classcattle_group_a0eeb9f3381e384d990fbedf6a5fd5b16}{
+\index{cattleGroup@{cattleGroup}!GetfeedPlanList@{GetfeedPlanList}}
+\index{GetfeedPlanList@{GetfeedPlanList}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetfeedPlanList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf diet}$>$$\ast$ cattleGroup::GetfeedPlanList () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a0eeb9f3381e384d990fbedf6a5fd5b16}
+\hypertarget{classcattle_group_a47b11b9e0be1fb80820d8f86977ec707}{
+\index{cattleGroup@{cattleGroup}!GetGroup@{GetGroup}}
+\index{GetGroup@{GetGroup}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetGroup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattle}$>$$\ast$ cattleGroup::GetGroup ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a47b11b9e0be1fb80820d8f86977ec707}
+\hypertarget{classcattle_group_a2242557ba924ba92be1cbf0d25b6f422}{
+\index{cattleGroup@{cattleGroup}!GetGroupMember@{GetGroupMember}}
+\index{GetGroupMember@{GetGroupMember}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetGroupMember}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cattleptr} cattleGroup::GetGroupMember (int {\em elementNum})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a2242557ba924ba92be1cbf0d25b6f422}
+\hypertarget{classcattle_group_ad9430200dcf4bbad6566b60680834a63}{
+\index{cattleGroup@{cattleGroup}!GetmaxAge@{GetmaxAge}}
+\index{GetmaxAge@{GetmaxAge}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetmaxAge}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetmaxAge () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_ad9430200dcf4bbad6566b60680834a63}
+\hypertarget{classcattle_group_af902b9fb5f7c68c47a19f2858b96fa6f}{
+\index{cattleGroup@{cattleGroup}!GetminAge@{GetminAge}}
+\index{GetminAge@{GetminAge}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetminAge}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetminAge () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_af902b9fb5f7c68c47a19f2858b96fa6f}
+\hypertarget{classcattle_group_ac3b718d495e6af88eb4b9e26ec3bf795}{
+\index{cattleGroup@{cattleGroup}!GetnumberInstances@{GetnumberInstances}}
+\index{GetnumberInstances@{GetnumberInstances}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetnumberInstances}]{\setlength{\rightskip}{0pt plus 5cm}int cattleGroup::GetnumberInstances ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_ac3b718d495e6af88eb4b9e26ec3bf795}
+\hypertarget{classcattle_group_aeb189fcd248d7444d6e23a3f5c36a8ef}{
+\index{cattleGroup@{cattleGroup}!GetnumberOfAnimals@{GetnumberOfAnimals}}
+\index{GetnumberOfAnimals@{GetnumberOfAnimals}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetnumberOfAnimals}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetnumberOfAnimals ()}}
+\label{classcattle_group_aeb189fcd248d7444d6e23a3f5c36a8ef}
+return the sum of all Cattle \hypertarget{classcattle_group_abd59eca5138e783ad615b0944915e072}{
+\index{cattleGroup@{cattleGroup}!GetnumberOfCohorts@{GetnumberOfCohorts}}
+\index{GetnumberOfCohorts@{GetnumberOfCohorts}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetnumberOfCohorts}]{\setlength{\rightskip}{0pt plus 5cm}int cattleGroup::GetnumberOfCohorts ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_abd59eca5138e783ad615b0944915e072}
+\hypertarget{classcattle_group_a8c1f3939bebff589498dde95743927a6}{
+\index{cattleGroup@{cattleGroup}!GetnumberPerCohort@{GetnumberPerCohort}}
+\index{GetnumberPerCohort@{GetnumberPerCohort}!cattleGroup@{cattleGroup}}
+\subsubsection[{GetnumberPerCohort}]{\setlength{\rightskip}{0pt plus 5cm}double cattleGroup::GetnumberPerCohort ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a8c1f3939bebff589498dde95743927a6}
+\hypertarget{classcattle_group_a002c57c86825dcb46870c50ce97f9d79}{
+\index{cattleGroup@{cattleGroup}!GettheCurrentDiet@{GettheCurrentDiet}}
+\index{GettheCurrentDiet@{GettheCurrentDiet}!cattleGroup@{cattleGroup}}
+\subsubsection[{GettheCurrentDiet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf diet}$\ast$ cattleGroup::GettheCurrentDiet () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a002c57c86825dcb46870c50ce97f9d79}
+\hypertarget{classcattle_group_a302e7ade98ec5f4c60c32f4123d14b09}{
+\index{cattleGroup@{cattleGroup}!GiveIndicator@{GiveIndicator}}
+\index{GiveIndicator@{GiveIndicator}!cattleGroup@{cattleGroup}}
+\subsubsection[{GiveIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::GiveIndicator (int {\em indicatorType})}}
+\label{classcattle_group_a302e7ade98ec5f4c60c32f4123d14b09}
+if input is economicIndicator the indicat.xls will have values and number from the group \hypertarget{classcattle_group_a9f984d5505fca52ed79f950bc9c01a78}{
+\index{cattleGroup@{cattleGroup}!InitCattleGrp@{InitCattleGrp}}
+\index{InitCattleGrp@{InitCattleGrp}!cattleGroup@{cattleGroup}}
+\subsubsection[{InitCattleGrp}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::InitCattleGrp (fstream $\ast$ {\em file})}}
+\label{classcattle_group_a9f984d5505fca52ed79f950bc9c01a78}
+\hypertarget{classcattle_group_aa82f6f64e7b90b317c8178f11199e0f7}{
+\index{cattleGroup@{cattleGroup}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!cattleGroup@{cattleGroup}}
+\subsubsection[{ReadParameters}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::ReadParameters (fstream $\ast$ {\em file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcattle_group_aa82f6f64e7b90b317c8178f11199e0f7}
+Read parameters for group \hypertarget{classcattle_group_a0f7c6c00ebef0008d2206dde4b2430db}{
+\index{cattleGroup@{cattleGroup}!SeedGroup@{SeedGroup}}
+\index{SeedGroup@{SeedGroup}!cattleGroup@{cattleGroup}}
+\subsubsection[{SeedGroup}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SeedGroup (double {\em startAge}, \/  double {\em endAge}, \/  int {\em aggregation}, \/  int $\ast$ {\em IDnumber})}}
+\label{classcattle_group_a0f7c6c00ebef0008d2206dde4b2430db}
+Creates an number of animals spaced at even age increments \hypertarget{classcattle_group_a17c74ae8a19301ebad46f82c82d4e188}{
+\index{cattleGroup@{cattleGroup}!SetanimalModel@{SetanimalModel}}
+\index{SetanimalModel@{SetanimalModel}!cattleGroup@{cattleGroup}}
+\subsubsection[{SetanimalModel}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SetanimalModel (int {\em aModel})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a17c74ae8a19301ebad46f82c82d4e188}
+\hypertarget{classcattle_group_aae729884313654275cbc05971e104637}{
+\index{cattleGroup@{cattleGroup}!SetanimalSection@{SetanimalSection}}
+\index{SetanimalSection@{SetanimalSection}!cattleGroup@{cattleGroup}}
+\subsubsection[{SetanimalSection}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SetanimalSection ({\bf animalSection} $\ast$ {\em aStableSection})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_aae729884313654275cbc05971e104637}
+\hypertarget{classcattle_group_a8a49f4292ec8181467cdc9a1155d6782}{
+\index{cattleGroup@{cattleGroup}!SetareYoung@{SetareYoung}}
+\index{SetareYoung@{SetareYoung}!cattleGroup@{cattleGroup}}
+\subsubsection[{SetareYoung}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SetareYoung (bool {\em young})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a8a49f4292ec8181467cdc9a1155d6782}
+\hypertarget{classcattle_group_ad530749d37d2e4c8af575699c79adb65}{
+\index{cattleGroup@{cattleGroup}!SetminAge@{SetminAge}}
+\index{SetminAge@{SetminAge}!cattleGroup@{cattleGroup}}
+\subsubsection[{SetminAge}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SetminAge (double {\em anAge})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_ad530749d37d2e4c8af575699c79adb65}
+\hypertarget{classcattle_group_a14ec1ee0cbb551779d345f32ef826fe9}{
+\index{cattleGroup@{cattleGroup}!SetnumberOfCohorts@{SetnumberOfCohorts}}
+\index{SetnumberOfCohorts@{SetnumberOfCohorts}!cattleGroup@{cattleGroup}}
+\subsubsection[{SetnumberOfCohorts}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SetnumberOfCohorts (int {\em aNumber})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a14ec1ee0cbb551779d345f32ef826fe9}
+\hypertarget{classcattle_group_a1a4190031a49739e70822028a0579260}{
+\index{cattleGroup@{cattleGroup}!SetnumberPerCohort@{SetnumberPerCohort}}
+\index{SetnumberPerCohort@{SetnumberPerCohort}!cattleGroup@{cattleGroup}}
+\subsubsection[{SetnumberPerCohort}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SetnumberPerCohort (double {\em aNumber})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a1a4190031a49739e70822028a0579260}
+\hypertarget{classcattle_group_a43dfb891301a9a4c1452f2c8937c206f}{
+\index{cattleGroup@{cattleGroup}!SettheCurrentDiet@{SettheCurrentDiet}}
+\index{SettheCurrentDiet@{SettheCurrentDiet}!cattleGroup@{cattleGroup}}
+\subsubsection[{SettheCurrentDiet}]{\setlength{\rightskip}{0pt plus 5cm}void cattleGroup::SettheCurrentDiet ({\bf diet} $\ast$ {\em aDiet})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classcattle_group_a43dfb891301a9a4c1452f2c8937c206f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcattle_group_a4c70beb9810cf524d61e750781a1aaf6}{
+\index{cattleGroup@{cattleGroup}!Alias@{Alias}}
+\index{Alias@{Alias}!cattleGroup@{cattleGroup}}
+\subsubsection[{Alias}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf cattleGroup::Alias}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a4c70beb9810cf524d61e750781a1aaf6}
+\hypertarget{classcattle_group_a801aff18209e94bd90e17ffa336fc504}{
+\index{cattleGroup@{cattleGroup}!animalModel@{animalModel}}
+\index{animalModel@{animalModel}!cattleGroup@{cattleGroup}}
+\subsubsection[{animalModel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattleGroup::animalModel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a801aff18209e94bd90e17ffa336fc504}
+\hypertarget{classcattle_group_a1748b0591b31f5aa3071dd05d8ad06af}{
+\index{cattleGroup@{cattleGroup}!areFemale@{areFemale}}
+\index{areFemale@{areFemale}!cattleGroup@{cattleGroup}}
+\subsubsection[{areFemale}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattleGroup::areFemale}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a1748b0591b31f5aa3071dd05d8ad06af}
+\hypertarget{classcattle_group_acb05bccffb8970efd702940d4bd27b2a}{
+\index{cattleGroup@{cattleGroup}!areYoung@{areYoung}}
+\index{areYoung@{areYoung}!cattleGroup@{cattleGroup}}
+\subsubsection[{areYoung}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf cattleGroup::areYoung}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_acb05bccffb8970efd702940d4bd27b2a}
+\hypertarget{classcattle_group_a19e433886e9ece2f2005ade6b28f6b2b}{
+\index{cattleGroup@{cattleGroup}!code@{code}}
+\index{code@{code}!cattleGroup@{cattleGroup}}
+\subsubsection[{code}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattleGroup::code}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a19e433886e9ece2f2005ade6b28f6b2b}
+\hypertarget{classcattle_group_ab56b9562942c055255babfb640612261}{
+\index{cattleGroup@{cattleGroup}!feedPlanList@{feedPlanList}}
+\index{feedPlanList@{feedPlanList}!cattleGroup@{cattleGroup}}
+\subsubsection[{feedPlanList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cloneList}$<${\bf diet}$>$$\ast$ {\bf cattleGroup::feedPlanList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_ab56b9562942c055255babfb640612261}
+\hypertarget{classcattle_group_a1c789faa51d78a698838f6bed968bf18}{
+\index{cattleGroup@{cattleGroup}!group@{group}}
+\index{group@{group}!cattleGroup@{cattleGroup}}
+\subsubsection[{group}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkList}$<${\bf cattle}$>$$\ast$ {\bf cattleGroup::group}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a1c789faa51d78a698838f6bed968bf18}
+\hypertarget{classcattle_group_a7b4e3d4605387018845a000bb8721cb8}{
+\index{cattleGroup@{cattleGroup}!LivestockUnits@{LivestockUnits}}
+\index{LivestockUnits@{LivestockUnits}!cattleGroup@{cattleGroup}}
+\subsubsection[{LivestockUnits}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattleGroup::LivestockUnits}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a7b4e3d4605387018845a000bb8721cb8}
+\hypertarget{classcattle_group_afdc5fd94822e9734eff0f298cc5d7a21}{
+\index{cattleGroup@{cattleGroup}!maxAge@{maxAge}}
+\index{maxAge@{maxAge}!cattleGroup@{cattleGroup}}
+\subsubsection[{maxAge}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattleGroup::maxAge}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_afdc5fd94822e9734eff0f298cc5d7a21}
+\hypertarget{classcattle_group_aa1b9dd62ca0a63632fd7ae743c893b09}{
+\index{cattleGroup@{cattleGroup}!minAge@{minAge}}
+\index{minAge@{minAge}!cattleGroup@{cattleGroup}}
+\subsubsection[{minAge}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattleGroup::minAge}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_aa1b9dd62ca0a63632fd7ae743c893b09}
+\hypertarget{classcattle_group_a5cd24310ad3a445124c635e5ba4e3664}{
+\index{cattleGroup@{cattleGroup}!numberOfCohorts@{numberOfCohorts}}
+\index{numberOfCohorts@{numberOfCohorts}!cattleGroup@{cattleGroup}}
+\subsubsection[{numberOfCohorts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cattleGroup::numberOfCohorts}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a5cd24310ad3a445124c635e5ba4e3664}
+\hypertarget{classcattle_group_a33953aa20c4d369b4ea2d34aadfa7611}{
+\index{cattleGroup@{cattleGroup}!numberPerCohort@{numberPerCohort}}
+\index{numberPerCohort@{numberPerCohort}!cattleGroup@{cattleGroup}}
+\subsubsection[{numberPerCohort}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cattleGroup::numberPerCohort}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a33953aa20c4d369b4ea2d34aadfa7611}
+\hypertarget{classcattle_group_a5af469b87a56a3051f06d3318266cc34}{
+\index{cattleGroup@{cattleGroup}!StableSection@{StableSection}}
+\index{StableSection@{StableSection}!cattleGroup@{cattleGroup}}
+\subsubsection[{StableSection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf animalSection}$\ast$ {\bf cattleGroup::StableSection}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_a5af469b87a56a3051f06d3318266cc34}
+\hypertarget{classcattle_group_ae11a48f54c12141636ea3bb1a47481ee}{
+\index{cattleGroup@{cattleGroup}!theCurrentDiet@{theCurrentDiet}}
+\index{theCurrentDiet@{theCurrentDiet}!cattleGroup@{cattleGroup}}
+\subsubsection[{theCurrentDiet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf diet}$\ast$ {\bf cattleGroup::theCurrentDiet}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcattle_group_ae11a48f54c12141636ea3bb1a47481ee}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/main/trunk/src/livestock/\hyperlink{cattle_group_8h}{cattleGroup.h}\item 
+C:/main/trunk/src/livestock/\hyperlink{cattle_group_8cpp}{cattleGroup.cpp}\end{DoxyCompactItemize}

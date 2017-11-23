@@ -1,0 +1,124 @@
+[SoilParameters]              // Data for "jordprofildatabasen" DJF+HYDRES model
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        150
+SoilType         10
+ConductivityFC  -8.22                 // log10(m/s) from O.H.Jacobsen p 60
+DryBulkDensity   1.40                     
+ClayContent      0.25
+SiltContent      0.55
+MualemVanGenucten 1
+
+CarbonPct        3.00
+CNRatio	11
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.049707917
+IOM	0.405174
+IOM.N	0.037624131
+
+
+[SoilLayer(2)]
+Thickness        150
+SoilType         10
+ConductivityFC  -8.76
+DryBulkDensity   1.68                     
+ClayContent      0.25
+SiltContent      0.55
+MualemVanGenucten 1
+
+CarbonPct        3.00
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+
+[SoilLayer(3)]
+Thickness        150
+SoilType         10
+ConductivityFC  -8.76
+DryBulkDensity   1.68                     
+ClayContent      0.24
+SiltContent      0.50
+MualemVanGenucten 1
+
+CarbonPct        2.20
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+
+[SoilLayer(4)]
+Thickness        450
+SoilType         10
+ConductivityFC  -8.77
+DryBulkDensity   1.71                   
+ClayContent      0.24
+SiltContent      0.50
+MualemVanGenucten 1
+
+CarbonPct        0.80
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+
+[SoilLayer(5)]
+Thickness        2100
+SoilType         10
+ConductivityFC  -8.77
+DryBulkDensity   1.71                   
+ClayContent      0.500
+SiltContent      0.150
+MualemVanGenucten 1
+
+CarbonPct        0.30
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+[end]
