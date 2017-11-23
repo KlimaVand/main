@@ -1,0 +1,13 @@
+
+First time:
+1: checkout http://apsrunet.apsim.info/svn/apsim/trunk 
+2: Download binarys from http://bob.apsim.info/BobWeb/Bob.aspx and place it in: C:\<path>\apsim\Model
+
+Other times:
+1: Revert all personal changes (use svn builin revert)
+2: Update svn
+3: redownload the binary from http://bob.apsim.info/BobWeb/Bob.aspx and overwrite the old files
+
+All:
+1: if you need costume data types you can add it like main\technical_documentation\Apsim\Apsim with our Datastructors.txt and see how our own data types look like at main\branches\SlurryModelCSharpApsim\ownDataStructor.txt
+2: Make C# in visual studio for each module you want. See http://www.apsim.info/Wiki/Configuring%20Visual%20Studio.ashx and main\technical_documentation\Apsim\Apsim module insertion and debugging.dox

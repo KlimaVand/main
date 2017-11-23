@@ -1,0 +1,5 @@
+folder name must be fasset-version and should be compressed to a tar.gz file (can be done with ark)
+
+in fasset-version run dh_make -f ../fasset-version.tar.gz to generate some files needed
+dpkg-buildpackage to build it
+debrelease -t mentors to upload it. A user at http://mentors.debian.net/ must be created with a key before it can be done

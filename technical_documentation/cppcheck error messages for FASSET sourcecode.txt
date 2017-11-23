@@ -1,0 +1,240 @@
+Description	Resource	Path	Location	Type
+Assignment to itself 'show=show'	animal.cpp	/Fassetv2.2.2impacts/source/livestock	line 186	Code Analysis Problem
+Assignment to itself 'epot = epot'	climate.cpp	/Fassetv2.2.2impacts/source/base	line 693	Code Analysis Problem
+Assignment to itself 'epot = epot'	climate.cpp	/Fassetv2.2.2impacts/source/base	line 767	Code Analysis Problem
+Assignment to itself 'aWriteSoilTemperature=aWriteSoilTemperature'	systemData.h	/Fassetv2.2.2impacts/source/data	line 213	Code Analysis Problem
+(cppcheck error) Unusual pointer arithmetic	price.cpp	/Fassetv2.2.2impacts/source/products	line 168	cppcheck Problem
+(cppcheck error) Unusual pointer arithmetic	price.cpp	/Fassetv2.2.2impacts/source/products	line 173	cppcheck Problem
+(cppcheck error) Uninitialized variable: CO2PhotEffect	crop.cpp	/Fassetv2.2.2impacts/source/fields/crops	line 1302	cppcheck Problem
+(cppcheck error) Uninitialized variable: CO2PhotEffect	crop.cpp	/Fassetv2.2.2impacts/source/fields/crops	line 1903	cppcheck Problem
+(cppcheck error) Resource leak: d	fileAccess.cpp	/Fassetv2.2.2impacts/source/tools	line 122	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: thePatches - otherwise it is redundant to check if thePatches is null at line 368	field.cpp	/Fassetv2.2.2impacts/source/fields	line 384	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: thePatches - otherwise it is redundant to check if thePatches is null at line 368	field.cpp	/Fassetv2.2.2impacts/source/fields	line 386	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: thePatches - otherwise it is redundant to check if thePatches is null at line 368	field.cpp	/Fassetv2.2.2impacts/source/fields	line 387	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: thePatches - otherwise it is redundant to check if thePatches is null at line 368	field.cpp	/Fassetv2.2.2impacts/source/fields	line 388	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: Storage - otherwise it is redundant to check if Storage is null at line 1833	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1809	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: Storage - otherwise it is redundant to check if Storage is null at line 1833	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1816	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: soilManure - otherwise it is redundant to check if soilManure is null at line 622	patch.cpp	/Fassetv2.2.2impacts/source/fields	line 623	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: rootList - otherwise it is redundant to check if rootList is null at line 2086	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 2108	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: rootList - otherwise it is redundant to check if rootList is null at line 1987	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 1991	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: newCrop - otherwise it is redundant to check if newCrop is null at line 1178	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1180	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: newCrop - otherwise it is redundant to check if newCrop is null at line 1178	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1181	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: feedPlanList - otherwise it is redundant to check if feedPlanList is null at line 669	cattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 675	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: feedPlanList - otherwise it is redundant to check if feedPlanList is null at line 669	cattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 677	cppcheck Problem
+(cppcheck error) Possible null pointer dereference: cropManure - otherwise it is redundant to check if cropManure is null at line 630	patch.cpp	/Fassetv2.2.2impacts/source/fields	line 631	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 67	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 69	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 71	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 89	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 91	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 111	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 113	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 115	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 138	cppcheck Problem
+(cppcheck error) Null pointer dereference	pigstable.cpp	/Fassetv2.2.2impacts/source/building	line 140	cppcheck Problem
+(cppcheck error) Mismatching allocation and deallocation: cName	fileAccess.cpp	/Fassetv2.2.2impacts/source/tools	line 110	cppcheck Problem
+(cppcheck error) Memory leak: tagString	fieldOrderPeriod.cpp	/Fassetv2.2.2impacts/source/fields	line 61	cppcheck Problem
+(cppcheck error) Memory leak: stepSize	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 2505	cppcheck Problem
+(cppcheck error) Memory leak: place	fileAccess.cpp	/Fassetv2.2.2impacts/source/tools	line 209	cppcheck Problem
+(cppcheck error) Buffer access out-of-bounds	MMSClass.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 412	cppcheck Problem
+(cppcheck error) Buffer access out-of-bounds	eventControl.cpp	/Fassetv2.2.2impacts/source/event	line 336	cppcheck Problem
+Suspicious semicolon	climate.cpp	/Fassetv2.2.2impacts/source/base	line 222	Code Analysis Problem
+Suspicious semicolon	environData.cpp	/Fassetv2.2.2impacts/source/data	line 41	Code Analysis Problem
+Suspicious semicolon	fieldOrder.cpp	/Fassetv2.2.2impacts/source/fields	line 613	Code Analysis Problem
+Suggested parenthesis around expression '!aCrop->IsUndersown() && !aCrop->GetTerminated()'	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1732	Code Analysis Problem
+No return, in function returning non-void	crop.cpp	/Fassetv2.2.2impacts/source/fields/crops	line 880	Code Analysis Problem
+No break at the end of this case	ALFAM.cpp	/Fassetv2.2.2impacts/source/fields	line 130	Code Analysis Problem
+No break at the end of this case	addedPool.cpp	/Fassetv2.2.2impacts/source/soil	line 91	Code Analysis Problem
+No break at the end of this case	animalFertTech.cpp	/Fassetv2.2.2impacts/source/technics	line 99	Code Analysis Problem
+No break at the end of this case	bioMatter.cpp	/Fassetv2.2.2impacts/source/soil	line 332	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 233	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 235	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 237	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 239	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 241	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 243	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 245	Code Analysis Problem
+No break at the end of this case	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 247	Code Analysis Problem
+No break at the end of this case	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1704	Code Analysis Problem
+No break at the end of this case	feedItem.cpp	/Fassetv2.2.2impacts/source/products	line 664	Code Analysis Problem
+No break at the end of this case	field.cpp	/Fassetv2.2.2impacts/source/fields	line 1942	Code Analysis Problem
+No break at the end of this case	floorstore.cpp	/Fassetv2.2.2impacts/source/building	line 89	Code Analysis Problem
+No break at the end of this case	harvestTech.cpp	/Fassetv2.2.2impacts/source/technics	line 136	Code Analysis Problem
+No break at the end of this case	irrigateTech.cpp	/Fassetv2.2.2impacts/source/technics	line 84	Code Analysis Problem
+No break at the end of this case	matter.cpp	/Fassetv2.2.2impacts/source/soil	line 397	Code Analysis Problem
+No break at the end of this case	mineralFertTech.cpp	/Fassetv2.2.2impacts/source/technics	line 121	Code Analysis Problem
+No break at the end of this case	organicMatter.cpp	/Fassetv2.2.2impacts/source/soil	line 667	Code Analysis Problem
+No break at the end of this case	organicMatter.cpp	/Fassetv2.2.2impacts/source/soil	line 738	Code Analysis Problem
+No break at the end of this case	organicMatter.cpp	/Fassetv2.2.2impacts/source/soil	line 794	Code Analysis Problem
+No break at the end of this case	patch.cpp	/Fassetv2.2.2impacts/source/fields	line 269	Code Analysis Problem
+No break at the end of this case	patchinterface.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 115	Code Analysis Problem
+No break at the end of this case	patchinterface.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 154	Code Analysis Problem
+No break at the end of this case	plantCareTech.cpp	/Fassetv2.2.2impacts/source/technics	line 137	Code Analysis Problem
+No break at the end of this case	products.cpp	/Fassetv2.2.2impacts/source/products	line 798	Code Analysis Problem
+No break at the end of this case	soilTreatTech.cpp	/Fassetv2.2.2impacts/source/technics	line 68	Code Analysis Problem
+No break at the end of this case	sowTech.cpp	/Fassetv2.2.2impacts/source/technics	line 106	Code Analysis Problem
+No break at the end of this case	staticBeet.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 344	Code Analysis Problem
+No break at the end of this case	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 418	Code Analysis Problem
+No break at the end of this case	staticMaize.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 212	Code Analysis Problem
+No break at the end of this case	staticOat.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 282	Code Analysis Problem
+No break at the end of this case	staticPotato.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 252	Code Analysis Problem
+No break at the end of this case	staticRye.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 434	Code Analysis Problem
+No break at the end of this case	staticSbarley.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 337	Code Analysis Problem
+No break at the end of this case	staticSrape.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 408	Code Analysis Problem
+No break at the end of this case	staticSwheat.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 355	Code Analysis Problem
+No break at the end of this case	staticWbarley.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 399	Code Analysis Problem
+No break at the end of this case	staticWrape.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 391	Code Analysis Problem
+No break at the end of this case	staticWwheat.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 429	Code Analysis Problem
+Class 'storage' has virtual method 'GetFromStore' but non-virtual destructor	storage.h	/Fassetv2.2.2impacts/source/building	line 17	Code Analysis Problem
+Class 'floorstore' has virtual method 'ScaleSize' but non-virtual destructor	floorstore.h	/Fassetv2.2.2impacts/source/building	line 62	Code Analysis Problem
+Class 'buildings' has virtual method 'CalcLP' but non-virtual destructor	thebuild.h	/Fassetv2.2.2impacts/source/building	line 60	Code Analysis Problem
+Class 'building' has virtual method 'GetArea' but non-virtual destructor	building.h	/Fassetv2.2.2impacts/source/building	line 39	Code Analysis Problem
+Class 'barnStorage' has virtual method 'GiveIndicator' but non-virtual destructor	barnStorage.h	/Fassetv2.2.2impacts/source/building	line 43	Code Analysis Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	animalFertTech.cpp	/Fassetv2.2.2impacts/source/technics	line 25	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 66	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 88	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	bstime.cpp	/Fassetv2.2.2impacts/source/base	line 101	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	pFCurveImplementation.cpp	/Fassetv2.2.2impacts/source/soil	line 147	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	pFCurveImplementation.cpp	/Fassetv2.2.2impacts/source/soil	line 151	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	pFCurveImplementation.cpp	/Fassetv2.2.2impacts/source/soil	line 201	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	pFCurveImplementation.cpp	/Fassetv2.2.2impacts/source/soil	line 204	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 49	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 99	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 100	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 282	cppcheck Problem
+(cppcheck warning) Redundant code: Found a statement that begins with numeric constant	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 284	cppcheck Problem
+(cppcheck warning) Redundant assignment of "update" to itself	silageFields.cpp	/Fassetv2.2.2impacts/source/fields/fieldOperation	line 82	cppcheck Problem
+(cppcheck warning) Redundant assignment of "show" to itself	animal.cpp	/Fassetv2.2.2impacts/source/livestock	line 186	cppcheck Problem
+(cppcheck warning) Redundant assignment of "reduction" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 542	cppcheck Problem
+(cppcheck warning) Redundant assignment of "reduction" to itself	staticGrazingGrass.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 29	cppcheck Problem
+(cppcheck warning) Redundant assignment of "PV_strat" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 160	cppcheck Problem
+(cppcheck warning) Redundant assignment of "PV_strat" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 612	cppcheck Problem
+(cppcheck warning) Redundant assignment of "PV_strat" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 624	cppcheck Problem
+(cppcheck warning) Redundant assignment of "new_area_urine" to itself	field.cpp	/Fassetv2.2.2impacts/source/fields	line 1390	cppcheck Problem
+(cppcheck warning) Redundant assignment of "new_area_dung" to itself	field.cpp	/Fassetv2.2.2impacts/source/fields	line 1391	cppcheck Problem
+(cppcheck warning) Redundant assignment of "N_level" to itself	staticBarleyPea.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 176	cppcheck Problem
+(cppcheck warning) Redundant assignment of "N_level" to itself	staticBarleyPea.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 184	cppcheck Problem
+(cppcheck warning) Redundant assignment of "N_level" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 601	cppcheck Problem
+(cppcheck warning) Redundant assignment of "N_level" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 613	cppcheck Problem
+(cppcheck warning) Redundant assignment of "N_level" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 625	cppcheck Problem
+(cppcheck warning) Redundant assignment of "JB_NO" to itself	staticBarleyPea.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 174	cppcheck Problem
+(cppcheck warning) Redundant assignment of "JB_NO" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 541	cppcheck Problem
+(cppcheck warning) Redundant assignment of "JB_NO" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 599	cppcheck Problem
+(cppcheck warning) Redundant assignment of "JB_NO" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 611	cppcheck Problem
+(cppcheck warning) Redundant assignment of "JB_NO" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 623	cppcheck Problem
+(cppcheck warning) Redundant assignment of "free_N" to itself	staticBarleyPea.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 175	cppcheck Problem
+(cppcheck warning) Redundant assignment of "free_N" to itself	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 600	cppcheck Problem
+(cppcheck warning) Redundant assignment of "epot" to itself	climate.cpp	/Fassetv2.2.2impacts/source/base	line 693	cppcheck Problem
+(cppcheck warning) Redundant assignment of "epot" to itself	climate.cpp	/Fassetv2.2.2impacts/source/base	line 767	cppcheck Problem
+(cppcheck warning) Redundant assignment of "environmentEffect" to itself	bioMatter.cpp	/Fassetv2.2.2impacts/source/soil	line 244	cppcheck Problem
+(cppcheck warning) Redundant assignment of "contractor" to itself	irrigateTech.cpp	/Fassetv2.2.2impacts/source/technics	line 171	cppcheck Problem
+(cppcheck warning) Redundant assignment of "aWriteSoilTemperature" to itself	systemData.h	/Fassetv2.2.2impacts/source/data	line 213	cppcheck Problem
+(cppcheck warning) Possible leak in public function. The pointer 'theInterfacePatches' is not deallocated before it is allocated.	MMSClass.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 25	cppcheck Problem
+(cppcheck warning) Mutual exclusion over || always evaluates to true. Did you intend to use && instead?	harvestTech.cpp	/Fassetv2.2.2impacts/source/technics	line 460	cppcheck Problem
+(cppcheck warning) Member variable 'technics::labourFileName' is not initialized in the constructor.	technics.cpp	/Fassetv2.2.2impacts/source/technics	line 25	cppcheck Problem
+(cppcheck warning) Member variable 'swineStock::SowProductionCycle' is not initialized in the constructor.	swineStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 16	cppcheck Problem
+(cppcheck warning) Member variable 'swineStock::aStable' is not initialized in the constructor.	swineStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 16	cppcheck Problem
+(cppcheck warning) Member variable 'swine::pigletsPerLitter' is not initialized in the constructor.	swine.cpp	/Fassetv2.2.2impacts/source/livestock	line 15	cppcheck Problem
+(cppcheck warning) Member variable 'swine::pigletsPerLitter' is not initialized in the constructor.	swine.cpp	/Fassetv2.2.2impacts/source/livestock	line 23	cppcheck Problem
+(cppcheck warning) Member variable 'swine::maxParity' is not initialized in the constructor.	swine.cpp	/Fassetv2.2.2impacts/source/livestock	line 15	cppcheck Problem
+(cppcheck warning) Member variable 'swine::maxParity' is not initialized in the constructor.	swine.cpp	/Fassetv2.2.2impacts/source/livestock	line 23	cppcheck Problem
+(cppcheck performance) Function parameter 'aorgN_content' should be passed by reference.	liveMatter.h	/Fassetv2.2.2impacts/source/products	line 58	cppcheck Problem
+(cppcheck performance) Function parameter 'aNO3_content' should be passed by reference.	liveMatter.h	/Fassetv2.2.2impacts/source/products	line 60	cppcheck Problem
+(cppcheck performance) Function parameter 'aNH4_content' should be passed by reference.	liveMatter.h	/Fassetv2.2.2impacts/source/products	line 59	cppcheck Problem
+(cppcheck information) The scope of the variable 'zerograzedHerbageRequired' can be reduced	operationsManager.cpp	/Fassetv2.2.2impacts/source/manager	line 115	cppcheck Problem
+(cppcheck information) The scope of the variable 'yearNumber' can be reduced	eventControl.cpp	/Fassetv2.2.2impacts/source/event	line 257	cppcheck Problem
+(cppcheck information) The scope of the variable 'WasteFraction' can be reduced	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 1558	cppcheck Problem
+(cppcheck information) The scope of the variable 'Vt' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 91	cppcheck Problem
+(cppcheck information) The scope of the variable 'Vt' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 108	cppcheck Problem
+(cppcheck information) The scope of the variable 'Vt' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 125	cppcheck Problem
+(cppcheck information) The scope of the variable 'totalAmountPrDay' can be reduced	pig.cpp	/Fassetv2.2.2impacts/source/livestock	line 221	cppcheck Problem
+(cppcheck information) The scope of the variable 'theta' can be reduced	nixcbits.cpp	/Fassetv2.2.2impacts/source/base	line 231	cppcheck Problem
+(cppcheck information) The scope of the variable 'thermalVent' can be reduced	stable.cpp	/Fassetv2.2.2impacts/source/building	line 868	cppcheck Problem
+(cppcheck information) The scope of the variable 'tempV' can be reduced	dungheap.cpp	/Fassetv2.2.2impacts/source/building	line 116	cppcheck Problem
+(cppcheck information) The scope of the variable 'sum' can be reduced	soil.cpp	/Fassetv2.2.2impacts/source/soil	line 736	cppcheck Problem
+(cppcheck information) The scope of the variable 'startSeason' can be reduced	cattleFeedingGroup.cpp	/Fassetv2.2.2impacts/source/manager	line 478	cppcheck Problem
+(cppcheck information) The scope of the variable 'RootBelow' can be reduced	crop.cpp	/Fassetv2.2.2impacts/source/fields/crops	line 1656	cppcheck Problem
+(cppcheck information) The scope of the variable 'rateCoefficient' can be reduced	soilLayer.cpp	/Fassetv2.2.2impacts/source/soil	line 798	cppcheck Problem
+(cppcheck information) The scope of the variable 'proteinConc' can be reduced	grazingManager.cpp	/Fassetv2.2.2impacts/source/manager	line 917	cppcheck Problem
+(cppcheck information) The scope of the variable 'p' can be reduced	nixcbits.cpp	/Fassetv2.2.2impacts/source/base	line 100	cppcheck Problem
+(cppcheck information) The scope of the variable 'p' can be reduced	nixcbits.cpp	/Fassetv2.2.2impacts/source/base	line 136	cppcheck Problem
+(cppcheck information) The scope of the variable 'OK' can be reduced	cropRotation.cpp	/Fassetv2.2.2impacts/source/fields	line 930	cppcheck Problem
+(cppcheck information) The scope of the variable 'numberToCull' can be reduced	dairyStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 124	cppcheck Problem
+(cppcheck information) The scope of the variable 'NExtracted' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 393	cppcheck Problem
+(cppcheck information) The scope of the variable 'ND' can be reduced	cropRotation.cpp	/Fassetv2.2.2impacts/source/fields	line 1001	cppcheck Problem
+(cppcheck information) The scope of the variable 'Nconc' can be reduced	pig.cpp	/Fassetv2.2.2impacts/source/livestock	line 220	cppcheck Problem
+(cppcheck information) The scope of the variable 'manureN' can be reduced	swineStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 469	cppcheck Problem
+(cppcheck information) The scope of the variable 'lastAge' can be reduced	dairyStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 173	cppcheck Problem
+(cppcheck information) The scope of the variable 'income' can be reduced	products.cpp	/Fassetv2.2.2impacts/source/products	line 521	cppcheck Problem
+(cppcheck information) The scope of the variable 'i' can be reduced	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 103	cppcheck Problem
+(cppcheck information) The scope of the variable 'herbageAvailable' can be reduced	operationsManager.cpp	/Fassetv2.2.2impacts/source/manager	line 82	cppcheck Problem
+(cppcheck information) The scope of the variable 'growthPeriod' can be reduced	grazingManager.cpp	/Fassetv2.2.2impacts/source/manager	line 215	cppcheck Problem
+(cppcheck information) The scope of the variable 'growthN' can be reduced	swineStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 471	cppcheck Problem
+(cppcheck information) The scope of the variable 'fertiliserUnit' can be reduced	MMSClass.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 238	cppcheck Problem
+(cppcheck information) The scope of the variable 'FEperKgDM' can be reduced	grazingManager.cpp	/Fassetv2.2.2impacts/source/manager	line 918	cppcheck Problem
+(cppcheck information) The scope of the variable 'feedN' can be reduced	swineStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 470	cppcheck Problem
+(cppcheck information) The scope of the variable 'f' can be reduced	soilLayer.cpp	/Fassetv2.2.2impacts/source/soil	line 789	cppcheck Problem
+(cppcheck information) The scope of the variable 'Extractedamount' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 393	cppcheck Problem
+(cppcheck information) The scope of the variable 'duration' can be reduced	floorstore.cpp	/Fassetv2.2.2impacts/source/building	line 150	cppcheck Problem
+(cppcheck information) The scope of the variable 'depth' can be reduced	soil.cpp	/Fassetv2.2.2impacts/source/soil	line 576	cppcheck Problem
+(cppcheck information) The scope of the variable 'deltaTemper' can be reduced	stable.cpp	/Fassetv2.2.2impacts/source/building	line 747	cppcheck Problem
+(cppcheck information) The scope of the variable 'currentSFUperKg' can be reduced	dkCattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 865	cppcheck Problem
+(cppcheck information) The scope of the variable 'currentfillPerSFU' can be reduced	dkCattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 864	cppcheck Problem
+(cppcheck information) The scope of the variable 'currentfillPerKg' can be reduced	dkCattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 863	cppcheck Problem
+(cppcheck information) The scope of the variable 'CurrentDepth' can be reduced	crop.cpp	/Fassetv2.2.2impacts/source/fields/crops	line 1657	cppcheck Problem
+(cppcheck information) The scope of the variable 'counter' can be reduced	feedItem.cpp	/Fassetv2.2.2impacts/source/products	line 428	cppcheck Problem
+(cppcheck information) The scope of the variable 'CExtracted' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 393	cppcheck Problem
+(cppcheck information) The scope of the variable 'b' can be reduced	dkCattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 249	cppcheck Problem
+(cppcheck information) The scope of the variable 'b' can be reduced	manureManager.cpp	/Fassetv2.2.2impacts/source/manager	line 72	cppcheck Problem
+(cppcheck information) The scope of the variable 'ayear' can be reduced	price.cpp	/Fassetv2.2.2impacts/source/products	line 154	cppcheck Problem
+(cppcheck information) The scope of the variable 'amountToSell' can be reduced	grazingManager.cpp	/Fassetv2.2.2impacts/source/manager	line 281	cppcheck Problem
+(cppcheck information) The scope of the variable 'amountThisProduct' can be reduced	products.cpp	/Fassetv2.2.2impacts/source/products	line 571	cppcheck Problem
+(cppcheck information) The scope of the variable 'amountCleaned' can be reduced	manstore.cpp	/Fassetv2.2.2impacts/source/building	line 276	cppcheck Problem
+(cppcheck information) The scope of the variable 'ammoniumRatio' can be reduced	pig.cpp	/Fassetv2.2.2impacts/source/livestock	line 249	cppcheck Problem
+(cppcheck information) The scope of the variable 'activeNow' can be reduced	organicMatter.cpp	/Fassetv2.2.2impacts/source/soil	line 1363	cppcheck Problem
+(cppcheck information) The scope of the variable 'a' can be reduced	dkCattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 248	cppcheck Problem
+(cppcheck information) The scope of the variable 'a' can be reduced	soilProfile.cpp	/Fassetv2.2.2impacts/source/soil	line 1902	cppcheck Problem
+(cppcheck information) Technically the member function 'harvInfoClass::GetproductCode' can be const.	harvInfoClass.h	/Fassetv2.2.2impacts/source/Nitroscape	line 64	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	FARM.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	IndicatorOutput.cpp	/Fassetv2.2.2impacts/source/base	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	MMSClass.cpp	/Fassetv2.2.2impacts/source/Nitroscape	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	NewMain.cpp	/Fassetv2.2.2impacts/source	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	cattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	cattleFeedingGroup.cpp	/Fassetv2.2.2impacts/source/manager	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	cattleFeedingManager.cpp	/Fassetv2.2.2impacts/source/manager	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	cattleGroup.cpp	/Fassetv2.2.2impacts/source/livestock	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	cattlehouse.cpp	/Fassetv2.2.2impacts/source/building	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	cropRotation.cpp	/Fassetv2.2.2impacts/source/fields	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	dairyStock.cpp	/Fassetv2.2.2impacts/source/livestock	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	dkCattle.cpp	/Fassetv2.2.2impacts/source/livestock	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	ecosystem.cpp	/Fassetv2.2.2impacts/source/fields	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	eventControl.cpp	/Fassetv2.2.2impacts/source/event	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	field.cpp	/Fassetv2.2.2impacts/source/fields	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	fieldOrder.cpp	/Fassetv2.2.2impacts/source/fields	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	grazingManager.cpp	/Fassetv2.2.2impacts/source/manager	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	hardstandingclass.cpp	/Fassetv2.2.2impacts/source/building	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	livestock.cpp	/Fassetv2.2.2impacts/source/livestock	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	manureManager.cpp	/Fassetv2.2.2impacts/source/manager	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	operationsManager.cpp	/Fassetv2.2.2impacts/source/manager	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	patch.cpp	/Fassetv2.2.2impacts/source/fields	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	products.cpp	/Fassetv2.2.2impacts/source/products	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticBarleyPea.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticBeet.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticClover.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticCloverGrass.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticCrop.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticFallow.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticFallowPermanent.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticGrass.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticGrassEstablished.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticGrassPermanent.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticGrazingGrass.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticItalianRyeGrass.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticLucerneEstablished.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticMaize.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticOat.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticPea.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticPotato.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticRye.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticSbarley.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem
+(cppcheck information) Interrupted checking because of too many #ifdef configurations.	staticSeedGrass.cpp	/Fassetv2.2.2impacts/source/fields/staticCrops	line 0	cppcheck Problem

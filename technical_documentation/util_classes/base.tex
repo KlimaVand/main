@@ -1,0 +1,28 @@
+\chapter{Utility Class}
+In this chapter we will go trough some of the utilization classes had headers develop for Fasset
+\section{base-class}
+This class can keep track of who owns the instance of this class. This ability can be used when debugin or to access the owners fields. It also keeps track of a name and an Index. Combine those information and you can get the information for the whole hierarchy, ekample field-$>$patch-$>$ecosystem-$>$soil.
+\section{bstime-class}
+There is one instance of this class in fasset at it keeps track of time. If yoy want acccess to it you need to include bsTime.h and the instance is called theTime. Via that instance you can access informtaion like current time (day, month, year), check if it is leap year and get the current JulianDay (day since 1th of january). It only supports days from 1900 to 2300
+\section{budget-class}
+the budget class helps with keeping track of Nitrogen and Carbon in Fasset. You can add and remove C and N during the day and in the end of the day you can check via balance if you have lost some of N and C
+\section{climate-class}
+the Climate class keeps track of information of the weather.The climate information is read fomr a KLM- ,DAISY-,DAISY-2000,"'Download format from Intranet'- or a MARS-file. Via this class you can get access to information like temprartur, humidity, precipitation and winspeed. To use it you need to include climate.h and the instance is called theClimate
+\section{common-header}
+A collection of includes of most used c++ headerfiles
+\section{commonData-class}
+This class contains functions seach in Fasset inputfiles. It can keep track of up to 2 files, a primary and a secondary file. When search for you can either be critical or non critical. If the informtaion is critcal and missing Fasset will halt. When seaching you can specifie whitch section you are expeting you item to be in. You can also seach for a section with a specific item with a spisific value
+\section{constants-header}
+A header that contains constants that is not part of C++ but are still used in a lot of places in Fasset
+\section{IndicatorOutput-class}
+This class keeps track of different information in fasset. Eksample how much N that has leach and how much N update that has happen on a daly basis. to use it you should first add you indicat at  IndicatorOutput::InitializeIndicators() and include IndicatorOutput.h. Now you should be able to you use IndicatorOutput::AddIndicator when you event occure. IndicatorOutput will automaticle wirte it down to INDICATX.XLS
+\section{Message-class}
+The message class keep tracks of warning and events and write them down in logfile.txt and warnings.txt. There is 3 levels of warrnings. FatalError makes Fasset stop and make an onscreen warning. Warning with display gives the user an onscreen warning but Fasset will continue and the warnings will be written in the warning.txt file. The last warning is only written in the  warning.txt
+\section{settings-class}
+This class keeps track of information that need to be accessed from varius places in Fasset such as input directory, output directory and what kind of information that needed to be writen in Fasset's outputfile
+\section{Compare}
+Since the type double is not always accurate we can use this sets of functions to compare any variable of types double with userdefine granularity
+\section{convert.cpp}
+This class do handle a casting of types such as casting an int to a string string to boolean.
+\section{fileAccess.cpp}
+This is an abstraction class on IO handleing. It support things like opening (with or without seaching for them) and closing files and reading from them. The class also handeling changeing of directorys 

@@ -1,0 +1,12 @@
+If you're going to define your own data structure then there are a few steps:
+
+
+1. The structure needs to be defined in c:\Apsim\Model\DataTypes\DataTypes.xml. 
+
+2. This then gets converted to c# source code by running the batch file: c:\Apsim\Model\DataTypes\DataTypes.bat. For this batch file to work though, you will need FORTRAN compilers. If you're only interested in .NET then you can run the tool manually: 
+               C:\Apsim\Model\processdatatypesinterface.exe DataTypes.xml CSDOTNETDataTypes.macro
+from a command prompt in the datatypes directory. This should create a file called c:\Apsim\Model\DataTypes\DOTNETDataTypes.cs. 
+
+3. This file gets included in: C:\Apsim\Model\CSDotNetComponentInterface\CSDotNetComponentInterface.sln which as a result will need recompiling.
+
+Dean

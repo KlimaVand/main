@@ -1,0 +1,5 @@
+1: Compile multicoreFasset and fasset
+2: Create a system.dat as usual. Jumpstart and jumpstop should be removed if present. And ad cores * where * is the number of cores you want ot be utilized to the the start of system.dat
+3: place fasset.exe, multicoreFasset.exe, system.dat and start.bat (found at main\multicoreFasset) in the same dir
+4: run start.bat
+5: wait
