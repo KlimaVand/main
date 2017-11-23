@@ -1,0 +1,71 @@
+[AddedMatter(0)]	
+Name	AOM1
+DecompositionRate	0.004
+Direction(0)	SMB2
+Fraction(0)	0.688
+Direction(1)	SMB1
+Fraction(1)	0.312
+[AddedMatter(1)]	
+Name	AOM2
+DecompositionRate	0.04
+Direction(0)	SMB2
+Fraction(0)	0.688
+Direction(1)	SMB1
+Fraction(1)	0.312
+[BioMatter(0)]	
+Name	SMB1
+UseClayEffect	1
+UtilizationEfficiency	0.6
+TotalTurnover	0.0119
+TurnoverRatio	0.465
+Direction(0)	NOM
+Fraction(0)	1.0
+CNratioMin	6.6
+CNratioMax	6.6
+CNratio	6.6
+[BioMatter(1)]	
+Name	SMB2
+UseClayEffect	1
+UtilizationEfficiency	0.6
+TotalTurnover	0.128
+TurnoverRatio	0.527
+Direction(0)	SMR
+Fraction(0)	1.0
+CNratioMin	9.33
+CNratioMax	9.33
+CNratio	9.33
+[Matter(0)]	
+Name	SMR
+UseClayEffect	1
+DecompositionRate	0.00441
+Direction(0)	SMB1
+Fraction(0)	1.0
+CNratio	6.0
+[Matter(1)]	
+Name	NOM
+DecompositionRate	0.000073
+Direction(0)	SMB1
+Fraction(0)	1.0
+CNratio	10
+[Matter(2)]	
+Name	IOM
+DecompositionRate	0.0
+Direction(0)	IOM
+Fraction(0)	1.0
+CNratio	17
+[Parameters]	
+ClayResponse	9
+ClayParameter4	1.67
+TemperatureResponse	1
+WaterResponse	1
+Y1	0.6
+Y2	0
+W1	0
+W4	5.5
+W2Offset	1.5
+W3Offset	-3
+NitrificationRate	3.04
+NCslope	4.05
+NCintercept	0.33
+MaxAOM2	0.90
+[endl]

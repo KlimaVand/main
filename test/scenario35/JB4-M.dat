@@ -1,0 +1,183 @@
+[SoilParameters]              // Data for "jordprofildatabasen" DJF+HYDRES model
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        520
+SoilType         3
+ConductivityFC  -8.03               // log10(m/s) from O.H.Jacobsen p 60
+DryBulkDensity   1.49                     
+ClayContent      0.15
+SiltContent      0.23
+
+CarbonPct        1.1
+CNRatio	11
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.049707917
+IOM	0.405174
+IOM.N	0.037624131
+
+RelativeWater(0)   0.399
+PFValue(0)         0
+RelativeWater(1)   0.392
+PFValue(1)         0.5
+RelativeWater(2)   0.373
+PFValue(2)         1
+RelativeWater(3)   0.325
+PFValue(3)         1.5
+RelativeWater(4)   0.263
+PFValue(4)         2
+RelativeWater(5)   0.202
+PFValue(5)         2.5
+RelativeWater(6)   0.156
+PFValue(6)         3
+RelativeWater(7)   0.118
+PFValue(7)         3.5
+RelativeWater(8)   0.090
+PFValue(8)         4
+RelativeWater(9)   0.068
+PFValue(9)         4.5
+
+
+
+[SoilLayer(2)]
+Thickness        180
+SoilType         3
+ConductivityFC  -8.70
+DryBulkDensity   1.52                     
+ClayContent      0.14
+SiltContent      0.12
+
+CarbonPct        0.2
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0)   0.387
+PFValue(0)         0
+RelativeWater(1)   0.377
+PFValue(1)         0.5
+RelativeWater(2)   0.345
+PFValue(2)         1
+RelativeWater(3)   0.281
+PFValue(3)         1.5
+RelativeWater(4)   0.212
+PFValue(4)         2
+RelativeWater(5)   0.153
+PFValue(5)         2.5
+RelativeWater(6)   0.111
+PFValue(6)         3
+RelativeWater(7)   0.080
+PFValue(7)         3.5
+RelativeWater(8)   0.058
+PFValue(8)         4
+RelativeWater(9)   0.041
+PFValue(9)         4.5
+
+
+[SoilLayer(3)]
+Thickness        200
+SoilType         3
+ConductivityFC   -9.41
+DryBulkDensity   1.84                    
+ClayContent      0.02
+SiltContent      0.08
+
+CarbonPct        0.1
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0)   0.290
+PFValue(0)         0
+RelativeWater(1)   0.284
+PFValue(1)         0.5
+RelativeWater(2)   0.262
+PFValue(2)         1
+RelativeWater(3)   0.204
+PFValue(3)         1.5
+RelativeWater(4)   0.137
+PFValue(4)         2
+RelativeWater(5)   0.085
+PFValue(5)         2.5
+RelativeWater(6)   0.053
+PFValue(6)         3
+RelativeWater(7)   0.032
+PFValue(7)         3.5
+RelativeWater(8)   0.020
+PFValue(8)         4
+RelativeWater(9)   0.012
+PFValue(9)         4.5
+
+
+[SoilLayer(4)]
+Thickness        1111
+SoilType         3
+ConductivityFC   -9.41
+DryBulkDensity   1.84                    
+ClayContent      0.02
+SiltContent      0.08
+
+CarbonPct        0.01
+CNRatio	11
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.024801844
+IOM	0.7
+IOM.N	0.064303696
+
+RelativeWater(0)   0.290
+PFValue(0)         0
+RelativeWater(1)   0.284
+PFValue(1)         0.5
+RelativeWater(2)   0.262
+PFValue(2)         1
+RelativeWater(3)   0.204
+PFValue(3)         1.5
+RelativeWater(4)   0.137
+PFValue(4)         2
+RelativeWater(5)   0.085
+PFValue(5)         2.5
+RelativeWater(6)   0.053
+PFValue(6)         3
+RelativeWater(7)   0.032
+PFValue(7)         3.5
+RelativeWater(8)   0.020
+PFValue(8)         4
+RelativeWater(9)   0.012
+PFValue(9)         4.5
+
+
+[end]

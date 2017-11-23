@@ -1,0 +1,31 @@
+[Cattlestable(0)]
+ID	1013601
+Area	260
+height	4
+controlledVent	0
+[Cattlestable(0).Section(0)]
+Contains	SUCKLER
+[Cattlestable(0).Section(0).floor(0)]
+Area	260
+ManureToID	1013502
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	FYM
+[Cattlestable(1)]
+ID	1013602
+Area	150
+height	3
+controlledVent	0
+[Cattlestable(1).Section(0)]
+Contains	MBEEF2
+[Cattlestable(1).Section(0).floor(0)]
+Area	100
+ManureToID	1013501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	SLURRY
+[Slurrystore(0)]
+Area	72
+ManureStoreID	1013501
+Manuretype	SLURRY
+[end]

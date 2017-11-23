@@ -1,0 +1,34 @@
+AnimalModel	2
+[SwineStock(0)]	
+[SOWS(0)]	
+variableCosts	400.0
+amountFluid	7.34
+amountSolid	1.857
+FE_need	3.56
+FEperPiglet	1.68
+MaxParity	6
+PigletsPerLitter	12.0
+LivestockUnits	0.25
+heatProduction	100
+[PIGLETS(0)]	
+variableCosts	8.0
+amountFluid	1.083
+amountSolid	0.542
+FE_need	2.0
+LivestockUnits	0.007
+heatProduction	10
+[BACONERS(0)]	
+variableCosts	8.0
+amountFluid	3.53
+amountSolid	1.76
+FE_need	2.94
+LivestockUnits	0.0325
+heatProduction	50
+[NEWSOWS(0)]	
+variableCosts	8.0
+amountFluid	3.53
+amountSolid	1.76
+FE_need	2.94
+LivestockUnits	0.0325
+heatProduction	100
+[end]

@@ -1,0 +1,18 @@
+[Cattlestable(0)]
+ID	1012601
+Area	150
+height	5
+controlledVent	0
+[Cattlestable(0).Section(0)]
+Contains	SUCKLER
+[Cattlestable(0).Section(0).floor(0)]
+Area	150
+ManureToID	1012501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	FYM
+[DungHeap(0)]
+Area	25
+ManureStoreID	1012501
+ManureType	FYM
+[end]

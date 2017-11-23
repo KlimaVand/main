@@ -1,0 +1,13 @@
+[DungHeap(0)]
+Area	80
+ManureStoreID	1002501
+ManureType	FYM
+[Store(0)]
+NewValue           727500         //New value of animal feed store (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.04          //--||--  Depreciation --||--
+RefCapacity        1500           //in m^3
+Area               800           //surface area in sq metres
+[end]

@@ -1,0 +1,26 @@
+------------------------------------------------------------------
+                                2001
+------------------------------------------------------------------
+ Update field:                  calls:     365  time:    31.6 
+  Field indicators:             calls:     365  time:     7.2 
+  Patch output:                 calls:       0  time:     0.0 
+  HandleOperations:             calls:     365  time:     0.0 
+    UpdateSoil                  calls:     365  time:    13.1 
+     Water                      calls:     365  time:     3.7 
+     Temperature                calls:     365  time:     1.0 
+     Organic matter             calls:     365  time:     8.1 
+     Plant transpiration:       calls:     365  time:     0.0 
+Indicator output:               calls:   23936  time:     0.5 
+------------------------------------------------------------------
+                                2002
+------------------------------------------------------------------
+ Update field:                  calls:     365  time:    27.4 
+  Field indicators:             calls:     365  time:     7.6 
+  Patch output:                 calls:       0  time:     0.0 
+  HandleOperations:             calls:     365  time:     0.0 
+    UpdateSoil                  calls:     365  time:     6.4 
+     Water                      calls:     365  time:     3.4 
+     Temperature                calls:     365  time:     0.9 
+     Organic matter             calls:     365  time:     1.6 
+     Plant transpiration:       calls:     365  time:     0.1 
+Indicator output:               calls:   23545  time:     0.5 

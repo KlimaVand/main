@@ -1,0 +1,223 @@
+AnimalModel       2
+Aggregation       3 //2	//2 = one model animal = 4 real animals, 3 = one model animal = one real animal;
+con 2 abbiamo 2 superanimal e devo moltiplicare la razione per 30; 3 è la situazione di default
+
+[SwineStock(0)]
+
+[SOWS(0)]
+Knowledge	      0 
+variableCosts     400.0
+amountFluid 	7.34      // kg/day/animal
+amountSolid 	1.857		// kg/day/animal
+N_growth          25.0 		// g/kg weight gain
+P_growth      	 5.0		// g/kg weight gain
+K_growth      	 2.26		// g/day/animal	= (1.81-1.57)/106/1000; // t/day
+FE_need       	 3.56		//FE/day/animal  
+lysin_need	  	 16.5		// g/day/animal	= 1.75/106/1000;    		// t/day
+meth_need	  	 10.0		// g/day/animal	= 1.06/106/1000;    		// t/day        check value
+treo_need	  	 11.2		// g/day/animal	= 1.19/106/1000;    		// t/day
+P_need	  	  9.7		// g/day/animal	 = 1.03/106/1000;         // t/day
+K_need	  	  17.1	// g/day/animal	= 1.81/106/1000;          // t/day
+FEperPiglet		   1.68	// FEs per kg piglet produced
+MaxParity		 6		//number of litters per sow
+PigletsPerLitter  12.0		//number of live pigslets finished per sow per litter
+LivestockUnits    0.25
+heatProduction    100         //heat production per animal (W)
+             
+[PIGLETS(0)]
+Knowledge		0
+variableCosts      8.0
+amountFluid 	1.083       // kg/day/animal
+amountSolid 	0.542		// kg/day/animal
+N_growth          26.0 		// g/kg weight gain
+P_growth      	 5.5		// g/kg weight gain
+K_growth      	 2.26		// g/day/animal	= (1.81-1.57)/106/1000; // t/day
+FE_need       	 2.0		//g/kg weight gain
+lysin_need	  	 1.75		// kg/animal over period	= 1.75/106/1000;    		// t/day
+meth_need	  	 1.06		// kg/animal over period	= 1.06/106/1000;    		// t/day        check value
+treo_need	  	 1.19		// kg/animal over period	= 1.19/106/1000;    		// t/day
+P_need	  	 1.03		// kg/animal over period	 = 1.03/106/1000;         // t/day
+K_need	  	 1.81		// kg/animal over period	= 1.81/106/1000;          // t/day
+LivestockUnits     0.007
+heatProduction      10         //heat production per animal (W)
+
+[BACONERS(0)]
+Knowledge		0
+variableCosts      8.0
+amountFluid 	3.53      // kg/day/animal
+amountSolid 	1.76		// kg/day/animal
+N_growth          28.0 		// g/kg weight gain
+P_growth      	 5.5		// g/kg weight gain
+K_growth      	 2.26		// g/day/animal	= (1.81-1.57)/106/1000; // t/day
+FE_need       	 2.94		//g/kg weight gain
+lysin_need	  	 1.75		// kg/animal over period	= 1.75/106/1000;    		// t/day
+meth_need	  	 1.06		// kg/animal over period	= 1.06/106/1000;    		// t/day        check value
+treo_need	  	 1.19		// kg/animal over period	= 1.19/106/1000;    		// t/day
+P_need	  	 1.03		// kg/animal over period	 = 1.03/106/1000;         // t/day
+K_need	  	 1.81		// kg/animal over period      = 1.81/106/1000;          // t/day
+LivestockUnits     0.0325
+heatProduction     50         //heat production per animal (W)
+
+[NEWSOWS(0)]
+Knowledge		0
+variableCosts      8.0
+amountFluid 	3.53      // kg/day/animal
+amountSolid 	1.76		// kg/day/animal
+N_growth          28.0 		// g/kg weight gain
+P_growth      	 5.5		// g/kg weight gain
+K_growth      	 2.26		// g/day/animal	= (1.81-1.57)/106/1000; // t/day
+FE_need       	 2.94		//g/kg weight gain
+lysin_need	  	 1.75		// kg/animal over period	= 1.75/106/1000;    		// t/day
+meth_need	  	 1.06		// kg/animal over period	= 1.06/106/1000;    		// t/day        check value
+treo_need	  	 1.19		// kg/animal over period	= 1.19/106/1000;    		// t/day
+P_need	  	 1.03		// kg/animal over period	 = 1.03/106/1000;         // t/day
+K_need	  	 1.81		// kg/animal over period      = 1.81/106/1000;          // t/day
+LivestockUnits    0.0325
+heatProduction    100         //heat production per animal (W)
+
+[DairyStock]
+MaxNumPerCohort	0
+Individual		F
+// Groups should be in order of increasing age
+[DairyStock.Group(0)]
+Alias			HEIFERS1
+Code			0		//animal ID code - animal characteristics from animals.dat
+minAge		0.0		// minimum age of animals in group
+maxAge		0.5		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    0.13
+
+[DairyStock.Group(1)]
+Alias			HEIFERS2
+Code			0		//animal ID code - animal characteristics from animals.dat
+minAge		0.5		// minimum age of animals in group
+maxAge		1.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    0.34
+variableCosts     400.0
+
+[DairyStock.Group(2)]
+Alias			HEIFERS3
+Code			0		//animal ID code - animal characteristics from animals.dat
+minAge		1.0		// minimum age of animals in group
+maxAge		2.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    0.13
+
+[DairyStock.Group(3)]
+Alias			DAIRY
+Code			0		//animal ID code - animal characteristics from animals.dat
+minAge		2.0		// minimum age of animals in group
+maxAge		5.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			0		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock]
+
+Individual		F
+// Groups should be in order of increasing age
+[BeefStock.Group(0)]
+Alias			HEIFERS1
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge		0.0		// minimum age of animals in group
+maxAge		0.5		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    0.13
+
+[BeefStock.Group(1)]
+Alias			HEIFERS2
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge		0.5		// minimum age of animals in group
+maxAge		1.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    0.34
+variableCosts     400.0
+
+[BeefStock.Group(2)]
+Alias			HEIFERS3
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge		1.0		// minimum age of animals in group
+maxAge		2.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    0.13
+
+[BeefStock.Group(3)]
+Alias			SUCKLER
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge			2.5		// minimum age of animals in group
+maxAge			5.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			0		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock.Group(4)]
+Alias			FBEEF1
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge		0.0		// minimum age of animals in group
+maxAge		0.5		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock.Group(5)]
+Alias			FBEEF2
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge			0.5		// minimum age of animals in group
+maxAge			1.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock.Group(6)]
+Alias			FBEEF3
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge			1.0		// minimum age of animals in group
+maxAge			3.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock.Group(7)]
+Alias			MBEEF1
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge		0.0		// minimum age of animals in group
+maxAge		0.5		//age at which animals move on to next group
+Sex			0		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock.Group(8)]
+Alias			MBEEF2
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge			0.5		// minimum age of animals in group
+maxAge			1.0		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[BeefStock.Group(9)]
+Alias			MBEEF3
+Code			1		//animal ID code - animal characteristics from animals.dat
+minAge			1.0		// minimum age of animals in group
+maxAge			2.5		//age at which animals move on to next group
+Sex			1		//1 for female
+Young			1		//1 if animals are treated as young
+LivestockUnits    1.18
+variableCosts     400.0
+
+[end]
+

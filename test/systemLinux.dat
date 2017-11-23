@@ -1,0 +1,329 @@
+ClimateFileType     0
+JumpStart	27
+JumpStop	27
+[run(0)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario0/input
+OutputDirectory       /home/test/main/test/scenario0/output/
+ClimateFileName       /home/test/main/test/scenario0/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(1)]
+StartYear 	1988
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario1/input
+OutputDirectory       /home/test/main/test/scenario1/output/
+ClimateFileName       /home/test/main/test/scenario1/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(2)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario2/input
+OutputDirectory       /home/test/main/test/scenario2/output/
+ClimateFileName       /home/test/main/test/scenario2/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(3)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario3/input
+
+OutputDirectory       /home/test/main/test/scenario3/output/
+ClimateFileName       /home/test/main/test/scenario3/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(4)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario4/input
+OutputDirectory       /home/test/main/test/scenario4/output/
+ClimateFileName       /home/test/main/test/scenario4/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(5)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario5/input
+OutputDirectory       /home/test/main/test/scenario5/output/
+ClimateFileName       /home/test/main/test/scenario5/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(6)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario6/input
+OutputDirectory       /home/test/main/test/scenario6/output/
+ClimateFileName       /home/test/main/test/scenario6/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(7)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario7/input
+OutputDirectory       /home/test/main/test/scenario7/output/
+ClimateFileName       /home/test/main/test/scenario7/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(8)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario8/input
+OutputDirectory       /home/test/main/test/scenario8/output/
+ClimateFileName       /home/test/main/test/scenario8/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(9)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario9/input
+OutputDirectory       /home/test/main/test/scenario9/output/
+ClimateFileName       /home/test/main/test/scenario9/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(10)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario10/input
+OutputDirectory       /home/test/main/test/scenario10/output/
+ClimateFileName       /home/test/main/test/scenario10/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(11)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario11/input
+OutputDirectory       /home/test/main/test/scenario11/output/
+ClimateFileName       /home/test/main/test/scenario11/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(12)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario12/input
+OutputDirectory       /home/test/main/test/scenario12/output/
+ClimateFileName       /home/test/main/test/scenario12/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(13)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario13/input
+OutputDirectory       /home/test/main/test/scenario13/output/
+ClimateFileName       /home/test/main/test/scenario13/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(14)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario14/input
+OutputDirectory       /home/test/main/test/scenario14/output/
+ClimateFileName       /home/test/main/test/scenario14/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(15)]
+StartYear 	1987
+StopYear 	1997
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario15/input
+OutputDirectory       /home/test/main/test/scenario15/output/
+ClimateFileName       /home/test/main/test/scenario15/input/foulum.clm
+ForcedOperations        1
+VolatModel    0
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(16)]
+StartYear                     1999 
+StopYear                      2009 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario16/input
+OutputDirectory       /home/test/main/test/scenario16/output/
+ClimateFileName       /home/test/main/test/scenario16/input/jyndevad.clm
+ForcedOperations        1
+[run(17)]
+StartYear                     1999 
+StopYear                      2009 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario17/input
+OutputDirectory       /home/test/main/test/scenario17/output/
+ClimateFileName       /home/test/main/test/scenario17/input/jyndevad.clm
+ForcedOperations        1
+[run(18)]
+StartYear                     2000 
+StopYear                      2009 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario18/input
+OutputDirectory       /home/test/main/test/scenario18/output/
+ClimateFileName       /home/test/main/test/scenario18/input/Flakke.clm
+ForcedOperations        1
+[run(19)]
+StartYear                     1999 
+StopYear                      2009 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario19/input
+OutputDirectory       /home/test/main/test/scenario19/output/
+ClimateFileName       /home/test/main/test/scenario19/input/jyndevad.clm
+ForcedOperations        1
+[run(20)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario20/input
+OutputDirectory       /home/test/main/test/scenario20/output/
+ClimateFileName       /home/test/main/test/scenario20/input/foulum.clm
+ForcedOperations        1
+[run(21)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario21/input
+OutputDirectory       /home/test/main/test/scenario21/output/
+ClimateFileName       /home/test/main/test/scenario21/input/aarslev.clm
+ForcedOperations        1
+[run(22)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario22/input
+OutputDirectory       /home/test/main/test/scenario22/output/
+ClimateFileName       /home/test/main/test/scenario22/input/askov.clm
+ForcedOperations        1
+[run(23)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario23/input
+OutputDirectory       /home/test/main/test/scenario23/output/
+ClimateFileName       /home/test/main/test/scenario23/input/tystofte.clm
+ForcedOperations        1
+[run(24)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario24/input
+OutputDirectory       /home/test/main/test/scenario24/output/
+ClimateFileName       /home/test/main/test/scenario24/input/tylstrup.clm
+ForcedOperations        1
+[run(25)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario25/input
+OutputDirectory       /home/test/main/test/scenario25/output/
+ClimateFileName       /home/test/main/test/scenario25/input/stenderup.clm
+ForcedOperations        1
+[run(26)]
+StartYear                     1985 
+StopYear                      1994 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario26/input
+OutputDirectory       /home/test/main/test/scenario26/output/
+ClimateFileName       /home/test/main/test/scenario26/input/silstrup.clm
+ForcedOperations        1
+[run(27)]
+StartYear                     1985 
+StopYear                      1993 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario27/input
+OutputDirectory       /home/test/main/test/scenario27/output/
+ClimateFileName       /home/test/main/test/scenario27/input/roskilde.clm
+ForcedOperations        1
+[run(28)]
+StartYear                     1988
+StopYear                      1995 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario28/input
+OutputDirectory        /home/test/main/test/scenario28/output
+ClimateFileName        /home/test/main/test/scenario28/input/foulum.clm
+ForcedOperations        1
+ForcedHarvest           1
+[run(29)]
+StartYear                     1987
+StopYear                      1992 
+EnvironmentalIndicator        1/4
+InputDirectory        /home/test/main/test/scenario29/input
+OutputDirectory        /home/test/main/test/scenario29/output
+ClimateFileName        /home/test/main/test/scenario29/input/foulum.clm
+ForcedOperations        1
+ForcedHarvest           1
+[run(30)]
+StartYear                     1987
+StopYear                      1989 
+EnvironmentalIndicator        1/4
+InputDirectory         /home/test/main/test/scenario30/input
+OutputDirectory        /home/test/main/test/scenario30/output
+ClimateFileName        /home/test/main/test/scenario30/input/foulum.clm
+ForcedOperations        1
+ForcedHarvest           1
+[run(31)]
+StartYear                     1987
+StopYear                      1989 
+EnvironmentalIndicator        1/4
+InputDirectory         /home/test/main/test/scenario31/input
+OutputDirectory        /home/test/main/test/scenario31/output
+ClimateFileName        /home/test/main/test/scenario31/input/foulum.clm
+ForcedOperations        1
+ForcedHarvest           1
+[end]

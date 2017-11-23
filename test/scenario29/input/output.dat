@@ -1,0 +1,39 @@
+[Water(0)]
+StartDepth                    0 
+EndDepth                      30 
+
+[Water(1)]
+StartDepth                    30 
+EndDepth                      60 
+
+[Water(2)]
+StartDepth                    60 
+EndDepth                      90 
+
+[Water(3)]
+StartDepth                    90 
+EndDepth                      120 
+
+[Nmin(0)]
+StartDepth                    0 
+EndDepth                      30 
+
+[Nmin(1)]
+StartDepth                    30 
+EndDepth                      60 
+
+[Nmin(2)]
+StartDepth                    60 
+EndDepth                      90 
+
+[PoreWater(0)]
+Depth                         25 
+[PoreWater(1)]
+Depth                         50 
+[PoreWater(2)]
+Depth                         60 
+
+[Details]
+PlantDetails 1
+SoilDetails 1
+[end]

@@ -1,0 +1,29 @@
+[MAS]
+MaxRadUseEff 4.2 
+TS0 100   //100 (mais 700)
+TS1 1000 //850  //900   //1000 
+TS2 700     //600  //700   //700 
+TS3 100   //200 
+TB0 6 
+TB1 6 
+TB2 6 
+TB3 6 
+NPctMax 4.8
+NPctMin 1.2
+MinN_Store 0.012
+MaxPlantHeight 2.2
+[WinterWheat]
+MaxRadUseEff 4.4 
+//NPctMin 1.5
+NPctMax 5.5
+//MaxN_Store 0.04
+//MinN_Store 0.020
+//TS0 80
+//TS1 400 
+//TS2 700 
+//TS3 10 
+// TB0 -1 
+// TB1 -1
+// TB2 -1 
+// TB3 -1
+[end]

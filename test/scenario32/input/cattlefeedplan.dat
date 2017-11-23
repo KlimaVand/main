@@ -1,0 +1,126 @@
+autoFeed	0
+[Group(0)]
+Alias	HEIFERS1
+[Group(0).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(0).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 2
+
+[Group(0).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 1
+
+[Group(1)]
+Alias	HEIFERS2
+[Group(1).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(1).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 4
+
+[Group(1).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 1
+
+[Group(2)]
+Alias	HEIFERS3
+[Group(2).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(2).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 6
+
+[Group(2).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 1
+
+[Group(3)]
+Alias	DAIRY-1stEarly
+[Group(3).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(3).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 7
+
+[Group(3).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 4
+
+[Group(4)]
+Alias	DAIRY-1stLate
+[Group(4).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(4).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 7
+
+[Group(4).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 2
+
+[Group(5)]
+Alias	DAIRY-MatureEarly
+[Group(5).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(5).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 7
+
+[Group(5).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 5
+
+[Group(6)]
+Alias	DAIRY-MatureLate
+[Group(6).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(6).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 7
+
+[Group(6).Period(0).Normal.Supplement(1)]
+FeedCode	246
+Amount	 2
+
+[Group(7)]
+Alias	DAIRY-Dry
+[Group(7).Period(0)]
+Day	1
+Month	1
+propRoughage	-1
+propGrazed	-1
+Housed	24
+[Group(7).Period(0).Normal.Supplement(0)]
+FeedCode	428
+Amount	 5
+
+[end]

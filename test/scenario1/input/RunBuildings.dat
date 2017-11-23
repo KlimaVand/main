@@ -1,0 +1,54 @@
+[all]	
+scalable	true
+[Store(0)]	
+Alias	Default
+[Slurrystore(0)]	
+Alias	Slurrystore
+StorageCapacity	270
+[PigHousing(0)]	
+Alias	Default
+[PigHousing(0).Section(0)]	
+Alias	Weaner
+Contains	Weaner(0)
+[PigHousing(0).Section(0).floor(0)]	
+Alias	WeanerFloor
+ManureToName	PigHousing(0).inhouse
+[PigHousing(0).Section(1)]	
+Alias	Finisher
+Contains	Finisher(0)
+[PigHousing(0).Section(1).floor(0)]	
+Alias	FinisherFloor
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+[PigHousing(0).Section(2)]	
+Alias	Mating
+Contains	Mating(0)
+[PigHousing(0).Section(2).floor(0)]	
+Alias	MatingFloor
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+[PigHousing(0).Section(3)]	
+Alias	Pregnant
+Contains	Pregnant(0)
+[PigHousing(0).Section(3).floor(0)]	
+Alias	PregnantFloor
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+[PigHousing(0).Section(4)]	
+Alias	Lactating
+Contains	Lactating(0)
+[PigHousing(0).Section(4).floor(0)]	
+Alias	FarrowingFloor
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+[PigHousing(0).Section(5)]	
+Alias	NewSow
+Contains	NewSow(0)
+[PigHousing(0).Section(5).floor(0)]	
+Alias	NewSowFloor
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+[PigHousing(0).inhouse(0)]	
+Alias	Slurrypit
+StorageCapacity	30
+[end]

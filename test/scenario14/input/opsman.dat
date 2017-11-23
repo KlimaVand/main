@@ -1,0 +1,17 @@
+[Crops(0)]	
+SellAllPlantProducts	true
+[Grazing(0)]	
+enableGrazing	false
+residualDM	100
+minHarvestable	2
+lowerGrazingLimit	20
+upperGrazingLimit	30
+springCutoffDay	171
+potentialGrowthFactor	.8
+turnoutThreshold	3
+maxPeriods	4
+[Cattle(0)]	
+conceptionTime	21
+lengthOfLactation	260
+milkQuota	0
+[end]

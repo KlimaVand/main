@@ -1,0 +1,126 @@
+C:\fasset_v2\StandardFarmGenerator - Cremona.xls
+JumpStart	 3
+JumpStop	 8
+[run(0)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Cremona\Cremona0\
+OutputDirectory       c:\main\test\Mattia\Cremona\Cremona0\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Cremona\Climate\Cremona.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(1)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Cremona\Cremona1\
+OutputDirectory       c:\main\test\Mattia\Cremona\Cremona1\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Cremona\Climate\Cremona.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(2)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Cremona\Cremona2\
+OutputDirectory       c:\main\test\Mattia\Cremona\Cremona2\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Cremona\Climate\Cremona.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+
+[run(3)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Como\Como0\
+OutputDirectory       c:\main\test\Mattia\Como\Como0\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Como\Climate\Como.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(4)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Como\Como1\
+OutputDirectory       c:\main\test\Mattia\Como\Como1\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Como\Climate\Como.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(5)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Como\Como2\
+OutputDirectory       c:\main\test\Mattia\Como\Como2\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Como\Climate\Como.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+
+[run(6)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Mantova\Mantova0\
+OutputDirectory       c:\main\test\Mattia\Mantova\Mantova0\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Mantova\Climate\Mantova.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(7)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Mantova\Mantova1\
+OutputDirectory       c:\main\test\Mattia\Mantova\Mantova1\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Mantova\Climate\Mantova.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+[run(8)]
+StartYear 	1990
+StopYear 	2007
+EnvironmentalIndicator        1/4
+InputDirectory        c:\main\test\Mattia\Mantova\Mantova2\
+OutputDirectory       c:\main\test\Mattia\Mantova\Mantova2\output\
+ClimateFileType	 6
+ClimateFileName       c:\main\test\Mattia\Mantova\Climate\Mantova.clm
+ForcedOperations        1
+VolatModel    1
+ForcedHarvest     1
+HarvestWaste  0.05
+StrawLeft 0.45
+
+
+
+[end]

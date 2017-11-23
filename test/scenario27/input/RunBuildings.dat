@@ -1,0 +1,163 @@
+[surface(0)]	
+Alias	Default
+[Store(0)]	
+Alias	Default
+Area	800
+[Slurrystore(0)]	
+Alias	Slurrystore
+Area	800
+Depth	3
+Manuretype	SLURRY
+CrustResistance	0.0
+SpecificResistance	2000.0
+CoverResistance	00.0
+PostCleanDepth	0.001
+Locked	0
+[Dungheap(0)]	
+Alias	Dungheap
+Area	800
+Depth	3
+Manuretype	CATTLE-FYM
+PostCleanDepth	0.001
+Locked	0
+[PigHousing(0)]	
+Alias	Default
+Area	20000
+controlledVent	1
+meanHeight	3.0
+planArea	1200000
+thermalTransWall	1.0
+thermalTransRoof	1.5
+minVentilation	2.0
+targetTemperature	22.0
+[PigHousing(0).Section(0)]	
+Alias	Weaner
+Contains	Weaner(0)
+DaysInSection	56
+SpiltDrinkingWater	0.027
+ElectricityUse	0.1
+[PigHousing(0).Section(0).floor(0)]	
+Alias	WeanerFloor
+Area	400
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	1.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	1.0
+[PigHousing(0).Section(1)]	
+Alias	Finisher
+Contains	Finisher(0)
+DaysInSection	85
+SpiltDrinkingWater	0.027
+ElectricityUse	0.10
+[PigHousing(0).Section(1).floor(0)]	
+Alias	FinisherFloor
+Area	400
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	1.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	0.25
+[PigHousing(0).Section(2)]	
+Alias	Mating
+Contains	Mating(0)
+DaysInSection	5.7
+SpiltDrinkingWater	0.027
+ElectricityUse	370.0
+[PigHousing(0).Section(2).floor(0)]	
+Alias	MatingFloor
+Area	400
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	10.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	0.25
+[PigHousing(0).Section(3)]	
+Alias	Pregnant
+Contains	Pregnant(0)
+DaysInSection	115
+SpiltDrinkingWater	0.027
+ElectricityUse	370.0
+[PigHousing(0).Section(3).floor(0)]	
+Alias	PregnantFloor
+Area	400
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	10.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	0.25
+[PigHousing(0).Section(4)]	
+Alias	Lactating
+Contains	Lactating(0)
+DaysInSection	27
+AreaPrAnimal	2
+SpiltDrinkingWater	0.027
+ElectricityUse	370.0
+[PigHousing(0).Section(4).floor(0)]	
+Alias	FarrowingFloor
+Area	400
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	10.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	0.25
+[PigHousing(0).Section(5)]	
+Alias	NewSow
+Contains	NewSow(0)
+DaysInSection	85
+SpiltDrinkingWater	0.027
+ElectricityUse	0.10
+[PigHousing(0).Section(5).floor(0)]	
+Alias	NewSowFloor
+Area	400
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	PigHousing(0).inhouse
+ManureToIndex	0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	10.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	0.25
+[PigHousing(0).inhouse(0)]	
+Alias	Slurrypit
+Area	800
+Depth	3
+Manuretype	SLURRY
+ManureToName	Slurrystore
+ManureToIndex	0
+PostCleanDepth	0.001
+VelocityConstant	4.0
+[end]

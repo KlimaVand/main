@@ -1,0 +1,236 @@
+startLateLactation              168 //defines start of late lactation in days from parturition
+firstLateLimit                  20.0 //division between low and high milk yield (kg/d) for animals in 1st lactation 
+matureLateLimit			26.0 ////division between low and high milk yield (kg/d) for mature animals 
+autoFeed			false
+
+[Group(0)]
+Alias              HEIFERS1
+
+[Group(0).Period(0)]
+Day			 1
+Month			 8
+Grazing		 	0.0
+Housed		 24		//hours in animal house
+[Group(0).Period(0).Normal.Supplement(0)]
+FeedCode		307
+Amount			0.96
+[Group(0).Period(0).Normal.Supplement(1)]
+FeedCode		665
+Amount			0.42
+[Group(0).Period(0).Normal.Supplement(2)]
+FeedCode		2
+Amount			0.44
+
+
+
+
+[Group(1)]
+Alias              HEIFERS2
+
+[Group(1).Period(0)]
+Day			 1
+Month			 8
+Grazing			 0.0
+Housed		 24		//hours in animal house
+[Group(1).Period(0).Normal.Supplement(0)]
+FeedCode		2
+Amount		        1.114
+[Group(1).Period(0).Normal.Supplement(1)]
+FeedCode		665
+Amount		        8.67		kg fresh wt per animal per day
+[Group(1).Period(0).Normal.Supplement(2)]
+FeedCode		593
+Amount		        3.15	
+[Group(1).Period(0).Normal.Supplement(3)]
+FeedCode		782
+Amount		        2.975	
+
+
+
+
+
+[Group(2)]
+Alias              HEIFERS3
+
+[Group(2).Period(0)]
+Day			 1
+Month			 8
+Grazing			 0.0
+Housed		 24		//hours in animal house
+[Group(2).Period(0).Normal.Supplement(0)]
+FeedCode		2
+Amount		        1.114
+[Group(2).Period(0).Normal.Supplement(1)]
+FeedCode		665
+Amount		        8.67		kg fresh wt per animal per day
+[Group(2).Period(0).Normal.Supplement(2)]
+FeedCode		593
+Amount		        3.15	
+[Group(2).Period(0).Normal.Supplement(3)]
+FeedCode		782
+Amount		        2.975	
+
+
+
+
+[Group(3)]
+Alias              DAIRY-1stEarly
+[Group(3).Period(0)]
+Day			 1
+Month			 8
+Grazing			 0.0
+Housed		         24		//hours in animal house
+[Group(3).Period(0).Normal.Supplement(0)]
+FeedCode		11
+Amount		        4.625
+[Group(3).Period(0).Normal.Supplement(1)]
+FeedCode		241
+Amount		3.293
+[Group(3).Period(0).Normal.Supplement(2)]
+FeedCode		201
+Amount		2.975
+[Group(3).Period(0).Normal.Supplement(3)]
+FeedCode		565
+Amount		        1.575
+[Group(3).Period(0).Normal.Supplement(4)]
+FeedCode		665
+Amount		1.7
+[Group(3).Period(0).Normal.Supplement(5)]
+FeedCode		602
+Amount		1.26
+[Group(3).Period(0).Normal.Supplement(6)]
+FeedCode		593
+Amount		7.7
+[Group(3).Period(0).Normal.Supplement(7)]
+FeedCode		788
+Amount		0.425
+
+
+[Group(4)]
+Alias              DAIRY-1stLate
+[Group(4).Period(0)]
+Day			 1
+Month			 8
+Grazing			 0.0
+Housed		         24		//hours in animal house
+[Group(4).Period(0).Normal.Supplement(0)]
+FeedCode		11
+Amount		        4.625
+[Group(4).Period(0).Normal.Supplement(1)]
+FeedCode		241
+Amount		3.293
+[Group(4).Period(0).Normal.Supplement(2)]
+FeedCode		201
+Amount		2.975
+[Group(4).Period(0).Normal.Supplement(3)]
+FeedCode		565
+Amount		        1.575
+[Group(4).Period(0).Normal.Supplement(4)]
+FeedCode		665
+Amount		1.7
+[Group(4).Period(0).Normal.Supplement(5)]
+FeedCode		602
+Amount		1.26
+[Group(4).Period(0).Normal.Supplement(6)]
+FeedCode		593
+Amount		7.7
+[Group(4).Period(0).Normal.Supplement(7)]
+FeedCode		788
+Amount		0.425
+
+
+[Group(5)]	DAIRY-MatureEarly
+Alias              
+[Group(5).Period(0)]
+Day			 1
+Month			 8
+Grazing			 0.0
+Housed		         24		//hours in animal house
+[Group(5).Period(0).Normal.Supplement(0)]
+FeedCode		11
+Amount		        4.625
+[Group(5).Period(0).Normal.Supplement(1)]
+FeedCode		241
+Amount		3.293
+[Group(5).Period(0).Normal.Supplement(2)]
+FeedCode		201
+Amount		2.975
+[Group(5).Period(0).Normal.Supplement(3)]
+FeedCode		565
+Amount		        1.575
+[Group(5).Period(0).Normal.Supplement(4)]
+FeedCode	665
+Amount		1.7
+[Group(5).Period(0).Normal.Supplement(5)]
+FeedCode		602
+Amount		1.26
+[Group(5).Period(0).Normal.Supplement(6)]
+FeedCode		593
+Amount		7.7
+[Group(5).Period(0).Normal.Supplement(7)]
+FeedCode		788
+Amount		0.425
+
+
+
+[Group(6)]	DAIRY-MatureLate
+Alias            
+[Group(6).Period(0)]
+Day			 1
+Month			 8
+Grazing			 0.0
+Housed		         24		//hours in animal house
+[Group(6).Period(0).Normal.Supplement(0)]
+FeedCode		11
+Amount		        4.625
+[Group(6).Period(0).Normal.Supplement(1)]
+FeedCode		241
+Amount		3.293
+[Group(6).Period(0).Normal.Supplement(2)]
+FeedCode		201
+Amount		2.975
+[Group(6).Period(0).Normal.Supplement(3)]
+FeedCode		565
+Amount		        1.575
+[Group(6).Period(0).Normal.Supplement(4)]
+FeedCode		665
+Amount		1.7
+[Group(6).Period(0).Normal.Supplement(5)]
+FeedCode		602
+Amount		1.26
+[Group(6).Period(0).Normal.Supplement(6)]
+FeedCode		593
+Amount		7.7
+[Group(6).Period(0).Normal.Supplement(7)]
+FeedCode		788
+Amount		0.425
+
+
+
+
+
+[Group(7)]
+Alias              DAIRY-Dry
+[Group(7).Period(0)]
+Day			 1
+Month			 8
+Grazing		 0.0
+Housed		 24		//hours in animal house
+[Group(7).Period(0).Normal.Supplement(0)]
+FeedCode		2
+Amount		        1.114
+[Group(7).Period(0).Normal.Supplement(1)]
+FeedCode		665
+Amount		        8.67		kg fresh wt per animal per day
+[Group(7).Period(0).Normal.Supplement(2)]
+FeedCode		593
+Amount		        3.15	
+[Group(7).Period(0).Normal.Supplement(3)]
+FeedCode		782
+Amount		        2.975	
+
+
+
+
+[end]
+

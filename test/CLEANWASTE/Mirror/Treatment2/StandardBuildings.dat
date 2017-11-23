@@ -1,0 +1,110 @@
+[all]	
+scalable	false
+[Slurrystore(0)]	
+Alias	Slurrystore
+Depth	3
+Manuretype	SLURRY
+StorageCapacity	270
+CrustResistance	0.0
+SpecificResistance	2000.0
+CoverResistance	00.0
+PostCleanDepth	0.001
+Locked	0
+OMdegRateConst	0
+ManureToName	Slurry
+ManureToIndex	0
+[Store(0)]	
+Alias	Default
+scalableBstore	1
+[Pigstable(0)]	
+Alias	Default
+meanHeight	6.0
+planAreaRatio	1.25
+thermalTransWall	0.0
+thermalTransRoof	0.0
+absorbCoeff	0.2
+emissivity	0.8
+externSurfResis	0.001
+minVentilation	2.0
+maxVentilation	40.0
+targetTemperature	22.0
+controlledVent	1
+[Pigstable(0).Section(0)]	
+Alias	Finisher
+[Pigstable(0).Section(0).floor(0)]	
+Alias	FinisherFloor
+[Pigstable(0).Section(1)]	
+Alias	Weaner
+[Pigstable(0).Section(1).floor(0)]	
+Alias	WeanerFloor
+[Pigstable(0).Section(2)]	
+Alias	Mating
+[Pigstable(0).Section(2).floor(0)]	
+Alias	MatingFloor
+[Pigstable(0).Section(3)]	
+Alias	Pregnant
+[Pigstable(0).Section(3).floor(0)]	
+Alias	PregnantFloor
+[Pigstable(0).Section(4)]	
+Alias	Lactating
+[Pigstable(0).Section(4).floor(0)]	
+Alias	FarrowingFloor
+[Pigstable(0).Section(5)]	
+Alias	NewSow
+[Pigstable(0).Section(5).floor(0)]	
+Alias	NewSowFloor
+[Pigstable(0).Section(6)]	
+Alias	FinisherPartiallySlatted
+Contains	Finisher(0)
+DaysInSection	85
+SpiltDrinkingWater	0.027
+ElectricityUse	0.10
+Places	0
+AreaPrAnimal	1.0
+[Pigstable(0).Section(6).floor(0)]	
+Locked	0
+OMdegRateConst	0
+ManureToID	0
+Alias	FinisherSolidFloor
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	10.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	1.0
+AreaPartition	0.5
+[Pigstable(0).Section(6).floor(1)]	
+Locked	0
+OMdegRateConst	0
+ManureToID	0
+Alias	FinisherSlattedFloor
+Depth	0.003
+Manuretype	SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0
+CleaningInterval	1
+PostCleanDepth	0.001
+WashingWater	10.0
+VelocityConstant	15.0
+VolumeToArea	162.0
+StrawAdded	0.0
+ProportionFouled	1.0
+AreaPartition	0.5
+[Pigstable(0).inhouse(0)]	
+Locked	0
+Alias	Slurrypit
+Depth	3
+Manuretype	SLURRY
+ManureToName	Slurrystore
+ManureToIndex	0
+PostCleanDepth	0.001
+VelocityConstant	4.0
+OMdegRateConst	0
+[end]

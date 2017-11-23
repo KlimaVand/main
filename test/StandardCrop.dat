@@ -1,0 +1,2048 @@
+[NoCrop]
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+usingPlantTemp 1
+RelativeDensity 1
+TS0              125;                 // Emergence temperature sum
+TS1              461;             // Temperature sum for Anthesis
+TS2              420;                 // Temperature sum for end grain fill
+TS3              155;                 // Temperature sum for ripeness
+TB0              0;                   // Base temperature until emergence
+TB1              4.0;					   // Base temperature until flowering
+TB2              6.0;						// Base temperature after flowering
+TB3              4.0;                 // Base temperature for ripening
+DB               7.0;						// Daylength response   (Weir et al.)
+DMAX             20.0;		            // Daylength response
+DS_Flagligule    0.668112798;				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.14285714;          // DS scale for start of grainfill
+LinearLeafPhase  200;
+DMCostPerN				 0.0;
+MaxFixPerDM				 0.0;
+RootpF                4.2;          // Water potential at wilting point
+RootPentrRate      	 0.001;        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0;          // Root density distribution parameter
+TempRootMin           0.0;          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200; //191;   // Specific root length, m pr. kg.
+RootDensAtBottom      200; //191;   // Rootdensity at rootdepth (100*191/100)
+MinimumRootDens       0.0; //500;   BMP: why zero ???!!!
+InitialRootDepth      0.1; 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036;     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006;       // NEW value from DAISY (JB 2002-8) 0.0031;       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0;          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0;          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005;          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.2;          // Maximal root depth for this crop
+TopFraction            0.50;        // Fraction of seed that goes into top
+ConversionCoefficient  1.0;         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0;         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.05;;         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3;         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.33;        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2;           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10;          // Maximum temperature for dry matter production
+StoreForFilling		  0.39;        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5;                    // Parameter giving the N-curve shape
+MinN_Store    			 0.013;               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.026;               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105;           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175;           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44;             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3;              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2;       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5;             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.44;            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5;             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48;            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0092;          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4;             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.011;           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46;            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35;            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0;             // Max plant height (m)
+LAIDistributionPar		 0.4;             // Distribution of LAI in canopy
+Conversfactor     		 0.5;             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02;           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 1.0;
+WaterDeficitLagPhase  	 1.0;
+WaterDeficitGrainFill 	 1.0;
+FractionNminInRoots 		 0.0;        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0;       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0;
+MaxGLAICrop 				 7.0;
+RhizoDepositFraction 	 0.5;
+FillFactor 					 0.57;    
+[Beets]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+TS0              200                // Emergence temperature sum
+TS1              1100             // Temperature sum for Anthesis
+TS2              3000                 // Temperature sum for end grain fill
+TS3              1000                // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              0					   // Base temperature until flowering
+TB2              0						// Base temperature after flowering
+TB3              0	// Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.8				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.17808219
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    300 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      2.0          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.1        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              4           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.39        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.0072               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.010             // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.56             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.0              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.62           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.5          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.5            // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.015           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.05            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth  0.65
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  				0.977
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.57                  // Fraction of net production after anthesis that goes into grain
+RelativeDensity       1.0
+MinAllocToStorage 	0.0
+MaxAllocToStorage		0.7
+TempSumStorage1     	400          			// Temperature sum for min allocation to storage
+TempSumStorage2		900
+
+[SpringBarley]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+TS0              130	                 // Emergence temperature sum (Doltra et al. 2011) 
+TS1              250             // Temperature sum for Anthesis (Doltra et al. 2011)
+TS2              500                 // Temperature sum for end grain fill (Doltra et al. 2011)
+TS3              175                 // Temperature sum for ripeness (Doltra et al. 2011)
+TB0              0                   // Base temperature until emergence (Doltra et al. 2011)
+TB1              4.0					   // Base temperature until flowering (Doltra et al. 2011)
+TB2              6.0						// Base temperature after flowering (Doltra et al. 2011)
+TB3              0                 // Base temperature for ripening (Doltra et al. 2011)
+DB               7.0						// Daylength response   (Weir et al.) (*What year? *isik)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036 // Uptake rate for nitrate-N g/m/d (m root length) changed from .00006 to .000036 (CropParameter file Jordi)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1          // Maximal root depth for this crop. Changed to 0.2 but not used (CropParamter file Jordi)
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.7        // Maximum radiation use efficiency (g/MJ). Changed from 3.5 to 3.7 (Doltra et al. 2011)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -1000	// Parameter giving the N-curve shape
+MinN_Store    			 0.015               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data). Changed from 0.016 to 0.015 (Doltra et al. 2011)
+MaxN_Store    			 0.025               // Maximum content of nitrogen i storage organs. Changed from 0.021 to 0.025 (Doltra et al. 2011)
+MinN_Root     			 0.013           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation (Doltra et al. 2011)
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.015          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top. Changed from .6 to .4 (Doltra et al. 2011)
+LAIDMRatio        		 0.015           // Maximum ratio between LAI and DM in veg top. Changed from .01 to .015 (Doltra et al. 2011)
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.2            // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.5
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.5
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.6                  // Fraction of net production after anthesis that goes into grain. Changed from 0.45 to 0.6 (Doltra et al. 2011)
+RelativeDensity       1.0
+
+[Chickory]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+TS0              130
+LinearLeafPhase		200
+TS1              1000	             // Temperature sum for Anthesis (Jordis' CropParameter file included this: //TS1  3000 //250 // 5000)
+TS2              500                 // Temperature sum for end grain fill
+TS3              175                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.00065       // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    100 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.0.000036 // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      3 // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4 // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5	// Parameter giving the N-curve shape
+MinN_Store    			 0.016               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.021               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.005           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.015          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.3             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.2            // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.5
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.5
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.45                  // Fraction of net production after anthesis that goes into grain
+RelativeDensity       1.0
+
+[Ryegrass]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+LinearLeafPhase	200
+TS0              125	                 // Emergence temperature sum. Changed from 130 to 125 (Doltra et al. 2011)
+TS1              300             // Temperature sum for Anthesis. Changed from 500 to 300 (Doltra et al. 2011)
+TS2              420                 // Temperature sum for end grain fill (Doltra et al. 2011)
+TS3              155                 // Temperature sum for ripeness (Doltra et al. 2011)
+TB0              0                   // Base temperature until emergence (Doltra et al. 2011)
+TB1              4.0					   // Base temperature until flowering (Doltra et al. 2011)
+TB2              6.0						// Base temperature after flowering (Doltra et al. 2011)
+TB3              4                 // Base temperature for ripening (Doltra et al. 2011)
+DB               7.0						// Daylength response   (Weir et al.) 
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.1
+
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.0004        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         5.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    150 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.002          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.3         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4.5        // Maximum radiation use efficiency (g/MJ) changed from 3.7 to 4.5 (Doltra et al. 2011)
+MinDMtemp              0           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              2         // Maximum temperature for dry matter production
+StoreForFilling		  0.1        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.016               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data) (Doltra et al. 2011)
+MaxN_Store    			 0.026               // Maximum content of nitrogen i storage organs (Doltra et al. 2011)
+MinN_Root     			 0.01           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.030           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.38             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6.2 	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			1.5	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.5            // Extinction coefficient for photosynthetic active radiation. Changed from .4 to .5 (Doltra et al. 2011)
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.015          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top (Doltra et al. 2011)
+InitialCAI        		 0.1            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.5             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.001
+FillFactor 					 0.2                  // Fraction of net production after anthesis that goes into grain (Doltra et al. 2011)
+RelativeDensity       1.0
+MinDayLength		10
+RespirationRoot		0.0001
+RespirationTop		0.0001
+TransferRate		0.04
+BulkDensity			1000
+RecycleFraction		0.15
+TransferRate		0.04
+InitialLAIIncrease	2
+liveOMD			0.8
+deadOMD			0.5
+RateOfRipeReSeed		0.2
+
+[Clover]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+LinearLeafPhase	200 			//Changed to 3000 but not used (Jordi CropParameter file)
+RelativeDensity       1.0
+TS0              125	                 // Emergence temperature sum
+TS1              300             // Temperature sum for Anthesis
+TS2              420                 // Temperature sum for end grain fill
+TS3              155                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              4                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.1
+
+DMCostPerN				 10.3 //Changed to 10 but not used(CropParamter file Jordi)
+MaxFixPerDM				 0.022 //(Doltra et al. 2011)
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.0008        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         5.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    250 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.002          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.3         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.2	// Maximum radiation use efficiency (g/MJ). Changed from 4.5 to 3.2 (Doltra et al. 2011)
+MinDMtemp              0           // Minimum temperature for dry matter production (4 in Hansen et al). Changed to 2 but not used (Jordi CropParameter file)
+MaxDMtemp              5         // Maximum temperature for dry matter production. Changed to 10 but not used (Jordi CropParameter file)
+StoreForFilling		  0.2        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.016               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.026               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.025           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.040           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.38             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994). Changed to 0 but not used (Jordi CropParameter file)
+NPctMax       			 6.2 	 // Following Justes concept (Justes et al., 1994). Changed to 4.5 but not used (Jordi CropParameter file)
+NPctMin       			1.5	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 1            // Extinction coefficient for photosynthetic active radiation. Changed from .7 to 1 (Doltra et al. 2011)
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.018          // Coefficient for leaf growth. Changed to 0.057 but not used (Jordi CropParameter file: There is another value for this parameter; 0.0092!)
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top. 
+LAIDMRatio        		 0.008           // Maximum ratio between LAI and DM in veg top (Doltra et al. 2011)
+InitialCAI        		 0.1            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 0.5 	// Max plant height (m)
+LAIDistributionPar		 1.1	// Distribution of LAI in canopy. Changed to 15 but not used! (CropParameter file Jordi)
+Conversfactor     		 0.5             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 1        //Fraction of N in roots present as mineral N. Changed from .1 to 1 (CropParameter file Jordi)
+FractionNminInVegTop 	 1       //Fraction of N in VegTop present as mineral N. Changed from 0.05 to 1 (CropParameter file Jordi)
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.001
+FillFactor 					 0.3                  // Fraction of net production after anthesis that goes into grain. (Doltra et al. 2011)
+MinDayLength		10
+RespirationRoot		0.0001
+RespirationTop		0.0001
+TransferRate		0.04
+BulkDensity			1000
+RecycleFraction		0.15
+TransferRate		0.04
+InitialLAIIncrease	2
+liveOMD			0.8
+deadOMD			0.5
+RateOfRipeReSeed		0.2
+NFixationThisDay		0.0
+
+[DyersWoad]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              130	                 // Emergence temperature sum
+TS1              250             // Temperature sum for Anthesis
+TS2              500                 // Temperature sum for end grain fill
+TS3              175                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.002        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         1	// Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006 // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      3	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              0           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              5          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -1000	// Parameter giving the N-curve shape
+MinN_Store    			 0.016               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.021               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.005           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.015          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.6             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.2            // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.5
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.5
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.45                  // Fraction of net production after anthesis that goes into grain
+
+[Pea]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              100                 // Emergence temperature sum
+TS1              450             // Temperature sum for Anthesis
+TS2              300                 // Temperature sum for end grain fill
+TS3              360                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0.0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.9				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.04
+LinearLeafPhase	 200
+DMCostPerN				 15 // Changed to 20 or 10 but not used (CropParameter file Jordi)
+MaxFixPerDM				 0.026 //Changed from 0.02 to 0.026 (CropParameter file Jordi, and there is the note in that file: MaxFixPerDM  0.02 (currently used for PEA)) 
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.00086 // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    57  //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      0.9	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.05         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3 // Maximum radiation use efficiency (g/MJ). There are following values in Jordis' file: 3(currently used), 2(Loss et al. 1997), 5.3(MEL)
+MinDMtemp              4           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.04               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data) Changed from 0.037 to 0.04 (Doltra et al. 2011) 
+MaxN_Store    			 0.06               // Maximum content of nitrogen i storage organs. Changed from 0.042 to 0.06
+MinN_Root     			 0.01           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			7.9	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.8             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.85           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0125          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.25             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.015           // Maximum ratio between LAI and DM in veg top. Changed from 1.2 to 0.015 Huge difference!!! (CropParameter file Jordi)
+InitialCAI        		 0.2	// Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.7            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		1.5	// Distribution of LAI in canopy
+Conversfactor     		 0.1             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 0.45
+WaterDeficitGrainFill 	 0.6	
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.5                 // Fraction of net production after anthesis that goes into grain
+
+NFixationThisDay		0.0
+
+[Soybean]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              100                 // Emergence temperature sum
+TS1              450             // Temperature sum for Anthesis
+TS2              300                 // Temperature sum for end grain fill
+TS3              360                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0.0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.9				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.04
+LinearLeafPhase	 200
+DMCostPerN				 15
+MaxFixPerDM				 0.02
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.00086 // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    57  //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      0.9	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.05         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           5 // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              4           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.037               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.042               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.01           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			7.9	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.8             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.85           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0125          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.25             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 1.2           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.2	// Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.7            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		1.5	// Distribution of LAI in canopy
+Conversfactor     		 0.1             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 0.45
+WaterDeficitGrainFill 	 0.6	
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.5                 // Fraction of net production after anthesis that goes into grain
+
+NFixationThisDay		0.0
+
+[HairyVetch]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+LinearLeafPhase  200
+RelativeDensity       1.0
+TS0              100                 // Emergence temperature sum
+TS1              650             // Temperature sum for Anthesis
+TS2              300                 // Temperature sum for end grain fill
+TS3              360                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0.0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.9				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.04
+DMCostPerN				 15
+MaxFixPerDM				 0.02
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001	// Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    20  //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.007          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.5         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.8         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4  // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              0           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.037               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.042               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.01           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			7.9	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.8             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.85           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.01         // Coefficient for leaf growth
+LAINitrogenRatio  		 0.25             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 1.2           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.2	// Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.7            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		1.5	// Distribution of LAI in canopy
+Conversfactor     		 0.1             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 0.45
+WaterDeficitGrainFill 	 0.6	
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.5                 // Fraction of net production after anthesis that goes into grain
+NFixationThisDay		0.0
+
+[Lucerne]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              130	                 // Emergence temperature sum
+TS1              500             // Temperature sum for Anthesis
+TS2              420                 // Temperature sum for end grain fill
+TS3              155                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              4                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.1
+
+DMCostPerN				 10.32500
+MaxFixPerDM				 0.027
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.0008        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         5.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    250 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.002          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      2	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           1.9	// Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10         // Maximum temperature for dry matter production
+StoreForFilling		  0.1        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.016               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.026               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.01           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.025           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.38             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6.2 	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			1.5	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.7		// Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.018          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.1            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 0.7 	// Max plant height (m)
+LAIDistributionPar		 1.1	// Distribution of LAI in canopy
+Conversfactor     		 0.5             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.06
+FillFactor 					 0.2                  // Fraction of net production after anthesis that goes into grain
+MinDayLength		10
+RespirationRoot		0.0003
+RespirationTop		0.0001
+TransferRate		0.035
+BulkDensity			1400
+RecycleFraction		0.15
+TransferRate		0.04
+InitialLAIIncrease	2
+liveOMD			0.8
+deadOMD			0.5
+RateOfRipeReSeed		0.2
+
+NFixationThisDay		0.0
+[MAS]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              70                 // Emergence temperature sum
+TS1              650             // Temperature sum for Anthesis
+TS2              300                 // Temperature sum for end grain fill
+TS3              200                 // Temperature sum for ripeness
+TB0              9                   // Base temperature until emergence
+TB1              6					   // Base temperature until flowering
+TB2              7						// Base temperature after flowering
+TB3              7                 // Base temperature for ripening
+DB               8						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.004        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.0006     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      2	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.15	// Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.6        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.012              // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.018              // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.42           	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 63              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.05     	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.39           // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65          // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.03         // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.0325	// Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.5            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.3           // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 2.3           // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 1.0
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 07	// Fraction of net production after anthesis that goes into grain
+
+[MAG]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              70                 // Emergence temperature sum
+TS1              650             // Temperature sum for Anthesis
+TS2              300                 // Temperature sum for end grain fill
+TS3              200                 // Temperature sum for ripeness
+TB0              9                   // Base temperature until emergence
+TB1              6					   // Base temperature until flowering
+TB2              7						// Base temperature after flowering
+TB3              7                 // Base temperature for ripening
+DB               8						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.004        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.0006     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      2	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.15	// Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.6        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.012              // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.018              // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.42           	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 63              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.05     	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.39           // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65          // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.03         // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.0325	// Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.5            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.3           // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 2.3           // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 1.0
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 07	// Fraction of net production after anthesis that goes into grain
+
+[Maize]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              70                 // Emergence temperature sum
+TS1              650             // Temperature sum for Anthesis
+TS2              300                 // Temperature sum for end grain fill
+TS3              200                 // Temperature sum for ripeness
+TB0              9                   // Base temperature until emergence
+TB1              6					   // Base temperature until flowering
+TB2              7						// Base temperature after flowering
+TB3              7                 // Base temperature for ripening
+DB               8						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.004        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.0006     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      2	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.15	// Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.6        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.012              // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.018              // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.42           	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 63              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.05     	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.39           // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65          // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.03         // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.0325	// Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.5            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.3           // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 2.3           // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 1.0
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 07	// Fraction of net production after anthesis that goes into grain
+[Oat]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              130                 // Emergence temperature sum
+TS1              560             // Temperature sum for Anthesis
+TS2              310                 // Temperature sum for end grain fill
+TS3              175                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0	// Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+LinearLeafPhase	 200
+
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           5	// Maximum radiation use efficiency (g/MJ)
+MaxDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.39        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.013               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.029               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 7.5		 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0092          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.6             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 1	// Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.1             // Distribution of LAI in canopy
+Conversfactor     		 0.2             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.5
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.6
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.5                 // Fraction of net production after anthesis that goes into grain
+MinDMtemp	2
+
+[OilRadish]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              250                // Emergence temperature sum
+TS1              500             // Temperature sum for Anthesis
+TS2              3650                 // Temperature sum for end grain fill
+TS3              0	                // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              0					   // Base temperature until flowering
+TB2              0						// Base temperature after flowering
+TB3              0	// Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.8				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     0.7
+
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.0021        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         1.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006	/ Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      3	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.2        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.4         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              5          // Maximum temperature for dry matter production
+StoreForFilling		  0.39        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.0072               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.010             // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.56             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6.18	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.07      	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.62           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.5          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.5            // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.015           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.05            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth  0.65
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  				0.977
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.57                  // Fraction of net production after anthesis that goes into grain
+MinAllocToStorage 	0.1
+MaxAllocToStorage		0.2
+TempSumStorage1     	1500          			// Temperature sum for min allocation to storage
+TempSumStorage2		2000
+
+[Potato]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              150                 // Emergence temperature sum
+TS1              235            // Temperature sum for Anthesis
+TS2              1300                 // Temperature sum for end grain fill. Changed from 3650 to 1300 (Doltra et al. 2011)
+TS3              0                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              0.0					   // Base temperature until flowering
+TB2              0						// Base temperature after flowering
+TB3              0	// Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.8				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.17808219
+LinearLeafPhase	 200
+
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006	// Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.1         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4 // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              4           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.39        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.011               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.018               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.42             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6		 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.62           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.05          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.75           // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.015           // Maximum ratio between LAI and DM (Doltra et al. 2011)
+InitialCAI        		 0.6            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.35
+WaterDeficitLagPhase  	 1
+WaterDeficitGrainFill 	 1
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.57                  // Fraction of net production after anthesis that goes into grain
+MinAllocToStorage		0.4
+MaxAllocToStorage	0.75
+TempSumStorage1	400
+TempSumStorage2	600
+
+[Rye]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              125                 // Emergence temperature sum
+TS1              370             // Temperature sum for Anthesis
+TS2              330                 // Temperature sum for end grain fill
+TS3              160                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              .0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.675675676				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.18181818
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.4         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.7         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           4.4	// Maximum radiation use efficiency (g/MJ)
+MinDMtemp              0           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              8          // Maximum temperature for dry matter production
+StoreForFilling		  0.39        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.011               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.022               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.39             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.44            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0092          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.011           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.65           // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	0.7
+WaterDeficitLagPhase  	 0.55
+WaterDeficitGrainFill 	 0.7
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.45                  // Fraction of net production after anthesis that goes into grain
+
+HeightA			0.61
+HeightB			0.65
+
+[SeedGrass]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RateOfRipeReSeed		0.2	
+deadOMD			0.5
+liveOMD			0.8
+InitialLAIIncrease	2
+RecycleFraction		0.15
+BulkDensity			1000
+TransferRate		0.04
+RespirationTop		0.0001
+RespirationRoot		0.0001
+MinDayLength		10
+RelativeDensity       1.0
+TS0              125                 // Emergence temperature sum
+TS1              461             // Temperature sum for Anthesis
+TS2              420                 // Temperature sum for end grain fill
+TS3              155                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              4.0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.668112798				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.14285714
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.2          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.05         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.3         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.33        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.39        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.013               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.026               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.44            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0092          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.011           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.5             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 1.0
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.57                  // Fraction of net production after anthesis that goes into grain
+
+[ItalianRyegrass]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              125	                 // Emergence temperature sum
+TS1              445             // Temperature sum for Anthesis
+TS2              310                 // Temperature sum for end grain fill
+TS3              218                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006 // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.0          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.2        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -1000	// Parameter giving the N-curve shape
+MinN_Store    			 0.018               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.026               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.013           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.015          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.6             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.315	// Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.2            // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.5
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.5
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.45                  // Fraction of net production after anthesis that goes into grain
+
+[SpringWheat]
+usingPlantTemp 1
+SenescenceHeatThres 0
+SenescenceHeatResp 0
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              125	                 // Emergence temperature sum
+TS1              445             // Temperature sum for Anthesis
+TS2              310                 // Temperature sum for end grain fill
+TS3              218                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0                 // Base temperature for ripening
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006 // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.0          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.2        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -1000	// Parameter giving the N-curve shape
+MinN_Store    			 0.018               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.026               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.013           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.015          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.6             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.315	// Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.0             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.2            // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.5
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.5
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.45                  // Fraction of net production after anthesis that goes into grain
+
+[SpringRape]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              125                 // Emergence temperature sum
+TS1              480             // Temperature sum for Anthesis
+TS2              435                 // Temperature sum for end grain fill
+TS3              248                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0.0                 // Base temperature for ripening
+DB               8.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    10000				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.2
+LinearLeafPhase	 200
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.0025        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         1	// Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.8          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient 	0.5	// Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.2         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           5	// Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              8          // Maximum temperature for dry matter production
+StoreForFilling		  0.50        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.025               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.037               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.0105           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.0175           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.25             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6		 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.28             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.62            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.01         // Coefficient for leaf growth
+LAINitrogenRatio  		 0.5             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.5            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.6             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.65
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.57                  // Fraction of net production after anthesis that goes into grain
+
+[Sunflower]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              80                 // Emergence temperature sum
+TS1              780             // Temperature sum for Anthesis
+TS2              159                 // Temperature sum for end grain fill
+TS3              622                 // Temperature sum for ripeness
+TB0              6                   // Base temperature until emergence
+TB1              6					   // Base temperature until flowering
+TB2              6						// Base temperature after flowering
+TB3              6                 // Base temperature for ripening
+DB               8						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.004        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.0006     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      0.7	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.1         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.5         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff          7	// Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.026               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.03               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.03           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.51             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 1.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.39             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.7            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0294          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.3             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.02           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.01            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 2.3	// Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.5             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 1.0
+WaterDeficitLagPhase  	 1.0
+WaterDeficitGrainFill 	 1.0
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.9	// Fraction of net production after anthesis that goes into grain
+[WinterBarley]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+LinearLeafPhase	200
+RelativeDensity       1.0
+TS0              110	         // Emergence temperature sum
+TS1              346             // Temperature sum for Anthesis
+TS2              275                 // Temperature sum for end grain fill
+TS3              157                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4					   // Base temperature until flowering
+TB2              6						// Base temperature after flowering
+TB3              0                 // Base temperature for ripening
+DB               8						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.67				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.13
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006 // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.25        // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.5         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           5	// Maximum radiation use efficiency (g/MJ)
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              10          // Maximum temperature for dry matter production
+StoreForFilling		  0.3        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -1000	// Parameter giving the N-curve shape
+MinN_Store    			 0.016               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.021               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.013           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02          	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 7		 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.02          // Coefficient for leaf growth
+LAINitrogenRatio  		 0.7             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.017          // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 0.9	// Max plant height (m)
+LAIDistributionPar		 0.1             // Distribution of LAI in canopy
+Conversfactor     		 0.2            // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.6
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.6
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 					 0.45                  // Fraction of net production after anthesis that goes into grain
+
+[WinterRape]
+usingPlantTemp 1
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+LinearLeafPhase	200
+RelativeDensity       1.0
+TS0              125                 // Emergence temperature sum
+TS1              700             // Temperature sum for Anthesis
+TS2              400                 // Temperature sum for end grain fill
+TS3              100                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              0					   // Base temperature until flowering
+TB2              6.0						// Base temperature after flowering
+TB3              0	// Base temperature for ripening
+DB               8.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule   1				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.1
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.0015        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         1.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.00006     // Uptake rate for nitrate-N g/m/d (m root length)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      2.5	// Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  0.5         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.2         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.04         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.7         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.9        // Maximum radiation use efficiency (g/MJ)
+MinDMtemp              0           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              5	          // Maximum temperature for dry matter production
+StoreForFilling		  0.2        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -5                    // Parameter giving the N-curve shape
+MinN_Store    			 0.03               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+MaxN_Store    			 0.037               // Maximum content of nitrogen i storage organs
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.21             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 6.18	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.07       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.5             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.62           // Extinction coefficient for photosynthetic active radiation
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.01         // Coefficient for leaf growth
+LAINitrogenRatio  		 0.5             // Maximum ratio between LAI and nitrogen in veg top
+LAIDMRatio        		 0.01           // Maximum ratio between LAI and DM in veg top
+InitialCAI        		 0.5            // Initial green leaf area index after 200 degree days
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1.6             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.4             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0.65
+WaterDeficitLagPhase  	 0.5
+WaterDeficitGrainFill 	 0.65
+FractionNminInRoots 		 0.0        //Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       //Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.5
+FillFactor 					 0.4                  // Fraction of net production after anthesis that goes into grain
+
+[WinterWheat]
+usingPlantTemp 1
+SenescenceHeatThres 0
+SenescenceHeatResp 0
+vernalReq -1
+VernalOptTemp 5
+VernalBaseTmp 0
+RelativeDensity       1.0
+TS0              125                 // Emergence temperature sum
+TS1              461             // Temperature sum for Anthesis. Changed from 461 to 250 (Doltra et al. 2011). The original parameter "461" is now used. Worked out with Jørgen (Olesen et al. 2002).
+TS2              420                 // Temperature sum for end grain fill. Changed from 420 to 600 (Doltra et al. 2011). The original parameter "420" is now used. Worked out with Jørgen (Olesen et al. 2002).
+TS3              155                 // Temperature sum for ripeness
+TB0              0                   // Base temperature until emergence
+TB1              4.0		     // Base temperature until flowering
+TB2              6.0			// Base temperature after flowering
+TB3              0                 // Base temperature for ripening. Changed from 4 to 0 (Doltra et al. 2011)
+DB               7.0						// Daylength response   (Weir et al.)
+DMAX             20.0		            // Daylength response
+DS_Flagligule    0.668112798				// DS scale for start of flag ligule (BBCH 39)
+DS_StartFill     1.14285714 
+DMCostPerN				 0.0
+MaxFixPerDM				 0.0
+RootpF                4.2          // Water potential at wilting point
+RootPentrRate      	 0.001        // Root penetration rate (m d-1 deg C-1)
+RootDistrParm         3.0          // Root density distribution parameter
+TempRootMin           0.0          // Minimum temperature for root growth  new value by JB 19_3_3
+SpecificRootLength    200 //191   // Specific root length, m pr. kg.
+RootDensAtBottom      200 //191   // Rootdensity at rootdepth (100*191/100)
+MinimumRootDens       0.0 //500   BMP: why zero ???!!!
+InitialRootDepth      0.1 	       // Root depth by germination
+NitrateUptakeRate  	 0.000036     // Uptake rate for nitrate-N g/m/d (m root length). Changed from 0.00006 to 000036 (CropParameter file Jordi)
+AmmoniumUptakeRate    0.0006       // NEW value from DAISY (JB 2002-8) 0.0031       // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+MinimumSoilNitrate 	 0.0          // Minimum concentration of nitrate-N left in soil water (g/l)
+MinimumSoilAmmonium	 0.0          // Minimum concentration of ammonium-N left in soil water (g/l)
+DecayRoot             0.005          // Root decay given as a daily fraction of DM at 10 deg. Celsius
+MaxRootDepth      1.5          // Maximal root depth for this crop
+TopFraction            0.50        // Fraction of seed that goes into top
+ConversionCoefficient  1.0         // Coefficent of DM conversion from vegetative to storage
+GerminationConversion  1.0         // Conversion factor seed DM -> plant DM
+MinAllocToRoot          0.3         // Minimal fraction of dry matter production that is allocated to the root
+MaxAllocToRoot         0.6         // Maximal fraction of dry matter production that is allocated to the root
+MaxRadUseEff           3.4        // Maximum radiation use efficiency (g/MJ). Changed from 4 to 3.4 (Doltra et al. 2011). 
+MinDMtemp              2           // Minimum temperature for dry matter production (4 in Hansen et al)
+MaxDMtemp              7          // Maximum temperature for dry matter production
+StoreForFilling		  0.25        // Fraction of DM present at initiation of grain filling that is translocated to grain
+NCurveParam 			 -1000                    // Parameter giving the N-curve shape
+MinN_Store    			 0.018               // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data). Changed from 0.017 to 0.018 (Doltra et al. 2011)
+MaxN_Store    			 0.022               // Maximum content of nitrogen i storage organs. Changed from 0.023 to 0.022 (Doltra et al. 2011)
+MinN_Root     			 0.010           	 // Minimum content of nitrogen i root organs
+MaxN_Root     			 0.02           	 // Maximum content of nitrogen i root organs
+PowDM         			 -0.44             	 // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+NPctMax       			 8.3              	 // Following Justes concept (Justes et al., 1994)
+NPctMin       			 2.2       	 		 // Following Justes concept (Justes et al., 1994)
+ReducedNInYellow  	 0.3             // The min and max N for yellow VegTop is reduced with this parameter
+k                 	 0.65            // Extinction coefficient for photosynthetic active radiation. Changed from .44 to .65 (olesen et al. 2004)
+InterceptCoeff    	 0.5             // Coeff. for interceptioncapacity.
+PhotoSyntActPart  	 0.48            // Photosynthetic active part of total global radiation
+CoeffGreenIdx     		 0.0092          // Coefficient for leaf growth (Olesen et al. 2002, Eq 7 and, Olesen et al. 2002 (comparison...) Eq 17)
+LAINitrogenRatio  		 0.4             // Maximum ratio between LAI and nitrogen in veg top (Olesen et al. 2002, Eq 7)
+LAIDMRatio        		 0.011           // Maximum ratio between LAI and DM in veg top (Olesen et al. 2002, Eq 7, 0.011)
+InitialCAI        		 0.46            // Initial green leaf area index after 200 degree days. Changed to 2.56 but not used (CropParameter file Jordi)
+MinimumSenescense 		 0.35            // Used to calculate minimum senescense - value as calibrated for winter wheat
+MaxPlantHeight    		 1             // Max plant height (m)
+LAIDistributionPar		 0.4             // Distribution of LAI in canopy
+Conversfactor     		 0.3             // Part of green leaf that is converted to yellow leaf by wilting
+ColonialisationRate		 0.02           // Expansion of fraction area occupied (per day per degree Celcius)
+WaterDeficitVegGrowth 	 0 			//Changed from 0.65 to 0 (Doltra et al. 2011)
+WaterDeficitLagPhase  	 0.45
+WaterDeficitGrainFill 	 0.6
+FractionNminInRoots 		 0.0        	//Fraction of N in roots present as mineral N
+FractionNminInVegTop 	 0.0       		//Fraction of N in VegTop present as mineral N
+CO2Effect  					 1.0
+MaxGLAICrop 				 7.0
+RhizoDepositFraction 	 0.2
+FillFactor 		 0.57                  // Fraction of net production after anthesis that goes into grain. Changed from 0.55 to 0.57 (Doltra et al. 2011)
+HeightA			0.61
+HeightB			0.65
+LinearLeafPhase	200
+
+[end]

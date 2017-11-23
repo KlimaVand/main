@@ -1,0 +1,362 @@
+startLateLactation	 168	
+firstLateLimit	 20	
+matureLateLimit	 26	
+differentiation	 .3	
+autoFeed	true
+
+[Group(0)]
+Alias	HEIFERS1
+[Group(0).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.05
+propGrazed	 0
+FeedCode	465
+Housed	 24
+[Group(0).Period(0).Normal.Supplement(0)]
+FeedCode	311
+[Group(0).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(0).Period(1)]
+Day	 1
+Month	10
+propRoughage	.05
+propGrazed	0
+Housed	24.0
+[Group(0).Period(1).Normal.Supplement(0)]
+FeedCode	311
+[Group(0).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(1)]
+Alias	HEIFERS2
+[Group(1).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.95
+propGrazed	 1
+FeedCode	465
+Housed	 0
+[Group(1).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(1).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(1).Period(1)]
+Day	 1
+Month	10
+propRoughage	.95
+propGrazed	0
+Housed	24.0
+[Group(1).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(1).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(2)]
+Alias	HEIFERS3
+[Group(2).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.85
+propGrazed	 1
+FeedCode	465
+Housed	 0
+[Group(2).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(2).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(2).Period(1)]
+Day	 1
+Month	10
+propRoughage	.85
+propGrazed	0
+Housed	24.0
+[Group(2).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(2).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(3)]
+Alias	DAIRY-1stEarly
+[Group(3).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.35
+propGrazed	 1
+FeedCode	465
+Housed	 8
+[Group(3).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(3).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(3).Period(1)]
+Day	 1
+Month	10
+propRoughage	.35
+propGrazed	0
+Housed	24.0
+[Group(3).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(3).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(4)]
+Alias	DAIRY-1stLate
+[Group(4).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.55
+propGrazed	 1
+FeedCode	465
+Housed	 8
+[Group(4).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(4).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(4).Period(1)]
+Day	 1
+Month	10
+propRoughage	.55
+propGrazed	0
+Housed	24.0
+[Group(4).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(4).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(5)]
+Alias	DAIRY-MatureEarly
+[Group(5).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.35
+propGrazed	 1
+FeedCode	465
+Housed	 8
+[Group(5).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(5).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(5).Period(1)]
+Day	 1
+Month	10
+propRoughage	.35
+propGrazed	0
+Housed	24.0
+[Group(5).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(5).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(6)]
+Alias	DAIRY-MatureLate
+[Group(6).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.55
+propGrazed	 1
+FeedCode	465
+Housed	 8
+[Group(6).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(6).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(6).Period(1)]
+Day	 1
+Month	10
+propRoughage	.55
+propGrazed	0
+Housed	24.0
+[Group(6).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(6).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+
+
+[Group(7)]
+Alias	Dry
+[Group(7).Period(0)]
+Day	 1
+Month	 5
+propRoughage	.55
+propGrazed	 1
+FeedCode	465
+Housed	 8
+[Group(7).Period(0).Normal.Supplement(0)]
+FeedCode	201
+[Group(7).Period(0).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(7).Period(1)]
+Day	 1
+Month	10
+propRoughage	.55
+propGrazed	0
+Housed	24.0
+[Group(7).Period(1).Normal.Supplement(0)]
+FeedCode	201
+[Group(7).Period(1).Normal.Supplement(1)]
+FeedCode	565
+
+[Group(9)]
+Alias              SUCKLER-1stEarly
+[Group(9).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.35
+propGrazed		0.0
+Housed		 24		//hours in animal house
+[Group(9).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(9).Period(0).Normal.Supplement(1)]
+FeedCode		483
+
+[Group(10)]
+Alias              SUCKLER-1stLate
+
+[Group(10).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.55
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(10).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(10).Period(0).Normal.Supplement(1)]
+FeedCode		483
+
+[Group(11)]
+Alias              SUCKLER-MatureEarly
+
+[Group(11).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.35
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(11).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(11).Period(0).Normal.Supplement(1)]
+FeedCode		483
+
+[Group(12)]
+Alias              SUCKLER-MatureLate
+
+[Group(12).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.55
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(12).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(12).Period(0).Normal.Supplement(1)]
+FeedCode		483
+
+[Group(13)]
+Alias              FBEEF1
+
+[Group(13).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.05
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(13).Period(0).Normal.Supplement(0)]
+FeedCode		311			//cow milk supplement
+[Group(13).Period(0).Normal.Supplement(1)]
+FeedCode		565
+
+
+[Group(14)]
+Alias              FBEEF2
+
+[Group(14).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.95
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(14).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(14).Period(0).Normal.Supplement(1)]
+FeedCode		565
+
+[Group(15)]
+Alias              FBEEF3
+
+[Group(15).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.85
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(15).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(15).Period(0).Normal.Supplement(1)]
+FeedCode		565
+
+[Group(16)]
+Alias              MBEEF1
+
+[Group(16).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.05
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(16).Period(0).Normal.Supplement(0)]
+FeedCode		311			//cow milk supplement
+[Group(16).Period(0).Normal.Supplement(1)]
+FeedCode		565
+
+
+[Group(17)]
+Alias              MBEEF2
+
+[Group(17).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.95
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(17).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(17).Period(0).Normal.Supplement(1)]
+FeedCode		565
+
+[Group(18)]
+Alias              MBEEF3
+
+[Group(18).Period(0)]
+Day			 1
+Month			 8
+propRoughage		0.85
+propGrazed		0.0
+Housed		 	24		//hours in animal house
+[Group(18).Period(0).Normal.Supplement(0)]
+FeedCode		201
+[Group(18).Period(0).Normal.Supplement(1)]
+FeedCode		565
+
+[end]

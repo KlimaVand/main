@@ -1,0 +1,116 @@
+[SoilParameters]              // Data for "jordprofildatabasen" DJF+HYDRES model
+Nodes           40
+NodeThickness   50
+PloughingDepth 270
+
+[SoilLayer(1)]
+Thickness        300	// 0-30 cm
+SoilType         5
+DryBulkDensity   1.45                     
+ClayContent      0.124
+SiltContent      0.289
+MualemVanGenucten 1
+
+CarbonPct        1.87
+CNRatio	10.5
+	
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.052171913
+IOM	0.405174
+IOM.N	0.03948914
+
+[SoilLayer(2)]		//  30-60 cm
+Thickness        300
+SoilType         5
+DryBulkDensity   1.60                     
+ClayContent      0.128
+SiltContent      0.281
+MualemVanGenucten 1
+
+CarbonPct        1.43
+CNRatio	10
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.027332229
+IOM	0.7
+IOM.N	0.07086422
+
+[SoilLayer(3)]		//  60-90 cm
+Thickness        300
+SoilType         5
+DryBulkDensity   1.70                     
+ClayContent      0.137
+SiltContent      0.287
+MualemVanGenucten 1
+
+CarbonPct        0.90
+CNRatio	10
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.027332229
+IOM	0.7
+IOM.N	0.07086422
+
+[SoilLayer(4)]		// 90-120 cm
+Thickness        300
+SoilType          5
+DryBulkDensity   1.70
+ClayContent      0.137
+SiltContent      0.287
+MualemVanGenucten 1
+
+CarbonPct        0.90
+CNRatio	10
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.027332229
+IOM	0.7
+IOM.N	0.07086422
+
+[SoilLayer(5)]		// 120-200 cm
+Thickness        800
+SoilType          5
+DryBulkDensity   1.70
+ClayContent      0.137
+SiltContent      0.287
+MualemVanGenucten 1
+
+CarbonPct        0.90
+CNRatio	10
+	
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.027332229
+IOM	0.7
+IOM.N	0.07086422
+
+[end]

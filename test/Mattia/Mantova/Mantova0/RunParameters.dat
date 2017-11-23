@@ -1,0 +1,70 @@
+[Maize]
+MaxRadUseEff 4.2 
+TS0 100
+TS1 1000 
+TS2 700 
+TS3 200 
+TB0 6 
+TB1 6 
+TB2 6 
+TB3 6 
+NPctMax 4.8
+NPctMin 1.2
+MinN_Store 0.012
+[MAG]
+MaxRadUseEff 4.2 
+TS0 100
+TS1 1000 
+TS2 700 
+TS3 200 
+TB0 6 
+TB1 6 
+TB2 6 
+TB3 6 
+NPctMax 4.8
+NPctMin 1.2
+MinN_Store 0.015
+[MAS]
+MaxRadUseEff 4.2 
+TS0 100
+TS1 1000 
+TS2 700 
+TS3 100 
+TB0 6 
+TB1 6 
+TB2 6 
+TB3 6 
+NPctMax 4.8
+NPctMin 1.2
+MinN_Store 0.015
+[Lucerne]
+MaxRadUseEff 3.0 //2.7 
+MaxFixPerDM 0.010
+NPctMax 3.5
+NPctMin 1.2
+BulkDensity 700
+[ItalianRyegrass]
+MaxRadUseEff 3.7
+NPctMin 1.2
+[SpringBarley]
+TS0 100
+TS1 900 
+TS2 700 
+TS3 100
+TB0 6 
+TB1 6 
+TB2 6 
+TB3 6
+MaxRadUseEff 2.7 //3.0 
+MaxFixPerDM 0.027 //0.011
+//FillFactor 0.5                   // Fraction of net production after anthesis that goes into grain
+//StoreForFilling 0.3              // Fraction of DM present at initiation of grain filling that is translocated to grain
+MinN_Root 0.010 //0.028
+MaxN_Root 0.030 //0.037
+//MinN_Store 0.015 //0.025                // Minimum content of nitrogen i storage organs
+//MaxN_Store 0.03 //0.042                // Maximum content of nitrogen i storage organs
+NPctMax 8.0 //7.0
+NPctMin 1.5 //1.5
+PowDM -0.35
+[end]
+

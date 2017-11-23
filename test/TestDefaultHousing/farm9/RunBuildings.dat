@@ -1,0 +1,39 @@
+[Pigstable(0)]
+ID	1016601
+Area	2400
+height	3.5
+controlledVent	1
+[Pigstable(0).Section(0)]
+Contains	Finisher(0)
+[Pigstable(0).Section(0).floor(0)]
+Area	1440
+ManureToID	1016501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	SLURRY
+[Pigstable(0).Section(1)]
+Contains	Weaner(0)
+[Pigstable(0).Section(1).floor(0)]
+Area	960
+ManureToID	1016501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	SLURRY
+[Pigstable(1)]
+ID	1016602
+Area	1440
+height	3.5
+controlledVent	1
+[Pigstable(1).Section(0)]
+Contains	Finisher(0)
+[Pigstable(1).Section(0).floor(0)]
+Area	1440
+ManureToID	1016501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	SLURRY
+[Slurrystore(0)]
+Area	1840
+ManureStoreID	1016501
+ManureType	SLURRY
+[end]

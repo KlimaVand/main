@@ -1,0 +1,26 @@
+[Nmin(0)]
+StartDepth                    0 
+EndDepth                      25 
+
+[Nmin(1)]
+StartDepth                    0 
+EndDepth                      50 
+
+[Nmin(2)]
+StartDepth                    0 
+EndDepth                      100 
+
+[PoreWater(0)]
+Depth                         25 
+[PoreWater(1)]
+Depth                         50 
+[PoreWater(2)]
+Depth                         100 
+
+[Details]
+PlantDetails 1
+SoilDetails 0
+CowDetails	0
+HerdDetails	0
+ManureManageDetails	1
+[end]

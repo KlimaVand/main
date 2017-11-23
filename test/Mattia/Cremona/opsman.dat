@@ -1,0 +1,27 @@
+[Crops(0)]
+
+SellAllPlantProducts	true //true: vendita granella + paglia; false: vendita solo granella
+SelltheNonRoughageProducts true
+SelltheStrawProducts	true //true: vendita granella + paglia; false: vendita solo granella
+
+[Grazing(0)]
+residualHeight	 .07
+minProteinConc	 153
+minEnergyConc	 .8
+minHarvestable			2      //minimum herbage mass allowed (t/ha) before cutting can occur
+lowerGrazingLimit	 20		//if fewer number of days worth of grazed forage are present, used deficiency ration
+upperGrazingLimit	 30		//if greater number of days worth of grazed forage are present, used surplus ration
+lowerGrazingMassLimit	 500
+springCutoffDay	 171
+potentialGrowthFactor	 .8
+turnoutThreshold                 3   // number of days grazing available before animals can be turned out
+maxPeriods			4	//maximum number of cuts
+enableGrazing	false
+[Cattle(0)]
+conceptionTime			21 //days after parturition
+lengthOfLactation		260 //days after parturition
+milkQuota			0	//litres per year
+
+[end]
+//lengthOfLactation
+

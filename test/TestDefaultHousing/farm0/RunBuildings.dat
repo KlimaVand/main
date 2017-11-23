@@ -1,0 +1,107 @@
+[PigHousing(0)]
+Alias              Default
+ID	1001601
+Area	2000
+height	3
+controlledVent	1
+[PigHousing(0).Section(0)]
+Alias			Finisher
+Contains	Finisher(0)
+[PigHousing(0).Section(0).floor(0)]
+Alias			FinisherFloor
+Area	600
+ManureToID	1001502
+ProportionFouled	1.0
+ExcretaPartition	0.9
+Manuretype	SLURRY
+[PigHousing(0).Section(0).floor(0).inhouse(0)]
+Alias			FinisherInhouse
+[PigHousing(0).Section(1)]
+Alias			 Finisher
+[PigHousing(0).Section(1).floor(0)]
+Area	600
+ManureToID	1001502
+ProportionFouled	1.0
+ExcretaPartition	1.0
+Manuretype	SLURRY
+[PigHousing(0).Section(2)]
+Alias			 Finisher
+[PigHousing(0).Section(2).floor(0)]
+Area	800
+ManureToID	1001501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+Manuretype	SLURRY
+[PigHousing(0).inhouse(0)]
+Alias			Slurrypit
+
+[PigHousing(1)]
+Alias              Default
+ID	1001602
+Area	1200
+height	3
+controlledVent	1
+[PigHousing(1).Section(0)]
+Alias		Weaner
+[PigHousing(1).Section(0).floor(0)]
+Alias		Weaner
+Area	600
+ManureToID	1001501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+Manuretype	SLURRY
+[PigHousing(1).Section(1)]
+Alias		Weaner
+Contains	Weaner(0)
+[PigHousing(1).Section(1).floor(0)]
+Alias		Weaner
+Area	600
+ManureToID	1001501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+Manuretype	SLURRY
+[PigHousing(2)]
+Alias              Default
+ID	1001603
+Area	180
+height	2.5
+controlledVent	1
+[PigHousing(2).Section(0)]
+Alias		Weaner
+Contains	Lactating(0)
+[PigHousing(2).Section(0).floor(0)]
+Alias		Weaner
+Area	339
+ManureToID	1001502
+ProportionFouled	1.0
+ExcretaPartition	1.0
+Manuretype	SLURRY
+[Otherstable(0)]
+ID	1001604
+Area	180
+height	2.5
+controlledVent	1
+[Otherstable(0).Section(0)]
+Contains	NewSow(0)
+[Otherstable(0).Section(0).floor(0)]
+Area	339
+ManureToID	1001501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+Manuretype	SLURRY
+[Slurrystore(0)]
+Alias Slurrystore
+Area	300
+ManureStoreID	1001501
+Manuretype	SLURRY
+[Slurrystore(1)]
+Alias Slurrystore
+Area	500
+ManureStoreID	1001502
+Manuretype	SLURRY
+[Slurrystore(2)]
+Alias Slurrystore
+Area	400
+ManureStoreID	1001503
+Manuretype	SLURRY
+[end]

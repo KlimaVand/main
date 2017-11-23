@@ -1,0 +1,344 @@
+//Note: Some dickhead has not used C++ compatible array convention
+[implement(1)]
+techEquipName               Plough
+size                        1.60       / unit: meter
+NewValue                    90400.0    / unit: danish Kr.
+fuelConsumption             19.8       / unit: liter/ha
+Maintenance                 0.0012     / unit: fraction
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               2000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(2)]
+techEquipName               SeedDrill
+size                        4.0        / unit: meter
+NewValue                    44600.0    / unit: danish Kr.
+fuelConsumption             2.9        / unit: liter pr. ha
+Maintenance                 0.00075    / unit: fraction
+carryCapacity               500        / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               1500       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(3)]
+techEquipName               Spray /botte diserbo
+size                        16.0       / unit: meter
+NewValue                    60600.0    / unit: danish Kr.
+fuelConsumption             1.5        / unit: liter pr. ha
+Maintenance                 0.00075
+carryCapacity              1600        / unit: l
+Insurance                   0.001      / unit: fraction
+lifetimeHours               2000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(4)]
+techEquipName               Carriage1
+size                        0          / unit: meter
+carryCapacity               5500       / unit: kg
+NewValue                    27800.0    / unit: danish Kr.
+Maintenance                 0.0003
+Insurance                   0.001      / unit: fraction
+lifetimeHours               12000      / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(5)]
+techEquipName               Carriage2
+size                        0          / unit: meter
+carryCapacity               5500       / unit: kg
+NewValue                    27800.0    / unit: danish Kr.
+Maintenance                 0.0003
+Insurance                   0.001      / unit: fraction
+lifetimeHours               12000      / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(6)]
+techEquipName               Carriage3
+size                        0          / unit: meter
+carryCapacity               7500       / unit: kg
+NewValue                    38900.0    / unit: danish Kr.
+Maintenance                 0.0003
+Insurance                   0.001      / unit: fraction
+lifetimeHours               12000      / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(7)]
+techEquipName               Carriage4
+size                        0          / unit: meter
+carryCapacity               10000       / unit: kg
+NewValue                    52800.0    / unit: danish Kr.
+Maintenance                 0.0003
+Insurance                   0.001      / unit: fraction
+lifetimeHours               12000      / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(8)]
+techEquipName               Harrow
+size                        5.6        / unit: meter
+NewValue                    52990.0    / unit: danish Kr.
+fuelConsumption             4.0        / unit: liter/ha
+Maintenance                 0.0012
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               2000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(9)]
+techEquipName               SeedbedHarrow
+size                        7.7        / unit: meter
+NewValue                    87860.0    / unit: danish Kr.
+fuelConsumption             3.0        / unit: liter/ha
+Maintenance                 0.00075
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               2000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(10)]
+techEquipName               FertilizerSpreader
+size                        16.0       / unit: meter
+NewValue                    25360.0    / unit: danish Kr.
+fuelConsumption             1.8        / unit: liter pr. ha
+Maintenance                 0.0005
+carryCapacity               1500        / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               1200       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(11)]
+techEquipName               WeedHarrow
+size                        7.3        / unit: meter
+NewValue                    15000.0    / unit: danish Kr.
+fuelConsumption             2.0        / unit: liter/ha
+Maintenance                 0.00075
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: promille
+lifetimeHours               2000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(12)]
+techEquipName               Strawbaler
+size                        3.4        / unit: meter (same as CombineHarvester)
+NewValue                    130000.0   / unit: danish Kr.
+fuelConsumption             1.0        / unit: liter/t
+Maintenance                 0.00055
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: promille
+lifetimeHours               1200       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[implement(13)]
+techEquipName               HayTurner  / Values certainly wrong /voltafieno
+size                        7.7        / unit: meter
+NewValue                    87860.0    / unit: danish Kr.
+fuelConsumption             3.0        / unit: liter/ha
+Maintenance                 0.00075
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               2000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[tractor(1)]
+techEquipName               Tractor1
+size                        55.0       / type: power unit: kW
+NewValue                    279000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               0          / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.3       / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[tractor(2)]
+techEquipName               Tractor2
+size                        57.0       / type: power unit: kW
+NewValue                    279000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               0          / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.3        / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[tractor(3)]
+techEquipName               Tractor3
+size                        77.0       / type: power unit: kW
+NewValue                    396000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               0          / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.5        / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[tractor(4)]
+techEquipName               Tractor4
+size                        89.0       / type: power unit: kW
+NewValue                    525000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               0          / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.5        / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[selfPropelled(1)]
+techEquipName               CombineHarvester
+size                        4.8        / type: width  unit: meter
+NewValue                    888000.0   / unit: danish Kr.
+Maintenance                 0.0003
+fuelConsumption             3.2        / unit: liter/ton
+carryCapacity               3500       / unit: kg
+Insurance                   0.006      / unit: fraction
+lifetimeHours               2000       / unit: year
+netCapacityWheat            8.79
+fuelConsumptionTransport    0.05       / liter/t/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[installation(1)]
+techEquipName               IrrigationMachine
+size                        65.0       / type: working width (m)
+NewValue                    350000.0   / unit: danish Kr.
+electricityConsumption      0.55       / kWh pr. m3
+Maintenance                 0.0004
+carryCapacity               0          / unit: 
+Insurance                   0.001      / unit: fraction
+lifetimeHours               20000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[installation(2)]
+techEquipName               WaterPump
+capacity                    45         / unit: m3/hour
+NewValue                    50000.0    / unit: danish Kr.
+Maintenance                 0.0004
+carryCapacity               0          / unit: kg
+Insurance                   0.001      / unit: fraction
+lifetimeHours               20000       / unit: hours
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+
+[manureApplicator(1)]
+techEquipName               BroadcastSpreader
+size                        55.0       / type: power unit: kW
+NewValue                    279000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               0          / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.3       / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+propBuried		    0.0
+propAreaWetted		    1.0
+cropContamination	    1
+NH3emissionFactor		    0.40
+
+[manureApplicator(2)]
+techEquipName               ManureSpreader
+size                        55.0       / type: power unit: kW
+NewValue                    279000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               1500 ?     / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.3       / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+propBuried		    0.0
+propAreaWetted		    1.0
+cropContamination	    1
+NH3emissionFactor		    0.50
+
+[manureApplicator(3)]     //parameters not updated
+techEquipName               TrailingHose
+size                        55.0       / type: power unit: kW
+NewValue                    279000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               1500 ?     / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.3       / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+propBuried		    0.0
+propAreaWetted		    0.2
+cropContamination	    1
+NH3emissionFactor		    0.20
+
+[manureApplicator(4)]
+techEquipName               SlurryInjector
+size                        55.0       / type: power unit: kW
+NewValue                    279000.0   / unit: danish Kr.
+Maintenance                 0.00011
+carryCapacity               1500 ?     / unit: kg
+Insurance                   0.004      / unit: fraction
+lifetimeHours               9000       / unit: hours
+fuelConsumptionTransport    0.3       / liter/km
+AverageValue                0.4        / unit: fraction
+Depreciation       0.04             //--||--  Depreciation --||--
+propBuried		    0.9
+propAreaWetted		    0.1
+cropContamination	    0
+NH3emissionFactor		    0.05
+
+[forageCutter(1)]
+techEquipName               Mower      / DK:   Skivehøster
+size                        2.15       / unit: meter
+fuelConsumption             17.7       / unit: liter/ha
+NewValue                    25000.0 ?  / unit: danish Kr.
+Maintenance                 0.0005 ?
+carryCapacity               1500 ?     / unit: kg
+Insurance                   0.001 ?    / unit: promille
+lifetimeHours               1500 ?     / unit: hours
+AverageValue                0.4
+Depreciation                0.04             //--||--  Depreciation --||--
+residualHeight		    0.07
+
+[forageCutter(2)]                        / Values certainly wrong
+techEquipName               Chopper    / DK:   Grønthøster
+size                        2.15       / unit: meter
+fuelConsumption             17.7       / unit: liter/ha
+NewValue                    25000.0 ?  / unit: danish Kr.
+Maintenance                 0.0005 ?
+carryCapacity               1500 ?     / unit: kg
+Insurance                   0.001 ?    / unit: promille
+lifetimeHours               1500 ?     / unit: hours
+AverageValue                0.4
+Depreciation       0.04             //--||--  Depreciation --||--
+residualHeight		    0.07
+
+[forageCutter(3)]                          / Values certainly wrong
+techEquipName               FineChopper / DK:   Grønthøster
+size                        2.15        / unit: meter
+fuelConsumption             17.7        / unit: liter/ha
+NewValue                    25000.0 ?   / unit: danish Kr.
+Maintenance                 0.0005 ?
+carryCapacity               1500 ?      / unit: kg
+Insurance                   0.001 ?     / unit: promille
+lifetimeHours               1500 ?      / unit: hours
+AverageValue                0.4
+Depreciation       0.04             //--||--  Depreciation --||--
+residualHeight		    0.07
+
+[end]
+
+
