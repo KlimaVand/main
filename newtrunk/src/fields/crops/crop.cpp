@@ -1,0 +1,1694 @@
+﻿
+#include "../../base/common.h"
+#include "crop.h"
+#include "../../base/bstime.h"
+#include "../../base/base.h"
+#include "../../base/climate.h"
+#include "../../products/products.h"
+#include "../../base/nixcbits.h"
+#include "phenology.h"
+#include "../../base/typer.h"
+#include "../../base/commonData.h"
+#include "../../tools/compare.h"
+#include "../../base/settings.h"
+
+crop::crop(string       aName,
+           const int    aIndex,
+           const base * aOwner,
+           string       cropName):
+    base(aName,
+         aIndex,
+         aOwner)
+{
+
+    // Parameters
+    FillFlag = false;
+    CropName = cropName;
+
+    commonData * data = globalSettings -> CropInformation;
+
+    data -> FindSection(CropName);
+
+    PlantItemName    = "";       // These names maps to products.dat !
+    StrawItemName    = "";       // These names maps to products.dat !
+    C4Photosynthesis = false;
+    UnderSown        = false;    // indicates if a crop are not going to be harvested (i.e. undersown crops)
+    GrowthContinue   = false;
+    WinterSeed       = true;     // Is the present crop a wintercrop
+    terminated       = false;
+    CutOrHarvested   = false;
+
+    // -------------------------- Parameters usually unchanged -------------------
+    // These parameters may not be changed here in class 'crop' at all !
+    data -> FindItem("DMCostPerN", &DMCostPerN);
+    data -> FindItem("MaxFixPerDM", &MaxFixPerDM);
+	data->FindItem("usingPlantTemp", &usingPlantTemp);
+    // Root
+    data -> FindItem("RootpF", &RootpF);    // Water potential at wilting point
+    data -> FindItem("RootPentrRate", &RootPentrRate);    // Root penetration rate (m d-1 deg C-1)
+    data -> FindItem("RootDistrParm", &RootDistrParm);    // Root density distribution parameter
+    data -> FindItem("TempRootMin", &TempRootMin);    // Minimum temperature for root growth  new value by JB 19_3_3
+    data -> FindItem("SpecificRootLength", &SpecificRootLength);    // 191;   // Specific root length, m pr. kg.
+    data -> FindItem("RootDensAtBottom", &RootDensAtBottom);    // 191;   // Rootdensity at rootdepth (100*191/100)
+    data -> FindItem("MinimumRootDens", &MinimumRootDens);    // 500;   BMP: why zero ???!!!
+    data -> FindItem("InitialRootDepth", &InitialRootDepth);    // Root depth by germination
+    data -> FindItem("NitrateUptakeRate", &NitrateUptakeRate);    // Uptake rate for nitrate-N g/m/d (m root length)
+    data -> FindItem("AmmoniumUptakeRate", &AmmoniumUptakeRate);    // NEW value from DAISY (JB 2002-8) 0.0031;
+
+    // Uptake rate for ammonium-N g/m/d (m root length)    0.06*100/191
+    data -> FindItem("MinimumSoilNitrate",
+                     &MinimumSoilNitrate);    // Minimum concentration of nitrate-N left in soil water (g/l)
+    data -> FindItem("MinimumSoilAmmonium",
+                     &MinimumSoilAmmonium);    // Minimum concentration of ammonium-N left in soil water (g/l)
+    data -> FindItem("DecayRoot", &DecayRoot);    // Root decay given as a daily fraction of DM at 10 deg. Celsius
+    data -> FindItem("MaxRootDepth", &MaxRootDepthCrop);    // Maximal root depth for this crop
+
+    // DM production and translocation
+    data -> FindItem("TopFraction", &TopFraction);    // Fraction of seed that goes into top
+    data -> FindItem("ConversionCoefficient",
+                     &ConversionCoefficient);    // Coefficent of DM conversion from vegetative to storage
+    data -> FindItem("GerminationConversion", &GerminationConversion);    // Conversion factor seed DM -> plant DM
+    data -> FindItem("MinAllocToRoot",
+                     &MinAllocToRoot);    // Minimal fraction of dry matter production that is allocated to the root
+    data -> FindItem("MaxAllocToRoot",
+                     &MaxAllocToRoot);    // Maximal fraction of dry matter production that is allocated to the root
+    data -> FindItem("MaxRadUseEff", &MaxRadUseEff);    // Maximum radiation use efficiency (g/MJ)
+    data -> FindItem("MinDMtemp", &MinDMtemp);    // Minimum temperature for dry matter production (4 in Hansen et al)
+    data -> FindItem("MaxDMtemp", &MaxDMtemp);    // Maximum temperature for dry matter production
+    data -> FindItem(
+        "StoreForFilling",
+        &StoreForFilling);    // Fraction of DM present at initiation of grain filling that is translocated to grain
+
+    // Estimated fra JEO data, but fits with 0.4 reported by de Vries et. al. "Simulation of ecophysiologival processes of growht in several annual crops"
+    // Nitrogen
+    data -> FindItem("NCurveParam", &NCurveParam);    // Parameter giving the N-curve shape
+    data -> FindItem("MinN_Store",
+                     &MinN_Store);    // Minimum content of nitrogen i storage organs (Estimeret fra Elly's data)
+    data -> FindItem("MaxN_Store", &MaxN_Store);    // Maximum content of nitrogen i storage organs
+    data -> FindItem("MinN_Root", &MinN_Root);    // Minimum content of nitrogen i root organs
+    data -> FindItem("MaxN_Root", &MaxN_Root);    // Maximum content of nitrogen i root organs
+    data -> FindItem("PowDM", &PowDM);    // Power of dry matter in nitrogen status calculation  (Justes et al., 1994)
+    data -> FindItem("NPctMax", &NPctMax);    // Following Justes concept (Justes et al., 1994)
+    data -> FindItem("NPctMin", &NPctMin);    // Following Justes concept (Justes et al., 1994)
+    data -> FindItem("ReducedNInYellow",
+                     &ReducedNInYellow);    // The min and max N for yellow VegTop is reduced with this parameter
+
+    // LAI and canopy structure
+    data -> FindItem("k", &k);    // Extinction coefficient for photosynthetic active radiation
+    data -> FindItem("InterceptCoeff", &InterceptCoeff);    // Coeff. for interceptioncapacity.
+    data -> FindItem("PhotoSyntActPart", &PhotoSyntActPart);    // Photosynthetic active part of total global radiation
+    data -> FindItem("CoeffGreenIdx", &CoeffGreenIdx);    // Coefficient for leaf growth
+    data -> FindItem("LAINitrogenRatio", &LAINitrogenRatio);    // Maximum ratio between LAI and nitrogen in veg top
+    data -> FindItem("LAIDMRatio", &LAIDMRatio);    // Maximum ratio between LAI and DM in veg top
+    data -> FindItem("InitialCAI", &InitialCAI);    // Initial green leaf area index after 200 degree days
+    data -> FindItem("MinimumSenescense",
+                     &MinimumSenescense);    // Used to calculate minimum senescense - value as calibrated for winter wheat
+    data -> FindItem("MaxPlantHeight", &MaxPlantHeight);    // Max plant height (m)
+    data -> FindItem("LAIDistributionPar", &LAIDistributionPar);    // Distribution of LAI in canopy
+    data -> FindItem("Conversfactor", &Conversfactor);    // Part of green leaf that is converted to yellow leaf by wilting
+    data -> FindItem("ColonialisationRate",
+                     &ColonialisationRate);    // Expansion of fraction area occupied (per day per degree Celcius)
+    data -> FindItem("WaterDeficitVegGrowth", &WaterDeficitVegGrowth);
+    data -> FindItem("WaterDeficitLagPhase", &WaterDeficitLagPhase);
+    data -> FindItem("WaterDeficitGrainFill", &WaterDeficitGrainFill);
+    data -> FindItem("FractionNminInRoots", &FractionNminInRoots);    // Fraction of N in roots present as mineral N
+
+
+    data -> FindItem("FractionNminInVegTop", &FractionNminInVegTop);    // Fraction of N in VegTop present as mineral N
+    data -> FindItem("CO2Effect", &CO2Effect);
+    data -> FindItem("MaxGLAICrop", &MaxGLAICrop);
+    data -> FindItem("RhizoDepositFraction", &RhizoDepositFraction);
+    data -> FindItem("FillFactor", &FillFactor);    // Fraction of net production after anthesis that goes into grain
+    AccumulatedRootNDeposit.Clear();    // Accumulated root N deposition (state variable)
+    AccumulatedTopNDeposit.Clear();    // Accumulated root N deposition (state variable)
+    AccumulatedNProduction.Clear();    // Accumulated N production
+
+    // State variables
+    AccumulatedDMProduction    = 0.0;                 // Accumulated DM production
+    AccumulatedNFixation       = 0.0;                 // Accumulated N fixation (used for output)
+    AccumulatedRootDeposit     = 0.0;                 // Accumulated root deposition (state variable)
+    AccumulatedRootRespiration = 0.0;                 // Measured in DM
+    AccumulatedTopDeposit      = 0.0;                 // Accumulated root deposition (state variable)
+    DeltaDMTop                 = 0.0;                 // Daily top DM increase (used for output)
+    DryMatterRoot              = 0.0;                 // Dry matter in root.
+    DryMatterStorage           = 0.0;                 // Dry matter in storage organs.
+    DryMatterTotalStandVegTop  = 0.0;                 // Presently unused
+    DryMatterVegTop            = 0.0;                 // Dry matter in veg. parts above soil surface.
+    fNitrogenAfterRipe         = 0.0;
+    fractionOfSpace            = 1.0;                 // Fraction of total area occupied by crop
+    GreenCropAreaIndex         = 0.0;                 // Green leaf crop index.
+    InitialSeedDM              = 0.0;                 // The initial DM in seed
+    InterceptedRadiation       = 0.0;                 // Radiation intercepted
+    maxGLAI                    = 0.0;                 // Maximum green crop area index reached
+    MaxRootDepth               = MaxRootDepthCrop;    // Max. root depth. May be reduced later, depending on soil.
+    PlantHeight                = 0.0;                 // Height (m)
+    RelativeDensity            = 1.0;
+    Rg                         = 0.0;
+    RootDensAtSurf             = 0.0;                 // Root density at soil surface.
+    RootDepth                  = 0.0;                 // Root depth.
+    RootRespiration            = 0.0;                 // Daily root respiration (DM m-2)
+    RootTranslocation          = 0.0;                 // Accumulated root translocation (state variable)
+    SeedDM                     = 0.0;                 // The DM content of seed
+    temp                       = 0.0;                 // temperature
+    TempSumRoot                = 0.0;                 // Temperature sum, root.
+    totalLAIStand              = 0.0;                 // Sum of leaf area index for all plants
+    TotalRootLength            = 0.0;                 // Total root length.
+    TransferableStorage        = 0.0;                 // Amount to be transfer from vegetative parts to storage
+    TransferedDMToStorage      = 0.0;                 // Actual amount to be transfer from vegetavive parts to storage
+    TranspirationRatio         = 1.0;
+    YellowCropAreaIndex        = 0.0;                 // Yellow leaf crop index.
+
+    Nitrogen.Clear();    // Nitrogen content (g/m^2).
+
+    // next three lines added by NJH March 2009
+    rootMatter = new decomposable;    // Remark: rootmatter is transfered to soil in patch.cpp !
+
+    rootMatter -> Setname("ROOTMATTER");
+    theProducts -> GiveProductInformation(rootMatter);
+
+    topMatter   = nullptr;          // Transfered to soil
+    NumOfLayers = MaxSoilLayers;    // Number of soil layers.
+
+    for (int i = 0; i < MaxSoilLayers; i++) {
+        RootLengthList[i] = 0.0;    // 'RootLengthList' contains the root length (m) per layer.
+        LayerThickness[i] = -1;     // Thickness (mm) per layer.
+    }
+
+    Nbudget.SetNames("crop", "N");
+    N15budget.SetNames("crop", "N15");
+    DMbudget.SetNames("crop", "DM");
+
+    aSoil     = nullptr;
+    Phenology = new phenology;
+}
+
+/*
+ * Scales the radiation use efficiency according to crop rotation and
+ *  pesticide use. Calling this function should remain optional.
+ *  CKL: only used once with NITROSCAPE flag in patch.cpp
+ */
+void crop::SetRUEfactor(double f) {
+    if ((f > 1.0) || (f < 0.0)) {
+        theMessage -> FatalError("crop::SetRUEfactor - factor outside legal range");
+    }
+
+    MaxRadUseEff *= f;
+}
+
+/*
+ * Returns the effect of temperature on various processes
+ * t - temperature (degreeC)
+ */
+double crop::TemperatureEffect(double t) {
+    double f = 0.0;
+
+    if ((t > 0.0) && (t <= 20.0)) {
+        f = 0.1 * t;
+    } else if (t > 20.0) {
+        f = exp(0.47 - 0.027 * t + 0.00193 * t * t);
+    }
+
+    return f;
+}
+
+/*
+ * returns extinction coefficient for photosynthetic active radiation
+ */
+double crop::GiveExtCoeff() const {
+    return k;
+}
+
+/*
+ * updates the height of the plant
+ */
+void crop::UpdateHeight() {
+    if (Phenology -> Emerged()) {
+        PlantHeight = MaxPlantHeight * (1.0 - Phenology -> GetFractionToAnthesis());
+    }
+
+    PlantHeight = min(PlantHeight, MaxPlantHeight);
+	
+}
+
+/*
+ * Gives leaf area fraction below a certain height
+ */
+double crop::LeafAreaFraction(double height) const {
+    double a = LAIDistributionPar;
+
+    if (PlantHeight == 0) {
+        return 0;
+    } else if (height >= PlantHeight) {
+        return 1.0;
+    } else {
+        return (a + 1) * (a + 2) * (pow(height, a + 1)) / (pow(PlantHeight, a + 1))
+               * (1 / (a + 1) - height / ((a + 2) * PlantHeight));
+    }
+}
+
+/*
+ * Gives the total leaf area index in a certain layer of the canopy
+ */
+double crop::TotalLeafAreaIndex(double height,
+                                double thickness) const {
+    return (GreenCropAreaIndex + YellowCropAreaIndex)
+           * (LeafAreaFraction(height + thickness) - LeafAreaFraction(height));
+}
+
+/*
+ * Gives the green leaf area in a specific layer in canopy assuming that the yellow leaves are situated i the lower part of the canopy
+ * below the green leaves
+ */
+double crop::GreenLeafAreaIndex(double height,
+                                double thickness) {
+
+    // assumes that all yellow area are situated at the bottom of the canopy below the green area
+    double UpperArea = max(0.0,
+                           (GreenCropAreaIndex + YellowCropAreaIndex) * LeafAreaFraction(height + thickness)
+                           - YellowCropAreaIndex);
+    double LowerArea = max(0.0,
+                           (GreenCropAreaIndex + YellowCropAreaIndex) * LeafAreaFraction(height) - YellowCropAreaIndex);
+    double value = UpperArea - LowerArea;
+
+    if (value < 0.0) {
+        theMessage -> WarningWithDisplay("crop::GreenLeafAreaIndex - GAI < 0.00001");
+
+        return 0;
+    } else {
+        return value;
+    }
+}
+
+/*
+ * Update soil information, NumOfLayers and MaxRootDepth
+ */
+void crop::AssignRootParameters(soil * CropSoil) {
+    aSoil        = CropSoil;
+    NumOfLayers  = min(aSoil -> GetLayers(), (int) MaxSoilLayers);
+    MaxRootDepth = min(aSoil -> GetMaxRootDepth() / 1000, MaxRootDepthCrop);
+}
+
+/*
+ * An account of the DM lost via "GerminationConversion" must be added, in order
+ * to keep total balance of DM/carbon !!!
+ */
+void crop::Sow(double SeedDensDryMatt,
+               double aRelativeDensity,
+               double NitrogenInSeed) {
+    if (Phenology -> Sown()) {
+        theMessage -> FatalError("crop::Sow - this crop instance has already been sown");
+    }
+
+    // if (fabs(aRelativeDensity)<1e-5)
+    // theMessage->FatalError("crop::Sow - density to low");
+    Phenology -> Sow();
+
+    TotalRootLength    = 0.0;
+    SeedDM             = SeedDensDryMatt * GerminationConversion;
+    InitialSeedDM      = SeedDM;
+    RootDepth          = InitialRootDepth;
+    DryMatterRoot      = 0.0;
+    DryMatterVegTop    = 0;
+    DryMatterStorage   = 0.0;
+    GreenCropAreaIndex = 0.0;
+    FillFlag           = 0;
+
+    Nitrogen.SetBoth(NitrogenInSeed, 0.0);
+
+    RelativeDensity = aRelativeDensity;
+
+    Nbudget.SetInput(NitrogenInSeed);    // Budgets
+    DMbudget.SetInput(SeedDensDryMatt * GerminationConversion);
+    Nbudget.SetOutput(0);
+    N15budget.SetOutput(0);
+    DMbudget.SetOutput(0);
+}
+
+/*
+ * harvest the current crop. The drymatter and straw is stored in the input parameters. Nitroget is updated
+ * The plant is still alive
+ */
+void crop::Harvest(decomposable * Storage,
+                   decomposable * Straw) {
+    CutOrHarvested = true;
+
+    Storage -> Setname(PlantItemName);
+
+    if (PlantItemName != "") {
+        theProducts -> GiveProductInformation(Storage);
+
+        // converting from drymatter to fresh weight
+        Storage -> Setamount(DryMatterStorage / Storage -> GetdryMatter());
+    }
+
+    Straw -> Setname(StrawItemName);
+    theProducts -> GiveProductInformation(Straw);
+
+    // converting from drymatter to fresh weight
+    Straw -> Setamount(DryMatterVegTop / Straw -> GetdryMatter());
+
+    // Nitrogen
+    nitrogen RootN, StorageN, StrawN;
+
+    // check amount of nitrogen at harvest
+    double minimumN = Nmin();
+    double maximumN = Nmax();
+
+    if (minimumN > Nitrogen.n * 1.25) {
+        theMessage -> WarningWithDisplay("crop::Harvest - not enough nitrogen in plant at harvest");
+    } else if (maximumN < Nitrogen.n * 0.75) {
+        theMessage -> WarningWithDisplay("crop::Harvest - too much nitrogen in plant at harvest");
+    }
+
+    // partition between compartments
+    double fN          = fNitrogen();
+    double TotalRootN  = (CorrectedMinN_Root() + fN * (CorrectedMaxN_Root() - CorrectedMinN_Root())) * DryMatterRoot;
+    double TotStorageN = (CorrectedMinN_Store() + fN * (CorrectedMaxN_Store() - CorrectedMinN_Store()))
+                         * DryMatterStorage;
+    double N15Ratio    = Nitrogen.Get15NRatio();
+    double TotalStrawN = (NpctMinVegTop() / 100 + fN * (NpctMaxVegTop() - NpctMinVegTop()) / 100) * DryMatterVegTop;
+    double Nrest       = Nitrogen.n - TotalRootN - TotStorageN - TotalStrawN;
+
+    // rest of N is allocated to root
+    if ((Nrest < -0.01) || (Nrest > 0.01)) {    // if Nrest positive: there is some unallocated N in the plant
+        theMessage -> WarningWithDisplay("crop::Harvest - Nitrogen content adjusted");
+
+        TotalRootN = TotalRootN + Nrest;
+    }
+
+    RootN.SetBoth(TotalRootN, N15Ratio * TotalRootN);
+    StorageN.SetBoth(TotStorageN, N15Ratio * TotStorageN);
+
+    StrawN = Nitrogen - RootN - StorageN;
+
+    if (Storage -> GetAmount() > 0) {
+        Storage -> SetorgN_content(StorageN / Storage -> GetAmount());
+    }
+
+    if (Straw -> GetAmount() > 0) {
+        Straw -> SetNO3_content(StrawN / Straw -> GetAmount() * (0.5 * FractionNminInVegTop));
+        Straw -> SetNH4_content(StrawN / Straw -> GetAmount() * (0.5 * FractionNminInVegTop));
+        Straw -> SetorgN_content(StrawN / Straw -> GetAmount() * (1.0 - FractionNminInVegTop));
+    }
+
+    Nitrogen = Nitrogen - StorageN - StrawN;
+
+
+
+    if (!Phenology -> Ripe()) {
+        theMessage -> Warning("crop::Harvest - crop not ready for harvest");
+    }
+
+    if ((DryMatterVegTop < 0) || (DryMatterStorage < 0) || (StorageN.n < 0) || (StrawN.n < 0) || (Nitrogen.n < 0)) {
+        theMessage -> WarningWithDisplay("crop:: Harvest values should not be negative");
+
+        StorageN.n = max(0.0, StorageN.n);
+        StrawN.n   = max(0.0, StrawN.n);
+    }
+
+    Nbudget.AddOutput(StorageN.n + StrawN.n);    // Budgets
+    N15budget.AddOutput(StorageN.n15 + StrawN.n15);    // Budgets
+    DMbudget.AddOutput(DryMatterVegTop + DryMatterStorage);
+
+    DryMatterVegTop     = 0.0;
+    DryMatterStorage    = 0.0;
+    GreenCropAreaIndex  = 0.0;
+    YellowCropAreaIndex = 0.0;
+    PlantHeight         = 0.1;    // Modify to real cutting height!!!!!
+    topMatter           = nullptr;
+
+    double NRemain, DMRemain;
+
+    EndBudget(&NRemain, &DMRemain);
+}
+
+/*
+ * Kills the plant. The length of the root, the amount of root and amount of straw is returned
+ */
+void crop::Terminate(decomposable * Straw,
+                     decomposable * DeadRoot,
+                     double *&      RootLengthList) {
+    if (!Phenology -> Ripe() &&!GrowthContinue &&!terminated) {    // warning if a non-permanent crop is not ripe
+        theMessage -> Warning("crop::Terminate - should not terminate crop at this phase");
+    } else if (!Phenology -> Emerged()) {
+        theMessage -> WarningWithDisplay("crop::Terminate - attempt to terminate a crop that has not even emerged!!!");
+    }
+
+    if (DryMatterVegTop + DryMatterStorage > 0.0) {
+        Straw -> Setname(StrawItemName);
+        theProducts -> GiveProductInformation(Straw);
+        Straw -> Setamount((DryMatterVegTop + DryMatterStorage) / Straw -> GetdryMatter());
+
+        nitrogen StrawN = Nitrogen - NitrogenInRoot();
+
+        if (Straw -> GetAmount() > 0) {
+            Straw -> SetNO3_content(StrawN / Straw -> GetAmount() * (0.5 * FractionNminInVegTop));
+            Straw -> SetNH4_content(StrawN / Straw -> GetAmount() * (0.5 * FractionNminInVegTop));
+            Straw -> SetorgN_content(StrawN / Straw -> GetAmount() * (1.0 - FractionNminInVegTop));
+        }
+
+        Nitrogen = Nitrogen - StrawN;
+    }
+
+    RootLengthList = GiveRootLengthList();
+
+    DeadRoot -> Setname("ROOTMATTER");
+    theProducts -> GiveProductInformation(DeadRoot);
+    DeadRoot -> Setamount(DryMatterRoot / DeadRoot -> GetdryMatter());
+
+    if (DryMatterRoot > 0) {
+        DeadRoot -> SetNH4_content(Nitrogen / DeadRoot -> GetAmount() * 0.5 * FractionNminInRoots);
+        DeadRoot -> SetNO3_content(Nitrogen / DeadRoot -> GetAmount() * 0.5 * FractionNminInRoots);
+        DeadRoot -> SetorgN_content(Nitrogen / DeadRoot -> GetAmount() * (1.0 - FractionNminInRoots));
+    }
+
+    Nbudget.AddOutput(Nitrogen.n);    // Budgets
+    N15budget.AddOutput(Nitrogen.n15);
+    DMbudget.AddOutput(DryMatterRoot);
+    Nitrogen.Clear();
+
+    RootDensAtSurf  = 0.0;
+    TotalRootLength = 0.0;
+    RootDepth       = 0.0;
+    DryMatterRoot   = 0.0;
+    PlantHeight     = 0.0;
+    terminated      = true;
+}
+
+/*
+ * generated a warning if the plant is alive
+ */
+void crop::Graze(plantItem * cutPlantMaterial,
+                 double      cut_height) {
+    if (!terminated) {
+        theMessage -> WarningWithDisplay("crop::Graze - this crop can not be grazed, operation ignored!");
+    }
+}
+
+/*
+ * Calculate how much water that evaporates
+ * New method according to Joergen Olesen, et al. Clim. Res. (2000)
+ */
+double crop::GiveEvapFactor() {
+    return 1.0 + 0.02 * (GreenCropAreaIndex + YellowCropAreaIndex);
+}
+
+double crop::FractionEPotToGreenLeaves(double gLAI) {
+	double k1 = 0.60;// Ext.coeff. for leaf area, evaporation fraction.
+	return 1.0 - exp(-k1 * gLAI);
+}
+
+double crop::FractionEPotToYellowLeaves(double gLAI,
+	double                                      yLAI) {
+	double k1 = 0.60;// Ext.coeff. for leaf area, evaporation fraction.
+	return max(0.0, 1.0 - exp(-k1 * (gLAI + yLAI)) - FractionEPotToGreenLeaves(gLAI));
+}
+double crop::FractionEPotToSoil(double gLAI,
+	double                              yLAI) {
+	return max(0.0, 1.0 - FractionEPotToGreenLeaves(gLAI) - FractionEPotToYellowLeaves(gLAI, yLAI));
+}
+double crop::GiveEvap(){
+	double                    EPot = theClimate->epot;
+	double EpotLeaves = EPot * (1.0 - FractionEPotToSoil(GiveLeafAreaIndex(), GiveYellowLeafAreaIndex()));
+	return EpotLeaves * GiveEvapFactor();
+}
+
+static ofstream myfile;
+static bool used = false;
+double crop::SurfacePlantMax()
+{
+	double Rnet = theClimate->Rnet();
+	
+	//temprature effects in the STICKS model equation 1
+
+	
+	if (CropName.compare("NoCrop") == 0)
+		return -1;
+	double et = aSoil->GetSoilEvaporation() + GiveEvap();
+	double Zo = 0.13*PlantHeight;
+	if (Zo <= 0.001)
+		Zo = 0.001;
+	double tcoultmax = theClimate->tmax + (Rnet / 2.46 - et - 1.27) / (1.68 / (log(1 / Zo)));
+
+	if (used == false)
+	{
+		myfile.open(globalSettings->getOutputDirectory()+"\\example.txt");
+		used = true;
+		myfile << "tcoultmax" << '\t' << "et" << '\t' << "Zo" << '\t' << "Tcanopymin " <<'\t'<<"time"<< '\n';
+	}
+	myfile << tcoultmax << '\t' << et << '\t' << Zo << '\t' << theClimate->tmin + theClimate->ChangeMinPlantTemp << '\t' <<theTime << '\n';
+	return tcoultmax;
+}
+/*
+ * MEL 2010: Effect of CO2 on the minimum and maximum concentrations of Nitrogen
+ */
+double crop::GiveNitrogenResponseCO2() {
+    double CO2 = theClimate -> GetCO2Concentration();
+
+    return max(1.0, 0.6 + 141 / CO2);
+}
+
+/*
+ * MEL 2010: The minimum concentration of N in the storage organs as affected by CO2
+ */
+double crop::CorrectedMinN_Store() {
+    double NCO2 = GiveNitrogenResponseCO2();
+
+    return NCO2 * MinN_Store;
+}
+
+/*
+ * MEL 2010: The minimum concentration of N in the roots as affected by CO2
+ */
+double crop::CorrectedMinN_Root() {
+    double NCO2 = GiveNitrogenResponseCO2();
+
+    return NCO2 * MinN_Root;
+}
+
+/*
+ * MEL 2010: The maximum concentration of N in the storage organs as affected by CO2
+ */
+double crop::CorrectedMaxN_Store() {
+    double NCO2 = GiveNitrogenResponseCO2();
+
+    return NCO2 * MaxN_Store;
+}
+
+/*
+ * MEL 2010: The maximum concentration of N in the roots as affected by CO2
+ */
+double crop::CorrectedMaxN_Root() {
+    double NCO2 = GiveNitrogenResponseCO2();
+
+    return NCO2 * MaxN_Root;
+}
+
+/*
+ * MEL 2007: New calculation of Nmin. Calculate the minimum amount Nitrogen that the crop needs
+ */
+double crop::Nmin() {
+    double NminVal = CorrectedMinN_Root() * max(0.0, DryMatterRoot)
+                     + CorrectedMinN_Store() * max(0.0, DryMatterStorage)
+                     + NpctMinVegTop() / 100 * max(0.0, DryMatterVegTop);
+
+    return NminVal;
+}
+
+/*
+ * MEL 2007:  New calculation of Nmax. Calculate the minimum amount Nitrogen that the crop needs
+ */
+double crop::Nmax() {
+    double NmaxVal = 0.0;
+    double N       = 0.0;
+
+    if (GreenCropAreaIndex < 0.0) {
+        theMessage -> WarningWithDisplay("crop::Nmax() - GreenCropAreaIndex negative");
+
+        GreenCropAreaIndex = 0.0;
+    }
+
+    double NPVTMax = NpctMaxVegTop();
+
+    N       = max(0.0, DryMatterVegTop) * NPVTMax / 100.0;    // g N in VegTop/m^2
+    NmaxVal = N + CorrectedMaxN_Root() * max(0.0, DryMatterRoot) + CorrectedMaxN_Store() * max(0.0, DryMatterStorage);
+
+    return NmaxVal;
+}
+
+/*
+ * MEL 2007: Follows the concept of Justes et al. 1994. Annals of Botany 74:397-407.
+ */
+double crop::NpctMaxVegTop() {
+    double NpctVal = NPctMax * pow(1.5, PowDM);
+    double NCO2    = GiveNitrogenResponseCO2();
+
+    if (DryMatterVegTop > 150) {
+        if (fractionOfSpace < 1E-36) {
+            theMessage -> FatalError(
+                "crop::NpctMaxVegTop - 'fractionOfSpace' almost zero whilst crop has considerable DM");
+        }
+
+        NpctVal = NPctMax * pow(DryMatterVegTop / (100.0 * fractionOfSpace), PowDM);    // for the green leafs and stem
+    }
+
+    if (YellowCropAreaIndex > 0.0) {
+
+        // Corrected MEL 2009
+        double RedFac = (ReducedNInYellow * YellowCropAreaIndex + GreenCropAreaIndex)
+                        / (YellowCropAreaIndex + GreenCropAreaIndex);
+
+        NpctVal = NpctVal * RedFac;    // for all leaf and stem
+    }
+
+    return NpctVal * NCO2;
+}
+
+/*
+ * MEL 2007: Follows the concept of Justes et al. 1994. Annals of Botany 74:397-407.
+ */
+double crop::NpctMinVegTop() {
+    double NpctVal = NPctMin * pow(1.5, PowDM);
+    double NCO2    = GiveNitrogenResponseCO2();
+
+    if (DryMatterVegTop > 150) {
+        if (fractionOfSpace < 1E-36) {
+            theMessage -> FatalError(
+                "crop::NpctMinVegTop - 'fractionOfSpace' almost zero whilst crop has considerable DM");
+        }
+
+        NpctVal = NPctMin * pow(DryMatterVegTop / (100.0 * fractionOfSpace), PowDM);    // for the green leafs and stem
+    }
+
+    if (YellowCropAreaIndex > 0.0) {
+
+        // the exsistance of yellow parts reduces the concentration of N in the vegtop
+        double RedFac = (ReducedNInYellow * YellowCropAreaIndex + GreenCropAreaIndex)
+                        / (YellowCropAreaIndex + GreenCropAreaIndex);
+
+        NpctVal *= RedFac;
+    }
+
+    return NpctVal * NCO2;
+}
+
+/*
+ * Calculate how much Nitrogen that are in the top plant that is not planed for usage
+ */
+nitrogen crop::NitrogenInVegTop() {
+    nitrogen retVal = Nitrogen - NitrogenInRoot() - NitrogenInStorage();
+
+    if (retVal > Nitrogen) {
+        theMessage -> Warning("crop::NitrogenInVegTop - N content in veg. top is above normal range");
+    } else if (retVal.n < 0.0) {
+        theMessage -> WarningWithDisplay("crop::NitrogenInVegTop - N content in veg. top is below possible range!");
+    }
+
+    return retVal;
+}
+
+/*
+ * Calculates how much N there is is in he root
+ */
+nitrogen crop::NitrogenInRoot() {
+    double fN       = fNitrogen();
+    double NContent = (CorrectedMinN_Root() + fN * (CorrectedMaxN_Root() - CorrectedMinN_Root())) * DryMatterRoot;
+    double N15Ratio = Nitrogen.Get15NRatio();
+
+    if (NContent > (0.99999 * Nitrogen.n)) {    // Not the outmost elegance!!!
+        if ((Nitrogen.n < 1E-30) && (DryMatterRoot > 1E-3)) {
+            cout << "N in plant: " << Nitrogen.n << endl;
+            cout << "DM in root: " << DryMatterRoot;
+
+            theMessage -> FatalError("crop::NitrogenInRoot - no N but still dry matter in root");
+        } else {
+            theMessage -> Warning("crop::NitrogenInRoot - N content in root is to high - postadjusted");
+
+            NContent = 0.99999 * Nitrogen.n;
+        }
+    }
+
+    nitrogen retVal;
+
+    retVal.SetBoth(NContent, N15Ratio * NContent);
+
+    if (retVal.n > (Nitrogen.n + 0.00001)) {
+        theMessage -> WarningWithDisplay("crop::NitrogenInRoot nitrogen in root exceeds nitrogen in plant");
+
+        retVal = CorrectedMinN_Root() * DryMatterRoot;
+    }
+
+    return retVal;
+}
+
+nitrogen crop::NitrogenInStorage() {
+    double   fN       = fNitrogen();
+    double   NContent = (CorrectedMinN_Store() + fN * (CorrectedMaxN_Store() - CorrectedMinN_Store()))
+                        * DryMatterStorage;
+    double   N15Ratio = Nitrogen.Get15NRatio();
+    nitrogen retVal;
+
+    retVal.SetBoth(NContent, N15Ratio * NContent);
+
+    return retVal;
+}
+
+double crop::InterceptionCapacity() {
+    return InterceptCoeff * (GreenCropAreaIndex + YellowCropAreaIndex);
+}
+
+double crop::fTW() {
+    return fTW(temp);
+}
+
+double crop::fTW(double temperature) {
+    if (temperature <= MinDMtemp) {
+        return 0.0;
+    } else if (temperature >= MaxDMtemp) {
+        return 1.0;
+    } else {
+        return (temperature - MinDMtemp) / (MaxDMtemp - MinDMtemp);
+    }
+}
+
+/*
+ * returns a factor that describe how much N that are in each part of the plant (root, veg and store)
+ */
+double crop::fNitrogen() {
+    double N      = Nitrogen.n;
+    double retVal = 1.0;
+
+    if (!Phenology -> Ripe()) {
+        double nMax = Nmax();
+        double nMin = Nmin();
+
+        if ((N > 0.0) && (nMax > nMin)) {
+            retVal = max(0.0, min(1.0, (N - nMin) / (nMax - nMin)));
+        }
+
+        fNitrogenAfterRipe = retVal;
+    } else {
+        retVal = fNitrogenAfterRipe;
+    }
+
+    return retVal;
+}
+
+double crop::fNitrogenCurve() {
+    double fN          = fNitrogen();
+    double ScaleFactor = 1.05;    // according to Olesen et al., 2002 MEL 2009
+    double Nstress     = ScaleFactor * (1.0 - exp(NCurveParam * fN));
+
+    return max(0.0, min(1.0, Nstress));
+}
+
+nitrogen crop::GiveTotalNitrogen() {
+    return Nitrogen;
+}
+
+double crop::GiveLeafAreaIndex() {
+    return GreenCropAreaIndex;
+}
+
+double crop::GiveYellowLeafAreaIndex() {
+    return YellowCropAreaIndex;
+}
+
+double crop::GiveDryMatterStorage() {
+    return DryMatterStorage;
+}
+
+double crop::GiveDryMatterVegTop() {
+    return DryMatterVegTop;
+}
+
+double crop::GiveDryMatterRoot() {
+    return DryMatterRoot;
+}
+
+double crop::GiveRootDepth() {
+    return RootDepth;
+}
+
+/*
+ * Input is either DryMatterRoot or NitrogenInRoot
+ */
+double crop::GiveRootInInterval(double startDep,
+                                double thick,
+                                double input) {
+    double TopOfLayer    = 0.0;
+    double BottomOfLayer = 0.0;
+    double Sum           = 0.0;
+    double Total         = 0.0;
+
+    for (int i = 0; i < MaxSoilLayers; i++) {
+        Total += RootLengthList[i];
+    }
+
+    if (Total == 0.0) {
+        return 0.0;
+    } else {
+        for (int i = 0; i < MaxSoilLayers; i++) {
+            TopOfLayer    = BottomOfLayer;
+            BottomOfLayer = TopOfLayer + 0.05;
+
+            if (doubleGreater(TopOfLayer, startDep, 0.0001, true)
+                    && doubleLess(BottomOfLayer, (startDep + thick), 0.0001, true)) {    // Simple case
+                Sum += RootLengthList[i];
+            } else {
+                if (doubleLess(TopOfLayer, startDep, 0.0001, false)
+                        && doubleGreater(BottomOfLayer, (startDep + thick), 0.0001,
+                                         true)) {    // Only bottom of layer no i is in interval
+                    double fraction = (BottomOfLayer - startDep) / 0.05;
+
+                    Sum += fraction * RootLengthList[i];
+                } else if (doubleLess(TopOfLayer, startDep, 0.0001, true)
+                           && doubleGreater(BottomOfLayer, (startDep + thick), 0.0001,
+                                            false)) {    // Only top of layer no i is in interval
+                    double fraction = (startDep + thick - TopOfLayer) / 0.05;
+
+                    Sum += fraction * RootLengthList[i];
+                }
+            }
+        }
+    }
+
+    return Sum * input / Total;
+}
+
+double crop::RootPenetrationReduction() {
+    double clay = aSoil -> GetSoilProfile() -> GetClayContent(250, 500);
+    double f    = min(1.0, max(0.5, 0.5 + (clay - 0.02) * 0.5 / (0.08 - 0.02)));
+
+    return f;
+}
+
+void crop::CalcRootGrowth() {
+    if (Phenology -> Sown()) {
+        if (temp > TempRootMin) {    // && GreenCropAreaIndex>0.2)
+            RootDepth += RootPentrRate * RootPenetrationReduction() * (temp - TempRootMin);
+        }
+
+        if (RootDepth > MaxRootDepth) {
+            RootDepth = MaxRootDepth;
+        }
+
+        TotalRootLength  = DryMatterRoot * SpecificRootLength;
+        RootDensAtSurf   = CalcRootDensAtSurf(RootDistrParm, RootDepth, RootDensAtBottom);
+        RootDensAtBottom = RootDensAtSurf * exp(-RootDistrParm * RootDepth);
+
+        CalcRootDistribution();
+    }
+}
+
+double crop::CalcRootDensAtSurf(long double RootDistrParm,
+                                double      RootDepth,
+                                double      RootDensAtBottom) {
+    double a = (1 - exp(-RootDistrParm * RootDepth)) / RootDistrParm
+               + 0.5 * 0.3 * RootDepth * exp(-RootDistrParm * RootDepth);
+
+    if (a == 0) {
+        return RootDensAtBottom;
+    } else {
+        return TotalRootLength / a;
+    }
+}
+
+/*
+ * startdepth, thickness in meter
+ */
+double crop::RootLengthInInterval(double startdepth,
+                                  double thickness) {
+    if (Phenology -> Sown() && (RootDepth > 0)) {
+
+        // Length in exponential curve
+        double ExtraRootDepth = 0.3;
+        double EndDepth1      = min(RootDepth, startdepth + thickness);
+        double EndDepth2      = min((1.0 + ExtraRootDepth) * RootDepth, startdepth + thickness);
+        double StartDepth2    = max(startdepth, RootDepth);
+        double Length1        = 0.0;
+        double Length2        = 0.0;
+
+        if (startdepth < RootDepth) {
+            Length1 = RootDensAtSurf * (exp(-RootDistrParm * startdepth) - exp(-RootDistrParm * EndDepth1))
+                      / RootDistrParm + (EndDepth1 - startdepth) * MinimumRootDens;
+        }
+
+        // Length in linear declining curve
+        if ((startdepth + thickness > RootDepth) && (startdepth < (1.0 + ExtraRootDepth) * RootDepth)) {
+            double DensAtBottom = RootDensAtSurf * (exp(-RootDistrParm * RootDepth));
+            double Dens1        =
+                DensAtBottom
+                * (1.0
+                   - (StartDepth2 - RootDepth)
+                     / (ExtraRootDepth
+                        * RootDepth));    // Note assumes that root systems extends 30% further than rootdepth
+            double Dens2 = DensAtBottom
+                           * (1.0
+                              - (EndDepth2 - RootDepth)
+                                / (ExtraRootDepth
+                                   * RootDepth));    // Note assumes that root systems extends 30% further than rootdepth
+
+            Length2 = 0.5 * (EndDepth2 - StartDepth2) * (Dens1 + Dens2);
+        }
+
+        return Length1 + Length2;
+    } else {
+        return 0.0;
+    }
+}
+
+/*
+ * Alters the dry matter production relative to CO2 concentration
+ * Unaltered at ppmCO2 = 377
+ * CO2 function parameters only estimated for winter wheat
+ */
+double crop::DeltaDryMatter() {
+    double CO2conc       = theClimate -> GetCO2Concentration();
+    double CO2PhotEffect = 1.0;
+
+    if (!C4Photosynthesis) {
+        CO2PhotEffect = CO2Effect * exp(0.4537 - 170.97 / CO2conc);
+    }
+
+    InterceptedRadiation += Rg * PhotoSyntActPart;
+
+    double retVal;
+    double PAR_Reduction = min(1.0, 1.0 - 0.0445 * (Rg * PhotoSyntActPart - 5.0));
+
+    retVal = Rg * PhotoSyntActPart * MaxRadUseEff * CO2PhotEffect    // CO2 effect
+             * TranspirationRatio * fNitrogenCurve() * fTW() * PAR_Reduction;
+
+    return retVal;
+}
+
+double crop::FractionToRoot() {
+    double ret = MinAllocToRoot;
+
+    if (!Phenology -> Emerged()) {
+        ret = MaxAllocToRoot;
+    } else if (!Phenology -> Anthesis()) {
+        ret = MinAllocToRoot + (MaxAllocToRoot - MinAllocToRoot) * Phenology -> GetFractionToAnthesis();
+    } else if (!Phenology -> GrainFillEnd()) {
+        ret = max(0.0, MinAllocToRoot * (Phenology -> DS_StartFill - Phenology -> DS));
+    }
+
+    return ret;
+}
+
+void crop::TransferDryMatterToRoot(double * dDryMatt) {
+    double newDeltaRoot = max(0.0, *dDryMatt * FractionToRoot());
+
+    RootTranslocation += newDeltaRoot;
+    *dDryMatt         -= newDeltaRoot;
+    DryMatterRoot     += newDeltaRoot;
+
+    RootDecay(newDeltaRoot);
+}
+
+/*
+ * BPE and MEL 2007: New limitation to the transfer of DM to storage according
+ * to the concept of Justes et al. 1994. Annals of Botany 74:397-407.
+ */
+void crop::TransferDryMatterToStorage(double * dDryMatt) {
+    double Store = min(0.9, StoreForFilling);
+    double Fill  = min(0.9, FillFactor);
+
+    if (Phenology -> Anthesis() && (FillFlag == 0)) {
+        if (TransferableStorage < 1E-8) {
+            TransferableStorage = DryMatterVegTop * Store;
+        }
+
+        TransferableStorage   += *dDryMatt * Fill;
+        TransferedDMToStorage = TransferableStorage;
+    }
+
+    // MEL 2009
+    if (Phenology -> GrainFillStart()) {
+        FillFlag = 1;
+
+        if (fNitrogen() > 0.0) {
+            double transfer = min(DryMatterVegTop, max(0.0, TransferableStorage
+                                  * Phenology -> GetFractionOfGrainFill()));    // linear fill of DM stored during lag phase
+
+            DryMatterVegTop  -= transfer;
+            DryMatterStorage += transfer + *dDryMatt * Fill * ConversionCoefficient;
+
+            if (DryMatterVegTop < TransferableStorage) {
+                TransferableStorage = 0.9 * DryMatterVegTop;
+            }
+
+            DMbudget.AddOutput((*dDryMatt * Fill) * (1 - ConversionCoefficient));
+
+            *dDryMatt             = *dDryMatt * (1 - Fill);
+            TransferedDMToStorage -= transfer;
+        }
+    }
+
+    if (Phenology -> GrainFillEnd()
+            && (TransferedDMToStorage > 0)) {    // Check to see if all transferable storage is transfered
+        double transfer = max(0.0, TransferedDMToStorage);
+
+        DryMatterStorage      += transfer;
+        DryMatterVegTop       -= transfer;
+        TransferedDMToStorage = 0.0;
+    }
+}
+
+void crop::CalcLeafAreaIndices() {
+    if (GreenCropAreaIndex > maxGLAI) {
+        maxGLAI = GreenCropAreaIndex;    // state variable that holds the maximum achieved green LAI
+    }
+
+    if (Phenology -> Emerged()) {
+        if (Phenology -> TempSumForLeaf <= Phenology -> LinearLeafPhase) {
+
+            // GreenCropAreaIndex =  InitialCAI*RelativeDensity*(Phenology->TempSumForLeaf/Phenology->LinearLeafPhase);      /Deleted MEL 2010 due to very large LAI at high sowing rates
+            GreenCropAreaIndex = InitialCAI
+                                 * (Phenology -> TempSumForLeaf
+                                    / Phenology -> LinearLeafPhase);    // value from Porter ....
+        } else {
+            double DS_num = 1.3;
+
+            if (CropName == "WinterWheat") {
+                DS_num = 1.0;
+            }
+
+            if (Phenology -> DS < DS_num) {
+                double reducedGrowth = Phenology -> GetFractionToFlagLigule();                         // Correct later
+
+                reducedGrowth = 1.0 / (1.0 + pow(reducedGrowth, 10));
+
+                double expLeafExt = CoeffGreenIdx * GreenCropAreaIndex * max(0.0, temp);
+                double expL       = expLeafExt * min(1.0, TranspirationRatio / 0.6) * reducedGrowth;
+                double dmL        = LAIDMRatio * DryMatterVegTop - GreenCropAreaIndex;
+                double NL         = NitrogenInVegTop().n * LAINitrogenRatio - GreenCropAreaIndex;
+                double potDGLAI   = max(0.0, MaxGLAICrop - GreenCropAreaIndex);
+                double DGLAI      = max(0.0, min(expL, min(dmL, min(NL, potDGLAI))));
+
+                GreenCropAreaIndex += DGLAI;
+            }
+
+            if ((Phenology -> LeafSenesence() > 0) || (temp < 0.0)) {
+                double senescense = 1.0 / (1.0 - MinimumSenescense) * Phenology -> LeafSenesence();    // Correct later
+
+                if (temp < 0.0) {    // if mean temp is below zero enhanced senescense MEL 2009
+                    senescense = 1.0 / (1.0 - MinimumSenescense) * 0.005;
+                }
+
+                double deltaCAIg = -max(0.0, senescense * maxGLAI * (1.0 - TranspirationRatio * MinimumSenescense));
+
+                if ((YellowCropAreaIndex >= 0.0) || (GreenCropAreaIndex >= 0.0)) {
+                    GreenCropAreaIndex += deltaCAIg;
+
+                    if (GreenCropAreaIndex < 0.0) {
+                        deltaCAIg          -= GreenCropAreaIndex;
+                        GreenCropAreaIndex = 0.0;
+                    }
+
+                    YellowCropAreaIndex -= deltaCAIg * Conversfactor;
+                } else {
+                    theMessage -> WarningWithDisplay("crop::CalcLeafAreaIndices - variables in undefined state");
+                }
+            }
+        }
+    }
+}
+
+int crop::IrrigationDemand() {
+    double MaxWDeficit = 1.0;
+
+    if (Phenology -> Emerged() && (Phenology -> TempSumForLeaf >= Phenology -> LinearLeafPhase)) {
+        if (!Phenology -> Anthesis()) {
+            if ((theTime.GetMonth() >= 10) || (theTime.GetMonth() <= 3)) {
+                MaxWDeficit = 1.0;
+            } else {
+                MaxWDeficit = WaterDeficitVegGrowth;
+            }
+        } else if (!Phenology -> GrainFillStart()) {
+            MaxWDeficit = WaterDeficitLagPhase;
+        } else {
+            MaxWDeficit = WaterDeficitGrainFill;
+        }
+    }
+
+    if (aSoil && (MaxWDeficit < 1.0) && (RootDepth > 0.0)) {
+        double WaterStatus = (aSoil -> GetAvailWater(0, RootDepth * 1000.0)
+                              - aSoil -> GetWiltCapacity(0, RootDepth * 1000.0)) / (aSoil -> GetFieldCapacity(0,
+                                  RootDepth * 1000.0) - aSoil -> GetWiltCapacity(0, RootDepth * 1000.0));
+
+        return (WaterStatus < MaxWDeficit);
+    } else {
+        return 0;
+    }
+}
+
+double * crop::GiveRootLengthList() {
+    return (double *) &RootLengthList;
+}
+
+double crop::NitrogenDemand() {
+    double NitrogenDem = max(0.0, Nmax() - Nitrogen.n);
+
+    if ((Nmax() - Nitrogen.n < -1e-10) && (Phenology -> DS > 0.1)) {
+        theMessage -> Warning("crop::NitrogenDemand is below zero");
+    }
+
+    if (NitrogenDem < 0.0) {
+        theMessage -> Warning("crop::NitrogenDemand is below zero");
+
+        NitrogenDem = 0.0;
+    }
+
+    if (GreenCropAreaIndex < 1E-6) {
+        NitrogenDem = 0.0;
+    }
+
+    if (Phenology -> GrainFillStart()) {
+        double fraction = (Phenology -> DS - 2.0) * 1 / (Phenology -> DS_StartFill - 2.0);
+
+        NitrogenDem = max(0.0, (fraction) *NitrogenDem);
+    }
+
+    return NitrogenDem;
+}
+
+/*
+ * Updating root each in each layer of the soil
+ */
+void crop::CalcRootDistribution() {
+    double startdepth = 0.0;
+
+    for (int i = 0; i < NumOfLayers; i++) {
+        if (LayerThickness[i] < 0) {
+            LayerThickness[i] = aSoil -> GetLayerThickness(i) / 1000;
+        } else if (LayerThickness[i] > 0) {
+            RootLengthList[i] = RootLengthInInterval(startdepth, LayerThickness[i]);
+        } else {
+            RootLengthList[i] = 0.0;
+        }
+
+        if (i > 0) {
+            if (((RootLengthList[i - 1] / LayerThickness[i - 1]) - (RootLengthList[i] / LayerThickness[i])) < -1e-10) {
+                theMessage -> FatalError("crop::CalcRootDistribution - root density is increasing with depth");
+            }
+        }
+
+        if (RootLengthList[i] < 0.0) {
+            theMessage -> WarningWithDisplay("crop::CalcRootDistribution - root length can not be negative");
+
+            RootLengthList[i] = 0.0;
+        }
+
+        startdepth += LayerThickness[i];
+    }
+}
+
+void crop::GetStatus(double * aRootRadius,
+                     double * aRootpF,
+                     double * aNitrogenDemand,
+                     double * aNitrateUptakeRate,
+                     double * aAmmoniumUptakeRate,
+                     double * aMinimumSoilNitrate,
+                     double * aMinimumSoilAmmonium) {
+    if (Phenology -> Sown() &&!Phenology -> Ripe() && aSoil) {
+        *aNitrogenDemand = NitrogenDemand();
+    } else {
+        *aNitrogenDemand = 0.0;
+    }
+
+    *aRootRadius = sqrt(1.0
+                        / (3.1415926535 * 0.075
+                           * SpecificRootLength));    // assumes that root system is cylindric and dm = 7.5%
+    *aRootpF              = RootpF;
+    *aNitrateUptakeRate   = NitrateUptakeRate;
+    *aAmmoniumUptakeRate  = AmmoniumUptakeRate;
+    *aMinimumSoilNitrate  = MinimumSoilNitrate;
+    *aMinimumSoilAmmonium = MinimumSoilAmmonium;
+}
+
+/*
+ * Adding Nitrogen uptake to the crop and replace Transpiration Ratio
+ */
+void crop::NitrogenAndTranspiration(nitrogen aNitrogenUptake,
+        double                               aTranspirationRatio) {
+    TranspirationRatio = aTranspirationRatio;
+
+    if ((TranspirationRatio < 0.5)
+            && (YellowCropAreaIndex + GreenCropAreaIndex
+                < 0.01)) {    // corrects problem with transpiration the day of germination
+        TranspirationRatio = 1.0;
+    }
+
+    if (aNitrogenUptake.n > 1e-15) {
+        Nitrogen = Nitrogen + aNitrogenUptake;
+
+        if (Nitrogen.n <= 0) {
+            theMessage -> FatalError(
+                "crop::NitrogenAndTranspiration - nitrogen in plant is zero or below after uptake");
+        }
+
+        AccumulatedNProduction = AccumulatedNProduction + aNitrogenUptake;
+
+        Nbudget.AddInput(aNitrogenUptake.n);    // Budgets
+        N15budget.AddInput(aNitrogenUptake.n15);
+    }
+
+    // MEL 2009
+    double minimumN = Nmin();
+    double maximumN = Nmax();
+
+    if ((DryMatterStorage + DryMatterRoot + DryMatterVegTop > 0.0) && (Nitrogen.n > 0.5)) {
+        if (minimumN > Nitrogen.n * 1.25) {
+         //   cout << GetLongName() << endl;
+
+            theMessage -> WarningWithDisplay("crop::NitrogenAndTranspiration - not enough nitrogen in plant");
+        }
+
+        if (maximumN < Nitrogen.n * 0.75) {
+          //  cout << GetLongName() << endl;
+
+            theMessage -> WarningWithDisplay("crop::NitrogenAndTranspiration - too much nitrogen in plant");
+        }
+    }
+}
+
+/*
+ * Returns daily DM growth
+ */
+double crop::Update(double ActivePar) {
+    Rg   = ActivePar;
+    temp = theClimate -> tmean;
+
+    double DailyDMGrowth = 0.0;
+
+    DeltaDMTop = 0.0;
+
+    if (Phenology -> Sown() &&!Phenology -> Ripe() &&!terminated) {
+        if (totalLAIStand > 0.0) {
+            double maxSpaceFraction = (GreenCropAreaIndex + YellowCropAreaIndex) / totalLAIStand;
+
+            fractionOfSpace = max(0.0, min(maxSpaceFraction, fractionOfSpace + max(0.0, temp) * ColonialisationRate));
+        }
+
+        double soilTemp  = aSoil -> GetTemperature(200);
+        double DayLength = theClimate -> PhotoPeriod();
+		double plantTemp = theClimate->tmean;
+		if (usingPlantTemp == 1)
+			plantTemp = (theClimate->tmin + theClimate->ChangeMinPlantTemp + SurfacePlantMax()) / 2;
+		Phenology->Update(plantTemp,temp, soilTemp, DayLength);    // updates phenology
+
+        if (Phenology -> Sown()) {
+            TempSumRoot += max(0.0, temp);
+        }
+
+        UpdateHeight();
+
+        double deltaDryMatt = DeltaDryMatter();
+
+        DailyDMGrowth = deltaDryMatt;
+
+        DMbudget.AddInput(deltaDryMatt);                   // Budgets
+
+        AccumulatedDMProduction += deltaDryMatt;
+
+        if (Phenology -> TempSumForLeaf <= Phenology -> LinearLeafPhase) {    // the same termal time as linear leaf growth
+            double DMTransfer = 2.0 * TopFraction * InitialSeedDM * (max(0.0, temp) / Phenology -> LinearLeafPhase);
+
+            DMTransfer      = min(DMTransfer, SeedDM);
+            DryMatterVegTop += 0.5 * DMTransfer;
+            DryMatterRoot   += 0.5 * DMTransfer;
+            SeedDM          -= DMTransfer;
+        }
+
+        TransferDryMatterToRoot(&deltaDryMatt);
+        CalcRootGrowth();
+        TransferDryMatterToStorage(&deltaDryMatt);
+
+        DryMatterVegTop += deltaDryMatt;
+        DeltaDMTop      = deltaDryMatt;                    // Used for output
+
+        CalcLeafAreaIndices();
+    }
+
+    return DailyDMGrowth;
+}
+
+/*
+ * Rhizodeposition and root decay
+ */
+void crop::RootDecay(double RootTranslocation) {
+    if (!Phenology -> Ripe()) {
+        nitrogen aNitrogenInRoot = NitrogenInRoot();
+
+        if (rootMatter) {
+            rootMatter -> Setamount(0.0);
+        }
+
+        double SoilTemp = aSoil -> GetTemperature(200);
+
+        if ((DryMatterRoot > 0) && (temp > 0) && Phenology -> Emerged()) {
+            double DMdecay = DryMatterRoot * TemperatureEffect(SoilTemp) * DecayRoot
+                             + RootTranslocation * RhizoDepositFraction;
+
+            DMdecay = min(DryMatterRoot, DMdecay);
+
+            if (DMdecay > 0) {
+                nitrogen NConcentration = aNitrogenInRoot / DryMatterRoot;
+
+                if (doubleLess(NConcentration.n, CorrectedMinN_Root(), 0.000001)) {
+                    if (NConcentration.n == 0) {
+                        theMessage -> WarningWithDisplay("crop::RootDecay - nitrogen concentration in roots zero");
+
+                        NConcentration = CorrectedMinN_Root();
+                    }
+
+                    theMessage -> WarningWithDisplay(
+                        "crop::RootDecay - nitrogen concentration in roots below possible");
+
+                    NConcentration = NConcentration * CorrectedMinN_Root() / NConcentration.n;
+                }
+
+                nitrogen Ndecay = NConcentration * DMdecay;
+
+                DryMatterRoot -= DMdecay;
+                Nitrogen      = Nitrogen - Ndecay;
+
+   
+                rootMatter -> Setamount(DMdecay / rootMatter -> GetdryMatter());
+                rootMatter -> SetorgN_content(Ndecay / (DMdecay / rootMatter -> GetdryMatter()));
+
+                // update budgets
+                Nbudget.AddOutput(Ndecay.n);
+                N15budget.AddOutput(Ndecay.n15);
+                DMbudget.AddOutput(DMdecay);
+
+                AccumulatedRootDeposit  += DMdecay;
+                AccumulatedRootNDeposit = AccumulatedRootNDeposit + Ndecay;
+            }
+        }
+    }
+}
+
+/*
+ * Output crop variables to file
+ */
+void crop::StreamKeyData(fstream & os) {
+    double TSum = 0.0;
+    double DS   = 0.0;
+
+    if (Phenology) {
+        DS   = Phenology -> DS;
+        TSum = Phenology -> TempSumForLeaf;
+    }
+
+    os << "\t" << CropName << "\t" << DS << "\t" << TSum << "\t" << theClimate -> GetCO2Concentration() << "\t"
+       << GreenCropAreaIndex << "\t" << YellowCropAreaIndex << "\t" << DryMatterRoot;
+    os << "\t" << GiveRootInInterval(0.0, 0.3, DryMatterRoot);
+
+    if ((CropName == "Beet") || (CropName == "Potato") || (CropName == "OilRadish")) {
+        os << "\t" << GiveDryMatterStorage() + GiveDryMatterRoot();
+    } else {
+        os << "\t" << GiveDryMatterRoot();
+    }
+
+    os << "\t" << GiveDryMatterVegTop() << "\t" << DryMatterStorage;
+
+    if ((CropName == "Beet") || (CropName == "Potato") || (CropName == "OilRadish")) {    // Dry matter of total top
+        os << "\t" << GiveDryMatterVegTop();
+    } else {
+        os << "\t" << DryMatterStorage + GiveDryMatterVegTop();
+    }
+
+    os << "\t" << TranspirationRatio << "\t" << IrrigationDemand() << "\t" << PlantHeight << "\t" << RootDepth << "\t"
+       << TotalRootLength << "\t" << InterceptedRadiation << "\t" << Nitrogen.n << "\t" << NitrogenInVegTop().n15
+       << "\t" << Nmin() << "\t" << Nmax() << "\t" << NitrogenInStorage().n;
+
+    if ((CropName == "Beet") || (CropName == "Potato") || (CropName == "OilRadish")) {    // Nitrogen in total top
+        os << "\t" << NitrogenInVegTop().n;
+    } else {
+        os << "\t" << (NitrogenInVegTop() + NitrogenInStorage()).n;
+    }
+
+    os << "\t" << NitrogenInVegTop().n << "\t" << NitrogenInRoot().n << "\t"
+       << GiveRootInInterval(0.0, 0.3, NitrogenInRoot().n);
+
+    if ((CropName == "Beet") || (CropName == "Potato") || (CropName == "OilRadish")) {    // Nitrogen in roots and tubers
+        os << "\t" << NitrogenInStorage().n + NitrogenInRoot().n;
+    } else {
+        os << "\t" << NitrogenInRoot().n;
+    }
+
+    if (Nitrogen.n > 0) {
+        os << "\t" << fNitrogen() << "\t" << fNitrogenCurve();
+    } else {
+        os << "\t1\t1";
+    }
+
+    os << "\t" << AccumulatedRootDeposit << "\t" << RootTranslocation << "\t" << AccumulatedRootNDeposit.n << "\t"
+       << AccumulatedTopDeposit << "\t" << AccumulatedTopNDeposit.n << "\t" << AccumulatedDMProduction << "\t"
+       << AccumulatedNProduction.n << "\t" << GetNFixationThisDay() << "\t" << AccumulatedNFixation << "\t"
+       << DeltaDMTop << "\t" << NitrogenInRoot().Get15NRatio() << "\t" << AccumulatedRootRespiration;
+
+    for (unsigned int i = 0; i < globalSettings -> RootData.size(); i++) {
+        double StartDepth = globalSettings -> RootData[i].getStartDepth() / 1000;
+        double Thickness  = globalSettings -> RootData[i].getEndDepth() / 1000 - StartDepth;
+
+        os << "\t" << RootLengthInInterval(StartDepth, Thickness) << "\t"
+           << GiveRootInInterval(StartDepth, Thickness, DryMatterRoot) << "\t"
+           << GiveRootInInterval(StartDepth, Thickness, NitrogenInRoot().n);
+    }
+	if (usingPlantTemp == 1)
+	{
+
+		os << "\t" << SurfacePlantMax();
+		os << "\t" << (theClimate->tmin + theClimate->ChangeMinPlantTemp);
+		os << "\t" << theClimate->epot;
+	}
+}
+
+void crop::StartBudget() {
+    Nbudget.SetInput(Nitrogen.n);
+    N15budget.SetInput(Nitrogen.n15);
+    DMbudget.SetInput(DryMatterVegTop + DryMatterRoot + DryMatterStorage);
+    Nbudget.SetOutput(0);
+    N15budget.SetOutput(0);
+    DMbudget.SetOutput(0);
+}
+
+/*
+ * see if 3 budges classes wholes the right values
+ * Nrmeain and DMRemain wholes the values of what is remaing
+ */
+bool crop::EndBudget(double * NRemain,
+                     double * DMRemain) {
+    bool retVal = true;
+
+    *NRemain  = Nitrogen.n;
+    *DMRemain = GiveDryMatterVegTop() + DryMatterRoot + DryMatterStorage + SeedDM;
+
+    if (!Nbudget.Balance(*NRemain)) {
+        retVal = false;
+    }
+
+    if (!DMbudget.Balance(*DMRemain)) {
+        retVal = false;
+
+        cout << "Dry matter " << GiveDryMatterVegTop() << " " << DryMatterRoot << " " << DryMatterStorage << " "
+             << SeedDM << endl;    // !!!!!!
+        cout << "";
+    }
+
+    double N15Remain = Nitrogen.n15;
+
+    if (!N15budget.Balance(N15Remain)) {
+        retVal = false;
+    }
+
+    return retVal;
+}
+
+/*
+ * This function should not be called
+ */
+void crop::Cut(plantItem * cutPlantMaterial,
+               double      CutHeight) {
+    cout << GetLongName();
+
+    theMessage -> FatalError("crop::Cut - this function should never be called, use 'Harvest' instead");
+}
+
+/*
+ * Get really rough estimate of potential growth. Assumes complete interception of radiation
+ * Used in grassland management
+ */
+double crop::PotentialDryMatter(double radiation,
+                                double temperature) {
+    double CO2conc = theClimate -> GetCO2Concentration();
+    double retVal, CO2PhotEffect;
+
+    if (!C4Photosynthesis) {
+        CO2PhotEffect = CO2Effect * exp(0.4537 - 170.97 / CO2conc);
+        retVal        = radiation * PhotoSyntActPart * MaxRadUseEff * CO2PhotEffect * fTW(temperature);
+    } else {
+        retVal = radiation * PhotoSyntActPart * MaxRadUseEff * fTW(temperature);
+    }
+
+    return retVal;
+}
+
+crop::~crop() {
+    if (topMatter) {
+        delete topMatter;
+    }
+
+    if (rootMatter) {
+        delete rootMatter;
+    }
+
+    if (Phenology) {
+        delete Phenology;
+    }
+
+    topMatter  = nullptr;
+    rootMatter = nullptr;
+    Phenology  = nullptr;
+	myfile.close();
+}
+
+crop::crop(const crop & acrop) {
+    AccumulatedRootDeposit    = AccumulatedRootRespiration = 0.0;
+    DMCostPerN                = MaxFixPerDM = RootRespiration = 0.0;
+    CropName                  = acrop.CropName;
+    PlantItemName             = acrop.PlantItemName;
+    StrawItemName             = acrop.StrawItemName;
+    terminated                = acrop.terminated;
+    PhotoSyntActPart          = acrop.PhotoSyntActPart;    // Photosynthetic active part of total global radiation
+    RootpF                    = acrop.RootpF;                       // Water potential at wilting point
+    MinDMtemp                 = acrop.MinDMtemp;                    // Minimum temperature for dry matter production
+    MaxDMtemp                 = acrop.MaxDMtemp;                    // Maximum temperature for dry matter production
+    MaxRadUseEff              = acrop.MaxRadUseEff;                 // Maximum radiation use efficiency (g/MJ)
+    CoeffGreenIdx             = acrop.CoeffGreenIdx;                // Coefficient for leaf growth, exp. phase
+    LAINitrogenRatio          = acrop.LAINitrogenRatio;             // Maximum ratio between LAI and nitrogen in veg top
+    LAIDMRatio                = acrop.LAIDMRatio;                   // Maximum ratio between LAI and DM in veg top
+    MinimumSenescense         = acrop.MinimumSenescense;            // Used to calculate minimum senescense
+    k                         = acrop.k;
+    NCurveParam               = acrop.NCurveParam;                  // Power parameter of nitrogen fraction
+    MinN_Store                = acrop.MinN_Store;                   // Minimum content of nitrogen i storage organs
+    MaxN_Store                = acrop.MaxN_Store;                   // Maximum content of nitrogen i storage organs
+    MinN_Root                 = acrop.MinN_Root;                    // Minimum content of nitrogen i root organs
+    MaxN_Root                 = acrop.MaxN_Root;                    // Maximum content of nitrogen i root organs
+    PowDM                     = acrop.PowDM;    // Power of dry matter in nitrogen status calculation
+    NPctMax                   = acrop.NPctMax;                      // Following Justes concept
+    NPctMin                   = acrop.NPctMin;                      // Following Justes concept
+    DryMatterTotalStandVegTop = acrop.DryMatterTotalStandVegTop;
+    Conversfactor             = acrop.Conversfactor;    // Part of green leaf that is converted to yellow leaf by wilting
+    InitialRootDepth          = acrop.InitialRootDepth;             // Root depth by germination
+    RootPentrRate             = acrop.RootPentrRate;                // Root penetration rate
+    TempRootMin               = acrop.TempRootMin;                  // Minimum temperature for root growth
+    SpecificRootLength        = acrop.SpecificRootLength;           // Specific root length, m pr. kg.
+    MaxAllocToRoot            = acrop.
+        MaxAllocToRoot;    // Maximal fraction of dry matter production that is allocated to the root
+    MinAllocToRoot            = acrop.
+        MinAllocToRoot;    // Minimal fraction of dry matter production that is allocated to the root
+    MaxRootDepthCrop          = acrop.MaxRootDepthCrop;             // Maximal root depth for this crop
+    DecayRoot                 = acrop.DecayRoot;
+    Phenology                 = new phenology(*acrop.Phenology);    // Phenology
+    WaterDeficitVegGrowth     = acrop.WaterDeficitVegGrowth;
+    WaterDeficitLagPhase      = acrop.WaterDeficitLagPhase;
+    WaterDeficitGrainFill     = acrop.WaterDeficitGrainFill;
+    FractionNminInRoots       = acrop.FractionNminInRoots;
+
+
+
+    FractionNminInVegTop = acrop.FractionNminInVegTop;
+    temp                 = acrop.temp;
+    MaxPlantHeight       = acrop.MaxPlantHeight;
+
+    // DryMatterVegTopLinear  = acrop.DryMatterVegTopLinear;
+    InitialSeedDM         = acrop.InitialSeedDM;
+    InitialCAI            = acrop.InitialCAI;
+    MinimumRootDens       = acrop.MinimumRootDens;
+    ReducedNInYellow      = acrop.ReducedNInYellow;
+    InterceptCoeff        = acrop.InterceptCoeff;           // Coeff. for interceptioncapacity.
+    NitrateUptakeRate     = acrop.NitrateUptakeRate;        // Uptake rate for nitrate-N g/m/d (m root length)
+    AmmoniumUptakeRate    = acrop.AmmoniumUptakeRate;       // Uptake rate for ammonium-N g/m/d (m root length)
+    MinimumSoilNitrate    = acrop.MinimumSoilNitrate;    // Minimum concentration of nitrate-N left in soil water (g/l)
+    MinimumSoilAmmonium   = acrop.MinimumSoilAmmonium;    // Minimum concentration of ammonium-N left in soil water (g/l)
+    WinterSeed            = acrop.WinterSeed;               // Is the present crop a wintercrop.
+    C4Photosynthesis      = acrop.C4Photosynthesis;
+    ConversionCoefficient = acrop.ConversionCoefficient;    // Coefficent of DM conversion from vegetative to storage
+    FillFactor            = acrop.FillFactor;
+    GerminationConversion = acrop.GerminationConversion;
+    fNitrogenAfterRipe    = acrop.fNitrogenAfterRipe;
+
+    // fNitrogenAtFlowering   = acrop.fNitrogenAtFlowering;
+    RhizoDepositFraction    = acrop.RhizoDepositFraction;
+    CO2Effect               = acrop.CO2Effect;
+    MaxGLAICrop             = acrop.MaxGLAICrop;
+    RelativeDensity         = acrop.RelativeDensity;
+    TopFraction             = acrop.TopFraction;
+    RootTranslocation       = acrop.RootTranslocation;
+    AccumulatedDMProduction = acrop.AccumulatedDMProduction;
+    AccumulatedTopDeposit   = acrop.AccumulatedTopDeposit;
+    InterceptedRadiation    = acrop.InterceptedRadiation;
+    StoreForFilling         = acrop.StoreForFilling;
+
+    // CurrentNPct            = acrop.CurrentNPct;
+    TransferedDMToStorage   = acrop.TransferedDMToStorage;
+    AccumulatedRootNDeposit = acrop.AccumulatedRootNDeposit;
+    AccumulatedTopNDeposit  = acrop.AccumulatedTopNDeposit;
+    AccumulatedNProduction  = acrop.AccumulatedNProduction;
+    CutOrHarvested          = acrop.CutOrHarvested;
+    FillFlag                = acrop.FillFlag;
+
+    // State variables
+    maxGLAI             = acrop.maxGLAI;             // Maximum green crop area index reached
+    RootDensAtBottom    = acrop.RootDensAtBottom;    // Rootdensity at rootdepth. Changes with seed density.
+    MaxRootDepth        = acrop.MaxRootDepth;        // Max. root depth at actual soil type.
+    RootDistrParm       = acrop.RootDistrParm;       // Root density distribution parameter
+    Nitrogen            = acrop.Nitrogen;            // Nitrogen content (g/m^2).
+    TempSumRoot         = acrop.TempSumRoot;         // Temperature sum, root.
+    RootDensAtSurf      = acrop.RootDensAtSurf;      // Root density at soil surface.
+    TotalRootLength     = acrop.TotalRootLength;     // Total root length.
+    RootDepth           = acrop.RootDepth;           // Root depth.
+    DryMatterVegTop     = acrop.DryMatterVegTop;     // Dry matter in veg. parts above soil surface.
+    DryMatterRoot       = acrop.DryMatterRoot;       // Dry matter in root.
+    DryMatterStorage    = acrop.DryMatterStorage;    // Dry matter in storage organs.
+    ColonialisationRate = acrop.ColonialisationRate;
+    totalLAIStand       = acrop.totalLAIStand;
+    fractionOfSpace     = acrop.fractionOfSpace;
+
+    // FractionInStorage    =acrop.FractionInStorage;  // Fraction of dry matter constituting of storage organs.
+    GreenCropAreaIndex  = acrop.GreenCropAreaIndex;     // Green leaf crop index.
+    YellowCropAreaIndex = acrop.YellowCropAreaIndex;    // Yellow leaf crop index.
+    NumOfLayers         = acrop.NumOfLayers;            // Number of soil layers.
+    UnderSown           = acrop.UnderSown;    // indicates if a crop are not going to be harvested (i.e. undersown crops)
+    GrowthContinue      = acrop.GrowthContinue;
+    PlantHeight         = acrop.PlantHeight;
+    LAIDistributionPar  = acrop.LAIDistributionPar;
+
+    if (!acrop.rootMatter) {
+        rootMatter = nullptr;
+    } else {
+        rootMatter = new decomposable(*acrop.rootMatter);
+    }
+
+    if (!acrop.topMatter) {
+        topMatter = nullptr;
+    } else {
+        topMatter = new decomposable(*acrop.topMatter);
+    }
+
+    SeedDM               = acrop.SeedDM;
+    TranspirationRatio   = acrop.TranspirationRatio;
+    TransferableStorage  = acrop.TransferableStorage;
+    AccumulatedNFixation = acrop.AccumulatedNFixation;    // Accumulated N fixation (used for output)
+    DeltaDMTop           = acrop.DeltaDMTop;              // Daily top DM increase (used for output)
+
+    for (int i = 0; i < MaxSoilLayers; i++) {
+        RootLengthList[i] = acrop.RootLengthList[i];    // 'RootLengthList' contains the root length (m) per layer.
+        LayerThickness[i] = acrop.LayerThickness[i];
+    }
+
+    Rg        = acrop.Rg;
+    aSoil     = nullptr;    // Set subsequently
+    Nbudget   = acrop.Nbudget;
+    N15budget = acrop.N15budget;
+    DMbudget  = acrop.DMbudget;
+}
+
+		double crop::GetOMD()
+		{
+			double OMD=0;
+			double N_conc = NitrogenInVegTop().n / GiveDryMatterVegTop();
+			if (N_conc<=0.005)
+				OMD=0.4;
+			if ((N_conc>0.005)&&(N_conc<=0.02))
+				OMD=0.4 + 0.32 * (N_conc-0.005)/(0.02-0.005);
+			if ((N_conc>0.02)&&(N_conc<=0.035))
+				OMD=0.72 + 0.008 * (N_conc-0.02)/(0.035-0.02);
+			if (N_conc>0.035)
+				OMD=0.8;		
+			return OMD;
+		}

@@ -1,0 +1,453 @@
+/*
+ *
+ * Container class for the crop rotation model in FASSET
+ *
+ */
+
+#ifndef CROPROT_H
+#define CROPROT_H
+class manureManager;
+
+// forward reference NJH Aug 2002
+
+#include "../base/periods.h"
+#include "fieldOrder.h"
+#include "staticCrops/staticCrop.h"
+#include "field.h"
+#include "../legislation/legislation.h"
+
+
+class cropRotation:
+    public base
+{
+    private:
+        enum {
+            max_pv_strat = 3, Maxperiods = 3, max_n_lev = 12, max_n_lev_multper = 3, nocattle_cropnum = 13,
+            cattle_cropnum = 42, gams_str_len = 80
+        };
+
+        typedef linkList<fieldOrder> FieldOrderList;
+
+        struct Cropstruct {    // "CrpNme" will become an attribute in 'staticCrop' and                        // derivatives when all the classes are programmed.
+            string       CrpNme;
+            staticCrop * CP;
+        };
+
+
+        bool            irrigate;
+        int             Legal[cattle_cropnum][cattle_cropnum];    // Defines legal crop rotations.
+        double          Reduc[cattle_cropnum][cattle_cropnum];    // Crop rotation related change in yield.
+        Cropstruct      CropArray[cattle_cropnum];
+        staticCrop      staticBase;
+        staticCrop *    CropPointer;
+        string          PvName;
+        string          FertLevName;
+        string          FieldName;
+        linkList<field> fieldList;
+        periods         thePeriods;
+
+        cropRotation & operator = (
+                const cropRotation & cR);    // Dissable the compilers generation of default assignment operator.
+
+        cropRotation(const cropRotation & cR);    // Dissable the compilers generation of default copy constructor.
+
+        void Dot();
+
+        void MakeSequenceInstance(fieldOrder * PP);
+
+        void UpdateFld(field * PP);
+
+        void InitReducTable();
+
+        void InitSingleFields(bool   WithoutFields,
+                              double min_area,
+                              string filename,
+                              int    daysBetweenIrrigation,
+                              int    irrigationDelay,
+                              int    FingerFlow);
+
+        void InitStaticCrops();
+
+        void InitLegalTable();
+
+        double ExtraNRelease(string crop_id);
+
+        void SetCropPointer(string crop_id);
+
+        double NitrogenAmount(int    field_no,
+                              string crop_id,
+                              int    N_level,
+                              int    yearOffset);
+
+        double PhosphorAmount(string crop_id);
+
+        double PotassiumAmount(string crop_id);
+
+        int GiveCropNo(string crop_id);
+
+        double ExpectedYield(int    field_no,
+                             string crop_id,
+                             int    N_level,
+                             int    PV_strat);
+
+        double ExpectedStrawYield(int    field_no,
+                                  string crop_id,
+                                  int    N_level,
+                                  int    PV_strat);
+
+        int NumOfCrops();
+
+        int NitrogenLevels(string crop_id);
+
+        void CropId(int      crop_no,
+                    string & crop_id);
+
+        double YieldReduction(int    field_no,
+                              string crop_id);
+
+        double DistanceToField(int field_no);
+
+        int IsFieldFenced(int field_no);
+
+        int IsCropFallow(string crop_id);
+
+        int IsCropGrass(int crop_num);
+
+        int IsCropLegal(int    field_no,
+                        string crop_id);
+
+        string ProductName(int crop_num);
+
+        void PlanField(FieldOrderList * FOL);
+
+        void PlanField(fieldOrder * FOL);
+
+        void CorrectCropId(fieldOrder * PP);
+
+        // ----------LP model communication-------------------------------------------
+        int TransformLevel(int i);
+
+        void RecurRotation(int       a,
+                           int       b,
+                           string &  s,
+                           fstream * f,
+                           int       fieldno);
+
+        void WriteRotationToGams(string filename,
+                                 int    firstSeason);
+
+        void RecurPCT1(int       a,
+                       int       b,
+                       string &  s,
+                       fstream * f,
+                       int       fieldno);
+
+        void WritePCT1NGams(string filename,
+                            int    firstSeason,
+                            int    lastSeason);
+
+        void RecurPCT1NPK(int       a,
+                          int       b,
+                          string &  s,
+                          fstream * f,
+                          int       fieldno);
+
+        void WritePCT1NPKGams(string filename,
+                              int    firstSeason,
+                              int    lastSeason);
+
+        void RecurNRHS2(int       a,
+                        int       b,
+                        string &  s,
+                        fstream * f,
+                        int       fieldno);
+
+        void WriteNRHS2Gams(string filename,
+                            int    firstSeason,
+                            int    lastSeason);
+
+        void RecurPCTNPK(int       a,
+                         int       b,
+                         string &  s,
+                         fstream * f,
+                         int       fieldno);
+
+        void WritePCTNPKGams(string filename,
+                             int    firstSeason,
+                             int    lastSeason);
+
+        void RecurCCB(int       a,
+                      int       b,
+                      string &  s,
+                      fstream * f,
+                      int       fieldno);
+
+        void WriteCCB_ToGams(string filename,
+                             int    firstSeason,
+                             int    lastSeason);
+
+        void RecurCCT(int       a,
+                      int       b,
+                      string &  s,
+                      fstream * f,
+                      int       fieldno);
+
+        void WriteCCT_ToGams(string filename,
+                             int    firstSeason,
+                             int    lastSeason);
+
+        void RecurPremium(int       a,
+                          int       b,
+                          string &  s,
+                          fstream * f,
+                          int       fieldno);
+
+        void WritePremiumsToGams(string filename,
+                                 int    firstSeason,
+                                 int    lastSeason);
+
+        void RecurReform(int       a,
+                         int       b,
+                         string &  s,
+                         fstream * f,
+                         int       fieldno);
+
+        void WriteReformToGams(string filename,
+                               int    firstSeason,
+                               int    lastSeason);
+
+        void RecurLabCapUse(int       a,
+                            int       b,
+                            string &  s,
+                            fstream * f,
+                            int       fieldno);
+
+        void WriteLabCapUseToGams(string filename,
+                                  int    firstSeason,
+                                  int    lastSeason);
+
+        void RecurCombCapUse(int       a,
+                             int       b,
+                             string &  s,
+                             fstream * f,
+                             int       fieldno);
+
+        void RecurCombCapUseWithPV(int       a,
+                                   int       b,
+                                   string &  s,
+                                   fstream * f,
+                                   int       fieldno);
+
+        void WriteCombCapUseGams(string filename,
+                                 int    firstSeason,
+                                 int    lastSeason);
+
+        void RecurSprayCapUse(int       a,
+                              int       b,
+                              string &  s,
+                              fstream * f,
+                              int       fieldno);
+
+        void WriteSprayCapUseGams(string filename,
+                                  int    firstSeason,
+                                  int    lastSeason);
+
+        void RecurAllowed(int       a,
+                          int       b,
+                          string &  s,
+                          fstream * f,
+                          int       fieldno);
+
+        void WriteAllowedToGams(string filename,
+                                int    firstSeason,
+                                int    lastSeason);
+
+        void RecurManureIntervals(int       a,
+                                  int       b,
+                                  string &  s,
+                                  fstream * f,
+                                  int       fieldno);
+
+        void WriteManureIntervalsToGams(string filename,
+                                        int    firstSeason,
+                                        int    lastSeason);
+
+        void RecurFertilizer(int       a,
+                             int       b,
+                             string &  s,
+                             fstream * f,
+                             int       fieldno,
+                             int       mode,
+                             int       N_levels);
+
+        void WriteFertilizerGams(string filename,
+                                 int    firstSeason,
+                                 int    lastSeason,
+                                 int    mode);
+
+        void RecurNitrFix(int       a,
+                          int       b,
+                          string &  s,
+                          fstream * f,
+                          int       fieldno,
+                          int       N_levels);
+
+        void WriteNitrFixGams(string filename,
+                              int    firstSeason,
+                              int    lastSeason);
+
+        void RecurYield(int       a,
+                        int       b,
+                        string &  s,
+                        fstream * f,
+                        int       fieldno,
+                        int       mode);
+
+        void RecurYieldWithPV(int       a,
+                              int       b,
+                              string &  s,
+                              fstream * f,
+                              int       fieldno,
+                              int       mode);
+
+        void WriteYieldCropsGams(string filename,
+                                 int    firstSeason,
+                                 int    lastSeason,
+                                 int    mode);
+
+        void RecurCostParameters(int       a,
+                                 int       b,
+                                 string &  s,
+                                 fstream * f,
+                                 int       fieldno);
+
+        void RecurCostParametersWithPV(int       a,
+                                       int       b,
+                                       string &  s,
+                                       fstream * f,
+                                       int       fieldno);
+
+        void WriteCostParametersGams(string filename,
+                                     int    firstSeason,
+                                     int    lastSeason);
+
+        void RecurCropSet(int       a,
+                          int       b,
+                          string &  s,
+                          fstream * f,
+                          int       fieldno);
+
+        void WriteCropSetToGams(string filename,
+                                int    firstSeason,
+                                int    lastSeason);
+
+        void RecurStrawCropSet(int       a,
+                               int       b,
+                               string &  s,
+                               fstream * f,
+                               int       fieldno);
+
+        void WriteStrawCropSetToGams(string filename,
+                                     int    firstSeason,
+                                     int    lastSeason);
+
+        void RecurFallowCropSet(int       a,
+                                int       b,
+                                string &  s,
+                                fstream * f,
+                                int       fieldno);
+
+        void WriteFallowCropSet(fstream * f,
+                                int       fieldno);
+
+        void WriteFallowCropSetToGams(string filename,
+                                      int    firstSeason,
+                                      int    lastSeason);
+
+        void RecurGreenCropSet(int       a,
+                               int       b,
+                               string &  s,
+                               fstream * f,
+                               int       fieldno);
+
+        void WriteGreenCropSetToGams(string filename,
+                                     int    firstSeason,
+                                     int    lastSeason);
+
+        void WriteCCT_ToGams(string filename);    // For one period LP-model.
+
+        void WriteCCB_ToGams(string filename);    // For one period LP-model.
+
+        void WriteFieldSetToGams(string filename);
+
+        void WriteAreasToGams(string filename);
+
+        void WritePVSetToGams(string filename);
+
+        void WriteNlevSetToGams(string filename,
+                                int    seasons);
+
+        void WritePXPToGams(string filename);
+
+        void WriteFieldPeriodsToGams(string filename);
+
+        void writeMacpphaToGams(string filename);
+
+        void SetFixedCrops(string filename);
+
+        void SetFixedCropsAll();
+
+        void AddAreaToIndicators(string cid,
+                                 double a,
+                                 int    JBNO);
+
+        void WriteFieldList();
+
+    public:
+        cropRotation();
+
+        ~cropRotation();
+
+        void Initialize(bool   WithoutFields,
+                        bool   irrigat,
+                        int    daysBetweenIrrigation,
+                        int    irrigationDelay,
+                        int    FingerFlow,
+                        double MinArea);
+
+        void DailyUpdate();
+
+        void ReceivePlan(string filename, int yearIndex);
+
+        int NumOfFields();
+
+        double FieldArea(int field_no);
+
+        int FieldJBNo(int field_no);
+
+        double GetTotalPremium();
+
+        double GetDiversePlant();
+
+        double GetTotalArea();
+
+        double GetValueofLand();
+
+        linkList<field> * GetFields() {
+            return &fieldList;
+        }
+
+        void InsertGhostField();
+
+        void ReplaceField(field * fP);
+
+        void ShowHist();
+
+        void GiveIndicators();
+
+        void EndBudget();
+
+        // void SetmanureAdjustment(double aValue) {manureAdjustment = aValue;}
+};
+#endif
+
