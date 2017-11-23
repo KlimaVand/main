@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE5E7BF2-4A6A-449A-9188-92BA7E67C0B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgroModelToolbox</RootNamespace>
+    <AssemblyName>AgroModelToolbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\AgroModelToolbox.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\AgroModelToolbox.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="netchartdir, Version=5.0.4.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgroModelToolboxError.html" />
+    <Content Include="Controls\03_Output\ctrlCToolModelChart.ascx" />
+    <Content Include="Controls\03_Output\ctrlCToolYieldModelChart.ascx" />
+    <Content Include="Controls\03_Output\ctrlInputData.ascx" />
+    <Content Include="Controls\03_Output\ctrlSimpleModelChart.ascx" />
+    <Content Include="Controls\03_Output\ctrlInputDataOverview.ascx" />
+    <Content Include="Controls\99_Admin\ctrlRole.ascx" />
+    <Content Include="Controls\99_Admin\ctrlUser.ascx" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\detail.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\GridOgPunkter.jpg" />
+    <Content Include="Images\login.gif" />
+    <Content Include="Images\logout.gif" />
+    <Content Include="Images\obs.gif" />
+    <Content Include="Menu\01_Home\Home.aspx" />
+    <Content Include="Menu\02_Input\Input.aspx" />
+    <Content Include="Menu\03_Output\CToolModelChart.aspx" />
+    <Content Include="Menu\03_Output\CToolYieldModelChart.aspx" />
+    <Content Include="Menu\03_Output\SimpleModelChart.aspx" />
+    <Content Include="Menu\99_Admin\AdminUser.aspx" />
+    <Content Include="Menu\Account\ChangePassword.aspx" />
+    <Content Include="Menu\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Menu\Account\Login.aspx" />
+    <Content Include="Show\CToolYieldModelChart.aspx" />
+    <Content Include="Show\CToolModelChart.aspx" />
+    <Content Include="Show\SimpleModelChart.aspx" />
+    <Content Include="Styles\AgroModelToolbox.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\Class\DataExec.cs" />
+    <Compile Include="App_Data\Class\DataRead.cs" />
+    <Compile Include="App_Data\Class\Utility.cs" />
+    <Compile Include="Controls\03_Output\ctrlCToolModelChart.ascx.cs">
+      <DependentUpon>ctrlCToolModelChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlCToolModelChart.ascx.designer.cs">
+      <DependentUpon>ctrlCToolModelChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlCToolYieldModelChart.ascx.cs">
+      <DependentUpon>ctrlCToolYieldModelChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlCToolYieldModelChart.ascx.designer.cs">
+      <DependentUpon>ctrlCToolYieldModelChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlInputData.ascx.cs">
+      <DependentUpon>ctrlInputData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlInputData.ascx.designer.cs">
+      <DependentUpon>ctrlInputData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlSimpleModelChart.ascx.cs">
+      <DependentUpon>ctrlSimpleModelChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlSimpleModelChart.ascx.designer.cs">
+      <DependentUpon>ctrlSimpleModelChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlInputDataOverview.ascx.cs">
+      <DependentUpon>ctrlInputDataOverview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\03_Output\ctrlInputDataOverview.ascx.designer.cs">
+      <DependentUpon>ctrlInputDataOverview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\99_Admin\ctrlRole.ascx.cs">
+      <DependentUpon>ctrlRole.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\99_Admin\ctrlRole.ascx.designer.cs">
+      <DependentUpon>ctrlRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\99_Admin\ctrlUser.ascx.cs">
+      <DependentUpon>ctrlUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\99_Admin\ctrlUser.ascx.designer.cs">
+      <DependentUpon>ctrlUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\01_Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\01_Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\02_Input\Input.aspx.cs">
+      <DependentUpon>Input.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\02_Input\Input.aspx.designer.cs">
+      <DependentUpon>Input.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\03_Output\CToolModelChart.aspx.cs">
+      <DependentUpon>CToolModelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\03_Output\CToolModelChart.aspx.designer.cs">
+      <DependentUpon>CToolModelChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\03_Output\CToolYieldModelChart.aspx.cs">
+      <DependentUpon>CToolYieldModelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\03_Output\CToolYieldModelChart.aspx.designer.cs">
+      <DependentUpon>CToolYieldModelChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\03_Output\SimpleModelChart.aspx.cs">
+      <DependentUpon>SimpleModelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\03_Output\SimpleModelChart.aspx.designer.cs">
+      <DependentUpon>SimpleModelChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\99_Admin\AdminUser.aspx.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\99_Admin\AdminUser.aspx.designer.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AgroModelToolbox.Master.cs">
+      <DependentUpon>AgroModelToolbox.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgroModelToolbox.Master.designer.cs">
+      <DependentUpon>AgroModelToolbox.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Show\CToolYieldModelChart.aspx.cs">
+      <DependentUpon>CToolYieldModelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\CToolYieldModelChart.aspx.designer.cs">
+      <DependentUpon>CToolYieldModelChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\CToolModelChart.aspx.cs">
+      <DependentUpon>CToolModelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\CToolModelChart.aspx.designer.cs">
+      <DependentUpon>CToolModelChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\SimpleModelChart.aspx.cs">
+      <DependentUpon>SimpleModelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\SimpleModelChart.aspx.designer.cs">
+      <DependentUpon>SimpleModelChart.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CToolModel\CToolModel.csproj">
+      <Project>{54E850B3-F085-4E52-BF1D-F95F0EE25391}</Project>
+      <Name>CToolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FarmACModel\FarmACModel.csproj">
+      <Project>{0E12A972-A45D-4314-A8A8-F6DE92E38744}</Project>
+      <Name>FarmACModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleModel\SimpleModel.csproj">
+      <Project>{63C83972-8BCC-4F2F-AF00-F0AB70D4192E}</Project>
+      <Name>SimpleModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgroModelToolbox.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Production.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51376</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

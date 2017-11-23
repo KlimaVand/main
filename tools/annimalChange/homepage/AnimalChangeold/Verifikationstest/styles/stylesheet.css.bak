@@ -1,0 +1,138 @@
+/*General body*/
+body{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: white;
+}
+/*General table*/
+table{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   color: navy;
+   vertical-align : top;
+}
+th{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   vertical-align : top;
+}
+td{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   vertical-align : top;
+}
+a:link{
+	color: navy;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+a:visited{
+	color: navy;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+a:hover{
+   color: navy;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+ /*  background : Red;*/
+}
+a:active{
+	color: navy;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+h1{
+	color : navy;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 20px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h2{
+	color : navy;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 18px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h3{
+   color : navy;
+   font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size : 16px;
+   font-weight : bold;
+   margin-top : 0px;
+   margin-bottom : 0px;
+}
+h4{
+	color : navy;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h5{
+	color : navy;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h6{
+	color : navy;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+hr{
+	color : white;
+}
+body.data{
+	background-color : #C8E1F3;
+	color : white;
+}
+table.data{
+	background-color : #C8E1F3;
+}
+td.data{
+	background-color : #C8E1F3;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+button{
+	background-color: #EEF5FA;
+	color : navy;
+	font-weight: bold;
+}
+.border{
+	border : groove 1px;
+} 
+.TabView{
+   color: navy;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+} 
+A.TabView:link{
+   Text-Decoration: none;
+   color: navy;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+} 
+A.TabView:visited{
+   Text-Decoration: none;
+   color: navy;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+A.TabView:hover{
+   Text-Decoration: none;
+   color: #6495ED;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+} 

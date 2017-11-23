@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  
+  <settings>
+    <Identity>0</Identity>
+    <constants>C:\Users\jove\Desktop\main\tools\annimalChange\inputFiles\constants.xml </constants>
+    <parameters>C:\Users\jove\Desktop\main\tools\annimalChange\inputFiles\parameters.xml</parameters>
+    <farm>C:\Users\jove\Desktop\main\tools\annimalChange\inputFiles\testFarms\farm.xml</farm>
+    <fertAndManure>C:\Users\jove\Desktop\main\tools\annimalChange\inputFiles\fertMan.xml</fertAndManure>
+    <feedItems>C:\Users\jove\Desktop\main\tools\annimalChange\inputFiles\feedstuff.xml</feedItems>
+    <outputDir>C:\Users\jove\Desktop\main\tools\annimalChange\inputFiles\</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+ </settings>
+<CommonSettings>
+  <alternativePath>C:\information</alternativePath>
+<verbosityLevel>5</verbosityLevel>
+
+<logFile>true</logFile>
+<logScreen>true</logScreen>
+</CommonSettings>
+</xml>

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="Model.asmx.cs" Class="AnimalChange_ModelInterface.Model" %>

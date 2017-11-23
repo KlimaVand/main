@@ -1,0 +1,1186 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Farm>
+    <Identity>78943</Identity>
+    <FarmNumber>78943</FarmNumber>
+    <FarmOwnerName>It_78943_ConvDairy_iskWork_NonGrazing</FarmOwnerName>
+    <FarmOwnerAddress />
+    <FarmOwnerZipCode />
+    <FarmOwnerTown />
+    <FarmDescription />
+    <AgroEcologicalZone>4</AgroEcologicalZone>
+    <FarmType>3</FarmType>
+    <FarmTypeDescription>Kvægavler</FarmTypeDescription>
+    <SelectedScenario>
+      <Identity>8</Identity>
+      <FarmNumber>78943</FarmNumber>
+      <Name>8Baseline_It=4Zone_ConvDairy_OK_With No Incorporation</Name>
+      <NumberOfScenario>8</NumberOfScenario>
+      <IS-ID>1</IS-ID>
+      <ES-ID>1</ES-ID>
+      <InventorySystem>
+        <Name>IPCC 2006 </Name>
+        <Value>1</Value>
+      </InventorySystem>
+      <Rotation>
+        <Identity>2</Identity>
+        <FarmNumber>78943</FarmNumber>
+        <ScenarioID>8</ScenarioID>
+        <NameOfRotation>2Crop_Rot</NameOfRotation>
+        <Area>40</Area>
+        <SoilType>Clayey Soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>1</End_day>
+          <End_month>12</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>3</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>293</Value>
+            <N_Loss>11.72</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>2</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>2</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>1</Identity>
+            <StorageID>31</StorageID>
+            <Name>Ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>1</Value>
+            <N_Loss>0.022</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>31</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <Fertilizer_applied>
+            <Identity>2</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>30</Value>
+            <N_Loss>0.66</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>7</Identity>
+            <Name>Lucerne, beginning flowering</Name>
+            <Amount>0</Amount>
+            <FeedCode>401</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>401</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>10100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>401</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>1</End_day>
+          <End_month>3</End_month>
+          <End_year>2015</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>2</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>8</Identity>
+            <Name>Lucerne, beginning flowering, incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2401</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>1</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2401</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2401</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>3</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2015</Start_year>
+          <End_day>1</End_day>
+          <End_month>12</End_month>
+          <End_year>2015</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>3</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>4</Identity>
+            <Name>Lucerne hay</Name>
+            <Amount>0</Amount>
+            <FeedCode>602</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>3</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>602</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>14300</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>602</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>4</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2015</Start_year>
+          <End_day>1</End_day>
+          <End_month>3</End_month>
+          <End_year>2016</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>4</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>9</Identity>
+            <Name>Lucerne, beginning flowering, incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2401</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>4</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>1</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>4</FieldPlanRotationID>
+              <FeedstuffID>2401</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>4</FieldPlanRotationID>
+              <FeedstuffID>2401</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>5</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2016</Start_year>
+          <End_day>1</End_day>
+          <End_month>12</End_month>
+          <End_year>2016</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>2</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>202</Value>
+            <N_Loss>8.08</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>9</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>5</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>5</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>5</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>5</Identity>
+            <Name>Lucerne hay</Name>
+            <Amount>0</Amount>
+            <FeedCode>602</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>5</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>5</FieldPlanRotationID>
+              <FeedstuffID>602</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>14300</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>5</FieldPlanRotationID>
+              <FeedstuffID>602</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>6</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2016</Start_year>
+          <End_day>1</End_day>
+          <End_month>4</End_month>
+          <End_year>2017</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>6</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>10</Identity>
+            <Name>Lucerne, beginning flowering, incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2401</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>6</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>1</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>6</FieldPlanRotationID>
+              <FeedstuffID>2401</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>6</FieldPlanRotationID>
+              <FeedstuffID>2401</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>7</Identity>
+          <NameOfCrop>Maize</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2017</Start_year>
+          <End_day>1</End_day>
+          <End_month>9</End_month>
+          <End_year>2017</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>4</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>4</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>202</Value>
+            <N_Loss>8.08</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>7</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Manure>
+              <NameS>Ploughing</NameS>
+              <NameI>4</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>3</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>200</Value>
+            <N_Loss>4.4</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>7</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>7</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>11</Identity>
+            <Name>Maize - silage, high fodder index</Name>
+            <Amount>0</Amount>
+            <FeedCode>592</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>7</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <FeedstuffID>592</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>12800</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <FeedstuffID>592</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>8</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>9</Start_month>
+          <Start_year>2017</Start_year>
+          <End_day>1</End_day>
+          <End_month>10</End_month>
+          <End_year>2017</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>5</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>135</Value>
+            <N_Loss>5.4</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>9</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>8</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>8</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+        </Crop>
+        <Crop>
+          <Identity>9</Identity>
+          <NameOfCrop>Winter wheat</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>10</Start_month>
+          <Start_year>2017</Start_year>
+          <End_day>1</End_day>
+          <End_month>7</End_month>
+          <End_year>2018</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>1</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>135</Value>
+            <N_Loss>5.4</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>3</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>4</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>120</Value>
+            <N_Loss>2.64</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>3</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>9</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>12</Identity>
+            <Name>Wheat</Name>
+            <Amount>0</Amount>
+            <FeedCode>203</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>203</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>8900</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>203</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>13</Identity>
+            <Name>Wheat- straw</Name>
+            <Amount>0</Amount>
+            <FeedCode>788</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>788</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>4900</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>788</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>10</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>7</Start_month>
+          <Start_year>2018</Start_year>
+          <End_day>1</End_day>
+          <End_month>8</End_month>
+          <End_year>2018</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+        <Crop>
+          <Identity>11</Identity>
+          <NameOfCrop>Lucerne</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>8</Start_month>
+          <Start_year>2018</Start_year>
+          <End_day>1</End_day>
+          <End_month>3</End_month>
+          <End_year>2019</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>11</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>6</Identity>
+            <Name>Lucerne hay</Name>
+            <Amount>0</Amount>
+            <FeedCode>602</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>11</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>11</FieldPlanRotationID>
+              <FeedstuffID>602</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>4000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>11</FieldPlanRotationID>
+              <FeedstuffID>602</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+      </Rotation>
+      <Rotation>
+        <Identity>3</Identity>
+        <FarmNumber>78943</FarmNumber>
+        <ScenarioID>8</ScenarioID>
+        <NameOfRotation>3Permanet grass</NameOfRotation>
+        <Area>10</Area>
+        <SoilType>Sandy Clayey Soil (&gt; 40% fine sand)</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>3</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>1</End_day>
+          <End_month>12</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>6</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>202</Value>
+            <N_Loss>8.08</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>3</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>5</Identity>
+            <StorageID>31</StorageID>
+            <Name>Ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>3</Value>
+            <N_Loss>0.066</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>3</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>31</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Forage harvester</Value>
+            <Description>Forage harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>3</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>1</Identity>
+            <Name>Clover hay, high fodder index</Name>
+            <Amount>0</Amount>
+            <FeedCode>625</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>3</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>625</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>13300</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>625</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>2</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover</Name>
+            <Amount>0</Amount>
+            <FeedCode>421</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>3</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>3</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>1</End_day>
+          <End_month>3</End_month>
+          <End_year>2015</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>2</Identity>
+            <RotationID>3</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>3</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2421</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>3</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>1</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>3</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+      </Rotation>
+      <Livestock>
+        <Identity>1</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Holstein types - dairy</NameOfAnimals>
+        <NumberOfAnimals>39.00</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>8</ScenarioID>
+        <HerdID>1</HerdID>
+        <itemFed>
+          <Identity>2</Identity>
+          <FeedCode>203</FeedCode>
+          <Name>Wheat</Name>
+          <Amount>2.8</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>3</Identity>
+          <FeedCode>204</FeedCode>
+          <Name>Maize</Name>
+          <Amount>0.4</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>5</Identity>
+          <FeedCode>213</FeedCode>
+          <Name>Rape seed, 00</Name>
+          <Amount>0.08</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>10</Identity>
+          <FeedCode>401</FeedCode>
+          <Name>Lucerne, beginning flowering</Name>
+          <Amount>2.53</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>11</Identity>
+          <FeedCode>422</FeedCode>
+          <Name>Clovergrass, 12-15 cm, 20% clover</Name>
+          <Amount>0.07</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>13</Identity>
+          <FeedCode>592</FeedCode>
+          <Name>Maize - silage, high fodder index</Name>
+          <Amount>1.37</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>15</Identity>
+          <FeedCode>602</FeedCode>
+          <Name>Lucerne hay</Name>
+          <Amount>0.001</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>20</Identity>
+          <FeedCode>625</FeedCode>
+          <Name>Clover hay, high fodder index</Name>
+          <Amount>3.28</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>1</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>1</HerdID>
+          <ManureRecipient>
+            <Identity>1</Identity>
+            <StorageType>1</StorageType>
+            <StorageName>Slurry tank without crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>1</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>2</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Holstein types - heifers</NameOfAnimals>
+        <NumberOfAnimals>41.00</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>8</ScenarioID>
+        <HerdID>2</HerdID>
+        <itemFed>
+          <Identity>6</Identity>
+          <FeedCode>213</FeedCode>
+          <Name>Rape seed, 00</Name>
+          <Amount>0.106</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>9</Identity>
+          <FeedCode>401</FeedCode>
+          <Name>Lucerne, beginning flowering</Name>
+          <Amount>2.4</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>12</Identity>
+          <FeedCode>422</FeedCode>
+          <Name>Clovergrass, 12-15 cm, 20% clover</Name>
+          <Amount>2.1</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>3</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>2</HerdID>
+          <ManureRecipient>
+            <Identity>2</Identity>
+            <StorageType>1</StorageType>
+            <StorageName>Slurry tank without crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>2</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>3</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Holstein types - dairy</NameOfAnimals>
+        <NumberOfAnimals>46.00</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>8</ScenarioID>
+        <HerdID>3</HerdID>
+        <itemFed>
+          <Identity>1</Identity>
+          <FeedCode>203</FeedCode>
+          <Name>Wheat</Name>
+          <Amount>0.48</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>4</Identity>
+          <FeedCode>204</FeedCode>
+          <Name>Maize</Name>
+          <Amount>3.62</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>8</Identity>
+          <FeedCode>213</FeedCode>
+          <Name>Rape seed, 00</Name>
+          <Amount>1.44</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>14</Identity>
+          <FeedCode>592</FeedCode>
+          <Name>Maize - silage, high fodder index</Name>
+          <Amount>2.8</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>16</Identity>
+          <FeedCode>602</FeedCode>
+          <Name>Lucerne hay</Name>
+          <Amount>4.63</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>18</Identity>
+          <FeedCode>625</FeedCode>
+          <Name>Clover hay, high fodder index</Name>
+          <Amount>0.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>2</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>3</HerdID>
+          <ManureRecipient>
+            <Identity>3</Identity>
+            <StorageType>1</StorageType>
+            <StorageName>Slurry tank without crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>3</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>4</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Holstein types - heifers</NameOfAnimals>
+        <NumberOfAnimals>48.00</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>8</ScenarioID>
+        <HerdID>4</HerdID>
+        <itemFed>
+          <Identity>7</Identity>
+          <FeedCode>213</FeedCode>
+          <Name>Rape seed, 00</Name>
+          <Amount>0.266</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>4</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>17</Identity>
+          <FeedCode>602</FeedCode>
+          <Name>Lucerne hay</Name>
+          <Amount>4.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>4</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>19</Identity>
+          <FeedCode>625</FeedCode>
+          <Name>Clover hay, high fodder index</Name>
+          <Amount>1.3</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>4</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>4</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>4</HerdID>
+          <ManureRecipient>
+            <Identity>4</Identity>
+            <StorageType>1</StorageType>
+            <StorageName>Slurry tank without crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>4</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <EnergySystem>
+        <Name>Metabolisable energy</Name>
+        <Value>1</Value>
+      </EnergySystem>
+    </SelectedScenario>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>14</Value>
+      <Units>Kg N/ha/year</Units>
+      <FarmNumber>78943</FarmNumber>
+    </NDepositionRate>
+  </Farm>
+</NewDataSet>

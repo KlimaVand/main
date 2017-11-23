@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  
+  <settings>
+    <Identity>0</Identity>
+    <constants>constants.xml </constants>
+    <parameters>parameters.xml</parameters>
+    <farm>testFarms\farm.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+ </settings>
+<CommonSettings>
+  <alternativePath>C:\information</alternativePath>
+<verbosityLevel>5</verbosityLevel>
+
+<logFile>true</logFile>
+<logScreen>true</logScreen>
+</CommonSettings>
+</xml>

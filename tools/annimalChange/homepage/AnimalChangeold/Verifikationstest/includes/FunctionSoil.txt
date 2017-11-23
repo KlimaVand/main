@@ -1,0 +1,246 @@
+'**************************************************************************************************
+' Author: Bjørn Molt Petersen, Danish Institute of Agricultural Sciences
+' Written: 2003-2004
+' Function: The function returns a floating point number giving the total estimated 
+' denitrification (kg N/ha) using Finn P. Vinthers method
+' Parameters: 
+' intSoilCode is an integer according to the danish JB classification system
+' intFarmType is an integer: 
+'    1 = cash crop farm (planteavler)
+'    2 = pig farm (svineavler)
+'    3 = dairy farm (kvægavler)
+' fltFertiliserN is a double, giving the amount of N from mineral fertiliser in kg/ha
+' fltManureN is a floating point number, giving the amount of total N from manure in kg/ha
+' fltNFixation is a floating point number, giving the total amount of N fixatet from the atmosphere in kg/ha
+'**************************************************************************************************
+function Denitrification(intSoilCode, intFarmType, fltFertiliserN, fltManureNincorp, fltManureNspread, fltNFixation)
+   
+   'dim fltCinSoil - later !
+
+   dim intOrgLevel
+   '1 = low, 2 = medium, 3 = high
+   intOrgLevel = 2
+   'Change to dependency on organic matter level later!!!
+   dim fltBackgr
+   dim fltRatio
+   fltBackgr = 0
+   fltRatio = 5 
+   if intOrgLevel = 1 then
+      if intSoilCode = 1 then
+         fltBackgr = 0.0
+      if intSoilCode = 2 then
+         fltBackgr = 0.5
+      if intSoilCode = 3 then
+         fltBackgr = 1
+      if intSoilCode = 4 then
+         fltBackgr = 3
+      if intSoilCode = 5 then
+         fltBackgr = 6
+      if intSoilCode = 6 then
+         fltBackgr = 6
+      if intSoilCode >= 7 then
+         fltBackgr = 12
+
+      if intSoilCode = 1 then
+         fltRatio = 0.0
+      if intSoilCode = 2 then
+         fltRatio = 0.5
+      if intSoilCode = 3 then
+         fltRatio = 1.5
+      if intSoilCode = 4 then
+         fltRatio = 3.0
+      if intSoilCode = 5 then
+         fltRatio = 4.0
+      if intSoilCode = 6 then
+         fltRatio = 4.0
+      if intSoilCode = 7 then
+         fltRatio = 5.0
+      if intSoilCode >= 8 then
+         fltRatio = 5.0
+   endif
+
+   if intOrgLevel = 2 then
+      if intSoilCode = 1 then
+         fltBackgr = 0.3
+      if intSoilCode = 2 then
+         fltBackgr = 1
+      if intSoilCode = 3 then
+         fltBackgr = 2
+      if intSoilCode = 4 then
+         fltBackgr = 5
+      if intSoilCode = 5 then
+         fltBackgr = 9
+      if intSoilCode = 6 then
+         fltBackgr = 9
+      if intSoilCode >= 7 then
+         fltBackgr = 18
+
+      if intSoilCode = 1 then
+         fltRatio = 0.3
+      if intSoilCode = 2 then
+         fltRatio = 1.0
+      if intSoilCode = 3 then
+         fltRatio = 2.0
+      if intSoilCode = 4 then
+         fltRatio = 3.5
+      if intSoilCode = 5 then
+         fltRatio = 5.0
+      if intSoilCode = 6 then
+         fltRatio = 5.0
+      if intSoilCode = 7 then
+         fltRatio = 6.0
+      if intSoilCode >= 8 then
+         fltRatio = 6.0
+   endif
+
+   if intOrgLevel = 3 then
+      if intSoilCode = 1 then
+         fltBackgr = 1
+      if intSoilCode = 2 then
+         fltBackgr = 2
+      if intSoilCode = 3 then
+         fltBackgr = 3
+      if intSoilCode = 4 then
+         fltBackgr = 6
+      if intSoilCode = 5 then
+         fltBackgr = 13
+      if intSoilCode = 6 then
+         fltBackgr = 13
+      if intSoilCode >= 7 then
+         fltBackgr = 24
+
+      if intSoilCode = 1 then
+         fltRatio = 0.5
+      if intSoilCode = 2 then
+         fltRatio = 1.5
+      if intSoilCode = 3 then
+         fltRatio = 2.5
+      if intSoilCode = 4 then
+         fltRatio = 4.0
+      if intSoilCode = 5 then
+         fltRatio = 6.0
+      if intSoilCode = 6 then
+         fltRatio = 6.0
+      if intSoilCode = 7 then
+         fltRatio = 7.0
+      if intSoilCode >= 8 then
+         fltRatio = 7.0
+   endif
+
+   dim fltFert
+   fltfert = fltFertiliserN*0.008*(fltRatio+1.0)
+
+   dim fltMan
+   fltMan = fltManureNincorp*0.025*(fltRatio+1.5)+fltManureNspread*0.025*(fltRatio+0.75)
+
+   dim fltFix
+   fltFix = fltNFixation*0.4*0.025*(fltRatio+1.5)
+
+   Denitrification = fltBackgr+fltfert+fltMan+fltFix
+end function
+
+'**************************************************************************************************
+' Author: Bjørn Molt Petersen, Danish Institute of Agricultural Sciences 
+' Written: 2003-2004
+' Function: The function returns a floating point number giving the total estimated 
+' soil N change (kg N/ha) using Bjørn Molt Petersens method
+' Parameters: 
+' intSoilCode is an integer according to the danish JB classification system
+' intFarmType is an integer according to the below: 
+'    1 = cash crop farm (planteavler)
+'    2 = pig farm (svineavler)
+'    3 = dairy farm (kvægavler)
+' fltCropC is a floating point number, giving the total amount of crop derived C added to the soil
+' fltManureC is a floating point number, giving the total amount of C from animal manure
+'**************************************************************************************************
+function SoilChange(intSoilCode, intFarmType, fltCropC, fltManureC)
+   dim fltClay
+   fltClay = 10
+   if intSoilCode = 1 then
+      fltClay = 2.5
+   if intSoilCode = 2 then
+      fltClay = 2.5
+   if intSoilCode = 3 then
+      fltClay = 7.5
+   if intSoilCode = 4 then
+      fltClay = 7.5
+   if intSoilCode = 5 then
+      fltClay = 12.5
+   if intSoilCode = 6 then
+      fltClay = 12.5
+   if intSoilCode = 7 then
+      fltClay = 20
+   if intSoilCode = 8 then
+      fltClay = 35
+
+   fltR = 3.09+2.67*exp(-0.079*fltClay)
+   fltR = 1/(1+fltR)
+   
+   dim fltCinSoil
+   fltCinSoil=TotalCarbonInSoil(intSoilCode, intFarmType)
+   ' The decay coefficient below is not finally determined !!!
+   SoilChange = 0.1*(fltR*fltCropC+(fltR+0.116)*fltManureC)-1.1*fltCinSoil
+end function
+
+'**************************************************************************************************
+' Author: Bjørn Molt Petersen, Danish Institute of Agricultural Sciences
+' Written: 2003-2004
+' Function: The function returns a floating point number giving the presumed total C content of the 
+' soil, according to the LCA soil types again based on "Kvadratnettet"
+' Parameters: 
+' intSoilCode is an integer according to the danish JB classification system
+' intFarmType is an integer according to the below:  
+'    1 = cash crop farm (planteavler)
+'    2 = pig farm (svineavler)
+'    3 = dairy farm (kvægavler)
+'**************************************************************************************************
+function TotalCarbonInSoil(intSoilCode, intFarmType)
+   dim returnValue
+   returnValue=120
+   if intSoilCode>4 then
+      if intFarmType = 1 then
+         returnValue = 106.3
+      if intFarmType = 2 then
+         returnValue = 113.9
+      if intFarmType = 3 then
+         returnValue = 117.8
+   else
+      if intFarmType = 1 then
+         returnValue	115.8
+      if intFarmType = 2 then
+         returnValue	117.1
+      if intFarmType = 3 then
+         returnValue	151.1
+   endif
+   TotalCarbonInSoil = returnValue
+end function
+
+'**************************************************************************************************
+' Author: Bjørn Molt Petersen, Danish Institute of Agricultural Sciences
+' Written: 2003-2004
+' Function: The function returns a floating point number giving the total annual C return to the 
+' soil (t/ha) from crops
+'**************************************************************************************************
+function TotalCarbonFromCrops()
+   dim returnValue
+   returnValue = 0
+   loop ' loop all crops
+      returnValue = returnValue + crop.area*(crop.yield*crop.rhizo1 + crop.secondaryYield*(1-crop.fractionSecHarvested)*crop.rhizo2)
+   endloop
+   TotalCarbonFromCrops = returnValue/totalArea
+end function
+
+'**************************************************************************************************
+' Author: Bjørn Molt Petersen, Danish Institute of Agricultural Sciences
+' Written: 2003-2004
+' Function: The function returns a floating point number giving the total annual C return to the 
+' soil (t/ha) from animal manure
+'**************************************************************************************************
+function TotalCarbonFromManure()
+   dim returnValue
+   returnValue = 0
+   loop ' loop all manure types - including manure from grazing animals
+      returnvalue = returnValue + manure.N*manure.conversionFactor
+   endloop   
+   TotalCarbonFromManure = returnValue/totalArea
+end function

@@ -1,0 +1,270 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Farm>
+    <Identity>67925</Identity>
+    <FarmNumber>67925</FarmNumber>
+    <FarmOwnerName>67925 Burning and stubble burning</FarmOwnerName>
+    <FarmOwnerAddress />
+    <FarmOwnerZipCode />
+    <FarmOwnerTown />
+    <FarmDescription />
+    <AgroEcologicalZone>1</AgroEcologicalZone>
+    <FarmType>1</FarmType>
+    <FarmTypeDescription>Planteavler</FarmTypeDescription>
+    <SelectedScenario>
+      <Identity>1</Identity>
+      <FarmNumber>67925</FarmNumber>
+      <Name>Scenario 1</Name>
+      <NumberOfScenario>1</NumberOfScenario>
+      <IS-ID>1</IS-ID>
+      <ES-ID>1</ES-ID>
+      <InventorySystem>
+        <Name>IPCC 2006 </Name>
+        <Value>1</Value>
+      </InventorySystem>
+      <Rotation>
+        <Identity>1</Identity>
+        <FarmNumber>67925</FarmNumber>
+        <ScenarioID>1</ScenarioID>
+        <NameOfRotation>1</NameOfRotation>
+        <Area>100</Area>
+        <SoilType>Coarse Sandy Soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Spring barley</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2001</Start_year>
+          <End_day>8</End_day>
+          <End_month>8</End_month>
+          <End_year>2001</End_year>
+          <Irrigation>false</Irrigation>
+          <Fertilizer_applied>
+            <Identity>1</Identity>
+            <StorageID>31</StorageID>
+            <Name>Ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>150</Value>
+            <N_Loss>3.3</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>3</Month_applied>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>31</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>1</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>1</Identity>
+            <Name>Spring barley</Name>
+            <Amount>0</Amount>
+            <FeedCode>201</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>201</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>201</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>2</Identity>
+            <Name>Spring barley - straw</Name>
+            <Amount>0</Amount>
+            <FeedCode>781</FeedCode>
+            <Harvested>Burnt</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>781</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>1800</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>781</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>9</Start_day>
+          <Start_month>8</Start_month>
+          <Start_year>2001</Start_year>
+          <End_day>23</End_day>
+          <End_month>8</End_month>
+          <End_year>2001</End_year>
+          <Irrigation>false</Irrigation>
+          <Fertilizer_applied>
+            <Identity>2</Identity>
+            <StorageID>32</StorageID>
+            <Name>Ammonium sulphate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>20</Value>
+            <N_Loss>0.44</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>8</Month_applied>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <StorageID>32</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+        </Crop>
+        <Crop>
+          <Identity>3</Identity>
+          <NameOfCrop>Winter wheat</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>24</Start_day>
+          <Start_month>8</Start_month>
+          <Start_year>2001</Start_year>
+          <End_day>28</End_day>
+          <End_month>7</End_month>
+          <End_year>2002</End_year>
+          <Irrigation>false</Irrigation>
+          <Fertilizer_applied>
+            <Identity>3</Identity>
+            <StorageID>31</StorageID>
+            <Name>Ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>160</Value>
+            <N_Loss>3.52</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>3</Month_applied>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>3</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <StorageID>31</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>3</Identity>
+            <RotationID>1</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>3</Identity>
+            <Name>Wheat</Name>
+            <Amount>0</Amount>
+            <FeedCode>203</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>3</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>203</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>8500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>203</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>4</Identity>
+            <Name>Wheat- straw</Name>
+            <Amount>0</Amount>
+            <FeedCode>788</FeedCode>
+            <Harvested>Stubbleburning</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>3</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>788</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2700</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>788</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>4</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>29</Start_day>
+          <Start_month>7</Start_month>
+          <Start_year>2002</Start_year>
+          <End_day>1</End_day>
+          <End_month>3</End_month>
+          <End_year>2003</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+      </Rotation>
+      <EnergySystem>
+        <Name>Metabolisable energy</Name>
+        <Value>1</Value>
+      </EnergySystem>
+    </SelectedScenario>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>10</Value>
+      <Units>Kg N/ha/year</Units>
+      <FarmNumber>67925</FarmNumber>
+    </NDepositionRate>
+  </Farm>
+</NewDataSet>

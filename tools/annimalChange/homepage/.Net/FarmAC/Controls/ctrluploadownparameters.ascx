@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrluploadownparameters.ascx.cs" Inherits="FarmAC.Controls.ctrluploadownparameters" %>
+  <asp:FileUpload id="FileUploadControl" runat="server" />

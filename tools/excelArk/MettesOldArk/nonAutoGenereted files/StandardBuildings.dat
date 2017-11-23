@@ -1,0 +1,1372 @@
+[all]
+scalable	false
+[surface(0)]
+Alias			Default
+Depth			200
+NewValue           727500         //New value of animal feed store (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.04          //--||--  Depreciation --||--
+RefCapacity        1500           //in m^3
+Area               800           //surface area in sq metres
+scalableBstore	1
+ManureStoreID	0
+PostCleanDepth  0.0    ////tonnes manure remaining after cleaning
+surfaceArea  0.0         //in square metres
+manureToIndex  0  
+NH3Emissionfactor 0.0  
+N2Emissionfactor 0.0  
+N2OEmissionfactor 0.0  
+CO2Emissionfactor 0.0  
+CH4Emissionfactor 0.0  
+NMinfactor 0.0  
+OMdegRateConst 0.0  
+Manuretype	CATTLE-FYM
+Locked		false
+ManureToName	  Slurrystore
+ManureToIndex		0
+[Slurrystore(0)]
+Alias              Slurrystore
+NewValue           500000         //New value of building (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.05          //--||--  Depreciation --||--
+Area               800           //surface area in sq metres
+Depth              3             //depth in metres
+Manuretype         SLURRY
+StorageCapacity		270	//days storage
+CrustResistance	   0.0
+SpecificResistance 2000.0		//
+CoverResistance    00.0        //consistent with no lid (ref Hutchings et al. 95)
+NH3Emissionfactor	 0.05
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	 75.0		// VelocityConstant from dynamic volatilisation model
+Locked	0
+ALFAMtype	pig
+ManureStoreID	0
+OMdegRateConst	0
+ManureToName	Slurry
+ManureToIndex	0
+AreaPrAnimal	0
+Manuretype		SLURRY
+NH3Emissionfactor	 0.05
+
+[Slurrystore(1)]
+Alias              pigSlurrystore
+NewValue           500000         //New value of building (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.05          //--||--  Depreciation --||--
+Area               800           //surface area in sq metres
+Depth              3             //depth in metres
+Manuretype         SLURRY
+StorageCapacity		270	//days storage
+CrustResistance	   0.0
+SpecificResistance 2000.0		//
+CoverResistance    00.0        //consistent with no lid (ref Hutchings et al. 95)
+NH3Emissionfactor	 0.05
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	 75.0		// VelocityConstant from dynamic volatilisation model
+Locked	0
+ALFAMtype	pig
+ManureStoreID	0
+OMdegRateConst	0
+ManureToName	Slurry
+ManureToIndex	0
+AreaPrAnimal	0
+Manuretype		SLURRY
+NH3Emissionfactor	 0.05
+[Slurrystore(2)]
+Alias              cattleSlurrystore
+NewValue           500000         //New value of building (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.05          //--||--  Depreciation --||--
+Area               800           //surface area in sq metres
+Depth              3             //depth in metres
+Manuretype         SLURRY
+StorageCapacity		270	//days storage
+CrustResistance	   0.0
+SpecificResistance 2000.0		//
+CoverResistance    00.0        //consistent with no lid (ref Hutchings et al. 95)
+NH3Emissionfactor	 0.05
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	 75.0		// VelocityConstant from dynamic volatilisation model
+Locked	0
+ALFAMtype	pig
+ManureStoreID	0
+OMdegRateConst	0
+ManureToName	Slurry
+ManureToIndex	0
+AreaPrAnimal	0
+Manuretype		SLURRY
+NH3Emissionfactor	 0.05
+[Store(0)]
+Alias			Default
+NewValue           727500         //New value of animal feed store (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.04          //--||--  Depreciation --||--
+RefCapacity        1500           //in m^3
+Area               800           //surface area in sq metres
+scalableBstore	1
+[Store(1)]
+Alias			FeedStore
+NewValue           727500         //New value of animal feed store (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.04          //--||--  Depreciation --||--
+scalableBstore	1
+[BiogasReactor(0)]
+Alias              Reactor
+NewValue           500000         //New value of building (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.05          //--||--  Depreciation --||--
+Depth              3             //depth in metres
+Manuretype         SLURRY
+ManureToName	DigestateStore
+ManureToIndex	0
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+Locked	0
+
+[DigestateStore(0)]
+Alias              DigestateStore
+NewValue           500000         //New value of building (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.05          //--||--  Depreciation --||--
+Area               800           //surface area in sq metres
+Depth              3             //depth in metres
+Manuretype         PIG-SLURRY-DEGAS
+RefCapacity        2400           //in m^3
+CrustResistance	   0.0
+SpecificResistance 2000.0		//
+CoverResistance    00.0        //consistent with no lid (ref Hutchings et al. 95)
+NH3Emissionfactor	 0.05
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	 75.0		// VelocityConstant from dynamic volatilisation model
+AreaPrAnimal 	  6.67
+Locked	1
+ALFAMtype	pig
+
+[Dungheap(0)]
+Alias              Dungheap
+NewValue           500000         //New value of building (in economy part)
+AverageValue       0.5           //Average value over lifetime  (~25 yrs)
+Maintenance        0.007         //Average maintenance as quotient of new value
+Insurance          0.004         //--||--  Insurance --||--
+Depreciation       0.05          //--||--  Depreciation --||--
+Depth              3             //depth in metres
+Manuretype         CATTLE-FYM
+RefCapacity        2400           //in m^3
+CrustResistance	 7000.0
+SpecificResistance 2000.0		//
+CoverResistance    120000.0        //consistent with no lid (ref Hutchings et al. 95)
+NH3Emissionfactor	 0.05
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	 150.0		// VelocityConstant from dynamic volatilisation model
+AreaPrAnimal 	  6.67
+Locked	0
+ALFAMtype	cattle
+ManureStoreID	0
+Manuretype	CATTLE-FYM
+ManureToName	  Slurrystore
+ManureToIndex	0
+Ventilated		TRUE
+OMdegRateConst	0
+[Pigstable(0)]
+Alias              Default
+meanHeight         6.0	// meteres
+planArea	20000	//sq metres
+planAreaRatio      1.25	//area of house relative to the total area of sections 
+thermalTransWall   0.0  // Watts per metre K
+thermalTransRoof   0.0  // Watts per metre K
+absorbCoeff         0.2
+emissivity          0.8
+externSurfResis     0.001  //sq metres K per Watt
+targetTemperature  22.0 // target inside temperature in Celsius
+controlledVent	1
+
+[Pigstable(0).Section(0)]
+Alias			 Finisher
+Contains		 Finisher(0)
+controlledVent	0
+NewValue           352240             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      56		//number of days animal stays in section
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      0.1         //kW per yr per animal
+Places		0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   0.66
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+
+[Pigstable(0).Section(0).floor(0)]
+OMdegRateConst	0
+ManureToID	0
+AreaPrAnimal	0
+Locked		0
+Alias			FinisherFloor
+AreaPartition	1.0
+Depth             0.003             //depth in metres
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 1.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	1.0
+
+
+
+[Pigstable(0).Section(1)]
+Alias			 Weaner
+Contains		 Weaner(0)
+NewValue           110403          //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      57
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+Places		0
+SpiltDrinkingWater	0
+AreaPrAnimal 	   0.22
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+controlledVent 0
+[Pigstable(0).Section(1).floor(0)]
+Locked		0
+Alias			WeanerFloor
+AreaPartition	1.0
+Depth             0.003             //depth in metres
+RefCapacity          4           //in m^3
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2Emissionfactor	   0.01
+N2OEmissionfactor        0.001
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 1.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	1.0
+OMdegRateConst	0
+ManureToID	0
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+[Pigstable(0).Section(2)]
+Alias			 Mating
+Contains		 Mating(0)
+NewValue           1104000          //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      5.7
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+Places		0
+SpiltDrinkingWater	0
+AreaPrAnimal 	  2.2
+minVentilation      0.00661 // cubic metres per sec per animal
+maxVentilation      0.142 // cubic metres per sec per animal
+controlledVent	0
+[Pigstable(0).Section(2).floor(0)]
+
+Alias			MatingFloor
+ManureToID	0
+OMdegRateConst	0
+Locked		0
+AreaPrAnimal	0.65
+Depth             0.003             //depth in metres
+AreaPartition	1.0
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	1.0
+
+[Pigstable(0).Section(3)]
+Alias			 Pregnant
+Contains		 Pregnant(0)
+NewValue           451043           //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      115
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+Places		0
+SpiltDrinkingWater	0
+AreaPrAnimal 	   2.2
+minVentilation      0.00566 // cubic metres per sec per animal
+maxVentilation      0.71 // cubic metres per sec per animal
+controlledVent	0
+[Pigstable(0).Section(3).floor(0)]
+Alias			PregnantFloor
+Locked	0
+OMdegRateConst	0
+ManureToID	0
+Depth             0.003             //depth in metres
+AreaPartition	1.0
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+AreaPrAnimal       2            
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	1.0
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+[Pigstable(0).Section(4)]
+Alias			 Lactating
+Contains		 Lactating(0)
+NewValue           560000         //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      27
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+Places		0
+AreaPrAnimal 	   3.2
+minVentilation      0.00661 // cubic metres per sec per animal
+maxVentilation      0.142 // cubic metres per sec per animal
+controlledVent 0
+[Pigstable(0).Section(4).floor(0)]
+Alias			FarrowingFloor
+Locked		0
+OMdegRateConst	0
+ManureToID	0
+AreaPrAnimal	0.65
+AreaPartition	1.0
+Depth             0.003             //depth in metres
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	1.0
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+[Pigstable(0).Section(5)]
+Alias			 NewSow
+Contains		 NewSow(0)
+NewValue           1410548            //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      85
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      0.10         //kW per yr per animal
+Places		0
+SpiltDrinkingWater	0
+AreaPrAnimal 	   2.2
+minVentilation      0.00661 // cubic metres per sec per animal
+maxVentilation      0.142 // cubic metres per sec per animal
+controlledVent	0
+[Pigstable(0).Section(5).floor(0)]
+Locked	0
+ OMdegRateConst	0
+ManureToID 0
+Alias			NewSowFloor
+AreaPrAnimal	0.65
+Depth             0.003             //depth in metres
+AreaPartition	1.0
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	1.0
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+[Pigstable(0).Section(6)]
+Alias			 FinisherPartiallySlatted
+Contains		 Finisher(0)
+NewValue           1410548            //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+DaysInSection      85
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      0.10         //kW per yr per animal
+Places		0
+SpiltDrinkingWater	0
+AreaPrAnimal 	   0.66		//http://www.dpi.qld.gov.au/27_11340.htm
+minVentilation      0.0047 // cubic metres per sec per animal
+maxVentilation      0.0566 // cubic metres per sec per animal
+
+[Pigstable(0).Section(6).floor(0)]
+Locked	0
+OMdegRateConst	0
+ManureToID 0
+Alias			FinisherSolidFloor
+AreaPrAnimal	0.3
+Depth             0.003             //depth in metres
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	0.5
+minVentilation      0.0047 // cubic metres per sec per animal
+maxVentilation      0.0566 // cubic metres per sec per animal
+controlledVent	0
+[Pigstable(0).Section(6).floor(1)]
+Locked	0
+OMdegRateConst	0
+ManureToID 0
+Alias			FinisherSlattedFloor
+AreaPrAnimal	0.35
+Depth             0.003             //depth in metres
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.25
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1	Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	15.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+AreaPartition	0.5
+[Pigstable(0).inhouse(0)]
+
+Locked	0
+Alias			Slurrypit
+ManureStoreID 	10
+NewValue           600000             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+Area		200
+Depth              3             //depth in metres
+StorageCapacity		270	//days storage
+Manuretype        SLURRY
+ManureToName	  Slurrystore
+ManureToIndex	0
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	4.0		// VelocityConstant from dynamic volatilisation model
+ALFAMtype	pig
+ManureToID		120
+OMdegRateConst	0
+
+[CattleHousing(0)]
+Alias              Default
+meanHeight         6.0	// meteres
+planArea           40000000    //sq metres 
+thermalTransWall   5.0  // Watts per metre K
+thermalTransRoof   1.5  // Watts per metre K
+absorbCoeff         0.2
+emissivity          0.8
+externSurfResis     0.001  //sq metres K per Watt
+targetTemperature  22.0 // target inside temperature in Celsius
+optimumAirVelocity 0.250     //velocity in m/s NEW
+maxTemperature	25.0	//max permissable temperature in Celsius NEW
+minTemperature	0.0	//min permissable temperature in Celsius NEW
+apertureWidth      45.0 // metres
+maxapertureHeight 5.0 // metres
+minPropApertureHeight	0.1 //
+maxapertureHeight	 	5
+minPropApertureHeight	0.1
+apertureWidth	45
+optimumAirVelocity	0.25
+minTemperature	0
+maxTemperature	25
+controlledVent	0
+maxapertureHeight	 	5
+minPropApertureHeight	0.1
+apertureWidth	45
+optimumAirVelocity	0.25
+minTemperature	0
+maxTemperature	25
+planAreaRatio	1
+[CattleHousing(0).Section(0)]
+
+Alias			 BeefBox1
+Contains		 FBEEF1
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   1.0
+controlledVent	0
+[CattleHousing(0).Section(0).floor(0)]
+Alias			BeefBox1Floor
+
+Manuretype	CATTLE-FYM
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity          4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+
+[CattleHousing(0).Section(1)]
+Alias			 BeefBox2
+
+Contains		 FBEEF2
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   1.0
+controlledVent	0
+[CattleHousing(0).Section(1).floor(0)]
+Alias			BeefBox2Floor
+
+Manuretype	CATTLE-FYM
+Area              400
+Depth             0.003             //depth in metres
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+[CattleHousing(0).Section(2)]
+Alias			 BeefBox3
+Contains		 FBEEF3
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   2.0
+controlledVent	0
+[CattleHousing(0).Section(2).floor(0)]
+Alias			BeefBox3Floor
+
+Manuretype	CATTLE-FYM
+Area              400
+Depth             0.003             //depth in metres
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+[CattleHousing(0).Section(3)]
+
+Alias			 BeefBox4
+Contains		 MBEEF1
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   2
+controlledVent	0
+[CattleHousing(0).Section(3).floor(0)]
+Alias			BeefBox4Floor
+
+Manuretype	CATTLE-FYM
+Area              400
+Depth             0.003             //depth in metres
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+[CattleHousing(0).Section(4)]
+Alias			 BeefBox5
+Contains		 MBEEF2
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   2
+
+[CattleHousing(0).Section(4).floor(0)]
+Alias			BeefBox5Floor
+Area              400
+
+Manuretype	CATTLE-FYM
+Depth             0.003             //depth in metres
+RefCapacity          4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+[CattleHousing(0).Section(5)]
+Alias			 BeefBox6
+Contains		 MBEEF3
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   2
+
+[CattleHousing(0).Section(5).floor(0)]
+Alias			BeefBox6Floor
+Area              400
+AreaPrAnimal	0.65
+
+Manuretype	CATTLE-FYM
+Depth             0.003             //depth in metres
+RefCapacity          4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+
+[CattleHousing(0).Section(6)]
+
+Alias			 SucklerBox
+Contains		 SUCKLER
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   2
+controlledVent	0
+[CattleHousing(0).Section(6).floor(0)]
+Alias			SucklerBoxFloor
+
+Manuretype	CATTLE-FYM
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity       4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+[CattleHousing(0).Section(7)]
+Alias			 LooseBox1
+AreaPrAnimal	1
+Contains		 HEIFERS1
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+RefCapacity		0
+SpiltDrinkingWater	0
+ElectricityUse
+AreaPrAnimal 	   2
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+controlledVent	0
+[CattleHousing(0).Section(7).floor(0)]
+Alias			LooseBox1Floor
+Locked 		0
+OMdegRateConst	0
+ManureToID	0
+AreaPartition	1.0
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity          4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	1
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+[CattleHousing(0).Section(8)]
+Alias			 LooseBox2
+AreaPrAnimal		1.0
+Contains		 HEIFERS2
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+RefCapacity		0
+SpiltDrinkingWater	0
+ElectricityUse
+AreaPrAnimal 	   2
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+controlledVent	0
+[CattleHousing(0).Section(8).floor(0)]
+ManureToID	0
+Alias			LooseBox2Floor
+Locked	0
+OMdegRateConst	0
+AreaPartition	1.0
+Manuretype	CATTLE-FYM
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity       4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	1
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 2.0		//kg washing water per animal per day
+VelocityConstant	2.5		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+[CattleHousing(0).Section(9)]
+Alias			 LooseBox3
+Contains		 HEIFERS3
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+RefCapacity		0
+SpiltDrinkingWater	0
+ElectricityUse
+AreaPrAnimal 	   2
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+controlledVent	0
+[CattleHousing(0).Section(9).floor(0)]
+Alias			LooseBox2Floor
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity       4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	1
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+
+[CattleHousing(0).Section(10)]
+Alias			 SUCKLER
+Contains		 SUCKLER
+NewValue           1642200             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             238           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+SpiltDrinkingWater	0
+ElectricityUse	0
+AreaPrAnimal 	   2
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+controlledVent	0
+[CattleHousing(0).Section(10).floor(0)]
+Alias			SUCKLERFloor
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity       4           //in m^3
+Manuretype        CATTLE-FYM
+ManureToName	Dungheap
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 0.0		//kg washing water per animal per day
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+Ventilated		TRUE		//TRUE if air can access base of manure, otherwise FALSE
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+
+[CattleHousing(1)]
+Alias              DairyHouse
+Area	             2000
+planAreaRatio		1.25
+controlledVent	 0
+meanHeight         6.0	// meteres
+planArea           400    //sq metres 
+thermalTransWall   5.0  // Watts per metre K
+thermalTransRoof   1.5  // Watts per metre K
+
+apertureHeight     1.0  // metres
+bbapertureWidth      45.0 // metres
+absorbCoeff         0.2
+emissivity          0.8
+externSurfResis     0.001  //sq metres K per Watt
+
+maxapertureHeight	 	5
+minPropApertureHeight	0.1
+apertureWidth	45
+optimumAirVelocity	0.25
+minTemperature	0
+maxTemperature	25
+controlledVent	 0
+[CattleHousing(1).Section(0)]
+Alias			 Milkers
+Contains		 DAIRY
+NewValue           3669600             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.04             //--||--  Depreciation --||--
+RefCapacity             139           
+SpiltDrinkingWater 0.027		//kg spilt drinking water per animal per day
+ElectricityUse      370.0         //kW per yr per animal
+VariableFeeding    0.42   
+VariableCleaning   0.27
+ConstantFeeding    2.2
+ConstantCleaning   0.9
+NrOfAnimals		0
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+RefCapacity		0
+SpiltDrinkingWater	0
+ElectricityUse
+AreaPrAnimal 	   2
+minVentilation      0.00472 // cubic metres per sec per animal
+maxVentilation      0.06 // cubic metres per sec per animal
+controlledVent	 0
+[CattleHousing(1).Section(0).floor(0)]
+Alias			MilkersFloor
+ManureToID	0
+Locked	0
+Area              400
+Depth             0.003             //depth in metres
+RefCapacity          4           //in m^3
+Manuretype        SLURRY
+ManureToName	inhouse
+ManureToIndex	0
+ExcretaPartition	1.0		//proportion of excreta deposited on this floor
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+CleaningInterval  1		//Interval between cleaning of floor (days)
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+WashingWater	 10.0		//kg washing water per animal per day
+VelocityConstant	10.0		// VelocityConstant from dynamic volatilisation model
+VolumeToArea	162.0       //area of urine in sq metres per tonne urine deposited
+StrawAdded		0.0		//kg straw added per animal per day
+AreaPrAnimal 	   2
+ProportionFouled	1.0		//proportion of animal section floor that is fouled by manure
+Places		0
+animalHeatOp	0
+faecesPerYear	0
+urinePerYear	0
+RefCapacity		0
+SpiltDrinkingWater	0
+ElectricityUse
+OMdegRateConst 0.0  
+[CattleHousing(1).inhouse(0)]
+Alias			Slurrypit	
+Locked			false
+OMdegRateConst		0
+NewValue          600000             //New value of building (in economy part)
+AverageValue       0.5		 //Average value over lifetime  (~25 yrs)
+Maintenance        0.007             //Average maintenance as quotient of new value
+Insurance          0.004             //--||--  Insurance --||--
+Depreciation       0.05             //--||--  Depreciation --||--
+Area              800		//surface area of manure holder
+Depth              3             //depth in metres
+RefCapacity       800           //in m^2  
+Manuretype        SLURRY		
+ManureToName	Slurrystore	
+ManureToIndex	0
+NH3Emissionfactor	0.06
+N2OEmissionfactor        0.001
+N2Emissionfactor	   0.01
+CO2Emissionfactor	0.01
+CH4Emissionfactor	0.001
+CMinfactor		0.005
+NMinfactor		0.01
+PostCleanDepth     0.001		//Depth of manure remaining after cleaning (m)
+VelocityConstant	2.50		// VelocityConstant from dynamic volatilisation model
+AreaPrAnimal 	  2
+ALFAMtype	cattle
+[CattleHousing(2)]
+Alias              FollowerHouse
+Area	             2000
+planAreaRatio		1.25
+controlledVent	 0
+meanHeight         6.0	// meteres
+planArea           400000000    //sq metres 
+thermalTransWall   5.0  // Watts per metre K
+thermalTransRoof   1.5  // Watts per metre K
+
+apertureHeight     1.0  // metres
+aaapertureWidth      45.0 // metres
+absorbCoeff         0.2
+emissivity          0.8
+externSurfResis     0.001  //sq metres K per Watt
+maxapertureHeight	 	5
+minPropApertureHeight	0.1
+apertureWidth	45
+optimumAirVelocity	0.25
+minTemperature	0
+maxTemperature	25
+[CattleHousing(3)]
+Alias              BeefHouse
+Area	             2000
+controlledVent	 0
+meanHeight         6.0	// meteres
+planArea           40000000    //sq metres 
+thermalTransWall   5.0  // Watts per metre K
+thermalTransRoof   1.5  // Watts per metre K
+apertureHeight     1.0  // metres
+bbapertureWidth      45.0 // metres
+absorbCoeff         0.2
+emissivity          0.8
+externSurfResis     0.001  //sq metres K per Watt
+maxapertureHeight	 	5
+minPropApertureHeight	0.1
+apertureWidth	45
+optimumAirVelocity	0.25
+minTemperature	0
+maxTemperature	25
+[end]

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <fertiliser>
+    <Identity>1</Identity>
+    <Name color="green">Ammonium nitrate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value color="green">0.335</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value color="green">0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <manure>
+    <Identity>1</Identity>
+    <Name color="green">pig slurry</Name>
+    <StorageType>1</StorageType>
+    <SpeciesGroup>2</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value color="green">0.0033</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value color="green">0.0007</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon degC</Description>
+      <Value>0.009color</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.009color</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0color</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+</xml>

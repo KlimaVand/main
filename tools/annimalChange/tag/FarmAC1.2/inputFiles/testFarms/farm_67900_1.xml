@@ -1,0 +1,146 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Farm>
+    <Identity>67900</Identity>
+    <FarmNumber>67900</FarmNumber>
+    <FarmOwnerName>67900 Spring barley with irrigation</FarmOwnerName>
+    <FarmOwnerAddress />
+    <FarmOwnerZipCode />
+    <FarmOwnerTown />
+    <FarmDescription />
+    <AgroEcologicalZone>1</AgroEcologicalZone>
+    <FarmType>1</FarmType>
+    <FarmTypeDescription>Planteavler</FarmTypeDescription>
+    <SelectedScenario>
+      <Identity>1</Identity>
+      <FarmNumber>67900</FarmNumber>
+      <Name>Scenario 1</Name>
+      <NumberOfScenario>1</NumberOfScenario>
+      <IS-ID>1</IS-ID>
+      <ES-ID>1</ES-ID>
+      <InventorySystem>
+        <Name>IPCC 2006 </Name>
+        <Value>1</Value>
+      </InventorySystem>
+      <Rotation>
+        <Identity>1</Identity>
+        <FarmNumber>67900</FarmNumber>
+        <ScenarioID>1</ScenarioID>
+        <NameOfRotation>1</NameOfRotation>
+        <Area>100</Area>
+        <SoilType>Coarse Sandy Soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Spring barley</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2001</Start_year>
+          <End_day>8</End_day>
+          <End_month>8</End_month>
+          <End_year>2001</End_year>
+          <Irrigation>true</Irrigation>
+          <Fertilizer_applied>
+            <Identity>1</Identity>
+            <StorageID>31</StorageID>
+            <Name>Ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>160</Value>
+            <N_Loss>3.52</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>1</Month_applied>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>31</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>1</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>1</Identity>
+            <Name>Spring barley</Name>
+            <Amount>0</Amount>
+            <FeedCode>201</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>5500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>201</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>201</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>2</Identity>
+            <Name>Spring barley - straw</Name>
+            <Amount>0</Amount>
+            <FeedCode>781</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>2000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>781</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>781</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>9</Start_day>
+          <Start_month>8</Start_month>
+          <Start_year>2001</Start_year>
+          <End_day>1</End_day>
+          <End_month>3</End_month>
+          <End_year>2002</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+      </Rotation>
+      <EnergySystem>
+        <Name>Metabolisable energy</Name>
+        <Value>1</Value>
+      </EnergySystem>
+    </SelectedScenario>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>10</Value>
+      <Units>Kg N/ha/year</Units>
+      <FarmNumber>67900</FarmNumber>
+    </NDepositionRate>
+  </Farm>
+</NewDataSet>

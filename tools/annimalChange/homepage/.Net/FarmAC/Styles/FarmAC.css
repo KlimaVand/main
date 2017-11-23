@@ -1,0 +1,85 @@
+﻿body {
+    background: rgb(248,248,248);
+    font-size: .75em;
+    font-family: Arial, Helvetica, "Helvetica Neue", "Lucida Grande", "Segoe UI", Verdana, sans-serif;
+    margin: 20px;
+    padding: 0px;
+    color: #000000;
+}
+
+a:link, a:visited {
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000000;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #663300;
+    /*   font-variant: small-caps;*/
+    text-transform: none;
+    font-weight: 200;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 2.0em;
+    font-weight: 600;
+    padding: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+.green {
+    background-color: rgb(228,231,190);
+    box-shadow: 5px 5px 5px silver;
+}
+
+.page {
+    border: 1px solid #eeeeee;
+    box-shadow: 5px 5px 5px silver;
+    min-width: 1085px;
+    background-color: white;
+    margin: 20px auto 0px auto;
+    height: 100%;
+}
+
+.footer {
+    color: #660000;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}

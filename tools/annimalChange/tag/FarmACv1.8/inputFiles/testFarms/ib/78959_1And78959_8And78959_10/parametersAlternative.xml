@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <AgroecologicalZone>
+    <Identity color="red">1</Identity>
+        <Housing>
+      <Identity>1</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>2</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>3</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>4</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>5</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>6</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>7</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>8</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>9</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>10</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>11</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>12</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>13</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>14</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+		</ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>15</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>16</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>17</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>18</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>19</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <Housing>
+      <Identity>20</Identity>
+      <ProportionDegradable>
+        <Value color="red">0.2</Value>
+      </ProportionDegradable>
+    </Housing>
+    <ManureStorage>
+      <SupplementaryFeedstocks>
+        <Description>Supplementary feedstocks for biogas production</Description>
+        <Feedstock>
+          <Identity>1</Identity>
+          <FeedCode>594</FeedCode>
+        </Feedstock>
+      </SupplementaryFeedstocks>
+    </ManureStorage>    
+  </AgroecologicalZone>
+</xml>

@@ -1,0 +1,733 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Farm>
+    <Identity>325078</Identity>
+    <FarmNumber>325078</FarmNumber>
+    <FarmOwnerName>325078-5isk: Nl demonstration farm. Please make a copy if you will change data. Low feed quality</FarmOwnerName>
+    <FarmOwnerAddress>Edelhertweg 15, Lelystad</FarmOwnerAddress>
+    <FarmOwnerZipCode />
+    <FarmOwnerTown />
+    <FarmDescription>Model farm: average Dutch Dairy farm
+
+Baseline=5: 14% lower milkproduction &gt; milkadjustment=1.16, see "BBPR detailuitvoer_Modelfarm_isk4.xlsx"</FarmDescription>
+    <AgroEcologicalZone>1</AgroEcologicalZone>
+    <FarmType>3</FarmType>
+    <FarmTypeDescription>Kvægavler</FarmTypeDescription>
+    <SelectedScenario>
+      <Identity>5</Identity>
+      <FarmNumber>325078</FarmNumber>
+      <Name>5isk. Baseline. Nl_model_Dairy. 66 year-heifers, Adjustmilk=1.16</Name>
+      <NumberOfScenario>5</NumberOfScenario>
+      <IS-ID>1</IS-ID>
+      <ES-ID>1</ES-ID>
+      <InventorySystem>
+        <Name>IPCC 2006 </Name>
+        <Value>1</Value>
+      </InventorySystem>
+      <Rotation>
+        <Identity>1</Identity>
+        <FarmNumber>325078</FarmNumber>
+        <ScenarioID>5</ScenarioID>
+        <NameOfRotation>1. Maize, gross=16.5 t DM/ha</NameOfRotation>
+        <Area>9</Area>
+        <SoilType>Coarse Sandy Soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Maize</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>20</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2013</Start_year>
+          <End_day>20</End_day>
+          <End_month>10</End_month>
+          <End_year>2013</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>1</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>1</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>78</Value>
+            <N_Loss>1.716</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>1</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Manure>
+              <NameS>Injection</NameS>
+              <NameI>1</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Manure_applied>
+            <Identity>2</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>1</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>55</Value>
+            <N_Loss>1.21</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>1</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>2</MFId>
+            <Applic_technique_Manure>
+              <NameS>Injection</NameS>
+              <NameI>1</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>2</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>1</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>100</Value>
+            <N_Loss>2.2</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>1</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>5</Identity>
+            <Name>Maize - silage, low fodder index</Name>
+            <Amount>0</Amount>
+            <FeedCode>594</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>594</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>15600</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>594</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Permanent grass</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>21</Start_day>
+          <Start_month>10</Start_month>
+          <Start_year>2013</Start_year>
+          <End_day>19</End_day>
+          <End_month>4</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>2</Identity>
+            <RotationID>1</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>3</Identity>
+            <Name>Grass, 6-8 cm incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2464</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2464</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>1500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2464</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+      </Rotation>
+      <Rotation>
+        <Identity>2</Identity>
+        <FarmNumber>325078</FarmNumber>
+        <ScenarioID>5</ScenarioID>
+        <NameOfRotation>2.  Grass, gross=12.5 t DM/ha</NameOfRotation>
+        <Area>40</Area>
+        <SoilType>Fine Sandy Soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Permanent grass</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>15</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2013</Start_year>
+          <End_day>1</End_day>
+          <End_month>11</End_month>
+          <End_year>2013</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>3</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>1</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>61</Value>
+            <N_Loss>1.342</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>5</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Injection</NameS>
+              <NameI>1</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Manure_applied>
+            <Identity>4</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>1</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>50</Value>
+            <N_Loss>1.1</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>7</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>2</MFId>
+            <Applic_technique_Manure>
+              <NameS>Injection</NameS>
+              <NameI>1</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>2</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Manure_applied>
+            <Identity>5</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>1</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>25</Value>
+            <N_Loss>0.55</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>6</MFId>
+            <Applic_technique_Manure>
+              <NameS>Injection</NameS>
+              <NameI>1</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>6</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>2</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>20</Value>
+            <N_Loss>0.44</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>5</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <Fertilizer_applied>
+            <Identity>3</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>30</Value>
+            <N_Loss>0.66</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>6</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>3</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>3</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <Fertilizer_applied>
+            <Identity>4</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>20</Value>
+            <N_Loss>0.44</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>7</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>4</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>4</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <Fertilizer_applied>
+            <Identity>5</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>13</Value>
+            <N_Loss>0.286</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>8</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>5</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>5</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <Fertilizer_applied>
+            <Identity>6</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>1</Value>
+            <N_Loss>0.022</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>7</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>7</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Forage harvester</Value>
+            <Description>Forage harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>1</Identity>
+            <Name>Grass - silage, low fodder index</Name>
+            <Amount>0</Amount>
+            <FeedCode>566</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>566</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>6150</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>566</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>2</Identity>
+            <Name>Grass, 20-25 cm grazed</Name>
+            <Amount>0</Amount>
+            <FeedCode>1466</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>true</Grazed>
+            <Expected_yield>
+              <Value>5000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>1466</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>5650</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>1466</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Permanent grass</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>2</Start_day>
+          <Start_month>11</Start_month>
+          <Start_year>2013</Start_year>
+          <End_day>14</End_day>
+          <End_month>4</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>6</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>1</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>99</Value>
+            <N_Loss>2.178</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>3</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Injection</NameS>
+              <NameI>1</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <Fertilizer_applied>
+            <Identity>7</Identity>
+            <StorageID>33</StorageID>
+            <Name>Calcium ammonium nitrate</Name>
+            <DeliveryID>5</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>40</Value>
+            <N_Loss>0.88</N_Loss>
+            <Type>2</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>3</Month_applied>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <MFId>1</MFId>
+            <Applic_technique_Fertilizer>
+              <NameS>Fertilizer spreading</NameS>
+              <NameI>5</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <StorageID>33</StorageID>
+              <MFId>1</MFId>
+            </Applic_technique_Fertilizer>
+          </Fertilizer_applied>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>2</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>4</Identity>
+            <Name>Grass, 6-8 cm incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2464</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2464</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>1500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2464</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+      </Rotation>
+      <Livestock>
+        <Identity>1</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Holstein types - dairy</NameOfAnimals>
+        <NumberOfAnimals>85.00</NumberOfAnimals>
+        <avgProductionMilk>8100</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>1</HerdID>
+        <itemFed>
+          <Identity>1</Identity>
+          <FeedCode>145</FeedCode>
+          <Name>Rapeseed cake, 00, 10% fat, protected</Name>
+          <Amount>1.618</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>3</Identity>
+          <FeedCode>155</FeedCode>
+          <Name>Soyabean meal</Name>
+          <Amount>1.84</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>5</Identity>
+          <FeedCode>291</FeedCode>
+          <Name>Citrus pulp</Name>
+          <Amount>1.35</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>7</Identity>
+          <FeedCode>566</FeedCode>
+          <Name>Grass - silage, low fodder index</Name>
+          <Amount>4.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>9</Identity>
+          <FeedCode>594</FeedCode>
+          <Name>Maize - silage, low fodder index</Name>
+          <Amount>4.8</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>11</Identity>
+          <FeedCode>1466</FeedCode>
+          <Name>Grass, 20-25 cm grazed</Name>
+          <Amount>4.37</Amount>
+          <Grazed>true</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>1</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>1</HerdID>
+          <ManureRecipient>
+            <Identity>1</Identity>
+            <StorageType>2</StorageType>
+            <StorageName>Slurry tank with crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>1</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>2</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Holstein types - heifers</NameOfAnimals>
+        <NumberOfAnimals>66.00</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>750</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>2</HerdID>
+        <itemFed>
+          <Identity>2</Identity>
+          <FeedCode>155</FeedCode>
+          <Name>Soyabean meal</Name>
+          <Amount>0.246</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>4</Identity>
+          <FeedCode>231</FeedCode>
+          <Name>Wheat meal</Name>
+          <Amount>0.284</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>6</Identity>
+          <FeedCode>566</FeedCode>
+          <Name>Grass - silage, low fodder index</Name>
+          <Amount>2.14</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>8</Identity>
+          <FeedCode>594</FeedCode>
+          <Name>Maize - silage, low fodder index</Name>
+          <Amount>0.916</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>10</Identity>
+          <FeedCode>1466</FeedCode>
+          <Name>Grass, 20-25 cm grazed</Name>
+          <Amount>2.696</Amount>
+          <Grazed>true</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>2</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>2</HerdID>
+          <ManureRecipient>
+            <Identity>2</Identity>
+            <StorageType>2</StorageType>
+            <StorageName>Slurry tank with crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>2</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <EnergySystem>
+        <Name>Metabolisable energy</Name>
+        <Value>1</Value>
+      </EnergySystem>
+    </SelectedScenario>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>30</Value>
+      <Units>Kg N/ha/year</Units>
+      <FarmNumber>325078</FarmNumber>
+    </NDepositionRate>
+  </Farm>
+</NewDataSet>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Blight Tracker 2.0</string>
+    <string name="imageview_content_description_none">Content Description None</string>
+    <string name="string_placeholder">Placeholder Text</string>
+    <string name="title_activity_login_settings">Log in Settings</string>
+
+    <!-- Activities title -->
+    <string name="title_activity_user_credentials">User Credentials</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_pressure">Infection Pressure</string>
+    <string name="title_activity_report">Report</string>
+    <string name="title_activity_unsent_reports">Unsent Reports</string>
+
+    <!-- Menu ids -->
+    <string name="menu_action_login_settings">Log In Settings</string>
+    <string name="menu_action_help">Help</string>
+    <string name="menu_action_close">Close</string>
+    <string name="menu_action_locations">Locations</string>
+    <string name="menu_action_info">Info</string>
+    <string name="menu_action_refresh">Refresh</string>
+    <string name="menu_action_send">Send</string>
+    <string name="menu_action_clear">Clear</string>
+
+    <!-- Report -->
+    <string name="report_text_severity">Severity</string>
+    <string name="report_text_bbch">BBCH</string>
+    <string name="report_text_type_production">Type of production</string>
+    <string name="report_text_type_picture">Picture</string>
+    <string name="report_text_coordinate_latitude">Latitude:</string>
+    <string name="report_text_coordinate_longitude">Longitude:</string>
+    <string name="report_text_coordinate_zero_float">0.0</string>
+    <string name="report_text_initial_value_int">15</string>
+    <string name="report_text_field_name">Field name</string>
+    <string name="report_text_field_name_hint">Enter a Field name</string>
+    <string name="report_text_variety">Variety</string>
+    <string name="report_text_variety_hint">Enter a Variety</string>
+    <string name="report_button_send">Send</string>
+
+    <!-- Map -->
+    <string name="map_text_no_records_to_display">No records to display</string>
+
+    <!-- Map info -->
+    <string name="map_info_text_explaination1">No late blight found</string>
+    <string name="map_info_text_explaination2">Late blight found</string>
+    <string name="map_info_text_explaination3">Late blight found more than 10 days ago</string>
+
+    <!-- Pressure -->
+    <string name="pressure_text_no_infection_to_display">No infection to display</string>
+
+    <!-- ProgressDialog -->
+    <string name="progress_dialod_please_wait_retrieve_data">Retrieving information.</string>
+    <string name="progress_dialod_please_wait_retrieve_coordinate">Retrieving coordinate.</string>
+    <string name="progress_dialod_please_wait_retrieve_coordinate_just_gps">Retrieving coordinate.\nUsing the GPS without internet access can take up to 15 minutes</string>
+    <string name="progress_dialod_please_wait_while_sending_report">Sending report.</string>
+    <string name="progress_dialod_please_wait_while_sending_report_progress">Sending report.\n</string>
+    <string name="progress_dialod_please_wait_while_sending_reports_progress">Sending reports.\n</string>
+    <string name="progress_dialog_unsent_reports_progress">"Report \u0025d of \u0025d completed."</string>
+
+    <!-- User credentials -->
+    <string name="user_credentials_button_save">Save</string>
+    <string name="user_credentials_txt_hint_username">Username</string>
+    <string name="user_credentials_txt_hint_password">Password</string>
+    
+    <!-- Error -->
+    <string name="error_text_no_connection_available">No connection available!</string>
+    <string name="error_text_error_while_retrieving_information">Error while retrieving information!</string>
+    <string name="error_text_error_while_parsing_information">Error while parsing information!</string>
+    <string name="error_text_error_while_sending_report">Failed to send report!</string>
+    <string name="error_text_error_while_sending_reports">Failed to send some reports!</string>
+    <string name="error_text_unauthorized">Unauthorized!</string>
+
+    <!-- Success -->
+    <string name="success_text_current_report_send">Report sent</string>
+
+    <!-- AlertDialog -->
+    <string name="alert_dialog_title_location_access">Location access</string>
+    <string name="alert_dialog_message_location_access_no_available">Location not available!\nDo you want to configure it now?</string>
+    <string name="alert_dialog_title_connection_access">Connection access</string>
+    <string name="alert_dialog_message_connection_access_no_available">Connection not available!\nWould you like to store your report?</string>
+    <string name="alert_dialog_message_connection_access_no_available_try_later">Connection not available!\nWould you like to try later?</string>
+    <string name="alert_dialog_title_clear_report">Clear report</string>
+    <string name="alert_dialog_message_clear_report">Are you sure you want to clear this report?</string>
+    <string name="alert_dialog_title_clear_reports">Clear reports</string>
+    <string name="alert_dialog_message_clear_all_reports">Are you sure you want to clear all reports?</string>
+    <string name="alert_dialog_title_send_reports">Send reports</string>
+    <string name="alert_dialog_message_send_all_reports">Are you sure you want to send all reports?</string>
+
+     <!-- Severity -->
+    <string name="na_severity">N/A</string>
+	<string name="strATTACKCODE00">No observation</string>
+	<string name="strATTACKCODE01">No attack</string>
+	<string name="strATTACKCODE02">One or few spots in the field, largest spot 1 m²</string>
+	<string name="strATTACKCODE03">One or few spots in the field, largest spot 1\uFE635 m²</string>
+	<string name="strATTACKCODE04">One or few spots in the field, largest spot 5\uFE6325 m²</string>
+	<string name="strATTACKCODE05">One or few spots in the field, largest spot 25 m²</string>
+	<string name="strATTACKCODE06">Attacks all over the field, severity 0.0\uFE630.5 %</string>
+	<string name="strATTACKCODE07">Attacks all over the field, severity 0.6\uFE631.0 %</string>
+	<string name="strATTACKCODE08">Attacks all over the field, severity1.1\uFE635.0 %</string>
+	<string name="strATTACKCODE09">Attacks all over the field, severity 5.1\uFE6310.0 %</string>
+	<string name="strATTACKCODE10">Attacks all over the field, severity 10.1\uFE6325.0 %</string>
+	<string name="strATTACKCODE11">Attacks all over the field, severity 25 %</string>
+	
+	<!-- TypeOfProduction -->
+	<string name="na_typeofproduction">N/A</string>
+	<string name="strFIELD_TYPE1">Conventional</string>
+	<string name="strFIELD_TYPE2">Organic</string>
+	<string name="strFIELD_TYPE3">Plastic cover</string>
+	<string name="strFIELD_TYPE4">Experimental</string>
+	<string name="strFIELD_TYPE5">Volunteers</string>
+	<string name="strFIELD_TYPE6">Dumps</string>
+	<string name="strFIELD_TYPE7">Home garden</string>
+	<string name="strFIELD_TYPE8">Other</string>
+	
+	<!-- BBCH -->
+	<string name="na_bbch">N/A</string>
+	<string name="strBBCH00">No registration</string>
+	<string name="strBBCH01">No observation</string>
+	<string name="strBBCH10">First leaves begin to extend</string>
+	<string name="strBBCH15">2\uFE635 leaves of main stem unfolded (> 4 cm)</string>
+	<string name="strBBCH21">1st basal side shoot visible, plants 6\uFE637 cm high</string>
+	<string name="strBBCH25">2\-5 basal side shoot visible, plants 10\uFE6312 cm high</string>
+	<string name="strBBCH30">More than 5 side shoots visible, plants 15\uFE6320 cm high</string>
+	<string name="strBBCH31">10 % of plants meet between rows</string>
+	<string name="strBBCH33">20\uFE6330 % of plants meet between rows</string>
+	<string name="strBBCH35">40\uFE6350 % of plants meet between rows</string>
+	<string name="strBBCH37">60\uFE6370 % of plants meet between rows</string>
+	<string name="strBBCH39">80\uFE6390 % of plants meet between rows</string>
+	<string name="strBBCH51">First individual buds of first inflorescence visible</string>
+	<string name="strBBCH55">Buds of first inflorescence extended to 5 mm</string>
+	<string name="strBBCH59">First flower petals of first inflorescence visible</string>
+	<string name="strBBCH61">10 % of flowers in the first inflorescence open</string>
+	<string name="strBBCH63">20\uFE6330 % of flowers in the first inflorescence open</string>
+	<string name="strBBCH65">40\uFE6350 % of flowers in the first inflorescence open</string>
+	<string name="strBBCH67">60\uFE6370 % of flowers in the first inflorescence open</string>
+	<string name="strBBCH69">End of flowering in the first inflorescence</string>
+	<string name="auto_complete_search">Search</string>	
+	
+</resources>

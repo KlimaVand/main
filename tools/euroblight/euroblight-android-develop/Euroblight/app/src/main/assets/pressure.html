@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+	<style>
+  #bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+  }
+  #bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
+  </style>
+	<script type="text/javascript">
+   		function drawImage(src, width, height, alt) {
+    		var img = document.getElementById('img_placeholder');
+    		img.src = src;
+    		img.width = width;
+    		img.height = height;
+    		img.alt = alt;
+   		}
+	</script>
+	<script type="text/javascript">load();</script>
+  <div id="bg">
+    <img id='img_placeholder'>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_row_height"
+    android:layout_marginBottom="@dimen/listview_row_vertical_margin" >
+
+    <ImageView
+        android:id="@+id/row_unsent_report_photo"
+        android:layout_width="@dimen/listview_row_icon_width"
+        android:layout_height="@dimen/listview_row_icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/listview_row_vertical_margin"
+        android:layout_marginLeft="@dimen/listview_row_horizontal_margin"
+        android:layout_marginTop="@dimen/listview_row_vertical_margin"
+        android:contentDescription="@string/imageview_content_description_none"
+        android:src="@drawable/image_placeholder" />
+
+    <TextView
+        android:id="@+id/row_unsent_report_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/listview_row_div_margin"
+        android:layout_toRightOf="@+id/row_unsent_report_photo"
+        android:text="@string/string_placeholder"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

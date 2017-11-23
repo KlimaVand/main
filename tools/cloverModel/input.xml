@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <input>
+    <DMgrassMax>
+      <Value>16000</Value>
+      <Units>kg DM/ha/yr</Units>
+      <Description>Maximum DM production of grass monoculture</Description>
+    </DMgrassMax>
+    <DMcloverMax>
+      <Value>6250</Value>
+      <Units>kg DM/ha/yr</Units>
+      <Description>Maximum DM production of clover monoculture</Description>
+    </DMcloverMax>
+    <GrassNconcMin>
+      <Value>1.5</Value>
+      <Units>% of DM</Units>
+      <Description>Minimum N concentration in harvestable grass DM</Description>
+    </GrassNconcMin>
+    <GrassNconcMax>
+      <Value>3.3</Value>
+      <Units>% of DM</Units>
+      <Description>Maximum N concentration in harvestable grass DM</Description>
+    </GrassNconcMax>
+    <CloverNconcMax>
+      <Value>4.0</Value>
+      <Description>Maximum N concentration in harvestable clover DM</Description>
+    </CloverNconcMax>
+    <fixationEfficiency>
+      <Value>1.0</Value>
+      <Description>Efficiency with which N fixation satisfies N uptake deficit in clover</Description>
+    </fixationEfficiency>
+    <CloverDMdeclineFactor>
+      <Value>1</Value>
+      <Units>none</Units>
+      <Description>Increases (&gt;1.0) or decreases (&lt;1.0) the rate of decline in clover DM production for a unit increase in grass DM production</Description>
+    </CloverDMdeclineFactor>
+    <nonHarvRatioGrass>
+      <Value>1</Value>
+      <Units>none</Units>
+      <Description>Ratio of non-harvestable grass DM production to harvestable DM production</Description>
+    </nonHarvRatioGrass>
+    <nonHarvRatioClover>
+      <Value>1.0</Value>
+      <Units>none</Units>
+      <Description>Ratio of non-harvestable cloverDM production to harvestable DM production</Description>
+    </nonHarvRatioClover>
+    <GrassNonharvestableNconc>
+      <Value>1.5</Value>
+      <Units>% of DM</Units>
+      <Description>N concentration in nonharvestable grass DM</Description>
+    </GrassNonharvestableNconc>
+    <CloverNonharvestableNconc>
+      <Value>3.5</Value>
+      <Units>none</Units>
+      <Description>N concentration in nonharvestable clover DM</Description>
+    </CloverNonharvestableNconc>
+    <uptakeWeightingFactor>
+      <Value>1.7</Value>
+      <Units>none</Units>
+      <Description>Increase to increase grass mineral N uptake relative to clover</Description>
+    </uptakeWeightingFactor>
+    <lossFrac>
+      <Value>0.3</Value>
+      <Units>none</Units>
+      <Description>Proportion of the crop residue N removed (not available as mineral N)</Description>
+    </lossFrac>
+    <maxFert>
+      <Value>600</Value>
+      <Units>kg N/ha/yr</Units>
+      <Description>Maximum fertiliser application rate</Description>
+    </maxFert>
+    <steps>
+      <Value>12</Value>
+      <Units>none</Units>
+      <Description>Number of N fertiliser application rates</Description>
+    </steps>
+  </input>
+</xml>

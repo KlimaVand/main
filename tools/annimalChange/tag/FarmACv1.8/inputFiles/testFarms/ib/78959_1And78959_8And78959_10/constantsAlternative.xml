@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <constants>
+    <Identity>0</Identity>
+    <humification_const>
+      <Value>0.148</Value>
+      <Description>Proportion of degraded carbon that is partitioned to humus-like organic matter; Ctool value for soil without clay</Description>
+    </humification_const>
+
+    <spinupYearsBaseLine>
+      <Value>2</Value>
+      <Units>years</Units>
+      <Description>Number of years that is used in Ctool spinup of scenario if using adaptation (only if spinup is used)</Description>
+    </spinupYearsBaseLine>
+    
+    <CNhum>
+      <Value>10.0</Value>
+      <Units>none</Units>
+      <Description>C:N ratio of humus</Description>
+    </CNhum>
+    
+    <ErrorToleranceYield>
+      <Value>0.2</Value>
+      <Description>Maximum difference between expected and modelled DM yield of crops</Description>
+      <Units>none</Units>
+    </ErrorToleranceYield>
+    <ErrorToleranceGrazing>
+      <Value>0.5</Value>
+      <Description>Maximum proportional difference between grazed crop DM and grazed crop intake</Description>
+      <Units>none</Units>
+    </ErrorToleranceGrazing>
+    
+    <adaptationTimePeriod>
+      <Description>Minimum length of the period over which flows will be calculated when using adaptation mode</Description>
+      <Value>100</Value>
+      <Units>years</Units>
+    </adaptationTimePeriod>
+
+    <lockSoilTypes>
+      <Description>If true, soil pools will be preserved for all crop sequences between adaptation and projection modes</Description>
+      <Value>false</Value>
+      <Units>-</Units>
+    </lockSoilTypes>
+  </constants>
+</xml>

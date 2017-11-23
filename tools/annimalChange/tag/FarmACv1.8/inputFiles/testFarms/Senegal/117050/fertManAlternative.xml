@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <AgroecologicalZone>
+    <Identity color="red">12</Identity>
+    <Description>Details for a single agroecological zone</Description>
+    <Name color="green">West Africa- Senegal</Name>
+    <manure>
+      <Identity>1</Identity>
+      <Name color="green">Cattle/sheep deep litter</Name>
+      <ManureType>3</ManureType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <TANconcentration>
+        <Description>Concentration of ammonium nitrogen</Description>
+        <Value color="green">0.0019</Value>
+        <Unit>kg/kg</Unit>
+      </TANconcentration>
+      <organicNconcentration>
+        <Description>Concentration of organic nitrogen</Description>
+        <Value color="green">0.0075</Value>
+        <Unit>kg/kg</Unit>
+      </organicNconcentration>
+      <degCconcentration>
+        <Description>Concentration of readily-degradable organic carbon</Description>
+        <Value color="red">0.06</Value>
+        <Unit>kg/kg</Unit>
+      </degCconcentration>
+      <nonDegCconcentration>
+        <Description>Concentration of resistant organic carbon</Description>
+        <Value color="red">0.06</Value>
+        <Unit>kg/kg</Unit>
+      </nonDegCconcentration>
+      <humicCconcentration>
+        <Description>Concentration of humic carbon</Description>
+        <Value color="red">0</Value>
+        <Unit>kg/kg</Unit>
+      </humicCconcentration>
+      <Pconcentration>
+        <Description>Concentration of phosphorus</Description>
+        <Value color="green">0.0</Value>
+        <Unit>kg/kg</Unit>
+      </Pconcentration>
+      <purchasePrice>
+        <Description>sale price of item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>Standard currency</Unit>
+      </purchasePrice>
+      <salePrice>
+        <Description>sale price of item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>Standard currency</Unit>
+      </salePrice>
+      <DMconc>
+        <Description>= Dry matter content of the item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>kg dry matter per kg fresh weight</Unit>
+      </DMconc>
+    </manure>
+    <manure>
+      <Identity>2</Identity>
+      <Name color="green">Cattle liquid fraction, with cover</Name>
+      <ManureType>9</ManureType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <TANconcentration>
+        <Description>Concentration of ammonium nitrogen</Description>
+        <Value color="green">0.0019</Value>
+        <Unit>kg/kg</Unit>
+      </TANconcentration>
+      <organicNconcentration>
+        <Description>Concentration of organic nitrogen</Description>
+        <Value color="green">0.0075</Value>
+        <Unit>kg/kg</Unit>
+      </organicNconcentration>
+      <degCconcentration>
+        <Description>Concentration of readily-degradable organic carbon</Description>
+        <Value color="red">0.06</Value>
+        <Unit>kg/kg</Unit>
+      </degCconcentration>
+      <nonDegCconcentration>
+        <Description>Concentration of resistant organic carbon</Description>
+        <Value color="red">0.06</Value>
+        <Unit>kg/kg</Unit>
+      </nonDegCconcentration>
+      <humicCconcentration>
+        <Description>Concentration of humic carbon</Description>
+        <Value color="red">0</Value>
+        <Unit>kg/kg</Unit>
+      </humicCconcentration>
+      <Pconcentration>
+        <Description>Concentration of phosphorus</Description>
+        <Value color="green">0.0</Value>
+        <Unit>kg/kg</Unit>
+      </Pconcentration>
+      <purchasePrice>
+        <Description>sale price of item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>Standard currency</Unit>
+      </purchasePrice>
+      <salePrice>
+        <Description>sale price of item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>Standard currency</Unit>
+      </salePrice>
+      <DMconc>
+        <Description>= Dry matter content of the item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>kg dry matter per kg fresh weight</Unit>
+      </DMconc>
+    </manure>
+    <manure>
+      <Identity>3</Identity>
+      <Name color="green">cattle solid fraction, with cover</Name>
+      <ManureType>10</ManureType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <TANconcentration>
+        <Description>Concentration of ammonium nitrogen</Description>
+        <Value color="green">0.0019</Value>
+        <Unit>kg/kg</Unit>
+      </TANconcentration>
+      <organicNconcentration>
+        <Description>Concentration of organic nitrogen</Description>
+        <Value color="green">0.0075</Value>
+        <Unit>kg/kg</Unit>
+      </organicNconcentration>
+      <degCconcentration>
+        <Description>Concentration of readily-degradable organic carbon</Description>
+        <Value color="red">0.06</Value>
+        <Unit>kg/kg</Unit>
+      </degCconcentration>
+      <nonDegCconcentration>
+        <Description>Concentration of resistant organic carbon</Description>
+        <Value color="red">0.06</Value>
+        <Unit>kg/kg</Unit>
+      </nonDegCconcentration>
+      <humicCconcentration>
+        <Description>Concentration of humic carbon</Description>
+        <Value color="red">0</Value>
+        <Unit>kg/kg</Unit>
+      </humicCconcentration>
+      <Pconcentration>
+        <Description>Concentration of phosphorus</Description>
+        <Value color="green">0.0</Value>
+        <Unit>kg/kg</Unit>
+      </Pconcentration>
+      <purchasePrice>
+        <Description>sale price of item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>Standard currency</Unit>
+      </purchasePrice>
+      <salePrice>
+        <Description>sale price of item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>Standard currency</Unit>
+      </salePrice>
+      <DMconc>
+        <Description>= Dry matter content of the item</Description>
+        <Value color="green">0.0</Value>
+        <Unit>kg dry matter per kg fresh weight</Unit>
+      </DMconc>
+    </manure>
+  </AgroecologicalZone>
+</xml>

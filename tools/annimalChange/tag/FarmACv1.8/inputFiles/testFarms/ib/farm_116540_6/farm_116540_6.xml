@@ -1,0 +1,1202 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Farm>
+    <Identity>116540</Identity>
+    <FarmNumber>116540</FarmNumber>
+    <FarmOwnerName>116540_iskCopy of 116538_RotationsBaselineTorr, summer/winter diets. please do not change data in this farmno. thanks Ib</FarmOwnerName>
+    <FarmOwnerAddress>Dumfries, West coast of Scotland</FarmOwnerAddress>
+    <FarmOwnerZipCode />
+    <FarmOwnerTown />
+    <FarmDescription>changes in parameter.xml:
+-Heifer lw 460 kg/cow
+-Dairy cow lw 625 kg/cow
+-soil 6 &amp; 7: 200 ton initial C/ha
+-plus 4000 dm/ha i plant residues in crop    roation=1=permn. grass. To sustain 200 t soil-C/ha</FarmDescription>
+    <AgroEcologicalZone>1</AgroEcologicalZone>
+    <FarmType>3</FarmType>
+    <FarmTypeDescription>Kvægavler</FarmTypeDescription>
+    <SelectedScenario>
+      <Identity>6</Identity>
+      <FarmNumber>116540</FarmNumber>
+      <Name>6 (Baseline=6). Summer/winter season. Average feed quality, 7100 l milk/cow</Name>
+      <NumberOfScenario>6</NumberOfScenario>
+      <IS-ID>1</IS-ID>
+      <ES-ID>1</ES-ID>
+      <InventorySystem>
+        <Name>IPCC 2006 </Name>
+        <Value>1</Value>
+      </InventorySystem>
+      <Rotation>
+        <Identity>5</Identity>
+        <FarmNumber>116540</FarmNumber>
+        <ScenarioID>6</ScenarioID>
+        <NameOfRotation>1</NameOfRotation>
+        <Area>130</Area>
+        <SoilType>Sandy Clayey Soil (&gt; 40% fine sand)</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Permanent grass/clover</NameOfCrop>
+          <RotationID>5</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2010</Start_year>
+          <End_day>30</End_day>
+          <End_month>11</End_month>
+          <End_year>2010</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>1</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>2</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>71</Value>
+            <N_Loss>7.1</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>5</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Trailing hose</NameS>
+              <NameI>2</NameI>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>5</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>2</Identity>
+            <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+            <Amount>0</Amount>
+            <FeedCode>1422</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>5</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>true</Grazed>
+            <Expected_yield>
+              <Value>2525</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2772</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>12</Identity>
+            <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+            <Amount>0</Amount>
+            <FeedCode>522</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>5</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2235</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Permanent grass/clover</NameOfCrop>
+          <RotationID>5</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2010</Start_year>
+          <End_day>31</End_day>
+          <End_month>3</End_month>
+          <End_year>2011</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>2</Identity>
+            <RotationID>5</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>7</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2421</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>5</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>5</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+      </Rotation>
+      <Rotation>
+        <Identity>8</Identity>
+        <FarmNumber>116540</FarmNumber>
+        <ScenarioID>6</ScenarioID>
+        <NameOfRotation>4</NameOfRotation>
+        <Area>24</Area>
+        <SoilType>Clayey Soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2010</Start_year>
+          <End_day>30</End_day>
+          <End_month>11</End_month>
+          <End_year>2010</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>5</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>2</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>322</Value>
+            <N_Loss>32.2</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>8</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Trailing hose</NameS>
+              <NameI>2</NameI>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Forage harvester</Value>
+            <Description>Forage harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>3</Identity>
+            <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+            <Amount>0</Amount>
+            <FeedCode>1422</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>true</Grazed>
+            <Expected_yield>
+              <Value>5500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>6000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>13</Identity>
+            <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+            <Amount>0</Amount>
+            <FeedCode>522</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>3300</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2010</Start_year>
+          <End_day>15</End_day>
+          <End_month>3</End_month>
+          <End_year>2011</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>2</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>8</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2421</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>2</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>2</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>3</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>16</Start_day>
+          <Start_month>3</Start_month>
+          <Start_year>2011</Start_year>
+          <End_day>31</End_day>
+          <End_month>3</End_month>
+          <End_year>2011</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+        <Crop>
+          <Identity>4</Identity>
+          <NameOfCrop>Spring barley</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2011</Start_year>
+          <End_day>1</End_day>
+          <End_month>8</End_month>
+          <End_year>2011</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>2</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>2</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>95</Value>
+            <N_Loss>9.5</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>8</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>4</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Trailing hose</NameS>
+              <NameI>2</NameI>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>4</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>4</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>1</Identity>
+            <Name>Barley - wholcrop (early dough), middle fodder index</Name>
+            <Amount>0</Amount>
+            <FeedCode>583</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>4</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>4</FieldPlanRotationID>
+              <FeedstuffID>583</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>10000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>4</FieldPlanRotationID>
+              <FeedstuffID>583</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>5</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>8</Start_month>
+          <Start_year>2011</Start_year>
+          <End_day>30</End_day>
+          <End_month>11</End_month>
+          <End_year>2011</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>5</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>4</Identity>
+            <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+            <Amount>0</Amount>
+            <FeedCode>1422</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>5</FieldPlanRotationID>
+            <Grazed>true</Grazed>
+            <Expected_yield>
+              <Value>1000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>5</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>1200</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>5</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>6</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2011</Start_year>
+          <End_day>31</End_day>
+          <End_month>3</End_month>
+          <End_year>2012</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>6</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>9</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2421</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>6</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>6</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>110</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>6</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>7</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2012</Start_year>
+          <End_day>30</End_day>
+          <End_month>11</End_month>
+          <End_year>2012</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>4</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>2</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>322</Value>
+            <N_Loss>32.2</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>8</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>7</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Trailing hose</NameS>
+              <NameI>2</NameI>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Forage harvester</Value>
+            <Description>Forage harvesting</Description>
+            <Identity>7</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>5</Identity>
+            <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+            <Amount>0</Amount>
+            <FeedCode>1422</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>7</FieldPlanRotationID>
+            <Grazed>true</Grazed>
+            <Expected_yield>
+              <Value>5500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>6000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>14</Identity>
+            <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+            <Amount>0</Amount>
+            <FeedCode>522</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>7</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>3300</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>7</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>8</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2012</Start_year>
+          <End_day>31</End_day>
+          <End_month>3</End_month>
+          <End_year>2013</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>8</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>10</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2421</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>8</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>8</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>110</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>8</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>9</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>4</Start_month>
+          <Start_year>2013</Start_year>
+          <End_day>30</End_day>
+          <End_month>11</End_month>
+          <End_year>2013</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>3</Identity>
+            <StorageType>1</StorageType>
+            <Name>Cattle slurry</Name>
+            <DeliveryID>2</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>322</Value>
+            <N_Loss>32.2</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>4</Month_applied>
+            <RotationID>8</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Trailing hose</NameS>
+              <NameI>2</NameI>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <StorageID>1</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Forage harvester</Value>
+            <Description>Forage harvesting</Description>
+            <Identity>9</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>6</Identity>
+            <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+            <Amount>0</Amount>
+            <FeedCode>1422</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <Grazed>true</Grazed>
+            <Expected_yield>
+              <Value>5500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>6000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>1422</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>15</Identity>
+            <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+            <Amount>0</Amount>
+            <FeedCode>522</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>9</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>3300</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>9</FieldPlanRotationID>
+              <FeedstuffID>522</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>10</Identity>
+          <NameOfCrop>Rotational clover grass</NameOfCrop>
+          <RotationID>8</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>12</Start_month>
+          <Start_year>2013</Start_year>
+          <End_day>31</End_day>
+          <End_month>3</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Grazing</Value>
+            <Description>Grazing</Description>
+            <Identity>10</Identity>
+            <RotationID>8</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>11</Identity>
+            <Name>Clovergrass, 6-8 cm, 20% clover incorporated</Name>
+            <Amount>0</Amount>
+            <FeedCode>2421</FeedCode>
+            <Harvested>Incorporated</Harvested>
+            <RotationID>8</RotationID>
+            <FieldPlanRotationID>10</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>100</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>10</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>110</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>8</RotationID>
+              <FieldPlanRotationID>10</FieldPlanRotationID>
+              <FeedstuffID>2421</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+      </Rotation>
+      <Livestock>
+        <Identity>1</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Holstein types - dairy</NameOfAnimals>
+        <NumberOfAnimals>102.50</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>6</ScenarioID>
+        <HerdID>1</HerdID>
+        <itemFed>
+          <Identity>2</Identity>
+          <FeedCode>154</FeedCode>
+          <Name>Soyabean meal, husked</Name>
+          <Amount>1.08</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>4</Identity>
+          <FeedCode>213</FeedCode>
+          <Name>Rape seed, 00</Name>
+          <Amount>0.72</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>6</Identity>
+          <FeedCode>221</FeedCode>
+          <Name>Barley, husked</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>10</Identity>
+          <FeedCode>231</FeedCode>
+          <Name>Wheat meal</Name>
+          <Amount>2.4</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>12</Identity>
+          <FeedCode>243</FeedCode>
+          <Name>Maize, gluten</Name>
+          <Amount>0.62</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>14</Identity>
+          <FeedCode>297</FeedCode>
+          <Name>Brewer's yeast</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>17</Identity>
+          <FeedCode>522</FeedCode>
+          <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+          <Amount>5.6</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>19</Identity>
+          <FeedCode>583</FeedCode>
+          <Name>Barley - wholcrop (early dough), middle fodder index</Name>
+          <Amount>0.6</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>22</Identity>
+          <FeedCode>781</FeedCode>
+          <Name>Spring barley - straw</Name>
+          <Amount>0.24</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>1</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>4</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>1</HerdID>
+          <ManureRecipient>
+            <Identity>4</Identity>
+            <StorageType>2</StorageType>
+            <StorageName>Slurry tank with crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>1</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>3</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Holstein types - dairy</NameOfAnimals>
+        <NumberOfAnimals>71.50</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>6</ScenarioID>
+        <HerdID>3</HerdID>
+        <itemFed>
+          <Identity>1</Identity>
+          <FeedCode>154</FeedCode>
+          <Name>Soyabean meal, husked</Name>
+          <Amount>0.6</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>3</Identity>
+          <FeedCode>213</FeedCode>
+          <Name>Rape seed, 00</Name>
+          <Amount>0.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>5</Identity>
+          <FeedCode>221</FeedCode>
+          <Name>Barley, husked</Name>
+          <Amount>0.55</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>9</Identity>
+          <FeedCode>231</FeedCode>
+          <Name>Wheat meal</Name>
+          <Amount>1.37</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>11</Identity>
+          <FeedCode>243</FeedCode>
+          <Name>Maize, gluten</Name>
+          <Amount>0.35</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>13</Identity>
+          <FeedCode>297</FeedCode>
+          <Name>Brewer's yeast</Name>
+          <Amount>0.55</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>18</Identity>
+          <FeedCode>583</FeedCode>
+          <Name>Barley - wholcrop (early dough), middle fodder index</Name>
+          <Amount>0.3</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>25</Identity>
+          <FeedCode>1422</FeedCode>
+          <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+          <Amount>9.2</Amount>
+          <Grazed>true</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>3</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>1</Identity>
+          <HousingType>0</HousingType>
+          <NameOfHousing>None</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>3</HerdID>
+          <ManureRecipient>
+            <Identity>1</Identity>
+            <StorageType>0</StorageType>
+            <StorageName>None</StorageName>
+            <Stable>0</Stable>
+            <HerdID>3</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>4</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Holstein types - heifers</NameOfAnimals>
+        <NumberOfAnimals>14.90</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>6</ScenarioID>
+        <HerdID>4</HerdID>
+        <itemFed>
+          <Identity>8</Identity>
+          <FeedCode>221</FeedCode>
+          <Name>Barley, husked</Name>
+          <Amount>3</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>4</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>16</Identity>
+          <FeedCode>522</FeedCode>
+          <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+          <Amount>4.6</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>4</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>20</Identity>
+          <FeedCode>583</FeedCode>
+          <Name>Barley - wholcrop (early dough), middle fodder index</Name>
+          <Amount>0.84</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>4</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>5</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>4</HerdID>
+          <ManureRecipient>
+            <Identity>5</Identity>
+            <StorageType>2</StorageType>
+            <StorageName>Slurry tank with crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>4</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>5</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Holstein types - heifers</NameOfAnimals>
+        <NumberOfAnimals>20.10</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>6</ScenarioID>
+        <HerdID>5</HerdID>
+        <itemFed>
+          <Identity>23</Identity>
+          <FeedCode>1422</FeedCode>
+          <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+          <Amount>8</Amount>
+          <Grazed>true</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>5</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>2</Identity>
+          <HousingType>0</HousingType>
+          <NameOfHousing>None</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>5</HerdID>
+          <ManureRecipient>
+            <Identity>2</Identity>
+            <StorageType>0</StorageType>
+            <StorageName>None</StorageName>
+            <Stable>0</Stable>
+            <HerdID>5</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>6</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>3</LivestockType>
+        <NameOfAnimals>Holstein types - young bulls</NameOfAnimals>
+        <NumberOfAnimals>24.00</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>1100</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>6</ScenarioID>
+        <HerdID>6</HerdID>
+        <itemFed>
+          <Identity>7</Identity>
+          <FeedCode>221</FeedCode>
+          <Name>Barley, husked</Name>
+          <Amount>2.3</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>15</Identity>
+          <FeedCode>522</FeedCode>
+          <Name>Clovergrass, silage, middle fodder index, 20% clover</Name>
+          <Amount>3.8</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>21</Identity>
+          <FeedCode>583</FeedCode>
+          <Name>Barley - wholcrop (early dough), middle fodder index</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>6</Identity>
+          <HousingType>3</HousingType>
+          <NameOfHousing>Cubical house - slatted floor</NameOfHousing>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>6</HerdID>
+          <ManureRecipient>
+            <Identity>6</Identity>
+            <StorageType>2</StorageType>
+            <StorageName>Slurry tank with crust/cover</StorageName>
+            <Stable>3</Stable>
+            <HerdID>6</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>7</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>3</LivestockType>
+        <NameOfAnimals>Holstein types - young bulls</NameOfAnimals>
+        <NumberOfAnimals>46.00</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>1100</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>6</ScenarioID>
+        <HerdID>7</HerdID>
+        <itemFed>
+          <Identity>24</Identity>
+          <FeedCode>1422</FeedCode>
+          <Name>Clovergrass, 12-15 cm, 20% clover grazed</Name>
+          <Amount>8</Amount>
+          <Grazed>true</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>7</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>3</Identity>
+          <HousingType>0</HousingType>
+          <NameOfHousing>None</NameOfHousing>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>7</HerdID>
+          <ManureRecipient>
+            <Identity>3</Identity>
+            <StorageType>0</StorageType>
+            <StorageName>None</StorageName>
+            <Stable>0</Stable>
+            <HerdID>7</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <EnergySystem>
+        <Name>Metabolisable energy</Name>
+        <Value>1</Value>
+      </EnergySystem>
+    </SelectedScenario>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>10</Value>
+      <Units>Kg N/ha/year</Units>
+      <FarmNumber>116540</FarmNumber>
+    </NDepositionRate>
+  </Farm>
+</NewDataSet>

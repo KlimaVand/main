@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1177852-E045-454A-B205-974D7AD09F79}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FarmAC</RootNamespace>
+    <AssemblyName>FarmAC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;server</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;serverTime server</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <HintPath>packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\strings.da.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.da.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Class\Model.cs" />
+    <Compile Include="Controls\CattleHerdDelete.ashx.cs">
+      <DependentUpon>CattleHerdDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CattleHerdNew.ashx.cs">
+      <DependentUpon>CattleHerdNew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CattleHerdUpdate.ashx.cs">
+      <DependentUpon>CattleHerdUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClearLocalFiles.ashx.cs">
+      <DependentUpon>ClearLocalFiles.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlDocumentation.ascx.cs">
+      <DependentUpon>ctrlDocumentation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDocumentation.ascx.designer.cs">
+      <DependentUpon>ctrlDocumentation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlDocumentation2.ascx.cs">
+      <DependentUpon>ctrlDocumentation2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDocumentation2.ascx.designer.cs">
+      <DependentUpon>ctrlDocumentation2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlManure.ascx.cs">
+      <DependentUpon>ctrlManure.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlManure.ascx.designer.cs">
+      <DependentUpon>ctrlManure.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrluploadownparameters.ascx.cs">
+      <DependentUpon>ctrluploadownparameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrluploadownparameters.ascx.designer.cs">
+      <DependentUpon>ctrluploadownparameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlYield.ascx.cs">
+      <DependentUpon>ctrlYield.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlYield.ascx.designer.cs">
+      <DependentUpon>ctrlYield.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmBoughtManureDelet.ashx.cs">
+      <DependentUpon>FarmBoughtManureDelet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmBoughtManureNew.ashx.cs">
+      <DependentUpon>FarmBoughtManureNew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmScenarioDelete.ashx.cs">
+      <DependentUpon>FarmScenarioDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmScenarioNameUpdate.ashx.cs">
+      <DependentUpon>FarmScenarioNameUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmScenarioNew1.ashx.cs">
+      <DependentUpon>FarmScenarioNew1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmSelectedScenarioUpdate.ashx.cs">
+      <DependentUpon>FarmSelectedScenarioUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FarmUpdate.ashx.cs">
+      <DependentUpon>FarmUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FieldPlanDelete.ashx.cs">
+      <DependentUpon>FieldPlanDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FieldPlanNew.ashx.cs">
+      <DependentUpon>FieldPlanNew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FieldPlanUpdate.ashx.cs">
+      <DependentUpon>FieldPlanUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FunctionPig.cs" />
+    <Compile Include="Controls\LandlessUpdate.ashx.cs">
+      <DependentUpon>LandlessUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoginVerify.cs" />
+    <Compile Include="Controls\ManureFertilizerUpdate.ashx.cs">
+      <DependentUpon>ManureFertilizerUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PigHerdDelete.ashx.cs">
+      <DependentUpon>PigHerdDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PigHerdNew.ashx.cs">
+      <DependentUpon>PigHerdNew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PigHerdUpdate.ashx.cs">
+      <DependentUpon>PigHerdUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Provider.ashx.cs">
+      <DependentUpon>Provider.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\resultC.ascx.cs">
+      <DependentUpon>resultC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\resultC.ascx.designer.cs">
+      <DependentUpon>resultC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\resultGeneral.ascx.cs">
+      <DependentUpon>resultGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\resultGeneral.ascx.designer.cs">
+      <DependentUpon>resultGeneral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\resultGHG.ascx.cs">
+      <DependentUpon>resultGHG.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\resultGHG.ascx.designer.cs">
+      <DependentUpon>resultGHG.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\resultN.ascx.cs">
+      <DependentUpon>resultN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\resultN.ascx.designer.cs">
+      <DependentUpon>resultN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RotationDelete.ashx.cs">
+      <DependentUpon>RotationDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RotationNew.ashx.cs">
+      <DependentUpon>RotationNew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RotationUpdate.ashx.cs">
+      <DependentUpon>RotationUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Start.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\dbInterface.cs" />
+    <Compile Include="Controls\ctrlBalance.ascx.cs">
+      <DependentUpon>ctrlBalance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlBalance.ascx.designer.cs">
+      <DependentUpon>ctrlBalance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlCropSequence.ascx.cs">
+      <DependentUpon>ctrlCropSequence.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlCropSequence.ascx.designer.cs">
+      <DependentUpon>ctrlCropSequence.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlFarm.ascx.cs">
+      <DependentUpon>ctrlFarm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlFarm.ascx.designer.cs">
+      <DependentUpon>ctrlFarm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlNonRuminants.ascx.cs">
+      <DependentUpon>ctrlNonRuminants.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlNonRuminants.ascx.designer.cs">
+      <DependentUpon>ctrlNonRuminants.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlTabPageFarmAC.ascx.cs">
+      <DependentUpon>ctrlTabPageFarmAC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlTabPageFarmAC.ascx.designer.cs">
+      <DependentUpon>ctrlTabPageFarmAC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlRuminants.ascx.cs">
+      <DependentUpon>ctrlRuminants.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlRuminants.ascx.designer.cs">
+      <DependentUpon>ctrlRuminants.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\utils.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FarmAC.aspx.cs">
+      <DependentUpon>FarmAC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FarmAC.aspx.designer.cs">
+      <DependentUpon>FarmAC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\logout.cs" />
+    <Compile Include="Pages\SelectFarm.aspx.cs">
+      <DependentUpon>SelectFarm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SelectFarm.aspx.designer.cs">
+      <DependentUpon>SelectFarm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Controls\ctrlBalance.ascx" />
+    <Content Include="Controls\ctrlCropSequence.ascx" />
+    <Content Include="Controls\ctrlDocumentation.ascx" />
+    <Content Include="Controls\ctrlDocumentation2.ascx" />
+    <Content Include="Controls\ctrlFarm.ascx" />
+    <Content Include="Controls\ctrlManure.ascx" />
+    <Content Include="Controls\ctrlNonRuminants.ascx" />
+    <Content Include="Controls\ctrlTabPageFarmAC.ascx" />
+    <Content Include="Controls\ctrlRuminants.ascx" />
+    <Content Include="Controls\ctrluploadownparameters.ascx" />
+    <Content Include="Controls\ctrlYield.ascx" />
+    <Content Include="Controls\resultC.ascx" />
+    <Content Include="Controls\resultGeneral.ascx" />
+    <Content Include="Controls\resultGHG.ascx" />
+    <Content Include="Controls\resultN.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\detail.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\Farm.png" />
+    <Content Include="Images\InitialImage.png" />
+    <Content Include="Images\SelectedButton.png" />
+    <Content Include="Pages\FarmAC.aspx" />
+    <Content Include="Pages\SelectFarm.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Controls\RotationUpdate.ashx" />
+    <Content Include="Controls\LandlessUpdate.ashx" />
+    <Content Include="Controls\FieldPlanUpdate.ashx" />
+    <Content Include="Controls\RotationDelete.ashx" />
+    <Content Include="Controls\RotationNew.ashx" />
+    <Content Include="Controls\FieldPlanNew.ashx" />
+    <Content Include="Controls\ClearLocalFiles.ashx" />
+    <Content Include="Controls\FarmUpdate.ashx" />
+    <Content Include="Controls\FarmSelectedScenarioUpdate.ashx" />
+    <Content Include="Controls\FarmScenarioNameUpdate.ashx" />
+    <Content Include="Controls\FarmBoughtManureNew.ashx" />
+    <Content Include="Controls\FarmScenarioDelete.ashx" />
+    <Content Include="Controls\ManureFertilizerUpdate.ashx" />
+    <Content Include="Controls\Provider.ashx" />
+    <Content Include="Controls\CattleHerdNew.ashx" />
+    <Content Include="Controls\CattleHerdUpdate.ashx" />
+    <Content Include="Controls\PigHerdUpdate.ashx" />
+    <Content Include="Controls\PigHerdNew.ashx" />
+    <Content Include="Controls\PigHerdDelete.ashx" />
+    <Content Include="Controls\FieldPlanDelete.ashx" />
+    <Content Include="Controls\FarmScenarioNew1.ashx" />
+    <Content Include="Controls\FarmBoughtManureDelet.ashx" />
+    <Content Include="Controls\CattleHerdDelete.ashx" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Styles\FarmAC.css" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Dialogs\" />
+    <Folder Include="Views\ctrlManure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\strings.da.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>strings.da.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{00000200-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\strings.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55757</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

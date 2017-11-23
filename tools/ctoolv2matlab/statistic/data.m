@@ -1,0 +1,380 @@
+function data(fileName)
+
+%data=xlsread(fileName,'A20:GB20'); 
+[type,sheetname] = xlsfinfo(fullfile(fileName)); 
+sheet_max = numel(sheetname); %Determine no. of sheets in current .xlsx file
+avarageJB1=zeros([128,4]);
+avarageJB2=zeros([128,4]);
+avarageJB3=zeros([128,4]);
+avarageJB4=zeros([128,4]);
+avarageJB5=zeros([128,4]);
+avarageJB6=zeros([128,4]);
+avarageJB7=zeros([128,4]);
+avarageJB8=zeros([128,4]);
+avarageJB9=zeros([128,4]);
+avarageJB10=zeros([128,4]);
+avarageJB11=zeros([128,4]);
+avarageJB12=zeros([128,4]);
+
+countJb1=0;
+countJb2=0;
+countJb3=0;
+countJb4=0;
+countJb5=0;
+countJb6=0;
+countJb7=0;
+countJb8=0;
+countJb9=0;
+countJb10=0;
+countJb11=0;
+countJb12=0;
+
+ModelDataJB1=[];
+ObservedDataJB1=[];
+ModelDataJB2=[];
+ObservedDataJB2=[];
+ModelDataJB3=[];
+ObservedDataJB3=[];
+ModelDataJB4=[];
+ObservedDataJB4=[];
+ModelDataJB5=[];
+ObservedDataJB5=[];
+ModelDataJB6=[];
+ObservedDataJB6=[];
+ModelDataJB7=[];
+ObservedDataJB7=[];
+ModelDataJB8=[];
+ObservedDataJB8=[];
+ModelDataJB9=[];
+ObservedDataJB9=[];
+ModelDataJB10=[];
+ObservedDataJB10=[];
+ModelDataJB11=[];
+ObservedDataJB11=[];
+ModelDataJB12=[];
+ObservedDataJB12=[];
+
+for j=(1):sheet_max
+data=xlsread(fileName,j);
+length=size(data);
+for i=(1):length(1,2)
+
+   if(~isnan(data(1,i)))
+
+        switch data(1,i)
+            case 1
+                if(size(ModelDataJB1)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB1=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB1=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB1=cat(1,ModelDataJB1(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB1=cat(1,ObservedDataJB1,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB1=cat(1,ModelDataJB1(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB1=cat(1,ObservedDataJB1,dataUse(:,1));
+                    avarageJB1(:,1)=avarageJB1(:,1)+data(4:131,i-1);
+                    avarageJB1(:,2)=avarageJB1(:,2)+data(4:131,i);
+                    avarageJB1(:,3)=avarageJB1(:,3)+data(4:131,i+1);
+                    avarageJB1(:,4)=avarageJB1(:,4)+data(4:131,i+2);
+                    countJb1=countJb1+1;
+                    
+            case 2
+                 if(size(ModelDataJB2)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB2=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB2=dataUse(:,1);
+                 else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB2=cat(1,ModelDataJB2(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB2=cat(1,ObservedDataJB2,dataUse(:,1));
+                    
+                 end
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB2=cat(1,ObservedDataJB2,dataUse(:,1));
+                    dataUse=data(4:131,i);
+                    ModelDataJB2=cat(1,ModelDataJB2(:,1),dataUse(:,1));
+                    avarageJB2(:,1)=avarageJB2(:,1)+data(4:131,i-1);
+                    avarageJB2(:,2)=avarageJB2(:,2)+data(4:131,i);
+                    avarageJB2(:,3)=avarageJB2(:,3)+data(4:131,i+1);
+                    avarageJB2(:,4)=avarageJB2(:,4)+data(4:131,i+2);
+                    countJb2=countJb2+1;
+                    xlswrite('JB2avg',avarageJB2/countJb2);
+               
+            case 3
+                if(size(ModelDataJB3)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB3=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB3=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB3=cat(1,ModelDataJB3(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB3=cat(1,ObservedDataJB3,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB3=cat(1,ModelDataJB3(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB3=cat(1,ObservedDataJB3,dataUse(:,1));
+                    avarageJB3(:,1)=avarageJB3(:,1)+data(4:131,i-1);
+                    avarageJB3(:,2)=avarageJB3(:,2)+data(4:131,i);
+                    avarageJB3(:,3)=avarageJB3(:,3)+data(4:131,i+1);
+                    avarageJB3(:,4)=avarageJB3(:,4)+data(4:131,i+2);
+                    countJb3=countJb3+1;
+            case 4
+                if(size(ModelDataJB4)==0)
+                   dataUse=data(4:131,i-1);
+                    ModelDataJB4=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB4=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB4=cat(1,ModelDataJB4(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB4=cat(1,ObservedDataJB4,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB4=cat(1,ModelDataJB4(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB4=cat(1,ObservedDataJB4,dataUse(:,1));
+                    avarageJB4(:,1)=avarageJB4(:,1)+data(4:131,i-1);
+                    avarageJB4(:,2)=avarageJB4(:,2)+data(4:131,i);
+                    avarageJB4(:,3)=avarageJB4(:,3)+data(4:131,i+1);
+                    avarageJB4(:,4)=avarageJB4(:,4)+data(4:131,i+2);
+                    countJb4=countJb4+1;
+            case 5
+                 if(size(ModelDataJB5)==0)
+                     dataUse=data(4:131,i-1);
+                    ModelDataJB5=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB5=dataUse(:,1);
+                 else
+                     dataUse=data(4:131,i-1);
+                    ModelDataJB5=cat(1,ModelDataJB5(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB5=cat(1,ObservedDataJB5,dataUse(:,1));
+                 end
+                    ModelDataJB5=cat(1,ModelDataJB5(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i);
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB5=cat(1,ObservedDataJB5,dataUse(:,1));
+                    avarageJB5(:,1)=avarageJB5(:,1)+data(4:131,i-1);
+                    avarageJB5(:,2)=avarageJB5(:,2)+data(4:131,i);
+                    avarageJB5(:,3)=avarageJB5(:,3)+data(4:131,i+1);
+                    avarageJB5(:,4)=avarageJB5(:,4)+data(4:131,i+2);
+                    countJb5=countJb5+1;
+            case 6
+                if(size(ModelDataJB6)==0)
+                     dataUse=data(4:131,i-1);
+                    ModelDataJB6=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB6=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB6=cat(1,ModelDataJB6(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB6=cat(1,ObservedDataJB6,dataUse(:,1));
+                end
+                
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB6=cat(1,ObservedDataJB6,dataUse(:,1));
+                    dataUse=data(4:131,i);
+                    ModelDataJB6=cat(1,ModelDataJB6(:,1),dataUse(:,1));
+                    avarageJB6(:,1)=avarageJB6(:,1)+data(4:131,i-1);
+                    avarageJB6(:,2)=avarageJB6(:,2)+data(4:131,i);
+                    avarageJB6(:,3)=avarageJB6(:,3)+data(4:131,i+1);
+                    avarageJB6(:,4)=avarageJB6(:,4)+data(4:131,i+2);
+                    countJb6=countJb6+1;
+            case 7
+                if(size(ModelDataJB7)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB7=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB7=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB7=cat(1,ModelDataJB7(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB7=cat(1,ObservedDataJB7,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB7=cat(1,ModelDataJB7(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB7=cat(1,ObservedDataJB7,dataUse(:,1));
+                    avarageJB7(:,1)=avarageJB7(:,1)+data(4:131,i-1);
+                    avarageJB7(:,2)=avarageJB7(:,2)+data(4:131,i);
+                    avarageJB7(:,3)=avarageJB7(:,3)+data(4:131,i+1);
+                    avarageJB7(:,4)=avarageJB7(:,4)+data(4:131,i+2);
+                    countJb7=countJb7+1;
+            case 8
+                if(size(ModelDataJB8)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB8=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB8=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB8=cat(1,ModelDataJB8(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB8=cat(1,ObservedDataJB8,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB8=cat(1,ModelDataJB8(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB8=cat(1,ObservedDataJB8,dataUse(:,1));
+                    avarageJB8(:,1)=avarageJB8(:,1)+data(4:131,i-1);
+                    avarageJB8(:,2)=avarageJB8(:,2)+data(4:131,i);
+                    avarageJB8(:,3)=avarageJB8(:,3)+data(4:131,i+1);
+                    avarageJB8(:,4)=avarageJB8(:,4)+data(4:131,i+2);
+                    countJb8=countJb8+1;
+            case 9
+                if(size(ModelDataJB9)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB9=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB9=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB9=cat(1,ModelDataJB9(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB9=cat(1,ObservedDataJB9,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB9=cat(1,ModelDataJB9(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB9=cat(1,ObservedDataJB9,dataUse(:,1));
+                    avarageJB9(:,1)=avarageJB9(:,1)+data(4:131,i-1);
+                    avarageJB9(:,2)=avarageJB9(:,2)+data(4:131,i);
+                    avarageJB9(:,3)=avarageJB9(:,3)+data(4:131,i+1);
+                    avarageJB9(:,4)=avarageJB9(:,4)+data(4:131,i+2);
+                    countJb9=countJb9+1;
+                    
+            case 10
+                if(size(ModelDataJB10)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB10=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB10=dataUse(:,1);
+                
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB10=cat(1,ModelDataJB10(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB10=cat(1,ObservedDataJB10,dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB10=cat(1,ModelDataJB10(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB10=cat(1,ObservedDataJB10,dataUse(:,1));
+                    avarageJB10(:,1)=avarageJB10(:,1)+data(4:131,i-1);
+                    avarageJB10(:,2)=avarageJB10(:,2)+data(4:131,i);
+                    avarageJB10(:,3)=avarageJB10(:,3)+data(4:131,i+1);
+                    avarageJB10(:,4)=avarageJB10(:,4)+data(4:131,i+2);
+                    countJb10=countJb10+1;
+            case 11
+                if(size(ModelDataJB11)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB11=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB11=dataUse(:,1);
+                    
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB11=cat(1,ModelDataJB11(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB11=cat(1,ObservedDataJB11,dataUse(:,1));
+                    
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB11=cat(1,ModelDataJB11(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB11=cat(1,ObservedDataJB11,dataUse(:,1));
+                    avarageJB11(:,1)=avarageJB11(:,1)+data(4:131,i-1);
+                    avarageJB11(:,2)=avarageJB11(:,2)+data(4:131,i);
+                    avarageJB11(:,3)=avarageJB11(:,3)+data(4:131,i+1);
+                    avarageJB11(:,4)=avarageJB11(:,4)+data(4:131,i+2);
+                    countJb11=countJb11+1;
+            case 12
+                if(size(ModelDataJB12)==0)
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB12=dataUse(:,1);
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB12=dataUse(:,1);
+                else
+                    dataUse=data(4:131,i-1);
+                    ModelDataJB12=cat(1,ModelDataJB12(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+1);
+                    ObservedDataJB12=cat(1,ObservedDataJB12(:,1),dataUse(:,1));
+                end
+                    dataUse=data(4:131,i);
+                    ModelDataJB12=cat(1,ModelDataJB12(:,1),dataUse(:,1));
+                    dataUse=data(4:131,i+2);
+                    ObservedDataJB12=cat(1,ObservedDataJB12(:,1),dataUse(:,1));
+                    avarageJB12(:,1)=avarageJB12(:,1)+data(4:131,i-1);
+                    avarageJB12(:,2)=avarageJB12(:,2)+data(4:131,i);
+                    avarageJB12(:,3)=avarageJB12(:,3)+data(4:131,i+1);
+                    avarageJB12(:,4)=avarageJB12(:,4)+data(4:131,i+2);
+                    countJb12=countJb12+1;
+            otherwise
+      
+        end
+   end
+   
+end
+end
+result=cat(2,ObservedDataJB1,ModelDataJB1);
+xlswrite('JB1',result);
+result=cat(2,ObservedDataJB2,ModelDataJB2);
+xlswrite('JB2',result);
+result=cat(2,ObservedDataJB3,ModelDataJB3);
+xlswrite('JB3',result);
+result=cat(2,ObservedDataJB4,ModelDataJB4);
+xlswrite('JB4',result);
+result=cat(2,ObservedDataJB5,ModelDataJB5);
+xlswrite('JB5',result);
+result=cat(2,ObservedDataJB6,ModelDataJB6);
+xlswrite('JB6',result);
+result=cat(2,ObservedDataJB7,ModelDataJB7);
+xlswrite('JB7',result);
+result=cat(2,ObservedDataJB8,ModelDataJB8);
+xlswrite('JB8',result);
+result=cat(2,ObservedDataJB9,ModelDataJB9);
+if(size(result)~=0)
+xlswrite('JB9',result);
+end
+result=cat(2,ObservedDataJB10,ModelDataJB10);
+if(size(result)~=0)
+xlswrite('JB10',result);
+end
+result=cat(2,ObservedDataJB11,ModelDataJB11);
+if(size(result)~=0)
+xlswrite('JB11',result);
+end
+result=cat(2,ObservedDataJB12,ModelDataJB12);
+if(size(result)~=0)
+xlswrite('JB12',result);
+end
+%main('runJB.txt');
+xlswrite('JB1avg',avarageJB1/countJb1);
+xlswrite('JB2avg',avarageJB2/countJb2);
+xlswrite('JB3avg',avarageJB3/countJb3);
+xlswrite('JB4avg',avarageJB4/countJb4);
+xlswrite('JB5avg',avarageJB5/countJb5);
+xlswrite('JB6avg',avarageJB6/countJb6);
+xlswrite('JB7avg',avarageJB7/countJb7);
+xlswrite('JB8avg',avarageJB8/countJb8);
+xlswrite('JB9avg',avarageJB9/countJb9);
+xlswrite('JB10avg',avarageJB10/countJb10);
+xlswrite('JB11avg',avarageJB11/countJb11);
+xlswrite('JB12avg',avarageJB12/countJb12);
+
+
+

@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <AgroecologicalZone>
+    <colour>blabla</colour>
+    <SoilType>
+      <colour>1</colour>
+      <ClayFraction>
+        <colour>Fraction of clay</colour>
+      </ClayFraction>
+      <N2Factor>
+        <colour>Dinitrogen emission factor</colour>
+      </N2Factor>
+      <Arable>
+        <colour>C-Tool parameters for arable soil</colour>
+        <InitialC>
+          <colour>Initial carbon in soil</colour>
+        </InitialC>
+        <InitialCtoN>
+          <colour>Initial C:N ratio of soil</colour>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <colour>Initial C:N ratio of fresh organic matter in soil</colour>
+        </InitialFOMCtoN>
+        <propHUM>
+          <colour>Nick does write bether description</colour>
+        </propHUM>
+        <propROM>
+          <colour>Nick does write bether description</colour>
+        </propROM>
+      </Arable>
+      <Grassland>
+        <colour>C-Tool parameters for grassland soil</colour>
+        <InitialC>
+          <colour>Initial carbon in soil</colour>
+        </InitialC>
+        <InitialCtoN>
+          <colour>Initial C:N ratio of soil</colour>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <colour>Initial C:N ratio of fresh organic matter in soil</colour>
+        </InitialFOMCtoN>
+        <propHUM>
+          <colour>Proportion of the total soil C that is in the humus pool</colour>
+        </propHUM>
+        <propROM>
+          <colour>Proportion of the total soil C that is in the resistant pool</colour>
+        </propROM>
+      </Grassland>
+      <MaxSoilDepth>
+        <colour>Maximum soil depth (for soil model calculations)</colour>
+      </MaxSoilDepth>
+      <ThermalDiffusivity>
+        <colour>Thermal diffusivity of soil</colour>
+      </ThermalDiffusivity>
+      <DrainageStart>
+        <colour>15</colour>
+      </DrainageStart>
+      <DrainageEnd>
+        <colour>15</colour>
+      </DrainageEnd>
+    </SoilType>
+    
+    
+    <Month>
+      <colour>1</colour>
+      <AirTemperature>
+        <colour>Celsius</colour>
+      </AirTemperature>
+      <Precipitation>
+        <colour>mm</colour>
+      </Precipitation>
+    </Month>
+    <GrazingMidpoint>
+      <colour>Day</colour>
+
+    </GrazingMidpoint>
+    <AverageAirTemperature>
+      <colour>Celsius</colour>
+    </AverageAirTemperature>
+    <AirTemperatureMaxDay>
+      <colour>Days</colour>
+
+    </AirTemperatureMaxDay>
+    <AirTemperaturAmplitude>
+      <colour>Celsius</colour>
+    </AirTemperaturAmplitude>
+    <Livestock>
+      <colour>1</colour>
+
+      <name>
+        <colour>0</colour>
+
+      </name>
+      <SpeciesGroup>
+        <colour>0</colour>
+
+      </SpeciesGroup>
+      <isRuminant>
+        <colour>0</colour>
+
+      </isRuminant>
+      <Liveweight>
+        <colour>0</colour>
+      </Liveweight>
+      <mu_base>
+        <colour>0</colour>
+       
+      </mu_base>
+      <mu_b>
+        <colour>0</colour>
+       
+      </mu_b>
+      <milkCconc>
+        <colour>0</colour>
+      </milkCconc>
+      <milkNconc>
+        <colour>0</colour>
+
+      </milkNconc>
+      <growthNconc>
+        <colour>0</colour>
+
+      </growthNconc>
+      <growthCconc>
+        <colour>0</colour>
+
+      </growthCconc>
+      <maintenanceEnergyCoeff>
+        <colour>0</colour>
+
+      </maintenanceEnergyCoeff>
+      <growthEnergyDemandCoeff>
+        <colour>0</colour>
+
+      </growthEnergyDemandCoeff>
+      <milkEnergyDemandCoeff>
+        <colour>0</colour>
+
+      </milkEnergyDemandCoeff>
+      <urineProp>
+        <colour>0</colour>
+      </urineProp>
+      <HousedDuringGrazing>
+        <colour>colour</colour>
+      </HousedDuringGrazing>
+      <Age>
+        <colour>0</colour>
+
+      </Age>
+    </Livestock>
+    <Housing>
+      <colour>1</colour>
+
+      <beddingFactor>
+        <colour>Addition of bedding material</colour>
+
+      </beddingFactor>
+      <meanTemp>
+        <colour>12.0</colour>
+
+      </meanTemp>
+      <HousingRefTemp>
+        <colour>20</colour>
+
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <colour>0.1</colour>
+
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <colour>0.1</colour>
+
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <colour>0.2</colour>
+       
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <colour>0.8</colour>
+       
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <colour>0.1</colour>
+       
+      </ProportionTAN>
+    </Housing>
+    
+    <ManureStorage>
+      <colour>2</colour>
+      
+      
+      
+      <StoresSolid>
+        <colour>Is true if this storage stores solid manure</colour>
+        
+      </StoresSolid>
+      <b1>
+        <colour>Coefficient in carbon degradation</colour>
+        
+        
+      </b1>
+      <lnArr>
+        <colour>Log natural in Arrhenius equation</colour>
+        
+        
+      </lnArr>
+      <meanTemp>
+        <colour>Mean air temperture during storage period</colour>
+        
+        
+      </meanTemp>
+      <Bo>
+        <colour>Methane producing capacity</colour>
+        
+        
+      </Bo>
+      <ohmTAN>
+        <colour>Proportion of manure TAN lost by runoff or leaching</colour>
+        
+        
+      </ohmTAN>
+      <ohmOrg>
+        <colour>Proportion of manure lost by runoff or leaching</colour>
+        
+        
+      </ohmOrg>
+      <EFNH3storageRef>
+        <colour>0.1</colour>
+        
+        
+      </EFNH3storageRef>
+      <MCF>
+        <colour>methane conversion factor </colour>
+        
+        
+      </MCF>
+      <EFNH3storageIPCC>
+        <colour>0.1</colour>
+        
+        
+      </EFNH3storageIPCC>
+      <EFN2OstorageIPCC>
+        <colour>0.02</colour>
+        
+        
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <colour>0.02</colour>
+        
+        
+      </EFN2OstorageRef>
+      <lambda_m>
+        <colour>8</colour>
+        
+        
+      </lambda_m>
+      <StorageRefTemp>
+        <colour>20</colour>
+        
+        
+      </StorageRefTemp>
+
+    </ManureStorage>
+    
+    
+    
+    
+    <Crop>
+      <colour>1</colour>
+      
+      
+      <NavailMax>
+        <colour>300</colour>
+        
+        
+      </NavailMax>
+      <NyieldMax>
+        <colour>180</colour>
+        
+        
+      </NyieldMax>
+      <NfixationFactor>
+        <colour>-1.0</colour>
+        
+        
+      </NfixationFactor>
+      <HarvestMethod>
+        <colour>1</colour>
+        
+        
+      </HarvestMethod>
+      <PropBelowGroundResidues>
+        <colour>0.1</colour>
+        
+        
+      </PropBelowGroundResidues>
+      <BelowGroundCconc>
+        <colour>0.46</colour>
+        
+        
+      </BelowGroundCconc>
+      <MaximumRootingDepth>
+        <colour>1.0</colour>
+        
+        
+      </MaximumRootingDepth>
+      <BelowGroundCtoN>
+        <colour>15.0</colour>
+        
+        
+      </BelowGroundCtoN>
+    </Crop>
+    
+    
+    
+    
+    
+    
+    
+    
+    <UrineNH3EF>
+      <colour>Urine NH3 emission factor</colour>
+      
+      
+    </UrineNH3EF>
+    <NDepositionRate>
+      <colour>Rate of deposition of N from the atmosphere</colour>
+      
+      
+    </NDepositionRate>
+    <CropResidues>
+      <EFN2O>
+        <colour>Nitrous oxide emission factor</colour>
+        
+        
+      </EFN2O>
+      <colour>Emission factors for crop residues</colour>
+    </CropResidues>
+    <MineralisedSoilN>
+      <EFN2O>
+        <colour>Nitrous oxide emission factor</colour>
+        
+        
+      </EFN2O>
+      <colour>Emission factors for mineralised soil N</colour>
+    </MineralisedSoilN>
+    <Fertiliser>
+      <EFN2O>
+        <colour>Nitrous oxide emission factor</colour>
+        
+        
+      </EFN2O>
+      <EFN2O_IPCC>
+        <colour>Nitrous oxide emission factor</colour>
+        
+        
+      </EFN2O_IPCC>
+      <FertiliserType>
+        <colour>1</colour>
+        
+        <EFNH3>
+          <colour>Ammonia emission factor</colour>
+          
+          
+        </EFNH3>
+      </FertiliserType>
+      
+      
+      <colour>Emission factors for fertilisers</colour>
+    </Fertiliser>
+    <Manure>
+      <EFN2O>
+        <colour>Nitrous oxide emission factor</colour>
+        
+        
+      </EFN2O>
+      <EFN2O_IPCC>
+        <colour>Nitrous oxide emission factor</colour>
+        
+        
+      </EFN2O_IPCC>
+      <N2Factor>
+        <colour>Dinitrogen emission factor</colour>
+        
+        
+      </N2Factor>
+      <ManureType>
+        <colour>1</colour>
+        
+        
+        
+        <EFNH3FieldRef>
+          <colour>0.2</colour>
+          
+          
+        </EFNH3FieldRef>
+        <EFNH3FieldRefTemperature>
+          <colour>15</colour>
+          
+          
+        </EFNH3FieldRefTemperature>
+        
+      </ManureType>
+      
+      
+      
+      <colour>Emission factors for manures</colour>
+    </Manure>
+    <ManureApplicationTechnique>
+      <colour>1</colour>
+      
+      <NH3ReductionFactor>
+        <colour>0.0</colour>
+        
+        
+      </NH3ReductionFactor>
+      
+    </ManureApplicationTechnique>
+    
+    
+  </AgroecologicalZone>
+</xml>

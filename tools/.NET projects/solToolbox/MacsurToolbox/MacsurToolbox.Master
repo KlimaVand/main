@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MacsurToolbox.Master.cs" Inherits="MacsurToolbox.SiteMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+   <title></title>
+   <link href="~/Styles/MacsurToolbox.css" rel="stylesheet" type="text/css" />
+   <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+   </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="FormMacsurToolbox" runat="server">
+   <telerik:RadScriptManager ID="RadScriptManagerMacsurToolbox" runat="server">
+   </telerik:RadScriptManager>
+   <div class="page">
+      <div class="header">
+         <table border="0" cellpadding="5" cellspacing="0" width="100%">
+            <tr>
+               <td align="left">
+                  <h1>
+                     MACSUR Toolbox
+                  </h1>
+               </td>
+               <td align="right">
+                  <asp:Label ID="LabelSession" runat="server"></asp:Label>
+               </td>
+            </tr>
+            <tr valign="bottom">
+               <td align="left">
+                  <telerik:RadMenu ID="RadMenuMacsur" runat="server" DataSourceID="SiteMapDataSourceMacsurToolbox">
+                  </telerik:RadMenu>
+               </td>
+               <td align="right">
+                  <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                     <AnonymousTemplate>
+                        <a href="~/Menu/Account/Login.aspx" id="HeadLoginStatus" runat="server">
+                           <asp:Image ID="ImageLogin" runat="server" ImageUrl="~/Images/login.gif" BorderStyle="None" />
+                        </a>
+                     </AnonymousTemplate>
+                     <LoggedInTemplate>
+                        Welcome
+                        <asp:LoginName ID="HeadLoginName" runat="server" />
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Menu/01_Home/Home.aspx" LogoutImageUrl="~/Images/logout.gif" />
+                     </LoggedInTemplate>
+                  </asp:LoginView>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <div class="main">
+         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+      </div>
+      <div class="clear">
+      </div>
+   </div>
+   <div class="footer">
+      Web site provided by <a href="http://agro.au.dk/en/" target="_blank">Aarhus University, Faculty of Science and Technology, Department of Agroecology</a>.<br />
+      Report technical problems to webmaster: <a href="mailto:Poul.Lassen@djf.au.dk">Poul Lassen</a>. Optimized for screen size 1024x768
+   </div>
+   </form>
+   <asp:SiteMapDataSource ID="SiteMapDataSourceMacsurToolbox" runat="server" ShowStartingNode="False" />
+</body>
+</html>

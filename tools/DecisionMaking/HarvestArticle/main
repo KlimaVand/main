@@ -1,0 +1,185 @@
+\input{preamble}
+\usepackage{comment}
+%opening
+\usepackage{titling}
+\usepackage{abstract}
+\usepackage{lipsum}
+\usepackage{appendix}
+
+ 
+\usepackage{amsfonts,amssymb,epsfig,epstopdf,titling,url,array}
+\oddsidemargin 	=    1.0cm
+\evensidemargin = 	 -0.5cm
+\setlength{\droptitle}{-2cm}
+
+\title{Optimal time for sowing and harvest}
+
+\author{Jonas Vejlin, Allan Leck Jensen, Nicholas John Hutchings\and Claus Aage Gr\o n S\o rensen, Thomas Dyhre Nielsen\and  Mathieu Andre Maurice Lamande, J\o rgen E Olesen}
+\pagestyle{headings}
+\begin{document}
+
+
+
+\twocolumn[{%
+  \begin{@twocolumnfalse}
+    \maketitle
+    \begin{abstract}
+			Abstrac coming here at some point
+    \end{abstract}
+  \end{@twocolumnfalse}
+}]
+
+
+
+
+
+
+\section{Background}
+It is estimated that the average global surface temperature will rise with $1.8  \,^{\circ}\mathrm{C}$ to $4\,^{\circ}\mathrm{C}$ and the precipitation will change \cite{IPCC}. Studies have shown that a temperature increase of $3\,^{\circ}\mathrm{C}$  to $4\,^{\circ}\mathrm{C}$  can lower yield production with up to 35 \% in some areas\cite{heat}. Especially in countries that have recently experienced hunger \cite{FoodSecurity}. Others studies have shown that warmer air temprature will decrease crop yield by 10 \% to 40 \% \cite{Effects}.Combining a decreased crop yield   with an expected growth in population of 2.3 billion people before 2050 (mostly in developing countries), express a serious threat to food security\cite{fao}.  One suggestion for adapting to the future climate change is to sow earlier\cite{Effects}\cite{Adapting}. Some studies show that it has been estimate that sowing can occur 1-3 weeks earlier by 2040\cite{plantchange}. Model studies with different sowing date under different future scenarios predict lower dry matter with late sowing\cite{ClimateChange}.
+Maintaining late sowing can result in yield loss as high as 17 to 35 kg/ha/day \cite{ClimateChangeSowingMachinery}. Increasing temperature also have an effect on the growing season.The growing period tend to decrease for cereals, but increase for root crops \cite{Olesen}.
+In this paper we will build a decision tools to find the sowing and harvest date that is belived to be the yield the highest amount of dry matter.
+
+
+\section{Influence Diagram}
+As discussed in \cite{BBN} Bayesian Network (BN) \cite{BayesianBook} and Influence Diagram (ID) \cite{BayesianBook1} are powerfull tools to aid decision making. BN and ID have been used in a variety of scenarios such as fungicide programs\cite{fung}, medicin and diagonstics\cite{Medicin}, robotics\cite{robotic} and AI\cite{me}. 
+A BN is made up of the following parts:
+\begin{itemize}
+\item A change node. This node indicates the uncertainty associated with the decisions and it is represented by \includegraphics[scale=0.4]{pictures/change.pdf}
+\item A directed arc represent direct dependencies between nodes\includegraphics[scale=0.4]{pictures/arc.png}
+\item Conditional Probability Table is a table for each Change node. Each entry contains the probability of that state given that the parents are true. It can look like \includegraphics[]{pictures/CPT.png}
+\item A decision node represents the decisions that are available to the decision maker and is represented by  \includegraphics[scale=0.4]{pictures/desision.pdf}
+\item The value node represent the gain or loss of a decision \includegraphics[scale=0.4]{pictures/value.pdf}
+\end{itemize}
+Creating an ID often follow four steps\cite{robotic}:
+\begin{itemize}
+\item Identify the variables 
+\item Identify the interactions between them
+\item Creating the causal probability table for each variable
+\item Evaluate the model
+\end{itemize}
+
+\section{Sowing Model}
+Sowing time depends on soil temperature and soil wetness (that influence tractability)\cite{plantchange}
+Often heavy machinery is used when sowing. The combination of machinery and wet conditions can cause soil compaction. Some plants cannot tolerate highly compacted soil\cite{SoilComaction}, so it is important for the model to take trafficability into account. Trafficability depends on two factors: soil stress (the impact from machines) and soil strength (how well the soil withstands the stress)\cite{Terranimo}. Terranimo can be used to estimate the values of soil stress, soil strength, trafficability and surface stress. Workability is defined as ''the optimum water content at which agricultural tillage produces the greatest proportion of small aggregates''\cite{WorkabilityFormular}. Workability  depends on the soil water content \cite{workability}. Soil water content depends on factors such as soil texture, organic matter, gravel and salinity\cite{waterConent}. Soil types (JB 1 to 12) are a composite expression of these factors. 
+When working with the soil, such as tillage outside the optimal water (Wopt) content, there is a risk of clods. Those clods will eventually lead to decreased plant growth \cite{WorkabilityFormular}. Wopt can be calculated with this formula: 
+
+\begin{equation}
+\begin{split}
+Wopt=LPL-0.15*(UPL-LPL)\end{split}
+\end{equation}
+where 
+\begin{equation}
+\begin{split}
+UPL =&10.5+0.355*Clay+0.01*Clay^2 +\nonumber\\
+		&0.002*Silt^2+2.11*(1.724*Carbon)\nonumber
+	\end{split}
+\end{equation}
+ and  
+\begin{equation}
+\begin{split}
+LPL =&14.73 + 0.008*Clay^2+ \\
+			&0.261* Silt+0.005 * Silt^2+ \\
+			&1.93*(1.724*Carbon).
+\end{split}
+\end{equation}
+
+Since late sowing will yield lower dry matter content, we also need to take Julian date into account. 
+An Influence Diagram has been created \ref{App:Sowing}
+
+
+\begin{comment}
+\subsection{OldBackground}
+It has been reported that the growing season is changing because of climate changes \cite{Menzel}. Climate changes might also lead to water shortage and thus have an effect on production \cite{Olesen}. The farmer needs to adapt his field operations to limit the side effects of those climate changes such as irrigating more often because of water shortage. Climate change will increase or decreases the amount of time that farmers can operate in the field (workability/traffic ability), this will indirectly also affect the production efficiency/yields, etc.
+This project will create a decision model to enable tests how climate changes will affect the timing of field operations (e.g. sowing, irrigating, ploughing and harvesting). The model should also help the farmer in cases where the farmer has limited resources such as funds, water for irrigation and equipment such as tractors.
+The Goal of this project
+\begin{itemize}
+\item 1: Establish a collaboration between "Climate and Water" at Aarhus University and ”Machine Intelligence” at Aalborg University (contact person at AAU is Thomas Dyhre Nielsen, associate professor in the Machine Intelligence group at the Department of Computer Science).
+\item Implement a model in Hugin to help farmers make decisions whether to: harvest, fertilize, irrigate, sow and plough. Model observations must be observations that a typical farmer has the opportunity to make.
+\item Integrate the model with Fasset.
+\end{itemize}
+
+\subsection{Hypothesis}
+Climate changes will affect the timing for the farmers field operations such as sowing, irrigation, ploughing, and harvest.
+\subsection{Testing of the Hypothesis}
+There will be created a decision model in Fasset and it will be tested with today’s climate and the prognosis of the future climate.
+\subsection{Purpose}:
+To create a DID (Dynamic Influence Diagram) in Hugin that can help farmers make the right decisions at the right time.
+\subsection{Results}
+There will be produced a standalone decision model and tests will make sure Fasset can use this model.
+
+\subsection{Tools} 
+A mathematical framework called POMDP will be used and DID for modeling purposes. Fasset is used for testing the decision model.
+\subsection{Fasset}
+Fasset is a dynamic farm scale model that includes fields (crops and soil), animals and housing. The model handles different crops, field operations as well as different feeding possibilities for livestock. This project will focus on field operations.
+
+\subsection{POMDB}
+Partially Observable Markov Decision Process \cite{POMDP} is a theoretical framework for modeling decision-making. POMDP has previous been used within the field of machine intelligence \cite{me}. POMDP is a tuple $\langle ${\bf S}, \textbf{$\Omega$}, {\bf A}, {\bf T}, {\bf O}, {\bf R}$\rangle$.
+\begin{itemize}
+	\item {\bf S} is a finite set of states. A state is the model description of the modeled system at a given time 
+	\item $\Omega$ is a finite set of observations. Observations represent what can be observed about the state of the system
+	\item {\bf A} is a finite set of actions. An action is a decision that can be made in order to change the state of the system.
+	\item {\bf T}: {\bf S} $ \times $ {\bf A} $\rightarrow \prod $({\bf S}) is the state transition function.
+			\subitem Pr($s_{t+1}$|$s_{t}$,$a_t$), denotes the probability of $s_{t+1}$ conditioned on the action $a_t$ and state $s_t$
+	\item {\bf O}: $\textbf{S}\times \textbf{A}\rightarrow \Pi \left(\Omega\right)$ is the observation function. 
+			\subitem Pr($O_{t+1}$|$s_{t+1}$,$a_t$), denotes probability of $O_{t+1}$ conditioned on the action $a_t$ and state $s_{t+1}$
+	\item {\bf R}: {\bf S} $ \times $ {\bf A} $\rightarrow R $ is the reward function.
+			\subitem $R(s,a)$ denotes the reward of performing action $a$ in state $s$. 
+\end{itemize}
+\subsection{ID}
+An Influence Diagram (ID) \cite{BayesianBook} can be used as a graphical representation of the POMDP. An ID is a directed acyclic graph consisting of:
+\begin{itemize}
+\item Decision nodes (\char`\~ the actions of POMDP) 
+\item Chance nodes (\char`\~ the states and observations of POMDP) 
+\item Utility node (\char`\~ the reward functions of POMDP)
+\end{itemize}
+\subsection{Dynamic ID}
+Dynamic ID expands ID in the form of time series. This is required if  a sequence of decisions must be represented in the model.
+
+\section{Previous work}
+In \cite{claus}
+\begin{itemize}
+\item the selection of varieties with the proper genetical potentials
+\item the scheduling of the sowing time
+\item the weather and soil conditions in the course of the growing season
+\item the scheduling of pesticide treatments
+\item the scheduling of harvesting time in relation to quantity and quality
+\item the harvesting method
+\item the method of conservation (e.g. drying method)
+\item the conditions for storage
+\end{itemize}
+\begin{itemize}
+\item mashinery (type, performance)
+\item Crop (yield,development state)
+\item Weathers influence on crop (moisture, quality, quantity)
+\end{itemize}
+\begin{itemize}
+\item weather
+\item potential harvesting time (workability)
+\item crop development in terms of quantity and quality losses (timeliness)
+\item machinery performance in terms of capacity and machinery induced losses
+\item evaluating measures, e.g. costs due to losses, drying costs, etc..nintendo64
+\end{itemize}
+\section{Develop the model}
+\section{Integrateion into Fasset (might not be needed)}
+\section{Develop the model}
+\section{Test the Model/Hypothesis}
+\section{Discussion}
+\end{comment}
+
+\onecolumn
+\newpage
+\begin{appendices}
+\section{Sowing Network} \label{App:Sowing}
+\includegraphics[scale=0.55]{pictures/sowing.pdf}
+\section{Harvest Network} \label{App:Harvest}
+\includegraphics[scale=0.55]{pictures/harvest.pdf}
+\section{Trafficability} \label{App:Trafficability}
+\includegraphics[scale=0.55]{pictures/Trafficability.pdf}
+\end{appendices}
+
+\newpage
+\bibliography{main}
+%\end{@twocolumnfalse}
+%}]
+%\appendix
+\end{document}

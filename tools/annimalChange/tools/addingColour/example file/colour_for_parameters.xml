@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+<AgroecologicalZone>
+  <Identity>1</Identity>
+  <Name color="red">European montane</Name>
+  <Description>Details for a single agroecological zone</Description>
+  <MonthlyAirTemp>false</MonthlyAirTemp>
+  <SoilType>
+    <Identity>1</Identity>
+    <Name color="green">Coarse Sandy Soil</Name>
+    <Description color="red">Type of soil</Description>
+    <ClayFraction>
+      <Description>Fraction of clay</Description>
+      <Value color="green">0.1</Value>
+      <Units>none</Units>
+    </ClayFraction>
+    <N2Factor>
+      <Description>Dinitrogen emission factor</Description>
+      <Value color="red">8.0</Value>
+      <Units>kg N2-N/kg N2O-N emitted</Units>
+    </N2Factor>
+    <Arable>
+      <Description>C-Tool parameters for arable soil</Description>
+      <InitialC>
+        <Description>Initial carbon in soil</Description>
+        <Value color="green">80000</Value>
+        <Units>kg/ha</Units>
+      </InitialC>
+      <InitialCtoN>
+        <Description>Initial C:N ratio of soil</Description>
+        <Value color="red">10.0</Value>
+        <Units>none</Units>
+      </InitialCtoN>
+      <InitialFOMCtoN>
+        <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+        <Value color="red">10.0</Value>
+        <Units>none</Units>
+      </InitialFOMCtoN>
+      <propHUM>
+        <Description>Nick does write bether description</Description>
+        <Value color="red">0.4</Value>
+        <Units>fraction</Units>
+      </propHUM>
+      <propROM>
+        <Description>Nick does write bether description</Description>
+        <Value color="red">0.55</Value>
+        <Units>fraction</Units>
+      </propROM>
+    </Arable>
+    <Grassland>
+      <Description>C-Tool parameters for grassland soil</Description>
+      <InitialC>
+        <Description>Initial carbon in soil</Description>
+        <Value color="green">80000</Value>
+        <Units>kg/ha</Units>
+      </InitialC>
+      <InitialCtoN>
+        <Description>Initial C:N ratio of soil</Description>
+        <Value color="red">10.0</Value>
+        <Units>none</Units>
+      </InitialCtoN>
+      <InitialFOMCtoN>
+        <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+        <Value color="red">10.0</Value>
+        <Units>none</Units>
+      </InitialFOMCtoN>
+      <propHUM>
+        <Description>Proportion of the total soil C that is in the humus pool</Description>
+        <Value color="red">0.4</Value>
+        <Units>fraction</Units>
+      </propHUM>
+      <propROM>
+        <Description>Proportion of the total soil C that is in the resistant pool</Description>
+        <Value color="red">0.3</Value>
+        <Units>fraction</Units>
+      </propROM>
+    </Grassland>
+    <MaxSoilDepth>
+      <Description>Maximum soil depth (for soil model calculations)</Description>
+      <Value color="green">1.0</Value>
+      <Units>metres</Units>
+    </MaxSoilDepth>
+    <ThermalDiffusivity>
+      <Description>Thermal diffusivity of soil</Description>
+      <Value color="red">0.00000035</Value>
+      <Units>metres squared per second</Units>
+    </ThermalDiffusivity>
+    <DrainageStart>
+      <Day color="green">15</Day>
+      <Month color="green">10</Month>
+      <Description>Average date on which water begins to drain from the soil</Description>
+    </DrainageStart>
+    <DrainageEnd>
+      <Day color="green">15</Day>
+      <Month color="green">4</Month>
+      <Description>Average date on which water finishes draining from the soil</Description>
+    </DrainageEnd>
+  </SoilType>
+  <Month>
+    <Identity>1</Identity>
+    <Name color="green">January</Name>
+    <AirTemperature>
+      <Units>Celsius</Units>
+      <Description>Average monthly air temperature 2 metres above ground</Description>
+      <Value color="green">-1.0</Value>
+    </AirTemperature>
+    <Precipitation>
+      <Units>mm</Units>
+      <Description>Average monthly precipitation</Description>
+      <Value color="green">50.0</Value>
+    </Precipitation>
+    <Description>Monthly mean weather data</Description>
+  </Month>
+  <GrazingMidpoint>
+    <Units>Day</Units>
+    <Description>Midpoint date for grazing</Description>
+    <Value color="green">180</Value>
+  </GrazingMidpoint>
+  <AverageAirTemperature>
+    <Units>Celsius</Units>
+    <Description>Average annual air temperature 2 metres above ground</Description>
+    <Value color="green">10.0</Value>
+  </AverageAirTemperature>
+  <AirTemperatureMaxDay>
+    <Units>Days</Units>
+    <Description>Julian day when air temperature is at its maximum</Description>
+    <Value color="green">180</Value>
+  </AirTemperatureMaxDay>
+  <AirTemperaturAmplitude>
+    <Units>Celsius</Units>
+    <Description>Maximum deviation of air temperature from the mean</Description>
+    <Value color="green">10</Value>
+  </AirTemperaturAmplitude>
+  <Livestock>
+    <Identity>1</Identity>
+    <Description>Details of livestock</Description>
+    <name>
+      <Identity>0</Identity>
+      <Value color="green">Dairy cattle</Value>
+      <Units>none</Units>
+      <Description>Name of livestock</Description>
+    </name>
+    <SpeciesGroup>
+      <Identity>0</Identity>
+      <Value>1</Value>
+      <Units>kg/kg</Units>
+      <Description>To which species group livestock belongs (1 = cattle, 2 = pigs)</Description>
+    </SpeciesGroup>
+    <isRuminant>
+      <Identity>0</Identity>
+      <Value color="green">True</Value>
+      <Units>none</Units>
+      <Description>True if the livestock are ruminants</Description>
+    </isRuminant>
+    <Liveweight>
+      <Identity>0</Identity>
+      <Value color="green">650</Value>
+      <Units>kg/kg</Units>
+      <Description>Mean live weight of livestock (optional)</Description>
+    </Liveweight>
+    <mu_base>
+      <Identity>0</Identity>
+      <Value color="red">2.5</Value>
+      <Units>Proportion per unit of energy intake, normalised by maintenance energy demand</Units>
+      <Description>Energy intake below which there is no reduction in utilisation of energy</Description>
+    </mu_base>
+    <mu_b>
+      <Identity>0</Identity>
+      <Value color="red">0.05</Value>
+      <Units>Proportion per unit of energy intake, normalised by maintenance energy demand</Units>
+      <Description>Rate of reduction in energy utilisation with increasing energy intake</Description>
+    </mu_b>
+    <milkCconc>
+      <Identity>0</Identity>
+      <Value color="red">0.05</Value>
+      <Units>kg/kg</Units>
+      <Description>Concentration of carbon in milk</Description>
+    </milkCconc>
+    <milkNconc>
+      <Identity>0</Identity>
+      <Value color="green">0.00556</Value>
+      <Units>kg/kg</Units>
+      <Description>Concentration of nitrogen in milk</Description>
+    </milkNconc>
+    <growthNconc>
+      <Identity>0</Identity>
+      <Value color="red">0.0416</Value>
+      <Units>kg/kg</Units>
+      <Description>Concentration of nitrogen in animal growth</Description>
+    </growthNconc>
+    <growthCconc>
+      <Identity>0</Identity>
+      <Value color="red">0.232</Value>
+      <Units>kg/kg</Units>
+      <Description>Concentration of carbon in animal growth</Description>
+    </growthCconc>
+    <maintenanceEnergyCoeff>
+      <Identity>0</Identity>
+      <Value color="red">1.4</Value>
+      <Units>none</Units>
+      <Description>Coefficient in calculation of maintenance energy requirement</Description>
+    </maintenanceEnergyCoeff>
+    <growthEnergyDemandCoeff>
+      <Identity>0</Identity>
+      <Value color="red">23.0</Value>
+      <Units>MJ/kg</Units>
+      <Description>Energy requirement per unit growth</Description>
+    </growthEnergyDemandCoeff>
+    <milkEnergyDemandCoeff>
+      <Identity>0</Identity>
+      <Value color="red">5.3</Value>
+      <Units>MJ/kg</Units>
+      <Description>Energy requirement per unit of milk produced</Description>
+    </milkEnergyDemandCoeff>
+    <urineProp>
+      <Identity>0</Identity>
+      <Value color="red">0.04</Value>
+      <Units>kg/kg</Units>
+      <Description>Proportion of carbon excreted in urine</Description>
+    </urineProp>
+    <HousedDuringGrazing>
+      <Value color="green">false</Value>
+      <Units>None</Units>
+      <Description>Is true if animals are housing during part of the day when grazed</Description>
+    </HousedDuringGrazing>
+    <Age>
+      <Identity>0</Identity>
+      <Value color="green">3</Value>
+      <Units>years</Units>
+      <Description>Mean age of livestock</Description>
+    </Age>
+  </Livestock>
+  <Housing>
+    <Identity>1</Identity>
+    <HousingType>1</HousingType>
+    <NameOfHousing color="green">Cattle tied housing</NameOfHousing>
+    <Description>Details of livestock housing</Description>
+    <beddingFactor>
+      <Description>Addition of bedding material</Description>
+      <Value color="green">1.0</Value>
+      <Units>kg DM/animal/day</Units>
+      <Description>Rate of use of bedding dry matter</Description>
+    </beddingFactor>
+    <meanTemp>
+      <Value color="green">12.0</Value>
+      <Units>Celsius</Units>
+      <Description>Mean outside air temperature during the housing period</Description>
+    </meanTemp>
+    <HousingRefTemp>
+      <Value color="red">20</Value>
+      <Units>Celsius</Units>
+      <Description>Reference temperature for ammonia emission factor</Description>
+    </HousingRefTemp>
+    <EFNH3housingRef>
+      <Value color="red">0.1</Value>
+      <Units>kg ammonia N/kg ammonium in housing</Units>
+      <Description>Ammonia emission factor for housing</Description>
+    </EFNH3housingRef>
+    <feedWasteFactor>
+      <Value color="red">0.1</Value>
+      <Units>kg DM/kg DM</Units>
+      <Description>Proportion of feed dry matter that is wasted in housing</Description>
+    </feedWasteFactor>
+    <ProportionDegradable>
+      <Value color="red">0.2</Value>
+      <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+    </ProportionDegradable>
+    <ProportionNondegradable>
+      <Value color="red">0.8</Value>
+      <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+    </ProportionNondegradable>
+    <ProportionTAN>
+      <Value color="red">0.1</Value>
+      <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+    </ProportionTAN>
+  </Housing>
+  <ManureStorage>
+    <Identity>1</Identity>
+    <Name color="green">slurryTank - cattle</Name>
+    <StorageType>1</StorageType>
+    <SpeciesGroup>1</SpeciesGroup>
+    <StoresSolid>
+      <Description>Is true if this storage stores solid manure</Description>
+      <Value color="green">False</Value>
+    </StoresSolid>
+    <b1>
+      <Description>Coefficient in carbon degradation</Description>
+      <Value color="red">1.0</Value>
+      <Units>None</Units>
+    </b1>
+    <lnArr>
+      <Description>Log natural in Arrhenius equation</Description>
+      <Value color="red">40.0</Value>
+      <Units>None</Units>
+    </lnArr>
+    <meanTemp>
+      <Description>Mean air temperture during storage period</Description>
+      <Value color="green">20</Value>
+      <Units>Celsius</Units>
+    </meanTemp>
+    <Bo>
+      <Description>Methane producing capacity</Description>
+      <Value color="green">0.24</Value>
+      <Units>cubic metres methane/kg volatile solids</Units>
+    </Bo>
+    <ohmTAN>
+      <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+      <Value color="green">0</Value>
+      <Units>None</Units>
+    </ohmTAN>
+    <ohmOrg>
+      <Description>Proportion of manure organic N lost by runoff or leaching</Description>
+      <Value color="green">0</Value>
+      <Units>None</Units>
+    </ohmOrg>
+    <EFNH3storageIPCC>
+      <Value color="green">0.1</Value>
+      <Units>kg/kg</Units>
+      <Description>Ammonia emission factor IPCC system</Description>
+    </EFNH3storageIPCC>
+    <EFNH3storageRef>
+      <Value color="red">0.1</Value>
+      <Units>kg/kg</Units>
+      <Description>Ammonia emission factor nonIPCC system</Description>
+    </EFNH3storageRef>
+    <EFN2OstorageIPCC>
+      <Value color="green">0.02</Value>
+      <Units>kg/kg</Units>
+      <Description>N2O emission factor IPCC system</Description>
+    </EFN2OstorageIPCC>
+    <EFN2OstorageRef>
+      <Value color="red">0.02</Value>
+      <Units>kg/kg</Units>
+      <Description>N2O emission factor nonIPCC system</Description>
+    </EFN2OstorageRef>
+    <lambda_m>
+      <Value color="red">8</Value>
+      <Units>none</Units>
+      <Description>N2 emissions as a multiple of N2O emissions</Description>
+    </lambda_m>
+    <MCF>
+      <Description>methane conversion factor </Description>
+      <Value color="green">0.14</Value>
+      <Units>none</Units>
+    </MCF>
+    <StorageRefTemp>
+      <Value color="red">20</Value>
+      <Units>Celsius</Units>
+      <Description>Reference temperature for ammonia emission factor</Description>
+    </StorageRefTemp>
+    <Description>Details of manure storage</Description>
+  </ManureStorage>
+  <Crop>
+    <Identity>1</Identity>
+    <name color="green">Winter wheat</name>
+    <Description>Details of crops</Description>
+    <NavailMax>
+      <Value color="green">300</Value>
+      <Units>kg N/ha</Units>
+      <Description>Level of available soil N at which maximum N yield is reached</Description>
+    </NavailMax>
+    <NyieldMax>
+      <Value color="green">180</Value>
+      <Units>kg N/ha</Units>
+      <Description>Maximum N yield of the crop</Description>
+    </NyieldMax>
+    <NfixationFactor>
+      <Value color="green">-1.0</Value>
+      <Units>kg N/kg mineral N available</Units>
+      <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+    </NfixationFactor>
+    <HarvestMethod>
+      <Identity>1</Identity>
+      <Name color="green">Combine harvesting</Name>
+      <PropAboveGroundResidues>
+        <Value color="green">0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+      </PropAboveGroundResidues>
+    </HarvestMethod>
+    <PropBelowGroundResidues>
+      <Value color="green">0.1</Value>
+      <Units>kg DM/kg DM</Units>
+      <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+    </PropBelowGroundResidues>
+    <BelowGroundCconc>
+      <Value color="red">0.46</Value>
+      <Units>none</Units>
+      <Description>Carbon concentration in below-ground dry matter</Description>
+    </BelowGroundCconc>
+    <MaximumRootingDepth>
+      <Value color="red">1.0</Value>
+      <Units>metres</Units>
+      <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+    </MaximumRootingDepth>
+    <BelowGroundCtoN>
+      <Value color="red">15.0</Value>
+      <Units>none</Units>
+      <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+    </BelowGroundCtoN>
+  </Crop>
+  <UrineNH3EF>
+    <Description>Urine NH3 emission factor</Description>
+    <Value color="red">0.07</Value>
+    <Units>kg NH3-N/kg urine N</Units>
+  </UrineNH3EF>
+  <NDepositionRate>
+    <Description>Rate of deposition of N from the atmosphere</Description>
+    <Value color="green">10.0</Value>
+    <Units>kg N/ha/year</Units>
+  </NDepositionRate>
+  <CropResidues>
+    <EFN2O>
+      <Description>Nitrous oxide emission factor</Description>
+      <Value color="red">0.02</Value>
+      <Units>kg N2O-N/kg N</Units>
+    </EFN2O>
+    <Description>Emission factors for crop residues</Description>
+  </CropResidues>
+  <MineralisedSoilN>
+    <EFN2O>
+      <Description>Nitrous oxide emission factor</Description>
+      <Value color="red">0.02</Value>
+      <Units>kg N2O-N/kg N</Units>
+    </EFN2O>
+    <Description>Emission factors for mineralised soil N</Description>
+  </MineralisedSoilN>
+  <Fertiliser>
+    <EFN2O>
+      <Description>Nitrous oxide emission factor</Description>
+      <Value color="red">0.02</Value>
+      <Units>kg N2O-N/kg N</Units>
+    </EFN2O>
+    <EFN2O_IPCC>
+      <Description>Nitrous oxide emission factor</Description>
+      <Value color="green">0.02</Value>
+      <Units>kg N2O-N/kg manure N</Units>
+    </EFN2O_IPCC>
+    <FertiliserType>
+      <Identity>1</Identity>
+      <Description color="green">Ammonium nitrate</Description>
+      <EFNH3>
+        <Description>Ammonia emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg NH3-N/kg N</Units>
+      </EFNH3>
+    </FertiliserType>
+    <Description>Emission factors for fertilisers</Description>
+  </Fertiliser>
+  <Manure>
+    <EFN2O>
+      <Description>Nitrous oxide emission factor</Description>
+      <Value color="red">0.02</Value>
+      <Units>kg N2O-N/kg manure N</Units>
+    </EFN2O>
+    <EFN2O_IPCC>
+      <Description>Nitrous oxide emission factor</Description>
+      <Value color="green">0.02</Value>
+      <Units>kg N2O-N/kg manure N</Units>
+    </EFN2O_IPCC>
+    <N2Factor>
+      <Description>Dinitrogen emission factor</Description>
+      <Value color="red">8.0</Value>
+      <Units>kg N2-N/kg N2O-N emitted</Units>
+    </N2Factor>
+    <ManureType>
+      <Identity>1</Identity>
+      <Name color="green">Pig slurry</Name>
+      <StorageType>1</StorageType>
+      <SpeciesGroup>2</SpeciesGroup>
+      <EFNH3FieldRef>
+        <Value color="red">0.2</Value>
+        <Units>kg/kg</Units>
+        <Description>Reference ammonia emission factor</Description>
+      </EFNH3FieldRef>
+      <EFNH3FieldRefTemperature>
+        <Value color="red">15</Value>
+        <Units>Celsius</Units>
+        <Description>Temperature for reference ammonia emission factor</Description>
+      </EFNH3FieldRefTemperature>
+      <Description>Details for individual manure type</Description>
+    </ManureType>
+    <Description>Emission factors for manures</Description>
+  </Manure>
+  <ManureApplicationTechnique>
+    <Identity>1</Identity>
+    <Name color="green">Broadcast spreading</Name>
+    <NH3ReductionFactor>
+      <Value color="green">0.0</Value>
+      <Units>none</Units>
+      <Description>Reduction in ammonia emission relative to broadcast spreading</Description>
+    </NH3ReductionFactor>
+    <Description>Details for individual manure application method</Description>
+  </ManureApplicationTechnique>
+</AgroecologicalZone>
+</xml>

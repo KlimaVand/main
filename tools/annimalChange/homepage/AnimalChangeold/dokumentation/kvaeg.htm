@@ -1,0 +1,782 @@
+<html>
+<head>
+<title>FARM N</title>
+<LINK REL="stylesheet" HREF="styles/stylesheet.css" TYPE="text/css">
+</head>
+
+<body class="data">
+<br/><h2>Beregning af foderbehov til kvæg</h2>
+<em>Troels Kristensen</em><br>
+30 sept. 2003&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stald.htm">Stald- og lagertyper til kvæg</a>
+<p>
+Foderbehovet udtrykkes pr årsdyr (365 foderdage) ud fra standard effektivitet for energi- og proteinudnyttelse. Der er anvendt følgende kilder</p>
+<ul>
+<li>SH beretning 660,</li>
+<li>DJF beretning 737,</li>
+<li>DJF rapport husdyrbrug fodereffektivitet in press</li>
+<li>DJF rapport husdyrbrug 36</li>
+<li>Danske fodernormer</li>
+</ul>
+Der er arbejdet med tre kategorier indenfor henholdsvis besætninger med tunge racer og jersey. De tre kategorier er malkekøer, opdræt og ungtyre. For alle kategorier er der defineret et standardniveau for produktion og tilhørende foderoptagelse og udskillelse af N i husdyrgødning. Herudover er der beskrevet et variationsområde for produktionen indenfor, hvilken der er udledt konsekvenserne på foderoptagelse og N udskillelse.</p>
+
+<h3>Tunge racer - køer</h3>
+<table border=1 cellspacing=0 cellpadding=3>
+ <tr>
+  <td><B>Område</B></td>
+  <td><B>Beregning</B></td>
+  <td><B>Standard</B></td>
+  <td><B>Min</B></td>
+  <td><B>Maks</B></td>
+ </tr>
+ <tr>
+  <td><EM>Produktionsoplysninger</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- årsydelse, kg EKM</td>
+  <td>Indberettes</td>
+  <td>8500</td>
+  <td>6500</td>
+  <td>12500</td>
+ </tr>
+ <tr>
+  <td>- FE afgræsning</td>
+  <td>Indberettes</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1800</td>
+ </tr>
+ <tr>
+  <td><EM>Foderbehov</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td colspan=2><font size=1>For ovenstående prod.</font></td>
+ </tr>
+ <tr>
+  <td>- energi, FE</td>
+  <td>1635+0,4*ydelse+1,67*10<sup>-5 </sup>*ydelse<sup>2</sup></td>
+  <td>6242</td>
+  <td>4941</td>
+  <td>9244</td>
+ </tr>
+ <tr>
+  <td>- tørstof, kg</td>
+  <td>FE*(1,10+(8500-ydelse)*0,00002)</td>
+  <td>6866</td>
+  <td>5633</td>
+  <td>9429</td>
+ </tr>
+ <tr>
+  <td>- N, kg</td>
+  <td>FE*0,028</td>
+  <td>175</td>
+  <td>138</td>
+  <td>259</td>
+ </tr>
+ <tr>
+  <td><EM>Produktion</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- mælkeprotein, kg N</td>
+  <td>Ydelse*0,00518</td>
+  <td>44</td>
+  <td>34</td>
+  <td>65</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, foster, kg N</td>
+  <td>Fast</td>
+  <td>2</td>
+  <td>2</td>
+  <td>2</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>Gødning, kg N ab dyr</td>
+  <td>N foder - N mælk – N tilvækst</td>
+  <td>129</td>
+  <td>102</td>
+  <td>192</td>
+ </tr>
+ <tr>
+  <td>- afsat på marken, pct</td>
+  <td>(FE afgræsning*100) / FE</td>
+  <td>0</td>
+  <td>0</td>
+  <td>19</td>
+ </tr>
+ <tr>
+  <td>- andel i fæces, pct</td>
+  <td>(((0,04*(N foder <i>g/dag</i>)+((tørstof<sup>2</sup> <i>kg/dag</i>*1,8)/6,25)+((tørstof <i>kg/dag</i>*20)/6,25))*100)/(N foder – N mælk – N tilvækst) 1)</td>
+  <td>51</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i urin, pct</td>
+  <td>100 – andel i fæces</td>
+  <td>49</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Effektivitet</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- FE, pct</td>
+  <td>((1904+ydelse*0,4)*100)/FE foder</td>
+  <td>85</td>
+  <td>91</td>
+  <td>75</td>
+ </tr>
+ <tr>
+  <td>- N, pct</td>
+  <td>((N mælk+N tilvækst)*100)/N foder</td>
+  <td>26,3</td>
+  <td>26,1</td>
+  <td>25,9</td>
+ </tr>
+</table>
+<p>
+1) Ligning side 49 i DJF Rapport Husdyrbrug nr 36.</p>
+
+<h3>Tunge racer – opdræt ved en kælvealder på 26 mdr.</h3>
+<table border=1 cellspacing=0 cellpadding=3>
+ <tr>
+  <td><B>Område</B></td>
+  <td><B>Beregning</B></td>
+  <td><B>Standard</B></td>
+  <td><B>Min</B></td>
+  <td><B>Maks</B></td>
+ </tr>
+ <tr>
+  <td><EM>Produktionsoplysninger</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, g dagligt</td>
+  <td>Indberettes</td>
+  <td>700</td>
+  <td>500</td>
+  <td>900</td>
+ </tr>
+ <tr>
+  <td>- FE afgræsning</td>
+  <td>Indberettes</td>
+  <td>0</td>
+  <td>0</td>
+  <td>700</td>
+ </tr>
+ <tr>
+  <td><EM>Foderbehov</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td colspan=2><font size=1>For ovenstående prod.</font></td>
+ </tr>
+ <tr>
+  <td>- energi, FE</td>
+  <td>1683+2,19*(700-tilvækst)</td>
+  <td>1683</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tørstof, kg</td>
+  <td>FE*1,35+0,00025*(700-tilvækst)</td>
+  <td>2272</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, kg</td>
+  <td>FE*0,025+10*(FE afgræsning/FE)</td>
+  <td>42</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Produktion</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, foster, kg N</td>
+  <td>365*tilv*0,000025</td>
+  <td>6,4</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>Gødning, kg N ab dyr</td>
+  <td>N foder – N tilvækst</td>
+  <td>35,6</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- afsat på marken, pct</td>
+  <td>(FE afgræsning*100)/FE</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i fæces, pct</td>
+  <td>(((0,04*(N foder, <i>g/dag</i>)+((tørstof<sup>2</sup> <i>kg/dag</i>*1,8)/6,25)+((tørstof <i>kg/dag</i>*20)/6,25))*100)/(N foder – N tilvækst) 1)</td>
+  <td>37</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i urin, pct</td>
+  <td>100 – andel i fæces</td>
+  <td>63</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Effektivitet</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, pct</td>
+  <td>((N tilvækst)*100)/N foder</td>
+  <td>15,2</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+</table>
+<p>
+1) Ligning side 49 i DJF Rapport Husdyrbrug nr 36.</p>
+<p>
+<h3>Tunge racer – ungtyre med en afgangsvægt på 450 kg.</h3>
+<table border=1 cellspacing=0 cellpadding=3>
+ <tr>
+  <td><B>Område</B></td>
+  <td><B>Beregning</B></td>
+  <td><B>Standard</B></td>
+  <td><B>Min</B></td>
+  <td><B>Maks</B></td>
+ </tr>
+ <tr>
+  <td><EM>Produktionsoplysninger</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, g dagligt</td>
+  <td>Indberettes</td>
+  <td>1100</td>
+  <td>900</td>
+  <td>1300</td>
+ </tr>
+ <tr>
+  <td><EM>Foderbehov</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td colspan=2><font size=1>For ovenstående prod.</font></td>
+ </tr>
+ <tr>
+  <td>- energi, FE</td>
+  <td>1,825*450+0,00605*450<sup>2</sup> - 75</td>
+  <td>1971</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tørstof, kg</td>
+  <td>FE*0,96</td>
+  <td>1892</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, kg</td>
+  <td>FE*0,022</td>
+  <td>42</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Produktion</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, foster, kg N</td>
+  <td>365*tilv*0,000025</td>
+  <td>10</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>Gødning, kg N ab dyr</td>
+  <td>N foder – N tilvækst</td>
+  <td>32</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- afsat på marken, pct</td>
+  <td>(FE afgræsning*100)/FE</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i fæces, pct</td>
+  <td>(((0,04*(N foder, <i>g/dag</i>)+((tørstof<sup>2</sup> <i>kg/dag</i>*1,8)/6,25)+((tørstof <i>kg/dag</i>*20)/6,25))*100)/(N foder – N tilvækst) 1)</td>
+  <td>33</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i urin, pct</td>
+  <td>100 – andel i fæces</td>
+  <td>67</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Effektivitet</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, pct</td>
+  <td>((N tilvækst)*100)/N foder</td>
+  <td>24</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+</table>
+<p>
+1) Ligning side 49 i DJF Rapport Husdyrbrug nr 36.</p>
+<h3>Jersey racer - køer</h3>
+<table border=1 cellspacing=0 cellpadding=3>
+ <tr>
+  <td><B>Område</B></td>
+  <td><B>Beregning</B></td>
+  <td><B>Standard</B></td>
+  <td><B>Min</B></td>
+  <td><B>Maks</B></td>
+ </tr>
+ <tr>
+  <td><EM>Produktionsoplysninger</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- årsydelse, kg EKM</td>
+  <td>Indberettes</td>
+  <td>7500</td>
+  <td>5500</td>
+  <td>11500</td>
+ </tr>
+ <tr>
+  <td>- FE afgræsning</td>
+  <td>Indberettes</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1500</td>
+ </tr>
+ <tr>
+  <td><EM>Foderbehov</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td colspan=2><font size=1>For ovenstående prod.</font></td>
+ </tr>
+ <tr>
+  <td>- energi, FE</td>
+  <td>1192+0,4*ydelse+1,67*10<sup>-5</sup>*ydelse<sup>2</sup></td>
+  <td>5131</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tørstof, kg</td>
+  <td>FE*(1,10+(7500-ydelse)*0,00002)</td>
+  <td>5644</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, kg</td>
+  <td>FE*0,028</td>
+  <td>144</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Produktion</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- mælkeprotein, kg N</td>
+  <td>Ydelse*0,00488</td>
+  <td>37</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, foster, kg N</td>
+  <td>Fast</td>
+  <td>1</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>Gødning, kg N ab dyr</td>
+  <td>N foder - N mælk – N tilvækst</td>
+  <td>106</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- afsat på marken, pct</td>
+  <td>(FE afgræsning*100)/FE</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i fæces, pct</td>
+  <td>(((0,04*(N foder <i>g/dag</i>)+((tørstof<sup>2</sup> <i>kg/dag</i>*1,8)/6,25)+((tørstof <i>kg/dag</i>*20)/6,25))*100)/(N foder – N mælk – N tilvækst) 1)</td>
+  <td>51</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i urin, pct</td>
+  <td>100 – andel i fæces</td>
+  <td>49</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Effektivitet</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- FE, pct</td>
+  <td>((1461+ydelse*0,4)*100)/FE foder</td>
+  <td>87</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, pct</td>
+  <td>((N mælk+N tilvækst)*100)/N foder</td>
+  <td>26,3</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+</table>
+<p>
+1) Ligning side 49 i DJF Rapport Husdyrbrug nr 36.</p>
+
+<h3>Jersey racer – opdræt ved en kælvealder på 24 mdr.</h3>
+<table border=1 cellspacing=0 cellpadding=3>
+ <tr>
+  <td><B>Område</B></td>
+  <td><B>Beregning</B></td>
+  <td><B>Standard</B></td>
+  <td><B>Min</B></td>
+  <td><B>Maks</B></td>
+ </tr>
+ <tr>
+  <td><EM>Produktionsoplysninger</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, g dagligt</td>
+  <td>Indberettes</td>
+  <td>500</td>
+  <td>400</td>
+  <td>700</td>
+ </tr>
+ <tr>
+  <td>- FE afgræsning</td>
+  <td>Indberettes</td>
+  <td>0</td>
+  <td>0</td>
+  <td>500</td>
+ </tr>
+ <tr>
+  <td><EM>Foderbehov</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td colspan=2><font size=1>For ovenstående prod.</font></td>
+ </tr>
+ <tr>
+  <td>- energi, FE</td>
+  <td>1236+1,83*(500-tilvækst)</td>
+  <td>1236</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tørstof, kg</td>
+  <td>FE*1,35+0,00025*(500-tilvækst)</td>
+  <td>2292</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, kg</td>
+  <td>FE*0,025+10*(FE afgræsning/FE)</td>
+  <td>31</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Produktion</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, foster, kg N</td>
+  <td>365*tilv*0,000025</td>
+  <td>4,6</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>Gødning, kg N ab dyr</td>
+  <td>N foder – N tilvækst</td>
+  <td>26,4</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- afsat på marken, pct</td>
+  <td>(FE afgræsning*100) / FE</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i fæces, pct</td>
+  <td>(((0,04*(N foder, <i>g/dag</i>)+((tørstof<sup>2</sup> <i>kg/dag</i>*1,8)/6,25)+((tørstof <i>kg/dag</i>*20)/6,25))*100)/(N foder – N tilvækst) 1)</td>
+  <td>37</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i urin, pct</td>
+  <td>100 – andel i fæces</td>
+  <td>63</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Effektivitet</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, pct</td>
+  <td>((N tilvækst)*100)/N foder</td>
+  <td>14,8</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+</table>
+<p>
+1) Ligning side 49 i DJF Rapport Husdyrbrug nr 36.</p>
+
+<h3>Jersey racer – ungtyre med en afgangsvægt på 300 kg.</h3>
+<table border=1 cellspacing=0 cellpadding=3>
+ <tr>
+  <td><B>Område</B></td>
+  <td><B>Beregning</B></td>
+  <td><B>Standard</B></td>
+  <td><B>Min</B></td>
+  <td><B>Maks</B></td>
+ </tr>
+ <tr>
+  <td><EM>Produktionsoplysninger</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, g dagligt</td>
+  <td>Indberettes</td>
+  <td>900</td>
+  <td>700</td>
+  <td>1100</td>
+ </tr>
+ <tr>
+  <td><EM>Foderbehov</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td colspan=2><font size=1>For ovenstående prod.</font></td>
+ </tr>
+ <tr>
+  <td>- energi, FE</td>
+  <td>(2,308*300+0,00676*300<sup>2</sup> - 35)</td>
+  <td>1266</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tørstof, kg</td>
+  <td>0,96*FE</td>
+  <td>1215</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, kg</td>
+  <td>FE*0,022</td>
+  <td>28</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Produktion</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- tilvækst, foster, kg N</td>
+  <td>365*tilv*0,000025</td>
+  <td>8,2</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>Gødning, kg N ab dyr</td>
+  <td>N foder – N tilvækst</td>
+  <td>19,8</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- afsat på marken, pct</td>
+  <td>(FE afgræsning*100)/FE</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i fæces, pct</td>
+  <td>(((0,04*(N foder, <i>g/dag</i>)+((tørstof<sup>2</sup> <i>kg/dag</i>*1,8)/6,25)+((tørstof <i>kg/dag</i>*20)/6,25))*100)/(N foder – N tilvækst) 1)</td>
+  <td>33</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- andel i urin, pct</td>
+  <td>100 – andel i fæces</td>
+  <td>67</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td><EM>Effektivitet</EM></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>- N, pct</td>
+  <td>((N tilvækst)*100)/N foder</td>
+  <td>29</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+</table>
+<p>
+1) Ligning side 49 i DJF Rapport Husdyrbrug nr 36.</p>
+<form name="update" action="Dummy.asp" method="post">
+<input type="hidden" name="saveUpdates" value="false">
+</form>
+</body>
+</html>

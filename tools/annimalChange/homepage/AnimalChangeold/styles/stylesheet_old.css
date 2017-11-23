@@ -1,0 +1,138 @@
+/*General body*/
+body{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: White;
+}
+/*General table*/
+table{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   color: red;
+   vertical-align : top;
+}
+th{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   vertical-align : top;
+}
+td{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   vertical-align : top;
+}
+a:link{
+	color: red;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+a:visited{
+	color: red;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+a:hover{
+   color: red;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+ /*  background : Red;*/
+}
+a:active{
+	color: red;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+h1{
+	color : red;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 20px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h2{
+	color : red;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 18px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h3{
+   color : red;
+   font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size : 16px;
+   font-weight : bold;
+   margin-top : 0px;
+   margin-bottom : 0px;
+}
+h4{
+	color : red;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h5{
+	color : red;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+h6{
+	color : red;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	font-weight : bold;
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+hr{
+	color : white;
+}
+body.data{
+	background-color : #94BEE7;
+	color : white;
+}
+table.data{
+	background-color : #94BEE7;
+}
+td.data{
+	background-color : #94BEE7;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+button{
+	background-color: #DEEFF7;
+	color : Red;
+	font-weight: bold;
+}
+.border{
+	border : groove 1px;
+} 
+.TabView{
+   color: Red;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+} 
+A.TabView:link{
+   Text-Decoration: none;
+   color: Red;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+} 
+A.TabView:visited{
+   Text-Decoration: none;
+   color: Red;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+A.TabView:hover{
+   Text-Decoration: none;
+   color: #6495ED;
+   font-size:10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+} 

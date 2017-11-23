@@ -1,0 +1,643 @@
+class Sowing
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Soiltype
+    {
+	label = "";
+	position = (415 132);
+	states = ("State 1" "State 2");
+	HR_LinkMode = "[SoilWaterContent:0][workability:0][SoilWaterContent_1:0][workability_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Trafficability_1
+    {
+	label = "";
+	position = (865 591);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield_1:0][Util_1:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Sowing:0][Sowing_1:0][ExpectedYield_1:0][Util_1:0]";
+	HR_Group = "0";
+    }
+
+    node Trafficability
+    {
+	label = "";
+	position = (380 614);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield:0][Util:0]";
+	HR_LinkMode = "[Sowing:0][ExpectedYield:0][Util:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node EmptyField_1
+    {
+	label = "";
+	position = (587 511);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[Util_1:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Sowing:0][Sowing_1:0][Util_1:0]";
+	HR_Group = "0";
+    }
+
+    node EmptyField
+    {
+	label = "";
+	position = (82 536);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[Util:0]";
+	HR_LinkMode = "[Sowing:0][EmptyField_1:0][Util:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    utility Util_1
+    {
+	label = "";
+	position = (787 635);
+	HR_Desc = "";
+	HR_NodeSize = "(98, 58)";
+	HR_Group = "0";
+    }
+
+    node SoilTemperature_1
+    {
+	label = "";
+	position = (537 590);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield_1:0][Util_1:0]";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_NodeSize = "(115, 54)";
+	HR_LinkMode = "[Moisture:0][Sowing:0][SoilTemperature_1:0][Sowing_1:0][ExpectedYield_1:0][Util_1:0]";
+	HR_Group = "0";
+    }
+
+    node workability_1
+    {
+	label = "";
+	position = (894 412);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield_1:0][Util_1:0]";
+	HR_NodeSize = "(94, 74)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Sowing:0][Sowing_1:0][ExpectedYield_1:0][Util_1:0]";
+	HR_Group = "0";
+    }
+
+    node SoilWaterContent_1
+    {
+	label = "";
+	position = (639 425);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[Trafficability_1:0]";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(124, 92)";
+	HR_LinkMode = "[harvest:0][WaterConten_1:0][trafficability:0][workability:0][plantDevelopment:0][trafficability_1:0][plantDevelopment_1:0][workability_1:0][SoilTemperature_1:0][SoilStress_1:0]";
+	HR_Group = "0";
+    }
+
+    node Weather_1
+    {
+	label = "";
+	position = (633 290);
+	states = ("State 1" "State 2");
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[WaterConten:0][Moisture:0][Drought:0][SoilWaterConten_1:0][SoilWaterContent_1:0]";
+	HR_Group = "0";
+    }
+
+    node JulianDay_1
+    {
+	label = "";
+	position = (679 672);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield_1:0][Util_1:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Sowing:0][Sowing_1:0][ExpectedYield_1:0][Util_1:0]";
+	HR_Group = "0";
+    }
+
+    decision Sowing_1
+    {
+	label = "";
+	position = (824 519);
+	states = ("Action 1" "Action 2");
+	HR_LinkGroup = "[ExpectedYield_1:0][Util_1:0]";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[U1:0][ExpectedYield:0][Sowing_1:0][ExpectedYield_1:0][Util_1:0]";
+	HR_Group = "0";
+    }
+
+    node workability
+    {
+	label = "";
+	position = (357 436);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield:0][Util:0]";
+	HR_LinkMode = "[Sowing:0][ExpectedYield:0][Util:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node JulianDay
+    {
+	label = "";
+	position = (40 685);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield:0][Util:0]";
+	HR_LinkMode = "[Sowing:0][JulianDay_1:0][ExpectedYield:0][Util:0]";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node WeatherForecast
+    {
+	label = "";
+	position = (339 286);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[RainFall_1:0][Weather_1:0]";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(104, 61)";
+	HR_LinkMode = "[RainFall_1:0][Wind_1:0][Temp_1:0][AirTemperature_1:0][Weather_1:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    utility Util
+    {
+	label = "";
+	position = (299 652);
+	HR_NodeSize = "(98, 58)";
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node SoilTemperature
+    {
+	label = "";
+	position = (176 581);
+	states = ("State 1" "State 2");
+	HR_LinkGroup = "[ExpectedYield:0][Util:0]";
+	HR_NodeSize = "(115, 54)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Moisture:0][Sowing:0][SoilTemperature_1:0][ExpectedYield:0][Util:0]";
+	HR_Group = "0";
+    }
+
+    node Weather
+    {
+	label = "";
+	position = (168 305);
+	states = ("State 1" "State 2");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[WaterConten:0][Moisture:0][Drought:0][SoilWaterConten:0][SoilWaterContent:0]";
+	HR_Group = "0";
+    }
+
+    decision Sowing
+    {
+	label = "";
+	position = (303 503);
+	states = ("Action 1" "Action 2");
+	HR_LinkControlPoints = "";
+	HR_LinkGroup = "[ExpectedYield:0][Util:0][Util_1:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][ExpectedYield:0][Sowing_1:0][EmptyField_1:0][Util:0]";
+	HR_Group = "0";
+    }
+
+    node SoilWaterContent
+    {
+	label = "";
+	position = (166 465);
+	states = ("Lag1" "Lag2" "Lag3" "Lag4" "Lag5");
+	HR_LinkGroup = "[Trafficability:0]";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_NodeSize = "(106, 75)";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[harvest:0][WaterConten_1:0][workability:0][plantDevelopment:0][SoilWaterConten_1:0][SoilWaterContent_1:0][SoilTemperature:0][SoilWaterContent:0][SoilStress:0]";
+	HR_Group = "0";
+    }
+
+    potential (Soiltype)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Trafficability_1)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Trafficability)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (EmptyField_1 | Sowing EmptyField)
+    {
+	data = ((( 1 1 )	%  Sowing=Action 1  EmptyField=State 1
+		 ( 1 1 ))	%  Sowing=Action 1  EmptyField=State 2
+		(( 1 1 )	%  Sowing=Action 2  EmptyField=State 1
+		 ( 1 1 )));	%  Sowing=Action 2  EmptyField=State 2
+    }
+
+    potential (EmptyField)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Util_1 | EmptyField_1 Trafficability_1 JulianDay_1 workability_1 SoilTemperature_1 Sowing_1)
+    {
+	data = (((((( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 )))	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		  ((( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))))	%  EmptyField_1=State 1  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		 (((( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 )))	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		  ((( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 )))))	%  EmptyField_1=State 1  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		((((( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 )))	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		  ((( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))))	%  EmptyField_1=State 2  Trafficability_1=State 1  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		 (((( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 )))	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 1  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+		  ((( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 1  SoilTemperature_1=State 2  Sowing_1=Action 2
+		   (( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 1
+		      0 )	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 1  Sowing_1=Action 2
+		    ( 0	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 1
+		      0 ))))));	%  EmptyField_1=State 2  Trafficability_1=State 2  JulianDay_1=State 2  workability_1=State 2  SoilTemperature_1=State 2  Sowing_1=Action 2
+    }
+
+    potential (SoilTemperature_1 | SoilWaterContent_1 SoilTemperature)
+    {
+	data = ((( 1 1 )	%  SoilWaterContent_1=State 1  SoilTemperature=State 1
+		 ( 1 1 ))	%  SoilWaterContent_1=State 1  SoilTemperature=State 2
+		(( 1 1 )	%  SoilWaterContent_1=State 2  SoilTemperature=State 1
+		 ( 1 1 )));	%  SoilWaterContent_1=State 2  SoilTemperature=State 2
+    }
+
+    potential (workability_1 | Soiltype SoilWaterContent_1)
+    {
+	data = ((( 1 1 )	%  Soiltype=State 1  SoilWaterContent_1=State 1
+		 ( 1 1 ))	%  Soiltype=State 1  SoilWaterContent_1=State 2
+		(( 1 1 )	%  Soiltype=State 2  SoilWaterContent_1=State 1
+		 ( 1 1 )));	%  Soiltype=State 2  SoilWaterContent_1=State 2
+    }
+
+    potential (SoilWaterContent_1 | Soiltype SoilWaterContent Weather_1)
+    {
+	data = (((( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag1  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 1  SoilWaterContent=Lag1  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag2  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 1  SoilWaterContent=Lag2  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag3  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 1  SoilWaterContent=Lag3  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag4  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 1  SoilWaterContent=Lag4  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag5  Weather_1=State 1
+		  ( 1 1 )))	%  Soiltype=State 1  SoilWaterContent=Lag5  Weather_1=State 2
+		((( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag1  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 2  SoilWaterContent=Lag1  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag2  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 2  SoilWaterContent=Lag2  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag3  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 2  SoilWaterContent=Lag3  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag4  Weather_1=State 1
+		  ( 1 1 ))	%  Soiltype=State 2  SoilWaterContent=Lag4  Weather_1=State 2
+		 (( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag5  Weather_1=State 1
+		  ( 1 1 ))));	%  Soiltype=State 2  SoilWaterContent=Lag5  Weather_1=State 2
+    }
+
+    potential (Weather_1 | WeatherForecast)
+    {
+	data = (( 1 1 )	%  WeatherForecast=State 1
+		( 1 1 ));	%  WeatherForecast=State 2
+    }
+
+    potential (JulianDay_1 | JulianDay)
+    {
+	data = (( 1 1 )	%  JulianDay=State 1
+		( 1 1 ));	%  JulianDay=State 2
+    }
+
+    potential (Sowing_1 | Trafficability_1 EmptyField_1 SoilTemperature_1 JulianDay_1 workability_1)
+    {
+	data = (((((( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 )))	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 2
+		  ((( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 ))))	%  Trafficability_1=State 1  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 2
+		 (((( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 )))	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 2
+		  ((( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 )))))	%  Trafficability_1=State 1  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 2
+		((((( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 )))	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 2
+		  ((( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 ))))	%  Trafficability_1=State 2  EmptyField_1=State 1  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 2
+		 (((( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 )))	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 1  JulianDay_1=State 2  workability_1=State 2
+		  ((( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 1
+		    ( 1 1 ))	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 1  workability_1=State 2
+		   (( 1 1 )	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 1
+		    ( 1 1 ))))));	%  Trafficability_1=State 2  EmptyField_1=State 2  SoilTemperature_1=State 2  JulianDay_1=State 2  workability_1=State 2
+    }
+
+    potential (workability | Soiltype SoilWaterContent)
+    {
+	data = ((( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag1
+		 ( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag2
+		 ( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag3
+		 ( 1 1 )	%  Soiltype=State 1  SoilWaterContent=Lag4
+		 ( 1 1 ))	%  Soiltype=State 1  SoilWaterContent=Lag5
+		(( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag1
+		 ( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag2
+		 ( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag3
+		 ( 1 1 )	%  Soiltype=State 2  SoilWaterContent=Lag4
+		 ( 1 1 )));	%  Soiltype=State 2  SoilWaterContent=Lag5
+    }
+
+    potential (JulianDay)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (WeatherForecast)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Util | EmptyField Trafficability JulianDay workability SoilTemperature Sowing)
+    {
+	data = (((((( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 )))	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		  ((( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))))	%  EmptyField=State 1  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		 (((( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 )))	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		  ((( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 )))))	%  EmptyField=State 1  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		((((( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 )))	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		  ((( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))))	%  EmptyField=State 2  Trafficability=State 1  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		 (((( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 )))	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 1  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+		  ((( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 1  SoilTemperature=State 2  Sowing=Action 2
+		   (( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 1
+		      0 )	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 1  Sowing=Action 2
+		    ( 0	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 1
+		      0 ))))));	%  EmptyField=State 2  Trafficability=State 2  JulianDay=State 2  workability=State 2  SoilTemperature=State 2  Sowing=Action 2
+    }
+
+    potential (SoilTemperature | SoilWaterContent)
+    {
+	data = (( 1 1 )	%  SoilWaterContent=Lag1
+		( 1 1 )	%  SoilWaterContent=Lag2
+		( 1 1 )	%  SoilWaterContent=Lag3
+		( 1 1 )	%  SoilWaterContent=Lag4
+		( 1 1 ));	%  SoilWaterContent=Lag5
+    }
+
+    potential (Weather)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Sowing | Trafficability EmptyField workability JulianDay SoilTemperature)
+    {
+	data = (((((( 1 1 )	%  Trafficability=State 1  EmptyField=State 1  workability=State 1  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 1  EmptyField=State 1  workability=State 1  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 1  EmptyField=State 1  workability=State 1  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 )))	%  Trafficability=State 1  EmptyField=State 1  workability=State 1  JulianDay=State 2  SoilTemperature=State 2
+		  ((( 1 1 )	%  Trafficability=State 1  EmptyField=State 1  workability=State 2  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 1  EmptyField=State 1  workability=State 2  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 1  EmptyField=State 1  workability=State 2  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 ))))	%  Trafficability=State 1  EmptyField=State 1  workability=State 2  JulianDay=State 2  SoilTemperature=State 2
+		 (((( 1 1 )	%  Trafficability=State 1  EmptyField=State 2  workability=State 1  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 1  EmptyField=State 2  workability=State 1  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 1  EmptyField=State 2  workability=State 1  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 )))	%  Trafficability=State 1  EmptyField=State 2  workability=State 1  JulianDay=State 2  SoilTemperature=State 2
+		  ((( 1 1 )	%  Trafficability=State 1  EmptyField=State 2  workability=State 2  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 1  EmptyField=State 2  workability=State 2  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 1  EmptyField=State 2  workability=State 2  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 )))))	%  Trafficability=State 1  EmptyField=State 2  workability=State 2  JulianDay=State 2  SoilTemperature=State 2
+		((((( 1 1 )	%  Trafficability=State 2  EmptyField=State 1  workability=State 1  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 2  EmptyField=State 1  workability=State 1  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 2  EmptyField=State 1  workability=State 1  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 )))	%  Trafficability=State 2  EmptyField=State 1  workability=State 1  JulianDay=State 2  SoilTemperature=State 2
+		  ((( 1 1 )	%  Trafficability=State 2  EmptyField=State 1  workability=State 2  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 2  EmptyField=State 1  workability=State 2  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 2  EmptyField=State 1  workability=State 2  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 ))))	%  Trafficability=State 2  EmptyField=State 1  workability=State 2  JulianDay=State 2  SoilTemperature=State 2
+		 (((( 1 1 )	%  Trafficability=State 2  EmptyField=State 2  workability=State 1  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 2  EmptyField=State 2  workability=State 1  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 2  EmptyField=State 2  workability=State 1  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 )))	%  Trafficability=State 2  EmptyField=State 2  workability=State 1  JulianDay=State 2  SoilTemperature=State 2
+		  ((( 1 1 )	%  Trafficability=State 2  EmptyField=State 2  workability=State 2  JulianDay=State 1  SoilTemperature=State 1
+		    ( 1 1 ))	%  Trafficability=State 2  EmptyField=State 2  workability=State 2  JulianDay=State 1  SoilTemperature=State 2
+		   (( 1 1 )	%  Trafficability=State 2  EmptyField=State 2  workability=State 2  JulianDay=State 2  SoilTemperature=State 1
+		    ( 1 1 ))))));	%  Trafficability=State 2  EmptyField=State 2  workability=State 2  JulianDay=State 2  SoilTemperature=State 2
+    }
+
+    potential (SoilWaterContent | Soiltype Weather)
+    {
+	data = ((( 1 1 1 1 1 )	%  Soiltype=State 1  Weather=State 1
+		 ( 1 1 1 1 1 ))	%  Soiltype=State 1  Weather=State 2
+		(( 1 1 1 1 1 )	%  Soiltype=State 2  Weather=State 1
+		 ( 1 1 1 1 1 )));	%  Soiltype=State 2  Weather=State 2
+    }
+} % class Sowing

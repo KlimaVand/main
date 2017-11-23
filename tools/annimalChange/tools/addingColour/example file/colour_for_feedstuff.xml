@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NewDataSet>
+  <feedItem>
+    <Identity>1</Identity>
+    <Name>Cotton-seed cake, husked                                                                                                                                                                                                                                        </Name>
+    <FeedCode>101</FeedCode>
+    <Main>
+      <Identity>1</Identity>
+      <Value color="green">false</Value>
+      <Unit>none</Unit>
+      <Description> Is true if this item is the main product of the crop</Description>
+    </Main>
+    <Fibre_concentration>
+      <Identity>1</Identity>
+      <Value color="green">0.104</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>The concentration of lignin (=acid detergent fibre)</Description>
+    </Fibre_concentration>
+    <NFE_concentration>
+      <Identity>1</Identity>
+      <Value color="green">0.069</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>Concentration of nitrogen-free extract (=sugar and starch)</Description>
+    </NFE_concentration>
+    <CrudeProtein_concentration>
+      <Identity>1</Identity>
+      <Value color="green">0.515</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>Concentration of crude protein (= 6.25 times nitrogen concentration)</Description>
+    </CrudeProtein_concentration>
+    <Fat_concentration>
+      <Identity>1</Identity>
+      <Value color="green">0.035</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>Concentration of fat</Description>
+    </Fat_concentration>
+    <Energy_concentration>
+      <Identity>1</Identity>
+      <Value color="green">16.3409</Value>
+      <Unit>MJ/kgDM</Unit>
+      <Description>Concentration of metabolizable energy</Description>
+    </Energy_concentration>
+    <Ash_concentration>
+      <Identity>1</Identity>
+      <Value color="green">0.073</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>Concentration of ash</Description>
+    </Ash_concentration>
+    <Nitrate_concentration>
+      <Identity>1</Identity>
+      <Value color="green">0</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>Nitrate concentration</Description>
+    </Nitrate_concentration>
+    <DMDigestibility>
+      <Identity>1</Identity>
+      <Value color="green">0.8</Value>
+      <Unit>kg/kgDM</Unit>
+      <Description>Dry matter digestibility</Description>
+    </DMDigestibility>
+    <Bedding_material>
+      <Identity>1</Identity>
+      <Value color="green">false</Value>
+      <Unit>Boolean</Unit>
+      <Description>Is true if this item can be used as bedding</Description>
+    </Bedding_material>
+  </feedItem>
+</NewDataSet>

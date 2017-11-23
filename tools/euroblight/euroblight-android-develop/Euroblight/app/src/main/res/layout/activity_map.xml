@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity" >
+
+    <WebView
+        android:id="@+id/webViewMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMapLocations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:background="@color/overlay_view_color" >
+
+        <com.af.euroblight2.objects.CustomSpinner
+            android:id="@+id/spinnerLocations"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="@dimen/listview_row_horizontal_margin"
+            android:layout_weight="1"
+            android:entries="@array/map_locations_list" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/error_text_no_connection_available"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+      
+      <ScrollView
+          android:id="@+id/scrollViewMapInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="false"
+          android:background="@color/overlay_view_color"
+          android:visibility="invisible" >
+     	
+     	<include layout="@layout/map_info_layout"/>
+	   
+	 </ScrollView>
+</RelativeLayout>

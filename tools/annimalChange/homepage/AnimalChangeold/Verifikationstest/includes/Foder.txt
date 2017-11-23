@@ -1,0 +1,37 @@
+' Beregning af forbrug af grovfoder, korn og indkøbt foder
+' Iver Thysen, 27. jan 2004
+
+' Input
+'    Mark_FE_grovfoder = FE grovfoder produceret i marken
+'    Mark_TS_grovfoder = kg tørstof grovfoder produceret i marken
+'    Mark_FE_korn = FE korn produceret i marken
+'    Besaetning_FE = FE krævet af besætningen
+'    Conc_besaetning = FE / kg tørstof i total foder
+
+' Output
+'    Salg_FE_grovfoder = Salg af evt. overskud af grovfoder
+'    Salg_FE_korn = Salg af evt. overskud af korn
+'    Koeb_FE_foder = Køb af indkøbt foder (samme energikoncentration som korn)
+
+Conc_grovfoder = Mark_FE_grovfoder / Mark_TS_grovfoder
+Conc_tilskud = 1
+
+Forbrug_FE_grovfoder = (1 - 1/Conc_besaetning) / (1 - 1/Conc_grovfoder) * Besaetning_FE
+Balance_FE_grovfoder = Mark_FE_grovfoder - Forbrug_FE_grovfoder
+
+If Balance_FE_grovfoder > 0 Then
+   Salg_FE_grovfoder = Balance_FE_grovfoder
+Else
+   Salg_FE_grovfoder = 0
+End IF
+
+Koeb_FE_foder = FE_besaetning - Forbrug_FE_grovfoder - Mark_FE_korn
+
+If Koeb_FE_foder < 0 Then
+   Salg_FE_korn = - Koeb_FE_foder
+   Koeb_FE_foder = 0
+Else
+   Salg_FE_korn = 0
+End If
+
+

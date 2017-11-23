@@ -1,0 +1,459 @@
+class harvest
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node WeatherForecast
+    {
+	label = "";
+	position = (89 79);
+	states = ("State 1" "State 2");
+	HR_LinkMode = "[RainFall_1:0][RelativeHumidity_1:0][AirTemperature_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node trafficability_1
+    {
+	label = "";
+	position = (909 591);
+	states = ("State 1" "State 2");
+	HR_LinkMode = "[harvest:0][U1_1:0][harvest_1:0]";
+	HR_LinkGroup = "[harvest:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node trafficability
+    {
+	label = "";
+	position = (408 553);
+	states = ("State 1" "State 2");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[harvest:0][U1:0]";
+    }
+
+    node AccPrecipitation_1
+    {
+	label = "";
+	position = (816 296);
+	states = ("State 1");
+	HR_NodeSize = "(125, 48)";
+	HR_State_0 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][harvest:0][U1_1:0][harvest_1:0]";
+	HR_Group = "0";
+    }
+
+    node AccPrecipitation
+    {
+	label = "";
+	position = (265 299);
+	states = ("State 1");
+	HR_NodeSize = "(111, 43)";
+	HR_LinkMode = "[U1:0][harvest:0][AccPrecipitation_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_0 = "";
+    }
+
+    node DS_1
+    {
+	label = "";
+	position = (690 724);
+	states = ("State 1" "State 2");
+	HR_LinkMode = "[harvest_1:0][U1_1:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node DS
+    {
+	label = "";
+	position = (191 732);
+	states = ("State 1" "State 2");
+	HR_LinkMode = "[U1:0][harvest:0][DS_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node RelativeHumidity_1
+    {
+	label = "";
+	position = (578 164);
+	states = ("State 1");
+	HR_NodeSize = "(127, 45)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Moisture:0][Moisture_1:0]";
+	HR_Group = "0";
+    }
+
+    utility U1_1
+    {
+	label = "";
+	position = (779 407);
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node AirTemperature_1
+    {
+	label = "";
+	position = (554 255);
+	states = ("State 1");
+	HR_NodeSize = "(112, 49)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Moisture:0][Moisture_1:0][WaterConten_1:0][SoilWaterConten_1:0]";
+	HR_Group = "0";
+    }
+
+    node RainFall_1
+    {
+	label = "";
+	position = (722 167);
+	states = ("State 1");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[WaterConten:0][Moisture:0][WaterConten_1:0][Moisture_1:0][AccPrecipitation_1:0][SoilWaterConten_1:0]";
+	HR_Group = "0";
+    }
+
+    decision harvest_1
+    {
+	label = "";
+	position = (775 581);
+	states = ("Action 1");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][U1_1:0]";
+	HR_Group = "0";
+    }
+
+    node Moisture_1
+    {
+	label = "";
+	position = (687 345);
+	states = ("State 1");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[harvest:0][U1_1:0][harvest_1:0]";
+	HR_Group = "0";
+    }
+
+    node DryMatterInPlant_1
+    {
+	label = "";
+	position = (624 517);
+	states = ("State 1");
+	HR_NodeSize = "(118, 65)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[harvest:0][U1_1:0][harvest_1:0]";
+	HR_Group = "0";
+    }
+
+    node JulianDay_1
+    {
+	label = "";
+	position = (626 680);
+	states = ("State 1");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[harvest:0][U1_1:0][harvest_1:0]";
+	HR_Group = "0";
+    }
+
+    node RelativeHumidity
+    {
+	label = "";
+	position = (59 169);
+	states = ("State 1");
+	HR_NodeSize = "(107, 53)";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[Moisture:0][RelativeHumidity_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node AirTemperature
+    {
+	label = "";
+	position = (51 240);
+	states = ("State 1");
+	HR_LinkMode = "[Moisture:0][AirTemperature_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node RainFall
+    {
+	label = "";
+	position = (79 319);
+	states = ("0.0-0.1" "0.2-0.3" "0.4-0.5");
+	HR_State_2 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WaterConten:0][Moisture:0][WaterConten_2:0][SoilWaterConten:0][AccPrecipitation:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    decision harvest
+    {
+	label = "";
+	position = (306 577);
+	states = ("Action 1");
+	HR_LinkMode = "[U1:0][harvest_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    utility U1
+    {
+	label = "";
+	position = (319 397);
+	HR_Group = "0";
+	HR_Desc = "";
+    }
+
+    node JulianDay
+    {
+	label = "";
+	position = (162 675);
+	states = ("State 1");
+	HR_LinkMode = "[harvest:0][U1:0][JulianDay_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node DryMatterInPlant
+    {
+	label = "";
+	position = (178 498);
+	states = ("State 1");
+	HR_NodeSize = "(112, 60)";
+	HR_LinkMode = "[harvest:0][U1:0][DryMatter_1:0][DryMatterInPlant_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Moisture
+    {
+	label = "";
+	position = (166 347);
+	states = ("State 1");
+	HR_LinkMode = "[harvest:0][U1:0][Moisture_1:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (WeatherForecast)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (trafficability_1)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (trafficability)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (AccPrecipitation_1 | RainFall_1 AccPrecipitation)
+    {
+	data = ((( 1 )));	%  RainFall_1=State 1  AccPrecipitation=State 1
+    }
+
+    potential (AccPrecipitation | RainFall)
+    {
+	data = (( 1 )	%  RainFall=0.0-0.1
+		( 1 )	%  RainFall=0.2-0.3
+		( 1 ));	%  RainFall=0.4-0.5
+    }
+
+    potential (DS_1 | DS)
+    {
+	data = (( 1 1 )	%  DS=State 1
+		( 1 1 ));	%  DS=State 2
+    }
+
+    potential (DS)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (RelativeHumidity_1 | WeatherForecast RelativeHumidity)
+    {
+	data = ((( 1 ))	%  WeatherForecast=State 1  RelativeHumidity=State 1
+		(( 1 )));	%  WeatherForecast=State 2  RelativeHumidity=State 1
+    }
+
+    potential (U1_1 | trafficability_1 AccPrecipitation_1 DS_1 JulianDay_1 DryMatterInPlant_1 Moisture_1 harvest_1)
+    {
+	data = ((((((( 0 ))))	%  trafficability_1=State 1  AccPrecipitation_1=State 1  DS_1=State 1  JulianDay_1=State 1  DryMatterInPlant_1=State 1  Moisture_1=State 1  harvest_1=Action 1
+		  (((( 0 ))))))	%  trafficability_1=State 1  AccPrecipitation_1=State 1  DS_1=State 2  JulianDay_1=State 1  DryMatterInPlant_1=State 1  Moisture_1=State 1  harvest_1=Action 1
+		(((((( 0 ))))	%  trafficability_1=State 2  AccPrecipitation_1=State 1  DS_1=State 1  JulianDay_1=State 1  DryMatterInPlant_1=State 1  Moisture_1=State 1  harvest_1=Action 1
+		  (((( 0 )))))));	%  trafficability_1=State 2  AccPrecipitation_1=State 1  DS_1=State 2  JulianDay_1=State 1  DryMatterInPlant_1=State 1  Moisture_1=State 1  harvest_1=Action 1
+    }
+
+    potential (AirTemperature_1 | WeatherForecast AirTemperature)
+    {
+	data = ((( 1 ))	%  WeatherForecast=State 1  AirTemperature=State 1
+		(( 1 )));	%  WeatherForecast=State 2  AirTemperature=State 1
+    }
+
+    potential (RainFall_1 | WeatherForecast)
+    {
+	data = (( 1 )	%  WeatherForecast=State 1
+		( 1 ));	%  WeatherForecast=State 2
+    }
+
+    potential (harvest_1 | trafficability_1 AccPrecipitation_1 DS_1 harvest Moisture_1 DryMatterInPlant_1 JulianDay_1)
+    {
+	data = (((((((( 1 )))))	%  trafficability_1=State 1  AccPrecipitation_1=State 1  DS_1=State 1  harvest=Action 1  Moisture_1=State 1  DryMatterInPlant_1=State 1  JulianDay_1=State 1
+		  ((((( 1 )))))))	%  trafficability_1=State 1  AccPrecipitation_1=State 1  DS_1=State 2  harvest=Action 1  Moisture_1=State 1  DryMatterInPlant_1=State 1  JulianDay_1=State 1
+		((((((( 1 )))))	%  trafficability_1=State 2  AccPrecipitation_1=State 1  DS_1=State 1  harvest=Action 1  Moisture_1=State 1  DryMatterInPlant_1=State 1  JulianDay_1=State 1
+		  ((((( 1 ))))))));	%  trafficability_1=State 2  AccPrecipitation_1=State 1  DS_1=State 2  harvest=Action 1  Moisture_1=State 1  DryMatterInPlant_1=State 1  JulianDay_1=State 1
+    }
+
+    potential (Moisture_1 | Moisture RelativeHumidity_1 AirTemperature_1 RainFall_1)
+    {
+	data = ((((( 1 )))));	%  Moisture=State 1  RelativeHumidity_1=State 1  AirTemperature_1=State 1  RainFall_1=State 1
+    }
+
+    potential (DryMatterInPlant_1 | DryMatterInPlant)
+    {
+	data = (( 1 ));	%  DryMatterInPlant=State 1
+    }
+
+    potential (JulianDay_1 | JulianDay)
+    {
+	data = (( 1 ));	%  JulianDay=State 1
+    }
+
+    potential (RelativeHumidity)
+    {
+	data = ( 1 );
+    }
+
+    potential (AirTemperature)
+    {
+	data = ( 1 );
+    }
+
+    potential (RainFall)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (harvest | trafficability AccPrecipitation DS JulianDay DryMatterInPlant Moisture)
+    {
+	data = ((((((( 1 ))))	%  trafficability=State 1  AccPrecipitation=State 1  DS=State 1  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1
+		  (((( 1 ))))))	%  trafficability=State 1  AccPrecipitation=State 1  DS=State 2  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1
+		(((((( 1 ))))	%  trafficability=State 2  AccPrecipitation=State 1  DS=State 1  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1
+		  (((( 1 )))))));	%  trafficability=State 2  AccPrecipitation=State 1  DS=State 2  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1
+    }
+
+    potential (U1 | trafficability AccPrecipitation DS JulianDay DryMatterInPlant Moisture harvest)
+    {
+	data = ((((((( 0 ))))	%  trafficability=State 1  AccPrecipitation=State 1  DS=State 1  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1  harvest=Action 1
+		  (((( 0 ))))))	%  trafficability=State 1  AccPrecipitation=State 1  DS=State 2  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1  harvest=Action 1
+		(((((( 0 ))))	%  trafficability=State 2  AccPrecipitation=State 1  DS=State 1  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1  harvest=Action 1
+		  (((( 0 )))))));	%  trafficability=State 2  AccPrecipitation=State 1  DS=State 2  JulianDay=State 1  DryMatterInPlant=State 1  Moisture=State 1  harvest=Action 1
+    }
+
+    potential (JulianDay)
+    {
+	data = ( 1 );
+    }
+
+    potential (DryMatterInPlant)
+    {
+	data = ( 1 );
+    }
+
+    potential (Moisture | RelativeHumidity AirTemperature RainFall)
+    {
+	data = (((( 1 )	%  RelativeHumidity=State 1  AirTemperature=State 1  RainFall=0.0-0.1
+		  ( 1 )	%  RelativeHumidity=State 1  AirTemperature=State 1  RainFall=0.2-0.3
+		  ( 1 ))));	%  RelativeHumidity=State 1  AirTemperature=State 1  RainFall=0.4-0.5
+    }
+} % class harvest

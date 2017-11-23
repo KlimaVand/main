@@ -1,0 +1,14 @@
+\chapter{FileInformation}
+
+In this section we will deshripe how FileInformation class in the FarmAC project works. The main idea behind this class is to find a items value. That item could be avgProductionMeat or NumberOfAnimals that is both placed under the fellowing sections farm$\backslash$SelectedScenario$\backslash$Livestock.
+
+Some of the sections, like farm or Livestock, can occurs more than once. The sections which can occur more than once must have an unique Identity attached to it, so we can have a Livestock 1...* and farm 1....*
+
+\section{Path and Identity}
+The Path for the item is stored in 2 lists, respectively Identity and PathNames. One can mannully change them if needed or use other part of the API. The function setPath(List$<$int$>$ aIdentity, List$<$string$>$ aPathNames) do take 2 list and overwrite the existen listes. Then there is setPath(string name). In this case it a string as input on the fomular sectionname(id).sectionname(id)...*
+In the case where section does not have an Identity one should use -1 as ID.
+\section{More on Section numbers}
+The function getSectionNumber(ref int min, ref int max) will find the maximum and minimum section ID. The path in this case should be inilize before calling and should exclude the last ID sectionname(id).sectionname.  min should be initlize with something higher that the expected min and max should be initlize with something smaller that the expected max.
+Since we cannot garantee that the sections id is continius we have created a function that checks if an ID is present or not. doesIDExist(ind id) will see if selected path does have a section wit that ID.
+\section{Resiveing values}
+There is basicaly 2 function that can be used to get the value from an item. getItemString(string itemName) and getItemString(string itemName, string path). The first assume that the path\\itentety has already been sat while the secound does not 

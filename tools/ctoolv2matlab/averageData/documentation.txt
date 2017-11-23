@@ -1,0 +1,10 @@
+Setup:
+Create a line separated text-file that contains path to a number of xls files. Those files must be 128*30
+
+how to run it:
+run this command from Matlab in the folder where average.m and the file from above is present:
+average('testData.txt')
+testData.txt is the filename from above
+
+Calculations:
+Calculate the average

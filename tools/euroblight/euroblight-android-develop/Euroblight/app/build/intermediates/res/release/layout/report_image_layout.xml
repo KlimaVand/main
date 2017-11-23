@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/report_row_height"
+    android:layout_marginLeft="@dimen/report_row_horizontal_margin" >
+
+    <ImageView
+        android:id="@+id/imageViewReportPhoto"
+        android:layout_width="@dimen/report_icon_width"
+        android:layout_height="@dimen/report_icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/imageview_content_description_none"
+        android:src="@drawable/image_placeholder" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/report_row_horizontal_margin"
+        android:contentDescription="@string/imageview_content_description_none"
+        android:onClick="takePhotoButtonTapped"
+        android:src="@drawable/camera" />
+
+</RelativeLayout>
+<!-- From: file:/D:/main/tools/euroblight/euroblight-android-develop/Euroblight/app/src/main/res/layout/report_image_layout.xml -->

@@ -1,0 +1,14 @@
+In system.xml there is room for specify a direct path for each inpufiles needed by FarmAC. There is also a generic place in commonSettings. FarmAC will add the farm number to that path.
+FarmAC will seach upwards in the file hierarchy if the files is not found.
+So if we have this in the system-file
+<alternativePath>C:\information</alternativePath>
+<feedItems>c:\testFarms\Senegal\117050\feedstuff.xml</feedItems>
+then FarmAC will seach like
+C:\information\farmNr\feedstuff.xml
+C:\information\feedstuff.xml
+C:\feedstuff.xml
+c:\testFarms\Senegal\117050\feedstuff.xml
+c:\testFarms\Senegal\feedstuff.xml
+c:\testFarms\feedstuff.xml
+c:\feedstuff.xml
+The same seach mechanic is dont for alternativ-files. If any data is present in alternativ-files then they will take precedent over non-alternativ-files.

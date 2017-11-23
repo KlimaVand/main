@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+<AgroecologicalZone>
+<Identity>1</Identity>
+  <fertiliser>
+    <Identity>1</Identity>
+    <Name>Ammonium nitrate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.335</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>2</Identity>
+    <Name>Urea</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.46</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0.2</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>3</Identity>
+    <Name>Sulphur-coated urea</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.46</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0.2</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>4</Identity>
+    <Name>Ammonium sulphate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.21</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>5</Identity>
+    <Name>Calcium ammonium nitrate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.27</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>6</Identity>
+    <Name>Calcium nitrate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.17</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>7</Identity>
+    <Name>Diammonium phosphate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.21</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>8</Identity>
+    <Name>Monammonium phosphate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.12</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>9</Identity>
+    <Name>Urea ammonium nitrate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.32</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <fertiliser>
+    <Identity>10</Identity>
+    <Name>Urea ammonium sulphate</Name>
+    <Nconcentration>
+      <Description>Concentration of nitrogen</Description>
+      <Value>0.20</Value>
+      <Unit>kg/kg</Unit>
+    </Nconcentration>
+    <Cconcentration>
+      <Description>Concentration of carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </Cconcentration>
+  </fertiliser>
+  <manure>
+    <Identity>1</Identity>
+    <Name>pig slurry</Name>
+    <ManureType>7</ManureType>
+    <SpeciesGroup>2</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0033</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0007</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon degC</Description>
+      <Value>0.009</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.009</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>2</Identity>
+    <Name>cattle slurry</Name>
+    <ManureType>1</ManureType>
+    <SpeciesGroup>1</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0035</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.00255</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.02</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.02</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>3</Identity>
+    <Name>pig deep litter</Name>
+    <ManureType>8</ManureType>
+    <SpeciesGroup>2</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0018</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0054</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.066</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.066</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>4</Identity>
+    <Name>cattle deep litter</Name>
+    <ManureType>2</ManureType>
+    <SpeciesGroup>1</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0019</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0075</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>5</Identity>
+    <Name>cattle solid fraction</Name>
+    <ManureType>5</ManureType>
+    <SpeciesGroup>1</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0019</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0075</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>6</Identity>
+    <Name>Cattle liquid fraction</Name>
+    <ManureType>6</ManureType>
+    <SpeciesGroup>3</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0019</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0075</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>7</Identity>
+    <Name>Acidified slurry</Name>
+    <ManureType>13</ManureType>
+    <SpeciesGroup>1</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0019</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0075</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>8</Identity>
+    <Name>sheep deep litter</Name>
+    <ManureType>24</ManureType>
+    <SpeciesGroup>3</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0019</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0075</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.06</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>9</Identity>
+    <Name>degassed cattle slurry</Name>
+    <ManureType>12</ManureType>
+    <SpeciesGroup>1</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0033</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0007</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon degC</Description>
+      <Value>0.009</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.009</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+  <manure>
+    <Identity>10</Identity>
+    <Name>degassed pig slurry</Name>
+    <ManureType>7</ManureType>
+    <SpeciesGroup>2</SpeciesGroup>
+    <TANconcentration>
+      <Description>Concentration of ammonium nitrogen</Description>
+      <Value>0.0033</Value>
+      <Unit>kg/kg</Unit>
+    </TANconcentration>
+    <organicNconcentration>
+      <Description>Concentration of organic nitrogen</Description>
+      <Value>0.0007</Value>
+      <Unit>kg/kg</Unit>
+    </organicNconcentration>
+    <degCconcentration>
+      <Description>Concentration of readily-degradable organic carbon degC</Description>
+      <Value>0.009</Value>
+      <Unit>kg/kg</Unit>
+    </degCconcentration>
+    <nonDegCconcentration>
+      <Description>Concentration of resistant organic carbon</Description>
+      <Value>0.009</Value>
+      <Unit>kg/kg</Unit>
+    </nonDegCconcentration>
+    <humicCconcentration>
+      <Description>Concentration of humic carbon</Description>
+      <Value>0</Value>
+      <Unit>kg/kg</Unit>
+    </humicCconcentration>
+  </manure>
+</AgroecologicalZone>
+</xml>

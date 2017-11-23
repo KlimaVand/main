@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/eb_custom_button_selected"
+          android:state_pressed="true" />
+    <item android:drawable="@drawable/eb_custom_button_selected"
+          android:state_focused="true" />
+    <item android:drawable="@drawable/eb_custom_button_unselected" />
+</selector>
+<!-- From: file:/D:/main/tools/euroblight/euroblight-android-develop/Euroblight/app/src/main/res/drawable/eb_custom_button.xml -->

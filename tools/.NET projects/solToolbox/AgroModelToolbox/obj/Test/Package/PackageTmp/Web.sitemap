@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+   <siteMapNode title="Start" url="Default.aspx" >
+      <siteMapNode title="Home" url="~/Menu/01_Home/Home.aspx" roles="*" />
+      <siteMapNode title="Input" roles="*" >
+         <siteMapNode title="Input 1" url="~/Menu/02_Input/Input.aspx" />
+      </siteMapNode>
+      <siteMapNode title="Output" roles="*">
+         <siteMapNode title="SmartSoil yield model" url="~/Menu/03_Output/SimpleModelChart.aspx" />
+        <siteMapNode title="Ctool model" url="~/Menu/03_Output/CToolModelChart.aspx" />
+      </siteMapNode>
+      <siteMapNode title="Webpage tools" roles="admin,developer">
+         <siteMapNode title="Change password" url="~/Menu/Account/ChangePassword.aspx" />
+      </siteMapNode>
+      <siteMapNode title="Administration" roles="admin">
+         <siteMapNode title="Users and roles" url="~/Menu/99_Admin/AdminUser.aspx" />
+      </siteMapNode>
+   </siteMapNode>
+</siteMap>

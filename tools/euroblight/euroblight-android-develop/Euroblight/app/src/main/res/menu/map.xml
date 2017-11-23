@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_action_refresh"
+        android:orderInCategory="100"
+        android:icon="@drawable/refresh"
+        android:showAsAction="always"
+        android:title="@string/menu_action_refresh"/>
+    <item
+        android:id="@+id/menu_action_info"
+        android:orderInCategory="100"
+        android:icon="@drawable/info"
+        android:showAsAction="always"
+        android:title="@string/menu_action_info"/>
+    <item
+        android:id="@+id/menu_action_locations"
+        android:orderInCategory="100"
+        android:icon="@drawable/world"
+        android:showAsAction="always"
+        android:title="@string/menu_action_locations"/>
+
+</menu>

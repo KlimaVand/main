@@ -1,0 +1,1616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>FarmAC</title><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<link rel="StyleSheet" href="styles/stylesheet.css" type="text/css">
+</head>
+<style>
+.animation
+{
+position:relative;
+top: 25%;
+left: 20px;
+animation:mymove 10s infinite;
+animation-timing-function:linear;
+-webkit-animation:mymove 5s infinite;
+-webkit-animation-timing-function:linear;
+}
+@keyframes mymove
+{
+from {left:20px;}
+to {left:500px;}
+}
+@-webkit-keyframes mymove
+{
+from {left:20px;}
+to {left:500px;}
+}
+</style>
+<span id="veil" style="position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; background-color: #C8E1F3; display: none;"><blink class="animation">Please wait...</blink></span>
+<script language="javascript">function veil() {document.getElementById('veil').style.display='block';if(document.getElementById('dynamichide')) {document.getElementById('dynamichide').style.display='none';}}</script>
+<body class="data" onFocus="if(FarmNPopupWin.open){FarmNPopupWin.close()};">
+<script language="JavaScript"> var FarmNPopupWin = ''</script>
+<script language="JavaScript" src="scripts/formvalidation.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+  function ChangeText(i,t)
+  {
+     switch (t) {
+     case '1' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=8500");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='Kg milk'");
+                      break;
+     case '2' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=700");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='g. growth/day'");
+                      break;
+     case '3' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=1100");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='g. growth/day'");
+                      break;
+     case '4' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=7500");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='Kg milk'");
+                      break;
+     case '5' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=500");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='g. growth/day'");
+                      break;
+     case '6' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=900");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='g. growth/day'");
+                      break;
+     case '7' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=626");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=279");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='show';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=1280");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='weight, kg'");
+                      break;
+     case '11' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=500");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='show';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='Kg milk'");
+                      break;
+     case '12' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=500");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='g. growth/day'");
+                      break;
+     case '13' :       eval("document.forms.formCattleHerd.inputProductionLevel_"+i+".value=600");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".value=0");
+ eval("document.forms.formCattleHerd.inputProductionLevel2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit2_"+i+".className='hide';");
+ eval("document.forms.formCattleHerd.inputGrazing_"+i+".value=0");
+ eval("document.forms.formCattleHerd.ProductionLevelUnit_"+i+".value='g. growth/day'");
+                      break;
+                }
+  }
+//-->
+</script>
+
+<script language="javascript">
+
+   function checkForNewLine(a)
+   {
+   	var oTBody = document.getElementById('tbodyFeedstuff_'+a+'')//;alert('tbodyFeedstuff_'+i+'');
+   	var oLastRow = oTBody.lastChild;
+   	var newLine = false;
+        var oInput = document.getElementById ("oInput");
+   	while (oLastRow.tagName != "TR")
+   	{
+   		oLastRow = oLastRow.previousSibling;
+   	}	
+   	for (var i = 0; i < oLastRow.childNodes.length; i++)
+   	{
+   		var oCell = oLastRow.childNodes[i];
+   		for (var j = 0; j < oCell.childNodes.length; j++)
+   		{
+   			if (oCell.childNodes[j].tagName == "SELECT") 
+   			{
+   				var oCombo = oCell.childNodes[j];
+   			}
+   			if (oCell.childNodes[j].tagName == "INPUT")
+   			{
+   				oInput = oCell.childNodes[j];
+   			}
+   		}
+   	}
+   	if ((oCombo.selectedIndex != 0) || (oInput.value.length > 0))
+   	{
+   		//Dette svarer til at der indsættes en ny række i tabellen, når brugeren begynder at indtaste data i den nederste række
+   		newLine = true;
+   	}
+   
+   	if (newLine)
+   	{
+   		appendNewSelect(oTBody);
+   	}
+   }
+ 
+   function appendNewSelect(element) 
+   {	
+   	var oTBody = element
+   	var oLastRow = oTBody.lastChild;
+   	//nedenstående loop er nødvendigt fordi IE og Netscape opfatter lastChild forskelligt. IE: direkte efterkommere. Netscape: sidste efterkommer (ikke nødvendigvis direkte)
+   	while (oLastRow.tagName != "TR")
+   	{
+   		oLastRow = oLastRow.previousSibling;	
+   	}
+   	var oNewRow = oLastRow.cloneNode(true);
+   	oTBody.appendChild(oNewRow);
+   }
+
+   function getSectionRowIndex(oElement)
+   {
+   	var oParent = oElement.parentNode;
+   	while (oParent.tagName != "TR")
+   	{
+   		oParent = oParent.parentNode;
+   	}
+   	return oParent.sectionRowIndex;
+   }
+ 
+   function delRow(oElement,i)
+   {
+   	var oTBody = document.getElementById ('tbodyFeedstuff_'+i+'');
+   	var actTBodyRowIndex = getSectionRowIndex(oElement);
+   	if (actTBodyRowIndex == 0) //første række i body - efter overskriften
+   	{
+   		var oRow = oTBody.firstChild;
+   		while (oRow.tagName != "TR")
+   		{
+   			oRow = oRow.nextSibling;
+   		}
+   		var oRowChild = oRow.firstChild;
+   		if (oRowChild.hasChildNodes())
+   		//IE
+   		{
+   			oRowChild.firstChild.selectedIndex = 0;
+   		}
+   		else
+   		{
+   			while (!oRowChild.hasChildNodes())		
+   			{
+   				oRowChild = oRowChild.nextSibling;
+   			}
+   			oRowChild = oRowChild.firstChild;
+   			while (oRowChild.tagName != "SELECT")		
+   			{
+   				oRowChild = oRowChild.nextSibling;
+   			}
+   			oRowChild.selectedIndex = 0;
+   		}
+   	}
+   	else
+   	{
+   		oTBody.deleteRow(actTBodyRowIndex);
+		setFeedstuffString(i)
+   	}
+   }
+ 
+   function getFeedstuff(a){
+   	var cFeedstuff = document.getElementsByName('selFeedstuff_'+a+'');
+   	var strFeedstuff = "";
+   	for (var i = 0; i < cFeedstuff.length; i++)
+   	{
+   		if (parseInt(cFeedstuff[i].value,10) > 0)
+   		{
+   				strFeedstuff += cFeedstuff[i].value +", ";
+   		}
+   	}
+   	return strFeedstuff;
+   }
+
+   function getAmount(a){
+   	var cFeedstuff = document.getElementsByName('feedstuffAmount_'+a+'');
+   	var strFeedstuff = "";
+   	for (var i = 0; i < cFeedstuff.length; i++)
+   	{
+   		if (parseFloat(cFeedstuff[i].value,10) > 0)
+   		{
+   				strFeedstuff += cFeedstuff[i].value +", ";
+   		}
+   	}
+   	return strFeedstuff;
+   }
+ 
+   function mouseOverGif(oImg)
+   {
+   	oImg.setAttribute("src","Images/del1.gif");
+   }
+   
+   function mouseOutGif(oImg)
+   {
+   	oImg.setAttribute("src","Images/del.gif");
+   }
+ 
+   function setFeedstuffString(i){
+   	document.getElementById('hiddenFeedstuffList_'+i+'').value = getFeedstuff(i);
+   	document.getElementById('hiddenAmountList_'+i+'').value = getAmount(i);
+   }
+</script>
+<form name="formCattleHerd" action="DummyCattleHerd.asp" method="post" id="dynamichide" style="display: block;">
+  <table class="data" border="0" style="width: 1800px;">
+    <tr>
+      <th align="left" style="width: 100px;">Herd</th>
+      <th align="left" style="width: 100px;">Animal units<br/>(365 feeding days)</th>
+      <th align="left" style="width: 270px;">Production level</th>
+      <th align="left" style="width: 680px;">Feed ration</th>
+      <th align="left">Housing type</th>
+      <th align="left">Manure storage type</th>
+      <th align="left">&nbsp;</th>
+    </tr>
+    <tr>
+      <td class="data" align="left"><input type="hidden" name="hiddenCattleHerdID_0" value="1"><select name="selectCattleType_0" onChange="ChangeText(0,this.options[this.selectedIndex].value);document.forms.update.saveUpdates.value='true';this.style.color='#ff0000';"><option value="1" selected>Holstein types - dairy</option><option value="2">Holstein types - heifers</option><option value="3">Holstein types - young bulls</option><option value="4">Jersey - dairy cattle</option><option value="5">Jersey - followers</option><option value="6">Jersey - young bulls</option><option value="7">Suckler cows</option><option value="11">Ewes ( mother sheep)</option><option value="12">Lambs (birth & weaning)</option><option value="13">Lambs (weaning & slaughter)</option></select></td>
+      <td class="data" align="left">&nbsp;&nbsp;<input type="text" name="inputAnimalYear_0" value="5" maxlength="5" size="2" onChange="document.forms.update.saveUpdates.value='true';this.style.color='#ff0000';"/></td>
+      <input type="hidden" name="inputGrazing_0" value="0"/>
+      <td class="data" align="left"><input type="text" name="inputProductionLevel_0" id="inputProductionLevel_0" value="8500" maxlength="5" size="2" onChange="document.forms.update.saveUpdates.value='true';this.style.color='#ff0000';"/>&nbsp;<input type="text" id="ProductionLevelUnit_0" name="ProductionLevelUnit_0" style="border: 0px; background-color: #C8E1F3; color: green;" value="Kg milk" size="12"></input>&nbsp;&nbsp;<input class="hide" type="text" name="inputProductionLevel2_0" id="inputProductionLevel2_0" value="0" maxlength="5" size="2" onChange="document.forms.update.saveUpdates.value='true';this.style.color='#ff0000';"/>&nbsp;<input class="hide" type="text" id="ProductionLevelUnit2_0" name="ProductionLevelUnit2_0" value="kg calf" size="4"></input></td>
+<td>
+<table border="0" cellspacing="0" width="100%">
+<tbody id="tbodyFeedstuff_0" name="tbodyFeedstuff_0">
+<tr>
+<td>
+<select id="selFeedstuff_0" name="selFeedstuff_0" onchange="checkForNewLine(0);setFeedstuffString(0);" style="position:relative;top:-3Px;background-color: white;">
+  <option value="-1">Select feedstuff</option>
+  <option value="310">Acidified raw milk</option>
+  <option value="596">Barley - peas, silage 20% peas</option>
+  <option value="598">Barley - peas, silage 40% peas</option>
+  <option value="600">Barley - peas, silage 60% peas</option>
+  <option value="582">Barley - wholcrop (early dough), high fodder index</option>
+  <option value="584">Barley - wholcrop (early dough), low fodder index</option>
+  <option value="583">Barley - wholcrop (early dough), middle fodder index</option>
+  <option value="682">Barley straw, ammonia treated, high fodder index</option>
+  <option value="683">Barley straw, ammonia treated, low fodder index</option>
+  <option value="681">Barley straw, caustic treated</option>
+  <option value="221">Barley, husked</option>
+  <option value="224">Barley, husked meal</option>
+  <option value="483">Barley-wholecrop, fresh</option>
+  <option value="298">Beech granules</option>
+  <option value="390">Beet + straw, silage</option>
+  <option value="385">Beet + top + beet pulp, silage</option>
+  <option value="277">Beet molasses (treacle)</option>
+  <option value="285">Beet pulp, ensiled</option>
+  <option value="282">Beet pulp, fresh</option>
+  <option value="284">Beet pulp, hp, ensiled, 5% molasses</option>
+  <option value="286">Beet pulp, molassed</option>
+  <option value="283">Beet pulp, unmolassed</option>
+  <option value="353">Beet top, fresh, 20% ash</option>
+  <option value="356">Beet top, silage, 20% ash</option>
+  <option value="324">Blood meal</option>
+  <option value="297">Brewer's yeast</option>
+  <option value="476">Broad beans</option>
+  <option value="576">Broad beans, silage</option>
+  <option value="211">Broadbeans</option>
+  <option value="912">Calcium nitrate</option>
+  <option value="348">Calcium soap</option>
+  <option value="391">Carrots</option>
+  <option value="292">Cellulose- pulp</option>
+  <option value="291">Citrus pulp</option>
+  <option value="625">Clover hay, high fodder index</option>
+  <option value="626">Clover hay, low fodder index</option>
+  <option value="422">Clovergrass, 12-15 cm, 20% clover</option>
+  <option value="425">Clovergrass, 12-15 cm, 40% clover</option>
+  <option value="428">Clovergrass, 12-15 cm, 60% clover</option>
+  <option value="423">Clovergrass, 20-25 cm, 20% clover</option>
+  <option value="426">Clovergrass, 20-25 cm, 40% clover</option>
+  <option value="429">Clovergrass, 20-25 cm, 60% clover</option>
+  <option value="421">Clovergrass, 6-8 cm, 20% clover</option>
+  <option value="424">Clovergrass, 6-8 cm, 40% clover</option>
+  <option value="427">Clovergrass, 6-8 cm, 60% clover</option>
+  <option value="521">Clovergrass, silage, high fodder index, 20% clover</option>
+  <option value="524">Clovergrass, silage, high fodder index, 40% clover</option>
+  <option value="527">Clovergrass, silage, high fodder index, 60% clover</option>
+  <option value="523">Clovergrass, silage, low fodder index, 20% clover</option>
+  <option value="526">Clovergrass, silage, low fodder index, 40% clover</option>
+  <option value="529">Clovergrass, silage, low fodder index, 60% clover</option>
+  <option value="522">Clovergrass, silage, middle fodder index, 20% clover</option>
+  <option value="525">Clovergrass, silage, middle fodder index, 40% clover</option>
+  <option value="528">Clovergrass, silage, middle fodder index, 60% clover</option>
+  <option value="555">Cocksfoot, silage</option>
+  <option value="134">Coconut  meal cake</option>
+  <option value="131">Coconut cake</option>
+  <option value="139">Coconut cake, high-fat</option>
+  <option value="105">Cotton seed meal, partially husked</option>
+  <option value="101">Cotton-seed cake, husked</option>
+  <option value="103">Cotton-seed cake, not husked</option>
+  <option value="102">Cotton-seed cake, partially husked</option>
+  <option value="311">Cows' milk-substitute</option>
+  <option value="911">Fish silage</option>
+  <option value="909">Fishmeal, poorly soluble</option>
+  <option value="908">Fishmeal, standard</option>
+  <option value="388">Fodder beet 16,5% DM</option>
+  <option value="351">Fodder beet 18,0% DM</option>
+  <option value="386">Fodder beet 20% DM</option>
+  <option value="475">Fodder kale</option>
+  <option value="575">Fodder kale, silage</option>
+  <option value="241">Fodder maize meal</option>
+  <option value="242">Fodder maize, gluten</option>
+  <option value="227">Fodder Oatmeal</option>
+  <option value="253">Fodder rice meal</option>
+  <option value="740">Fodder salt</option>
+  <option value="760">Fodder urea</option>
+  <option value="309">Full-cream milk, jersey</option>
+  <option value="308">Full-cream milk, large breeds</option>
+  <option value="471">Galega (Goat's rue)</option>
+  <option value="571">Galega (Goat's rue), silage</option>
+  <option value="743">Glauber's salt</option>
+  <option value="262">Grain stillage, dried</option>
+  <option value="261">Grain stillage, fresh</option>
+  <option value="564">Grass - silage, high fodder index</option>
+  <option value="566">Grass - silage, low fodder index</option>
+  <option value="565">Grass - silage, middle fodder index</option>
+  <option value="1565">Grass - silage, middle fodder index grazed</option>
+  <option value="570">Grass - silage, very low fodder index</option>
+  <option value="665">Grass hay</option>
+  <option value="705">Grass pellets, ekstra</option>
+  <option value="706">Grass pellets, plus</option>
+  <option value="707">Grass pellets, standard</option>
+  <option value="465">Grass, 12-15 cm</option>
+  <option value="466">Grass, 20-25 cm</option>
+  <option value="464">Grass, 6-8 cm</option>
+  <option value="481">Green barley, before earing</option>
+  <option value="549">Green manure (second crop), grain (cereals), silage</option>
+  <option value="548">Green manure (second crop), wholecrop, silage</option>
+  <option value="258">Guar meal</option>
+  <option value="671">Hay, eksta</option>
+  <option value="675">Hay, lucerne</option>
+  <option value="672">Hay, plus</option>
+  <option value="673">Hay, standard</option>
+  <option value="449">Italian ryegrass, after grain (cereals)</option>
+  <option value="448">Italian ryegrass, after wholecrop</option>
+  <option value="444">Italian ryegrass, spring, early</option>
+  <option value="1444">Italian ryegrass, spring, early grazed</option>
+  <option value="446">Italian ryegrass, spring, late</option>
+  <option value="445">Italian ryegrass, spring, middle</option>
+  <option value="720">Limestone/Chalk</option>
+  <option value="212">Linseed (Flaxseed)</option>
+  <option value="111">Linseed-cake (Flaxseed cake)</option>
+  <option value="114">Linseed-cake meal (Flax-seed cake meal)</option>
+  <option value="708">Lucerne - pellets, ekstra</option>
+  <option value="709">Lucerne - pellets, standard</option>
+  <option value="602">Lucerne hay</option>
+  <option value="501">Lucerne- silage, high fodder index</option>
+  <option value="502">Lucerne- silage, low fodder index</option>
+  <option value="401">Lucerne, beginning flowering</option>
+  <option value="403">Lucerne, end of flowering</option>
+  <option value="402">Lucerne, flowering</option>
+  <option value="218">Lupins, small leafed</option>
+  <option value="215">Lupins, yellow</option>
+  <option value="730">Magnesium oxide</option>
+  <option value="731">Magnesium phosphate</option>
+  <option value="204">Maize</option>
+  <option value="592">Maize - silage, high fodder index</option>
+  <option value="594">Maize - silage, low fodder index</option>
+  <option value="593">Maize - silage, middle fodder index</option>
+  <option value="245">Maize bran</option>
+  <option value="244">Maize germ</option>
+  <option value="246">Maize meal</option>
+  <option value="247">Maize starch</option>
+  <option value="263">Maize stillage</option>
+  <option value="786">Maize straw</option>
+  <option value="492">Maize, fresh</option>
+  <option value="243">Maize, gluten</option>
+  <option value="265">Malt sprouts</option>
+  <option value="267">Mask, dried</option>
+  <option value="266">Mask, fresh</option>
+  <option value="302">Milk substitute, 51% skimmed milk</option>
+  <option value="301">Milk substitute, 60% skimmed milk</option>
+  <option value="304">Milk substitute, whey  soybean-based</option>
+  <option value="303">Milk substitute, whey-based</option>
+  <option value="205">Milo</option>
+  <option value="724">Monoammonium phosphate</option>
+  <option value="732">Monocalcium phosphate</option>
+  <option value="148">Mustard seed meal</option>
+  <option value="785">Oat - straw</option>
+  <option value="686">Oat straw, ammonia treated</option>
+  <option value="228">Oat, husked meal</option>
+  <option value="202">Oats</option>
+  <option value="586">Oats - wholecrop (early dough), silage</option>
+  <option value="580">Oats + peas + vetch, silage</option>
+  <option value="225">Oats, husked</option>
+  <option value="480">Oats, peas, vetch</option>
+  <option value="486">Oats-wholecrop, fresh</option>
+  <option value="136">Palm cake</option>
+  <option value="799">Pea - straw</option>
+  <option value="125">Peanut meal, partially husked</option>
+  <option value="216">Peas</option>
+  <option value="599">Peas - wholecrop (green ripe), silage</option>
+  <option value="499">Peas - wholecrop, fresh</option>
+  <option value="294">Pectin waste</option>
+  <option value="458">Permanent meadow grass</option>
+  <option value="558">Permanent meadow grass, silage</option>
+  <option value="913">Potassium nitrate</option>
+  <option value="273">Potato pulp</option>
+  <option value="395">Potatoes</option>
+  <option value="288">Prolasse</option>
+  <option value="213">Rape seed, 00</option>
+  <option value="144">Rapeseed cake, 00, 10% fat</option>
+  <option value="145">Rapeseed cake, 00, 10% fat, protected</option>
+  <option value="146">Rapeseed cake, 00, 13% fat</option>
+  <option value="147">Rapeseed cake, 00, 13% fat, protected</option>
+  <option value="142">Rapeseed meal, 00, 4% fat</option>
+  <option value="473">Red clover, beginning flowering</option>
+  <option value="573">Red clover, beginning flowering, silage</option>
+  <option value="717">Red fescue-straw</option>
+  <option value="206">Rice</option>
+  <option value="251">Rice, husked</option>
+  <option value="387">Roots + top</option>
+  <option value="207">Rye</option>
+  <option value="256">Rye bran</option>
+  <option value="257">Rye meal, middlings</option>
+  <option value="796">Rye- straw</option>
+  <option value="689">Rye straw, ammonia treated</option>
+  <option value="697">Rye straw, ammonia treated</option>
+  <option value="716">Ryegrass - straw</option>
+  <option value="345">Saturated fat</option>
+  <option value="173">Sesame seed cake</option>
+  <option value="174">Sesame seed meal</option>
+  <option value="317">Skimmed milk</option>
+  <option value="307">Skimmed milk powder</option>
+  <option value="741">Sodium bicarbonate</option>
+  <option value="742">Sodium hydroxide</option>
+  <option value="151">Soyabean cake</option>
+  <option value="155">Soyabean meal</option>
+  <option value="154">Soyabean meal, husked</option>
+  <option value="290">Soyabean, hulls</option>
+  <option value="214">Soyabeans</option>
+  <option value="201" selected>Spring barley</option>
+  <option value="1201">Spring barley grazed</option>
+  <option value="781">Spring barley - straw</option>
+  <option value="361">Sugar beet</option>
+  <option value="289">Sugar beet slices</option>
+  <option value="278">Sugar cane molasses (treacle)</option>
+  <option value="217">Sunflower seed</option>
+  <option value="161">Sunflower seed cake, husked</option>
+  <option value="162">Sunflower seed cake, partially husked</option>
+  <option value="164">Sunflower seed meal, husked</option>
+  <option value="165">Sunflower seed meal, partially husked</option>
+  <option value="371">Swedes</option>
+  <option value="373">Swedes, top</option>
+  <option value="479">Sweet lupins</option>
+  <option value="579">Sweet lupins, silage</option>
+  <option value="296">Sweet potato-slices</option>
+  <option value="295">Tapioca meal</option>
+  <option value="365">Top + beet pulp, silage</option>
+  <option value="367">Top + straw + beet pulp, silage</option>
+  <option value="366">Top + straw, silage</option>
+  <option value="209">Triticale</option>
+  <option value="595">Triticale - wholecrop (early dough), silage</option>
+  <option value="381">Turnips</option>
+  <option value="546">Undersown Italian ryegrass, silage</option>
+  <option value="347">Vegetable fat</option>
+  <option value="287">Vinasse</option>
+  <option value="203">Wheat</option>
+  <option value="588">Wheat - peas, silage</option>
+  <option value="587">Wheat - wholecrop (early dough), silage</option>
+  <option value="589">Wheat - wholecrop (early dough), silage, high fodder index</option>
+  <option value="591">Wheat - wholecrop (early dough), silage, low fodder index</option>
+  <option value="590">Wheat - wholecrop (early dough), silage, middle fodder index</option>
+  <option value="232">Wheat bran</option>
+  <option value="235">Wheat germ</option>
+  <option value="231">Wheat meal</option>
+  <option value="233">Wheat meal, middlings</option>
+  <option value="788">Wheat- straw</option>
+  <option value="312">Whey</option>
+  <option value="315">Whey permeate</option>
+  <option value="314">Whey powder</option>
+  <option value="715">White clover straw</option>
+  <option value="472">White clover, beginning flowering</option>
+  <option value="572">White clover, beginning flowering, silage</option>
+  <option value="368">Wholecrop + top, silage</option>
+  <option value="581">Wholecrop barley (beginning of earing), silage</option>
+  <option value="574">Wholecrop barley / peas (beginning of earing), silage, 40% peas</option>
+  <option value="577">Wholecrop barley / peas (beginning of earing), silage, 70% peas</option>
+  <option value="578">Wholecrop peas (beginning of earing), silage</option>
+  <option value="597">Wholecrop rye (Green rye beginning of earing), silage</option>
+  <option value="497">Wholecrop,rye</option>
+  <option value="200">Winter barley</option>
+  <option value="782">Winter barley - straw</option>
+  <option value="585">Winter barley - wholecrop (early doyugh), silage</option>
+</select>
+<input id="feedstuffAmount_0" name="feedstuffAmount_0" type="text" style="width: 35px;position:relative;top:-3Px;background-color: white;" value="10" onchange="this.value=this.value.replace(',','.');setFeedstuffString(0);"/> Kg DM/animal/day
+<img style="position:relative;top:3Px;" src="images/del.gif" onclick="delRow(this,0);" onMouseover="mouseOverGif(this)"  onMouseout="mouseOutGif(this)"/>&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<select id="selFeedstuff_0" name="selFeedstuff_0" onchange="checkForNewLine(0);setFeedstuffString(0);" style="position:relative;top:-3Px;background-color: white;">
+  <option value="-1">Select feedstuff</option>
+  <option value="310">Acidified raw milk</option>
+  <option value="596">Barley - peas, silage 20% peas</option>
+  <option value="598">Barley - peas, silage 40% peas</option>
+  <option value="600">Barley - peas, silage 60% peas</option>
+  <option value="582">Barley - wholcrop (early dough), high fodder index</option>
+  <option value="584">Barley - wholcrop (early dough), low fodder index</option>
+  <option value="583">Barley - wholcrop (early dough), middle fodder index</option>
+  <option value="682">Barley straw, ammonia treated, high fodder index</option>
+  <option value="683">Barley straw, ammonia treated, low fodder index</option>
+  <option value="681">Barley straw, caustic treated</option>
+  <option value="221">Barley, husked</option>
+  <option value="224">Barley, husked meal</option>
+  <option value="483">Barley-wholecrop, fresh</option>
+  <option value="298">Beech granules</option>
+  <option value="390">Beet + straw, silage</option>
+  <option value="385">Beet + top + beet pulp, silage</option>
+  <option value="277">Beet molasses (treacle)</option>
+  <option value="285">Beet pulp, ensiled</option>
+  <option value="282">Beet pulp, fresh</option>
+  <option value="284">Beet pulp, hp, ensiled, 5% molasses</option>
+  <option value="286">Beet pulp, molassed</option>
+  <option value="283">Beet pulp, unmolassed</option>
+  <option value="353">Beet top, fresh, 20% ash</option>
+  <option value="356">Beet top, silage, 20% ash</option>
+  <option value="324">Blood meal</option>
+  <option value="297">Brewer's yeast</option>
+  <option value="476">Broad beans</option>
+  <option value="576">Broad beans, silage</option>
+  <option value="211">Broadbeans</option>
+  <option value="912">Calcium nitrate</option>
+  <option value="348">Calcium soap</option>
+  <option value="391">Carrots</option>
+  <option value="292">Cellulose- pulp</option>
+  <option value="291">Citrus pulp</option>
+  <option value="625">Clover hay, high fodder index</option>
+  <option value="626">Clover hay, low fodder index</option>
+  <option value="422">Clovergrass, 12-15 cm, 20% clover</option>
+  <option value="425">Clovergrass, 12-15 cm, 40% clover</option>
+  <option value="428">Clovergrass, 12-15 cm, 60% clover</option>
+  <option value="423">Clovergrass, 20-25 cm, 20% clover</option>
+  <option value="426">Clovergrass, 20-25 cm, 40% clover</option>
+  <option value="429">Clovergrass, 20-25 cm, 60% clover</option>
+  <option value="421">Clovergrass, 6-8 cm, 20% clover</option>
+  <option value="424">Clovergrass, 6-8 cm, 40% clover</option>
+  <option value="427">Clovergrass, 6-8 cm, 60% clover</option>
+  <option value="521">Clovergrass, silage, high fodder index, 20% clover</option>
+  <option value="524">Clovergrass, silage, high fodder index, 40% clover</option>
+  <option value="527">Clovergrass, silage, high fodder index, 60% clover</option>
+  <option value="523">Clovergrass, silage, low fodder index, 20% clover</option>
+  <option value="526">Clovergrass, silage, low fodder index, 40% clover</option>
+  <option value="529">Clovergrass, silage, low fodder index, 60% clover</option>
+  <option value="522">Clovergrass, silage, middle fodder index, 20% clover</option>
+  <option value="525">Clovergrass, silage, middle fodder index, 40% clover</option>
+  <option value="528">Clovergrass, silage, middle fodder index, 60% clover</option>
+  <option value="555">Cocksfoot, silage</option>
+  <option value="134">Coconut  meal cake</option>
+  <option value="131">Coconut cake</option>
+  <option value="139">Coconut cake, high-fat</option>
+  <option value="105">Cotton seed meal, partially husked</option>
+  <option value="101">Cotton-seed cake, husked</option>
+  <option value="103">Cotton-seed cake, not husked</option>
+  <option value="102">Cotton-seed cake, partially husked</option>
+  <option value="311">Cows' milk-substitute</option>
+  <option value="911">Fish silage</option>
+  <option value="909">Fishmeal, poorly soluble</option>
+  <option value="908">Fishmeal, standard</option>
+  <option value="388">Fodder beet 16,5% DM</option>
+  <option value="351">Fodder beet 18,0% DM</option>
+  <option value="386">Fodder beet 20% DM</option>
+  <option value="475">Fodder kale</option>
+  <option value="575">Fodder kale, silage</option>
+  <option value="241">Fodder maize meal</option>
+  <option value="242">Fodder maize, gluten</option>
+  <option value="227">Fodder Oatmeal</option>
+  <option value="253">Fodder rice meal</option>
+  <option value="740">Fodder salt</option>
+  <option value="760">Fodder urea</option>
+  <option value="309">Full-cream milk, jersey</option>
+  <option value="308">Full-cream milk, large breeds</option>
+  <option value="471">Galega (Goat's rue)</option>
+  <option value="571">Galega (Goat's rue), silage</option>
+  <option value="743">Glauber's salt</option>
+  <option value="262">Grain stillage, dried</option>
+  <option value="261">Grain stillage, fresh</option>
+  <option value="564">Grass - silage, high fodder index</option>
+  <option value="566">Grass - silage, low fodder index</option>
+  <option value="565">Grass - silage, middle fodder index</option>
+  <option value="1565">Grass - silage, middle fodder index grazed</option>
+  <option value="570">Grass - silage, very low fodder index</option>
+  <option value="665">Grass hay</option>
+  <option value="705">Grass pellets, ekstra</option>
+  <option value="706">Grass pellets, plus</option>
+  <option value="707">Grass pellets, standard</option>
+  <option value="465">Grass, 12-15 cm</option>
+  <option value="466">Grass, 20-25 cm</option>
+  <option value="464">Grass, 6-8 cm</option>
+  <option value="481">Green barley, before earing</option>
+  <option value="549">Green manure (second crop), grain (cereals), silage</option>
+  <option value="548">Green manure (second crop), wholecrop, silage</option>
+  <option value="258">Guar meal</option>
+  <option value="671">Hay, eksta</option>
+  <option value="675">Hay, lucerne</option>
+  <option value="672">Hay, plus</option>
+  <option value="673">Hay, standard</option>
+  <option value="449">Italian ryegrass, after grain (cereals)</option>
+  <option value="448">Italian ryegrass, after wholecrop</option>
+  <option value="444" selected>Italian ryegrass, spring, early</option>
+  <option value="1444">Italian ryegrass, spring, early grazed</option>
+  <option value="446">Italian ryegrass, spring, late</option>
+  <option value="445">Italian ryegrass, spring, middle</option>
+  <option value="720">Limestone/Chalk</option>
+  <option value="212">Linseed (Flaxseed)</option>
+  <option value="111">Linseed-cake (Flaxseed cake)</option>
+  <option value="114">Linseed-cake meal (Flax-seed cake meal)</option>
+  <option value="708">Lucerne - pellets, ekstra</option>
+  <option value="709">Lucerne - pellets, standard</option>
+  <option value="602">Lucerne hay</option>
+  <option value="501">Lucerne- silage, high fodder index</option>
+  <option value="502">Lucerne- silage, low fodder index</option>
+  <option value="401">Lucerne, beginning flowering</option>
+  <option value="403">Lucerne, end of flowering</option>
+  <option value="402">Lucerne, flowering</option>
+  <option value="218">Lupins, small leafed</option>
+  <option value="215">Lupins, yellow</option>
+  <option value="730">Magnesium oxide</option>
+  <option value="731">Magnesium phosphate</option>
+  <option value="204">Maize</option>
+  <option value="592">Maize - silage, high fodder index</option>
+  <option value="594">Maize - silage, low fodder index</option>
+  <option value="593">Maize - silage, middle fodder index</option>
+  <option value="245">Maize bran</option>
+  <option value="244">Maize germ</option>
+  <option value="246">Maize meal</option>
+  <option value="247">Maize starch</option>
+  <option value="263">Maize stillage</option>
+  <option value="786">Maize straw</option>
+  <option value="492">Maize, fresh</option>
+  <option value="243">Maize, gluten</option>
+  <option value="265">Malt sprouts</option>
+  <option value="267">Mask, dried</option>
+  <option value="266">Mask, fresh</option>
+  <option value="302">Milk substitute, 51% skimmed milk</option>
+  <option value="301">Milk substitute, 60% skimmed milk</option>
+  <option value="304">Milk substitute, whey  soybean-based</option>
+  <option value="303">Milk substitute, whey-based</option>
+  <option value="205">Milo</option>
+  <option value="724">Monoammonium phosphate</option>
+  <option value="732">Monocalcium phosphate</option>
+  <option value="148">Mustard seed meal</option>
+  <option value="785">Oat - straw</option>
+  <option value="686">Oat straw, ammonia treated</option>
+  <option value="228">Oat, husked meal</option>
+  <option value="202">Oats</option>
+  <option value="586">Oats - wholecrop (early dough), silage</option>
+  <option value="580">Oats + peas + vetch, silage</option>
+  <option value="225">Oats, husked</option>
+  <option value="480">Oats, peas, vetch</option>
+  <option value="486">Oats-wholecrop, fresh</option>
+  <option value="136">Palm cake</option>
+  <option value="799">Pea - straw</option>
+  <option value="125">Peanut meal, partially husked</option>
+  <option value="216">Peas</option>
+  <option value="599">Peas - wholecrop (green ripe), silage</option>
+  <option value="499">Peas - wholecrop, fresh</option>
+  <option value="294">Pectin waste</option>
+  <option value="458">Permanent meadow grass</option>
+  <option value="558">Permanent meadow grass, silage</option>
+  <option value="913">Potassium nitrate</option>
+  <option value="273">Potato pulp</option>
+  <option value="395">Potatoes</option>
+  <option value="288">Prolasse</option>
+  <option value="213">Rape seed, 00</option>
+  <option value="144">Rapeseed cake, 00, 10% fat</option>
+  <option value="145">Rapeseed cake, 00, 10% fat, protected</option>
+  <option value="146">Rapeseed cake, 00, 13% fat</option>
+  <option value="147">Rapeseed cake, 00, 13% fat, protected</option>
+  <option value="142">Rapeseed meal, 00, 4% fat</option>
+  <option value="473">Red clover, beginning flowering</option>
+  <option value="573">Red clover, beginning flowering, silage</option>
+  <option value="717">Red fescue-straw</option>
+  <option value="206">Rice</option>
+  <option value="251">Rice, husked</option>
+  <option value="387">Roots + top</option>
+  <option value="207">Rye</option>
+  <option value="256">Rye bran</option>
+  <option value="257">Rye meal, middlings</option>
+  <option value="796">Rye- straw</option>
+  <option value="689">Rye straw, ammonia treated</option>
+  <option value="697">Rye straw, ammonia treated</option>
+  <option value="716">Ryegrass - straw</option>
+  <option value="345">Saturated fat</option>
+  <option value="173">Sesame seed cake</option>
+  <option value="174">Sesame seed meal</option>
+  <option value="317">Skimmed milk</option>
+  <option value="307">Skimmed milk powder</option>
+  <option value="741">Sodium bicarbonate</option>
+  <option value="742">Sodium hydroxide</option>
+  <option value="151">Soyabean cake</option>
+  <option value="155">Soyabean meal</option>
+  <option value="154">Soyabean meal, husked</option>
+  <option value="290">Soyabean, hulls</option>
+  <option value="214">Soyabeans</option>
+  <option value="201">Spring barley</option>
+  <option value="1201">Spring barley grazed</option>
+  <option value="781">Spring barley - straw</option>
+  <option value="361">Sugar beet</option>
+  <option value="289">Sugar beet slices</option>
+  <option value="278">Sugar cane molasses (treacle)</option>
+  <option value="217">Sunflower seed</option>
+  <option value="161">Sunflower seed cake, husked</option>
+  <option value="162">Sunflower seed cake, partially husked</option>
+  <option value="164">Sunflower seed meal, husked</option>
+  <option value="165">Sunflower seed meal, partially husked</option>
+  <option value="371">Swedes</option>
+  <option value="373">Swedes, top</option>
+  <option value="479">Sweet lupins</option>
+  <option value="579">Sweet lupins, silage</option>
+  <option value="296">Sweet potato-slices</option>
+  <option value="295">Tapioca meal</option>
+  <option value="365">Top + beet pulp, silage</option>
+  <option value="367">Top + straw + beet pulp, silage</option>
+  <option value="366">Top + straw, silage</option>
+  <option value="209">Triticale</option>
+  <option value="595">Triticale - wholecrop (early dough), silage</option>
+  <option value="381">Turnips</option>
+  <option value="546">Undersown Italian ryegrass, silage</option>
+  <option value="347">Vegetable fat</option>
+  <option value="287">Vinasse</option>
+  <option value="203">Wheat</option>
+  <option value="588">Wheat - peas, silage</option>
+  <option value="587">Wheat - wholecrop (early dough), silage</option>
+  <option value="589">Wheat - wholecrop (early dough), silage, high fodder index</option>
+  <option value="591">Wheat - wholecrop (early dough), silage, low fodder index</option>
+  <option value="590">Wheat - wholecrop (early dough), silage, middle fodder index</option>
+  <option value="232">Wheat bran</option>
+  <option value="235">Wheat germ</option>
+  <option value="231">Wheat meal</option>
+  <option value="233">Wheat meal, middlings</option>
+  <option value="788">Wheat- straw</option>
+  <option value="312">Whey</option>
+  <option value="315">Whey permeate</option>
+  <option value="314">Whey powder</option>
+  <option value="715">White clover straw</option>
+  <option value="472">White clover, beginning flowering</option>
+  <option value="572">White clover, beginning flowering, silage</option>
+  <option value="368">Wholecrop + top, silage</option>
+  <option value="581">Wholecrop barley (beginning of earing), silage</option>
+  <option value="574">Wholecrop barley / peas (beginning of earing), silage, 40% peas</option>
+  <option value="577">Wholecrop barley / peas (beginning of earing), silage, 70% peas</option>
+  <option value="578">Wholecrop peas (beginning of earing), silage</option>
+  <option value="597">Wholecrop rye (Green rye beginning of earing), silage</option>
+  <option value="497">Wholecrop,rye</option>
+  <option value="200">Winter barley</option>
+  <option value="782">Winter barley - straw</option>
+  <option value="585">Winter barley - wholecrop (early doyugh), silage</option>
+</select>
+<input id="feedstuffAmount_0" name="feedstuffAmount_0" type="text" style="width: 35px;position:relative;top:-3Px;background-color: white;" value="66" onchange="this.value=this.value.replace(',','.');setFeedstuffString(0);"/> Kg DM/animal/day
+<img style="position:relative;top:3Px;" src="images/del.gif" onclick="delRow(this,0);" onMouseover="mouseOverGif(this)"  onMouseout="mouseOutGif(this)"/>&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<select id="selFeedstuff_0" name="selFeedstuff_0" onchange="checkForNewLine(0);setFeedstuffString(0);" style="position:relative;top:-3Px;background-color: white;">
+  <option value="-1">Select feedstuff</option>
+  <option value="310">Acidified raw milk</option>
+  <option value="596">Barley - peas, silage 20% peas</option>
+  <option value="598">Barley - peas, silage 40% peas</option>
+  <option value="600">Barley - peas, silage 60% peas</option>
+  <option value="582">Barley - wholcrop (early dough), high fodder index</option>
+  <option value="584">Barley - wholcrop (early dough), low fodder index</option>
+  <option value="583">Barley - wholcrop (early dough), middle fodder index</option>
+  <option value="682">Barley straw, ammonia treated, high fodder index</option>
+  <option value="683">Barley straw, ammonia treated, low fodder index</option>
+  <option value="681">Barley straw, caustic treated</option>
+  <option value="221" selected>Barley, husked</option>
+  <option value="224">Barley, husked meal</option>
+  <option value="483">Barley-wholecrop, fresh</option>
+  <option value="298">Beech granules</option>
+  <option value="390">Beet + straw, silage</option>
+  <option value="385">Beet + top + beet pulp, silage</option>
+  <option value="277">Beet molasses (treacle)</option>
+  <option value="285">Beet pulp, ensiled</option>
+  <option value="282">Beet pulp, fresh</option>
+  <option value="284">Beet pulp, hp, ensiled, 5% molasses</option>
+  <option value="286">Beet pulp, molassed</option>
+  <option value="283">Beet pulp, unmolassed</option>
+  <option value="353">Beet top, fresh, 20% ash</option>
+  <option value="356">Beet top, silage, 20% ash</option>
+  <option value="324">Blood meal</option>
+  <option value="297">Brewer's yeast</option>
+  <option value="476">Broad beans</option>
+  <option value="576">Broad beans, silage</option>
+  <option value="211">Broadbeans</option>
+  <option value="912">Calcium nitrate</option>
+  <option value="348">Calcium soap</option>
+  <option value="391">Carrots</option>
+  <option value="292">Cellulose- pulp</option>
+  <option value="291">Citrus pulp</option>
+  <option value="625">Clover hay, high fodder index</option>
+  <option value="626">Clover hay, low fodder index</option>
+  <option value="422">Clovergrass, 12-15 cm, 20% clover</option>
+  <option value="425">Clovergrass, 12-15 cm, 40% clover</option>
+  <option value="428">Clovergrass, 12-15 cm, 60% clover</option>
+  <option value="423">Clovergrass, 20-25 cm, 20% clover</option>
+  <option value="426">Clovergrass, 20-25 cm, 40% clover</option>
+  <option value="429">Clovergrass, 20-25 cm, 60% clover</option>
+  <option value="421">Clovergrass, 6-8 cm, 20% clover</option>
+  <option value="424">Clovergrass, 6-8 cm, 40% clover</option>
+  <option value="427">Clovergrass, 6-8 cm, 60% clover</option>
+  <option value="521">Clovergrass, silage, high fodder index, 20% clover</option>
+  <option value="524">Clovergrass, silage, high fodder index, 40% clover</option>
+  <option value="527">Clovergrass, silage, high fodder index, 60% clover</option>
+  <option value="523">Clovergrass, silage, low fodder index, 20% clover</option>
+  <option value="526">Clovergrass, silage, low fodder index, 40% clover</option>
+  <option value="529">Clovergrass, silage, low fodder index, 60% clover</option>
+  <option value="522">Clovergrass, silage, middle fodder index, 20% clover</option>
+  <option value="525">Clovergrass, silage, middle fodder index, 40% clover</option>
+  <option value="528">Clovergrass, silage, middle fodder index, 60% clover</option>
+  <option value="555">Cocksfoot, silage</option>
+  <option value="134">Coconut  meal cake</option>
+  <option value="131">Coconut cake</option>
+  <option value="139">Coconut cake, high-fat</option>
+  <option value="105">Cotton seed meal, partially husked</option>
+  <option value="101">Cotton-seed cake, husked</option>
+  <option value="103">Cotton-seed cake, not husked</option>
+  <option value="102">Cotton-seed cake, partially husked</option>
+  <option value="311">Cows' milk-substitute</option>
+  <option value="911">Fish silage</option>
+  <option value="909">Fishmeal, poorly soluble</option>
+  <option value="908">Fishmeal, standard</option>
+  <option value="388">Fodder beet 16,5% DM</option>
+  <option value="351">Fodder beet 18,0% DM</option>
+  <option value="386">Fodder beet 20% DM</option>
+  <option value="475">Fodder kale</option>
+  <option value="575">Fodder kale, silage</option>
+  <option value="241">Fodder maize meal</option>
+  <option value="242">Fodder maize, gluten</option>
+  <option value="227">Fodder Oatmeal</option>
+  <option value="253">Fodder rice meal</option>
+  <option value="740">Fodder salt</option>
+  <option value="760">Fodder urea</option>
+  <option value="309">Full-cream milk, jersey</option>
+  <option value="308">Full-cream milk, large breeds</option>
+  <option value="471">Galega (Goat's rue)</option>
+  <option value="571">Galega (Goat's rue), silage</option>
+  <option value="743">Glauber's salt</option>
+  <option value="262">Grain stillage, dried</option>
+  <option value="261">Grain stillage, fresh</option>
+  <option value="564">Grass - silage, high fodder index</option>
+  <option value="566">Grass - silage, low fodder index</option>
+  <option value="565">Grass - silage, middle fodder index</option>
+  <option value="1565">Grass - silage, middle fodder index grazed</option>
+  <option value="570">Grass - silage, very low fodder index</option>
+  <option value="665">Grass hay</option>
+  <option value="705">Grass pellets, ekstra</option>
+  <option value="706">Grass pellets, plus</option>
+  <option value="707">Grass pellets, standard</option>
+  <option value="465">Grass, 12-15 cm</option>
+  <option value="466">Grass, 20-25 cm</option>
+  <option value="464">Grass, 6-8 cm</option>
+  <option value="481">Green barley, before earing</option>
+  <option value="549">Green manure (second crop), grain (cereals), silage</option>
+  <option value="548">Green manure (second crop), wholecrop, silage</option>
+  <option value="258">Guar meal</option>
+  <option value="671">Hay, eksta</option>
+  <option value="675">Hay, lucerne</option>
+  <option value="672">Hay, plus</option>
+  <option value="673">Hay, standard</option>
+  <option value="449">Italian ryegrass, after grain (cereals)</option>
+  <option value="448">Italian ryegrass, after wholecrop</option>
+  <option value="444">Italian ryegrass, spring, early</option>
+  <option value="1444">Italian ryegrass, spring, early grazed</option>
+  <option value="446">Italian ryegrass, spring, late</option>
+  <option value="445">Italian ryegrass, spring, middle</option>
+  <option value="720">Limestone/Chalk</option>
+  <option value="212">Linseed (Flaxseed)</option>
+  <option value="111">Linseed-cake (Flaxseed cake)</option>
+  <option value="114">Linseed-cake meal (Flax-seed cake meal)</option>
+  <option value="708">Lucerne - pellets, ekstra</option>
+  <option value="709">Lucerne - pellets, standard</option>
+  <option value="602">Lucerne hay</option>
+  <option value="501">Lucerne- silage, high fodder index</option>
+  <option value="502">Lucerne- silage, low fodder index</option>
+  <option value="401">Lucerne, beginning flowering</option>
+  <option value="403">Lucerne, end of flowering</option>
+  <option value="402">Lucerne, flowering</option>
+  <option value="218">Lupins, small leafed</option>
+  <option value="215">Lupins, yellow</option>
+  <option value="730">Magnesium oxide</option>
+  <option value="731">Magnesium phosphate</option>
+  <option value="204">Maize</option>
+  <option value="592">Maize - silage, high fodder index</option>
+  <option value="594">Maize - silage, low fodder index</option>
+  <option value="593">Maize - silage, middle fodder index</option>
+  <option value="245">Maize bran</option>
+  <option value="244">Maize germ</option>
+  <option value="246">Maize meal</option>
+  <option value="247">Maize starch</option>
+  <option value="263">Maize stillage</option>
+  <option value="786">Maize straw</option>
+  <option value="492">Maize, fresh</option>
+  <option value="243">Maize, gluten</option>
+  <option value="265">Malt sprouts</option>
+  <option value="267">Mask, dried</option>
+  <option value="266">Mask, fresh</option>
+  <option value="302">Milk substitute, 51% skimmed milk</option>
+  <option value="301">Milk substitute, 60% skimmed milk</option>
+  <option value="304">Milk substitute, whey  soybean-based</option>
+  <option value="303">Milk substitute, whey-based</option>
+  <option value="205">Milo</option>
+  <option value="724">Monoammonium phosphate</option>
+  <option value="732">Monocalcium phosphate</option>
+  <option value="148">Mustard seed meal</option>
+  <option value="785">Oat - straw</option>
+  <option value="686">Oat straw, ammonia treated</option>
+  <option value="228">Oat, husked meal</option>
+  <option value="202">Oats</option>
+  <option value="586">Oats - wholecrop (early dough), silage</option>
+  <option value="580">Oats + peas + vetch, silage</option>
+  <option value="225">Oats, husked</option>
+  <option value="480">Oats, peas, vetch</option>
+  <option value="486">Oats-wholecrop, fresh</option>
+  <option value="136">Palm cake</option>
+  <option value="799">Pea - straw</option>
+  <option value="125">Peanut meal, partially husked</option>
+  <option value="216">Peas</option>
+  <option value="599">Peas - wholecrop (green ripe), silage</option>
+  <option value="499">Peas - wholecrop, fresh</option>
+  <option value="294">Pectin waste</option>
+  <option value="458">Permanent meadow grass</option>
+  <option value="558">Permanent meadow grass, silage</option>
+  <option value="913">Potassium nitrate</option>
+  <option value="273">Potato pulp</option>
+  <option value="395">Potatoes</option>
+  <option value="288">Prolasse</option>
+  <option value="213">Rape seed, 00</option>
+  <option value="144">Rapeseed cake, 00, 10% fat</option>
+  <option value="145">Rapeseed cake, 00, 10% fat, protected</option>
+  <option value="146">Rapeseed cake, 00, 13% fat</option>
+  <option value="147">Rapeseed cake, 00, 13% fat, protected</option>
+  <option value="142">Rapeseed meal, 00, 4% fat</option>
+  <option value="473">Red clover, beginning flowering</option>
+  <option value="573">Red clover, beginning flowering, silage</option>
+  <option value="717">Red fescue-straw</option>
+  <option value="206">Rice</option>
+  <option value="251">Rice, husked</option>
+  <option value="387">Roots + top</option>
+  <option value="207">Rye</option>
+  <option value="256">Rye bran</option>
+  <option value="257">Rye meal, middlings</option>
+  <option value="796">Rye- straw</option>
+  <option value="689">Rye straw, ammonia treated</option>
+  <option value="697">Rye straw, ammonia treated</option>
+  <option value="716">Ryegrass - straw</option>
+  <option value="345">Saturated fat</option>
+  <option value="173">Sesame seed cake</option>
+  <option value="174">Sesame seed meal</option>
+  <option value="317">Skimmed milk</option>
+  <option value="307">Skimmed milk powder</option>
+  <option value="741">Sodium bicarbonate</option>
+  <option value="742">Sodium hydroxide</option>
+  <option value="151">Soyabean cake</option>
+  <option value="155">Soyabean meal</option>
+  <option value="154">Soyabean meal, husked</option>
+  <option value="290">Soyabean, hulls</option>
+  <option value="214">Soyabeans</option>
+  <option value="201">Spring barley</option>
+  <option value="1201">Spring barley grazed</option>
+  <option value="781">Spring barley - straw</option>
+  <option value="361">Sugar beet</option>
+  <option value="289">Sugar beet slices</option>
+  <option value="278">Sugar cane molasses (treacle)</option>
+  <option value="217">Sunflower seed</option>
+  <option value="161">Sunflower seed cake, husked</option>
+  <option value="162">Sunflower seed cake, partially husked</option>
+  <option value="164">Sunflower seed meal, husked</option>
+  <option value="165">Sunflower seed meal, partially husked</option>
+  <option value="371">Swedes</option>
+  <option value="373">Swedes, top</option>
+  <option value="479">Sweet lupins</option>
+  <option value="579">Sweet lupins, silage</option>
+  <option value="296">Sweet potato-slices</option>
+  <option value="295">Tapioca meal</option>
+  <option value="365">Top + beet pulp, silage</option>
+  <option value="367">Top + straw + beet pulp, silage</option>
+  <option value="366">Top + straw, silage</option>
+  <option value="209">Triticale</option>
+  <option value="595">Triticale - wholecrop (early dough), silage</option>
+  <option value="381">Turnips</option>
+  <option value="546">Undersown Italian ryegrass, silage</option>
+  <option value="347">Vegetable fat</option>
+  <option value="287">Vinasse</option>
+  <option value="203">Wheat</option>
+  <option value="588">Wheat - peas, silage</option>
+  <option value="587">Wheat - wholecrop (early dough), silage</option>
+  <option value="589">Wheat - wholecrop (early dough), silage, high fodder index</option>
+  <option value="591">Wheat - wholecrop (early dough), silage, low fodder index</option>
+  <option value="590">Wheat - wholecrop (early dough), silage, middle fodder index</option>
+  <option value="232">Wheat bran</option>
+  <option value="235">Wheat germ</option>
+  <option value="231">Wheat meal</option>
+  <option value="233">Wheat meal, middlings</option>
+  <option value="788">Wheat- straw</option>
+  <option value="312">Whey</option>
+  <option value="315">Whey permeate</option>
+  <option value="314">Whey powder</option>
+  <option value="715">White clover straw</option>
+  <option value="472">White clover, beginning flowering</option>
+  <option value="572">White clover, beginning flowering, silage</option>
+  <option value="368">Wholecrop + top, silage</option>
+  <option value="581">Wholecrop barley (beginning of earing), silage</option>
+  <option value="574">Wholecrop barley / peas (beginning of earing), silage, 40% peas</option>
+  <option value="577">Wholecrop barley / peas (beginning of earing), silage, 70% peas</option>
+  <option value="578">Wholecrop peas (beginning of earing), silage</option>
+  <option value="597">Wholecrop rye (Green rye beginning of earing), silage</option>
+  <option value="497">Wholecrop,rye</option>
+  <option value="200">Winter barley</option>
+  <option value="782">Winter barley - straw</option>
+  <option value="585">Winter barley - wholecrop (early doyugh), silage</option>
+</select>
+<input id="feedstuffAmount_0" name="feedstuffAmount_0" type="text" style="width: 35px;position:relative;top:-3Px;background-color: white;" value="10" onchange="this.value=this.value.replace(',','.');setFeedstuffString(0);"/> Kg DM/animal/day
+<img style="position:relative;top:3Px;" src="images/del.gif" onclick="delRow(this,0);" onMouseover="mouseOverGif(this)"  onMouseout="mouseOutGif(this)"/>&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<select id="selFeedstuff_0" name="selFeedstuff_0" onchange="checkForNewLine(0);setFeedstuffString(0);" style="position:relative;top:-3Px;background-color: white;">
+  <option value="-1">Select feedstuff</option>
+  <option value="310">Acidified raw milk</option>
+  <option value="596">Barley - peas, silage 20% peas</option>
+  <option value="598">Barley - peas, silage 40% peas</option>
+  <option value="600">Barley - peas, silage 60% peas</option>
+  <option value="582">Barley - wholcrop (early dough), high fodder index</option>
+  <option value="584">Barley - wholcrop (early dough), low fodder index</option>
+  <option value="583">Barley - wholcrop (early dough), middle fodder index</option>
+  <option value="682">Barley straw, ammonia treated, high fodder index</option>
+  <option value="683">Barley straw, ammonia treated, low fodder index</option>
+  <option value="681">Barley straw, caustic treated</option>
+  <option value="221">Barley, husked</option>
+  <option value="224">Barley, husked meal</option>
+  <option value="483">Barley-wholecrop, fresh</option>
+  <option value="298">Beech granules</option>
+  <option value="390">Beet + straw, silage</option>
+  <option value="385">Beet + top + beet pulp, silage</option>
+  <option value="277">Beet molasses (treacle)</option>
+  <option value="285">Beet pulp, ensiled</option>
+  <option value="282">Beet pulp, fresh</option>
+  <option value="284">Beet pulp, hp, ensiled, 5% molasses</option>
+  <option value="286">Beet pulp, molassed</option>
+  <option value="283">Beet pulp, unmolassed</option>
+  <option value="353">Beet top, fresh, 20% ash</option>
+  <option value="356">Beet top, silage, 20% ash</option>
+  <option value="324">Blood meal</option>
+  <option value="297">Brewer's yeast</option>
+  <option value="476">Broad beans</option>
+  <option value="576">Broad beans, silage</option>
+  <option value="211">Broadbeans</option>
+  <option value="912">Calcium nitrate</option>
+  <option value="348">Calcium soap</option>
+  <option value="391">Carrots</option>
+  <option value="292">Cellulose- pulp</option>
+  <option value="291">Citrus pulp</option>
+  <option value="625">Clover hay, high fodder index</option>
+  <option value="626">Clover hay, low fodder index</option>
+  <option value="422">Clovergrass, 12-15 cm, 20% clover</option>
+  <option value="425">Clovergrass, 12-15 cm, 40% clover</option>
+  <option value="428">Clovergrass, 12-15 cm, 60% clover</option>
+  <option value="423">Clovergrass, 20-25 cm, 20% clover</option>
+  <option value="426">Clovergrass, 20-25 cm, 40% clover</option>
+  <option value="429">Clovergrass, 20-25 cm, 60% clover</option>
+  <option value="421">Clovergrass, 6-8 cm, 20% clover</option>
+  <option value="424">Clovergrass, 6-8 cm, 40% clover</option>
+  <option value="427">Clovergrass, 6-8 cm, 60% clover</option>
+  <option value="521">Clovergrass, silage, high fodder index, 20% clover</option>
+  <option value="524">Clovergrass, silage, high fodder index, 40% clover</option>
+  <option value="527">Clovergrass, silage, high fodder index, 60% clover</option>
+  <option value="523">Clovergrass, silage, low fodder index, 20% clover</option>
+  <option value="526">Clovergrass, silage, low fodder index, 40% clover</option>
+  <option value="529">Clovergrass, silage, low fodder index, 60% clover</option>
+  <option value="522">Clovergrass, silage, middle fodder index, 20% clover</option>
+  <option value="525">Clovergrass, silage, middle fodder index, 40% clover</option>
+  <option value="528">Clovergrass, silage, middle fodder index, 60% clover</option>
+  <option value="555">Cocksfoot, silage</option>
+  <option value="134">Coconut  meal cake</option>
+  <option value="131">Coconut cake</option>
+  <option value="139">Coconut cake, high-fat</option>
+  <option value="105">Cotton seed meal, partially husked</option>
+  <option value="101">Cotton-seed cake, husked</option>
+  <option value="103">Cotton-seed cake, not husked</option>
+  <option value="102">Cotton-seed cake, partially husked</option>
+  <option value="311">Cows' milk-substitute</option>
+  <option value="911">Fish silage</option>
+  <option value="909">Fishmeal, poorly soluble</option>
+  <option value="908">Fishmeal, standard</option>
+  <option value="388">Fodder beet 16,5% DM</option>
+  <option value="351">Fodder beet 18,0% DM</option>
+  <option value="386">Fodder beet 20% DM</option>
+  <option value="475">Fodder kale</option>
+  <option value="575">Fodder kale, silage</option>
+  <option value="241">Fodder maize meal</option>
+  <option value="242">Fodder maize, gluten</option>
+  <option value="227">Fodder Oatmeal</option>
+  <option value="253">Fodder rice meal</option>
+  <option value="740">Fodder salt</option>
+  <option value="760">Fodder urea</option>
+  <option value="309">Full-cream milk, jersey</option>
+  <option value="308">Full-cream milk, large breeds</option>
+  <option value="471">Galega (Goat's rue)</option>
+  <option value="571">Galega (Goat's rue), silage</option>
+  <option value="743">Glauber's salt</option>
+  <option value="262">Grain stillage, dried</option>
+  <option value="261">Grain stillage, fresh</option>
+  <option value="564">Grass - silage, high fodder index</option>
+  <option value="566">Grass - silage, low fodder index</option>
+  <option value="565">Grass - silage, middle fodder index</option>
+  <option value="1565">Grass - silage, middle fodder index grazed</option>
+  <option value="570">Grass - silage, very low fodder index</option>
+  <option value="665">Grass hay</option>
+  <option value="705">Grass pellets, ekstra</option>
+  <option value="706">Grass pellets, plus</option>
+  <option value="707">Grass pellets, standard</option>
+  <option value="465">Grass, 12-15 cm</option>
+  <option value="466">Grass, 20-25 cm</option>
+  <option value="464">Grass, 6-8 cm</option>
+  <option value="481">Green barley, before earing</option>
+  <option value="549">Green manure (second crop), grain (cereals), silage</option>
+  <option value="548">Green manure (second crop), wholecrop, silage</option>
+  <option value="258">Guar meal</option>
+  <option value="671">Hay, eksta</option>
+  <option value="675">Hay, lucerne</option>
+  <option value="672">Hay, plus</option>
+  <option value="673">Hay, standard</option>
+  <option value="449">Italian ryegrass, after grain (cereals)</option>
+  <option value="448">Italian ryegrass, after wholecrop</option>
+  <option value="444">Italian ryegrass, spring, early</option>
+  <option value="1444">Italian ryegrass, spring, early grazed</option>
+  <option value="446">Italian ryegrass, spring, late</option>
+  <option value="445">Italian ryegrass, spring, middle</option>
+  <option value="720">Limestone/Chalk</option>
+  <option value="212">Linseed (Flaxseed)</option>
+  <option value="111">Linseed-cake (Flaxseed cake)</option>
+  <option value="114">Linseed-cake meal (Flax-seed cake meal)</option>
+  <option value="708">Lucerne - pellets, ekstra</option>
+  <option value="709">Lucerne - pellets, standard</option>
+  <option value="602">Lucerne hay</option>
+  <option value="501">Lucerne- silage, high fodder index</option>
+  <option value="502">Lucerne- silage, low fodder index</option>
+  <option value="401">Lucerne, beginning flowering</option>
+  <option value="403">Lucerne, end of flowering</option>
+  <option value="402">Lucerne, flowering</option>
+  <option value="218">Lupins, small leafed</option>
+  <option value="215">Lupins, yellow</option>
+  <option value="730">Magnesium oxide</option>
+  <option value="731">Magnesium phosphate</option>
+  <option value="204">Maize</option>
+  <option value="592">Maize - silage, high fodder index</option>
+  <option value="594">Maize - silage, low fodder index</option>
+  <option value="593">Maize - silage, middle fodder index</option>
+  <option value="245">Maize bran</option>
+  <option value="244">Maize germ</option>
+  <option value="246">Maize meal</option>
+  <option value="247">Maize starch</option>
+  <option value="263">Maize stillage</option>
+  <option value="786">Maize straw</option>
+  <option value="492">Maize, fresh</option>
+  <option value="243">Maize, gluten</option>
+  <option value="265">Malt sprouts</option>
+  <option value="267">Mask, dried</option>
+  <option value="266">Mask, fresh</option>
+  <option value="302">Milk substitute, 51% skimmed milk</option>
+  <option value="301">Milk substitute, 60% skimmed milk</option>
+  <option value="304">Milk substitute, whey  soybean-based</option>
+  <option value="303">Milk substitute, whey-based</option>
+  <option value="205">Milo</option>
+  <option value="724">Monoammonium phosphate</option>
+  <option value="732">Monocalcium phosphate</option>
+  <option value="148">Mustard seed meal</option>
+  <option value="785">Oat - straw</option>
+  <option value="686">Oat straw, ammonia treated</option>
+  <option value="228">Oat, husked meal</option>
+  <option value="202">Oats</option>
+  <option value="586">Oats - wholecrop (early dough), silage</option>
+  <option value="580">Oats + peas + vetch, silage</option>
+  <option value="225">Oats, husked</option>
+  <option value="480">Oats, peas, vetch</option>
+  <option value="486">Oats-wholecrop, fresh</option>
+  <option value="136">Palm cake</option>
+  <option value="799">Pea - straw</option>
+  <option value="125">Peanut meal, partially husked</option>
+  <option value="216">Peas</option>
+  <option value="599">Peas - wholecrop (green ripe), silage</option>
+  <option value="499">Peas - wholecrop, fresh</option>
+  <option value="294">Pectin waste</option>
+  <option value="458">Permanent meadow grass</option>
+  <option value="558">Permanent meadow grass, silage</option>
+  <option value="913" selected>Potassium nitrate</option>
+  <option value="273">Potato pulp</option>
+  <option value="395">Potatoes</option>
+  <option value="288">Prolasse</option>
+  <option value="213">Rape seed, 00</option>
+  <option value="144">Rapeseed cake, 00, 10% fat</option>
+  <option value="145">Rapeseed cake, 00, 10% fat, protected</option>
+  <option value="146">Rapeseed cake, 00, 13% fat</option>
+  <option value="147">Rapeseed cake, 00, 13% fat, protected</option>
+  <option value="142">Rapeseed meal, 00, 4% fat</option>
+  <option value="473">Red clover, beginning flowering</option>
+  <option value="573">Red clover, beginning flowering, silage</option>
+  <option value="717">Red fescue-straw</option>
+  <option value="206">Rice</option>
+  <option value="251">Rice, husked</option>
+  <option value="387">Roots + top</option>
+  <option value="207">Rye</option>
+  <option value="256">Rye bran</option>
+  <option value="257">Rye meal, middlings</option>
+  <option value="796">Rye- straw</option>
+  <option value="689">Rye straw, ammonia treated</option>
+  <option value="697">Rye straw, ammonia treated</option>
+  <option value="716">Ryegrass - straw</option>
+  <option value="345">Saturated fat</option>
+  <option value="173">Sesame seed cake</option>
+  <option value="174">Sesame seed meal</option>
+  <option value="317">Skimmed milk</option>
+  <option value="307">Skimmed milk powder</option>
+  <option value="741">Sodium bicarbonate</option>
+  <option value="742">Sodium hydroxide</option>
+  <option value="151">Soyabean cake</option>
+  <option value="155">Soyabean meal</option>
+  <option value="154">Soyabean meal, husked</option>
+  <option value="290">Soyabean, hulls</option>
+  <option value="214">Soyabeans</option>
+  <option value="201">Spring barley</option>
+  <option value="1201">Spring barley grazed</option>
+  <option value="781">Spring barley - straw</option>
+  <option value="361">Sugar beet</option>
+  <option value="289">Sugar beet slices</option>
+  <option value="278">Sugar cane molasses (treacle)</option>
+  <option value="217">Sunflower seed</option>
+  <option value="161">Sunflower seed cake, husked</option>
+  <option value="162">Sunflower seed cake, partially husked</option>
+  <option value="164">Sunflower seed meal, husked</option>
+  <option value="165">Sunflower seed meal, partially husked</option>
+  <option value="371">Swedes</option>
+  <option value="373">Swedes, top</option>
+  <option value="479">Sweet lupins</option>
+  <option value="579">Sweet lupins, silage</option>
+  <option value="296">Sweet potato-slices</option>
+  <option value="295">Tapioca meal</option>
+  <option value="365">Top + beet pulp, silage</option>
+  <option value="367">Top + straw + beet pulp, silage</option>
+  <option value="366">Top + straw, silage</option>
+  <option value="209">Triticale</option>
+  <option value="595">Triticale - wholecrop (early dough), silage</option>
+  <option value="381">Turnips</option>
+  <option value="546">Undersown Italian ryegrass, silage</option>
+  <option value="347">Vegetable fat</option>
+  <option value="287">Vinasse</option>
+  <option value="203">Wheat</option>
+  <option value="588">Wheat - peas, silage</option>
+  <option value="587">Wheat - wholecrop (early dough), silage</option>
+  <option value="589">Wheat - wholecrop (early dough), silage, high fodder index</option>
+  <option value="591">Wheat - wholecrop (early dough), silage, low fodder index</option>
+  <option value="590">Wheat - wholecrop (early dough), silage, middle fodder index</option>
+  <option value="232">Wheat bran</option>
+  <option value="235">Wheat germ</option>
+  <option value="231">Wheat meal</option>
+  <option value="233">Wheat meal, middlings</option>
+  <option value="788">Wheat- straw</option>
+  <option value="312">Whey</option>
+  <option value="315">Whey permeate</option>
+  <option value="314">Whey powder</option>
+  <option value="715">White clover straw</option>
+  <option value="472">White clover, beginning flowering</option>
+  <option value="572">White clover, beginning flowering, silage</option>
+  <option value="368">Wholecrop + top, silage</option>
+  <option value="581">Wholecrop barley (beginning of earing), silage</option>
+  <option value="574">Wholecrop barley / peas (beginning of earing), silage, 40% peas</option>
+  <option value="577">Wholecrop barley / peas (beginning of earing), silage, 70% peas</option>
+  <option value="578">Wholecrop peas (beginning of earing), silage</option>
+  <option value="597">Wholecrop rye (Green rye beginning of earing), silage</option>
+  <option value="497">Wholecrop,rye</option>
+  <option value="200">Winter barley</option>
+  <option value="782">Winter barley - straw</option>
+  <option value="585">Winter barley - wholecrop (early doyugh), silage</option>
+</select>
+<input id="feedstuffAmount_0" name="feedstuffAmount_0" type="text" style="width: 35px;position:relative;top:-3Px;background-color: white;" value="10" onchange="this.value=this.value.replace(',','.');setFeedstuffString(0);"/> Kg DM/animal/day
+<img style="position:relative;top:3Px;" src="images/del.gif" onclick="delRow(this,0);" onMouseover="mouseOverGif(this)"  onMouseout="mouseOutGif(this)"/>&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<select id="selFeedstuff_0" name="selFeedstuff_0" onchange="checkForNewLine(0);setFeedstuffString(0);" style="position:relative;top:-3Px;background-color: lightyellow;">
+  <option value="-1">Select feedstuff</option>
+  <option value="310">Acidified raw milk</option>
+  <option value="596">Barley - peas, silage 20% peas</option>
+  <option value="598">Barley - peas, silage 40% peas</option>
+  <option value="600">Barley - peas, silage 60% peas</option>
+  <option value="582">Barley - wholcrop (early dough), high fodder index</option>
+  <option value="584">Barley - wholcrop (early dough), low fodder index</option>
+  <option value="583">Barley - wholcrop (early dough), middle fodder index</option>
+  <option value="682">Barley straw, ammonia treated, high fodder index</option>
+  <option value="683">Barley straw, ammonia treated, low fodder index</option>
+  <option value="681">Barley straw, caustic treated</option>
+  <option value="221">Barley, husked</option>
+  <option value="224">Barley, husked meal</option>
+  <option value="483">Barley-wholecrop, fresh</option>
+  <option value="298">Beech granules</option>
+  <option value="390">Beet + straw, silage</option>
+  <option value="385">Beet + top + beet pulp, silage</option>
+  <option value="277">Beet molasses (treacle)</option>
+  <option value="285">Beet pulp, ensiled</option>
+  <option value="282">Beet pulp, fresh</option>
+  <option value="284">Beet pulp, hp, ensiled, 5% molasses</option>
+  <option value="286">Beet pulp, molassed</option>
+  <option value="283">Beet pulp, unmolassed</option>
+  <option value="353">Beet top, fresh, 20% ash</option>
+  <option value="356">Beet top, silage, 20% ash</option>
+  <option value="324">Blood meal</option>
+  <option value="297">Brewer's yeast</option>
+  <option value="476">Broad beans</option>
+  <option value="576">Broad beans, silage</option>
+  <option value="211">Broadbeans</option>
+  <option value="912">Calcium nitrate</option>
+  <option value="348">Calcium soap</option>
+  <option value="391">Carrots</option>
+  <option value="292">Cellulose- pulp</option>
+  <option value="291">Citrus pulp</option>
+  <option value="625">Clover hay, high fodder index</option>
+  <option value="626">Clover hay, low fodder index</option>
+  <option value="422">Clovergrass, 12-15 cm, 20% clover</option>
+  <option value="425">Clovergrass, 12-15 cm, 40% clover</option>
+  <option value="428">Clovergrass, 12-15 cm, 60% clover</option>
+  <option value="423">Clovergrass, 20-25 cm, 20% clover</option>
+  <option value="426">Clovergrass, 20-25 cm, 40% clover</option>
+  <option value="429">Clovergrass, 20-25 cm, 60% clover</option>
+  <option value="421">Clovergrass, 6-8 cm, 20% clover</option>
+  <option value="424">Clovergrass, 6-8 cm, 40% clover</option>
+  <option value="427">Clovergrass, 6-8 cm, 60% clover</option>
+  <option value="521">Clovergrass, silage, high fodder index, 20% clover</option>
+  <option value="524">Clovergrass, silage, high fodder index, 40% clover</option>
+  <option value="527">Clovergrass, silage, high fodder index, 60% clover</option>
+  <option value="523">Clovergrass, silage, low fodder index, 20% clover</option>
+  <option value="526">Clovergrass, silage, low fodder index, 40% clover</option>
+  <option value="529">Clovergrass, silage, low fodder index, 60% clover</option>
+  <option value="522">Clovergrass, silage, middle fodder index, 20% clover</option>
+  <option value="525">Clovergrass, silage, middle fodder index, 40% clover</option>
+  <option value="528">Clovergrass, silage, middle fodder index, 60% clover</option>
+  <option value="555">Cocksfoot, silage</option>
+  <option value="134">Coconut  meal cake</option>
+  <option value="131">Coconut cake</option>
+  <option value="139">Coconut cake, high-fat</option>
+  <option value="105">Cotton seed meal, partially husked</option>
+  <option value="101">Cotton-seed cake, husked</option>
+  <option value="103">Cotton-seed cake, not husked</option>
+  <option value="102">Cotton-seed cake, partially husked</option>
+  <option value="311">Cows' milk-substitute</option>
+  <option value="911">Fish silage</option>
+  <option value="909">Fishmeal, poorly soluble</option>
+  <option value="908">Fishmeal, standard</option>
+  <option value="388">Fodder beet 16,5% DM</option>
+  <option value="351">Fodder beet 18,0% DM</option>
+  <option value="386">Fodder beet 20% DM</option>
+  <option value="475">Fodder kale</option>
+  <option value="575">Fodder kale, silage</option>
+  <option value="241">Fodder maize meal</option>
+  <option value="242">Fodder maize, gluten</option>
+  <option value="227">Fodder Oatmeal</option>
+  <option value="253">Fodder rice meal</option>
+  <option value="740">Fodder salt</option>
+  <option value="760">Fodder urea</option>
+  <option value="309">Full-cream milk, jersey</option>
+  <option value="308">Full-cream milk, large breeds</option>
+  <option value="471">Galega (Goat's rue)</option>
+  <option value="571">Galega (Goat's rue), silage</option>
+  <option value="743">Glauber's salt</option>
+  <option value="262">Grain stillage, dried</option>
+  <option value="261">Grain stillage, fresh</option>
+  <option value="564">Grass - silage, high fodder index</option>
+  <option value="566">Grass - silage, low fodder index</option>
+  <option value="565">Grass - silage, middle fodder index</option>
+  <option value="1565">Grass - silage, middle fodder index grazed</option>
+  <option value="570">Grass - silage, very low fodder index</option>
+  <option value="665">Grass hay</option>
+  <option value="705">Grass pellets, ekstra</option>
+  <option value="706">Grass pellets, plus</option>
+  <option value="707">Grass pellets, standard</option>
+  <option value="465">Grass, 12-15 cm</option>
+  <option value="466">Grass, 20-25 cm</option>
+  <option value="464">Grass, 6-8 cm</option>
+  <option value="481">Green barley, before earing</option>
+  <option value="549">Green manure (second crop), grain (cereals), silage</option>
+  <option value="548">Green manure (second crop), wholecrop, silage</option>
+  <option value="258">Guar meal</option>
+  <option value="671">Hay, eksta</option>
+  <option value="675">Hay, lucerne</option>
+  <option value="672">Hay, plus</option>
+  <option value="673">Hay, standard</option>
+  <option value="449">Italian ryegrass, after grain (cereals)</option>
+  <option value="448">Italian ryegrass, after wholecrop</option>
+  <option value="444">Italian ryegrass, spring, early</option>
+  <option value="1444">Italian ryegrass, spring, early grazed</option>
+  <option value="446">Italian ryegrass, spring, late</option>
+  <option value="445">Italian ryegrass, spring, middle</option>
+  <option value="720">Limestone/Chalk</option>
+  <option value="212">Linseed (Flaxseed)</option>
+  <option value="111">Linseed-cake (Flaxseed cake)</option>
+  <option value="114">Linseed-cake meal (Flax-seed cake meal)</option>
+  <option value="708">Lucerne - pellets, ekstra</option>
+  <option value="709">Lucerne - pellets, standard</option>
+  <option value="602">Lucerne hay</option>
+  <option value="501">Lucerne- silage, high fodder index</option>
+  <option value="502">Lucerne- silage, low fodder index</option>
+  <option value="401">Lucerne, beginning flowering</option>
+  <option value="403">Lucerne, end of flowering</option>
+  <option value="402">Lucerne, flowering</option>
+  <option value="218">Lupins, small leafed</option>
+  <option value="215">Lupins, yellow</option>
+  <option value="730">Magnesium oxide</option>
+  <option value="731">Magnesium phosphate</option>
+  <option value="204">Maize</option>
+  <option value="592">Maize - silage, high fodder index</option>
+  <option value="594">Maize - silage, low fodder index</option>
+  <option value="593">Maize - silage, middle fodder index</option>
+  <option value="245">Maize bran</option>
+  <option value="244">Maize germ</option>
+  <option value="246">Maize meal</option>
+  <option value="247">Maize starch</option>
+  <option value="263">Maize stillage</option>
+  <option value="786">Maize straw</option>
+  <option value="492">Maize, fresh</option>
+  <option value="243">Maize, gluten</option>
+  <option value="265">Malt sprouts</option>
+  <option value="267">Mask, dried</option>
+  <option value="266">Mask, fresh</option>
+  <option value="302">Milk substitute, 51% skimmed milk</option>
+  <option value="301">Milk substitute, 60% skimmed milk</option>
+  <option value="304">Milk substitute, whey  soybean-based</option>
+  <option value="303">Milk substitute, whey-based</option>
+  <option value="205">Milo</option>
+  <option value="724">Monoammonium phosphate</option>
+  <option value="732">Monocalcium phosphate</option>
+  <option value="148">Mustard seed meal</option>
+  <option value="785">Oat - straw</option>
+  <option value="686">Oat straw, ammonia treated</option>
+  <option value="228">Oat, husked meal</option>
+  <option value="202">Oats</option>
+  <option value="586">Oats - wholecrop (early dough), silage</option>
+  <option value="580">Oats + peas + vetch, silage</option>
+  <option value="225">Oats, husked</option>
+  <option value="480">Oats, peas, vetch</option>
+  <option value="486">Oats-wholecrop, fresh</option>
+  <option value="136">Palm cake</option>
+  <option value="799">Pea - straw</option>
+  <option value="125">Peanut meal, partially husked</option>
+  <option value="216">Peas</option>
+  <option value="599">Peas - wholecrop (green ripe), silage</option>
+  <option value="499">Peas - wholecrop, fresh</option>
+  <option value="294">Pectin waste</option>
+  <option value="458">Permanent meadow grass</option>
+  <option value="558">Permanent meadow grass, silage</option>
+  <option value="913">Potassium nitrate</option>
+  <option value="273">Potato pulp</option>
+  <option value="395">Potatoes</option>
+  <option value="288">Prolasse</option>
+  <option value="213">Rape seed, 00</option>
+  <option value="144">Rapeseed cake, 00, 10% fat</option>
+  <option value="145">Rapeseed cake, 00, 10% fat, protected</option>
+  <option value="146">Rapeseed cake, 00, 13% fat</option>
+  <option value="147">Rapeseed cake, 00, 13% fat, protected</option>
+  <option value="142">Rapeseed meal, 00, 4% fat</option>
+  <option value="473">Red clover, beginning flowering</option>
+  <option value="573">Red clover, beginning flowering, silage</option>
+  <option value="717">Red fescue-straw</option>
+  <option value="206">Rice</option>
+  <option value="251">Rice, husked</option>
+  <option value="387">Roots + top</option>
+  <option value="207">Rye</option>
+  <option value="256">Rye bran</option>
+  <option value="257">Rye meal, middlings</option>
+  <option value="796">Rye- straw</option>
+  <option value="689">Rye straw, ammonia treated</option>
+  <option value="697">Rye straw, ammonia treated</option>
+  <option value="716">Ryegrass - straw</option>
+  <option value="345">Saturated fat</option>
+  <option value="173">Sesame seed cake</option>
+  <option value="174">Sesame seed meal</option>
+  <option value="317">Skimmed milk</option>
+  <option value="307">Skimmed milk powder</option>
+  <option value="741">Sodium bicarbonate</option>
+  <option value="742">Sodium hydroxide</option>
+  <option value="151">Soyabean cake</option>
+  <option value="155">Soyabean meal</option>
+  <option value="154">Soyabean meal, husked</option>
+  <option value="290">Soyabean, hulls</option>
+  <option value="214">Soyabeans</option>
+  <option value="201">Spring barley</option>
+  <option value="1201">Spring barley grazed</option>
+  <option value="781">Spring barley - straw</option>
+  <option value="361">Sugar beet</option>
+  <option value="289">Sugar beet slices</option>
+  <option value="278">Sugar cane molasses (treacle)</option>
+  <option value="217">Sunflower seed</option>
+  <option value="161">Sunflower seed cake, husked</option>
+  <option value="162">Sunflower seed cake, partially husked</option>
+  <option value="164">Sunflower seed meal, husked</option>
+  <option value="165">Sunflower seed meal, partially husked</option>
+  <option value="371">Swedes</option>
+  <option value="373">Swedes, top</option>
+  <option value="479">Sweet lupins</option>
+  <option value="579">Sweet lupins, silage</option>
+  <option value="296">Sweet potato-slices</option>
+  <option value="295">Tapioca meal</option>
+  <option value="365">Top + beet pulp, silage</option>
+  <option value="367">Top + straw + beet pulp, silage</option>
+  <option value="366">Top + straw, silage</option>
+  <option value="209">Triticale</option>
+  <option value="595">Triticale - wholecrop (early dough), silage</option>
+  <option value="381">Turnips</option>
+  <option value="546">Undersown Italian ryegrass, silage</option>
+  <option value="347">Vegetable fat</option>
+  <option value="287">Vinasse</option>
+  <option value="203">Wheat</option>
+  <option value="588">Wheat - peas, silage</option>
+  <option value="587">Wheat - wholecrop (early dough), silage</option>
+  <option value="589">Wheat - wholecrop (early dough), silage, high fodder index</option>
+  <option value="591">Wheat - wholecrop (early dough), silage, low fodder index</option>
+  <option value="590">Wheat - wholecrop (early dough), silage, middle fodder index</option>
+  <option value="232">Wheat bran</option>
+  <option value="235">Wheat germ</option>
+  <option value="231">Wheat meal</option>
+  <option value="233">Wheat meal, middlings</option>
+  <option value="788">Wheat- straw</option>
+  <option value="312">Whey</option>
+  <option value="315">Whey permeate</option>
+  <option value="314">Whey powder</option>
+  <option value="715">White clover straw</option>
+  <option value="472">White clover, beginning flowering</option>
+  <option value="572">White clover, beginning flowering, silage</option>
+  <option value="368">Wholecrop + top, silage</option>
+  <option value="581">Wholecrop barley (beginning of earing), silage</option>
+  <option value="574">Wholecrop barley / peas (beginning of earing), silage, 40% peas</option>
+  <option value="577">Wholecrop barley / peas (beginning of earing), silage, 70% peas</option>
+  <option value="578">Wholecrop peas (beginning of earing), silage</option>
+  <option value="597">Wholecrop rye (Green rye beginning of earing), silage</option>
+  <option value="497">Wholecrop,rye</option>
+  <option value="200">Winter barley</option>
+  <option value="782">Winter barley - straw</option>
+  <option value="585">Winter barley - wholecrop (early doyugh), silage</option>
+</select>
+<input id="feedstuffAmount_0" name="feedstuffAmount_0" type="text" style="width: 35px;position:relative;top:-3Px;background-color: lightyellow;" value="0" onchange="this.value=this.value.replace(',','.');setFeedstuffString(0);"/> Kg DM/animal/day
+<img style="position:relative;top:3Px;" src="images/del.gif" onclick="delRow(this,0);" onMouseover="mouseOverGif(this)"  onMouseout="mouseOutGif(this)"/>&nbsp;&nbsp;
+</td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="hiddenFeedstuffList_0"  id="hiddenFeedstuffList_0" value="201,444,221,913,"/><input type="hidden" name="hiddenAmountList_0"  id="hiddenAmountList_0" value="10,66,10,10,"/></td>
+      <td class="data" align="left">&nbsp;&nbsp;<select name="selectStableType_0" onChange="document.forms.update.saveUpdates.value='true';this.style.color='#ff0000';document.forms.formCattleHerd.action='CattleHerdUpdate.asp';document.forms.formCattleHerd.submit();"><option value="0">None</option><option value="1">Tied stall</option><option value="2">Cubical house - solid floor</option><option value="3" selected>Cubical house - slatted floor</option><option value="5">Mixed deep litter</option><option value="6">Deep litter</option></select></td>
+<input type="hidden" name="nManureStorage_0"  id="nManureStorage_0" value="1"/>      <td class="data" align="left">&nbsp;&nbsp;<select style="width: 200px;" name="selectManureStorageType_0" onChange="document.forms.update.saveUpdates.value='true';this.style.color='#ff0000';"><option value="1" selected>Slurry tank without crust/cover</option><option value="2">Slurry tank with crust/cover</option><option value="5">Biogas plant</option></select></td>
+      <td class="data" align="left"><button style="width: 50px; height: 20px; font-size: 10px" onClick="javascript:if(confirm('Confirm deletion of animal group')) {veil();document.forms.formCattleHerd.action='CattleHerdDelete.asp?CattleHerdID=1';document.forms.formCattleHerd.submit();}">Delete</button></td>
+    </tr>
+    <tr>
+      <td class="data" colspan="7"><hr/></td>
+    </tr>
+    <tr>
+      <td class="data" colspan="7"><button style="width: 100px; height: 20px; font-size: 10px" onClick="javascript:veil();document.forms.formCattleHerd.action='CattleHerdUpdate.asp';document.forms.formCattleHerd.submit();">Save</button>&nbsp;<button style="width: 100px; height: 20px; font-size: 10px" onClick="javascript:veil();document.forms.formCattleHerd.action='CattleHerdNew.asp';document.forms.formCattleHerd.submit();">New</button><input type="hidden" name="hiddenNCattleHerd" value="1">
+</td>
+    </tr>
+    <tr>
+  </table>
+</form>
+<form name="update" action="javascript:document.forms.formCattleHerd.action='CattleHerdUpdate.asp';document.forms.formCattleHerd.submit();" method="post">
+<input type="hidden" name="saveUpdates" value="false">
+</form>
+
+<script language="JavaScript"> var sel=this.document.forms[0].elements; for (var i=0;i<sel.length;i++){sel[i].disabled='true'};</script>
+<script language="JavaScript"> var img=this.document.getElementsByTagName("img"); for (var i=0;i<img.length;i++){img[i].onclick='';img[i].onmouseover='';};</script></body>
+</body>
+</html>

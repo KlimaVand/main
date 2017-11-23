@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/report_row_height"
+    android:layout_marginLeft="@dimen/report_row_horizontal_margin" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageButtonLocation"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/report_coordinate_layout_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/report_row_vertical_margin"
+            android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+            android:layout_marginRight="@dimen/report_row_horizontal_margin"
+            android:layout_marginTop="@dimen/report_row_vertical_margin" >
+
+            <TextView
+                android:id="@+id/textViewLatitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+                android:text="@string/report_text_coordinate_latitude"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewLatitudeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+                android:text="@string/report_text_coordinate_zero_float"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+        
+         <LinearLayout
+             android:id="@+id/report_coordinate_layout_longitude"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="@dimen/report_row_vertical_margin"
+             android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+             android:layout_marginRight="@dimen/report_row_horizontal_margin"
+             android:layout_marginTop="@dimen/report_row_vertical_margin" >
+
+            <TextView
+                android:id="@+id/textViewLongitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+                android:text="@string/report_text_coordinate_longitude"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewLongitudeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+                android:text="@string/report_text_coordinate_zero_float"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+        
+    </LinearLayout>
+ 	
+ 	<ImageButton
+        android:id="@+id/imageButtonLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/report_row_horizontal_margin"
+        android:contentDescription="@string/imageview_content_description_none"
+        android:onClick="locationButtonTapped"
+        android:src="@drawable/coordinate" />
+    
+</RelativeLayout>
+<!-- From: file:/D:/main/tools/euroblight/euroblight-android-develop/Euroblight/app/src/main/res/layout/report_coordinate_layout.xml -->

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PressureActivity" >
+
+    <com.af.euroblight2.objects.TouchImageView
+        android:id="@+id/imageViewPressure"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/imageview_content_description_none" />
+        
+    <LinearLayout
+        android:id="@+id/linearLayoutPressureLocations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:background="@color/overlay_view_color" >
+     <Spinner
+            android:id="@+id/spinnerLocationsCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/listview_row_horizontal_margin"
+            android:layout_weight="1"
+            android:entries="@array/pressure_locations_country" />
+     
+     <LinearLayout
+        android:id="@+id/linearLayoutPressureLocationsSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+         <AutoCompleteTextView
+             android:id="@+id/autoCompleteTextViewLocation"
+             android:layout_width="match_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:drawableLeft="@drawable/zoom"
+             android:ems="10"
+             android:hint="@string/auto_complete_search"
+             android:singleLine="true" />
+        
+    </LinearLayout>
+   	<com.af.euroblight2.objects.CustomSpinner
+            android:id="@+id/spinnerLocations"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/listview_row_horizontal_margin"
+            android:layout_weight="1" />
+    
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/error_text_no_connection_available"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+     
+</RelativeLayout><!-- From: file:/D:/main/tools/euroblight/euroblight-android-develop/Euroblight/app/src/main/res/layout/activity_pressure.xml -->

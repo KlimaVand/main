@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  
+<settings>
+    <Identity>0</Identity>
+    <constants>constants.xml </constants>
+    <parameters>testFarms\Senegal\117050\parameters.xml</parameters>
+    <farm>testFarms\Senegal\farm_117050_5.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>testFarms\Senegal\117050\feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+<Adaptation>-1</Adaptation>
+  </settings>
+  <settings>
+    <Identity>1</Identity>
+    <constants>constants.xml </constants>
+    <parameters>testFarms\Senegal\117050\parameters.xml</parameters>
+    <farm>testFarms\Senegal\farm_117050_5.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>testFarms\Senegal\117050\feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+<Adaptation>5</Adaptation>
+  </settings>
+  
+    <settings>
+      <Identity>2</Identity>
+    <constants>constants.xml </constants>
+    <parameters>testFarms\Senegal\117051\parameters.xml</parameters>
+    <farm>testFarms\Senegal\farm_117051_1.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>testFarms\Senegal\117051\feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+<Adaptation>-1</Adaptation>
+  </settings>
+  <settings>
+    <Identity>3</Identity>
+    <constants>constants.xml </constants>
+    <parameters>testFarms\Senegal\117051\parameters.xml</parameters>
+    <farm>testFarms\Senegal\farm_117051_1.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>testFarms\Senegal\117051\feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+<Adaptation>1</Adaptation>
+  </settings>
+<settings>
+      <Identity>4</Identity>
+    <constants>constants.xml </constants>
+    <parameters>testFarms\Senegal\117051\parameters.xml</parameters>
+    <farm>testFarms\Senegal\farm_117051_5.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>testFarms\Senegal\117051\feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+<Adaptation>-1</Adaptation>
+  </settings>
+  <settings>
+    <Identity>5</Identity>
+    <constants>constants.xml </constants>
+    <parameters>testFarms\Senegal\117051\parameters.xml</parameters>
+    <farm>testFarms\Senegal\farm_117051_5.xml</farm>
+    <fertAndManure>fertMan.xml</fertAndManure>
+    <feedItems>testFarms\Senegal\117051\feedstuff.xml</feedItems>
+    <outputDir>output/</outputDir>
+    <pauseBeforeExit>true</pauseBeforeExit>
+    <stopOnError>true</stopOnError>
+<Adaptation>5</Adaptation>
+  </settings>
+<CommonSettings>
+  <alternativePath>C:\information</alternativePath>
+<verbosityLevel>5</verbosityLevel>
+
+<logFile>true</logFile>
+<logScreen>true</logScreen>
+</CommonSettings>
+</xml>

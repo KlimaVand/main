@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_action_clear"
+        android:orderInCategory="100"
+        android:icon="@drawable/clear"
+        android:showAsAction="always"
+        android:title="@string/menu_action_clear"/>
+    <item
+        android:id="@+id/menu_action_send"
+        android:orderInCategory="100"
+        android:icon="@drawable/send"
+        android:showAsAction="always"
+        android:title="@string/menu_action_send"/>
+
+</menu>
+<!-- From: file:/D:/main/tools/euroblight/euroblight-android-develop/Euroblight/app/src/main/res/menu/unsent_reports.xml -->

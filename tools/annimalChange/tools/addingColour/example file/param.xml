@@ -1,0 +1,2530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <AgroecologicalZone>
+    <Identity>1</Identity>
+    <Name>European montane</Name>
+    <Description>Details for a single agroecological zone</Description>
+    <MonthlyAirTemp>false</MonthlyAirTemp>
+    <SoilType>
+      <Identity>1</Identity>
+      <Name>Coarse Sandy Soil</Name>
+      <Description>Type of soil</Description>
+      <ClayFraction>
+        <Description>Fraction of clay</Description>
+        <Value>0.1</Value>
+        <Units>none</Units>
+      </ClayFraction>
+      <N2Factor>
+        <Description>Dinitrogen emission factor</Description>
+        <Value>8.0</Value>
+        <Units>kg N2-N/kg N2O-N emitted</Units>
+      </N2Factor>
+      <Arable>
+        <Description>C-Tool parameters for arable soil</Description>
+        <InitialC>
+          <Description>Initial carbon in soil</Description>
+          <Value>80000</Value>
+          <Units>kg/ha</Units>
+        </InitialC>
+        <InitialCtoN>
+          <Description>Initial C:N ratio of soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialFOMCtoN>
+        <propHUM>
+          <Description>Nick does write bether description</Description>
+          <Value>0.4</Value>
+          <Units>fraction</Units>
+        </propHUM>
+        <propROM>
+          <Description>Nick does write bether description</Description>
+          <Value>0.55</Value>
+          <Units>fraction</Units>
+        </propROM>
+      </Arable>
+      <Grassland>
+        <Description>C-Tool parameters for grassland soil</Description>
+        <InitialC>
+          <Description>Initial carbon in soil</Description>
+          <Value>80000</Value>
+          <Units>kg/ha</Units>
+        </InitialC>
+        <InitialCtoN>
+          <Description>Initial C:N ratio of soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialFOMCtoN>
+        <propHUM>
+          <Description>Proportion of the total soil C that is in the humus pool</Description>
+          <Value>0.4</Value>
+          <Units>fraction</Units>
+        </propHUM>
+        <propROM>
+          <Description>Proportion of the total soil C that is in the resistant pool</Description>
+          <Value>0.3</Value>
+          <Units>fraction</Units>
+        </propROM>
+      </Grassland>
+      <MaxSoilDepth>
+        <Description>Maximum soil depth (for soil model calculations)</Description>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+      </MaxSoilDepth>
+      <ThermalDiffusivity>
+        <Description>Thermal diffusivity of soil</Description>
+        <Value>0.00000035</Value>
+        <Units>metres squared per second</Units>
+      </ThermalDiffusivity>
+      <DrainageStart>
+        <Day>15</Day>
+        <Month>10</Month>
+        <Description>Average date on which water begins to drain from the soil</Description>
+      </DrainageStart>
+      <DrainageEnd>
+        <Day>15</Day>
+        <Month>4</Month>
+        <Description>Average date on which water finishes draining from the soil</Description>
+      </DrainageEnd>
+    </SoilType>
+    <SoilType>
+      <Identity>2</Identity>
+      <Name>Sandy loam</Name>
+      <ClayFraction>
+        <Description>Fraction of clay</Description>
+        <Value>0.2</Value>
+        <Units>none</Units>
+      </ClayFraction>
+      <N2Factor>
+        <Description>Dinitrogen emission factor</Description>
+        <Value>8.0</Value>
+        <Units>kg N2-N/kg N2O-N emitted</Units>
+      </N2Factor>
+      <Arable>
+        <Description>C-Tool parameters for arable soil</Description>
+        <InitialC>
+          <Description>Initial carbon in soil</Description>
+          <Value>80000</Value>
+          <Units>kg/ha</Units>
+        </InitialC>
+        <InitialCtoN>
+          <Description>Initial C:N ratio of soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialFOMCtoN>
+        <propHUM>
+          <Description>Nick does write bether description</Description>
+          <Value>0.4</Value>
+          <Units>fraction</Units>
+        </propHUM>
+        <propROM>
+          <Description>Nick does write bether description</Description>
+          <Value>0.3</Value>
+          <Units>fraction</Units>
+        </propROM>
+      </Arable>
+      <Grassland>
+        <Description>C-Tool parameters for grassland soil</Description>
+        <InitialC>
+          <Description>Initial carbon in soil</Description>
+          <Value>80000</Value>
+          <Units>kg/ha</Units>
+        </InitialC>
+        <InitialCtoN>
+          <Description>Initial C:N ratio of soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialFOMCtoN>
+        <propHUM>
+          <Description>Proportion of the total soil C that is in the humus pool</Description>
+          <Value>0.4</Value>
+          <Units>fraction</Units>
+        </propHUM>
+        <propROM>
+          <Description>Proportion of the total soil C that is in the resistant pool</Description>
+          <Value>0.3</Value>
+          <Units>fraction</Units>
+        </propROM>
+      </Grassland>
+      <MaxSoilDepth>
+        <Description>Maximum soil depth (for soil model calculations)</Description>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+      </MaxSoilDepth>
+      <ThermalDiffusivity>
+        <Description>Thermal diffusivity of soil</Description>
+        <Value>0.00000035</Value>
+        <Units>metres squared per second</Units>
+      </ThermalDiffusivity>
+      <DrainageStart>
+        <Day>15</Day>
+        <Month>10</Month>
+        <Description>Average date on which water begins to drain from the soil</Description>
+      </DrainageStart>
+      <DrainageEnd>
+        <Day>15</Day>
+        <Month>4</Month>
+        <Description>Average date on which water finishes draining from the soil</Description>
+      </DrainageEnd>
+    </SoilType>
+    <SoilType>
+      <Identity>3</Identity>
+      <Name>Sandy clay loam</Name>
+      <ClayFraction>
+        <Description>Fraction of clay</Description>
+        <Value>0.2</Value>
+        <Units>none</Units>
+      </ClayFraction>
+      <N2Factor>
+        <Description>Dinitrogen emission factor</Description>
+        <Value>8.0</Value>
+        <Units>kg N2-N/kg N2O-N emitted</Units>
+      </N2Factor>
+      <Arable>
+        <Description>C-Tool parameters for arable soil</Description>
+        <InitialC>
+          <Description>Initial carbon in soil</Description>
+          <Value>80000</Value>
+          <Units>kg/ha</Units>
+        </InitialC>
+        <InitialCtoN>
+          <Description>Initial C:N ratio of soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialFOMCtoN>
+        <propHUM>
+          <Description>Proportion of the total soil C that is in the humus pool</Description>
+          <Value>0.4</Value>
+          <Units>fraction</Units>
+        </propHUM>
+        <propROM>
+          <Description>Proportion of the total soil C that is in the resistant pool</Description>
+          <Value>0.3</Value>
+          <Units>fraction</Units>
+        </propROM>
+      </Arable>
+      <Grassland>
+        <Description>C-Tool parameters for grassland soil</Description>
+        <InitialC>
+          <Description>Initial carbon in soil</Description>
+          <Value>80000</Value>
+          <Units>kg/ha</Units>
+        </InitialC>
+        <InitialCtoN>
+          <Description>Initial C:N ratio of soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialCtoN>
+        <InitialFOMCtoN>
+          <Description>Initial C:N ratio of fresh organic matter in soil</Description>
+          <Value>10.0</Value>
+          <Units>none</Units>
+        </InitialFOMCtoN>
+        <propHUM>
+          <Description>Proportion of the total soil C that is in the humus pool</Description>
+          <Value>0.4</Value>
+          <Units>fraction</Units>
+        </propHUM>
+        <propROM>
+          <Description>Proportion of the total soil C that is in the resistant pool</Description>
+          <Value>0.3</Value>
+          <Units>fraction</Units>
+        </propROM>
+      </Grassland>
+      <MaxSoilDepth>
+        <Description>Maximum soil depth (for soil model calculations)</Description>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+      </MaxSoilDepth>
+      <ThermalDiffusivity>
+        <Description>Thermal diffusivity of soil</Description>
+        <Value>0.00000035</Value>
+        <Units>metres squared per second</Units>
+      </ThermalDiffusivity>
+      <DrainageStart>
+        <Day>15</Day>
+        <Month>10</Month>
+        <Description>Average date on which water begins to drain from the soil</Description>
+      </DrainageStart>
+      <DrainageEnd>
+        <Day>15</Day>
+        <Month>4</Month>
+        <Description>Average date on which water finishes draining from the soil</Description>
+      </DrainageEnd>
+    </SoilType>
+    <Month>
+      <Identity>1</Identity>
+      <Name>January</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>-1.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>2</Identity>
+      <Name>February</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>3</Identity>
+      <Name>March</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>4</Identity>
+      <Name>April</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>5</Identity>
+      <Name>May</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>6</Identity>
+      <Name>June</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>7</Identity>
+      <Name>July</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>8</Identity>
+      <Name>August</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>9</Identity>
+      <Name>September</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>10</Identity>
+      <Name>October</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>11</Identity>
+      <Name>November</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <Month>
+      <Identity>12</Identity>
+      <Name>December</Name>
+      <AirTemperature>
+        <Units>Celsius</Units>
+        <Description>Average monthly air temperature 2 metres above ground</Description>
+        <Value>2.0</Value>
+      </AirTemperature>
+      <Precipitation>
+        <Units>mm</Units>
+        <Description>Average monthly precipitation</Description>
+        <Value>50.0</Value>
+      </Precipitation>
+      <Description>Monthly mean weather data</Description>
+    </Month>
+    <GrazingMidpoint>
+      <Units>Day</Units>
+      <Description>Midpoint for grazing</Description>
+      <Value>180</Value>
+    </GrazingMidpoint>
+    <AverageAirTemperature>
+      <Units>Celsius</Units>
+      <Description>Average annual air temperature 2 metres above ground</Description>
+      <Value>10.0</Value>
+    </AverageAirTemperature>
+    <AirTemperatureMaxDay>
+      <Units>Days</Units>
+      <Description>Julian day when air temperature is at its maximum</Description>
+      <Value>180</Value>
+    </AirTemperatureMaxDay>
+    <AirTemperaturAmplitude>
+      <Units>Celsius</Units>
+      <Description>Maximum deviation of air temperature from the mean</Description>
+      <Value>10</Value>
+    </AirTemperaturAmplitude>
+    <Livestock>
+      <Identity>1</Identity>
+      <Description>Details of livestock</Description>
+      <name>
+        <Identity>0</Identity>
+        <Value>Dairy cattle</Value>
+        <Units>none</Units>
+        <Description>Name of livestock</Description>
+      </name>
+      <SpeciesGroup>
+        <Identity>0</Identity>
+        <Value>1</Value>
+        <Units>kg/kg</Units>
+        <Description>To which species group livestock belongs (1 = cattle, 2 = pigs)</Description>
+      </SpeciesGroup>
+      <isRuminant>
+        <Identity>0</Identity>
+        <Value>True</Value>
+        <Units>none</Units>
+        <Description>True if the livestock are ruminants</Description>
+      </isRuminant>
+      <Liveweight>
+        <Identity>0</Identity>
+        <Value>650</Value>
+        <Units>kg/kg</Units>
+        <Description>Mean live weight of livestock (optional)</Description>
+      </Liveweight>
+      <mu_base>
+        <Identity>0</Identity>
+        <Value>2.5</Value>
+        <Units>Proportion per unit of energy intake, normalised by maintenance energy demand</Units>
+        <Description>Energy intake below which there is no reduction in utilisation of energy</Description>
+      </mu_base>
+      <mu_b>
+        <Identity>0</Identity>
+        <Value>0.05</Value>
+        <Units>Proportion per unit of energy intake, normalised by maintenance energy demand</Units>
+        <Description>Rate of reduction in energy utilisation with increasing energy intake</Description>
+      </mu_b>
+      <milkCconc>
+        <Identity>0</Identity>
+        <Value>0.05</Value>
+        <Units>kg/kg</Units>
+        <Description>Concentration of carbon in milk</Description>
+      </milkCconc>
+      <milkNconc>
+        <Identity>0</Identity>
+        <Value>0.00556</Value>
+        <Units>kg/kg</Units>
+        <Description>Concentration of nitrogen in milk</Description>
+      </milkNconc>
+      <growthNconc>
+        <Identity>0</Identity>
+        <Value>0.0416</Value>
+        <Units>kg/kg</Units>
+        <Description>Concentration of nitrogen in animal growth</Description>
+      </growthNconc>
+      <growthCconc>
+        <Identity>0</Identity>
+        <Value>0.232</Value>
+        <Units>kg/kg</Units>
+        <Description>Concentration of carbon in animal growth</Description>
+      </growthCconc>
+      <maintenanceEnergyCoeff>
+        <Identity>0</Identity>
+        <Value>1.4</Value>
+        <Units>none</Units>
+        <Description>Coefficient in calculation of maintenance energy requirement</Description>
+      </maintenanceEnergyCoeff>
+      <growthEnergyDemandCoeff>
+        <Identity>0</Identity>
+        <Value>23.0</Value>
+        <Units>MJ/kg</Units>
+        <Description>Energy requirement per unit growth</Description>
+      </growthEnergyDemandCoeff>
+      <milkEnergyDemandCoeff>
+        <Identity>0</Identity>
+        <Value>5.3</Value>
+        <Units>MJ/kg</Units>
+        <Description>Energy requirement per unit of milk produced</Description>
+      </milkEnergyDemandCoeff>
+      <urineProp>
+        <Identity>0</Identity>
+        <Value>0.04</Value>
+        <Units>kg/kg</Units>
+        <Description>Proportion of carbon excreted in urine</Description>
+      </urineProp>
+      <HousedDuringGrazing>
+        <Value>false</Value>
+        <Units>None</Units>
+        <Description>Is true if animals are housing during part of the day when grazed</Description>
+      </HousedDuringGrazing>
+      <Age>
+        <Identity>0</Identity>
+        <Value>3</Value>
+        <Units>years</Units>
+        <Description>Mean age of livestock</Description>
+      </Age>
+    </Livestock>
+    <Housing>
+      <Identity>1</Identity>
+      <HousingType>1</HousingType>
+      <NameOfHousing>Cattle tied housing</NameOfHousing>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+    </Housing>
+    <Housing>
+      <Identity>2</Identity>
+      <HousingType>2</HousingType>
+      <NameOfHousing>Cattle cubicle housing, solid floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>3</Identity>
+      <HousingType>3</HousingType>
+      <NameOfHousing>Cattle cubicle housing, slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>4</Identity>
+      <HousingType>4</HousingType>
+      <NameOfHousing>Cattle follower crate, slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>5</Identity>
+      <HousingType>5</HousingType>
+      <NameOfHousing>Cattle, deep litter and slurry</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>6</Identity>
+      <HousingType>6</HousingType>
+      <NameOfHousing>Deep litter, all livestock types</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>7</Identity>
+      <HousingType>7</HousingType>
+      <NameOfHousing>Individual boxes, partially-slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>8</Identity>
+      <HousingType>8</HousingType>
+      <NameOfHousing>Individual boxes, fully-slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>9</Identity>
+      <HousingType>9</HousingType>
+      <NameOfHousing>Loose pig housing, deep litter and partially-slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>10</Identity>
+      <HousingType>10</HousingType>
+      <NameOfHousing>Loose pig housing, deep litter and solid flooring</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>10</Identity>
+      <HousingType>10</HousingType>
+      <NameOfHousing>Loose pig housing, deep litter and solid flooring</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>11</Identity>
+      <HousingType>11</HousingType>
+      <NameOfHousing>Farrowing crates, fully-slatted flooring</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>12</Identity>
+      <HousingType>12</HousingType>
+      <NameOfHousing>Farrowing crates, partially-slatted flooring</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>13</Identity>
+      <HousingType>13</HousingType>
+      <NameOfHousing>Pig housing, fully-slatted flooring</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>14</Identity>
+      <HousingType>14</HousingType>
+      <NameOfHousing>Pig housing, drained floor, 50/50 slats</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>15</Identity>
+      <HousingType>15</HousingType>
+      <NameOfHousing>Two-climate pig housing, partially-slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>16</Identity>
+      <HousingType>16</HousingType>
+      <NameOfHousing>Pig housing, drained floor, 33/67 slats</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>17</Identity>
+      <HousingType>17</HousingType>
+      <NameOfHousing>Pig housing, partially-slatted floor</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <Housing>
+      <Identity>18</Identity>
+      <HousingType>18</HousingType>
+      <NameOfHousing>Pig housing, deep litter, partitioned rest areas</NameOfHousing>
+      <meanTemp>
+        <Value>12.0</Value>
+        <Units>Celsius</Units>
+        <Description>Mean outside air temperature during the housing period</Description>
+      </meanTemp>
+      <HousingRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </HousingRefTemp>
+      <EFNH3housingRef>
+        <Value>0.1</Value>
+        <Units>kg ammonia N/kg ammonium in housing</Units>
+        <Description>Ammonia emission factor for housing</Description>
+      </EFNH3housingRef>
+      <feedWasteFactor>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>Proportion of feed dry matter that is wasted in housing</Description>
+      </feedWasteFactor>
+      <ProportionDegradable>
+        <Value>0.2</Value>
+        <Description>Proportion of degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionDegradable>
+      <ProportionNondegradable>
+        <Value>0.8</Value>
+        <Description>Proportion of non-degradable carbon partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionNondegradable>
+      <ProportionTAN>
+        <Value>0.1</Value>
+        <Description>Proportion of ammoniacal N partitioned to solid manure storage, if more than one manure store is used</Description>
+      </ProportionTAN>
+      <Description>Details of livestock housing</Description>
+      <beddingFactor>
+        <Description>Addition of bedding material</Description>
+        <Value>1.0</Value>
+        <Units>kg DM/animal/day</Units>
+        <Description>Rate of use of bedding dry matter</Description>
+      </beddingFactor>
+    </Housing>
+    <ManureStorage>
+      <Identity>1</Identity>
+      <Name>slurryTank - cattle</Name>
+      <StorageType>1</StorageType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <StoresSolid>
+        <Description>Is true if this storage stores solid manure</Description>
+        <Value>False</Value>
+      </StoresSolid>
+      <b1>
+        <Description>Coefficient in carbon degradation</Description>
+        <Value>1.0</Value>
+        <Units>None</Units>
+      </b1>
+      <lnArr>
+        <Description>Log natural in Arrhenius equation</Description>
+        <Value>40.0</Value>
+        <Units>None</Units>
+      </lnArr>
+      <meanTemp>
+        <Description>Mean air temperture during storage period</Description>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+      </meanTemp>
+      <Bo>
+        <Description>Methane producing capacity</Description>
+        <Value>0.24</Value>
+        <Units>cubic metres methane/kg volatile solids</Units>
+      </Bo>
+      <ohmTAN>
+        <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmTAN>
+      <ohmOrg>
+        <Description>Proportion of manure organic N lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmOrg>
+      <EFNH3storageIPCC>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor IPCC system</Description>
+      </EFNH3storageIPCC>
+      <EFNH3storageRef>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor nonIPCC system</Description>
+      </EFNH3storageRef>
+      <EFN2OstorageIPCC>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor IPCC system</Description>
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor nonIPCC system</Description>
+      </EFN2OstorageRef>
+      <lambda_m>
+        <Value>8</Value>
+        <Units>none</Units>
+        <Description>N2 emissions as a multiple of N2O emissions</Description>
+      </lambda_m>
+      <MCF>
+        <Description>methane conversion factor </Description>
+        <Value>0.14</Value>
+        <Units>none</Units>
+      </MCF>
+      <StorageRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </StorageRefTemp>
+      <Description>Details of manure storage</Description>
+    </ManureStorage>
+    <ManureStorage>
+      <Identity>2</Identity>
+      <Name>slurryTank - pig</Name>
+      <StorageType>1</StorageType>
+      <SpeciesGroup>2</SpeciesGroup>
+      <StoresSolid>
+        <Description>Is true if this storage stores solid manure</Description>
+        <Value>False</Value>
+      </StoresSolid>
+      <b1>
+        <Description>Coefficient in carbon degradation</Description>
+        <Value>1.0</Value>
+        <Units>None</Units>
+      </b1>
+      <lnArr>
+        <Description>Log natural in Arrhenius equation</Description>
+        <Value>40.0</Value>
+        <Units>None</Units>
+      </lnArr>
+      <meanTemp>
+        <Description>Mean air temperture during storage period</Description>
+        <Value>20.0</Value>
+        <Units>Celsius</Units>
+      </meanTemp>
+      <Bo>
+        <Description>Methane producing capacity</Description>
+        <Value>0.24</Value>
+        <Units>cubic metres methane/kg volatile solids</Units>
+      </Bo>
+      <ohmTAN>
+        <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmTAN>
+      <ohmOrg>
+        <Description>Proportion of manure lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmOrg>
+      <EFNH3storageRef>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor</Description>
+      </EFNH3storageRef>
+      <MCF>
+        <Description>methane conversion factor </Description>
+        <Value>0.14</Value>
+        <Units>none</Units>
+      </MCF>
+      <EFNH3storageIPCC>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor IPCC system</Description>
+      </EFNH3storageIPCC>
+      <EFN2OstorageIPCC>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor IPCC system</Description>
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor nonIPCC system</Description>
+      </EFN2OstorageRef>
+      <lambda_m>
+        <Value>8</Value>
+        <Units>none</Units>
+        <Description>N2 emissions as a multiple of N2O emissions</Description>
+      </lambda_m>
+      <StorageRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </StorageRefTemp>
+      <Description>Details of manure storage</Description>
+    </ManureStorage>
+    <ManureStorage>
+      <Identity>3</Identity>
+      <Name>dungheap - cattle</Name>
+      <StorageType>2</StorageType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <StoresSolid>
+        <Description>Is true if this storage stores solid manure</Description>
+        <Value>True</Value>
+      </StoresSolid>
+      <b1>
+        <Description>Coefficient in carbon degradation</Description>
+        <Value>1.0</Value>
+        <Units>None</Units>
+      </b1>
+      <lnArr>
+        <Description>Log natural in Arrhenius equation</Description>
+        <Value>40.0</Value>
+        <Units>None</Units>
+      </lnArr>
+      <meanTemp>
+        <Description>Mean air temperture during storage period</Description>
+        <Value>20.0</Value>
+        <Units>Celsius</Units>
+      </meanTemp>
+      <Bo>
+        <Description>Methane producing capacity</Description>
+        <Value>0.24</Value>
+        <Units>cubic metres methane/kg volatile solids</Units>
+      </Bo>
+      <ohmTAN>
+        <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmTAN>
+      <ohmOrg>
+        <Description>Proportion of manure lost by runoff or leaching</Description>
+        <Value>0.05</Value>
+        <Units>None</Units>
+      </ohmOrg>
+      <EFNH3storageRef>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor</Description>
+      </EFNH3storageRef>
+      <MCF>
+        <Description>methane conversion factor </Description>
+        <Value>0.02</Value>
+        <Units>none</Units>
+      </MCF>
+      <EFNH3storageIPCC>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor IPCC system</Description>
+      </EFNH3storageIPCC>
+      <EFN2OstorageIPCC>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor IPCC system</Description>
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor nonIPCC system</Description>
+      </EFN2OstorageRef>
+      <lambda_m>
+        <Value>8</Value>
+        <Units>none</Units>
+        <Description>N2 emissions as a multiple of N2O emissions</Description>
+      </lambda_m>
+      <StorageRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </StorageRefTemp>
+      <Description>Details of manure storage</Description>
+    </ManureStorage>
+    <ManureStorage>
+      <Identity>4</Identity>
+      <Name>dungheap - pig</Name>
+      <StorageType>2</StorageType>
+      <SpeciesGroup>2</SpeciesGroup>
+      <StoresSolid>
+        <Description>Is true if this storage stores solid manure</Description>
+        <Value>True</Value>
+      </StoresSolid>
+      <b1>
+        <Description>Coefficient in carbon degradation</Description>
+        <Value>1.0</Value>
+        <Units>None</Units>
+      </b1>
+      <lnArr>
+        <Description>Log natural in Arrhenius equation</Description>
+        <Value>40.0</Value>
+        <Units>None</Units>
+      </lnArr>
+      <meanTemp>
+        <Description>Mean air temperture during storage period</Description>
+        <Value>20.0</Value>
+        <Units>Celsius</Units>
+      </meanTemp>
+      <Bo>
+        <Description>Methane producing capacity</Description>
+        <Value>0.24</Value>
+        <Units>cubic metres methane/kg volatile solids</Units>
+      </Bo>
+      <ohmTAN>
+        <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmTAN>
+      <ohmOrg>
+        <Description>Proportion of manure lost by runoff or leaching</Description>
+        <Value>0.05</Value>
+        <Units>None</Units>
+      </ohmOrg>
+      <EFNH3storageRef>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor</Description>
+      </EFNH3storageRef>
+      <MCF>
+        <Description>methane conversion factor </Description>
+        <Value>0.02</Value>
+        <Units>none</Units>
+      </MCF>
+      <EFNH3storageIPCC>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor IPCC system</Description>
+      </EFNH3storageIPCC>
+      <EFN2OstorageIPCC>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor IPCC system</Description>
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor nonIPCC system</Description>
+      </EFN2OstorageRef>
+      <lambda_m>
+        <Value>8</Value>
+        <Units>none</Units>
+        <Description>N2 emissions as a multiple of N2O emissions</Description>
+      </lambda_m>
+      <StorageRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </StorageRefTemp>
+      <Description>Details of manure storage</Description>
+    </ManureStorage>
+    <ManureStorage>
+      <Identity>5</Identity>
+      <Name>Partially-separated liquid fraction, cattle</Name>
+      <StorageType>3</StorageType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <StoresSolid>
+        <Description>Is true if this storage stores solid manure</Description>
+        <Value>False</Value>
+      </StoresSolid>
+      <b1>
+        <Description>Coefficient in carbon degradation</Description>
+        <Value>1.0</Value>
+        <Units>None</Units>
+      </b1>
+      <lnArr>
+        <Description>Log natural in Arrhenius equation</Description>
+        <Value>40.0</Value>
+        <Units>None</Units>
+      </lnArr>
+      <meanTemp>
+        <Description>Mean air temperture during storage period</Description>
+        <Value>20.0</Value>
+        <Units>Celsius</Units>
+      </meanTemp>
+      <Bo>
+        <Description>Methane producing capacity</Description>
+        <Value>0.24</Value>
+        <Units>cubic metres methane/kg volatile solids</Units>
+      </Bo>
+      <ohmTAN>
+        <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmTAN>
+      <ohmOrg>
+        <Description>Proportion of manure lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmOrg>
+      <EFNH3storageRef>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor</Description>
+      </EFNH3storageRef>
+      <MCF>
+        <Description>methane conversion factor </Description>
+        <Value>0.14</Value>
+        <Units>none</Units>
+      </MCF>
+      <EFNH3storageIPCC>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor IPCC system</Description>
+      </EFNH3storageIPCC>
+      <EFN2OstorageIPCC>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor IPCC system</Description>
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor nonIPCC system</Description>
+      </EFN2OstorageRef>
+      <lambda_m>
+        <Value>8</Value>
+        <Units>none</Units>
+        <Description>N2 emissions as a multiple of N2O emissions</Description>
+      </lambda_m>
+      <StorageRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </StorageRefTemp>
+      <Description>Details of manure storage</Description>
+    </ManureStorage>
+    <ManureStorage>
+      <Identity>6</Identity>
+      <Name>Partially-separated solid fraction, cattle</Name>
+      <StorageType>4</StorageType>
+      <SpeciesGroup>1</SpeciesGroup>
+      <StoresSolid>
+        <Description>Is true if this storage stores solid manure</Description>
+        <Value>True</Value>
+      </StoresSolid>
+      <b1>
+        <Description>Coefficient in carbon degradation</Description>
+        <Value>1.0</Value>
+        <Units>None</Units>
+      </b1>
+      <lnArr>
+        <Description>Log natural in Arrhenius equation</Description>
+        <Value>40.0</Value>
+        <Units>None</Units>
+      </lnArr>
+      <meanTemp>
+        <Description>Mean air temperture during storage period</Description>
+        <Value>20.0</Value>
+        <Units>Celsius</Units>
+      </meanTemp>
+      <Bo>
+        <Description>Methane producing capacity</Description>
+        <Value>0.24</Value>
+        <Units>cubic metres methane/kg volatile solids</Units>
+      </Bo>
+      <ohmTAN>
+        <Description>Proportion of manure TAN lost by runoff or leaching</Description>
+        <Value>0</Value>
+        <Units>None</Units>
+      </ohmTAN>
+      <ohmOrg>
+        <Description>Proportion of manure lost by runoff or leaching</Description>
+        <Value>0.05</Value>
+        <Units>None</Units>
+      </ohmOrg>
+      <EFNH3storageRef>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor</Description>
+      </EFNH3storageRef>
+      <MCF>
+        <Description>methane conversion factor </Description>
+        <Value>0.02</Value>
+        <Units>none</Units>
+      </MCF>
+      <EFNH3storageIPCC>
+        <Value>0.1</Value>
+        <Units>kg/kg</Units>
+        <Description>Ammonia emission factor IPCC system</Description>
+      </EFNH3storageIPCC>
+      <EFN2OstorageIPCC>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor IPCC system</Description>
+      </EFN2OstorageIPCC>
+      <EFN2OstorageRef>
+        <Value>0.02</Value>
+        <Units>kg/kg</Units>
+        <Description>N2O emission factor nonIPCC system</Description>
+      </EFN2OstorageRef>
+      <lambda_m>
+        <Value>8</Value>
+        <Units>none</Units>
+        <Description>N2 emissions as a multiple of N2O emissions</Description>
+      </lambda_m>
+      <StorageRefTemp>
+        <Value>20</Value>
+        <Units>Celsius</Units>
+        <Description>Reference temperature for ammonia emission factor</Description>
+      </StorageRefTemp>
+      <Description>Details of manure storage</Description>
+    </ManureStorage>
+    <Crop>
+      <Identity>1</Identity>
+      <name>Winter wheat</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>300</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>180</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Combine harvesting</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+    </Crop>
+    <Crop>
+      <Identity>2</Identity>
+      <name>Spring barley</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>300</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>180</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Combine harvesting</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>3</Identity>
+      <name>Grass</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>600</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>400</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Forage harvester</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <HarvestMethod>
+        <Identity>2</Identity>
+        <Name>Grazing</Name>
+        <PropAboveGroundResidues>
+          <Value>0.2</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>4</Identity>
+      <name>Grass</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>450</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>350</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Forage harvester</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <HarvestMethod>
+        <Identity>2</Identity>
+        <Name>Grazing</Name>
+        <PropAboveGroundResidues>
+          <Value>0.2</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>5</Identity>
+      <name>Permanent grass</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>550</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>400</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Forage harvester</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <HarvestMethod>
+        <Identity>2</Identity>
+        <Name>Grazing</Name>
+        <PropAboveGroundResidues>
+          <Value>0.2</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>6</Identity>
+      <name>Oats</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>400</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>250</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Combine harvesting</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>7</Identity>
+      <name>Winter rape</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>400</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>250</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Combine harvesting</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>8</Identity>
+      <name>Rotational clover grass</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>550</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>400</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>0.5</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Forage harvester</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <HarvestMethod>
+        <Identity>2</Identity>
+        <Name>Grazing</Name>
+        <PropAboveGroundResidues>
+          <Value>0.2</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+    </Crop>
+    <Crop>
+      <Identity>9</Identity>
+      <name>Maize</name>
+      <Description>Details of crops</Description>
+      <NavailMax>
+        <Value>250</Value>
+        <Units>kg N/ha</Units>
+        <Description>Level of available soil N at which maximum N yield is reached</Description>
+      </NavailMax>
+      <NyieldMax>
+        <Value>190</Value>
+        <Units>kg N/ha</Units>
+        <Description>Maximum N yield of the crop</Description>
+      </NyieldMax>
+      <NfixationFactor>
+        <Value>-1.0</Value>
+        <Units>kg N/kg mineral N available</Units>
+        <Description>Rate of reduction in N fixation with increasing mineral N availability</Description>
+      </NfixationFactor>
+      <HarvestMethod>
+        <Identity>1</Identity>
+        <Name>Combine harvesting</Name>
+        <PropAboveGroundResidues>
+          <Value>0.1</Value>
+          <Units>kg DM/kg DM</Units>
+          <Description>Above-ground yield of dry matter that cannot be harvested</Description>
+        </PropAboveGroundResidues>
+      </HarvestMethod>
+      <PropBelowGroundResidues>
+        <Value>0.1</Value>
+        <Units>kg DM/kg DM</Units>
+        <Description>The below-ground crop residues (e.g. roots), as a proportion of the DM yield</Description>
+      </PropBelowGroundResidues>
+      <BelowGroundCconc>
+        <Value>0.46</Value>
+        <Units>none</Units>
+        <Description>Carbon concentration in below-ground dry matter</Description>
+      </BelowGroundCconc>
+      <MaximumRootingDepth>
+        <Value>1.0</Value>
+        <Units>metres</Units>
+        <Description>Maximum rooting depth, if not restricted by soil depth</Description>
+      </MaximumRootingDepth>
+      <BelowGroundCtoN>
+        <Value>15.0</Value>
+        <Units>none</Units>
+        <Description>Ratio of carbon to nitrogen in below-ground dry matter</Description>
+      </BelowGroundCtoN>
+    </Crop>
+    <UrineNH3EF>
+      <Description>Urine NH3 emission factor</Description>
+      <Value>0.07</Value>
+      <Units>kg NH3-N/kg urine N</Units>
+    </UrineNH3EF>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>10.0</Value>
+      <Units>kg N/ha/year</Units>
+    </NDepositionRate>
+    <CropResidues>
+      <EFN2O>
+        <Description>Nitrous oxide emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg N2O-N/kg N</Units>
+      </EFN2O>
+      <Description>Emission factors for crop residues</Description>
+    </CropResidues>
+    <MineralisedSoilN>
+      <EFN2O>
+        <Description>Nitrous oxide emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg N2O-N/kg N</Units>
+      </EFN2O>
+      <Description>Emission factors for mineralised soil N</Description>
+    </MineralisedSoilN>
+    <Fertiliser>
+      <EFN2O>
+        <Description>Nitrous oxide emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg N2O-N/kg N</Units>
+      </EFN2O>
+      <EFN2O_IPCC>
+        <Description>Nitrous oxide emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg N2O-N/kg manure N</Units>
+      </EFN2O_IPCC>
+      <FertiliserType>
+        <Identity>1</Identity>
+        <Description>Ammonium nitrate</Description>
+        <EFNH3>
+          <Description>Ammonia emission factor</Description>
+          <Value>0.02</Value>
+          <Units>kg NH3-N/kg N</Units>
+        </EFNH3>
+      </FertiliserType>
+      <FertiliserType>
+        <Identity>2</Identity>
+        <Description>Urea</Description>
+        <EFNH3>
+          <Description>Ammonia emission factor</Description>
+          <Value>0.21</Value>
+          <Units>kg NH3-N/kg N</Units>
+        </EFNH3>
+      </FertiliserType>
+      <FertiliserType>
+        <Identity>3</Identity>
+        <Description>Ammonium sulphate</Description>
+        <EFNH3>
+          <Description>Ammonia emission factor</Description>
+          <Value>0.21</Value>
+          <Units>kg NH3-N/kg N</Units>
+        </EFNH3>
+      </FertiliserType>
+      <Description>Emission factors for fertilisers</Description>
+    </Fertiliser>
+    <Manure>
+      <EFN2O>
+        <Description>Nitrous oxide emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg N2O-N/kg manure N</Units>
+      </EFN2O>
+      <EFN2O_IPCC>
+        <Description>Nitrous oxide emission factor</Description>
+        <Value>0.02</Value>
+        <Units>kg N2O-N/kg manure N</Units>
+      </EFN2O_IPCC>
+      <N2Factor>
+        <Description>Dinitrogen emission factor</Description>
+        <Value>8.0</Value>
+        <Units>kg N2-N/kg N2O-N emitted</Units>
+      </N2Factor>
+      <ManureType>
+        <Identity>1</Identity>
+        <Name>Pig slurry</Name>
+        <StorageType>1</StorageType>
+        <SpeciesGroup>2</SpeciesGroup>
+        <EFNH3FieldRef>
+          <Value>0.2</Value>
+          <Units>kg/kg</Units>
+          <Description>Reference ammonia emission factor</Description>
+        </EFNH3FieldRef>
+        <EFNH3FieldRefTemperature>
+          <Value>15</Value>
+          <Units>Celsius</Units>
+          <Description>Temperature for reference ammonia emission factor</Description>
+        </EFNH3FieldRefTemperature>
+        <Description>Details for individual manure type</Description>
+      </ManureType>
+      <ManureType>
+        <Identity>2</Identity>
+        <Name>Cattle slurry</Name>
+        <StorageType>1</StorageType>
+        <SpeciesGroup>1</SpeciesGroup>
+        <EFNH3FieldRef>
+          <Value>0.2</Value>
+          <Units>kg/kg</Units>
+          <Description>Reference ammonia emission factor</Description>
+        </EFNH3FieldRef>
+        <Description>Details for individual manure type</Description>
+        <EFNH3FieldRefTemperature>
+          <Value>15</Value>
+          <Units>Celsius</Units>
+          <Description>Temperature for reference ammonia emission factor</Description>
+        </EFNH3FieldRefTemperature>
+      </ManureType>
+      <ManureType>
+        <Identity>3</Identity>
+        <Name>Pig deep litter</Name>
+        <StorageType>2</StorageType>
+        <SpeciesGroup>2</SpeciesGroup>
+        <EFNH3FieldRef>
+          <Value>0.2</Value>
+          <Units>kg/kg</Units>
+          <Description>Reference ammonia emission factor</Description>
+        </EFNH3FieldRef>
+        <Description>Details for individual manure type</Description>
+        <EFNH3FieldRefTemperature>
+          <Value>15</Value>
+          <Units>Celsius</Units>
+          <Description>Temperature for reference ammonia emission factor</Description>
+        </EFNH3FieldRefTemperature>
+      </ManureType>
+      <ManureType>
+        <Identity>4</Identity>
+        <Name>Cattle deep litter</Name>
+        <StorageType>2</StorageType>
+        <SpeciesGroup>1</SpeciesGroup>
+        <EFNH3FieldRef>
+          <Value>0.2</Value>
+          <Units>kg/kg</Units>
+          <Description>Reference ammonia emission factor</Description>
+        </EFNH3FieldRef>
+        <Description>Details for individual manure type</Description>
+        <EFNH3FieldRefTemperature>
+          <Value>15</Value>
+          <Units>Celsius</Units>
+          <Description>Temperature for reference ammonia emission factor</Description>
+        </EFNH3FieldRefTemperature>
+      </ManureType>
+      <Description>Emission factors for manures</Description>
+    </Manure>
+    <ManureApplicationTechnique>
+      <Identity>1</Identity>
+      <Name>Broadcast spreading</Name>
+      <NH3ReductionFactor>
+        <Value>0.0</Value>
+        <Units>none</Units>
+        <Description>Reduction in ammonia emission relative to broadcast spreading</Description>
+      </NH3ReductionFactor>
+      <Description>Details for individual manure application method</Description>
+    </ManureApplicationTechnique>
+    <ManureApplicationTechnique>
+      <Identity>2</Identity>
+      <Name>Injection</Name>
+      <NH3ReductionFactor>
+        <Value>0.9</Value>
+        <Units>none</Units>
+        <Description>Reduction in ammonia emission relative to broadcast spreading</Description>
+      </NH3ReductionFactor>
+      <Description>Details for individual manure application method</Description>
+    </ManureApplicationTechnique>
+    <ManureApplicationTechnique>
+      <Identity>3</Identity>
+      <Name>Trailing hose</Name>
+      <NH3ReductionFactor>
+        <Value>0.2</Value>
+        <Units>none</Units>
+        <Description>Reduction in ammonia emission relative to broadcast spreading</Description>
+      </NH3ReductionFactor>
+      <Description>Details for individual manure application method</Description>
+    </ManureApplicationTechnique>
+  </AgroecologicalZone>
+</xml>

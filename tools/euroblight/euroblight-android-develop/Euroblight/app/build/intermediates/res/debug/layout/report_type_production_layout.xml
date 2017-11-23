@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewTypeOfProduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/report_row_vertical_margin"
+        android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+        android:layout_marginTop="@dimen/report_row_vertical_margin"
+        android:text="@string/report_text_type_production"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinnerSiteIds"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="@dimen/report_row_vertical_margin"
+        android:layout_marginLeft="@dimen/report_row_horizontal_margin"
+        android:layout_marginTop="@dimen/report_row_vertical_margin"
+        android:layout_weight="1" />
+
+</LinearLayout>
+<!-- From: file:/D:/main/tools/euroblight/euroblight-android-develop/Euroblight/app/src/main/res/layout/report_type_production_layout.xml -->

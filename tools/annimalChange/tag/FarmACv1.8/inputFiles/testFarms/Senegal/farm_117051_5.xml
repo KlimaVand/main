@@ -1,0 +1,1888 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Farm>
+    <Identity>117051</Identity>
+    <FarmNumber>117051</FarmNumber>
+    <FarmOwnerName>117051 Intensive</FarmOwnerName>
+    <FarmOwnerAddress />
+    <FarmOwnerZipCode />
+    <FarmOwnerTown />
+    <FarmDescription />
+    <AgroEcologicalZone>12</AgroEcologicalZone>
+    <FarmType>1</FarmType>
+    <FarmTypeDescription>Planteavler</FarmTypeDescription>
+    <SelectedScenario>
+      <Identity>5</Identity>
+      <FarmNumber>117051</FarmNumber>
+      <Name>Intensive with mitigation</Name>
+      <NumberOfScenario>5</NumberOfScenario>
+      <IS-ID>1</IS-ID>
+      <ES-ID>1</ES-ID>
+      <InventorySystem>
+        <Name>IPCC 2006 </Name>
+        <Value>1</Value>
+      </InventorySystem>
+      <Rotation>
+        <Identity>1</Identity>
+        <FarmNumber>117051</FarmNumber>
+        <ScenarioID>5</ScenarioID>
+        <NameOfRotation>Hut field</NameOfRotation>
+        <Area>1</Area>
+        <SoilType>Dior soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Millet</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>6</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>30</End_day>
+          <End_month>9</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>1</Identity>
+            <StorageType>2</StorageType>
+            <Name>Cattle/sheep deep litter</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>85</Value>
+            <N_Loss>3.4</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>6</Month_applied>
+            <RotationID>1</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>2</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>1</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>3</Identity>
+            <Name>Millet grain</Name>
+            <Amount>0</Amount>
+            <FeedCode>924</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>924</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>924</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>5</Identity>
+            <Name>Millet straw</Name>
+            <Amount>0</Amount>
+            <FeedCode>925</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>1</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>925</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>13000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>1</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>925</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>1</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>10</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>31</End_day>
+          <End_month>5</End_month>
+          <End_year>2015</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+      </Rotation>
+      <Rotation>
+        <Identity>2</Identity>
+        <FarmNumber>117051</FarmNumber>
+        <ScenarioID>5</ScenarioID>
+        <NameOfRotation>Bush field</NameOfRotation>
+        <Area>4</Area>
+        <SoilType>Dior soil</SoilType>
+        <Crop>
+          <Identity>1</Identity>
+          <NameOfCrop>Millet</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>6</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>30</End_day>
+          <End_month>9</End_month>
+          <End_year>2014</End_year>
+          <Irrigation>false</Irrigation>
+          <Manure_applied>
+            <Identity>2</Identity>
+            <StorageType>2</StorageType>
+            <Name>Cattle/sheep deep litter</Name>
+            <DeliveryID>6</DeliveryID>
+            <Unit>kg N/ha</Unit>
+            <Value>60</Value>
+            <N_Loss>2.4</N_Loss>
+            <Type>1</Type>
+            <Kg_N_Utilized>0</Kg_N_Utilized>
+            <Month_applied>6</Month_applied>
+            <RotationID>2</RotationID>
+            <SpeciesGroup>1</SpeciesGroup>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <MFId>0</MFId>
+            <Applic_technique_Manure>
+              <NameS>Broadspread</NameS>
+              <NameI>6</NameI>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <StorageID>2</StorageID>
+              <MFId>0</MFId>
+            </Applic_technique_Manure>
+          </Manure_applied>
+          <HarvestMethod>
+            <Value>Combine harvesting</Value>
+            <Description>Combine harvesting</Description>
+            <Identity>1</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>4</Identity>
+            <Name>Millet grain</Name>
+            <Amount>0</Amount>
+            <FeedCode>924</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>924</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>924</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>6</Identity>
+            <Name>Millet straw</Name>
+            <Amount>0</Amount>
+            <FeedCode>925</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>1</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>925</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>13000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>1</FieldPlanRotationID>
+              <FeedstuffID>925</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>2</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>1</Start_day>
+          <Start_month>10</Start_month>
+          <Start_year>2014</Start_year>
+          <End_day>9</End_day>
+          <End_month>7</End_month>
+          <End_year>2015</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+        <Crop>
+          <Identity>3</Identity>
+          <NameOfCrop>Groundnut/Peanut</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>10</Start_day>
+          <Start_month>7</Start_month>
+          <Start_year>2015</Start_year>
+          <End_day>15</End_day>
+          <End_month>10</End_month>
+          <End_year>2015</End_year>
+          <Irrigation>false</Irrigation>
+          <HarvestMethod>
+            <Value>Forage harvester</Value>
+            <Description>Forage harvesting</Description>
+            <Identity>3</Identity>
+            <RotationID>2</RotationID>
+          </HarvestMethod>
+          <Product>
+            <Identity>1</Identity>
+            <Name>Groundnut Hay</Name>
+            <Amount>0</Amount>
+            <FeedCode>926</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>3</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>926</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>1500</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>926</FeedstuffID>
+            </Potential_yield>
+          </Product>
+          <Product>
+            <Identity>2</Identity>
+            <Name>Groundnut-pods</Name>
+            <Amount>0</Amount>
+            <FeedCode>922</FeedCode>
+            <Harvested>Harvested</Harvested>
+            <RotationID>2</RotationID>
+            <FieldPlanRotationID>3</FieldPlanRotationID>
+            <Grazed>false</Grazed>
+            <Expected_yield>
+              <Value>0</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>922</FeedstuffID>
+            </Expected_yield>
+            <Potential_yield>
+              <Value>2000</Value>
+              <Unit>kg DM/ha</Unit>
+              <RotationID>2</RotationID>
+              <FieldPlanRotationID>3</FieldPlanRotationID>
+              <FeedstuffID>922</FeedstuffID>
+            </Potential_yield>
+          </Product>
+        </Crop>
+        <Crop>
+          <Identity>4</Identity>
+          <NameOfCrop>Bare soil</NameOfCrop>
+          <RotationID>2</RotationID>
+          <Start_day>16</Start_day>
+          <Start_month>10</Start_month>
+          <Start_year>2015</Start_year>
+          <End_day>31</End_day>
+          <End_month>5</End_month>
+          <End_year>2016</End_year>
+          <Irrigation>false</Irrigation>
+        </Crop>
+      </Rotation>
+      <Livestock>
+        <Identity>2</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>5</LivestockType>
+        <NameOfAnimals>Zebu Gobra - Bull</NameOfAnimals>
+        <NumberOfAnimals>0.33</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>500</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>2</HerdID>
+        <itemFed>
+          <Identity>5</Identity>
+          <FeedCode>788</FeedCode>
+          <Name>Wheat- straw</Name>
+          <Amount>1.32</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>27</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>2</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>42</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>1.31</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>56</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>2.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>71</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>1.36</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>86</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>1.28</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>2</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>13</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>2</HerdID>
+          <ManureRecipient>
+            <Identity>1</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>2</HerdID>
+            <LivestockType>5</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>16</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>2</HerdID>
+            <LivestockType>5</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>6</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>5</LivestockType>
+        <NameOfAnimals>Zebu Gobra - Bull</NameOfAnimals>
+        <NumberOfAnimals>0.37</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>500</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>6</HerdID>
+        <itemFed>
+          <Identity>10</Identity>
+          <FeedCode>925</FeedCode>
+          <Name>Millet straw</Name>
+          <Amount>1.32</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>28</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>2</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>43</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>1.31</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>57</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>2.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>72</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>1.36</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>87</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>1.28</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>6</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>14</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>6</HerdID>
+          <ManureRecipient>
+            <Identity>2</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>6</HerdID>
+            <LivestockType>5</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>17</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>6</HerdID>
+            <LivestockType>5</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>8</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>5</LivestockType>
+        <NameOfAnimals>Zebu Gobra - Bull</NameOfAnimals>
+        <NumberOfAnimals>0.29</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>500</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>8</HerdID>
+        <itemFed>
+          <Identity>14</Identity>
+          <FeedCode>926</FeedCode>
+          <Name>Groundnut Hay</Name>
+          <Amount>1.32</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>8</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>29</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>2</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>8</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>44</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>1.31</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>8</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>58</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>2.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>8</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>73</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>1.36</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>8</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>88</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>1.28</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>8</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>15</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>5</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>8</HerdID>
+          <ManureRecipient>
+            <Identity>3</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>8</HerdID>
+            <LivestockType>5</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>18</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>8</HerdID>
+            <LivestockType>5</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>9</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Zebu Gobra - Suckler cows</NameOfAnimals>
+        <NumberOfAnimals>1.00</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>9</HerdID>
+        <itemFed>
+          <Identity>4</Identity>
+          <FeedCode>788</FeedCode>
+          <Name>Wheat- straw</Name>
+          <Amount>1.07</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>9</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>24</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.62</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>9</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>39</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>1.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>9</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>53</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.66</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>9</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>68</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>1.1</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>9</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>83</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>1.04</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>9</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>1</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>9</HerdID>
+          <ManureRecipient>
+            <Identity>4</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>9</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>19</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>9</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>10</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Zebu Gobra - Suckler cows</NameOfAnimals>
+        <NumberOfAnimals>1.10</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>10</HerdID>
+        <itemFed>
+          <Identity>9</Identity>
+          <FeedCode>925</FeedCode>
+          <Name>Millet straw</Name>
+          <Amount>1.07</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>10</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>25</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.62</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>10</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>40</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>1.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>10</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>54</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.66</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>10</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>69</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>1.1</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>10</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>84</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>1.04</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>10</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>2</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>10</HerdID>
+          <ManureRecipient>
+            <Identity>5</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>10</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>20</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>10</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>12</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>1</LivestockType>
+        <NameOfAnimals>Zebu Gobra - Suckler cows</NameOfAnimals>
+        <NumberOfAnimals>0.87</NumberOfAnimals>
+        <avgProductionMilk>8500</avgProductionMilk>
+        <avgProductionMeat>0</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>12</HerdID>
+        <itemFed>
+          <Identity>26</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.62</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>12</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>41</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>1.06</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>12</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>55</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.66</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>12</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>70</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>1.1</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>12</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>85</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>1.04</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>12</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>3</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>1</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>12</HerdID>
+          <ManureRecipient>
+            <Identity>6</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>12</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>21</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>12</HerdID>
+            <LivestockType>1</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>13</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Zebu Gobra - heifers</NameOfAnimals>
+        <NumberOfAnimals>0.67</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>13</HerdID>
+        <itemFed>
+          <Identity>2</Identity>
+          <FeedCode>788</FeedCode>
+          <Name>Wheat- straw</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>13</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>18</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.14</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>13</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>33</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.92</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>13</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>48</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>13</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>62</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>13</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>77</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>13</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>4</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>13</HerdID>
+          <ManureRecipient>
+            <Identity>7</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>13</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>22</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>13</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>17</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Zebu Gobra - heifers</NameOfAnimals>
+        <NumberOfAnimals>0.58</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>17</HerdID>
+        <itemFed>
+          <Identity>12</Identity>
+          <FeedCode>926</FeedCode>
+          <Name>Groundnut Hay</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>17</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>19</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>17</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>34</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.92</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>17</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>49</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>17</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>63</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>17</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>78</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>17</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>5</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>17</HerdID>
+          <ManureRecipient>
+            <Identity>8</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>17</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>23</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>17</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>18</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Zebu Gobra - heifers</NameOfAnimals>
+        <NumberOfAnimals>0.73</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>18</HerdID>
+        <itemFed>
+          <Identity>7</Identity>
+          <FeedCode>925</FeedCode>
+          <Name>Millet straw</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>18</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>20</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>18</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>35</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.92</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>18</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>50</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.45</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>18</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>64</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>18</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>79</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>18</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>6</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>18</HerdID>
+          <ManureRecipient>
+            <Identity>9</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>18</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>24</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>18</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>19</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>3</LivestockType>
+        <NameOfAnimals>Zebu Gobra - young bull</NameOfAnimals>
+        <NumberOfAnimals>0.73</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>1100</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>19</HerdID>
+        <itemFed>
+          <Identity>8</Identity>
+          <FeedCode>925</FeedCode>
+          <Name>Millet straw</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>19</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>21</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>19</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>36</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.92</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>19</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>65</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>19</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>80</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>19</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>8</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>19</HerdID>
+          <ManureRecipient>
+            <Identity>10</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>19</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>25</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>19</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>20</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>3</LivestockType>
+        <NameOfAnimals>Zebu Gobra - young bull</NameOfAnimals>
+        <NumberOfAnimals>0.67</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>1100</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>20</HerdID>
+        <itemFed>
+          <Identity>3</Identity>
+          <FeedCode>788</FeedCode>
+          <Name>Wheat- straw</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>20</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>22</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>20</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>37</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.92</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>20</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>51</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.45</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>20</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>66</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>20</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>81</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>20</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>9</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>20</HerdID>
+          <ManureRecipient>
+            <Identity>11</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>20</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>26</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>20</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>22</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>3</LivestockType>
+        <NameOfAnimals>Zebu Gobra - young bull</NameOfAnimals>
+        <NumberOfAnimals>0.58</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>1100</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>22</HerdID>
+        <itemFed>
+          <Identity>13</Identity>
+          <FeedCode>926</FeedCode>
+          <Name>Groundnut Hay</Name>
+          <Amount>0.93</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>22</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>23</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>1.41</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>22</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>38</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.92</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>22</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>52</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>1.45</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>22</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>67</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.96</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>22</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>82</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.9</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>22</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>10</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>3</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>22</HerdID>
+          <ManureRecipient>
+            <Identity>12</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>22</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>27</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>22</HerdID>
+            <LivestockType>3</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>23</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>4</LivestockType>
+        <NameOfAnimals>Zebu Gobra - calves</NameOfAnimals>
+        <NumberOfAnimals>0.67</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>7500</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>23</HerdID>
+        <itemFed>
+          <Identity>1</Identity>
+          <FeedCode>788</FeedCode>
+          <Name>Wheat- straw</Name>
+          <Amount>0.47</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>23</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>16</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>0.71</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>23</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>31</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.46</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>23</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>46</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>0.72</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>23</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>60</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.48</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>23</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>75</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.45</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>23</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>11</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>23</HerdID>
+          <ManureRecipient>
+            <Identity>13</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>23</HerdID>
+            <LivestockType>4</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>28</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>23</HerdID>
+            <LivestockType>4</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>24</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>4</LivestockType>
+        <NameOfAnimals>Zebu Gobra - calves</NameOfAnimals>
+        <NumberOfAnimals>0.73</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>7500</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>24</HerdID>
+        <itemFed>
+          <Identity>6</Identity>
+          <FeedCode>925</FeedCode>
+          <Name>Millet straw</Name>
+          <Amount>0.47</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>24</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>17</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>0.71</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>24</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>32</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.46</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>24</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>47</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>0.72</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>24</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>61</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.48</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>24</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>76</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.45</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>24</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>12</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>4</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>24</HerdID>
+          <ManureRecipient>
+            <Identity>14</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>24</HerdID>
+            <LivestockType>4</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>29</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>24</HerdID>
+            <LivestockType>4</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <Livestock>
+        <Identity>25</Identity>
+        <Species_group>1</Species_group>
+        <LivestockType>2</LivestockType>
+        <NameOfAnimals>Zebu Gobra - heifers</NameOfAnimals>
+        <NumberOfAnimals>0.58</NumberOfAnimals>
+        <avgProductionMilk>0</avgProductionMilk>
+        <avgProductionMeat>700</avgProductionMeat>
+        <ProductionLevel3>0</ProductionLevel3>
+        <ScenarioID>5</ScenarioID>
+        <HerdID>25</HerdID>
+        <itemFed>
+          <Identity>11</Identity>
+          <FeedCode>926</FeedCode>
+          <Name>Groundnut Hay</Name>
+          <Amount>0.47</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>25</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>15</Identity>
+          <FeedCode>927</FeedCode>
+          <Name>RAKAL-groundnut cake</Name>
+          <Amount>0.71</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>25</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>30</Identity>
+          <FeedCode>928</FeedCode>
+          <Name>Millet bran</Name>
+          <Amount>0.46</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>25</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>45</Identity>
+          <FeedCode>929</FeedCode>
+          <Name>RIPAZ -maize and soybean</Name>
+          <Amount>0.72</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>25</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>59</Identity>
+          <FeedCode>930</FeedCode>
+          <Name>Mixed bran -millet,rice,corn,peanut</Name>
+          <Amount>0.48</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>25</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <itemFed>
+          <Identity>74</Identity>
+          <FeedCode>936</FeedCode>
+          <Name>Rice bran</Name>
+          <Amount>0.45</Amount>
+          <Grazed>false</Grazed>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <HerdID>25</HerdID>
+          <Unit>kg DM/day</Unit>
+        </itemFed>
+        <Housing>
+          <Identity>7</Identity>
+          <HousingType>1</HousingType>
+          <NameOfHousing>Tied stall</NameOfHousing>
+          <LivestockType>2</LivestockType>
+          <Species_group>1</Species_group>
+          <PropTime>1</PropTime>
+          <HerdID>25</HerdID>
+          <ManureRecipient>
+            <Identity>15</Identity>
+            <StorageType>9</StorageType>
+            <StorageName>Partially-separated liquid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>25</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+          <ManureRecipient>
+            <Identity>30</Identity>
+            <StorageType>10</StorageType>
+            <StorageName>Partially-separated solid fraction, with cover</StorageName>
+            <Stable>1</Stable>
+            <HerdID>25</HerdID>
+            <LivestockType>2</LivestockType>
+            <Species_group>1</Species_group>
+          </ManureRecipient>
+        </Housing>
+      </Livestock>
+      <EnergySystem>
+        <Name>Metabolisable energy</Name>
+        <Value>1</Value>
+      </EnergySystem>
+    </SelectedScenario>
+    <NDepositionRate>
+      <Description>Rate of deposition of N from the atmosphere</Description>
+      <Value>7</Value>
+      <Units>Kg N/ha/year</Units>
+      <FarmNumber>117051</FarmNumber>
+    </NDepositionRate>
+  </Farm>
+</NewDataSet>
