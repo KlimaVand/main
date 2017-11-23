@@ -1,0 +1,43 @@
+[Cattlestable(0)]
+ID	1003601
+Area	300
+height	2.5
+controlledVent	1
+[Cattlestable(0).Section(0)]
+Contains	DAIRY
+[Cattlestable(0).Section(0)].floor(0)]
+Area	200
+ManureToID	1003501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	SLURRY
+[Cattlestable(1)]
+ID	1003602
+Area	150
+height	2.5
+controlledVent	0
+[Cattlestable(1).Section(0)]
+Contains	MBEEF2
+[Cattlestable(1).Section(0)].floor(0)]
+Area	100
+ManureToID	1003501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	SLURRY
+[Cattlestable(1).Section(1)]
+Contains	MBEEF1
+[Cattlestable(1).Section(1)].floor(0)]
+Area	50
+ManureToID	1003502
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	FYM
+[Slurrystore(0)]
+Area	160
+ManureStoreID	1003501
+ManureType	SLURRY
+[DungHeap(0)]
+Area	20
+ManureStoreID	1003502
+ManureType	FYM
+[end]

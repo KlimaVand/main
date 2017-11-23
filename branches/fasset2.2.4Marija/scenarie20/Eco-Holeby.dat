@@ -1,0 +1,131 @@
+[SoilParameters]
+Nodes           40
+NodeThickness   50
+PloughingDepth 300
+
+[SoilLayer(1)]
+Thickness        250
+SoilType         8
+ConductivityFC  -8.1            // log(m/s) from Ø.Ulslev (O.H.Jacobsen p 46)
+DryBulkDensity   1.53                     
+ClayContent      0.24
+SiltContent      0.24
+
+CarbonPct        1.57
+CNRatio          11.3
+
+AOM1	0.043767448
+AOM1.N	0.001094186
+AOM2	0
+SMB1	0.007292681
+SMB2	0.000544225
+SMR	0.007917444
+NOM	0.535304201
+NOM.N	0.048334185
+IOM	0.405174
+IOM.N	0.036584348
+
+RelativeWater(0) 0.414
+PFValue(0)       1.0
+RelativeWater(1) 0.393
+PFValue(1)       2.0
+RelativeWater(2) 0.334
+PFValue(2)       3.0
+RelativeWater(3) 0.165
+PFValue(3)       4.2
+
+[SoilLayer(2)]
+Thickness        250
+SoilType         8
+ConductivityFC  -8.2            // log(m/s) from Ø.Ulslev (O.H.Jacobsen p 46)
+DryBulkDensity   1.58                     
+ClayContent      0.233
+SiltContent      0.262
+
+CarbonPct        0.97
+CNRatio          9.7
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.028193082
+IOM	0.7
+IOM.N	0.073096151
+
+
+RelativeWater(0) 0.364
+PFValue(0)       1.0
+RelativeWater(1) 0.335
+PFValue(1)       2.0
+RelativeWater(2) 0.296
+PFValue(2)       3.0
+RelativeWater(3) 0.145
+PFValue(3)       4.2
+
+[SoilLayer(3)]
+Thickness        250
+SoilType         8
+ConductivityFC  -8.4            // log(m/s) from Ø.Ulslev (O.H.Jacobsen p 46)
+DryBulkDensity   1.68                   
+ClayContent      0.229
+SiltContent      0.271
+
+CarbonPct        0.66
+CNRatio          14.9
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.018178689
+IOM	0.7
+IOM.N	0.047131854
+
+RelativeWater(0) 0.287
+PFValue(0)       1.0
+RelativeWater(1) 0.201
+PFValue(1)       2.0
+RelativeWater(2) 0.133
+PFValue(2)       3.0
+RelativeWater(3) 0.065
+PFValue(3)       4.2
+
+[SoilLayer(4)]
+Thickness        1500
+SoilType         8
+ConductivityFC  -8.4            // log(m/s) from Ø.Ulslev (O.H.Jacobsen p 46)
+DryBulkDensity   1.79                    
+ClayContent      0.178
+SiltContent      0.241
+
+CarbonPct        0.55
+CNRatio          24.8
+
+AOM1	0.022067621
+AOM1.N	0.000551691
+AOM2	0
+SMB1	0.003676982
+SMB2	0.000274399
+SMR	0.003991989
+NOM	0.269989009
+NOM.N	0.010721477
+IOM	0.7
+IOM.N	0.027797553
+
+RelativeWater(0) 0.333
+PFValue(0)       1.0
+RelativeWater(1) 0.211
+PFValue(1)       2.0
+RelativeWater(2) 0.131
+PFValue(2)       3.0
+RelativeWater(3) 0.062
+PFValue(3)       4.2
+
+[end]

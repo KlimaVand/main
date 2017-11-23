@@ -1,0 +1,18 @@
+
+#ifndef UNIX_UTIL_H
+#define UNIX_UTIL_H
+
+#ifdef MINGW
+	extern void itoa( int n, char* s, int maxcount );
+	#endif
+extern void reverse( char* s );
+	#ifdef unix
+	extern void itoa( int n, char* s, int maxcount );
+	#endif
+#ifdef CYGWIN
+extern void itoa( int n, char* s, int maxcount );
+#endif
+#ifdef VS2008
+	int round(double aVal);
+#endif
+#endif // UNIX_UTIL_H

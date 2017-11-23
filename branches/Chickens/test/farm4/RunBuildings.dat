@@ -1,0 +1,39 @@
+[Cattlestable(0)]
+ID	1020601
+Area	195
+height	3
+controlledVent	1
+[Cattlestable(0).Section(0)]
+Contains	MBEEF3
+[Cattlestable(0).Section(0)].floor(0)]
+Area	185
+ManureToID	1020501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	FYM
+[Pigstable(0)]
+ID	1020602
+Area	390
+height	3
+controlledVent	1
+[Pigstable(0).Section(0)]
+Contains	SOWS
+[Pigstable(0).Section(0)].floor(0)]
+Area	100
+ManureToID	1020501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	FYM
+[Pigstable(0).Section(1)]
+Contains	BACONERS
+[Pigstable(0).Section(1)].floor(0)]
+Area	200
+ManureToID	1020501
+ProportionFouled	1.0
+ExcretaPartition	1.0
+ManureType	FYM
+[DungHeap(0)]
+Area	25
+ManureStoreID	1020501
+ManureType	FYM
+[end]

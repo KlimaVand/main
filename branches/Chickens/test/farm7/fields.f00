@@ -1,0 +1,32 @@
+[fieldOrder(0)]
+Automatic	0
+Ha	1.16
+CROP	G1____00
+FertilizerDate(0)	15/3/2008
+FertilizerType(0)	SLURRY
+FertilizerN(0)	30
+NH4_fraction(0)	0.5
+TillageDate(0)	15/3/2008
+TillageType(0)	HARROW
+TillageIncorporation(0)	0.5
+TillageDepth(0)	0
+
+[fieldOrder(1)]
+Automatic	0
+Ha	0.55
+CROP	G1____01
+
+[fieldOrder(2)]
+Automatic	0
+Ha	8.02
+CROP	G1____02
+FertilizerDate(0)	1/4/2008
+FertilizerType(0)	SLURRY
+FertilizerN(0)	25
+NH4_fraction(0)	0.5
+FertilizerDate(1)	15/6/2008
+FertilizerType(1)	SLURRY
+FertilizerN(1)	8
+NH4_fraction(1)	0.5
+
+[end]

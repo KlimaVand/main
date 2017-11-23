@@ -1,0 +1,9 @@
+[run(0)]
+StartYear                     2000 
+StopYear                      2011
+EnvironmentalIndicator        
+InputDirectory        \FASSET\BExp_params_Hohenschulen
+OutputDirectory       \FASSET\output
+ClimateFileName       \FASSET\climate\Hohenschulen.clm
+ForcedOperations        1
+[end]
