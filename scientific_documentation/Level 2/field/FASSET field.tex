@@ -1,0 +1,1703 @@
+\documentclass[%parskiphalf,%numbers=noendperiod
+]{scrartcl}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx,parskip}
+\usepackage{booktabs,longtable}
+\usepackage{lmodern}
+\usepackage[round]{natbib}
+
+\newcommand\mymarginpar[1]{\marginpar {\flushleft\bfseries\scriptsize #1}}
+
+\title{FASSET field}
+
+\author{}
+\date{\today}
+
+\usepackage{lmodern}
+
+
+\usepackage[backref]{hyperref}
+
+\begin{document}
+
+\maketitle
+ \tableofcontents
+\newpage
+
+\section{Field}
+
+
+\subsection{field(const char aName, const  aIndex, const base aOwner)
+}   :base(aName,aIndex,aOwner)
+
+Constructor with arguments
+
+	Lfutr                      =new cloneList<plan>
+	
+	crrPlan                    =NULL
+	
+   thePatches                 =new cloneList<patch>
+   
+   Minimum                    =0.00001
+
+   NoFixCrops =
+   JBNO   =
+   daysSinceIrrigation        =
+	daysSinceIrrigationRequest =
+   fingerFlow				      =
+   daysBetweenIrrigation      =
+   irrigationDelay            =
+	distance                   =
+   area                       = 0
+
+   active                     =true
+   
+   monitorPatches             =false     
+   // Read from some file later
+   
+\#ifdef TUPLE
+
+   writeTuples                =
+   tuple\_file\_open            =false
+   
+\#endif
+
+
+   for ( i=0 i<BackScope i++)  
+   
+    \quad	 History[i]="w1"
+
+
+   for ( i=0 i<BackScope i++)
+
+   \quad    FixedCrop[i]=NULL, FixedSize[i]=0
+
+
+   if (monitorPatches) then
+   
+       \quad sprintf(leader,globalSettings.getOutputDirectory().c\_str())
+
+       \quad sprintf(filename,"patches%d1.xls",Index)
+     
+      \quad  strcat(leader,filename)
+      
+       \quad fPatch1.open(leader,ios::out)
+       
+      \quad fPatch1.precision(8)
+      
+      \quad fPatch1 << "Date tab "
+      
+      \quad for ( i=0 i<MaxWritePatches i++)
+      
+       \quad \quad   fPatch1 << "Area" << i << " tab "
+
+
+      \quad \quad sprintf(leader,globalSettings.getOutputDirectory().c\_str())
+	  
+	  \quad  \quad sprintf(filename,"patches%d2.xls",Index)
+      
+       \quad strcat(leader,filename)
+     
+       \quad fPatch2.open(leader,ios::out)
+     
+      \quad fPatch2.precision(8)
+     
+      \quad fPatch2 << "Date tab "
+     
+      \quad for ( i=0 i<MaxWritePatches i++)
+     
+      \quad \quad    fPatch2 << "Area" << i << " tab "
+
+     \quad  fPatch1 << "Date tab "
+      
+     \quad  for ( i=0 i<MaxWritePatches i++)
+       
+     \quad    \quad  fPatch1 << "N-leach" << i << " tab "
+      
+     \quad  fPatch1 << "Date tab "
+      
+      \quad for ( i=0 i<MaxWritePatches i++)
+      
+     \quad   \quad   fPatch1 << "Denit-" << i << " tab "
+     
+    \quad   fPatch1 << "Date tab "
+     
+     \quad  for ( i=0 i<MaxWritePatches i++)
+     
+     \quad  \quad    fPatch1 << "N2O-" << i << " tab "
+      
+     \quad  fPatch1 << endl
+
+
+      \quad fPatch2 << "Date tab "
+     
+    \quad   for ( i=0 i<MaxWritePatches i++)
+    
+    \quad  \quad     fPatch2 << "DM" << i << " tab "
+     
+      \quad fPatch2 << "Date tab "
+     
+     \quad  for ( i=0 i<MaxWritePatches i++)
+      
+    \quad \quad      fPatch2 << "LAI" << i << " tab "
+    
+    \quad   fPatch2 << "Date tab "
+     
+    
+      \quad for ( i=0 i<MaxWritePatches i++)
+   
+        \quad \quad  fPatch2 << "OFFT" << i << " tab "
+  
+      \quad fPatch2 << endl
+   
+
+   if (globalSettings.DetailsData.getPlantDetails()=true)
+   
+       \quad sprintf(leader,globalSettings.getOutputDirectory().c\_str())
+     
+      \quad sprintf(filename,"field%d.xls",Index)
+
+     \quad  strcat(leader,filename)
+
+     \quad  f.open(leader,ios::out)
+     
+     \quad  f.precision(4)
+     
+	 \quad	OutputPlantDetails(true)
+   
+   
+   InitVariables()
+
+
+
+
+
+\subsection{field(const field fl) : base(fl)}
+Copy constructor, Dung, urine and their areas presently ignored not 
+
+   for ( i=0 i<MaxFixedCrops i++)
+   
+  \quad    FixedCrop[i]=fl.FixedCrop[i] 
+  
+   // OK because reference does not change
+  
+  \quad    FixedSize[i]=fl.FixedSize[i]
+ 
+   for ( i=0 i<BackScope i++)
+   
+	\quad   History[i]=fl.History[i]
+	   
+   thePatches=fl.thePatches.clone()
+   
+   if (fl.crrPlan) then
+   
+  	 \quad	   crrPlan=fl.crrPlan.clone()
+  
+   else
+   
+     \quad	  crrPlan=NULL
+ 
+   if fl.Lfutr then
+   
+    \quad	   Lfutr=fl.Lfutr.clone()
+  
+   else
+   
+    \quad	   Lfutr=NULL
+      
+   Minimum=fl.Minimum
+   
+   area=fl.area
+
+   distance=fl.distance
+
+   JBNO=fl.JBNO
+   
+   daysSinceIrrigation=fl.daysSinceIrrigation
+   
+   daysSinceIrrigationRequest=fl.daysSinceIrrigationRequest
+  
+   daysBetweenIrrigation=fl.daysBetweenIrrigation
+  
+   fingerFlow=fl.fingerFlow
+ 
+ 	irrigationDelay=fl.irrigationDelay
+  
+  	NoFixCrops=fl.NoFixCrops
+  
+   active=fl.active
+
+   grazingPossible=fl.grazingPossible
+   
+   if (globalSettings.DetailsData.getPlantDetails()=true)
+   
+      \quad  char filename[40]
+       
+        \quad
+      sprintf(filename,"\\fasset\\field%d.xls",Index)
+
+       \quad f.open(filename,ios::app)
+       
+       \quad f.precision(4)
+   
+\#ifdef TUPLE
+
+   writeTuples=fl.writeTuples
+   
+\#endif
+
+\#ifdef ARLAS
+
+   FieldID=fl.FieldID
+   
+\#endif
+
+
+\subsection{~field()}
+Destructor
+
+   if (globalSettings.DetailsData.getPlantDetails()=true)
+   
+    \quad    f.close()
+      
+   if monitorPatches then
+   
+     \quad   fPatch1.close(),
+      fPatch2.close()
+
+   if Lfutr	then delete Lfutr
+
+	if crrPlan then delete crrPlan
+  
+   if thePatches then   delete thePatches
+
+
+\subsection{InitVariables()}
+area = 0, 
+
+grazingPossible   =  
+   monitorPatches=
+   grazingShutDown   = true
+
+
+
+\#ifdef NITROSCAPE
+\subsection{UpdatePatch( farmNo)}
+
+   patch * patchVariable
+	 NumberOfPatches=thePixiData.getNumberOfEco(farmNo,Index)
+	 
+   $areaPerPatch = \tfrac{area}{NumberOfPatches}$
+   
+   string soilFileName
+   
+	if $NumberOfPatches>0$ then	
+	
+		\quad patchVariable=thePatches.ElementAtNumber(0)
+		
+        \quad soilFileName += patchVariable.getSoilFileName()
+        
+        \quad patchVariable.SetArea(areaPerPatch)
+	
+	for( i=0 i<NumberOfPatches i++)
+	
+ \quad			cout<< "Farm No " << farmNo<<" Field no "<<Index<<" patch no " << i<<endl
+
+ \quad			if(thePixiData.getNumberOfFarms()<farmNo)
+		
+ \quad	 \quad				cout<<"UpdatePatch: farm does not exist in fasset.dist"<<endl
+
+ \quad	 \quad				cout << "Farm number = " << farmNo << " number in fasset.dist " 
+
+\quad	 \quad	 << thePixiData.getNumberOfFarms() << endl
+
+  \quad	  \quad	       cin.get()
+
+ \quad	 \quad				exit(99)
+		
+		
+ \quad			if $thePixiData.getNumberOfFields(farmNo) \le Index$ then
+		
+ \quad	 \quad				cout<<"UpdatePatch: fields does not exist in fasset.dist"<<endl
+
+ \quad	   \quad	       cin.get()
+ 
+ \quad	 \quad				exit(99)
+		
+ \quad			 if $thePixiData.getNumberOfEco(farmNo,Index)\le i$ then
+		
+ \quad	 \quad						cout<<"UpdatePatch: patch does not exist in fasset.dist"<<endl
+
+ \quad	  \quad	        		cin.get()
+
+  \quad	\quad						exit(99)
+		
+ \quad			 EcosystemNumber=thePixiData.getEco(farmNo,Index, i)
+
+ \quad			cout<< "Farm No " << farmNo<<" Field no "<<Index<<" patch no " << i << " ecosys no " << EcosystemNumber <<endl
+     
+   \quad	    if (i>0)
+      
+    \quad	     \quad	  patchVariable =new patch("patch",Index,this)
+      
+   \quad	     \quad	   patchVariable.Initialise(soilFileName,i,areaPerPatch)
+       
+  \quad	       \quad	  thePatches.InsertLast(patchVariable)
+      
+ \quad	//		patch * patchVariable=thePatches.ElementAtNumber(i)
+
+ \quad		patchVariable.setEcoModel(EcosystemNumber)
+
+\#endif
+
+
+\subsection{ReadPatchParameters(patch *p, commonData * data)}
+
+	string soilFileName
+
+   patchArea
+   
+   data.setCritical(true)
+   
+   data.FindItem("JBNO",JBNO)
+   
+   data.setCritical(false)
+   
+   if  not data.FindItem("soilFile",soilFileName) then
+   
+    \quad	   convert conv
+    
+       \quad soilFileName="JB"+conv.IntToString(JBNO)+"-M.dat"
+   
+   data.FindItem("area",patchArea)
+   
+   area+=patchArea
+   
+   if $area\le 0$ then
+   
+   \quad  err("ReadParameters - field area cannot be zero")
+   
+   p.Initialise(soilFileName,0,patchArea)
+
+
+\#ifdef NITROSCAPE
+\subsection{zeroOutputVariables()}
+
+	for( i=0 i<<thePatches.NumOfNodes() i++)
+		
+\quad		 thePatches.ElementAtNumber(i).zeroOutputVariables()
+	
+
+\#endif
+
+
+\subsection{ReadParameters(commonData * file)}
+   if (thePatches.NumOfNodes()>1)
+   
+   \quad     err("ReadParameters - only one patch allowed here")
+
+   file.setCritical(true)
+   
+   if file.FindSection(Name,Index) then
+   
+	 \quad	  file.setCritical(false)
+
+     \quad	  sprintf(Indexstr,"(%d)",Index)
+      
+     \quad	  namestr=(string) "field" +Indexstr+"."+"patch"
+      
+    \quad	   file.getSectionsNumbers(namestr,first,num)  
+      
+    \quad	    //count the number of patches
+       
+\#ifndef NITROSCAPE
+
+      if $num>0$ then 
+      
+      \quad //may be more than one patch per field
+      
+	   \quad	    $Setcur\_pos(0)$
+     
+       \quad	   for( inx=first $inx\le (first+num)$ inx++)
+         
+      \quad	  \quad	    file.FindSection(namestr,inx)   // find the correct place in the input file
+      
+       \quad	  \quad	  
+$ patch * p =new patch((char *)namestr.c\_str(),inx,this)$
+      
+       \quad	 \quad	    ReadPatchParameters(p,file)
+     
+      \quad	 \quad	     thePatches.InsertLast(p)
+      
+     
+      else   //one patch per field
+    
+     \quad	    patch * p =new patch("patch",Index,this)
+     
+     \quad	    ReadPatchParameters(p,file)
+   	
+   	  \quad	   thePatches.InsertLast(p)
+	
+
+\#else
+
+
+		patch p =new patch("patch",Index,this)
+		
+		ReadPatchParameters(p)
+		
+		thePatches.InsertLast(p)
+	
+
+\#endif
+
+   	
+      
+      if theControlParameters.GetUniSizeFields() then
+       
+         \quad  area=1  // For testing purposes not 
+      
+       \quad file.FindItem("distance",distance)
+
+
+       
+	  \quad	for (k=0 k<BackScope k++)	
+			
+	  \quad	  \quad	itoa(k,number,10)
+		  
+	  \quad	  \quad	strcpy(s,"CROP")
+		  
+	  \quad	  \quad	strcat(s,number)
+		  
+	  \quad	  \quad	file.FindItem(s,History[k])
+		
+
+   
+   
+   
+   
+   
+   else
+   
+     \quad   err("ReadParameters - section not found")
+
+   //if we wish to simulate patches with different soil types, this will have to be modified
+   
+//   cloneList<patch>::PS P
+
+//   thePatches.PeekHead(P)
+
+//   P.element.Initialise(soilFileName,Index,area)
+
+
+
+\subsection{PushHistory(field * fP,str * crop\_id)}
+Updates cropping history when a new crop is initiated
+
+   fP -  pointer to new field,
+   crop\_id - id of new crop
+
+	fP.History[0]=History[1]
+	
+	fP.History[1]=History[2]
+	
+	fP.History[2]=History[3]
+	
+	fP.History[3]=*crop\_id
+
+
+\subsection{field* MakeNewField()}
+	return new field(Name,Index,Owner)
+
+
+ \subsection{AdjustPatchAreas(adjust,bool balance)}
+   if $adjust <0$ then
+   
+   \quad   err("AjustPatchAreas - call parameter must be above zero")
+   
+   if $adjust>1$  and   not balance then
+   
+   \quad   err("AjustPatchAreas - call parameter must be not exceed one in this mode")
+
+   Nbefore=NcropBefore= NsoilBefore=0
+
+	if thePatches then
+   
+ \quad  	for ( i=0 i<thePatches.NumOfNodes() i++)
+      
+ \quad   \quad     NcropBefore+=thePatches.ElementAtNumber(i).NitrogenInCrops()
+    
+\quad     \quad    NsoilBefore+=thePatches.ElementAtNumber(i).NitrogenInSoil()
+ 
+ \quad  \quad      Nbefore+=thePatches.ElementAtNumber(i).NitrogenInSystem()
+  
+  \quad 	\quad	 thePatches.ElementAtNumber(i).AdjustArea(adjust)
+      
+  
+   else
+   
+  \quad    err("AjustPatchAreas - attempt to divide uninitialised field")
+
+   Nafter=
+   NcropAfter=
+   NsoilAfter=0
+   
+   for ( i=0 i<thePatches.NumOfNodes() i++)
+   
+   \quad   NcropAfter+=thePatches.ElementAtNumber(i).NitrogenInCrops()
+
+ \quad     NsoilAfter+=thePatches.ElementAtNumber(i).NitrogenInSoil()
+
+ \quad     Nafter+=thePatches.ElementAtNumber(i).NitrogenInSystem()
+   
+
+   if (balance)
+   
+   \quad   (Adjust C and water in indicators later)
+ 
+  \quad    AddInd(environmentalIndicator,"37.00 N difference from area adjustment","kg N",Nbefore-Nafter)
+
+   \quad   AddInd(environmentalIndicator,"37.01 N crop difference from area adjustment","kg N",
+NcropBefore-NcropAfter)
+
+\quad      AddInd(environmentalIndicator,"37.02 N soil difference from area adjustment","kg N",NsoilBefore-NsoilAfter)
+  
+
+\subsection{AdjustFieldArea(newArea)}   // cout << "Adjusting area on field no " << Index << " from " << area << " ha to " << newArea << " ha " << theTime << endl
+$   AdjustPatchAreas(\tfrac{newArea}{area},true)$
+   area=newArea
+
+
+\subsection{DivideThisInstance(field * fP,plan * Pl)}
+
+Divides the present instance of the field.
+Copy constructor can not be made, as "linkList" can not have a copy constructor.
+
+   fP - pointer to new field
+   Pl - new plan of field operations
+
+   fP=MakeNewField()
+	// to cope with derived fields
+   
+   if fP.thePatches then
+   
+     \quad   delete fP.thePatches
+      
+	fP.thePatches=thePatches.clone()
+	
+	fP.crrPlan = Pl
+	
+   fP.Index=Pl.GetFutureNumber()
+   
+	for( i=0 i<BackScope i++)
+	
+	  \quad	fP.History[i] = History[i]
+		
+	
+	Pl.GiveCrop(cid)
+	
+	PushHistory(fP,cid)
+	
+	fP.area=Pl.GiveArea()
+	
+	fP.distance=distance
+
+   fP.daysSinceIrrigation=daysSinceIrrigation
+
+	 fP.daysSinceIrrigationRequest=daysSinceIrrigationRequest
+	 
+   fP.daysBetweenIrrigation=daysBetweenIrrigation
+   
+   fP.irrigationDelay=irrigationDelay
+   
+   fP.fingerFlow=fingerFlow
+
+	fP.JBNO=JBNO
+	
+	ofstream * fstr=theMessage.GiveHandle()
+	
+	*fstr << "Divided. Area 'mother': 
+" << area << "ha. Area 'child': " << Pl.GiveArea() << " ha" << "n"
+
+   //Adjust areas
+   
+$   fP.AdjustPatchAreas(\tfrac{fP.area}{area},false)$
+   
+ $  AdjustPatchAreas(\tfrac{area-Pl.GiveArea()}{area},false)$
+   
+	area=area-Pl.GiveArea()
+	
+   for ( i=0  i<NoFixCrops i++)
+   
+     \quad	fP.FixedCrop[i] = FixedCrop[i]
+     
+      \quad  fP.FixedSize[i] = FixedSize[i]
+   
+
+\subsection{MakeInstance(field * fP,plan * Pl)}
+Renew or divide field.
+
+   fP -  pointer to new instance of field
+   Pl -  new plan of field operations
+
+	
+	Ar=Pl.GiveArea()
+	
+	Pl.GiveCrop(cid)
+
+   if $area=0$ then
+	
+		 \quad warn("MakeInstance - attempt to divide a field with an area of zero")
+
+	if $Ar=0$ then
+	
+		\quad  warn("MakeInstance - attempt to divide a field with request of an area of zero")
+
+	if $Ar>area$ then
+  
+\quad 	if $Ar>area+Minimum$ then // Handles rounding-errors
+		
+    \quad \quad      if (theControlParameters.GetFlexSizeFields())
+    
+    \quad \quad \quad         AdjustFieldArea(Ar)
+    
+     \quad \quad     else
+     
+   	\quad \quad \quad 		err("MakeInstance - attempt to divide a field with request of an area bigger than that of the field")
+		
+	\quad \quad 	Ar=area
+	
+	
+	
+	
+	if $area>0$ then
+   
+		if $area > Ar$  and  theControlParameters.GetFlexSizeFields()) // Test if field 
+		
+	 \quad		size should be adjusted
+		
+      \quad	    AdjustFieldArea(Ar)
+		
+		if $area > (Ar+Minimum)$ then
+		
+	 \quad		 // Handles rounding-erors
+       
+      \quad	  	DivideThisInstance(fP,Pl)
+		
+		else
+		
+     \quad	  { // The field is not to be divided, but renewed
+      
+	 \quad	 		if $Lfutr.NumOfNodes()>1$ then
+			
+		 \quad	 \quad			 warn("MakeInstance - error in list of future plans")
+				 
+	 \quad			if $Pl.GetFutureNumber()\ne Index$ then
+         
+         \quad	     \quad	 cout << Pl.GetFutureNumber() << endl
+				err("MakeInstance - inconsistence in indices")
+         
+			if (crrPlan)
+			
+			 \quad		delete crrPlan
+			 
+			crrPlan=Pl
+			
+         if (crrPlan.GetAdjustArea()>0)
+         
+            \quad	 AdjustFieldArea(crrPlan.GetAdjustArea())
+
+			PushHistory(this,cid)
+			
+			fstr=theMessage.GiveHandle()
+			
+			*fstr << "Renewed. Size: " << area << " ha" << endl
+
+	
+	
+\#ifdef TUPLE
+
+   writeTuples=theControlParameters.GetWriteTuples()
+   
+\#endif
+
+
+\subsection{SplitMe(field * fP)}
+Investigates whether the field should be divided or renewed.  fP - Pointer to new instance. NULL if field is undivided.
+
+   if active then  
+   
+	   \quad	 ofstream * fstr
+	   
+       \quad	fP=NULL
+       
+       \quad	if crrPlan=NULL  or  crrPlan.Finished()
+       
+      
+       \quad	 \quad	   cloneList<plan>::PS P
+       
+       \quad	 \quad	   Lfutr.PeekHead(P)
+       
+       \quad	 \quad	   if $P\ne NULL$ then
+        
+         \quad	 \quad	 \quad	     year = theTime.GetYear()
+         
+       \quad	 \quad	 \quad	      month = theTime.GetMonth()
+       
+        \quad	 \quad	 \quad	      day = theTime.GetDay()
+        
+\#ifdef MEASCOPE
+
+      \quad	 \quad	 \quad	      
+ if ((P.element.FirstOperationToday(year,month,day) 
+ 
+\quad and  (OperationCanBePerformed(P.element,thePatches.ElementAtNumber(0))))
+
+ \quad            		 or  (P.element.NoOpsThisYear(year,month,day))) then
+            		 
+\#else
+
+        \quad	 \quad	 \quad		     if (P.element.FirstOperationToday(year,month,day) 
+
+\quad	 \quad	 \quad  and  (OperationCanBePerformed(P.element,thePatches.ElementAtNumber(0))))
+
+\#endif
+            
+
+      \quad	 \quad	 \quad	 \quad	          fstr=theMessage.GiveHandle()
+               *fstr << theTime << " >>> Field no " << setw(2) << Index << "  "
+
+        \quad	 \quad	 \quad	 \quad	        MakeInstance(fP,P.element)
+    
+      \quad	 \quad	 \quad	 \quad	          Lfutr.Release(P)
+
+   
+
+\subsection{ImplementFingerFlow()}	
+  if $JBNO=1$ and fingerFlow then 
+
+ \quad	// irrigation on JB1 implies finger flow on 2/3 of the area and 1/3 do not receive any water not 
+   
+   
+  \quad    if thePatches.NumOfNodes()>2 then
+  
+  \quad \quad     	 warn("ReadParameters - to many patches on field")
+  
+\quad //      MeltAllPatches()
+
+ \quad   	cloneList<patch>::PS P
+ 
+ \quad   	thePatches.PeekHead(P)
+ 
+  \quad     patch* P2= P.element.clone()
+  
+ \quad      P2.SetArea(area*1.0/3.0)
+ 
+\#ifndef NITROSCAPE
+
+  \quad     P2.SetFingerFlow(2)
+  
+  \quad     P.element.SetFingerFlow(1)
+  
+\#endif
+
+  \quad    $ P.element.SetArea(area*\tfrac{2}{3})$
+  
+ \quad      thePatches.InsertLast(P2)
+   
+   
+   
+   
+   daysSinceIrrigationRequest = 0
+
+
+\subsection{HandleOperation(fieldOperationFields * FOP)}
+Handles a field operation (e.g. sowing)
+   FOP -  object with operation characteristics
+
+if FOP.GetCropName()[1]=1 then
+
+	\quad 	cout<<FOP.GetCropName()<<"test 4 "<<FOP.GetCropName()[1]<<endl
+
+	bool delayOp = false
+
+   //NJH commented out next section because it should be transferred to management class
+
+   if ( not delayOp)
+   
+\quad 	   ofstream * fstr=theMessage.GiveHandle()
+
+  \quad     *fstr  << theTime  << " Field no " << setw(2) << Index  << " "  << setfill(' ') << setiosflags(ios::left)  << setw(20)
+         
+\quad 	   fstr.flush()
+	   
+  \quad 	*fstr  << *FOP
+
+
+   \quad    cloneList<patch>::PS P
+   
+   \quad    thePatches.PeekHead(P)
+   
+   \quad    while $P\ne NULL$ do
+      
+   \quad     \quad   P.element.HandleOp(FOP)
+   
+    \quad     \quad  thePatches.OneStep(P)
+      
+	
+   return  not delayOp
+
+
+
+\subsection{bool SoilIsSuitableForFertilizing()}
+Returns whether the soil is trafficable. Presently very simplistic, if standing water is below a threshold, it returns true.
+
+   standingWater=
+   areaSum=0
+   
+   cloneList<patch>::PS P
+   
+ 	thePatches.PeekHead(P)
+ 
+   while $P\ne NULL$ do
+      
+        \quad area=P.element.GetArea()
+      
+       \quad areaSum+=area
+      
+      \quad  standingWater+=P.element.StandingWater()*area
+      
+      \quad  thePatches.OneStep(P)
+   
+$   standingWater=\tfrac{standingWater}{areaSum}$
+   
+   return (standingWater<1.0  or  theTime.GetMonth()=5)
+   
+	// To ensure that fertilizing is possible later
+
+
+
+\subsection{Irrigate( year, month, day)}
+Perform irrigation of field
+
+
+   if $daysSinceIrrigation\ge daysBetweenIrrigation$ then
+   
+	\quad  // Must be redefined to capacity of technics not 
+   
+    \quad   if $daysSinceIrrigationRequest\ge irrigationDelay$ then
+      
+	 \quad  \quad  	$char * crop\_id$
+	 
+	\quad \quad $PresentCrop\_(crop\_id)$
+	
+	\quad \quad water * aWater=new water
+	
+	\quad \quad	aWater.Setname("WATER")
+	
+\quad\quad   theProducts.GiveProductInformation(aWater)
+	
+\quad\quad  aWater.Setamount(30*10)  // 30mm, 1ha
+
+\#ifdef ARLAS
+
+		 \quad   \quad FieldSuitcase.AddIndicator(environmentalIndicator,"irrigation",30.0)
+
+\#endif
+
+	\quad \quad 		irrigateFields * FOP=new
+	 irrigateFields
+   
+   \quad   \quad   $  FOP.DefineIrrigateFieldsOp(Irrigating,crop\_id,crop\_id,$
+
+\quad   \quad $year,month,day,FieldArea_(),0,DistanceToField_(),aWater,false)
+$
+
+\quad 	\quad 	   HandleOperation(FOP)
+
+\quad 	\quad 		theTechnics.ExecuteFields(FOP)
+
+ \quad   \quad       delete FOP
+
+	\quad \quad 		delete aWater
+	
+	\quad \quad       daysSinceIrrigation=0
+
+ \quad  \quad        daysSinceIrrigationRequest=0
+      
+      
+   \quad    else
+   
+   \quad   \quad  	daysSinceIrrigationRequest++
+	
+   else
+   
+   \quad 	daysSinceIrrigationRequest=0
+
+
+
+\subsection{bool OperationCanBePerformed(plan* aPlan,patch* aPatch)}
+Determines if the operation can be performed
+Note addition of forage harvest (NJH May 2004
+
+
+   if $aPlan \ne NULL$ and  $not aPlan.Finished()$ then
+   
+    \quad	 // Last term added 28.02.2007 by BMP for speed and transparency
+   
+	{
+\#ifndef MEASCOPE
+
+    	bool ReadyForHarvest
+    	
+      if (theControlParameters.GetForcedHarvest())
+
+      	ReadyForHarvest = aPlan.NextIsHarvestOp() and (aPatch.ReadyForHarvestOrLater()  
+
+  \quad     or  aPlan.NextIsForcedHarvest())
+      
+      else
+
+      	ReadyForHarvest = aPlan.NextIsForageHarvestOp()  or  (aPlan.NextIsHarvestOp() 
+
+        \quad          and aPatch.ReadyForHarvestOrLater())
+      	
+      bool ReadyForFertilizing = aPlan.NextIsFertilizing() and (SoilIsSuitableForFertilizing()   
+
+\quad     or  theControlParameters.GetForcedOperations())
+      
+     $ bool ReadyForOtherOp = theControlParameters.GetForcedOperations() $ 
+
+$or  ( not aPlan.NextIsHarvestOp() and  not aPlan.NextIsFertilizing())$
+
+
+   	return (ReadyForHarvest  or  ReadyForFertilizing or  ReadyForOtherOp)
+   	
+\#else
+     
+      bool OpTrigger = false
+      
+      OpTrigger = aPlan.CheckIfToDo(0.0)    //should have real moisture from patch not  not  not 
+      
+      if (( not OpTrigger) and  aPlan.CheckIfMustDo()) 
+     
+      \quad	 //if have reached latest date at which an operation may be performed
+     
+    \quad	      	OpTrigger = true
+         	
+      return OpTrigger
+      
+\#endif
+	
+   else
+   
+   \quad 	return false
+
+
+
+
+
+\subsection{UpdateField()}
+Daily update of field state
+
+    year = theTime.GetYear()
+    
+    month = theTime.GetMonth()
+    
+    day = theTime.GetDay()
+
+   if active then
+
+      daysSinceIrrigation++
+      
+      cloneList<patch>::PS P
+      
+      thePatches.PeekHead(P)
+      
+      if (P=NULL)
+         err("UpdateField - no patches in field")
+    
+      if (P.element=NULL)
+         err("UpdateField - pointer error")
+      
+      fieldOperationFields * FOP=NULL
+     
+      if $crrPlan \ne NULL$ and  not $crrPlan.Finished()$ then
+       
+      \quad    FOP=crrPlan.ReturnOperation(year,month,day,false)
+      
+      long  delay=0
+    
+      if $FOP\ne NULL$ then
+    
+\#ifndef MEASCOPE
+ 
+  \quad        delay=theTime.GetDateValue() - FOP.GetOpTime().GetDateValue()
+ 
+  \quad        if $delay>65$ then
+         
+\quad   \quad           cout << endl << GetLongName()
+
+ \quad   \quad          err("UpdateField - field operation not performed after more than 65 days delay")
+         
+\quad \#else
+
+ \quad         delay=theTime.GetDateValue() - FOP.GetopStart().GetDateValue()
+
+\quad          if $delay>120$ then
+         
+  \quad \quad           cout << endl << GetLongName()
+
+\quad\quad              err("UpdateField - field operation not performed after more than 120 days delay")
+         
+\#endif
+      
+      
+      
+      if (OperationCanBePerformed(crrPlan,P.element))
+      
+     \quad     FOP=crrPlan.ReturnOperation(year,month,day,true)
+   
+     \quad     if $FOP\ne NULL$ then
+         
+      \quad \quad       if (crrPlan.IsThisTheFirst(FOP) and fingerFlow)
+  
+    \quad \quad \quad            ImplementFingerFlow()
+   
+    \quad \quad         if ( not (FOP.IsIrrigationOp() and crrPlan.AutomaticIrrigation()))
+            
+      \quad \quad \quad          if (HandleOperation(FOP))
+               
+\#ifdef MEASCOPE
+  	
+  		\quad \quad \quad 				if (FOP.GetopEnd())
+                  {
+        \quad \quad \quad              if $theTime\ge *FOP.GetopEnd()$ then
+    
+      \quad \quad \quad \quad                   warn("Operation forced at end date: field no and op name = ",
+     
+      \quad \quad \quad                       Index,operationNameList[FOP.GetOperationId()].c\_str())
+                  
+       \quad \quad \quad             crrPlan.CheckIfFinished()
+\#else
+                  if $delay>20$ then
+                  
+      \quad                cout << endl << delay << " days delay of operation type " << FOP.GetOperationId() << " due for " << *FOP.GetOpTime() << " on field no " << Index << endl
+ 
+ \quad                     if $delay>60$ then
+  
+   \quad \quad                      warn("UpdateField - field operation performed after more than 60 days delay")
+    
+    \quad                  else
+    
+    \quad \quad                     warn("UpdateField - field operation performed after more than 20 days delay")
+                  }
+\#endif
+      \quad \quad             theTechnics.ExecuteFields(FOP)
+      
+ \quad \quad                  ofstream * file=theMessage.GiveHandle()   // write end of line marker
+          
+          \quad \quad         *file << endl
+
+     
+      while $P \ne NULL$ do
+      
+	  \quad     if (P.element.IrrigationDemand() and crrPlan.AutomaticIrrigation())
+	  
+   	\quad \quad       Irrigate(year,month,day)
+   	
+   \quad \quad    	thePatches.OneStep(P)
+      
+
+\#ifdef TUPLE
+
+      if writeTuples then
+      
+       \quad   cloneList<patch>::PS P
+      
+       \quad   thePatches.PeekHead(P)
+       
+       \quad   if $P\ne NULL$ then
+         
+    
+      \quad \quad       $fixation\_sum+=P.element.GetNFixationThisDay()$
+    
+     \quad \quad       $ deposition\_sum+=0.0411 $ // HACK, UPDATE! 
+        
+      \quad \quad    if  $day=31$ and $month=12$ then
+      
+        \quad    \quad \quad  $AddTuple(theTime.GetString2(),$
+
+\quad    \quad \quad \quad  $deposition\_sum*area,0,"DEPOSITION","DEPOSITION",0)$
+      
+       \quad     \quad \quad  $AddTuple(theTime.GetString2(),$
+
+\quad   \quad   \quad \quad $fixation\_sum*area,0,"FIXATION","FIXATION",0)$
+     
+       \quad  \quad \quad    $ deposition\_sum=0$
+      
+       \quad \quad \quad     $ fixation\_sum=0$
+       
+\#endif
+
+      UpdatePatches()
+
+		GiveIndicators()
+
+
+
+\subsection{UpdatePatches()}
+cloneList<patch>::PS P
+
+  	thePatches.PeekHead(P)
+  	
+    k=0
+    
+   while $P\ne NULL$ do
+   
+   \quad P.element.UpdatePatches()
+   
+    \quad    thePatches.OneStep(P)
+    
+     \quad   k++
+   
+   
+   if (globalSettings.DetailsData.getPlantDetails()=true)
+    
+      \quad  OutputPlantDetails(false)
+
+
+ \subsection{CropHistory( nr,char * crop\_id)}
+Returns the crop for a previous season
+Parameters.
+   nr -  season, $crop\_id$ reference for the crop id
+
+   $crop\_id =new char[3]$
+   
+   $strcpy(crop\_id,History[nr].c\_str())$
+   
+   if  not active then
+   
+   \quad     err("CropHistory called for inactive field")
+
+
+\subsection{PresentCrop(char cropid)}
+Returns the present crop
+
+	$crop\_id =new char[5]$
+	
+	$strcpy(crop\_id,History[3].c\_str())$
+
+
+\subsection{DistanceToField()}
+Returns the distance from farm to field (meters)
+
+	return $distance$
+
+
+\subsection{FieldArea()}
+Returns the area of the field (ha)
+
+	return $area$
+
+
+\subsection{JBno()}
+Returns the JB classification number of the soil
+
+	return $JBNO$
+
+
+
+
+ \subsection{PlanField(cloneList<fieldOperationFields> 
+ OP,str cropid, futureNum)}
+
+Inserts the plan in the list of plans for the following growth season
+
+   OP - plan (list of field operations),
+   $crop\_id$ - crop identification
+	
+	plan  pl=new plan
+	
+	cloneList<fieldOperationFields>::PS P
+	
+	OP.PeekHead(P)
+	
+	$pl.HandPlanOver(OP,crop\_id,futureNum)$
+	
+   if $pl.GiveNumOps()=0$ then
+   
+    \quad 	delete pl
+    
+   else
+  
+\#ifdef MEASCOPE
+
+     \quad	pl.CheckOps()
+     
+\#endif
+
+	  \quad	Lfutr.InsertFirst(pl)
+   
+
+
+
+
+\#ifdef TUPLE
+
+\subsection{CloseTupleFile()}
+   if $tuple\_file\_open$ then
+   
+      \quad  tuple.close()
+      
+       \quad $tuple\_file\_open=false$
+
+\subsection{OpenTupleFile(string s)}
+   $string s1="c:\\fasset\_v2\\F\_"+s+"_sim.txt"$
+   
+   if (theControlParameters.GetSimTupleHasBeenOpened())
+   
+      \quad $ tuple.open(s1.c\_str(),ios::app)$
+      
+   else
+   
+     \quad $  tuple.open(s1.c\_str(),ios::out)$
+     
+     \quad   tuple << "Key tab FarmId tab Fieldno tab Date tab Index tab MainCrop tab Area tab Operation tab Product tab N tab Amount tab SFU" << endl
+     
+     \quad   theControlParameters.SetSimTupleHasBeenOpened(true)
+   
+   
+   $tuple\_file\_open=true$
+
+
+
+
+
+\subsection{AddTuple(string date,n,amount,string op,string type,SFU)}
+
+Parameters: date, N, amount, length, operation, type
+NI SFU (unique) Achievement Field ID Number Date Index (by more up. Same date)
+
+the area (ha) Operation Product Name N (kg)
+length 
+Example:$ 95023\_8\_15-08-95023 2001\_1\_RY 15-08-2001
+ 8 1 RY 6.4 Combine Harvesting RYEGRAIN 478.9 29 440 -$
+
+
+   if $area\ge 0.001$ and writeTuples then
+   
+   \quad    string farmId=theControlParameters.GetFarmID()
+      
+   \quad    if $farmId=""$ then
+      
+   \quad     \quad   err("fieldOrder::AddTuple - attempt to add tuples but no farm ID specified")
+       
+    \quad   if $ not tuple_file_open$ then
+      
+      \quad    OpenTupleFile(farmId)
+         
+   \quad     idx = GetOperationIndex(date)
+     
+     \quad  $tuple << farmId << "\_" << Index << "\_" << 
+ date << "\_" << idx << "_" << History[3].crop << " tab "$
+      
+      \quad  tuple << farmId << " tab " << Index << " tab "
+ << date << " tab " << idx << " tab "
+     
+     \quad  tuple << History[3].crop << " tab " << area 
+<< " tab " << op << " tab " << type << " tab " << n
+     
+     \quad  tuple << " tab " << amount << " tab " << SFU << endl
+  
+    \quad   CloseTupleFile()  // Only in field objects
+   
+
+\#endif
+
+
+
+
+
+\subsection{OutputPlantDetails(bool header)}	 
+
+if (header)
+	
+\quad       f << "date"
+
+\quad       f << " tab crop number tab pClover"
+
+ \quad      for ( i=0 i<MaxPlants i++)
+      
+
+\quad  \quad    		f << " tab CropName tab phase tab TempSum tab CO2conc tab GLAI tab YLAI tab DMRoot tab DMRootPL tab DMRootTubers tab DMtop tab DMStorage tab DMTotalTop"
+ 
+\quad  \quad    	     	   f << " tab TranspirationRatio tab IrrigationDemand tab Height tab RootDepth tab TotalRootLength tab InterceptedRadiation"
+
+\quad \quad      	   f << " tab Nitrogen tab N15 tab Nmin() tab Nmax() tab NStorage tab NTop tab NVegTop tab NRoot tab NRootPL tab NRootTubers tab fNitrogen tab fNitrogenCurve"
+ 
+\quad  \quad     	   f << " tab RootDeposit tab RootTrans tab NRootDeposit tab TopDeposit tab NTopDeposit"
+
+\quad \quad          f << " tab TopProd tab NUptake tab Nfix tab NfixAcc tab deltaDM tab N15Root tab AccRootResp"
+ 
+\quad         for(unsigned  i=0 i<globalSettings.RootData.size() i++)
+
+
+\quad  \quad            f << " tab RootLength-"<< globalSettings.RootData[i].getStartDepth() << "-"<< globalSettings.RootData[i].getEndDepth()
+
+\quad  \quad         	f << " tab RootMass-"<< globalSettings.RootData[i].getStartDepth() << "-"<< globalSettings.RootData[i].getEndDepth()
+ 
+\quad  \quad         	f << " tab RootN-"<< globalSettings.RootData[i].getStartDepth() << "-"<< globalSettings.RootData[i].getEndDepth()
+     
+	
+   else
+   
+    \quad    f << theTime.GetYear() << "-" << theTime.GetMonth() << "-" << theTime.GetDay()
+
+  \quad  cloneList<patch>::PS P
+  
+  \quad  thePatches.PeekHead(P)
+ 
+ \quad   while $P\ne NULL$ then
+  
+ \quad    \quad    P.element.outputCropDetails(f)
+   
+   \quad   \quad   thePatches.OneStep(P)
+
+ \quad   f << endl
+
+
+
+\subsection{StartBudget()}
+Initialise budget variables
+
+	if thePatches then
+	
+   	  \quad for ( i=0 i<thePatches.NumOfNodes() i++)
+   	
+     \quad  \quad		thePatches.ElementAtNumber(i).StartBudget()
+
+
+\subsection{EndBudget()}
+Test if budget is valid
+
+	bool ret\_val=true
+	
+   if thePatches then
+   
+  \quad  	for ( i=0 i<thePatches.NumOfNodes() i++)
+   	
+\quad \quad \quad 	   	if ( not thePatches.ElementAtNumber(i).EndBudget())
+
+\quad \quad  ret\_val=false
+	   	
+  \quad \quad  if  not $ret\_val$ then
+   
+   \quad \quad \quad  warn("Error in budget of field number ", GetIndex())
+
+
+
+
+\subsection{DepositManure(manure animalurine,
+ manure animaldung, areaur, areadu)}
+(needs rewriting for multiple patches)
+
+	$prop\_lost\_volat=0.07$
+
+ $  AddInd(environmentalIndicator,
+"31.08 N in faeces from grazing",$
+
+$"kg N",
+animal\_dung.GetAmount()*animal\_dung.GetAllN().n*1000)$
+  
+ $  AddInd(environmentalIndicator,
+"41.09 C in faeces from grazing","kg C",$
+
+
+$animal\_dung.GetAmount()*animal\_dung.GetC_content()*1000)$
+
+// $new\_area\_dung+=dung.GetAmount()*110$ 
+
+  //OLD METHOD - area covered per tonne fresh weight from During and Weeda 73, NZJAS
+
+$   AddInd(environmentalIndicator,"31.07 N 
+in urine from grazing","kg N",$
+
+$animal\_urine.GetAmount()
+*animal\_urine.GetAllN().n *1000)$
+  
+  $ AddInd(environmentalIndicator,"41.08 C 
+in urine from grazing","kg C",$
+
+$animal\_urine.GetAmount()
+*animal\_urine.GetC_content() *1000)$
+   
+      // Calculate ammonia volatilisation
+ 
+  $ AddInd(environmentalIndicator,
+"31.46 NH3-N loss during grazing","kg N",$
+
+$prop_lost_volat 
+* animal\_urine.GetAmount()
+ * animal\_urine.GetNH4\_content().n * 1000)$
+
+   size=0
+   
+   for( i=0 i<thePatches.NumOfNodes() i++)
+   
+	\quad    size+=thePatches.ElementAtNumber(i).GetArea()
+   
+   $totalAmountUrine=animal\_urine.GetAmount()$
+   
+   $totalAmountDung=animal\_dung.GetAmount()$
+   
+   for( i=0 i<thePatches.NumOfNodes() i++)
+   
+   	   \quad  $fraction=\tfrac{thePatches.ElementAtNumber(i).GetArea()}{size}$
+
+\quad    	 $  animal\_urine.Setamount(totalAmountUrine*fraction)$
+
+\quad    	$   animal\_dung.Setamount(totalAmountDung*fraction)$
+   	   
+   	   \quad $ thePatches.ElementAtNumber(i).DepositManure(
+animal\_urine, animal\_dung)$
+   
+   $animal\_urine.Setamount(totalAmountUrine)$
+
+  $ animal\_dung.Setamount(totalAmountDung)$
+
+
+\subsection{bool GetGrazingPossible()}
+//   char *cropId
+
+   bool $ret\_val=true$
+
+
+	if not grazingPossible then
+	
+   	\quad  return false
+   	
+   // Check to make sure there is no other operation that would stop grazing
+   
+    year = theTime.GetYear()
+    
+    month = theTime.GetMonth()
+    
+    day = theTime.GetDay()
+    
+   fieldOperationFields * FOP=NULL
+   
+   if crrPlan=NULL  or  crrPlan.Finished() then
+   
+   \quad    cloneList<plan>::PS P
+    
+    \quad   Lfutr.PeekHead(P)
+  
+    \quad   if P then
+  
+    \quad \quad      FOP=(fieldOperationFields *)
+    
+     \quad \quad P.element.ReturnOperation(year,month,day,false)
+   
+   
+   else
+   
+    \quad   FOP=crrPlan.ReturnOperation(year,month,day,false)
+
+   if FOP then
+   
+    \quad    opID=FOP.GetOperationId()
+    
+    \quad   switch ()
+      
+      \quad \quad    case opID in 0-6,12,13,15,16,17,19
+        
+     \quad \quad \quad        ret\_val=false,
+            grazingShutDown=true
+    
+    \quad \quad      default:         
+        ret\_val=true
+  
+       
+   
+   
+   
+	return ret\_val
+
+
+
+
+\subsection{AutoGrazingPossible()}
+Set grazable to true if crop is of type that is grazable
+
+   char *cropId
+
+  $ PresentCrop\_(cropId)$
+   
+   if "C1",cropId  or  "C2",cropId or "G1",cropId  or
+   
+      "G2",cropId  or  "K1",cropId  or  "G4",cropId then
+      
+  \quad	   for( i=0 i<thePatches.NumOfNodes() i++)
+		
+ \quad	 \quad			   thePatches.ElementAtNumber(i).Setgrazable(true)
+   
+    \quad	 \quad	      grazingPossible=true
+      
+   else
+   
+    \quad
+	   for( i=0 i<thePatches.NumOfNodes() i++)
+	   
+	 \quad	  \quad	  	 thePatches.ElementAtNumber(i).Setgrazable(false)
+
+    \quad	 \quad	   grazingPossible=false
+   
+
+
+\section{Get}
+
+\subsection{GiveIndicators()}
+   n=thePatches.NumOfNodes()
+   
+     for all i in 0..n-1 do
+   
+   \quad   patch  p = thePatches.ElementAtNumber(i)
+      
+   \quad   p.GiveIndicators()
+
+
+
+\subsection{GetHerbageMasskg()}
+Get total herbage mass in kg
+
+	mass= 0,	
+    n=thePatches.NumOfNodes()
+    
+     for all i in 0..n-1 do
+   
+  \quad   patch  p = thePatches.ElementAtNumber(i)
+      
+ \quad     mass += p.GetPatchStandingDMkg()*p.GetArea()
+      
+   return mass
+
+
+\subsection{GetHerbageMasskgPerHa()}
+Get herbage mass in kg
+
+	mass= 0, n=thePatches.NumOfNodes()
+    
+     for all i in 0..n-1 do
+   
+  \quad    patch  p = thePatches.ElementAtNumber(i)
+      
+ \quad     mass += p.GetPatchStandingDMkg()*p.GetArea()
+      
+   return $mass/area$
+   
+   
+
+
+\subsection{GetAvailableHerbageMasskg(residualDM)}
+Get herbage mass in excess of residual (kgDM/ha),  in kg
+
+	mass= 0,  n=thePatches.NumOfNodes()
+    
+   for all i in 0..n-1 do
+   
+  \quad   patch  p = thePatches.ElementAtNumber(i)
+      
+  \quad    mass += p.GetAvailablePatchStandingDMkg(residualDM)
+      
+   return mass
+
+\subsection{GetAvailableHerbageMasskgPerHa(residualDM)}
+Get herbage mass above cutting height in kg/ha
+
+	mass= 0,  n=thePatches.NumOfNodes()
+    
+    for all i in 0..n-1 do
+   
+   \quad   patch p = thePatches.ElementAtNumber(i)
+      
+  \quad    mass += p.GetAvailablePatchStandingDMkg(residualDM)*p.GetArea()
+      
+      
+   mass/=area
+   
+   return mass
+
+\subsection{GetDMGrazed()}
+ret\_val = 0, n=thePatches.NumOfNodes()
+
+    for all i in 0..n-1 do
+   
+  \quad    patch  p = thePatches.ElementAtNumber(i)
+      
+ \quad     ret\_val+=p.GetGrazedDM()
+
+   return ret\_val
+
+
+\subsection{GetAbovegroundCropN()}
+Returns above ground crop N in kg/ha
+
+   ret\_val = 0,
+    n=thePatches.NumOfNodes()
+    
+    for all i in 0..n-1 do
+   
+ \quad     patch p = thePatches.ElementAtNumber(i)
+      
+ \quad     ret\_val+=p.GetAbovegroundCropN()
+      
+   return ret\_val
+
+
+\subsection{GetDailyDMProduction()}
+Returns growth in kg DM
+
+	ret\_val=0
+	
+   for ( i=0 i<thePatches.NumOfNodes() i++)
+   
+    \quad  patch p = thePatches.ElementAtNumber(i)
+      
+  \quad    ret\_val+=p.GetDailyDMProduction()
+      
+   return ret\_val
+
+
+\subsection{InitExpectedGrowthRate(radiation, temperature)}
+Estimate potential daily growth, given radiation and temperature
+
+   ret\_val = 0,
+    n=thePatches.NumOfNodes()
+    
+     for all i in 0..n-1 do
+   
+   \quad   patch p = thePatches.ElementAtNumber(i)
+      
+   \quad   ret\_val+=p.GetPotentialGrowthRate(radiation, temperature)
+      
+   return ret\_val
+
+
+
+\subsection{ClearTemporaryVariables()}
+This resets the variables that track grazing
+Done here because we might be interested in the variables for debugging
+
+   for ( i=0 i<thePatches.NumOfNodes() i++)
+   
+  \quad    patch p = thePatches.ElementAtNumber(i)
+      
+ \quad     p.clearPatchRecords()
+
+
+
+\end{document}

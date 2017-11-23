@@ -1,0 +1,3181 @@
+\documentclass[%parskiphalf,%numbers=noendperiod
+]{scrartcl}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx,parskip}
+\usepackage{booktabs,longtable}
+\usepackage{lmodern}
+\usepackage[round]{natbib}
+
+\newcommand\mymarginpar[1]{\marginpar {\flushleft\bfseries\scriptsize #1}}
+
+\title{FASSET Ecosystem}
+
+\author{}
+\date{\today}
+
+\usepackage{lmodern}
+
+
+\usepackage[backref]{hyperref}
+
+\begin{document}
+
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{CropSoilExchange}
+
+\subsection{CheckTranspirationRatio(TranspirationRatio)}
+Error check for transpirationratio
+
+if TranspirationRatio<-1E-10 then
+    
+\quad warn("CheckTranspirationRatio - transpirationratio can not be negative"), TranspirationRatio=0
+   
+if TranspirationRatio>1+1E-10 then
+      
+\quad warn("CheckTranspirationRatio - transpirationratio can not be greater than one"), TranspirationRatio=1
+   
+\subsection{CheckNfromSoil(nitrogen NFromSoil,  NitrogenDemand)}
+
+Error check for N from soil
+
+if (NFromSoil.n>(NitrogenDemand+1e-6)) then
+   
+\quad    warn("CheckNfromSoil - nitrogen from soil should not exceed request")
+    
+\quad   NFromSoil.n=NitrogenDemand
+
+if NFromSoil.n<-0.000000001 then
+
+  \quad warn("CheckNfromSoil - nitrogen from soil can not be less than zero"), NFromSoil.n=00
+
+
+\subsection{CropSoilExchange()}
+\citet{berntsen2004modelling}
+Handles information exchange between soil and crop objects
+
+\begin{tabular}{ll}
+   temperature &       mean air temperature, Celcius \\
+   precip  &           precipitation, mm \\
+   radiation    &      global radiation, MJ/m2 \\
+   Epot   &            potential evaporation, mm
+\end{tabular}
+
+     precip = theClimate.precip,      
+     EPot = theClimate.epot,      
+     temp = theClimate.tmean,      
+     radiation = theClimate.rad
+
+   linkList<rootStructure>  roots = new linkList<rootStructure>
+   
+   cloneList<crop>::PS aCropElement,   
+   rootStructure  cropRoot,  
+   crop aCrop
+   
+   nFixThisDay=00
+
+   \textbf{1. Add irrigation nitrogen and atmospheric nitrogen deposition to soil}
+
+     NitrogenInRain = theClimate.GetNitrogenInRain()
+    
+ irrigation = irrigationWater.GetAmount()/10         // converts m3 to mm
+    
+$ irrigationN = irrigationWater.GetN\_content()$
+  
+ nitrogen NinWater,N1
+   
+NinWater.SetBoth($precip \cdot NitrogenInRain+irrigation \cdot irrigationN$,0)
+ 
+  aSoil.AddNutrient(N1,N1,N1,NinWater)
+   
+WaterBudget.AddInput(precip+irrigation)
+  
+ AddInd(envInd,"70.01 Rainwater","cubic metre",
+$precip \cdot area \cdot 10$)
+   
+AddInd(envInd,"31.02 N from deposition","kg N",
+$NitrogenInRain \cdot precip \cdot area \cdot 10$)
+  
+ AddInd(envInd,"31.05 N from irrigation water","kg N",
+$irrigation \cdot irrigationN \cdot area \cdot 10$)
+
+   if globalSettings.DetailsData.getWaterDetails() then
+	
+	  \quad   waterDetails.WriteWithTabS(theTime.GetString2())
+	 
+	  \quad   waterDetails.WriteWithTab(precip+irrigation)
+ 
+  \quad	   waterDetails.WriteWithTab(EPot)
+
+   \textbf{2. Sum leaf areas and interception capacity, calculate
+   "effective" extinction coeff.}
+
+   totalgLAI=
+     totalyLAI=
+     InterceptionCapacity=
+     k=0
+     
+   theCrops.PeekHead(aCropElement)
+
+   while $aCropElement\ne NULL$ do
+   
+  \quad 	totalgLAI            += aCropElement.element.GiveLAI()
+   	
+\quad totalyLAI            += aCropElement.element.GiveYellowLAI()
+   	
+\quad InterceptionCapacity += aCropElement.element.InterceptionCapacity()
+     
+ \quad $k                    += aCropElement.element.GiveExtCoeff() \cdot aCropElement.element.GiveLAI()$
+      
+theCrops.OneStep(aCropElement)
+   
+   
+// k calculated according to Ross et al. 1972. J. Appl. Ecol.: 535-556
+
+if $totalgLAI>0$ then
+     $k=\tfrac{k}{totalgLAI}  $
+   else
+  $k=0.44$
+  
+ // Convey information about total LAI to all crops
+  
+ theCrops.PeekHead(aCropElement)
+  
+ while $aCropElement\ne NULL$ then
+   
+   
+\quad     aCropElement.element.SetTotalLAIStand(totalgLAI+totalyLAI)
+   
+\quad     theCrops.OneStep(aCropElement)
+   
+
+\#ifndef $\_\_ECOSYSTEM\_\_$
+  
+ if Month=6  and  Day=15  and  totalgLAI+totalyLAI<1E-10 then
+   
+  \quad      cout << endl << " Object path : " << GetLongName()
+
+  \quad      err("CropSoilExchange - no leaf area present 15th June")
+   
+\#endif
+
+   \textbf{3. Compute corrected Epot for canopy}
+
+     $EpotLeaves = EPot \cdot (1-fracEPotToSoil(totalgLAI,totalyLAI))$
+    
+ correctedEPotLeaves= weightedMeanEvapFactor=0
+   
+theCrops.PeekHead(aCropElement)
+  
+ while $aCropElement\ne NULL$
+  
+ \quad    
+ aCrop = aCropElement.element
+    
+  \quad if $totalgLAI+totalyLAI)>0$ then
+      
+  \quad  \quad $ correctedEPotLeaves += 
+EpotLeaves \cdot aCrop.GiveEvapFactor() \cdot \tfrac{aCrop.GiveLAI()
++aCrop.GiveYellowLAI()}{totalgLAI+totalyLAI}$
+     
+ \quad $weightedMeanEvapFactor += aCrop.GiveEvapFactor() \cdot aCrop.GiveLAI()$
+     
+ \quad theCrops.OneStep(aCropElement)
+  
+  
+ if $totalgLAI>0$ then     
+   $weightedMeanEvapFactor=\tfrac{weightedMeanEvapFactor}{totalgLAI}$
+
+    \textbf{4. Update canopy water interception and eventual snow layer}
+
+     surplus = precip + irrigation
+   
+  greenLeafEpot = correctedEPotLeaves
+   
+  CO2conc = theClimate.GetCO2Concentration()
+  
+ if $fracEPotToSoil(totalgLAI,totalyLAI)<1$ then
+    
+    \quad $	 greenLeafEpot =
+ CO2ConcentrationFactor(CO2conc) \cdot correctedEPotLeaves$
+
+\quad\quad $ \cdot \tfrac{fracEPotToGL(totalgLAI)}{1-fracEPotToSoil(totalgLAI,totalyLAI)}$
+   
+   \quad	 $soilEpot = EPot \cdot 
+fracEPotToSoil(totalgLAI,totalyLAI)$
+   
+   \quad	 greenInterceptEvap=0
+ 
+  UpdateInterception($surplus$,
+                		 $temp$,
+			 	          $radiation$,
+                      $greenLeafEpot$,
+			 			   $ correctedEPotLeaves \cdot fracEPotToYL(totalgLAI,totalyLAI)$,
+			 			    $soilEpot$,
+                      $InterceptionCapacity$,
+                     $ greenInterceptEvap$)
+
+    \textbf{5. Collect root and water demand parameters}
+
+   theCrops.PeekHead(aCropElement),    
+ q=0
+ 
+  while $aCropElement\ne NULL$ do
+        
+  \quad aCrop = aCropElement.element
+    
+   \quad cropRoot = new rootStructure
+    	
+ \quad aCrop.GetStatus (cropRoot.rootRadius,cropRoot.rootpF, 
+
+ \quad  \quad cropRoot.NitrogenDemand,cropRoot.NitUptakeRate, cropRoot.AmmUptakeRate, 
+
+ \quad  \quad cropRoot.MinimumSoilNit, cropRoot.MinimumSoilAmm)
+    
+   \quad cropRoot.transpirationDemand = 0
+    
+   \quad  if $totalgLAI>0$ then
+       
+ \quad     \quad  $cropRoot.transpirationDemand = 
+greenLeafEpot \cdot \tfrac{aCrop.GiveEvapFactor()}{weightedMeanEvapFactor}
+\cdot \tfrac{aCrop.GiveLAI()}{totalgLAI}$
+     
+  \quad  cropRoot.rootLengthList = aCrop.GiveRootLengthList()
+     
+  \quad  roots.InsertLast(cropRoot)
+     
+  \quad  theCrops.OneStep(aCropElement)
+
+   \quad     q++
+   
+
+    \textbf{6. Update soil}
+
+	 aSoil.Update(surplus,temp,soilEpot,snowContent,roots)
+  	
+aSoil.Incorporate(10,0.02,false,"none")   
+   // Daily transfer of org. matter to top soil layer (10 mm)
+
+   \textbf{7. Update crop}
+
+\citep[3.3. Competition for light]{berntsen2004modelling}
+
+   theCrops.PeekHead(aCropElement)
+  
+ const  CanopyIntervals = 25          // canopy divided into 25 height intervals
+    
+ %CropRadiation[MaxPlants]
+     
+MaxCanopyHeight = 0
+
+   for ( i=0 i<theCrops.NumOfNodes() i++)
+   
+  \quad    	CropRadiation[i] = 0
+
+  \quad   	MaxCanopyHeight = max(MaxCanopyHeight,theCrops.ElemAtNum(i).GiveCropHeight())
+   
+
+  %   CanopyPar[CanopyIntervals+1]
+
+     $CanopyIntervalHeight = \tfrac{MaxCanopyHeight}{CanopyIntervals}$
+
+   CanopyPar[CanopyIntervals] = radiation
+
+   for ( i=CanopyIntervals-1 $i\ge 0$  i--)
+   
+\quad         a = 0
+
+   \quad     $ IntervalStart = i \cdot CanopyIntervalHeight$
+
+ \quad      $  IntervalEnd = MaxCanopyHeight-i \cdot CanopyIntervalHeight$
+
+ \quad      for ( j=0 j<theCrops.NumOfNodes() j++)
+    
+%\quad \quad  //          const crop  aCrop = theCrops.ElemAtNum(j)   //Eclipse complains about the 'const' NJH, feb 2009
+
+ \quad\quad         crop  aCrop = theCrops.ElemAtNum(j)
+ 
+\quad \quad      	$a += aCrop.TotalLAI(IntervalStart,IntervalEnd) \cdot  (aCrop.GiveExtCoeff())
+    $
+     
+  \quad    $ CanopyPar[i] = radiation \cdot exp(-a)$
+   
+
+
+
+   for ( i=CanopyIntervals-1 $i\ge 0$  i--)
+    
+    \quad	    for ( j=0 j<theCrops.NumOfNodes() j++)
+      
+      \quad	     \quad	    k = theCrops.ElemAtNum(j).GiveExtCoeff()
+
+         \quad	   \quad	  $ LAIinInterval = theCrops.ElemAtNum(j).GreenLAI($
+
+\quad	   \quad $i 
+\cdot CanopyIntervalHeight,CanopyIntervalHeight)$
+         
+  \quad	\quad	  CropRadiation[j] += $CanopyPar[i] \cdot k \cdot LAIinInterval$
+   	
+   
+
+ \textbf{8. Transfer nitrogen and water information to crop}
+
+   nitrogen   NitrogenUptake  = aSoil.GetNitrogenUptake()
+   
+     TotalDMStorage = 
+     TotalDMVegTop = 0
+     
+   for ( i=0 i<roots.NumOfNodes() i++)
+  
+  \quad    rootStructure   aRoot = roots.ElemAtNum(i)
+   
+\quad 	aCrop = theCrops.ElemAtNum(i)
+   
+\quad 	  TranspirationRatio = 10
+   
+\quad    if aRoot.transpirationDemand>0 then
+   
+ \quad \quad   	$TranspirationRatio = \tfrac{greenInterceptEvap+aRoot.actualTranspiration}{greenInterceptEvap+aRoot.transpirationDemand}$
+  
+ \quad \quad    CheckTranspirationRatio(TranspirationRatio)
+    	
+    	
+  \quad    NFromSoil.n=
+      NFromSoil.n15=0
+
+  \quad 	if NitrogenUptake then
+	   
+  \quad    	  \quad	 NFromSoil = NitrogenUptake[i]
+
+  \quad    	  \quad	 CheckNfromSoil(NFromSoil,aRoot.NitrogenDemand)
+
+  \quad    	  \quad	 AddInd(envInd,"32.10 N uptake from soil","kg N",
+$NFromSoil \cdot area \cdot 10$)
+      
+  \quad    aCrop.NitrogenAndTranspiration(NFromSoil,TranspirationRatio)
+   
+ \quad  TotalDMStorage += aCrop.GiveDMStorage()
+    
+ \quad TotalDMVegTop += aCrop.GiveDMVegTop()
+	
+
+  \textbf{9. Upate crop growth, 
+calculate C and N from litterfall, N from fixation plus approximate Carbon content in plant}
+   
+  TotalCFixation = 0
+   
+for ( j=0 j<theCrops.NumOfNodes() j++)
+   
+  \quad     aCrop = theCrops.ElemAtNum(j)
+ 
+  \quad    aCrop.SetDMVegTopTotalStand(TotalDMVegTop)
+  
+ \quad   $ TotalCFixation += 0.42 \cdot aCrop.Update(CropRadiation[j])$
+
+   \quad    decomposable    rootMatter = aCrop.GetRootMatter()
+  
+\quad     if rootMatter then 
+            	 TransferRootMatter(rootMatter,aCrop.GiveRootLengthList())
+  
+ \quad       aCrop.GetRootMatter().Setamount(0)
+  
+  %\quad      // aCrop.DeleteRootMatter()  !!!???@@@
+      
+
+   \quad    decomposable   topMatter = aCrop.GetTopMatter()
+  
+ \quad    if topMatter then
+      
+   \quad         \quad	 aSoil.AddDecomposable(topMatter)
+
+ \quad   	    \quad	 AddInd(envInd,"32.22 N from leaf litterfall incorporated into soil","kg N",
+$topMatter.GetAllN() \cdot topMatter.GetAmount() \cdot area \cdot 1000$)
+		
+ \quad  \quad	   AddInd(envInd,
+"40.82 C from leaf litterfall incorporated into soil","kg C",
+$topMatter.GetAmount() \cdot topMatter.GetC_content() \cdot area \cdot 1000$)
+      
+  \quad     AddInd(envInd,"31.04 N from fixation","kg N",
+$aCrop.GetNFixationThisDay() \cdot area \cdot 10$)
+ 
+ \quad     nFixThisDay+=aCrop.GetNFixationThisDay()
+   
+
+  
+AddInd(envInd,"40.01 Net crop carbon fixation","kg C",
+$TotalCFixation \cdot area \cdot 10$)
+
+   \textbf{10. Remove dead crops from list}
+   
+theCrops.PeekHead(aCropElement)
+   
+while $aCropElement\ne NULL$ then
+   
+      \quad	  aCrop = aCropElement.element
+    
+\quad	    if aCrop.ReadyForRemoval()  and  theCrops.NumOfNodes()>1 then
+      
+       \quad	  \quad	     cloneList<crop>::PS P=aCropElement
+        
+ \quad	  \quad	   theCrops.OneStep(aCropElement)
+       
+   \quad	  \quad	  theCrops.Remove(P)
+      
+     \quad	   else
+       
+   \quad	  \quad	 theCrops.OneStep(aCropElement)
+   
+
+	if autoGraze then SimpleGraze() // Simple grazing developed by JBE+BMP
+     
+
+
+   /*  if FOP.GetOperationId()=MakeGrazable then
+   
+   	\quad $makeGrazable    graz = (makeGrazable  \cdot ) FOP$
+
+   	\quad Setgrazable(graz.GetmakeItPossible()   
+
+   */
+
+   // N balance calculation
+
+	$nitrogen N\_leached = aSoil.GetNitLeaching(aSoil.GetMaxDepth())$
+
+$+aSoil.GetAmmLeaching(aSoil.GetMaxDepth())$
+   
+$nitrogen N\_den     = aSoil.GetDenitrification()$
+  
+ $nitrogen N\_runoff  = aSoil.GetRunOff\_N()$
+   
+$WaterBudget.AddOutput(aSoil.GetDrainage(aSoil.GetMaxDepth())$
+
+$+aSoil.GetEvapotranspiration()+aSoil.GetRunOff())$
+
+   delete roots
+   
+irrigationWater.Setamount(0)
+   // Water calculation
+     
+soilEvaporation = aSoil.GetSoilSurface().GetEvaporation()
+    
+ totalEvaporation = aSoil.GetEvapotranspiration()
+
+   if globalSettings.DetailsData.getWaterDetails() then
+  
+\quad  	   waterDetails.WriteWithTab(soilEvaporation)
+
+\quad  	   waterDetails.WriteWithTab(totalEvaporation-soilEvaporation)
+
+\quad  	   waterDetails.WriteWithTab(aSoil.GetDrainage(aSoil.GetMaxDepth()))
+
+\quad  	   waterDetails.WriteNewLine()
+
+   EndBudget()
+
+
+
+
+
+
+
+\section{Ecosystem}
+
+\subsection{ecosystem(const char 
+ aName, const aIndex, const base aOwner)}   
+:base(aName,aIndex,aOwner)
+
+	 run=globalSettings.getCurrentRun()
+
+	if $scenarielogNumber\ne run$ then
+	
+	  \quad		 currentDir=scenarielog.getCurrentPath()
+
+	  \quad		 scenarielog.changeDir(globalSettings.getOutputDirectory())
+		 
+  \quad	 waterDetails.changeDir(globalSettings.getOutputDirectory())
+		
+  \quad	if $scenarielogNumber\ne -1$ then	
+
+   \quad	  \quad	scenarielog.closeFile(), 	
+
+  \quad	waterDetails.closeFile()
+		
+   \quad	scenarielog.openFileWriteString("scenarie.txt")
+		
+  \quad	 waterDetails.openFileWriteString("waterDetails.txt")
+		
+ \quad	scenarielog.changeDir(currentDir)
+		
+  \quad	 scenarielogNumber=run
+	
+	
+	aSoil                   = new soil("Soil",aIndex,this)
+	
+	theCrops                = new cloneList<crop>
+   
+   cutPlantProducts        = new linkList<plantItem>
+  
+   crop    p                = new 
+   
+   cropbare("cropbare",0,this,"NoCrop")
+  
+   theCrops.InsertLast(p)
+   
+   irrigationWater.Setamount(0)
+	
+	k1                      = 0.60 
+ // Ext.coeff. for leaf area, evaporation frac.
+
+
+   tempSnowFall1 = -20,
+   tempSnowFall2 = snowMeltRate1 = 20
+
+   snowMeltRate2 = 0.15,  leachingDepth = 1000
+
+   autoGraze               = false
+
+   fingerFlow              =
+   balanceDepth            =
+    area                    =
+   waterContent            =
+   snowContent             =
+   grazingEffiency         =
+   nLoad                   =
+    totalgLAI               =
+	$totalGrazed\_DM$				= 0
+
+   WaterBudget.SetNames("ecosystem","Water")
+
+
+\subsection{ecosystem(const ecosystem p)}
+Copy constructor.
+
+ 	aSoil=new soil(  p.aSoil)
+   
+   aSoil.SetOwner(this)
+  
+   theCrops = NULL
+  
+   if (p.theCrops)  theCrops=p.theCrops.clone()
+   
+   cutPlantProducts = NULL
+  
+   if (p.cutPlantProducts) then
+
+   \quad  	for ( i=0 i<p.cutPlantProducts.NumOfNodes() i++)
+      	
+\quad  \quad   cutPlantProducts.InsertLast(p.cutPlantProducts.ElemAtNum(i))
+  
+   k1                  = p.k1
+
+   area                = p.area
+
+   irrigationWater     = p.irrigationWater
+
+   waterContent        = p.waterContent,
+   snowContent         = p.snowContent
+
+   tempSnowFall1       = p.tempSnowFall1,
+   tempSnowFall2       = p.tempSnowFall2
+
+   snowMeltRate1       = p.snowMeltRate1,
+   snowMeltRate2       = p.snowMeltRate2
+
+   WaterBudget         = budget(p.WaterBudget)
+
+   WaterBudget.Reset()   // History ignored
+
+   balanceDepth        = p.balanceDepth
+
+   leachingDepth       = p.leachingDepth
+
+   fingerFlow          = p.fingerFlow
+
+   totalgLAI	  = p.totalgLAI    //added by NJH 16.3.05
+
+
+   if (theCrops) then // Set soil pointer in each crop
+   	
+\quad  for ( i=0 i<theCrops.NumOfNodes() i++)
+	   	
+\quad  \quad   theCrops.ElemAtNum(i).SetSoilPointer(aSoil)
+
+	$totalGrazed\_DM				= 0$
+
+
+%\subsection{~ecosystem()}
+%Destructor. scenarielog.closeFile(), waterDetails.closeFile()
+%
+%	delete aSoil
+
+%   if (theCrops) delete theCrops
+
+%   if (cutPlantProducts) delete cutPlantProducts
+
+\subsection{ecosystem  clone() const}
+Returns a copy of this instance at the same inheritance level.
+Used in connection with 'cloneList'
+
+	$ecosystem   p = new ecosystem(this)$, 
+	return $p$
+
+
+\subsection{fPAR(k,gLAI)}	
+return $1-exp(-k \cdot gLAI)$
+
+
+
+
+\subsection{CO2ConcentrationFactor(  CO2conc)}
+Calculates relative potential evaporation from green leaves.
+Returns 1 at ppmCO2=377
+
+   return $(1.0+0.00029 \cdot 377)-0.00029 \cdot CO2conc$
+
+
+
+
+
+
+\subsection{KillAllCrops()}
+Improve terminate to return products!!!
+Look upon indicator update!!!!
+
+    RootLengthList=NULL
+
+   cloneList<crop>::PS aCropElement
+
+   theCrops.PeekHead(aCropElement)
+
+   while $aCropElement\ne NULL$ do
+ 
+      aCrop = aCropElement.element
+
+      if (aCrop) and
+              (!aCrop.IsBareCrop())
+         
+            if (cutPlantProducts.NumOfNodes()>0)
+        
+ \quad    
+  warn("ecosystem-KillAllCrops:: Cut plant products should not be present")
+            
+decomposable   Root = new decomposable
+          
+  plantItem   Straw = new plantItem
+           
+ aCrop.Terminate(Straw,Root,RootLengthList)
+          
+  if (Straw)
+          
+              \quad  $Straw.Setamount(0.01 \cdot Straw.GetAmount())$  // Convert from g/m2 to t/ha
+            
+ \quad   aSoil.AddDecomposable(Straw)
+          
+    \quad  AddInd(envInd,"32.21 N from straw incorporated into soil","kg N",
+$Straw.GetAllN() \cdot Straw.GetAmount() \cdot area \cdot 1000$)
+            
+  \quad    $C_Amount = Straw.GetAmount() \cdot Straw.GetC_content() \cdot area \cdot 10000$
+            
+\quad    AddInd(envInd,"40.81 C from straw incorporated into soil","kg C",$C\_Amount$)
+ 
+\quad //               AddInd(envInd,"40.99 Plant top res. C incorp. in org. matt.","kg C",$C\_Amount$)
+              
+\quad  delete Straw
+              \quad  Straw = NULL
+           
+            if $Root.GetAmount()>0$ then
+
+            \quad 	 TransferRootMatter(Root,RootLengthList)
+          
+   \quad  \quad  delete Root
+      
+      
+
+
+ \quad  theCrops.Remove(aCropElement)
+   
+
+
+   aCrop=new cropbare("cropbare",0,this,"NoCrop")
+
+   theCrops.InsertLast(aCrop)
+
+   if $theCrops.NumOfNodes()\ne 1$ then
+
+   \quad     err("KillAllCrops - there should only be one (bare) crop here")
+
+
+
+
+
+
+
+
+
+\subsection{SetGrazed(grazingheight,DMGrazed)}
+Sets the crop variables that record the material grazed
+Called by each animal that grazes this ecosystem
+
+     grazableDMThisCrop, grazableNThisCrop
+     grazableDM= grazableN= grazedN=  0
+     
+$grazedC = DMGrazed  \cdot  0.46 $    //Here lies a well buried little fudge!!!
+   
+for( i=0 i<theCrops.NumOfNodes() i++)
+
+    \quad 	crop   aCrop=theCrops.ElemAtNum(i)
+
+	 \quad 	grazableDM += aCrop.GetAvailableDM(0), grazableN += aCrop.GetAvailableN(0)
+  
+	if (grazableDM>0)
+
+      for( i=0 i<theCrops.NumOfNodes() i++)
+    
+ \quad 	   	crop    aCrop=theCrops.ElemAtNum(i)
+
+    \quad       grazableDMThisCrop = aCrop.GetAvailableDM(0)
+
+     \quad      grazableNThisCrop = aCrop.GetAvailableN(0)
+
+      \quad       $grazedDMThisCrop = DMGrazed  \cdot  grazableDMThisCrop/grazableDM$
+  
+\quad        $ aCrop.SetGrazed(grazing\_height, grazedDMThisCrop)$
+     
+\quad      if (grazableDMThisCrop>0) // Added BMP
+  
+\quad     \quad         $grazedN+=grazedDMThisCrop  \cdot  grazableNThisCrop/grazableDMThisCrop$
+
+   
+$totalGrazed_DM+=DMGrazed$
+
+   AddInd(envInd,"31.23 N removed by cattle","kg N",$grazedN \cdot area \cdot 10$)
+   
+AddInd(envInd,"40.23 C removed by cattle","kg C",$grazedC \cdot area \cdot 10$)
+
+
+
+\subsection{Add(ecosystem  addPatch, frac)}
+
+Add's two patches together
+
+   if (soilManure)
+   
+    \quad     $ soilManure= \cdot soilManure \cdot (1-frac)$
+       
+   if (addPatch.soilManure)       
+   $ (addPatch.soilManure)=  (addPatch.soilManure) \cdot frac$
+  
+  
+   if (soilManure  and  addPatch.soilManure)
+       $ soilManure=  soilManure+ \cdot (addPatch.soilManure)$
+ 
+ 
+   if (!soilManure  and  addPatch.soilManure)
+       soilManure=  (addPatch.soilManure)
+  
+  
+   if (cropManure)
+       $ cropManure= cropManure \cdot (1-frac)$
+  
+  
+   if (addPatch.cropManure)
+    $  (addPatch.cropManure)=  (addPatch.cropManure) \cdot (1-frac)$
+  
+  
+   if (cropManure  and  addPatch.cropManure)
+        cropManure=  cropManure+ addPatch.cropManure
+  
+  
+   if (!cropManure  and  addPatch.cropManure)
+        cropManure=  (addPatch.cropManure)
+
+  $ irrigationWater=irrigationWater \cdot (1-frac)$
+
+  $ addPatch.irrigationWater=addPatch.irrigationWater \cdot frac$
+
+   irrigationWater=irrigationWater+addPatch.irrigationWater
+
+   if (theCrops)
+
+   	 \quad  for ( i=0 i<theCrops.NumOfNodes() i++)
+
+	  \quad  \quad    	 theCrops.ElemAtNum(i).Add(addPatch.GetCrops().ElemAtNum(i),frac)
+  
+  
+   if (cutPlantProducts or addPatch.cutPlantProducts)
+
+  \quad 	theMessage.Warning("Patch::Add - there should not be straw on ecosystem")
+  
+  
+   if (cutPlantProducts)
+     
+ \quad   for ( i=0 i<cutPlantProducts.NumOfNodes() i++)
+      
+         \quad  \quad    $(cutPlantProducts.ElemAtNum(i))=  (cutPlantProducts.ElemAtNum(i)) \cdot (1-frac)$
+  
+  
+   if (addPatch.cutPlantProducts)
+
+    \quad 	for ( i=0 i<addPatch.cutPlantProducts.NumOfNodes() i++)
+      
+
+    \quad    \quad     $ addPatch.cutPlantProducts.ElemAtNum(i)= $
+
+\quad  \quad  \quad  $addPatch.cutPlantProducts.ElemAtNum(i) \cdot frac$
+      
+ \quad  \quad  	 cutPlantProducts.InsertLast(addPatch.cutPlantProducts.ElemAtNum(i))
+      
+ 
+  aSoil.Add(addPatch.GetSoil(),frac)
+   
+$waterContent = (1-frac) \cdot waterContent+frac \cdot addPatch.waterContent$
+   
+$snowContent = (1-frac) \cdot snowContent+frac \cdot addPatch.snowContent$
+   
+$tempSnowFall1 = (1-frac) \cdot tempSnowFall1+frac \cdot addPatch.tempSnowFall1$
+  
+ $tempSnowFall2 = (1-frac) \cdot tempSnowFall2+frac \cdot addPatch.tempSnowFall2$
+  
+ $snowMeltRate1 = (1-frac) \cdot snowMeltRate1+frac \cdot addPatch.snowMeltRate1$
+ 
+  $snowMeltRate2 = (1-frac) \cdot snowMeltRate2+frac \cdot addPatch.snowMeltRate2$
+   
+$totalgLAI = (1-frac) \cdot totalgLAI+frac \cdot addPatch.totalgLAI$
+   
+$leachingDepth = (1-frac) \cdot leachingDepth+frac \cdot addPatch.leachingDepth$
+  
+ $balanceDepth = (1-frac) \cdot balanceDepth+frac \cdot addPatch.balanceDepth$
+  
+ $k1 = (1-frac) \cdot k1+frac \cdot addPatch.k1$
+  
+ if (!overlap=addPatch.overlap) then
+   	overlap = false
+ 
+ 
+   if (!dung=addPatch.dung) then
+   	dung = false
+  
+  
+   if (!grazable=addPatch.grazable) then
+   	grazable = false
+  
+  
+   if (!fingerFlow=addPatch.fingerFlow) then
+   	fingerFlow = 0
+ 
+ 
+   WaterBudget.Add(addPatch.WaterBudget,frac)
+  
+   area += addPatch.GetArea()
+ 
+   birthday.SetTime(theTime.GetDay(),theTime.GetMonth(),theTime.GetYear())
+
+
+
+
+
+\subsection{SimpleGraze()}
+Developed by JBE + BMP
+
+   crop  aCrop=NULL
+   
+   if ($theCrops.NumOfNodes()=0$)
+   
+    \quad   err("Graze - attempt to graze on field without plants")
+
+     totalDM= density=0
+
+   cloneList<crop>::PS aCropElement
+
+   theCrops.PeekHead(aCropElement)
+
+   while ($aCropElement\ne NULL$)
+
+    \quad   aCrop = aCropElement.element,      
+      totalDM+=aCrop.GiveDMVegTop()
+      
+     \quad  $density+=aCrop.GetBulkDensity() \cdot aCrop.GiveDMVegTop()$
+      
+    \quad   theCrops.OneStep(aCropElement)
+
+   height=0, frac=10, cuttingHeight = 0.09
+   
+   if (totalDM>0)
+   
+    \quad   $density=\tfrac{density}{totalDM}$  		// Obtain the weighted average
+    
+    \quad   $height=\tfrac{totalDM}{density}  $		// Height in m
+   
+    \quad   $frac=\tfrac{cuttingHeight}{height}$
+   
+   else
+   
+    \quad   density=00
+    
+   if (frac>1) frac=10
+
+   \quad   Nremove = 0            // used to simulate heifers
+
+   theCrops.PeekHead(aCropElement)
+   
+   while $aCropElement\ne NULL$ do
+   
+      plantItem   Hay = new plantItem
+   
+   aCrop = aCropElement.element
+      aCrop.Graze(Hay,frac)
+        Wastefrac = 0.2                    // This is a "harvest" waste, covering a number of different effects. Improve in later versions!
+      if (Hay.GetAmount()>0)
+      
+    \quad      $ plantItem   Waste = new plantItem( \cdot Hay)$
+    
+ \quad     $ Nremove += (Hay.GetAllN() \cdot Hay.GetAmount()).n \cdot (1-Wastefrac)  $    // unit g-N m-2
+   
+\quad     	$Hay.Setamount(Hay.GetAmount() \cdot 0.01 \cdot (1-Wastefrac) \cdot area) $     // Convert t
+      
+\quad     AddInd(envInd,"31.23 N removed by cattle","kg N",$Hay.GetAllN() \cdot Hay.GetAmount() \cdot 1000$)
+      
+\quad     AddInd(envInd,"40.23 C removed by cattle","kg C",$Hay.GetC_content() \cdot Hay.GetAmount() \cdot 1000$)
+
+     
+\quad      Waste.Setamount($Waste.GetAmount() \cdot Wastefrac \cdot 0.01$)         // Convert t/ha
+   
+  \quad      aSoil.AddDecomposable(Waste)
+ 
+  
+\quad  	   AddInd(envInd,"20.53 Plant top res. N incorp. in org. matt.","kg N",$Waste.GetAllN() \cdot Waste.GetAmount() \cdot area \cdot 1000$)
+
+\quad   //		   AddInd(envInd,"40.99 Plant top res. C incorp. in org. matt.","kg C",$Waste.GetAmount() \cdot Waste.GetC_content() \cdot area \cdot 1000$)
+      
+
+
+   	delete Hay
+
+      theCrops.OneStep(aCropElement),    NitrogenLoad = nLoad
+
+   if (NitrogenLoad=0)
+   	$NitrogenLoad = grazingEffiency \cdot Nremove $             // assumes that standard 84% of heifers is excreted
+
+   if (NitrogenLoad>0)
+   
+  \quad	  NH4Loss = 0.15
+  
+\quad			manure cowManure
+
+	  \quad		cowManure.Setname("CATTLE-SLURRY-FRESH")
+     
+   \quad	theProducts.GiveProductInformation(cowManure)
+   
+ \quad	    cowManure.Setamount($area \cdot \tfrac{NitrogenLoad}{cowManure.GetAllN().n/100}$)                          // Convert g/m2 to t
+ 
+   \quad	    theProducts.SubtractProduct(cowManure)
+
+     \quad	   $nitrogen LostNH4 = cowManure.GetNH4_content() \cdot cowManure.GetAmount() \cdot NH4Loss  $                                      // assumes a loss of 15%
+     
+ \quad	 $ cowManure.SetNH4_content(cowManure.GetNH4_content() \cdot (1-NH4Loss))$
+
+      \quad	  AddInd(envInd,"31.46 Ammonia-N loss during grazing","kg N",$LostNH4 \cdot 1000$)
+      
+\quad	  AddInd(envInd,"31.09 Nitrogen from grazing animals","kg N",
+                             $ cowManure.GetAllN() \cdot cowManure.GetAmount() \cdot 1000.0+LostNH4 \cdot 1000$)
+    
+  \quad	 AddInd(envInd,"41.10 C from grazing animals","kg C",
+                              $cowManure.GetC_content() \cdot cowManure.GetAmount() \cdot 1000$)
+   
+  \quad	   AddInd(economicIndicator,"10.21 Manure spread on field","t",cowManure.GetAmount())
+
+      \quad	  decomposable d=(decomposable) cowManure
+   
+   \quad	  d.Setamount(d.GetAmount()/area)                                                               // convert back to t/ha
+	 
+ \quad		aSoil.AddDecomposable(d)
+ 
+
+
+
+\subsection{clearGrazingRecords()}	
+
+ $totalGrazed\_DM=0$
+
+   for( i=0 i<theCrops.NumOfNodes() i++)
+	
+	 \quad	 (theCrops.ElemAtNum(i)).ClearTemporaryVariables()
+
+
+\subsection{Initialise(char soilFileName,theIndex,anArea)}	
+
+Index = theIndex
+
+  	aSoil.Initialize(soilFileName),  balanceDepth=aSoil.GetMaxDepth()
+   
+   area = anArea
+   
+   StartBudget()
+
+
+\subsection{SetirrigationWater(water  aWater)
+}	irrigationWater=  aWater
+
+   if fingerFlow=1 then
+         irrigationWater.Setamount($\tfrac{3}{2} \cdot irrigationWater.GetAmount()$)
+				
+// This part of the field receives an excess of water
+  
+ if fingerFlow=2 then
+         irrigationWater.Setamount(0)
+				
+// This part of the field receives no water
+
+
+
+
+\subsection{Sow(char   cropID,   SeedDensDryMatt,  RelativeDensity,  NitrogenInSeed,   CarbonInSeed)
+}
+//NJH May 2009, cropName allows variety to be passed via seed name for specific operations
+
+   crop   aCrop=NULL
+
+   if ((theCrops.NumOfNodes()+1)>MaxPlants)
+  
+      \quad  //cout << "Field " << Owner.GetIndex() << endl
+
+     \quad   err("Sow - Too many crops planted")
+ 
+   cloneList<crop>::PS aCropElement
+
+   theCrops.PeekHead(aCropElement)
+
+   while $aCropElement\ne NULL$ do
+    // Remove all bare "crops"
+
+   \quad     aCrop = aCropElement.element
+
+ \quad       if (aCrop.IsBareCrop() or aCrop.GetTerminated())
+
+   \quad  \quad then       theCrops.Remove(aCropElement)
+
+    \quad   \quad    else
+      theCrops.OneStep(aCropElement)
+   
+
+
+	aCrop = AllocateCrop(cropID)  
+   //changed NJH May 2009 to allow seed name to determine crop variety
+	
+ aCrop.Sow(SeedDensDryMatt,RelativeDensity,NitrogenInSeed)
+	
+theCrops.InsertLast(aCrop)
+
+\#ifdef NITROSCAPE
+
+       $ N=NitrogenInSeed \cdot area  \cdot  100$
+     
+ AddInd(envInd,"31.03 N from seed","kg N",N)
+      
+AddInd(envInd,"40.03 C from seed","kg C",$CarbonInSeed \cdot area \cdot 10$)
+
+\#endif
+
+
+
+
+\subsection{Gathering(harvestFields   hrv)}
+   if (cutPlantProducts.NumOfNodes()>0)
+   {
+      for ( i=0 i<cutPlantProducts.NumOfNodes() i++)  //cutPlantProducts in tonnes/ha
+      {
+
+//         plantItem   aCutProduct = new plantItem(cutPlantProducts.ElemAtNum(i))
+     
+    if (i>3)
+      
+      err("Gathering - too many harvested products")
+       
+  $plantItem \cdot  aCutProduct = cutPlantProducts.ElemAtNum(i)$
+        
+   $Noutput = aCutProduct.GetAllN().n \cdot aCutProduct.GetAmount() \cdot area \cdot 10000$
+       
+  $  Coutput = aCutProduct.GetAmount() \cdot aCutProduct.GetC_content() \cdot area \cdot 10000$
+       
+  aCutProduct.Setamount($aCutProduct.GetAmount() \cdot area$)
+        
+ if (hrv.GetOperationId()=GatheringBales)
+         {
+      
+      AddInd(envInd,"31.21 N removed in straw","kg N",Noutput)
+     
+       AddInd(envInd,"40.21 C removed in straw","kg C",Coutput)
+
+\#ifdef TUPLE
+           
+ if (((field  )Owner).GetWriteTuples())
+  
+  \quad            ((field  )Owner).AddTuple(theTime.GetString2(),-Noutput
+
+,$aCutProduct.GetAmount() \cdot 10.0$,"HARVEST","$SECONDARY\_PRODUCT$",0)
+
+\#endif
+           
+ if i=0  // and !hrv.GetStrawProduct() //NICK CHECK DETTE (MEL)!!
+            
+          \quad  then    hrv.SetStrawProduct(aCutProduct)
+            
+          \quad     else   hrv.AddStrawProduct(aCutProduct)
+        
+       
+  if (hrv.GetOperationId()=GatheringCereal)
+      
+       
+     if (i=0)   //is grain
+           
+
+         		 AddInd(envInd,"31.20 N removed in grain","kg N",Noutput)
+              
+ AddInd(envInd,"40.20 C removed in grain","kg C",Coutput)
+
+\#ifdef TUPLE
+             
+  if (((field)Owner).GetWriteTuples())
+                
+  ((field)Owner).AddTuple(theTime.GetString2(),-Noutput,
+
+$aCutProduct.GetAmount() \cdot 10.0$,"HARVEST","$MAIN\_PRODUCT$",0)
+
+\#endif
+             
+  hrv.SetMainProduct(aCutProduct)
+            
+          
+  if (i=1) then  //is straw
+           
+            
+   AddInd(envInd,"31.21 N removed in straw","kg N",Noutput)
+              
+ AddInd(envInd,"40.21 C removed in straw","kg C",Coutput)
+
+\#ifdef TUPLE
+             
+  if (((field  )Owner).GetWriteTuples())
+                
+  ((field )Owner).AddTuple(theTime.GetString2(),-Noutput,$aCutProduct.GetAmount() \cdot 10.0$
+
+,"HARVEST","$SECONDARY\_PRODUCT$",0)
+
+\#endif
+             
+  hrv.SetStrawProduct(aCutProduct)
+           
+
+           
+ if (i>1)   //is error
+               err("Patch:: HandleOp - too many products in GatheringCereal")
+     
+   
+       
+  if (hrv.GetOperationId()=GatheringSilage or hrv.GetOperationId()=GatheringHay)
+        
+       
+     AddInd(envInd,"31.22 N removed in cut","kg N",Noutput)
+         
+   AddInd(envInd,"40.22 C removed in cut","kg C",Coutput)
+
+\#ifdef TUPLE
+            
+if (((field )Owner).GetWriteTuples())
+              
+ ((field) Owner).AddTuple(theTime.GetString2(),-Noutput
+
+,$aCutProduct.GetAmount() \cdot 10.0$,"HARVEST","FORAGE/SILAGE",0)
+
+\#endif
+            if (hrv.GetOperationId()=GatheringSilage)
+           
+    aCutProduct.SetCode(1)
+            
+if (hrv.GetOperationId()=GatheringHay)
+          
+     aCutProduct.SetCode(2)
+      
+      hrv.SetForageProduct(aCutProduct,i)
+     
+   else
+     
+ theMessage.Warning("patch::HandleOperation - Straw already gathered.")
+   cutPlantProducts.Reset()
+
+
+\subsection{Tillage(soilTreatFields   FOP)}
+
+	if (FOP.GetOperationId()=Ploughing)
+
+   	
+KillAllCrops()
+	
+	soilTreatFields   Tillage=(soilTreatFields)FOP
+        Depth = 0
+   
+   $Depth=10.0 \cdot Tillage.GetDepth()$
+     
+ if $Depth\le 100$ or $ Depth>500$ then        
+ Depth = 250 // Ploughing to 250 mm
+   	
+  Incorporation = 0.95 // Standard incorporated 95%
+      
+Tillage.GetfracIncorporated()
+     
+ if $Incorporation\le 0.001$ then      
+     Incorporation = 0.95        
+  // Standard incorporated 95\%
+      
+Incorporation=10 // Otherwise error - correct later !!!
+	
+  \quad	  aSoil.Incorporate(Depth,Incorporation,true,"Ploughing")
+   
+   if FOP.GetOperationId()=StubHarrowing then
+   
+   	// KillAllCrops()  // BMP added 17.11.2006 - and removed 20.11.2006, should be superflouos now!!!
+   	
+soilTreatFields   Tillage=(soilTreatFields )FOP
+       
+ Depth = 80    // harrowing to 80 mm
+     
+ $Depth = 10.0 \cdot Tillage.GetDepth()$
+    
+  if $Depth\le 10$ or $Depth>200$ then
+         Depth = 80  // harrowing to 80 mm
+         
+   Incorporation = 0.95  // Standard incorporated 95\%
+    
+    Incorporation = Tillage.GetfracIncorporated()
+   
+   if $Incorporation\le 0.001$ then
+       Incorporation = 0.95        // Standard incorporated 95%
+  
+   Incorporation=10  // Otherwise error - correct later !!!
+     
+ aSoil.Incorporate(Depth,Incorporation,true,"Harrowing")
+   
+
+
+\subsection{SetRUEfactor(aVal)}	
+theCrops.ElemAtNum(0).SetRUEfactor(aVal)
+
+\subsection{CloverPercentage()}
+Calculate how Clover percentage of DM compared with all DM
+
+	 TotalDM = CloverDM = 0
+	 
+   for ( i=0 i<theCrops.NumOfNodes() i++)
+   
+    \quad 	  DM = theCrops.ElemAtNum(i).GiveDMVegTop()
+
+     \quad   if (theCrops.ElemAtNum(i).GetCropName()="Clover")
+     
+ \quad  \quad  	CloverDM += DM
+     
+  \quad  TotalDM += DM
+
+
+	frac = 0
+	
+  if (TotalDM>0) 
+  
+    \quad frac = CloverDM/TotalDM
+
+	return frac
+
+
+\subsection{outputCropDetails(fstream  afile)}
+    cropNumber = theCrops.NumOfNodes()
+   
+  afile << "tab" << cropNumber
+ 
+    afile << "tab" << CloverPercentage()
+
+   if (theCrops)
+
+\quad
+      cloneList<crop>::PS aCropElement
+     
+\quad theCrops.PeekHead(aCropElement)
+
+   \quad   for ( i=0 i<theCrops.NumOfNodes() i++)
+    
+\quad\quad     crop    aCrop = theCrops.ElemAtNum(i)
+    
+ \quad\quad    aCrop.StreamKeyData(afile)
+
+
+
+
+
+\subsection{Volatilise(  duration, bool kill)}
+\citep{sommer2000modelling}
+Volatilise ammonia (only called if manure is present)
+
+NJH Aug 2007 - Relic code but contains some features that we might wish to use later
+
+   return  // Code presently not used in order to get
+   
+    movin' !!!!!!!!!!!!!!!!!!!!!!!!!
+
+	$  actualNH4\_loss=0$
+	
+  temperature, $min\_temp$, $max\_temp$, evap, infiltration, ppt, radiation,
+                     windspeed, relHumidity, resistance, ra, rb, rCrop
+  
+ if (soilManure)
+  
+   	  $Nin = soilManure.GetAllN().n \cdot soilManure.GetAmount() \cdot 10000$ 
+
+// kg N/ha as soilManure is in t/ha
+     
+$ manure  infiltManure = (manure  ) soilManure.clone()$      
+      // Below climate module is called, but not "ready"!
+      
+      theClimate.GetClimate(temperature, $min\_temp$, $max\_temp$, ppt, radiation, evap, windspeed, relHumidity)
+      
+      infiltration = 0
+      
+      ppt /=240  //convert to hourly rate
+    
+       evap/=240  // calculate infitration rate - this is a fudge!
+      
+        currentWater = aSoil.GetAvailCapacity(aSoil.GetLayerStartDepth(0),aSoil.GetLayerStartDepth(1))
+        
+        maxWater = aSoil.GetFieldCapacity(aSoil.GetLayerStartDepth(0),aSoil.GetLayerStartDepth(1))
+        
+        diff = maxWater-currentWater
+     
+     $ infiltration = diff  \cdot  soilManure.GiveInfiltrationReduction()/240$
+
+        resistance = 0
+        
+      if windspeed<0.0001 then windspeed=0.0001
+     
+     $ rb=6.2 \cdot pow(windspeed,-0.67)$ \citep[Eq. 16]{sommer2000modelling}
+
+     
+   l=0.071
+    
+$  ra=\tfrac{log(\tfrac{l}{0.01})}{0.4 \cdot windspeed}$ 
+// - or -   Aerodynamic res.
+     
+ rCrop=0
+    
+ resistance=rb+ra+rCrop            
+  //rC is the crusts resistance to volatization
+
+ // actualNH4loss is in tonnes per sq metre, as soilManure is in tonnes per ha
+    
+   waterEvap = 0
+     
+$ actualNH4\_loss=soilManure.VolatAmmonia(temperature, evap, infiltration, ppt, 10000, $
+
+$resistance, duration, waterEvap, infiltManure)$
+
+        $remainingTAN = soilManure.GetAmount() \cdot soilManure.GetNH4_content().n \cdot 10000$
+        
+        //amount remaining in kg per ha
+        
+        $remainTotN=(soilManure.GetAmount() \cdot soilManure.GetAllN().n + infiltManure.GetAmount()$ 
+
+$\cdot infiltManure.GetAllN().n) \cdot 10000$  //in kg per ha
+      
+  $test = Nin-(remainTotN+actualNH4_loss \cdot 1000)$
+  
+    if fabs(test)>0.1 then
+            err("Volatilise - balance error")
+
+    // If manure contains little TAN then absorb remainder of soilManure. Also absorb if soilManure killed (eg by ploughing)
+    
+  if $remainingTAN<1$ or $kill$ then
+      
+      \quad 	 infiltManure +   soilManure
+    
+      \quad    delete soilManure
+    
+      \quad    soilManure = NULL
+      
+
+      if (infiltManure.GetAmount()>0)
+      
+       \quad   $decomposable d=(decomposable)  \cdot infiltManure$
+       
+        \quad  aSoil.AddDecomposable(d)
+        
+         \quad aSoil.Incorporate(0.01,0.02)  // From NJH @@@ Seems a very small depth !!!???
+      
+   \quad delete infiltManure
+      
+   
+   
+   AddInd(envInd,"31.45 Ammonia-N loss by spreading",
+"kg N",$actualNH4_loss  \cdot  area  \cdot 1000$)
+
+
+
+\subsection{UpdateInterception(  surplus,
+  temperature,  globalRadiation, ePotGL,
+ ePotDeadLeaves, ePotSoil,  interceptCapacity,  greenEvap)}
+																 Perform addition of water and evaporation from interception layer,
+
+\begin{tabular}{ll}
+surplus  & Water to be added to interception layer and resulting drainage from the layer [mm] \\
+temperature  & Mean air temperature [\textdegree C] \\
+globalRadiation & Global solar radiation [$MJ/m^2$] \\
+ePotGL & Potential evapotranspiration from green leaves [mm] \\
+ePotDeadLeaves  & Potential evapotranspiration from dead leaves [mm] \\
+ePotSoil          & Potential evapotranspiration from soil [mm] \\
+interCeptCapacity & Interception capacity [mm]	
+\end{tabular}
+														 
+alculate snow accumulation and melting
+
+   if $surplus>0$ then
+   
+     \quad     incSnow = 0
+   
+      \quad  if (temperature<tempSnowFall1)
+
+     \quad      incSnow =   surplus
+
+     \quad   else
+
+      \quad     if (temperature<tempSnowFall2)
+  	
+\quad     \quad        incSnow = 
+$surplus \cdot \tfrac{tempSnowFall2-temperature}{tempSnowFall2-tempSnowFall1}$
+   
+  \quad   snowContent += incSnow
+      
+ \quad  surplus -= incSnow
+   
+   
+   
+   
+   if $snowContent>0$ then
+   
+     \quad     t = max(temperature,0)
+     
+       \quad   snowMelt =
+$min(snowContent,max(snowMeltRate1 \cdot t+snowMeltRate2        
+       \cdot globalRadiation,0))$
+    
+     \quad   snowContent -= snowMelt
+      
+      \quad   surplus += snowMelt
+   
+   
+   
+   
+   waterContent += (surplus)   
+   // Calculate evaporation
+
+     ePot =  ePotGL+ePotDeadLeaves+(  ePotSoil)
+
+     snowEvap = evap = 0
+
+   if $ePot>0$ then
+   
+      snowEvap = min(snowContent,ePot)
+
+      snowContent -= snowEvap
+
+      WaterBudget.AddOutput(snowEvap)
+
+      AddInd(envInd,"70.12 Evapotranspiration","cubic metre",
+$snowEvap \cdot area \cdot 10$)
+
+      evap = $min(waterContent,( ePotGL+ePotDeadLeaves)
+ \cdot (1-(\tfrac{snowEvap}{ePot})))$
+     
+  ePotSoil =  $ePotSoil \cdot (1-\tfrac{snowEvap}{ePot})$
+      
+  ePotGL = $ ePotGL \cdot (1-\tfrac{snowEvap}{ePot})$
+
+      if $evap>0$ then
+     
+	\quad       $greenEvap = 
+evap \cdot \tfrac{ ePotGL}{ePotGL+ePotDeadLeaves}$
+     
+  \quad    waterContent -= evap
+      
+ \quad      ePotGL-=  greenEvap
+      
+   \quad  WaterBudget.AddOutput(evap)
+      
+ \quad    AddInd(envInd,"70.12 Evapotranspiration",
+"cubic metre",$evap \cdot area \cdot 10$)
+      
+   
+  
+ if (globalSettings.DetailsData.getWaterDetails()=true)
+
+  \quad	   waterDetails.WriteWithTab(snowEvap+evap)
+
+
+
+   surplus=0
+
+   if (waterContent>interceptCapacity)
+
+   \quad    surplus = waterContent-interceptCapacity
+
+  \quad    waterContent = interceptCapacity
+
+
+
+\subsection{TransferRootMatter(decomposable  DeadRoot,  RootLengthList)}
+   DeadRoot.Setamount($0.01 \cdot DeadRoot.GetAmount()$)     
+    // Conversion from g/m2 to t/ha
+    
+   AddInd(envInd,
+"32.20 N from roots incorporated into soil","kg N",
+
+($DeadRoot.GetorgN_content()+DeadRoot.GetNO3_content()+
+DeadRoot.GetNH4_content()) \cdot DeadRoot.GetAmount() \cdot area \cdot 1000$)
+   
+	 AddInd(envInd,
+"40.80 C from roots incorporated into soil","kg C",
+
+$DeadRoot.GetAmount() \cdot DeadRoot.GetC_content() \cdot area \cdot 1000$)
+
+   aSoil.AddDecomposable(DeadRoot,RootLengthList)
+
+
+
+\section{fracEPot...}
+
+fracEPotToSoil(gLAI,yLAI) = 
+    $max(0,1-fracEPotToGL(gLAI)-fracEPotToYL(gLAI,yLAI))$
+
+fracEPotToGL(gLAI) =  $1-exp(-k1 \cdot gLAI)$
+
+fracEPotToYL(gLAI,yLAI) = 
+$max(0,1-exp(-k1 \cdot (gLAI+yLAI))-fracEPotToGL(gLAI))$
+
+
+
+
+\section{Nitrogen}
+
+\subsection{NitrogenInSoil()}	
+Returns the nitrogen amount in the soil (kg/ha)
+     
+  return $aSoil.GetTotalNitrogen().n \cdot area \cdot 10$
+  
+   
+
+\subsection{NitrogenInCrops()}	
+Returns the nitrogen amount in the crops (kg/ha)
+
+     ret=0
+
+   if theCrops then
+    
+  cloneList<crop>::PS aCropElement
+   	
+theCrops.PeekHead(aCropElement)
+	  
+  cropNumber = theCrops.NumOfNodes()
+  
+   	for ( i=0 i<cropNumber i++)
+	  
+   	
+\quad	crop    aCrop = theCrops.ElemAtNum(i)
+      
+\quad	if $aCrop.GetCropName()\ne "NoCrop"$ then
+            ret += aCrop.GiveTotalNitrogen().n
+      
+  
+  return $ ret \cdot area \cdot 10 $
+  
+
+
+
+\section{Getter}
+
+\subsection{bool GetReadyForHarvestOrLater()}
+Demands that the first crop is the main crop
+
+   if theCrops.NumOfNodes()>0
+
+    \quad   return (theCrops.ElemAtNum(0).ReadyForHarvest() 
+
+ \quad \quad or theCrops.ElemAtNum(0).GetTerminated())
+  
+warn("ReadyForHarvestOrLater - function called but no crops are defined. May hamper the rest of the simulation.")
+  
+ return false
+
+
+\subsection{bool GetIrrigationDemand()}
+Demands that the first crop is the main crop
+
+   if $theCrops.NumOfNodes()>0$ then
+   
+   \quad   return theCrops.ElemAtNum(0).IrrigationDemand()
+ 
+   return false
+
+
+\subsection{GetAbovegroundCropN()}
+Get all above ground N, including N in manure, crops etc in kg
+
+	  amountN = 0
+
+   if theCrops then
+   
+     \quad	for ( i=0 i<theCrops.NumOfNodes() i++)
+      
+      \quad  \quad     crop  aCrop = theCrops.ElemAtNum(i)
+      
+        \quad  \quad   amountN += aCrop.NitrogenInVegTop().n
+      
+   
+   return $amountN \cdot 10.0 \cdot area$
+
+
+\subsection{GetMaxCropHeight()}
+	Get max crop height (m)
+
+	  maxHeight = 0
+
+   if theCrops then
+   
+   \quad  	for ( i=0 i<theCrops.NumOfNodes() i++)
+   
+    \quad   \quad      crop    aCrop = theCrops.ElemAtNum(i)
+   
+\quad   \quad        ht = aCrop.GiveCropHeight()
+    
+\quad  \quad       if $ht>maxHeight$ then
+             maxHeight=ht
+    
+   
+   return maxHeight
+
+
+
+
+\subsection{GetFeedResource(feedItem myresource, grazingheight, animalType)}
+Called by the animal object to find out what is available
+Returns quality and tonnes fresh weight per ha
+
+//     $grazing_height= bite_depth_factor  \cdot  GetMaxCropHeight()$
+ 
+   //calculate the total DM and N etc available within the ecosystem
+   bool gotCrop = false
+  
+ for( i=0 i<theCrops.NumOfNodes() i++)
+     
+ $feedItem  aCropResource =$
+
+$ theCrops.ElemAtNum(i).GetAvailability(grazing\_height, animalType)$
+     
+ // load the information into the grazing resource
+     
+ if $aCropResource\ne NULL$ then
+      
+  
+ \quad       $ \cdot my_resource +  \cdot aCropResource$
+  
+  \quad      delete aCropResource
+   
+ \quad      gotCrop = true
+      
+   
+
+   if not gotCrop then
+
+    \quad       err("ecosystem:GetFeedResource - no grazable crop found")
+    
+ $FW = my\_resource.GetAmount()/1000 $ // fresh weight, converted to tonnes per ha
+   
+$my\_resource.Setamount(FW)$  // Is this correctly calculated ???!!!
+
+
+
+ \subsection{GetStandingDMdensity()}
+
+Get mass of dry matter of ecosystem ($g/m^2$)
+	  
+	  mass = 0
+	  
+   if theCrops then
+   
+  \quad 	for ( i=0 i<theCrops.NumOfNodes() i++)
+   	
+   \quad  \quad     crop  aCrop = theCrops.ElemAtNum(i)
+         
+    \quad \quad      mass += aCrop.GiveStandingDM()
+
+   return mass
+
+
+\subsection{GetGrazedDM()}
+	Get amount grazed from this ecosystem during the current period (kg)
+	
+     grazedDM=  0
+     
+   for( i=0 i<theCrops.NumOfNodes() i++)
+   
+	 \quad	  grazedDM += (theCrops.ElemAtNum(i)).GetGrazedDM()
+	 
+	return $grazedDM  \cdot  area  \cdot  100$
+
+
+\subsection{GetDailyDMProduction()}
+Returns growth in kg DM
+
+	  ret\_val=0
+	  
+   for( i=0 i<theCrops.NumOfNodes() i++)
+
+    \quad	  aCrop = theCrops.ElemAtNum(i)
+    
+   \quad   $ ret\_val+=aCrop.GetDailyDMProduction()$
+
+   $ret\_val  =ret\_val \cdot area  \cdot  100$
+   
+   return ret\_val
+
+\subsection{GetPotentialGrowthRate(  radiation,   temperature)}
+Returns mean potential growth in kg DM/ha/day
+Is fairly crude - assumes total interception + even distribution between crops
+
+	$  ret\_val=0$
+	  
+    numCrops=theCrops.NumOfNodes()
+    
+   for( i=0 i<numCrops i++)
+   
+   	 \quad $ crop    aCrop = theCrops.ElemAtNum(i)$
+    
+     \quad  $ret\_val+=aCrop.PotentialDM(radiation, temperature)  \cdot  100$
+
+   $ret\_val/=numCrops$
+   
+   return $ret\_val$
+
+
+\section{Harvest}
+
+\subsection{HarvestOperations(harvestFields   hrv)
+}	switch (hrv.GetOperationId())
+   
+	case  CombineHarvesting:     
+  CombineHarvestingShred:
+       BeetHarvesting:
+     	BeetTopHarvesting:
+       BeetTopChopping: HarvestOp(hrv)
+			      
+     ForageHarvesting:
+    Mowing:
+       CutSetAside:
+      			ForageHarvestOp(hrv)
+      			
+      GatheringBales:
+      GatheringHay:
+      GatheringSilage:
+     GatheringCereal:
+      			Gathering(hrv)
+      			break
+      default:
+      err("HarvestOperations - Operation not found")
+
+
+
+\subsection{HarvestOp(harvestFields    hrv)}
+
+    aCrop=NULL
+
+   bool operationPerformed=false
+     
+      RootLengthList=NULL
+   
+   if cutPlantProducts.NumOfNodes()>0 then       // Check if straw has not been gathered or ploughed
+
+  \quad   warn("patch::HandleOperation - There should not be straw on field at this point.")
+
+    j=0
+
+   for ( i=0 i<theCrops.NumOfNodes() i++)
+   
+      aCrop = theCrops.ElemAtNum(i)
+
+      $const char   presCrop = aCrop.PlantItemName.c\_str()$
+
+      if (!(aCrop.IsUndersown()  and  aCrop.GetTerminated()) 
+
+or hrv.GetOperationId()=BeetHarvesting
+     
+           fracStrawLeft   = theControlParameters.GetStrawLeft()  
+// frac of straw biomass left by combine harvesting
+         
+  fracStorageLeft = theControlParameters.GetHarvestWaste()  
+
+// Covers waste by harvest and higher N-content in residues of reproductional plant parts
+      
+   
+
+if $fracStorageLeft>0.25$ then
+           warn("patch::patch - abnormal high waste by harvest")
+      
+   if theControlParameters.GetOrganicFarm() then
+            fracStorageLeft = 0.25
+       
+  if $hrv.GetfracStrawHarvested()>0$ then
+            fracStrawLeft = 1-hrv.GetfracStrawHarvested()
+        
+ if $hrv.GetfracGrainHarvested()>0$ then
+            fracStorageLeft = 1-hrv.GetfracGrainHarvested()
+
+         plantItem   Storage = new plantItem
+         
+plantItem   Straw = new plantItem
+        
+ decomposable   Root = new decomposable
+
+         // Harvest crop
+        
+   MaxRootDepth = aCrop.GiveRootDepth()
+    
+             AddInd(economicIndicator,"17.04 Max root depth","m",MaxRootDepth)
+
+      
+   aCrop.Harvest(Storage,Straw)
+        
+ operationPerformed=true
+
+         scenarielog.WriteWithTabS(aCrop.CropName)
+      
+   scenarielog.WriteWithTabS(theTime.GetString2())
+     
+    if $Storage.GetAmount()>0$ then
+
+                	 scenarielog.WriteWithTab($Storage.GetAmount() \cdot (1-fracStorageLeft) \cdot Storage.GetDM()$)   
+ //MEL 2009: These amounts are in DM
+               
+ else
+               	 	
+scenarielog.WriteWithTab(0)
+       
+         if $Straw.GetAmount() > 0$ then
+               	 	
+ scenarielog.WriteWithTab($Straw.GetAmount() \cdot (1-fracStrawLeft) \cdot Straw.GetDM()$)          //MEL 2009: These amounts are in DM
+               
+ else scenarielog.WriteWithTab(0)
+         
+       if $Storage.GetTotalN() > 0$ then
+               	 	
+ scenarielog.WriteWithTab($(Storage.GetTotalN() \cdot Storage.GetAmount() \cdot (1-fracStorageLeft)).n$)
+              
+  else               	 	
+scenarielog.WriteWithTab(0)
+       
+         if $Straw.GetAllN() > 0$ then
+               	 	
+ scenarielog.WriteWithTab($(Straw.GetAllN() \cdot Straw.GetAmount() \cdot (1-fracStrawLeft)).n$)
+                
+else               	 	
+scenarielog.WriteWithTab(0)
+      
+   scenarielog.WriteNewLine()
+      
+   $nitrogen StorageN = Storage.GetTotalN() \cdot Storage.GetAmount()$
+
+       (amounts in patch.cpp are in g/sq metre. Multiply by 10 to get kg, divide by 100 to get tonnes)
+
+          $ N_removed=StorageN.n \cdot (1-fracStorageLeft) \cdot area \cdot 100$
+      
+   AddInd(economicIndicator,"17.02 Grain yield at economic indicator date","t"
+
+,$Storage.GetAmount() \cdot (1-fracStorageLeft) \cdot \frac{area}{100} $)
+       
+  AddInd(economicIndicator,"17.03 Straw yield at economic indicator date","t"
+
+,$Straw.GetAmount() \cdot (1-fracStrawLeft) \cdot \frac{area}{100} $)
+       
+  AddInd(envInd,"31.20 N removed in grain","kg N",$N\_removed$) ;
+        
+ AddInd(envInd,"40.20 C removed in grain","kg C"
+
+,$Storage.GetAmount() \cdot Storage.GetC_content() \cdot (1-fracStorageLeft) \cdot area \cdot 10$)
+      
+   AddInd(envInd,"38.10 N15 harvest in grain","kg N"
+
+,$StorageN.n15 \cdot (1-fracStorageLeft) \cdot area \cdot 10$)
+        
+ AddInd(envInd,"38.11 Total N15 harvest","kg N"
+
+,$StorageN.n15 \cdot (1-fracStorageLeft) \cdot area \cdot 10$)
+			
+ AddInd(envInd,"39.10 Grain yield at environmental indicator date","t"
+
+,$Storage.GetAmount() \cdot (1-fracStorageLeft) \cdot \frac{area}{100} $)
+			
+ AddInd(envInd,"39.11 Straw yield at environmental indicator date","t"
+
+,$Straw.GetAmount() \cdot (1-fracStrawLeft) \cdot \frac{area}{100} $)
+			
+if $i=0$ then
+			      			      		
+bsTime aDate
+			   			
+aDate = aCrop.GiveDateOfEmergence(),			      		
+ DOY = aDate.GetDayInYear()
+			      		
+ AddInd(envInd,	 "39.20 Date of emergence of main crop","day of year", (DOY))
+			   			
+aDate = aCrop.GiveDateOfFlowering(),			      		
+DOY = aDate.GetDayInYear()
+							
+ AddInd(envInd,	 "39.21 Date of flowering of main crop","day of year", (DOY))
+			   			
+aDate = aCrop.GiveDateOfEndGrainFill(),			      		
+DOY = aDate.GetDayInYear()
+							
+ AddInd(envInd,	 "39.22 Date of end of grain filling of main crop","day of year", (DOY))
+						
+	aDate = aCrop.GiveDateOfRipeness(),			      		
+DOY = aDate.GetDayInYear()
+			         	 
+AddInd(envInd,	 "39.23 Date of ripeness of main crop","day of year", (DOY))
+			      	
+
+\#ifdef TUPLE
+        
+ if ((field)Owner).GetWriteTuples() then
+          
+  ((field)Owner).AddTuple(theTime.GetString2(),$-N\_removed$,$Storage.GetAmount() \cdot area \cdot 0.1$,"HARVEST","$MAIN\_PRODUCT$",0)
+
+\#endif
+       
+  AddYieldToIndicators(presCrop,$(1-fracStorageLeft) \cdot area \cdot \tfrac{Storage.GetAmount()}{100},StorageN.n \cdot (1-fracStorageLeft) \cdot area \cdot 10$)
+        
+ AddHarvestedAreaToIndicators(presCrop,area)
+
+         // Harvest waste
+         
+$plantItem  \cdot  StorageWaste = new plantItem(Storage)$
+       
+  Storage.Setamount($Storage.GetAmount() \cdot (1-fracStorageLeft)$)
+      
+   StorageWaste.Setamount($StorageWaste.GetAmount() \cdot fracStorageLeft$)
+       
+  AddInd(envInd,"32.23 N from storage incorporated into soil","kg N"
+
+,$StorageWaste.GetAllN() \cdot StorageWaste.GetAmount() \cdot area \cdot 10$)
+       
+  AddInd(envInd,"40.83 C from storage incorporated into soil","kg C"
+
+,$StorageWaste.GetAmount() \cdot StorageWaste.GetC_content() \cdot area \cdot 10$)
+        
+ StorageWaste.Setamount($0.01 \cdot StorageWaste.GetAmount()$)  //convert to t/ha
+       
+  aSoil.AddDecomposable(StorageWaste)
+        
+ delete StorageWaste
+
+ plantItem   StrawWaste = new plantItem(Straw)
+        
+ Straw.Setamount($Straw.GetAmount() \cdot (1-fracStrawLeft)$)
+        
+ StrawWaste.Setamount($StrawWaste.GetAmount() \cdot fracStrawLeft$)
+         
+AddInd(envInd,"32.21 N from straw incorporated into soil","kg N"
+
+,$StrawWaste.GetAllN() \cdot StrawWaste.GetAmount() \cdot area \cdot 10$)
+      
+   AddInd(envInd,"40.81 C from straw incorporated into soil","kg C"
+
+,$StrawWaste.GetAmount() \cdot StrawWaste.GetC_content() \cdot area \cdot 10$)
+        
+ StrawWaste.Setamount($0.01 \cdot StrawWaste.GetAmount()$)  //convert to t/ha
+        
+ aSoil.AddDecomposable(StrawWaste)
+     
+    delete StrawWaste
+
+         if Storage then
+        
+          
+  \quad Storage.Setamount($Storage.GetAmount() \cdot area \cdot 0.01$)           // Convert to tonnes
+          
+  \quad if j=0 then // and (!hrv.GetMainProduct()))  //NICK CHECK DETTE (MEL)!!
+  
+ \quad \quad             hrv.SetMainProduct(Storage)
+           
+  \quad else
+
+   \quad \quad             hrv.AddMainProduct(Storage)
+
+    \quad \quad         j++
+        
+       
+  else
+        
+   \quad  theMessage.Warning("patch::HandleOperation - Harvested amount should not be zero at this point.")
+
+    \quad      if ((hrv.GetOperationId()=CombineHarvestingShred  or hrv.GetOperationId()=BeetHarvesting))
+        
+       
+    \quad \quad  AddInd(envInd,"32.21 N from straw incorporated into soil","kg N"
+
+,$Straw.GetAllN() \cdot Straw.GetAmount() \cdot area \cdot 10$)
+        
+   \quad \quad    $C_Amount = Straw.GetAmount() \cdot Straw.GetC_content() 
+\cdot area \cdot 100$
+         
+   \quad \quad AddInd(envInd,"40.81 C from straw incorporated into soil","kg C",$C\_Amount$)
+          
+  \quad \quad $Straw.Setamount(0.01 \cdot Straw.GetAmount()) $  //convert to t/ha
+        
+  \quad \quad   aSoil.AddDecomposable(Straw)
+       
+   \quad \quad   delete Straw
+         
+
+
+        
+  \quad else  // Straw is expected to be gathered
+       
+ 
+    \quad \quad  \quad        Straw.Setamount($Straw.GetAmount() \cdot 0.01$)   //convert to tonnes/ha
+    
+\quad \quad   \quad       cutPlantProducts.InsertLast(Straw)
+         
+      
+   if(!aCrop.ContinueGrowth())
+              
+     \quad	              	plantItem   ExtraStraw = new plantItem
+    
+ \quad	              	 aCrop.Terminate(ExtraStraw,Root,RootLengthList)
+      
+  \quad	           	if $ExtraStraw.GetAmount()>0$ then
+      
+   \quad	  \quad	          		warn("Harvest crop not harvested correctly")
+       
+ \quad	           	delete ExtraStraw
+      
+ \quad	            	 TransferRootMatter(Root,RootLengthList)
+      
+  \quad	           	delete Root,        
+          	delete Storage    //NJH March 2009
+              
+     
+      else   
+   	 // frac of undersown crop that is cut by ordinary harvest
+    
+  \quad	     plantItem   Waste = new plantItem()
+    
+ \quad	      aCrop.Cut(Waste,0.25)
+     
+\quad	      Waste.Setamount($Waste.GetAmount() \cdot 0.01$)      // Convert to t/ha
+    
+ \quad	      if $Waste.GetAmount()>0$ then
+         
+   
+ \quad	  \quad	          AddInd(envInd,"32.21 N from straw incorporated into soil","kg N"
+
+,$Waste.GetAllN() \cdot Waste.GetAmount() \cdot area \cdot 1000$)
+        
+\quad	  \quad	      AddInd(envInd,"40.81 C from straw incorporated into soil","kg C"
+
+,$Waste.GetAmount() \cdot Waste.GetC_content() \cdot area \cdot 1000$)
+       
+\quad	  \quad	       aSoil.AddDecomposable(Waste)
+       
+\quad	  \quad	       delete Waste
+         
+      \quad	     aCrop.SetUndersown(false)
+      
+   
+   if $!operationPerformed$ then
+
+      \quad	  err("HarvestOp - no crops present for harvest in harvest operation")
+
+
+
+\subsection{ForageHarvestOp(harvestFields hrv)}
+
+     cuttingHeight= hrv.GetCuttingHeight()
+   
+if $cuttingHeight>0.5$ then
+   
+    \quad	   warn("patch::HandleOp - cutting height in forage harvesting is above 0.5 m, cm input assumed!")
+  
+      \quad	$ cuttingHeight=0.01 \cdot cuttingHeight$
+   
+ 
+  if $GetMaxCropHeight()>0$ then               // This is returned in m
+   
+      crop  c,
+	   j=0
+
+	 // $plantItem  \cdot  straw=cutPlantProducts.ElemAtNum(0)$
+
+	//$straw.GetAllN() \cdot straw.GetAmount()$
+
+      for ( i=0 i<theCrops.NumOfNodes() i++)
+      
+         c = theCrops.ElemAtNum(i)
+
+		   $const char  presCrop = c.PlantItemName.c\_str()$
+
+         if not c.GetTerminated() then
+         
+
+         \quad   plantItem   forage = new plantItem()
+
+         \quad   //used to generate indicator output concerning whole harvested material. Should be deleted before exiting this function
+
+          \quad    Wastefrac = 0
+             // This is a "harvest" waste, covering a number of different effects. Improve in later versions!
+
+      \quad      c.Cut(forage,cuttingHeight)
+          // Cutting height must be given in m
+
+     \quad       if c.ContinueGrowth() then
+
+       \quad\quad         forage.Setamount($forage.GetAmount() \cdot 0.01$)      // Convert to t/ha
+
+            else            
+   // This is not a crop that can be cut more than once
+            
+            	  plantHeight=c.GiveCropHeight()
+           
+ 	if plantHeight>cuttingHeight then
+            	
+            	 \quad	  frac=1-cuttingHeight/plantHeight
+            	 
+\quad	Wastefrac=1-frac
+            	 
+\quad	decomposable  Root = new decomposable
+           
+  \quad		 forage.Setamount($forage.GetAmount() \cdot 0.01$)
+            	
+ \quad	plantItem  ExtraStraw = new plantItem
+            
+ \quad		  
+            	 
+\quad	 c.Terminate(ExtraStraw,Root,RootLengthList)
+            
+ \quad		if ExtraStraw.GetAmount()>0 then
+          
+   \quad \quad			warn("patch::Harvest crop not harvested correctly")
+            
+ \quad		delete ExtraStraw
+            	
+ \quad	 TransferRootMatter(Root,RootLengthList)
+            
+ \quad		delete Root
+            	
+            	else
+            	
+            	 \quad	err("patch::Harvest plantHeight is lower that cuttingHeight")
+            	
+
+           
+         	scenarielog.WriteWithTabS(c.CropName)
+         	
+ scenarielog.WriteWithTabS(theTime.GetString2())
+         	
+scenarielog.WriteWithTab(0)   //no storage DM
+           
+ if forage.GetAmount()>0 then
+        	 		
+  \quad scenarielog.WriteWithTab($forage.GetAmount() \cdot forage.GetDM()$)
+         	
+else
+        	 	
+ \quad	scenarielog.WriteWithTab(0)
+
+            scenarielog.WriteWithTab(0)    //no storage N
+         	
+if forage.GetTotalN() > 0 then
+
+         \quad	 		 scenarielog.WriteWithTab($(forage.GetTotalN() \cdot forage.GetAmount()).n$)
+         	
+else
+        	
+ \quad 		scenarielog.WriteWithTab(0)
+         
+	scenarielog.WriteNewLine()
+
+
+         	if forage.GetAmount()>0 then
+         	
+         	 \quad	plantItem  Waste = new plantItem( forage)
+         	 
+ \quad     forage.Setamount($forage.GetAmount() \cdot (1-Wastefrac)$)
+         	 
+\quad      Waste.Setamount($Waste.GetAmount() \cdot Wastefrac$)
+         	
+ \quad      aSoil.AddDecomposable(Waste)
+         	
+ \quad      AddInd(envInd,"32.21 N from straw incorporated into soil","kg N"
+
+,$Waste.GetAllN() \cdot Waste.GetAmount() \cdot area \cdot 1000$)
+         	
+ \quad      AddInd(envInd,"40.81 C from straw incorporated into soil","kg C"
+
+,$Waste.GetAmount() \cdot Waste.GetC_content() \cdot area \cdot 1000$)
+         	 
+\quad       delete Waste
+         	
+
+
+            if $area\le 0$ then
+              warn("Patch::HandleOp - area shold be above zero")
+
+            if hrv.GetOperationId()=CutSetAside then
+             
+          
+ \quad  	if forage.GetAmount()>0 then
+                
+            \quad        \quad	aSoil.AddDecomposable(forage)
+          
+ \quad       \quad    AddInd(envInd,"32.21 N from straw incorporated into soil","kg N"
+
+,$forage.GetAllN() \cdot forage.GetAmount() \cdot area \cdot 1000$)
+        
+\quad           \quad   AddInd(envInd,"40.81 C from straw incorporated into soil","kg C"
+
+,$forage.GetAmount() \cdot forage.GetC_content() \cdot area \cdot 1000$)
+      
+\quad             \quad  delete forage
+                  
+            
+
+            else
+             // harvest products will be removed either now or later
+         
+  $ nitrogen forageN = forage.GetTotalN() \cdot forage.GetAmount()$
+                  
+ modpresCrop=presCrop
+                
+  modpresCrop.append("WHOLE")
+                  
+AddYieldToIndicators($modpresCrop.c\_str()$,$area \cdot forage.GetAmount(),forageN.n \cdot area \cdot 1000$)
+              
+    AddHarvestedAreaToIndicators(presCrop,area)
+                
+  if hrv.GetOperationId()=ForageHarvesting then
+                  
+               
+   \quad 	 forage.Setamount($forage.GetAmount() \cdot area$)
+                 
+ \quad 	 $ n=forage.GetAllN().n \cdot forage.GetAmount() \cdot 10000$
+                 
+ \quad   AddInd(envInd,"31.22 N removed in cut","kg N",n)
+               
+  \quad    AddInd(envInd,"40.22 C removed in cut","kg C",$forage.GetAmount() \cdot forage.GetC_content() \cdot 1000$)
+            	
+ \quad	 AddInd(envInd,"39.12 Cut at environmental indicator date","t",forage.GetAmount())
+          
+  \#ifdef TUPLE
+                   
+ \quad           if ((field  )Owner).GetWriteTuples() then
+
+      \quad   \quad                              ((field )Owner).AddTuple(theTime.GetString2(),-n
+
+ \quad   \quad  ,$forage.GetAmount() \cdot 10.0$,"HARVEST","FORAGE/SILAGE",0)
+
+            \#endif
+
+                  \quad    if $j>10$ then
+                  
+  \quad  	 err("HarvestGrasslandOp - too many harvested products")
+               
+ \quad       forage .Setamount($forage.GetAmount() \cdot area$)
+               
+ \quad       hrv.SetForageProduct(forage,j)
+              
+  \quad       j++
+             
+ \quad         delete forage
+                  
+                 
+ else  //this is a mowing operation and cut material is left on the soil surface
+                  
+
+                    
+  \quad         cutPlantProducts.InsertLast(forage)
+
+   else
+
+    \quad  warn("patch::HandleOp - crop has zero height at a cutting date")
+
+
+\section{Budget}
+
+\minisec{StartBudget()}
+Initialise budget variables
+
+	aSoil.StartBudget()
+	
+   if theCrops then
+   
+     \quad	for ( i=0 i<theCrops.NumOfNodes() i++)
+     
+	  \quad  \quad   	theCrops.ElemAtNum(i).StartBudget()
+	   	
+   WaterBudget.SetInput(snowContent+waterContent+aSoil.GetWater()+aSoil.GetSurfaceWater())
+
+
+\minisec{bool EndBudget()}
+Check to see if budget is still valid
+
+	bool ret\_val = true
+	
+   
+   if theCrops then
+   
+   \quad  	for ( i=0 i<theCrops.NumOfNodes() i++)
+	
+   \quad  	if !theCrops.ElemAtNum(i).EndBudget(N,DM) then
+         
+   \quad   \quad   ret\_val=false
+ 
+  aSoil.EndBudget(N,WaterRemain)
+   
+if !WaterBudget.Balance(WaterRemain+waterContent+snowContent) then
+   	ret\_val=false
+
+   if not ret\_val then
+      err("EndBudget error")
+   
+return ret\_val
+
+
+
+\section{Indicators}
+
+\subsection{crop   AllocateCrop(char    crop\_id)}
+
+Uses the crop ID  to initiate the correct crop model
+modified NJH May 2009, cropName allows variety to be passed via seed name for specific operations
+
+
+//	Setgrazable(false)
+
+   crop   newCrop=NULL
+   
+   if (crop\_id="W1" or crop\_id="W2") then
+    
+      \quad  newCrop= new cropWwheat("cropWwheat",0,this,"WinterWheat")
+  
+   if (crop\_id="RW") then
+    
+      \quad  newCrop= new cropWrape("cropWrape",0,this,"WinterRape")
+  
+  if (crop\_id="RS") then
+    
+      \quad  newCrop= new cropSrape("cropSrape",0,this,"SpringRape")
+   
+   if (crop\_id="B1" or crop\_id="B2") then
+    
+      \quad  newCrop= new cropSbarley("cropSbarley",0,this,"SpringBarley")
+   
+   if (crop\_id="F1" or crop\_id="G1" or crop\_id="GR" or crop\_id="G4") // or crop\_id="C1")   NJH removed this Nov 2007
+  
+   
+\quad     newCrop= new cropRyegrass("cropRyegrass",0,this,"Ryegrass")
+    
+\quad    if (theCrops.NumOfNodes()>0)
+    
+\quad  \quad   		newCrop.SetUndersown(true)
+   
+ \quad    else
+    
+ \quad  \quad      newCrop.SetUndersown(false)
+  
+   
+   if (crop\_id="B5" or crop\_id="B6") then
+    
+      \quad  newCrop= new cropWbarley("cropWbarley",0,this,"WinterBarley")
+ 
+   if (crop\_id="PE") then
+    
+      \quad  newCrop= new cropPea("cropPea",0,this,"Pea")
+  
+   if (crop\_id="W5") then
+   
+     \quad   newCrop= new cropSpringWheat("cropSpringWheat",0,this,"SpringWheat")
+   
+   if (crop\_id="BE") then
+   
+     \quad   newCrop= new cropBeet("cropBeet",0,this,"Beets")
+   
+   if (crop\_id="PO") then
+   
+      \quad  newCrop= new cropPotato("cropPotato",0,this,"Potato")
+  
+   if (crop\_id="MA") then
+
+    \quad    newCrop= new cropMaize("cropMaize",0,this,"Maize")
+   
+   if (crop\_id="NO") then
+   
+     \quad   newCrop= new cropbare("cropbare",0,this,"NoCrop")
+   
+   if ((crop\_id="K1") or (crop\_id="C1"))
+  
+     \quad   newCrop= new cropClover("cropClover",0,this,"Clover")
+
+    \quad    newCrop.SetUndersown(true)  // ???!!!
+  
+   if (crop\_id="RY") then
+      newCrop= new cropRye("cropRye",0,this,"Rye")
+
+   if (crop\_id="O1" or crop\_id="O2")
+      newCrop= new cropOat("cropOat",0,this,"Oat")
+
+   if (crop\_id="OR") then
+      newCrop= new cropOilRadish("cropOilRadish",0,this,"OilRadish")
+
+   if (crop\_id="CH") then
+      newCrop= new cropChickory("cropChickory",0,this,"Chickory")
+
+   if (crop\_id="DW") then
+      newCrop= new cropDyersWoad("cropDyersWoad",0,this,"DyersWoad")
+
+   if (crop\_id="HV") then
+      newCrop= new cropHairyVetch("cropHairyVetch",0,this,"HairyVetch")
+
+   if crop\_id = "S1") then   
+      newCrop= new cropSeedGrass("cropSeedGrass",0,this,"SeedGrass")
+      newCrop.SetUndersown(true)
+  
+
+   //new crops added NJH May 2009
+
+   if crop\_id = "IR") then
+      newCrop= new cropItalRyegrass("cropItalRyegrass",0,this,"ItalianRyegrass")
+   
+if crop\_id = "SB") then
+      newCrop= new cropSoybean("cropSoybean",0,this, "Soybean")
+  
+if crop\_id = "SF") then
+      newCrop= new cropSunflower("cropSunflower",0,this,"Sunflower")
+   
+if crop\_id = "L1") then   
+      newCrop= new cropLucerne("cropLucerne",0,this,"Lucerne")
+
+   //new crops added NJH for compatibility with MEL, July 2009
+   
+if crop\_id = "CH")
+   
+    \quad    newCrop= new cropChickory("cropChickory",0,this,"Chickory")
+ 
+    \quad   newCrop.SetUndersown(true)  // ???!!!
+   
+   if crop\_id = "OR") then
+ 
+   \quad     newCrop= new cropOilRadish("cropOilRadish",0,this,"OilRadish")
+    
+\quad    newCrop.SetUndersown(true)  // ???!!!
+  
+   if crop\_id = "DW") then
+   
+  \quad      newCrop= new cropDyersWoad("cropDyersWoad",0,this,"DyersWoad")
+    
+\quad    newCrop.SetUndersown(true)
+  
+   if crop\_id = "HV") then
+	
+     \quad   newCrop= new cropHairyVetch("cropHairyVetch",0,this,"HairyVetch")
+     
+ \quad  newCrop.SetUndersown(true)
+   
+    //
+   if crop\_id = "F2" or crop\_id="BP" or crop\_id="C2"
+       or crop\_id="B8" or crop\_id="G2" or crop\_id="G3"
+       or crop\_id="K2" or crop\_id="W8"
+       or crop\_id="B9"  or crop\_id="S2") then
+   
+  \quad   err("AllocateCrop - crop ",crop\_id," can not be sown directly")
+  
+ if $newCrop=NULL$ then
+
+ \quad       err("AllocateCrop - crop ",crop\_id," not found")
+
+   newCrop.AssignRootParameters(aSoil)
+
+   return newCrop
+
+
+\subsection{AddHarvestedAreaToIndicators(const char cid,a)}
+
+Adding the amount a to the indicat file
+
+   if cid="W1" or cid="W2" then
+          AddInd(economicIndicator,"18.10 Exp. W.wheat yield (harv. bef. 1/8)","ha",a)
+	
+	if cid="W5" or cid="W6" then	
+       AddInd(economicIndicator,"18.11 Exp. S.wheat yield (harv. bef. 1/8)","ha",a)
+ 
+   if cid="RW" then      
+       AddInd(economicIndicator,"18.12 Exp. W.rape yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="RS" then      
+       AddInd(economicIndicator,"18.13 Exp. S.rape yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="B5" or cid="B6" then   
+       AddInd(economicIndicator,"18.14 Exp. W.barley yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="B1" or cid="B2" then   
+       AddInd(economicIndicator,"18.15 Exp. S.barley yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="RY" then   
+       AddInd(economicIndicator,"18.16 Exp. Rye yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="OA" then   
+     AddInd(economicIndicator,"18.17 Exp. Oat yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="PE" then   
+      AddInd(economicIndicator,"18.18 Exp. Pea yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="BP" then   
+	  	 AddInd(economicIndicator,"18.26 Barley/Pea area (harv. bef. 1/9)","ha",a)
+ 
+   if cid="PO" then   
+     AddInd(economicIndicator,"18.19 Exp. Potato yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="SG" then     
+      AddInd(economicIndicator,"18.20 Exp. Grass for seed yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="MA" then   
+      AddInd(economicIndicator,"18.21 Exp. Maize yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="BP" then     
+     AddInd(economicIndicator,"18.23 Exp. Barley/Pea yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="C1" or cid="C2" then    
+      AddInd(economicIndicator,"18.24 Exp. Grass/clover yield (harv. bef. 1/8)","ha",a)
+ 
+   if cid="BE" then    
+        AddInd(economicIndicator,"18.22 Exp. Beet yield (harv. bef. 1/8)","ha",a)
+  
+   if cid="SB" then   
+       AddInd(economicIndicator,"18.21 Exp. Soy bean yield (harv. bef. 1/8)","ha",a)
+ 
+   if cid="SF" then   
+      AddInd(economicIndicator,"18.23 Exp. Sunflower yield (harv. bef. 1/8)","ha",a)
+
+
+
+
+
+
+
+
+\subsection{GiveIndicators()}
+Update the inicat file
+
+   if $balanceDepth<1E-10$ then
+   
+      \quad  err("GiveIndicators - soil depth not initialised")
+
+  AddStateInd(envInd,"40.60 Total C in soil","kg C",
+$aSoil.GetTotalCarbon() \cdot area \cdot 10$)   
+   
+   //GetPoolCarbon(const char   Name,   startDep,   thick)
+
+	AddStateInd(envInd,"40.62 Total C in soil 0-25 cm",
+"kg C",$aSoil.GetTotalCarbon(0,250) \cdot area \cdot 10$)
+	 
+AddStateInd(envInd,"40.63 Total C in soil 25-50 cm","kg C",
+
+$aSoil.GetTotalCarbon(250,250) \cdot area \cdot 10$)
+	 
+AddStateInd(envInd,"40.64 Total C in soil 50-75 cm","kg C",
+
+$aSoil.GetTotalCarbon(500,250) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"40.65 Total C in soil 75-250 cm","kg C",
+
+$aSoil.GetTotalCarbon(750,1750) \cdot area \cdot 10$)
+	 
+AddStateInd(envInd,"40.66 C in AOM+SMB 0-25 cm","kg C",
+	   	
+ ($aSoil.GetPoolCarbon(0,0,250)+aSoil.GetPoolCarbon(1,0,250)+aSoil.GetPoolCarbon(2,0,250)$
+
+$+
+	      aSoil.GetPoolCarbon(3,0,250)+aSoil.GetPoolCarbon(4,0,250))
+ \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"40.67 C in AOM+SMB 25-50 cm","kg C",
+	   	
+ ($aSoil.GetPoolCarbon(0,250,250)+aSoil.GetPoolCarbon(1,250,250)+aSoil.GetPoolCarbon(2,250,250)$
+
+$+aSoil.GetPoolCarbon(3,250,250)+aSoil.GetPoolCarbon(4,250,250)) \cdot area \cdot 10$
+)
+		
+AddStateInd(envInd,"40.68 C in AOM+SMB 50-75 cm","kg C",
+	   	
+ ($aSoil.GetPoolCarbon(0,500,250)+aSoil.GetPoolCarbon(1,500,250)+aSoil.GetPoolCarbon(2,500,250)$
+	      
+$+aSoil.GetPoolCarbon(3,500,250)+aSoil.GetPoolCarbon(4,500,250))
+ \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"40.69 C in AOM+SMB 75-250 cm","kg C",
+	   	 
+($aSoil.GetPoolCarbon(0,750,1750)+aSoil.GetPoolCarbon(1,750,1750)$
+
+$+aSoil.GetPoolCarbon(2,750,1750)$
+
+
+$+    
+  aSoil.GetPoolCarbon(3,750,1750)+aSoil.GetPoolCarbon(4,750,1750)) 
+\cdot area \cdot 10$)
+		
+AddStateInd(envInd,"40.70 C in NOM 0-25 cm","kg C",
+$aSoil.GetPoolCarbon(5,0,250) \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"40.71 C in NOM 25-50 cm","kg C",
+$aSoil.GetPoolCarbon(5,250,250) \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"40.72 C in NOM 50-75 cm","kg C",
+$aSoil.GetPoolCarbon(5,500,250) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"40.73 C in NOM 75-250 cm","kg C",
+$aSoil.GetPoolCarbon(5,750,1750) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"40.74 C in IOM 0-25 cm","kg C",
+$aSoil.GetPoolCarbon(6,0,250) \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"40.75 C in IOM 25-50 cm","kg C",
+$aSoil.GetPoolCarbon(6,250,250) \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"40.76 C in IOM 50-75 cm","kg C",
+$aSoil.GetPoolCarbon(6,500,250) \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"40.77 C in IOM 75-250 cm","kg C",
+$aSoil.GetPoolCarbon(6,750,1750) \cdot area \cdot 10$)
+
+ AddStateInd(envInd,"40.90 AOM1 C in soil","kg C",
+$aSoil.GetPoolCarbon(0,0,balanceDepth) \cdot area \cdot 10$)
+ 
+ AddStateInd(envInd,"40.91 AOM2 C in soil","kg C",
+$aSoil.GetPoolCarbon(1,0,balanceDepth) \cdot area \cdot 10$)
+  
+AddStateInd(envInd,"40.92 SMB1 C in soil","kg C",
+$aSoil.GetPoolCarbon(2,0,balanceDepth) \cdot area \cdot 10$)
+ 
+ AddStateInd(envInd,"40.93 SMB2 C in soil","kg C",
+$aSoil.GetPoolCarbon(3,0,balanceDepth) \cdot area \cdot 10$)
+   
+AddStateInd(envInd,"40.94 SMR C in soil","kg C",
+$aSoil.GetPoolCarbon(4,0,balanceDepth) \cdot area \cdot 10$)
+  
+AddStateInd(envInd,"40.95 NOM C in soil","kg C",
+$aSoil.GetPoolCarbon(5,0,balanceDepth) \cdot area \cdot 10$)
+   
+AddStateInd(envInd,"40.96 IOM C in soil","kg C",
+$aSoil.GetPoolCarbon(6,0,balanceDepth) \cdot area \cdot 10$)
+
+ 
+  AddInd(envInd,"40.40 CO2 soil respiration","kg C",
+$aSoil.GetCO2Evolution() \cdot area \cdot 10$)
+
+  AddStateInd(envInd,"32.62 AOM1 N in soil","kg N",
+$aSoil.GetPoolNitrogen(0,0,balanceDepth) \cdot area \cdot 10$)
+   
+  AddStateInd(envInd,"32.63 AOM2 N in soil","kg N",
+$aSoil.GetPoolNitrogen(1,0,balanceDepth) \cdot area \cdot 10$)
+  
+  AddStateInd(envInd,"32.64 SMB1 N in soil","kg N",
+$aSoil.GetPoolNitrogen(2,0,balanceDepth) \cdot area \cdot 10$)
+   
+  AddStateInd(envInd,"32.65 SMB2 N in soil","kg N",
+$aSoil.GetPoolNitrogen(3,0,balanceDepth) \cdot area \cdot 10$)
+   
+  AddStateInd(envInd,"32.66 SMR N in soil","kg N",
+$aSoil.GetPoolNitrogen(4,0,balanceDepth) \cdot area \cdot 10$)
+   
+  AddStateInd(envInd,"32.67 NOM N in soil","kg N",
+$aSoil.GetPoolNitrogen(5,0,balanceDepth) \cdot area \cdot 10$)
+  
+  AddStateInd(envInd,"32.68 IOM N in soil","kg N",
+
+$aSoil.GetPoolNitrogen(6,0,balanceDepth) \cdot area \cdot 10$)
+  
+  AddStateInd(envInd,"32.60 Organic N in soil","kg N",
+
+$(aSoil.GetTotalNitrogen(0,balanceDepth)
+-aSoil.GetMinNitrogen(0,balanceDepth)) \cdot area \cdot 10$)
+
+	AddStateInd(envInd,"32.69 Organic N in soil 0-25 cm","kg N",
+
+$(aSoil.GetTotalNitrogen(0,250)-aSoil.GetMinNitrogen(0,250)) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.70 Mineral N in soil 0-25 cm","kg N",
+$aSoil.GetMinNitrogen(0,250) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.71 Organic N in soil 25-50 cm",
+
+"kg N",$(aSoil.GetTotalNitrogen(250,250)-aSoil.GetMinNitrogen(250,250)) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.72 Mineral N in soil 25-50 cm",
+"kg N",$aSoil.GetMinNitrogen(250,250) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.73 Organic N in soil 50-75 cm",
+
+"kg N",$(aSoil.GetTotalNitrogen(500,250)-aSoil.GetMinNitrogen(500,250)) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.74 Mineral N in soil 50-75 cm",
+"kg N",$aSoil.GetMinNitrogen(500,250) \cdot area \cdot 10$)
+	 
+AddStateInd(envInd,"32.75 Organic N in soil 75-250 cm",
+
+"kg N",$(aSoil.GetTotalNitrogen(750,1750)-aSoil.GetMinNitrogen(750,1750)) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.76 Mineral N in soil 75-250 cm",
+
+"kg N",$aSoil.GetMinNitrogen(750,1750) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.77 N in AOM+SMB 0-25 cm","kg N",
+	   	
+ $(aSoil.GetPoolNitrogen(0,0,250)+aSoil.GetPoolNitrogen(1,0,250)
++aSoil.GetPoolNitrogen(2,0,250)$
+
+$+	     
+ aSoil.GetPoolNitrogen(3,0,250)+aSoil.GetPoolNitrogen(4,0,250)) 
+\cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.78 N in AOM+SMB 25-50 cm","kg N",
+	   	
+ $(aSoil.GetPoolNitrogen(0,250,250)+aSoil.GetPoolNitrogen(1,250,250)
++aSoil.GetPoolNitrogen(2,250,250)+$
+	    
+ $ aSoil.GetPoolNitrogen(3,250,250)+aSoil.GetPoolNitrogen(4,250,250)) 
+\cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.79 N in AOM+SMB 50-75 cm","kg N",
+	   	
+ $(aSoil.GetPoolNitrogen(0,500,250)+aSoil.GetPoolNitrogen(1,500,250)
++aSoil.GetPoolNitrogen(2,500,250)$
+
+$+	     
+ aSoil.GetPoolNitrogen(3,500,250)+aSoil.GetPoolNitrogen(4,500,250)) 
+\cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.80 N in AOM+SMB 75-250 cm","kg N",
+	   	 
+($aSoil.GetPoolNitrogen(0,750,1750)+aSoil.GetPoolNitrogen(1,750,1750)$
+
+$+aSoil.GetPoolNitrogen(2,750,1750)$
+	      
+$+aSoil.GetPoolNitrogen(3,750,1750)+aSoil.GetPoolNitrogen(4,750,1750)) $
+
+$\cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"32.81 N in NOM 0-25 cm","kg N",
+$aSoil.GetPoolNitrogen(5,0,250) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.82 N in NOM 25-50 cm","kg N",
+$aSoil.GetPoolNitrogen(5,250,250) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.90 N in NOM 50-75 cm","kg N",
+$aSoil.GetPoolNitrogen(5,500,250) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.91 N in NOM 75-250 cm","kg N",
+$aSoil.GetPoolNitrogen(5,750,1750) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.92 N in IOM 0-25 cm","kg N",
+$aSoil.GetPoolNitrogen(6,0,250) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.93 N in IOM 25-50 cm","kg N",
+$aSoil.GetPoolNitrogen(6,250,250) \cdot area \cdot 10$)
+		
+AddStateInd(envInd,"32.94 N in IOM 50-75 cm","kg N",
+$aSoil.GetPoolNitrogen(6,500,250) \cdot area \cdot 10$)
+		 
+AddStateInd(envInd,"32.95 N in IOM 75-250 cm","kg N",
+$aSoil.GetPoolNitrogen(6,750,1750) \cdot area \cdot 10$)
+
+  AddStateInd(envInd,"32.83 Nmin 0-500","kg N",
+$aSoil.GetMinNitrogen(0,500) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.84 Nmin 0-750","kg N",
+$aSoil.GetMinNitrogen(0,750) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"32.85 Nmin 0-1000","kg N",
+$aSoil.GetMinNitrogen(0,1000) \cdot area \cdot 10$)
+
+  AddStateInd(economicIndicator,"01.01 Total area","ha",area)
+
+   AddInd(envInd,"70.40 Percolation from leaching depth",
+"cubic meter",$aSoil.GetDrainage(leachingDepth) \cdot area \cdot 10$)
+   
+AddInd(envInd,"70.10 Percolation","cubic meter",
+$aSoil.GetDrainage(balanceDepth) \cdot area \cdot 10$)
+   
+AddInd(envInd,"70.11 Surface run-off","cubic meter",
+$aSoil.GetRunOff() \cdot area \cdot 10$)
+
+	 
+AddInd(envInd,"70.12 Evapotranspiration","cubic meter",
+$aSoil.GetEvapotranspiration() \cdot area \cdot 10$)
+	 
+AddInd(envInd,"70.42 Bare soil evaporation",
+"cubic meter",$aSoil.GetSoilEvaporation() \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"70.15 Water in field to balancedepth",
+"cubic meter",$(snowContent+waterContent+aSoil.GetWater(0,balanceDepth)$
+
+$+aSoil.GetSurfaceWater()) \cdot area \cdot 10$)
+	
+AddStateInd(envInd,"70.41 Water in field to leaching depth","cubic meter",
+
+$(snowContent+waterContent+aSoil.GetWater(0,leachingDepth)+aSoil.GetSurfaceWater()) $
+
+$\cdot area \cdot 10$)
+	
+AddStateInd(envInd,"70.20 Water in soil","cubic meter",
+$waterContent \cdot area \cdot 10$)
+
+   AddInd(envInd,"32.40 Nit N leached from leaching 
+depth","kg N",$aSoil.GetNitLeaching(leachingDepth).n \cdot area \cdot 10$)
+ 
+  AddInd(envInd,"32.41 Amm N leached from leaching 
+depth","kg N",$aSoil.GetAmmLeaching(leachingDepth).n \cdot area \cdot 10$)
+   
+AddInd(envInd,"31.40 Nit N leached","kg N"
+,$aSoil.GetNitLeaching(balanceDepth).n \cdot area \cdot 10$)
+	 
+AddInd(envInd,"31.41 Amm N leached","kg N",
+$aSoil.GetAmmLeaching(balanceDepth).n \cdot area \cdot 10$)
+	
+ AddInd(envInd,"31.47 N in surface run-off","kg N"
+,$aSoil.GetRunOff_N().n \cdot area \cdot 10$)
+	
+ AddInd(envInd,"31.42 N2 from denitrification","kg N"
+,$aSoil.GetDenitrification().n \cdot area \cdot 10$)
+  
+ AddInd(envInd,"31.43 N2O from denitrification","kg N"
+,$aSoil.GetN2OFromDenitrification().n \cdot area \cdot 10$)
+ 
+  AddInd(envInd,"31.44 N2O from nitrification","kg N"
+,$aSoil.GetN2OFromNitrification().n \cdot area \cdot 10$)
+	
+	 AddInd(envInd,"32.30 Gross N-mineralisation from soil org. matter","kg"
+
+,$aSoil.GetNitrogenNetMineralisation().n \cdot area \cdot 10$)
+ 
+  AddStateInd(envInd,"32.61 Mineral N in soil","kg N"
+,$aSoil.GetMinNitrogen().n \cdot area \cdot 10$)
+
+   AddInd(envInd,"38.12 N15 leached from leaching depth","kg N"
+
+,$aSoil.GetNitLeaching(leachingDepth).n15 \cdot area \cdot 10$
+
+$+aSoil.GetAmmLeaching(leachingDepth).n15 \cdot area \cdot 10$)
+	
+	 AddInd(envInd,"38.21 N15-N2O from denitrification","kg N"
+,$aSoil.GetN2OFromDenitrification().n15 \cdot area \cdot 10$)
+ 
+   AddInd(envInd,"38.22 N15-N2O from nitrification","kg N"
+,$aSoil.GetN2OFromNitrification().n15 \cdot area \cdot 10$)  
+
+   AddInd(envInd,"38.23 N15-Denitrification","kg N"
+,$aSoil.GetDenitrification().n15 \cdot area \cdot 10$)
+ 	 
+AddStateInd(envInd,"38.24 Total soil/soilsurface 15N","kg N"
+
+,$aSoil.GetTotalNitrogen(1000).n15 \cdot area \cdot 10$)
+
+   nitrogen NCrop
+     CCrop = 0
+  
+ if theCrops then
+  
+    \quad  cloneList<crop>::PS aCropElement
+
+   \quad	theCrops.PeekHead(aCropElement)
+
+  \quad 	while $aCropElement\ne NULL$ do
+     
+  \quad\quad       NCrop = NCrop + aCropElement.element.GiveTotalNitrogen()
+   
+\quad\quad      $CCrop += (aCropElement.element.GiveDMStorage()+aCropElement.element.GiveDMVegTop()$
+
+\quad\quad   $+aCropElement.element.GiveDMRoot()) \cdot 0.45$
+ 
+   \quad\quad     theCrops.OneStep(aCropElement)
+
+ 
+ AddStateInd(envInd,"31.60 N in standing crop/straw","kg N",$NCrop \cdot area \cdot 10$)
+ 
+ AddStateInd(envInd,"31.61 Total soil/soilsurface N","kg N",$aSoil.GetTotalNitrogen(balanceDepth) \cdot area \cdot 10$)
+	 
+AddStateInd(envInd,"31.99 Total soil/soilsurface nitrogen to 1 m depth","kg N",$aSoil.GetTotalNitrogen(1000) \cdot area \cdot 10$)
+   
+AddStateInd(envInd,"40.61 C in standing crop/straw","kg C"
+,$CCrop \cdot area \cdot 10$)
+
+      if Day=1  and  (Month=9 or Month=11) then
+   
+        CatchDM = CatchN = 0
+        
+      cloneList<crop>::PS aCropElement
+   	theCrops.PeekHead(aCropElement)
+   	
+while $aCropElement\ne NULL$ then
+      
+   \quad            if (aCropElement.element.GetCropName()="Ryegrass" or aCropElement.element.GetCropName()="Clover"
+
+     \quad        	 or  aCropElement.element.GetCropName()="DyersWoad" or aCropElement.element.GetCropName()="OilRadish"
+
+    \quad           or aCropElement.element.GetCropName()="HairyWetch" 
+
+   \quad   or aCropElement.element.GetCropName()="Chickory")
+      
+   \quad          \quad    	if (aCropElement.element.GetCropName()="OilRadish")
+            
+    \quad         \quad       \quad  	$CatchDM += aCropElement.element.GiveDMVegTop() \cdot area \cdot 10$
+           
+     \quad         \quad        \quad  	$CatchN += aCropElement.element.NitrogenInVegTop().n \cdot area \cdot 10$
+            
+      \quad        \quad      else
+            
+       \quad         \quad    \quad  	$CatchDM += (aCropElement.element.GiveDMVegTop()+aCropElement.element.GiveDMStorage()) \cdot area \cdot 10$
+            
+      \quad           \quad   \quad  	$CatchN += (aCropElement.element.NitrogenInVegTop().n+aCropElement.element.NitrogenInStorage().n) \cdot area \cdot 10$
+           
+        
+   \quad   	\quad  		theCrops.OneStep(aCropElement)
+      
+        	if (theTime.GetMonth()=9  and  theTime.GetDay()=1)
+     
+    \quad  
+   		 AddInd(envInd,"39.01 Catch crop DM (1/9)","kg DM",CatchDM)
+	
+\quad  		 AddInd(envInd,"39.03 Catch crop N (1/9)","kg N",CatchN)
+      
+      if (theTime.GetMonth()=11  and  theTime.GetDay()=1)
+      
+	\quad  		 AddInd(envInd,"39.02 Catch crop DM (1/11)","kg DM",CatchDM)
+	
+ \quad  		 AddInd(envInd,"39.04 Catch crop N (1/11)","kg N",CatchN)
+      
+   
+
+   // cutPlantProducts in tonnes/ha
+	if (cutPlantProducts)
+   
+      if (cutPlantProducts.NumOfNodes()>0)
+      
+        \quad   nitrogen NInStraw
+        
+\quad   for ( i=0 i<cutPlantProducts.NumOfNodes() i++)
+         
+
+         \quad    \quad   plantItem straw = cutPlantProducts.ElemAtNum(i)
+     
+   \quad    \quad    $NInStraw = NInStraw + straw.GetAllN() \cdot straw.GetAmount() \cdot 10000 // kg N/ha$
+         
+       \quad   AddStateInd(envInd,"31.60 N in standing crop/straw","kg N",$NInStraw \cdot area$)
+      
+   
+
+
+
+\subsection{AddYieldToIndicators(const char  cid,   y,  n)}
+
+   Adding how much is harvested.
+
+ cid the name of the crop
+y the amount of the crop in tons
+  n how much N that the crop contains
+
+
+   if cid="WNWHT"  then 
+
+	\quad	 AddInd(economicIndicator,"17.10 W.wheat yield (harv. bef. 1/8)","t",y)
+   	 
+\quad AddInd(envInd,"36.00 W.wheat yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="SPWHT" then
+ 	
+   \quad 	AddInd(economicIndicator,"17.11 S.wheat yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.01 S.wheat yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="WNRPE" then 
+	
+   	\quad AddInd(economicIndicator,"17.12 W.rape yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.02 W.rape yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="SPRAPE" then 
+	
+   \quad 	AddInd(economicIndicator,"17.13 S.rape yield (harv. bef. 1/8)","t",y)
+   	 
+\quad AddInd(envInd,"36.03 S.rape yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="WNBRL" then 
+	
+   \quad 	AddInd(economicIndicator,"17.14 W.barley yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.04 W.barley yield (harv. bef. 1/8)","kg N",n)
+ 
+   if cid="BARLEY" then 
+	
+   \quad 	AddInd(economicIndicator,"17.15 S.barley yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.05 S.barley yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="RYE" then 
+	
+    \quad   AddInd(economicIndicator,"17.16 Rye yield (harv. bef. 1/8)","t",y)
+	   
+\quad AddInd(envInd,"36.06 Rye yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="OAT" then 
+   
+   \quad 	AddInd(economicIndicator,"17.17 Oat yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.07 Oat yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="PEA" then 
+
+   \quad 	AddInd(economicIndicator,"17.18 Pea yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.08 Pea yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="POTATO" then 
+	
+  \quad  	AddInd(economicIndicator,"17.19 Potato yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.09 Potato yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="SEEDGRASS" then 
+	
+   \quad 	AddInd(economicIndicator,"17.20 Grass for seed yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.10 Grass for seed yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="MAIZE" then 
+	
+   \quad 	AddInd(economicIndicator,"17.21 Grain maize yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.11 Grain maize yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="BEET" then 
+	
+   \quad 	AddInd(economicIndicator,"17.22 Beet yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.12 Beet yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="RYEGRASS" or cid="RYEGRASSWHOLE" then 
+	
+   \quad 	AddInd(economicIndicator,"17.23 Ryegrass yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.13 Ryegrass yield (harv. bef. 1/8)","kg N",n)
+ 
+   if cid="CLOVER" then 
+	
+   \quad 	AddInd(economicIndicator,"17.24 Clover yield (harv. bef. 1/8)","t",y)
+   	
+\quad  AddInd(envInd,"36.14 Clover yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="BP" then 
+	
+  \quad  	AddInd(economicIndicator,"17.25 Barley/Pea yield (harv. bef. 1/9)","t",y)
+   	
+\quad  AddInd(envInd,"36.15 Barley/Pea yield (harv. bef. 1/9)","kg N",n)
+   
+   if cid="MAIZEWHOLE" then 
+	
+   \quad 	AddInd(economicIndicator,"17.26 Maize wholecrop yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.16 Maize wholecrop yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="ITALRYEGWHOLE" then 
+	
+ \quad   	AddInd(economicIndicator,"17.27 Italian ryegrass yield (harv. bef. 1/8)","t",y)
+   	 
+\quad AddInd(envInd,"36.17 Italian ryegrass yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="SOYBEAN" then 
+	
+ \quad   	AddInd(economicIndicator,"17.28 Soybean yield (harv. bef. 1/8)","t",y)
+   
+\quad 	 AddInd(envInd,"36.18 Soybean yield (harv. bef. 1/8)","kg N",n)
+   
+   if cid="SUNFLOWER" then 
+	
+  \quad  	AddInd(economicIndicator,"17.29 Sunflower yield (harv. bef. 1/8)","t",y)
+   	
+ \quad AddInd(envInd,"36.19 Sunflower yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="WNWHTWHOLE" or cid="SPWHTWHOLE" then 
+
+  \quad  
+		 AddInd(economicIndicator,"17.30 Wheat silage yield (harv. bef. 1/8)","t",y)
+   	
+\quad  AddInd(envInd,"36.20 Wheat silage yield (harv. bef. 1/8)","kg N",n)
+  
+   if cid="LUCERNE" or cid="LUCERNEWHOLE" then 
+	
+   \quad 	AddInd(economicIndicator,"17.31 Lucerne yield (harv. bef. 1/8)","t",y)
+   	 
+\quad AddInd(envInd,"36.21 Lucerne yield (harv. bef. 1/8)","kg N",n)
+
+
+
+\subsection{AddExpectedYieldToIndicators(const char  cid,   y)}
+
+   Adding how much is harvested.
+   cid - the name of the crop
+  y - the amount of the crop in tons
+
+
+   if cid="W1" or cid="W2" then	 AddInd(economicIndicator,"18.10 Exp. W.wheat yield (harv. bef. 1/8)","t",y)
+	
+if cid="W5" or cid="W6" then AddInd(economicIndicator,"18.11 Exp. S.wheat yield (harv. bef. 1/8)","t",y)
+   
+if cid="RW"  then     AddInd(economicIndicator,"18.12 Exp. W.rape yield (harv. bef. 1/8)","t",y)
+   
+if cid="RS"  then   AddInd(economicIndicator,"18.13 Exp. S.rape yield (harv. bef. 1/8)","t",y)
+ 
+  if cid="B5" or cid="B6" then  AddInd(economicIndicator,"18.14 Exp. W.barley yield (harv. bef. 1/8)","t",y)
+   
+if cid="B1" or cid="B2" then  AddInd(economicIndicator,"18.15 Exp. S.barley yield (harv. bef. 1/8)","t",y)
+   
+if cid="RY"   then      AddInd(economicIndicator,"18.16 Exp. Rye yield (harv. bef. 1/8)","t",y)
+   
+if cid="OA"   then   AddInd(economicIndicator,"18.17 Exp. Oat yield (harv. bef. 1/8)","t",y)
+   
+if cid="PE"   then      AddInd(economicIndicator,"18.18 Exp. Pea yield (harv. bef. 1/8)","t",y)
+   
+if cid="PO"  then    AddInd(economicIndicator,"18.19 Exp. Potato yield (harv. bef. 1/8)","t",y)
+   
+if cid="SG" then     AddInd(economicIndicator,"18.20 Exp. Grass for seed yield (harv. bef. 1/8)","t",y)
+   
+if cid="MA"  then    AddInd(economicIndicator,"18.21 Exp. Maize yield (harv. bef. 1/8)","t",y)
+  
+ if cid="BE"  then     AddInd(economicIndicator,"18.22 Exp. Beet yield (harv. bef. 1/8)","t",y)
+   
+if cid="BP"    then                      AddInd(economicIndicator,"18.23 Exp. Barley/Pea yield (harv. bef. 1/8)","t",y)
+ 
+  if cid="C1" or cid="C2" then  AddInd(economicIndicator,"18.24 Exp. Grass/clover yield (harv. bef. 1/8)","t",y)
+   
+if cid="G1" or cid="G2" then  AddInd(economicIndicator,"18.25 Exp. Grass ley yield (harv. bef. 1/8)","ha",y)
+
+\bibliography{literature}
+  \bibliographystyle{plainnat}
+
+\end{document}

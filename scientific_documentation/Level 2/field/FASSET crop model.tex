@@ -1,0 +1,2406 @@
+\documentclass[%parskiphalf,%numbers=noendperiod
+]{scrartcl}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx,parskip}
+\usepackage{booktabs,longtable}
+\usepackage{lmodern}
+\usepackage[round]{natbib}
+
+\newcommand\mymarginpar[1]{\marginpar {\flushleft\bfseries\scriptsize #1}}
+
+\title{FASSET Crop Model}
+
+\author{}
+\date{\today}
+
+\usepackage{lmodern}
+
+
+\usepackage[backref]{hyperref}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Plant}
+
+\begin{tabular}{lll}
+DS        & Phase & Start of phase \\ \hline
+-2      & Not sown &  \\
+$[-10[$  & sown but not emerged & Sown \\
+$[0 1[$  & vegetative growth  & Emerged \\
+$[12[$   & reproductive & Anthesis \\
+$[23[$   & Ripening & End of Grain filling \\
+3       & & Ripe 
+\end{tabular}
+
+\subsection{Phenology}
+
+%Add 2 phenology classes together if they are not to different in the Developing stage 
+%
+%Add(Phenology, frac)
+%
+%\begin{align*}
+%	DS  =& (1-frac)  \cdot  DS + frac  \cdot  aPhenology.DS \\
+%   TempSumForLeaf  =& (1-frac)  \cdot  TempSumForLeaf \\
+%                     &    + frac  \cdot  aPhenology.TempSumForLeaf \\
+%   TempSumAfterFirstMarch = &(1-frac) \cdot  TempSumAfterFirstMarch \\
+%                           &  + frac \\
+%                           &  \cdot  aPhenology.TempSumAfterFirstMarch
+%\end{align*}
+
+\subsubsection*{Update(AirTemp,SoilTemp,DayLength)}
+Update DS - development stage, DSIncrease, TempSumForLeaf and TempSumAfterFirstMarch.
+\mymarginpar{TS0, TS1, TS2, TS3, TB0, TB1, TB2, TB3, DMAX, DB} 
+   
+   if $DS<0$  (Not emerged)
+   
+   \quad then $DS = DS + \tfrac{ \max(SoilTemp-TB0,0)}{TS0}$ \quad 
+    
+   else  \quad  (Emerged)
+  
+  \quad 	$TempSumForLeaf = TempSumForLeaf + \max(0,AirTemp)$
+
+\quad 	if $month=3$ and $GetDay()=1$ then $TempSumAfterFirstMarch = 0$
+ 
+ \quad  $ TempSumAfterFirstMarch = TempSumAfterFirstMarch + \max(0,AirTemp)$
+
+ \quad  $DL=\max\left(0,\min\left(1,\tfrac{DayLength-DB}{DMAX-DB}\right)\right)$
+   
+ \quad   DSIncrease = DS
+
+\quad
+$DS = 
+\begin{cases}
+DS + DL \cdot \tfrac{\max(AirTemp-TB1,0)}{TS1} &  \text{if } DS < 1 \text{ (Until flowering)} \\
+DS + \tfrac{\max(AirTemp-TB2,0)}{TS2} &   \text{if } DS < 2  \text{ (Until end of grain filling)} \\
+DS + \tfrac{\max(AirTemp-TB3,0)}{TS3} &	\text{if } TS3 > 0 \text{ and } DS < 3 \text{ (Until ripe)} \\
+3 & \text{otherwise (Ripe)}	
+\end{cases}$
+
+if $DS > 3$ then	$DS = 3$
+
+$DSIncrease = DS-DSIncrease$  (Increase in DS this day)
+
+   dates for critical growth developmental stages
+   
+   if $DS > 0$ and not $EmergencePassed$ then
+   
+   \quad	DateOfEmergence = date, EmergencePassed = true
+
+   if $DS > 1$ and not $FloweringPassed$ then
+    
+   \quad 	DateOfFlowering = date, FloweringPassed = true
+
+   if $DS > 2$ and not $EndOfGrainFillingPassed$ then
+
+  \quad  	DateOfEndGrainFill = date, EndOfGrainFillingPassed = true 
+   
+   if $DS > 3$ and not $RipenessPassed$ then
+    
+    \quad 	DateOfRipeness = date, RipenessPassed = true
+
+
+\minisec{Phenology.Sow()}
+	DS = -1 , 
+   TempSumForLeaf  = 
+   TempSumAfterFirstMarch  = 0
+
+\subsection{Sow(SeedDensDryMatt,aRelativeDensity,NitrogenInSeed)}
+ An account of the DM lost via GerminationConversion must be added, in order
+ to keep total balance of DM/carbon! \mymarginpar{GerminationConversion, InitialRootDepth} 
+ %   
+   \begin{align*} 
+   Phenology.Sow() & \\		
+	SeedDM           & = SeedDensDryMatt  \cdot  GerminationConversion \\
+   InitialSeedDM   &  = SeedDM   \\
+	RootDepth        & = InitialRootDepth 
+	\end{align*}
+TotalRootLength  = 
+	DMRoot    = 
+	DMVegTop   =  
+	DMStorage  =  
+	$CAI_g$  = 
+	FillFlag  = 0
+	
+	%	
+	$Nitrogen.SetBoth(NitrogenInSeed,0)$,	
+  $RelativeDensity = aRelativeDensity$,
+ 
+   $Nbudget.SetInput(NitrogenInSeed)$, 
+
+   $DMbudget.SetInput(SeedDensDryMatt  \cdot  GerminationConversion)$ 
+   
+   $Nbudget.SetOutput(0), N15budget.SetOutput(0), DMbudget.SetOutput(0)$ 
+
+
+\minisec{GetfracToAnthesis()}
+the DS remaining before anthesis. $GetfracToAnthesis()  = \max(\min(1 - DS,1),0)$
+
+\subsection{Daily DM growth - Update(ActivePar)}   \mymarginpar{LinearLeafPhase}    
+   extinction coefficient for photosynthetic active radiation \mymarginpar{k}
+
+   $\mathbf{GiveExtCoeff} = k$
+   
+   Rg = ActivePar 
+
+   (Rg is something like $radiation  \cdot  exp(-GiveExtCoeff)  \cdot  GiveExtCoeff  \cdot  LAIinInterval$)
+
+   temp = theClimate.tmean,   
+  $DailyDMGrowth  = 
+   \Delta DMTop  = 0$
+     
+   if $Phenology.Sown()$ and $not Phenology.Ripe()$ % and $not terminated$
+  
+ \quad     if $totalLAIStand>0$ then    \mymarginpar{ColonialisationRate}
+      \begin{align*}
+  maxSpacefrac  = &\tfrac{CAI_g+CAI_y}{totalLAIStand} \\
+  fracOfSpace  = &\max(0,\min(maxSpacefrac, \\
+                   & \quad  fracOfSpace  + \max(0,temp)  \cdot  ColonialisationRate)) 
+      \end{align*}                        
+  $soilTemp = aSoil.GetTemp(200)$, 
+     $DayLength =  theClimate.PhotoPeriod()$           
+           
+  Phenology.Update(temp,soilTemp,DayLength)     (updates phenology)
+
+   if $Phenology.Sown()$ then		
+  
+  \quad $TempSumRoot = TempSumRoot + \max(0,temp)$
+
+  \quad if Phenology.Emerged()
+
+  \quad \quad $PlantHeight = 
+      MaxPlantHeight  \cdot  (1-Phenology.GetfracToAnthesis())$  
+
+  \quad $PlantHeight = 
+      \min(PlantHeight,MaxPlantHeight) $
+
+
+%\quad 
+     % \begin{align*}
+		  %DeltaDM() & = DeltaDM()er() \\
+ \quad $DailyDMGrowth  = \mathbf{\Delta DM}$ 
+            
+ \quad  $AccumulatedDMProduction = AccumulatedDMProduction + \mathbf{\Delta DM} $
+      %\end{align*}
+
+ \quad DMbudget.AddInput($\mathbf{\Delta DM} $)
+ 
+ \quad if $Phenology.TempSumForLeaf \le Phenology.LinearLeafPhase$ then
+\mymarginpar{Topfrac,LinearLeafPhase}
+     
+ \quad\quad (the same termal time as linear leaf growth) 
+\begin{align*} 
+DMTransfer & = \min(2  \cdot  Topfrac  \cdot  InitialSeedDM 
+  \cdot   \tfrac{\max(0,temp)}{Phenology.LinearLeafPhase},SeedDM) \\
+DMVegTop &= DMVegTop  + 0.5  \cdot  DMTransfer \\
+DMRoot  &= DMRoot   + 0.5  \cdot  DMTransfer \\
+SeedDM &= SeedDM - DMTransfer
+\end{align*}
+\quad TransferDMToRoot($\mathbf{\Delta DM} $)
+      
+\quad $CalcRootGrowth()$
+      
+\quad TransferDMToStorage($\mathbf{\Delta DM} $)
+     \begin{align*} 
+      DMVegTop & = DMVegTop + \mathbf{\Delta DM} \\
+      \Delta DMTop & = \mathbf{\Delta DM}
+      \end{align*}                             
+%\quad      Used for output
+\quad      CalcLAI()
+           
+% DailyDMGrowth()
+ 
+  
+\subsubsection{TransferDMToStorage($\Delta DM$)}
+ New limitation to the transfer of DM to storage according
+   to the concept of Justes et al. 1994. Annals of Botany 74:397-407.
+   \mymarginpar{StoreForFilling, FillFactor}
+
+the DS frac between start and end of grain fill \mymarginpar{DS\_StartFill}
+
+ $frac = \begin{cases}
+    \tfrac{ DSIncrease}{2-DS\_StartFill} & \text{if } DS \le 2 \\
+   0 & \text{otherwise}
+    \end{cases}$
+
+$\mathbf{Phenology.GetfracOfGrainFill()}  = \max(\min(frac,1),0)$
+
+  $Store  = \min(0.9,StoreForFilling), Fill  = \min(0.9,FillFactor) $
+  
+	if $Phenology.Anthesis()$ and $FillFlag=0$ then   
+	
+  \quad 	if $TransferableStorage < 0.00000001$ then  $TransferableStorage = DMVegTop  \cdot  Store $
+%
+  \begin{align*}
+  TransferableStorage & = TransferableStorage +  \Delta DM  \cdot  Fill \\
+  TransferedDMToStorage & = TransferableStorage
+  \end{align*}
+ %  
+   if Phenology.GrainFillStart() then
+   
+   \quad	FillFlag = 1 
+   	
+   \quad   if $fNitrogen() > 0$ then (linear fill of DM stored during lag phase)  \mymarginpar{ConversionCoefficient}
+          \begin{align*}
+          transfer  & =  \min(DMVegTop, \max(0,TransferableStorage \\
+                    & \quad  \cdot  Phenology.GetfracOfGrainFill()))  \\
+         DMVegTop  & =  DMVegTop - transfer \\
+         DMStorage  & =  DMStorage + transfer +   \Delta DM  \cdot  Fill  \cdot  ConversionCoefficient         
+         \end{align*}  
+   \quad \quad if $DMVegTop < TransferableStorage$ then $TransferableStorage = 0.9  \cdot   DMVegTop$ 
+    	
+   \quad \quad    $  DMbudget.AddOutput(( \Delta DM  \cdot  Fill)  \cdot  (1-ConversionCoefficient)) $     
+    
+    \quad \quad      $\Delta DM  =  \Delta DM  \cdot  (1-Fill)$ 
+
+     \quad \quad     $TransferedDMToStorage  = TransferedDMToStorage - transfer $
+     
+ 
+   if $Phenology.GrainFillEnd()$ and $TransferedDMToStorage>0$ then 
+
+   \quad  (Check to see if all transferable storage is transfered)
+   %
+     \begin{align*}
+      transfer &=\max(0,TransferedDMToStorage) \\
+   	DMStorage  &=  	DMStorage + transfer \\
+      DMVegTop & = DMVegTop -  transfer \\
+      TransferedDMToStorage & =  0 
+      \end{align*}
+%%%%%%%%%%%%%%% transfere DM to root %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\subsubsection{TransferDMToRoot($\Delta DM$)} 
+\citep{berntsen2005simulation}
+this function makes no sense at highly stressed plants
+
+fracToRoot \mymarginpar{MinAllocToRoot, MaxAllocToRoot, DS\_StartFill} 
+
+$ = \begin{cases}
+	MaxAllocToRoot & \text{if not Emerged()} \\  
+	%
+	MinAllocToRoot + (MaxAllocToRoot - MinAllocToRoot) & \\	
+	 \cdot  GetfracToAnthesis() & \text{if Emerged() and not Anthesis()} \\
+ %
+   \max(0,MinAllocToRoot  \cdot  
+    (DS\_StartFill - DS)) &  \text{if Anthesis() and not GrainFillEnd()} \\
+ %
+   MinAllocToRoot & \text{otherwise}
+	\end{cases}	
+	$	
+
+
+
+  \begin{align*}
+  \Delta Root & = \max(0, \Delta DM  \cdot  fracToRoot) \\
+   RootTranslocation & = RootTranslocation + \Delta Root \\
+     \Delta DM & =   \Delta DM- \Delta Root  \\
+	DMRoot & = DMRoot +\Delta Root 
+	\end{align*}	
+   $RootDecay(\Delta Root)$ 
+  
+   
+\subsubsection{RootDecay(RootTranslocation)} \mymarginpar{DecayRoot, RhizoDepositfrac, DS\_StartFill}
+\citep{berntsen2005simulation}
+Rhizodeposition and root decay, t - Temp \textdegree C 
+
+
+$TempEffect(t)
+    = \begin{cases}
+     \exp(0.47-0.027  \cdot  t+0.00193  \cdot  t^2) & \text{if } t > 20 \\
+     0.1  \cdot  t & \text{if } t>0 \text{ and } t \le 20 \\   
+     0 & \text{otherwise}
+   \end{cases}       
+   $
+   
+		if not Phenology.Ripe() then 	$aNitrogenInRoot =  NitrogenInRoot()$ 	
+		
+		if rootMatter then rootMatter.Setamount(0) 
+
+		SoilTemp = aSoil.GetTemp(200)
+
+		if $DMRoot>0$ and $temp>0$ and $Phenology.Emerged()$ then
+	     \begin{align*}
+     	DMdecay  & =  DMRoot  \cdot  TempEffect(SoilTemp)  \cdot  DecayRoot \\
+     	           & \quad 
+    +  RootTranslocation  \cdot  RhizoDepositfrac \\
+			DMdecay & =  \min(DMRoot,DMdecay)
+			\end{align*}
+%
+		if $DMdecay>0$ then					
+		$ NConcentration =  \tfrac{aNitrogenInRoot}{DMRoot} $
+				
+		\quad		if $NConcentration.n < MinN\_Root$ then			        					
+		
+		\quad\quad	$NConcentration = NConcentration  \cdot  \tfrac{MinN\_Root}{NConcentration.n} $
+\begin{align*}
+Ndecay & = NConcentration  \cdot  DMdecay \\
+DMRoot  & = DMRoot - DMdecay \\
+NitrogenTotal & = NitrogenTotal - Ndecay
+\end{align*}
+\quad			$	rootMatter.Setamount(\tfrac{DMdecay}{rootMatter.GetDM()})$
+			
+\quad			$rootMatter.SetorgN\_content(\frac{Ndecay}{\tfrac{DMdecay}{rootMatter.GetDM()}})$
+				
+\quad			Nbudget.AddOutput(Ndecay.n), N15budget.AddOutput(Ndecay.n15), 
+
+\quad DMbudget.AddOutput(DMdecay)
+				\begin{align*}
+				AccumulatedRootDeposit  &= AccumulatedRootDeposit  + DMdecay \\
+				AccumulatedRootNDeposit &= AccumulatedRootNDeposit + Ndecay
+				\end{align*}   
+   
+
+   
+
+
+
+\minisec{CO2Effect}
+\citep{olesen2000sensitivity} \mymarginpar{CO2Effect}
+
+$CO2PhotEffect  =  \begin{cases}
+CO2Effect  \cdot  \exp\left(0.4537-\tfrac{170.97}{climate.GetCO2Concentration()}\right) & \text{ if no } C4Photosynt. \\
+1 & \text{ otherwise}
+\end{cases}$ 
+
+%\minisec{fTW(temp)} 
+Similar to \citep{hansen1990npo}. DIFFERENT FORMULA IN \citep{berntsen2005simulation} 
+\mymarginpar{MinDMtemp, MaxDMtemp}
+
+$fTW(temp)	= 	
+		\begin{cases}
+		0 & \text{if } temp \le MinDMtemp \\
+		1 & \text{if } temp \ge MaxDMtemp \\
+		\tfrac{Temp-MinDMtemp}{MaxDMtemp-MinDMtemp} &   \text{otherwise}
+		\end{cases}$   
+
+
+
+%%%%%%%%%% Delta DM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     
+\subsubsection{$\Delta DM$} \mymarginpar{MaxRadUseEff, 
+ CO2Effect, PhotoSyntActPart}
+   Alters the dry matter production relative to CO2 concentration
+    unaltered at $CO2 = 377ppm$.  CO2 function parameters only estimated for WINTER WHEAT.
+   \citep{olesen2002comparison,berntsen2005simulation}	
+	\begin{align*}
+	% CO2conc & = theClimate.GetCO2Concentration() \\
+ % CO2PhotEffect & = 1 \\
+  %\intertext{if no C4Photosynthesis then}
+  %CO2PhotEffect & =  CO2Effect  \cdot  %\exp\left(0.4537-\tfrac{170.97}{CO2conc}\right) \\
+     InterceptedRadiation & = InterceptedRadiation + Rg  \cdot  PhotoSyntActPart \\
+    PAR\_Reduction & = \min(1,1-0.0445  \cdot  (Rg  \cdot  PhotoSyntActPart-5))  \\
+	\Delta DM & = Rg  \cdot  PhotoSyntActPart  \cdot  MaxRadUseEff   \cdot  CO2PhotEffect \\ 
+	          & \quad   \cdot  TranspRatio    \cdot  fNitrogenCurve()   \cdot  fTW()   \cdot  PAR\_Reduction 	
+  \end{align*}
+  
+\minisec{OptimalDeltaDM()}  
+\citep{berntsen2005simulation}
+ Calculates the optimal production. Used for root growth 
+\begin{align*}
+Optimal\Delta DM()  & =  Rg  \cdot  PhotoSyntActPart  \cdot  MaxRadUseEff 
+      \cdot  CO2PhotEffect  \cdot  fTW() 
+     \end{align*} 
+ 
+\minisec{PotentialDM(radiation,temp)} 
+ Get really rough estimate of potential growth. Assumes complete interception of radiation
+ Used in grassland management 
+ \begin{align*} 
+ PotentialDM(rad,temp) & = rad  \cdot  PhotoSyntActPart  \cdot  MaxRadUseEff \\
+        & \quad  \cdot  CO2PhotEffect  \cdot  fTW(temp) 
+\end{align*}
+
+\minisec{fNitrogenCurve()}  \mymarginpar{NCurveParam}
+\citep{olesen2002crop} , ScaleFactor  = 1.05 
+	\begin{align*}	
+	Nstress & = ScaleFactor  \cdot  (1-\exp(NCurveParam  \cdot  fNitrogen())) \\
+	fNitrogenCurve() & = \max(0,\min(1,Nstress)) 
+	\end{align*} 
+	
+ONLY FOR WINTER WHEAT? DIFFERENT IN \citep{berntsen2005simulation} 	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+ 
+\subsection{LAI}
+ 
+the DS remaining before flag ligule \mymarginpar{DS\_Flagligule}
+
+$GetfracToFlagLigule() = \begin{cases}
+   	 \max\left(0,\tfrac{DS}{DS\_Flagligule}\right) & \text{if } DS < DS\_Flagligule \\
+  \min\left(2,1+\tfrac{DS-DS\_Flagligule}{2-DS\_Flagligule}\right) & \text{otherwise} 
+\end{cases}$
+
+leaf scenesence factor. 2 as assuming that crop is yellow at end of grain filling.
+\begin{align*}
+LeafSenesence() & = \tfrac{DSIncrease}{2-1} 
+\end{align*}
+
+\subsubsection*{CalcLAIndices()}  \mymarginpar{InitialCAI, CoeffGreenIdx, LAIDMRatio, LAINitrogenRatio, MinimumSenescense, Conversfactor, GLAImax, LinearLeafPhase} 
+  \citep{olesen2002crop,olesen2004simulation}
+
+ if $CAI_g>GLAI_{max}$ then 
+    $GLAI_{max}=CAI_g$ \quad \quad    
+  % state variable that holds the maximum achieved green LAI
+  
+   if $Phenology.Emerged()$ then
+   
+   \quad	if $Phenology.TempSumForLeaf \le Phenology.LinearLeafPhase$ then
+    
+\quad\quad$CAI_g=InitialCAI  \cdot \tfrac{Phenology.TempSumForLeaf}{Phenology.LinearLeafPhase} $          
+  \quad (value from Porter)
+    
+   \quad   else
+   
+   \quad\quad   $	DS\_num = 1.3 $
+      	
+     \quad\quad 	if $CropName = "WinterWheat"$ then 	$DS\_num =1 $
+         
+    \quad\quad  if $Phenology.DS<DS\_num$ then       
+				\begin{align*}
+	%			 reducedGrowth  & =  Phenology.GetfracToFlagLigule() \quad (Correct later)  \\  
+	%			 reducedGrowth  & =  \tfrac{1}{1+Phenology.GetfracToFlagLigule()^{10}} \\
+        % & \\
+         expLeafExt & =  CoeffGreenIdx  \cdot  CAI_g  \cdot  \max(0,temp)\\
+         expL &  =  expLeafExt  \cdot  \min\left(1,\tfrac{TranspRatio}{0.6}\right)  \cdot   \tfrac{1}{1+Phenology.GetfracToFlagLigule()^{10}}  \\ 
+         dmL  &  =  LAIDMRatio  \cdot  DMVegTop - CAI_g \\
+         NL   &  =    LAINitrogenRatio  \cdot  NitrogenInVegTop()  - CAI_g \\
+         pot\Delta GLAI  & =  \max(0,GLAI_{max}Crop-CAI_g) \\
+         & \\         
+         \mathbf{\Delta GLAI} & =  \min\left(expL, dmL, NL, pot\Delta GLAI\right) \quad 
+\text{ \citep{olesen2002crop,olesen2004simulation}}\\
+         CAI_g & =  CAI_g + \Delta GLAI 
+        \end{align*}
+     %   
+      
+ if $Phenology.LeafSenesence() > 0$ or  $temp < 0$ then
+         %
+    
+   $senescense = \begin{cases} \tfrac{Phenology.LeafSenesence()}{1-MinimumSenescense} & \text{ if } temp \ge 0 \\ 
+  \tfrac{0.05}{1-MinimumSenescense} & \text{ if } temp < 0 
+ \end{cases} $
+  \begin{align*}
+   \Delta CAIg  = & -\max(0,senescense  \cdot  GLAI_{max}   \cdot  (1-TranspRatio  \cdot  MinimumSenescense))
+  \end{align*}
+            if $CAI_y \ge 0 $ or  $CAI_g \ge 0 $ then $ CAI_g = CAI_g + \Delta CAIg $         
+                       	
+           if $CAI_g < 0$ then 
+
+              \quad $\Delta CAIg = \Delta CAIg - CAI_g $,            
+               $CAI_g = 0$, $CAI_y = CAI_y- \Delta CAIg  \cdot  Conversfactor$
+             
+
+\minisec{LAfrac(height)} \mymarginpar{LAIDistributionPar}
+   leaf area frac below a certain height h.  
+   \citep{olesen2004simulation}.  $a=LAIDistributionPar$
+  
+  $ LAfrac(h) = 
+   \begin{cases}
+   0 & \text{if } PlantHeight =0 \\
+   1 & \text{if }  h \ge PlantHeight \\
+    (a+1)  \cdot  (a+2) 
+          \cdot  \tfrac{h^{a+1}}{PlantHeight^{a+1}}  
+          \cdot    \left( \tfrac{1}{a+1}-\tfrac{h}{(a+2)  \cdot  PlantHeight}\right) &
+          \text{ otherwise}
+   \end{cases}     $
+
+SMALL DIFFERENT TO FORMULA IN \citep{olesen2004simulation}
+
+
+\subsubsection*{TotalLAI(height, thickness)}
+the total leaf area index in a certain layer of the canopy
+
+return $(CAI_g+CAI_y)  \cdot  (LAfrac(height+thickness)  - LAfrac(height))$
+
+
+\subsubsection*{GreenLAI(height,thickness)}
+the green leaf area in a specific layer in canopy
+ assuming that the yellow leaves are situated in the lower part of the canopy
+ below the green leaves. h - height.    
+    \begin{align*}    
+   UpperArea  & =  \max(0,(CAI_g+CAI_y)  \cdot  LAfrac(h+thickness)-CAI_y) \\
+  LowerArea  & =  \max(0,(CAI_g+CAI_y)   \cdot  LAfrac(h)-CAI_y)    
+   \end{align*} 
+return $UpperArea-LowerArea$   
+  
+  %  
+%soil information, NumOfLayers and MaxRootDepth
+%
+
+
+\subsection{Nitrogen}
+\minisec{GiveNitrogenResponseCO2()}
+Effect of CO2 on the minimum and maximum concentrations of Nitrogen
+\begin{align*}
+  CO2 & = theClimate.GetCO2Concentration() \\
+GiveNitrogenResponseCO2() & = \max(1,0.6+\tfrac{141}{CO2})   
+\end{align*}  
+
+\minisec{Corrected N Store, Corrected N Root} \mymarginpar{MinN\_Root, MaxN\_Root, MinN\_Store MaxN\_Store}
+The min/max concentration of N in the storage organs/roots as affected by CO2
+
+NCO2 = GiveNitrogenResponseCO2() 
+\begin{align*} 
+MinN\_Store & = NCO2  \cdot  MinN\_Store & MaxN\_Store & = NCO2  \cdot  MaxN\_Store \\ 
+MinN\_Root & = NCO2  \cdot  MinN\_Root & MaxN\_Root & = NCO2  \cdot  MaxN\_Root \\ 
+\end{align*}
+
+\minisec{NMin(), Nmax()}
+Calculate the min/max amount Nitrogen that the crop needs  [\% g N in VegTop/$m^2$]	
+\begin{align*}
+Nmin() = & MinN\_Root  \cdot  DMRoot + MinN\_Store  \cdot  DMStorage
+           + \tfrac{NpctMinVegTop()}{100}   DMVegTop \\
+ Nmax() = &     MaxN\_Root  \cdot  DMRoot  + MaxN\_Store  \cdot  DMStorage 
+          +  \tfrac{NpctMaxVegTop()}{100}  DMVegTop
+	\end{align*}
+	
+	
+\subsubsection*{Parameter for Nitrogen Curves}
+
+\begin{tabular}{lrcrc}
+                           & Nmin              & valid [t/ha] & Nmax &  valid [t/ha] \\ \hline
+Winter Wheat  \citep{justes1994determination} & $2.2   DM^{-0.44}$  &  0.5-1.4  & $8.3   DM^{-0.44}$ & 1.5 - 14\\
+Maize         \citep{plenet1999relationships} & $2.05  DM^{-0.56}$  &  0-22     & $6.30  DM^{-0.42}$ & 0-22 \\
+Maize         \citep{bleken2009spn} & $2.7  DM^{-0.56}$   &   1-?     & $3     DM^{-0.42}$ & 0.75 - ? \\              
+Winter Rape \citep{colnenne1998determination} & $2.07  DM^{-0.17}$  &  0.3-6.9  & $6.18  DM^{-0.21}$ & 0.3-6.9 \\
+Ryegrass      \citep{marino2004nitrogen} & $1.458 DM^{-0.231}$ &    ?       & $6.145 DM^{-0.418}$ & ?
+\end{tabular}             
+      
+	
+
+\subsubsection*{NpctMaxVegTop(), NpctMinVegTop()} 
+\mymarginpar{PowDM, NPctMax, NPctMin, ReducedNInYellow}
+  $ NpctMaxVegTop() =
+  \begin{cases}
+  NPctMax  \cdot  \frac{1.5}{fracofspace}^{PowDM}  & \text{ if $DMVegTop \le 150$}  \\   
+  	 NPctMax  \cdot  \left(\tfrac{DMVegTop}{100  \cdot  fracOfSpace}\right)^{PowDM}   & \text{ if $DMVegTop > 150$} 
+	\end{cases}$
+	
+	$NpctMaxVegTop() = NpctMaxVegTop()  \cdot  GiveNitrogenResponseCO2()$
+ 
+  $ NpctMinVegTop() =
+  \begin{cases}
+  NPctMin  \cdot  \frac{1.5}{fracofspace}^{PowDM}  & \text{ if $DMVegTop \le 150$}  \\   
+  	 NPctMin  \cdot  \left(\tfrac{DMVegTop}{100  \cdot  fracOfSpace}\right)^{PowDM}  & \text{ if $DMVegTop > 150$} 
+	\end{cases}$
+ 
+  $NpctMinVegTop() = NpctMinVegTop()  \cdot  GiveNitrogenResponseCO2()$
+  
+  if $CAI_y > 0$ then  
+  $NpctMaxVegTop =  NpctMaxVegTop  \cdot  \tfrac{ReducedNInYellow  \cdot  CAI_y + CAI_g}{CAI_y + CAI_g} $
+
+  if $CAI_y > 0$ then  
+  $NpctMinVegTop =  NpctMinVegTop  \cdot  \tfrac{ReducedNInYellow  \cdot  CAI_y + CAI_g}{CAI_y + CAI_g} $
+
+
+%Follows the concept of Justes et al. 1994. Annals of Botany 74:397-407.
+%the exsistance of yellow parts reduces the concentration of N in the vegtop
+%\begin{align*}
+%  NpctMinVegTop() & =  NpctVal  \cdot  NCO2 \\
+%  NpctVal & = NPctMin  \cdot  1.5^{PowDM} \\
+%\intertext{if $DMVegTop>150$ then} % \quad (for the green leafs and stem)}
+%	NCO2 & = GiveNitrogenResponseCO2() \\
+%  NpctVal & = NPctMin  \cdot  \left(\tfrac{DMVegTop}{100  \cdot  fracOfSpace}\right)^{PowDM} 
+%\intertext{if $CAI_y > 0$ then}
+% RedFac & = \tfrac{ReducedNInYellow  \cdot  CAI_y+CAI_g}
+%                        {CAI_y+CAI_g} \\
+% NpctVal & = NpctVal  \cdot  RedFac 
+%\end{align*}
+
+%GiveRootLengthList() = RootLengthList
+\subsubsection*{NitrogenDemand()} \mymarginpar{DS\_StartFill}
+ 	
+ 	if Phenology.GrainFillStart() 
+ 	
+ 	then 	$NitrogenDemand = \tfrac{Phenology.DS-2}{Phenology.DS\_StartFill-2}  \cdot  NitrogenDemand $ 		
+ 	
+ 	else 	$NitrogenDemand= max(0,Nmax()-NitrogenTotal)$ 
+  
+\subsubsection*{NitrogenAndTransp(aNitrogenUptake,aTranspRatio)}
+Adding Nitrogen uptake to the crop and replace Transp Ratio,
+   TranspRatio = aTranspRatio
+   
+   if $TranspRatio<0.5$ and $CAI_y+CAI_g<0.1$ then TranspRatio = 1
+          
+   (corrects problem with Transp the day of germination)
+     
+   if $aNitrogenUptake.n > 1e-15$ then
+   \begin{align*}
+      NitrogenTotal & = NitrogenTotal + aNitrogenUptake \\
+      AccumulatedNProduction & = AccumulatedNProduction + aNitrogenUptake 
+   \end{align*}
+   %   
+      Nbudget.AddInput(aNitrogenUptake.n,                  
+    N15budget.AddInput(aNitrogenUptake.n15)
+
+   
+  
+  
+\subsubsection*{NitrogenInRoot(), NitrogenInStorage(), NitrogenInVegTop(), GiveTotalNitrogen() }
+		\begin{align*}		
+  NitrogenInRoot & =  (MinN\_Root +fNitrogen()  \cdot  (MaxN\_Root -MinN\_Root))  \cdot  DMRoot   \\
+  NitrogenInStorage & =  (MinN\_Store + fNitrogen()  \cdot  (MaxN\_Store-MinN\_Store))  \cdot   DMStorage  
+  \end{align*}  
+%
+  %$ N15Ratio =  Nitrogen.Get15NRatio()$
+  %$ SetBoth(NContent,N15Ratio  \cdot  NContent) $ 
+  %$SetBoth(NContent,N15Ratio  \cdot  NContent) $
+  %
+Calculate how much Nitrogen that are in the top plant that is not planed for usage
+	\begin{align*}
+	NitrogenInVegTop() & = TotalNitrogen-NitrogenInRoot()-NitrogenInStorage()  
+  \end{align*}   
+  $GiveTotalNitrogen() = NitrogenTotal$ 
+ 
+\subsubsection*{fNitrogen()}
+\citep{olesen2002crop} nitrogen nutrition index (NNI). 
+returns a factor that describe how much N is 
+in each part of the plant
+	
+  if not $Phenology.Ripe()$ and $Nmax()>Nmin()$ then     
+ 
+   return  %\max\left(0,\min\left(1,
+$\tfrac{NitrogenTotal-Nmin()}{Nmax()-Nmin()}$
+                 % \right)\right)   
+ 
+\subsection{Root}
+
+%\minisec{RootPenetrationReduction()}
+
+\minisec{CalcRootDensAtSurf(RootDistrParm,RootDepth,RootDensAtBottom)}
+$ a =  \tfrac{1-\exp(-RootDistrParm  \cdot  RootDepth)}{RootDistrParm} 
+ + 0.5  \cdot  0.3 RootDepth  \exp(-RootDistrParm  \cdot  RootDepth) $    
+    
+return $\begin{cases} 
+\tfrac{TotalRootLength}{a} & \text{if } a \ne 0 \\
+RootDensAtBottom & \text{otherwise}
+\end{cases}$
+  	
+%%% Calc Root Growth %%%%% 
+\subsubsection{CalcRootGrowth()} \mymarginpar{RootPentrRate, 
+SpecificRootLength, RootDistrParm, RootDensAtBottom, TempRootMin, MaxRootDepth} 
+\citep{berntsen2005simulation}
+
+$clay   = aSoil.GetSoilProfile().GetClayContent(250,500) $
+ 
+$\mathbf{RootPenetrationReduction()} = \min\left(1,\max\left(0.5,0.5+(clay-0.02)  \cdot  \tfrac{0.5}{0.08-0.02}\right)\right) $
+
+DIFFERENT FORMULA IN \citep{berntsen2005simulation}
+
+if Phenology.Sown()
+ 
+\quad		if $temp>TempRootMin$
+		\begin{align*}
+   RootDepth & =  \min(MaxRootDepth,  RootDepth + RootPentrRate \\ 
+            & \quad  \cdot  RootPenetrationReduction()  \cdot  (temp-TempRootMin)) 
+    \end{align*}
+    %
+    \begin{align*}       
+	TotalRootLength  =& DMRoot  \cdot  SpecificRootLength \\
+	RootDensAtSurf  =& CalcRootDensAtSurf(RootDistrParm,RootDepth,RootDensAtBottom) \\
+  RootDensAtBottom  =& RootDensAtSurf  \cdot  \exp(-RootDistrParm  \cdot  RootDepth)
+ \end{align*}
+ CalcRootDistribution() 
+ 
+ 
+
+%
+  
+
+
+	
+\minisec{CalcRootDistribution()}  
+Updating root each in each layer of the soil.
+ $startdepth=0$,
+ $LThickness = LayerThickness$
+ 	
+for all $i=0 \dots NumOfLayers-1$ do
+        
+  \quad    if $LThickness_i<0$ then
+      $ LThickness_i= \tfrac{aSoil.GetLThickness(i)}{1000} $
+      
+\quad$ RootLengthList_i= 
+   \begin{cases}
+ RootLengthInInterval(startdepth,LThickness_i) & \text{if $LThickness_i>0$} \\
+       0 & \text{otherwise}
+     \end{cases}
+     $     
+          
+\quad    $startdepth = startdepth+ LThickness_i$	
+
+\minisec{RootLengthInInterval(startdepth,thickness)}
+SIMILAR TO \citep{berntsen2005simulation}
+s - startdepth, t - thickness in meter,  Length1  =  Length2  = 0
+
+    if not ($Phenology.Sown()$ and $RootDepth > 0$) then return $0$
+
+    \textbf{Length in exponential curve}
+    \begin{align*} 
+     ExtraRootDepth & = 0.3 \\
+     EndDepth1 & = \min(RootDepth,s+t)  \\
+     EndDepth2 & = \min((1+ExtraRootDepth)  \cdot  RootDepth,s+t) \\
+     s2 & = \max(s,RootDepth)      
+    \end{align*}
+	if $s<RootDepth $ then  \mymarginpar{MinimumRootDens}		
+		\begin{align*}
+			Length1 = & RootDensAtSurf \tfrac{\exp(-RootDistrParm  \cdot  s) 
+			          -   \exp(-RootDistrParm  \cdot  EndDepth1)}{RootDistrParm} \\
+			          &   +  (EndDepth1-s)  \cdot  MinimumRootDens 
+	  \end{align*}
+%
+    \textbf{Length in linear declining curve}
+       
+   	if $s + t > RootDepth$ and $s < (1+ExtraRootDepth)  \cdot  RootDepth$ then
+				
+		\quad  (assuming that root systems extends 30\% further than rootdepth)
+       \begin{align*}
+  DensAtBottom & = RootDensAtSurf  \cdot  (\exp(-RootDistrParm  \cdot  RootDepth))\\
+  Dens1 & = DensAtBottom  \cdot  \left(1-\tfrac{s2-RootDepth}
+  {ExtraRootDepth  \cdot  RootDepth}\right) \\  
+ Dens2 & = DensAtBottom  \cdot  \left(1-\tfrac{EndDepth2-RootDepth}
+ {ExtraRootDepth  \cdot  RootDepth}\right)  \\  	  
+         Length2 & = 0.5  \cdot  (EndDepth2-s2)  \cdot  (Dens1+Dens2)
+         \end{align*}  
+  \textbf{return Length1+Length2}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsubsection*{GiveRootInInterval(startDep, thick, input)}
+
+%Input is either DMRoot or NitrogenInRoot
+  
+ TopOfLayer =
+  BottomOfLayer  =
+  Sum  =
+	0
+	
+	%
+
+ $Total = \sum_{i=0}^{MaxSoilLayers - 1} RootLengthList_i$
+
+	%for all $i$ in $0 \dots MaxSoilLayers - 1$ do $Total = Total + RootLengthList_i $
+
+	for all $i$ in $0 \dots MaxSoilLayers - 1$ do   	
+   	\begin{align*}
+      	TopOfLayer    & = BottomOfLayer \\
+      	BottomOfLayer & = TopOfLayer+0.05
+   	\end{align*}   
+  if $TopOfLayer > startDep$   
+  and $BottomOfLayer < startDep+thick$ then
+   
+          
+  \quad	$Sum += RootLengthList_i$  (Simple case) 
+      	
+    	else if not $TopOfLayer < startDep$ and $	BottomOfLayer> startDep+thick $ then
+      	 	
+   \quad                    
+            $Sum +=  \tfrac{BottomOfLayer-startDep}{0.05}  \cdot  RootLengthList_i$
+(Only bottom of layer is in interval)            
+
+    
+      	else if $TopOfLayer <  startDep$  and not $BottomOfLayer> startDep+thick$ then
+            	
+     \quad                          
+               $Sum +=  \tfrac{startDep+thick-TopOfLayer}{0.05}  \cdot  RootLengthList_i$
+  (Only top of layer is in interval)
+               
+return $Sum  \cdot   \tfrac{input}{Total}$
+
+\subsubsection*{TargetFunction(RootDistrParm,RootDepth,TotalRootLength,RootDensAtBottom)}
+	return $\tfrac{TotalRootLength  \cdot  RootDistrParm}{1-\exp(-RootDistrParm  \cdot  RootDepth)}
+		-\tfrac{RootDensAtBottom}{\exp(-RootDistrParm  \cdot  RootDepth)} $
+
+
+
+
+\subsubsection*{CalcFormParameter(RootDistrParm,RootDepth, TotalRootLength,RootDensAtBottom)}
+
+	iter =0,
+	maxiter  =10000, 
+	MaxDeviation =0.00001,
+	move =  $RootDistrParm  \cdot  0.01 $
+
+	if $move<0$ then $move=-move$
+	 
+	while $fabs(TargetFunction(RootDistrParm,\dots)) > MaxDeviation$ and $iter<maxiter$ 
+	
+	do $iter++$
+
+do ($RootDistrParm = RootDistrParm+move$,  $iter++$)	
+		
+while $TargetFunction(RootDistrParm+move, \dots) < 0$ and $iter < maxiter$  
+
+do  $move=move  \cdot  0.5 $
+		
+do 
+ if $RootDistrParm-move>0$ then $ RootDistrParm = RootDistrParm-move $
+
+ \quad $iter++$
+
+while $TargetFunction(RootDistrParm+move, \dots) < 0$
+
+\quad  and $RootDistrParm-move > 0$  and $iter < maxiter $ 
+
+do
+		$move = move  \cdot  0.5 $
+
+	
+\subsection{Others}	
+  
+\subsubsection*{IrrigationDemand()}  
+\mymarginpar{WaterDeficitVegGrowth, WaterDeficitLagPhase, WaterDeficitGrainFill, LinearLeafPhase}
+Returns true or false. Soil water deficit = 1 - Waterstatus, 
+$MaxWDeficit = 1$
+	
+ if Phenology.Emerged() and 
+
+\quad $Phenology.TempSumForLeaf \ge Phenology.LinearLeafPhase$ then
+ 
+\quad if not Phenology.Anthesis() 
+
+\quad  then  
+$MaxWDeficit = \begin{cases}
+ 	1 & \text{if } month \ge 10 \text{ or } month \le 3 \\
+ WaterDeficitVegGrowth & \text{otherwise}
+   	\end{cases} $     	
+        
+\quad else $MaxWDeficit = 
+         	\begin{cases}
+         	WaterDeficitLagPhase & \text{if not } Phenology.GrainFillStart()  \\       
+         	WaterDeficitGrainFill & \text{otherwise}
+       	\end{cases} 
+       	$ 
+   
+\quad   if aSoil and $MaxWDeficit<1$ and $RootDepth>0$ then
+  
+\quad\quad   	$WaterStatus= 
+   	\tfrac{aSoil.GetAvailWater(0,RootDepth  \cdot  1000)-aSoil.GetWiltCapacity(0,RootDepth  \cdot  1000)}
+   	{aSoil.GetFieldCapacity(0,RootDepth  \cdot  1000)-aSoil.GetWiltCapacity(0,RootDepth  \cdot  1000)}
+     $   
+      
+$IrrigationDemand() = (1-WaterStatus) > MaxWDeficit  $
+
+  
+\subsubsection*{StartBudget()}
+	Nbudget.SetInput(Nitrogen.n), N15budget.SetInput(Nitrogen.n15)
+	
+  DMbudget.SetInput(DMVegTop+DMRoot+DMStorage)
+  
+  Nbudget.SetOutput(0), N15budget.SetOutput(0), DMbudget.SetOutput(0)
+
+
+\subsubsection*{EndBudget(NRemain,DMRemain)}
+ $NRemain=Nitrogen.n,  N15Remain = Nitrogen.n15$
+
+$DMRemain=GiveDMVegTop()+DMRoot + DMStorage+SeedDM$ 
+
+EndBudget(NRemain,DMRemain) = N15budget.Balance(N15Remain)
+
+
+   
+   
+\subsubsection*{Harvest(Storage, Straw)} 
+\mymarginpar{fracNminInVegTop}
+harvest the current crop. The DM and straw 
+is stored in the input parameters. Nitroget is updated. 
+The plant is still alive.
+
+   CutOrHarvested = true 
+      
+     converting from DM to fresh weight
+	  
+  $Storage.Setamount\left(\tfrac{DMStorage}{Storage.GetDM()}\right)$,   $Straw.Setamount\left(\tfrac{DMVegTop}{Straw.GetDM()}\right) $
+  
+   partition between compartments,  fN =  fNitrogen()
+  \begin{align*}  
+  TotalRootN  & = (MinN\_Root +fN  \cdot  (MaxN\_Root-MinN\_Root))   \cdot  DMRoot \\
+  TotStorageN & = (MinN\_Store +fN  \cdot  (MaxN\_Store-MinN\_Store))   \cdot  DMStorage \\
+   N15Ratio   & =  Nitrogen.Get15NRatio()  \\
+   TotalStrawN & =  \left(\tfrac{NpctMinVegTop()}{100} + fN  \cdot  \tfrac{NpctMaxVegTop()-NpctMinVegTop()}{100}\right)  \cdot  DMVegTop \\
+   dNrest & = NitrogenTotal - TotalRootN - TotStorageN - TotalStrawN 
+\end{align*}
+   rest of N is allocated to root.
+   if Nrest positive: there is some unallocated N in the plant
+   
+   if $Nrest<-0.01$ or $Nrest>0.01$ then    
+      TotalRootN = TotalRootN+Nrest 
+   
+   $ RootN.SetBoth(TotalRootN,N15Ratio  \cdot  TotalRootN) $
+   
+  $ StorageN.SetBoth(TotStorageN,N15Ratio  \cdot  TotStorageN)$
+    
+   StrawN = Nitrogen - RootN - StorageN 
+   
+   if $Storage.GetAmount()>0$ then      
+   $	Storage.SetorgN\_content\left(\tfrac{StorageN}{Storage.GetAmount()}\right) $
+   	
+  if $Straw.GetAmount()>0$
+  
+  \quad $	Straw.SetNO3\_content\left(
+        \tfrac{StrawN}{Straw.GetAmount()}  \cdot  (0.5  \cdot  fracNminInVegTop)\right)$
+        
+   \quad  $ Straw.SetNH4\_content\left(
+        \tfrac{StrawN}{Straw.GetAmount()}  \cdot  (0.5  \cdot  fracNminInVegTop)\right)$
+        
+  \quad  $  Straw.SetorgN\_content\left(
+        \tfrac{StrawN}{Straw.GetAmount()}  \cdot  (1-fracNminInVegTop)\right)$
+ 
+$	NitrogenTotal = NitrogenTotal-StorageN-StrawN$
+
+   Nbudget.AddOutput($StorageN.n+StrawN.n$) 
+                     
+  N15budget.AddOutput($StorageN.n15+StrawN.n15$)
+                     
+ DMbudget.AddOutput($DMVegTop+DMStorage$)   
+
+	$DMVegTop   = 
+	DMStorage   = 
+	CAI_g  = 
+	CAI_y  = 0 $
+	
+   $PlantHeight = 0$ (Modify to real cutting height!),   
+ $ topMatter = NULL$ 
+	
+  EndBudget(NRemain,DMRemain) 
+  
+\subsubsection*{Terminate(Straw,DeadRoot,RootLengthList)} 
+\mymarginpar{fracNminInVegTop, fracNminInRoots}
+Kills the plant. The length and amount of the root and amount of straw is returned
+ 
+   if $DMVegTop+DMStorage>0$ then
+    $ Straw.Setamount\left(\tfrac{DMVegTop+DMStorage}{Straw.GetDM()}\right) $
+
+	  $ StrawN = NitrogenTotal - NitrogenInRoot() $
+	   
+	  if $Straw.GetAmount()>0$ then
+	   
+		\quad	  $ Straw.SetNO3\_content\left(
+			     \tfrac{StrawN}{Straw.GetAmount()}  \cdot  (0.5  \cdot  fracNminInVegTop)\right) $
+			     
+     \quad  $  Straw.SetNH4\_content\left(
+           \tfrac{StrawN}{Straw.GetAmount()}  \cdot  (0.5  \cdot  fracNminInVegTop)\right) $
+           
+     \quad $   Straw.SetorgN\_content\left( 
+           \tfrac{StrawN}{Straw.GetAmount()}  \cdot  (1-fracNminInVegTop)\right) $
+ 	  	  
+ 	 $  NitrogenTotal = NitrogenTotal-StrawN $
+ 
+   $RootLengthList= GiveRootLengthList()$
+    
+   $DeadRoot.Setamount\left(\tfrac{DMRoot}{DeadRoot.GetDM()}\right) $
+   
+   if $DMRoot>0$  then 
+  
+ \quad $ 	DeadRoot.SetNH4\_content(
+   	  \tfrac{NitrogenTotal}{DeadRoot.GetAmount()}  \cdot  0.5  \cdot  fracNminInRoots) $
+ 
+  \quad $ 	DeadRoot.SetNO3\_content(
+   	  \tfrac{NitrogenTotal}{DeadRoot.GetAmount()}  \cdot  0.5  \cdot  fracNminInRoots) $
+ 
+ \quad $ 	DeadRoot.SetorgN\_content(
+   	   \tfrac{NitrogenTotal}{DeadRoot.GetAmount()}  \cdot  (1 - fracNminInRoots)) $
+ 
+Nbudget.AddOutput(Nitrogen.n),                
+N15budget.AddOutput(Nitrogen.n15)
+
+DMbudget.AddOutput(DMRoot) 	
+
+	RootDensAtSurf = 
+	TotalRootLength  = 
+	RootDepth      = 
+	DMRoot   = 
+   PlantHeight     = 0
+   
+   terminated      = true  
+
+
+
+\textbf{SetRUEfactor(f)}
+Scales the radiation use efficiency according to crop rotation and
+pesticide use. Calling this function should remain optional.
+
+$MaxRadUseEff = MaxRadUseEff  \cdot  f$
+
+Calculate how much water evaporates \citep{olesen2000sensitivity}.
+   
+$\mathbf{GiveEvapFactor()} = 1+0.02  \cdot  (CAI_g+CAI_y) $
+
+$\mathbf{InterceptionCapacity()} = InterceptCoeff  \cdot  (CAI_g+CAI_y)$  \mymarginpar{InterceptCoeff}
+
+\minisec{AssignRootParameters(CropSoil)}
+  \begin{align*}
+   aSoil       & = CropSoil \\
+   NumOfLayers & = \min(aSoil.GetLayers(), MaxSoilLayers) \\
+	MaxRootDepth & = \min\left(\tfrac{aSoil.GetMaxRootDepth()}{1000},MaxRootDepthCrop\right)
+	\end{align*}
+
+\minisec{MaxTransferable()}
+$Nsurplus = NitrogenTotal-Nmin()$, $MaxTransferable() = \tfrac{Nsurplus}{MinN\_Store}$   
+
+\textbf{SetDSAfterCut()}: DS = 0.05 
+
+
+\section{Plant - Clover}
+
+
+\subsection{cropClover(const cropClover acrop) : cropRyegrass(acrop)}
+
+  $MaxFixPerDM=acrop.MaxFixPerDM$
+
+  $DMCostPerN=acrop.DMCostPerN$
+
+  $NFixationThisDay=acrop.NFixationThisDay$
+
+
+\subsection{Add(crop aCrop, frac)}
+
+   $cropRyegrass.Add(aCrop,frac)$
+
+   $cropClover c = (cropClover) aCrop$
+
+   $MaxFixPerDM=(1-frac)  \cdot  MaxFixPerDM + frac  \cdot  c.MaxFixPerDM$
+
+   $DMCostPerN=(1-frac)  \cdot  DMCostPerN + frac  \cdot  c.DMCostPerN$
+
+   $NFixationThisDay=(1-frac)  \cdot  NFixationThisDay + frac  \cdot  c.NFixationThisDay$
+
+
+\subsection{CalcPotentialNFixation(dDryMatt)}
+
+   (estimated that fix first starts after 20 days with 10 \textdegree C (Crush: Nitrogen fixation))
+
+   if $Phenology.TempSumForLeaf<200$ then  return $0$                          
+ 	
+
+   $fTemp = 1$  
+                                          
+   (Temp response from \citet[]{wu1999simulation})
+
+   Response of N fixation to soil Temp  \citep{liu2011models}
+  
+   $ftemp = \begin{cases}
+             \max\left(0,min\left(1,\tfrac{30-temp}{4}\right)\right) & \text{ if temp > 26} \\
+             \max\left(0,min\left(1,\tfrac{temp-9}{4}\right)\right)  & \text{ otherwise}
+            \end{cases}$
+
+   return $dDryMatt  \cdot  MaxFixPerDM  \cdot  fTemp$
+
+
+\subsection{NitrogenAndTranspiration(aNitrogenUptake, aTranspirationRatio)}
+
+
+   $TranspirationRatio = aTranspirationRatio$
+
+   if $TranspirationRatio<0.5$  and  $YellowCAI+GreenCAI<0.01$  then
+
+   \quad (corrects problem with transpiration the day of germination)
+
+   \quad $TranspirationRatio = 1$
+
+   if $aNitrogenUptake.n>1e-15$ then
+
+     \quad  $Nitrogen += aNitrogenUptake$, $AccumulatedNProduction += aNitrogenUptake$
+
+     \quad $Nbudget.AddInput((aNitrogenUptake).n)$,     
+      $N15budget.AddInput((aNitrogenUptake).n15)$
+   
+   if $aNitrogenUptake.n<0$ then
+
+      \quad warn("cropClover.NitrogenAndTranspiration - nitrogen uptake is negative")
+   
+   $dDM =  \Delta DMer()$
+
+   $PotNFix   = CalcPotentialNFixation(dDM)$
+
+   $NFixationThisDay = min(NitrogenDemand(),PotNFix)$
+
+   if $NFixationThisDay>0$ then
+ $Nfix.SetBoth(NFixationThisDay,0)$                   
+
+\quad (IMPROVE THIS TO ACCOUNT FOR REAL DISTRIBUTION OF N15!)
+
+\quad $Nitrogen = Nitrogen + Nfix$
+
+    \quad   $DMCost = NFixationThisDay  \cdot  DMCostPerN$
+
+     \quad  $DMRoot   -= DMCost  \cdot  fracToRoot()$
+
+      \quad $AgeClassTop_0 -= DMCost  \cdot  (1-fracToRoot())$
+
+     \quad  $DMbudget.AddOutput(DMCost)$
+   
+\quad $AccumulatedNProduction += Nfix$
+
+   \quad $Nbudget.AddInput((Nfix).n)$,  
+  $N15budget.AddInput((Nfix).n15)$
+
+   \quad $AccumulatedNFixation += NFixationThisDay$
+  
+   else
+
+\quad $NFixationThisDay=0$
+
+
+\section{Plant - Ryegrass}
+
+
+%cropRyegrass.cropRyegrass(const char aName, const int aIndex, const base aOwner, string cropName )
+%             :crop(aName,aIndex,aOwner, cropName)
+%
+% //  For complete nomenclature see base class 'crop'
+
+%   PlantItemName  = "RYEGRASS"         //  No primarly harvest item
+%   StrawItemName  = "RYEGRASS"         //  These names maps to products.dat !
+%   WinterSeed     = true               //  Is the present crop a wintercrop.
+%   GrowthContinue = true
+%   HasBeenCut = false
+%	grazableDM=0
+%   grazableN = 0
+
+ %  // ---- Parameters -----------------------------------------------------------
+
+
+% 	// Dry matter accumulation
+
+
+%   commonData  \cdot  data=globalSettings.CropInformation
+%   data.FindItem("\minDayLength",&\minDayLength)
+
+%	//  DM allocation
+%   //  Parameters below adjusted so that the total carbon flow matches data from Paustian et al. 1990. J. Appl. Ecol., 27, 60-84
+
+%   data.FindItem("RespirationRoot",&RespirationRoot) //  Root respiration given as a daily frac of DM at 10 deg. Celsius, Calibrated to Burreh?jvej data
+   
+%data.FindItem("RespirationTop",&RespirationTop)   //  Top respiration given as a daily frac of DM at 10 deg. Celsius
+
+%   data.FindItem("TransferRate",&TransferRate) //  frac (Temp-dependend) of the four age pools that is transferred to subsequent frac
+
+%   data.FindItem("BulkDensity",&BulkDensity)   //  g DM/m3 standing crop - guesstimated
+
+%   data.FindItem("Recyclefrac",&Recyclefrac)
+
+
+%   //  LAI and canopy structure
+
+%   data.FindItem("InitialLAIIncrease",&InitialLAIIncrease)
+
+ %  data.FindItem("liveOMD",&liveOMD)       	//  Digestibility of first 3 age classes
+
+%   data.FindItem("deadOMD",&deadOMD)       	//  Digestibility of last age class
+
+%   data.FindItem("RateOfRipeReSeed",&RateOfRipeReSeed)
+
+
+
+ %    		// Rate of storage reseeding
+
+%   //  Relative availability of ages classes, according to the values for
+%   //  Thornleys age classes of leaves.
+%   //  Note that Thornleys age class avalabilities for sheth + stem all are unity!!!
+%
+%   $uptakeWeight_0 = 1$, $uptakeWeight_1 = 0.75$, $uptakeWeight_2 = 0.5$, $uptakeWeight_3 = 0.25$
+%
+%   Nbudget.SetNames(CropName,"N")
+%
+%   DMbudget.SetNames(CropName,"DM")
+%
+%   //  State variables ----------------------------------------------------------
+%   TempSumAfterCut = 0                                             //  Temp sum after last cut
+%   CutDelay = 0    
+%                                                       //  The Temp sum nessecary for obtaining 0.5 LAI after a cut
+%   for(int i=0i<4i++)
+%   
+%   \quad grazedDM_i=0
+%
+%   \quad AgeClassTop_i=0
+%   
+%   ReSeedDM = 0
+
+
+
+%cropRyegrass.cropRyegrass(const cropRyegrass& acrop)
+%   : crop(acrop)
+%{
+%   BulkDensity            = acrop.BulkDensity
+%   RespirationTop         = acrop.RespirationTop
+%   RespirationRoot        = acrop.RespirationRoot
+%   TransferRate           = acrop.TransferRate
+%   Recyclefrac        = acrop.Recyclefrac
+%   TempSumAfterCut = acrop.TempSumAfterCut
+%   CutDelay               = acrop.CutDelay
+%   liveOMD                = acrop.liveOMD
+%   deadOMD                = acrop.deadOMD
+%   grazableDM             = acrop.grazableDM
+%   grazableN              = acrop.grazableN
+%   for (int i=0i<4i++)
+%   {
+%      AgeClassTop_i      = acrop.AgeClassTop_i%	  
+% grazedDM_i         = acrop.grazedDM_i
+%      uptakeWeight_i     = acrop.uptakeWeight_i
+%   }
+% }
+
+
+
+\subsection{Add(aCrop, frac)}
+
+   crop.Add(aCrop,frac)
+
+  $ cropRyegrass  \cdot  c = (cropRyegrass \cdot )aCrop$
+
+  $ BulkDensity            =(1-frac) \cdot BulkDensity + frac \cdot c.BulkDensity$
+  
+ $RespirationTop         =(1-frac) \cdot RespirationTop + frac \cdot c.RespirationTop$
+
+  $ RespirationRoot        =(1-frac) \cdot RespirationRoot + frac \cdot c.RespirationRoot$
+
+  $ TransferRate           =(1-frac) \cdot TransferRate + frac \cdot c.TransferRate$
+
+   $Recyclefrac        =(1-frac) \cdot Recyclefrac + frac \cdot c.Recyclefrac$
+
+   $TempSumAfterCut =(1-frac) \cdot TempSumAfterCut + frac \cdot c.TempSumAfterCut$
+
+  $ CutDelay               =(1-frac) \cdot CutDelay + frac \cdot c.CutDelay$
+ 
+  for (int i=0i<4i++)
+
+\quad       $AgeClassTop_i=(1-frac) \cdot AgeClassTop_i+frac \cdot c.AgeClassTop_i$
+
+\quad 	   $grazedDM_i=(1-frac) \cdot grazedDM_i+frac \cdot c.grazedDM_i$
+
+ \quad     $ uptakeWeight_i     = (1-frac) \cdot uptakeWeight_i+frac \cdot c.uptakeWeight_i$
+   
+
+
+
+%cropRyegrass  \cdot  cropRyegrass.clone()
+%{
+%   cropRyegrass \cdot  aClone = new cropRyegrass( \cdot this)
+%   return aClone
+%}
+
+
+
+
+
+\subsection{GrazeOrCut(decomposable Hay,fracLeft,graze)}
+
+\citep[Eq. 12]{berntsen2005simulation}
+
+An externally given cutting height should replace fracLeft !!!
+JBE implemented this 
+
+   warn("cropRyegrass.GrazeOrCut should never be called - use cropRyegrass.Cut instead.")
+  
+ $CutOrHarvested = true$
+
+   $PlantHeight = PlantHeight \cdot fracLeft$
+
+   if $GiveDMVegTop() \le 0$ then
+
+\quad      warn("cropRyegrass.Cut/Graze - vegetative top must be bigger than zero here")
+
+   Hay.Setname(StrawItemName),
+   theProducts.GiveProductInformation(Hay)
+
+   Hay.RemoveWater()
+
+   $aDMInVegTop = GiveDMVegTop()$
+
+   $nitrogen aNitrogenInVegTop = NitrogenInVegTop()$
+
+   if $aDMInVegTop > 0$ then
+  
+\quad 		Hay.Setamount($aDMInVegTop \cdot (1-fracLeft)$)
+      
+\quad $Hay.SetorgN\_content(\tfrac{aNitrogenInVegTop}{aDMInVegTop \cdot (1-fracLeft)}$)   
+   
+   else
+   
+\quad 	warn("RyeGrass. Nothing to cut/graze")
+
+
+   $WeightedAverage = 0 $                      
+
+ //  JB implemented the selectively grazing 6/9/2002
+  
+ $IntakeSelectivity [] = \{0.4,0.3,0.2,0.1\}$
+
+\#ifdef BIOMODTEST
+
+if $ not graze$ then
+   
+  \quad    $ TempSumAfterCut = 0   $                 
+      
+\quad  $CutDelay = 300 \cdot DMTotalStandVegTop  \cdot \tfrac{1-fracLeft}{350} $     
+\citep[Eq. 12]{berntsen2005simulation}
+
+
+      
+\quad  for (int i=0i<4i++) $IntakeSelectivity\_i = 0.25$
+   
+\#endif
+  
+      $nitrogen HayN =  Hay.GetorgN_content()  \cdot  Hay.GetAmount()$
+
+   $Nitrogen = Nitrogen - HayN$
+
+  $ RemoveDM = (1-fracLeft)  \cdot  GiveDMVegTop()$       //  DM to remove
+	
+Removed = RemoveDM
+	
+while $Removed>1e-10$ do
+    
+
+  \quad 	$WeightedAverage += \sum_{i=0}^3 IntakeSelectivity_i \cdot AgeClassTop_i$
+
+   \quad 	for (int i=0i<4i++)
+   	
+  \quad  \quad       $DMRemove = \min\left(AgeClassTop_i,RemoveDM \cdot IntakeSelectivity_i 
+  \cdot \tfrac{AgeClassTop_i}{WeightedAverage}\right)$
+
+   \quad \quad 		$AgeClassTop_i -= DMRemove$
+
+  \quad  \quad       $Removed -= DMRemove$
+   	
+   \quad    $RemoveDM = Removed$
+  
+
+   $DMVegTop=GiveDMVegTop() $      //  updates DMvegtop
+
+   $CalcLeafAreaIndices()$
+
+   Nbudget.AddOutput(HayN.n), N15budget.AddOutput(HayN.n15),
+
+   DMbudget.AddOutput(Hay.GetAmount())
+  
+   EndBudget(NRemain,DMRemain),
+   HasBeenCut=true
+
+   Phenology.SetDSAfterCut()
+
+
+
+
+
+
+
+
+
+\subsection{RootDecay(RootTranslocation)}
+
+   crop.RootDecay(RootTranslocation),
+   RootRespiration = 0
+
+   //  Root respiration
+
+   if $DMRoot>0$  and  $temp>0$ then
+   
+  \quad     SoilTemp=aSoil.GetTemp(200)
+
+   \quad    $RootRespiration  = DMRoot \cdot RespirationRoot \cdot TempEffect(SoilTemp)$
+
+   \quad    DMRoot -= RootRespiration
+
+   \quad    DMbudget.AddOutput(RootRespiration)
+
+   \quad    AccumulatedRootRespiration += RootRespiration
+
+    \quad   AccumulatedDMProduction -= RootRespiration         
+
+//  Respiration are not included in this budget!
+
+   \quad    RootTranslocation -=  RootRespiration   
+   
+   minimumN = Nmin(), maximumN = Nmax()
+
+   if $DMStorage + DMRoot + DMVegTop > 0$  and  $Nitrogen.n > 0.5$ then
+  
+ 	if $minimumN > Nitrogen.n  \cdot  1.25$ then 
+
+   	\quad\quad	warn("crop.RootDecay - not enough nitrogen in plant")
+   	
+   	\quad  if $maximumN < Nitrogen.n  \cdot  0.75$ then 	
+
+	 \quad\quad 	warn("crop.RootDecay - too much nitrogen in plant")
+    
+  
+
+
+
+
+
+\subsection{TopRespiration()}
+\citep[Eq. 11]{berntsen2005simulation}
+
+   $topRespiration=0$
+
+
+
+   RespirationClass[] = \{1,1,0.75,0.5\}      
+
+	for (int i=0i<4i++)
+   
+
+   \quad   $RespCoeff = RespirationClass_i \cdot RespirationTop \cdot TempEffect(temp)$
+
+   \quad   $r=AgeClassTop_i \cdot RespCoeff$
+
+    \quad  $AgeClassTop_i -= r$,
+    $topRespiration += r$
+  
+   DMbudget.AddOutput(topRespiration)
+
+   AccumulatedDMProduction -= topRespiration
+
+   minimumN = Nmin(), maximumN = Nmax()
+
+   if $DMStorage + DMRoot + DMVegTop > 0 $
+and $Nitrogen.n > 0.5$ then
+  
+   \quad if $minimumN > Nitrogen.n  \cdot  1.25$ then
+   	
+
+   \quad\quad   	warn("crop.TopRespiration - not enough nitrogen in plant")
+   	
+  \quad 	if $maximumN < Nitrogen.n  \cdot  0.75$
+   	
+ 
+\quad\quad	   	warn("crop.TopRespiration - too much nitrogen in plant")
+   	
+  
+
+   return topRespiration
+
+
+
+\subsection{UpdateAgeClasses(deltaDM)}
+
+
+
+   ReducFac = 1
+
+   grazableDM =GetAvailableDM(0)
+
+   $	grazableN = \begin{cases}
+           GetAvailableN(0) & \text{ if } grazableDM>0 \\
+   	                 0  & \text{ otherwise}
+   	            \end{cases}$
+
+   if $YellowCAI+GreenCAI > 0$ then
+
+   \quad 	$ReducFac = \tfrac{ReducedNInYellow \cdot YellowCAI+GreenCAI}{YellowCAI+GreenCAI}$
+   
+   aNitrogenInVegTop = NitrogenInVegTop()
+
+   aDMVegTop = GiveDMVegTop()
+
+if $topMatter \ne NULL$ then delete topMatter, topMatter=NULL
+  
+   $T=TransferRate \cdot TempEffect(temp)$
+
+  $ transfer_0=\Delta DM$,
+   $transfer_1=2 \cdot T \cdot AgeClassTop_0$
+
+   $transfer_2=T \cdot AgeClassTop_1$,
+  $ transfer_3=T \cdot AgeClassTop_2$
+
+   RF = Recyclefrac
+
+   if Phenology.Anthesis() then $RF = 0.5 \cdot Recyclefrac$
+
+
+   $senescenceDM= (1-RF) \cdot T \cdot AgeClassTop_3$
+
+   if $Phenology.DS > 1.5$ then $senescenceDM = T \cdot GiveDMVegTop()$
+
+   $recycledDM=RF \cdot T \cdot AgeClassTop_3$
+
+  $ transfer_0+=recycledDM  $
+
+   if $senescenceDM>0$ then
+
+ \quad  	$NConcentrationInYellow = ReducedNInYellow \cdot \tfrac{aNitrogenInVegTop.n}{aDMVegTop/ReducFac} $
+
+
+\quad  // 		$TotalLostN = NConcentrationInYellow \cdot (1-RF) \cdot senescenceDM$
+
+\quad 		$TotalLostN = NConcentrationInYellow \cdot senescenceDM$
+
+ \quad      $ senescenceN.SetBoth(TotalLostN \cdot (1-Nitrogen.Get15NRatio()),TotalLostN \cdot Nitrogen.Get15NRatio())$
+
+ \quad      if $senescenceN.n<0$ then
+   	
+
+ \quad   \quad    warn("cropRyeGrass. negative N loss"),  senescenceN.Clear()
+     
+
+ \quad      //  Transfer DM and N senesced to "topMatter"
+
+\quad       topMatter=new decomposable
+
+ \quad      topMatter.Setname("RYEGRASS")
+
+\quad       theProducts.GiveProductInformation(topMatter)
+
+ \quad    	topMatter.Setamount($0.01 \cdot \tfrac{senescenceDM}{topMatter.GetDM()}$) 
+
+//  Conversion from g/m2 to t/ha
+
+ \quad     $ topMatter.SetorgN\_content(\tfrac{senescenceN}{\tfrac{senescenceDM}{topMatter.GetDM()}})$
+
+ \quad     $ AccumulatedTopDeposit += senescenceDM $    
+
+\quad //  Accumulated top deposition (state variable)
+
+ \quad   	$AccumulatedTopNDeposit = AccumulatedTopNDeposit + senescenceN$
+
+
+  $ AgeClassTop_0+=transfer_0-transfer_1 - grazedDM_0$
+  
+ if $AgeClassTop_0<0$ then
+
+\quad      warn("cropRyeGrass.UpdateAgeClasses - grazing (or transfer) has resultet in negative DM in age class 0")
+ 
+\quad        $AgeClassTop_0=1$ //  Hack!
+ 
+
+  $ AgeClassTop_1+=transfer_1-transfer_2 - grazedDM_1$
+
+   if $AgeClassTop_1<0$ then
+
+ \quad        warn("cropRyeGrass.UpdateAgeClasses - grazing (or transfer) has resultet in negative DM in age class 1")
+
+ \quad       $ AgeClassTop_1=1$ //  Hack!
+
+  $ AgeClassTop_2+=transfer_2-transfer_3 - grazedDM_2$
+
+   if $AgeClassTop_2<0$ then
+
+  \quad       warn("cropRyeGrass.UpdateAgeClasses - grazing (or transfer) has resultet in negative DM in age class 2")
+
+\quad         $AgeClassTop_2=1$ //  Hack!
+
+   $AgeClassTop_3+=transfer_3$
+
+$   transferFromAgeClasses = recycledDM + senescenceDM + grazedDM_3$
+
+   if $transferFromAgeClasses>0$ then
+
+ \quad     	RemoveDMFromOldestAgeClass(transferFromAgeClasses)
+
+   if $AgeClassTop_3<0$ then
+
+ \quad        warn("cropRyeGrass.UpdateAgeClasses - grazing (or transfer) has resultet in negative DM in age class 3")
+
+ \quad       $ AgeClassTop_3=1 $ //  Hack!
+
+   // Budget for grazing losses - NJH 13.12.2000
+
+	$totDMGrazed = grazedDM_0 + grazedDM_1 + grazedDM_2 + grazedDM_3$
+
+   NC = 0
+
+   if $grazableDM>1E-3$ then 
+       $ NC = \tfrac{grazableN}{grazableDM}$
+
+  $TotalgrazedN = NC \cdot totDMGrazed $//  To correct for changed conditions relative to corresponding prior step
+
+   grazedN.SetBoth($TotalgrazedN \cdot (1-Nitrogen.Get15NRatio())$,
+
+   \quad  $TotalgrazedN \cdot Nitrogen.Get15NRatio()$)
+
+   nitrogen lostN=senescenceN + grazedN,
+   lostDM=senescenceDM + totDMGrazed
+
+   Nitrogen = Nitrogen - lostN
+
+   Nbudget.AddOutput(lostN.n),
+   N15budget.AddOutput(lostN.n15)
+
+   DMbudget.AddOutput(lostDM)
+
+   if (Nitrogen.n<0)
+
+ \quad        warn("cropRyeGrass.UpdateAgeClasses - grazing has resultet in negative N")
+
+  \quad      $ Nitrogen.n=0.1 $ //  Hack!
+
+   /* zero grazedDM and grazedN 
+
+   Now reset in ClearTemporaryVariables, called from grazing\_manager\_class
+
+   for(int i=0i<4i++)  $grazedDM_i = 0$
+
+    */
+
+   EndBudget(N,DM)
+
+   return $\Delta DM-lostDM$
+
+
+
+\subsection{GiveDMVegTop()}
+   $retVal = \sum_{i=0}^3 AgeClassTop_i$
+
+   if $retVal<0$ then
+      warn("cropRyegrass.GiveDMVegTop - negative dry matter")
+
+   return retVal
+
+\subsection{CalcLeafAreaIndices()}
+
+\textbf{DeadDMTop()} = $ 0.5 \cdot AgeClassTop_3$
+
+   if $Phenology.Emerged()$  and  $GiveDMVegTop()-DeadDMTop()>0$ then
+	
+\quad   	   if $Phenology.TempSumForLeaf \le Phenology.LinearLeafPhase$ then
+
+ \quad  \quad      $GreenCAI =  InitialCAI \cdot RelativeDensity$ 
+
+\quad  \quad \quad  \quad   $\tfrac{Phenology.TempSumForLeaf}{Phenology.LinearLeafPhase} $  (value from Porter)
+    
+  else
+     
+
+\quad    \quad     if HasBeenCut  or  UnderSown then  
+
+\quad    \quad    \quad   //  if the grass has not been cut and is not undersown => more vigorous growth
+
+ \quad   \quad   \quad  $ GreenCAI  = pow(LAIDMRatio \cdot (GiveDMVegTop()-DeadDMTop()),0.726)  $ 
+  
+ \quad   \quad   \quad // this power is from Lemaire: Diagnosis of the n status in crops pp65.
+
+\quad     \quad          else     
+                        
+\quad     \quad  //  if the grass has not been cut and is not undersown => more vigorous growth
+
+  \quad   \quad   \quad            $ GreenCAI  = InitialLAIIncrease $
+
+\quad   \quad   \quad $\cdot pow(LAIDMRatio \cdot (GiveDMVegTop()-DeadDMTop()),0.726) $    //  estimate
+
+  
+
+   else
+\quad   	   $GreenCAI = 0$
+
+   //  JB removed the out-commenting of the cut delay
+
+   if $TempSumAfterCut<CutDelay$  and  $DMTotalStandVegTop>0$ then
+
+ \quad     	$GreenCAI = 0.5 \cdot \tfrac{TempSumAfterCut}{CutDelay}$
+
+\quad \quad  $\cdot GiveDMVegTop()/DMTotalStandVegTop$
+
+   $YellowCAI = LAIDMRatio \cdot DeadDMTop()$
+
+
+\subsection{Update(ActivePar)}
+
+   DailyDMGrowth = 0
+
+//    rootMatter = NULL    NJH pinged this out March 2009
+	
+Rg 	= ActivePar
+  
+ temp = theClimate.tmean
+
+	if $Phenology.Sown()$ then                            //  Never stops
+  
+      if $aSoil = NULL$ then
+         error("cropRyegrass.Update - Invalid soil pointer")
+
+   	soilTemp=aSoil.GetTemp(20)
+
+      DayLength = theClimate.PhotoPeriod()
+
+ //      if $ not Phenology.Anthesis()$  or  $ not UnderSown$ then
+      	Phenology.Update(temp,soilTemp,DayLength)      //  updates phenology
+
+
+		$TempSumRoot += \max(0,temp)$
+
+     $ TempSumAfterCut += \max(0,temp)$
+
+		UpdateHeight()
+
+     $ \Delta DM=\Delta DM()$
+
+      $DailyDMGrowth = \Delta DM$
+
+   	$DMbudget.AddInput(\Delta DM)  $            
+
+      $AccumulatedDMProduction += \Delta DM$
+
+      if $Phenology.TempSumForLeaf \le 200$ then
+     
+   \quad        $ DMTransfer=2 \cdot Topfrac \cdot InitialSeedDM \cdot \tfrac{\max(0,temp)}{Phenology.LinearLeafPhase}$
+   
+ \quad       $ DMTransfer = \min(DMTransfer,SeedDM)$
+
+   \quad        $ SeedDM -= DMTransfer$
+
+   \quad         if $ReSeedDM >0$ then
+        
+    \quad   \quad        	$ReSeedDMTransfer = 2 \cdot Topfrac \cdot InitialSeedDM 
+\cdot \tfrac{\max(0,temp)}{Phenology.LinearLeafPhase}$
+
+    \quad   \quad        	$ReSeedDMTransfer = \min(ReSeedDMTransfer,ReSeedDM)$
+
+     \quad   \quad         $ DMTransfer += ReSeedDMTransfer$
+
+         
+   \quad        $ AgeClassTop_0 += 0.5  DMTransfer$
+
+   \quad      $   DMRoot  += 0.5  DMTransfer$
+     
+
+      $TransferDMToRoot(\Delta DM)$
+
+      CalcRootGrowth()
+
+      	$TransferDMToStorage(\Delta DM)$
+
+      $DeltaDMTop = UpdateAgeClasses(\Delta DM)$
+
+      Respiration = TopRespiration()
+
+      DeltaDMTop -= Respiration,  DailyDMGrowth -= Respiration
+
+      DMVegTop=GiveDMVegTop()
+
+      if (Phenology.Ripe()  or  DayLength < minDayLength) then
+
+     \quad 	RipeSenescence()    //  Still some debugging to do!
+
+      CalcLeafAreaIndices()
+
+
+	
+   return DailyDMGrowth
+
+
+\subsection{RipeSenescence()}
+Ripe senescence including DS setback and loss of grains to topmatter
+
+   Phenology.SetDSAfterCut()
+
+   if $DMStorage> 0$ then
+   
+   \quad	nitrogen aNitrogenInStorage = NitrogenInStorage(),
+   aDMStorage = GiveDMStorage()
+
+\quad		$RSeneStorage=\min(RateOfRipeReSeed \cdot TempEffect(temp) \cdot aDMStorage,$
+
+  \quad\quad                  $aDMStorage)$
+
+   \quad	if $RSeneStorage>0$ then
+   	
+
+   \quad  \quad 	DMStorage -= RSeneStorage 
+
+     \quad  \quad    ReSeedDM += RSeneStorage //  Transfer DM to ReSeedDM
+  
+
+     % // Hvad mere??
+
+
+\subsection{UpdateHeight()}
+
+
+JBE's original formulation, seems to work very well with undersown crops
+
+$PlantHeight = \begin{cases}
+                PlantHeight + \tfrac{\max(0,temp)}{1000} \cdot maxPlantHeight & \text{ if Phenology.Emerged()} \\
+                0 & \text{ otherwise}
+           \end{cases}$
+
+
+ $PlantHeight = \min\left(\min\left(PlantHeight,maxPlantHeight\right),\tfrac{DMTotalStandVegTop}{BulkDensity}\right) $
+
+ But modifiy if DM becomes limiting. Transitions between undersown crops and removal of previous main crop might need later attention !!!
+
+\subsection{TransferDMToStorage(dDryMatt)}
+
+
+	if Phenology.Anthesis()  and  FillFlag = 0 then
+  
+   \quad 	if $TransferableStorage<1E-8$ then
+
+    \quad \quad   	$TransferableStorage = GiveDMVegTop() \cdot StoreForFilling$
+
+     \quad \quad  $TransferableStorage +=  \cdot dDryMatt \cdot FillFactor$
+
+    \quad \quad   TransferedDMToStorage = TransferableStorage
+
+
+
+   
+   if $Phenology.GrainFillStart()$ then
+ 
+   \quad 	FillFlag = 1
+
+    \quad   if $fNitrogen() > 0$ then
+    
+    \quad \quad   	$transfer = \max(0,TransferableStorage \cdot Phenology.GetfracOfGrainFill())$     
+
+\quad \quad  //  linear fill of DM stored during lag phase
+    
+  \quad \quad    RemoveDMFromOldestAgeClass(transfer)
+   
+ \quad \quad     $ DMStorage += transfer+ \cdot dDryMatt \cdot FillFactor \cdot ConversionCoefficient$
+
+
+    \quad \quad		minimumN = Nmin(),
+   		maximumN = Nmax()
+
+     \quad \quad  	if $minimumN > Nitrogen.n + 0.01$ then    
+
+  \quad \quad  // Check nitrogen status and transfer back
+       
+      \quad \quad  \quad     $ transferBack = \max(0,\min(transfer,\tfrac{minimumN - Nitrogen.n}{minN\_Store})$
+
+     \quad \quad \quad     	RemoveDMFromOldestAgeClass(-transferBack)
+
+       \quad \quad \quad   	DMStorage -= transferBack, transfer = transfer - transferBack
+      
+\quad \quad   
+   		if $maximumN < Nitrogen.n - 0.01$     // Check nitrogen status and transfer back
+   		
+    \quad \quad \quad         $transferBack = \max(0,\min(transfer,\tfrac{Nitrogen.n - maximumN}{maxN\_Store})$
+  
+   \quad \quad \quad     	RemoveDMFromOldestAgeClass(-transferBack)
+ 
+    \quad \quad \quad     	DMStorage -= transferBack, transfer = transfer - transferBack
+
+ 	     	
+      \quad \quad   $ DMbudget.AddOutput((dDryMatt \cdot FillFactor) \cdot (1-ConversionCoefficient))$
+   
+  \quad \quad     $dDryMatt =  dDryMatt \cdot (1-FillFactor)$
+    
+  \quad \quad    TransferedDMToStorage -= transfer
+
+
+
+ if (Phenology.GrainFillEnd()  and  TransferedDMToStorage>0)     
+       
+ \quad //  Check to see if all transferable storage is transfered
+  
+\quad      $transfer=\max(0,TransferedDMToStorage)$
+
+\quad   	DMStorage += transfer
+
+\quad      RemoveDMFromOldestAgeClass(transfer)
+
+ \quad     minimumN = Nmin(), 	maximumN = Nmax()
+
+\quad      if $minimumN > Nitrogen.n + 0.01$  then     // Check nitrogen status and transfer back
+     
+\quad\quad        $ transferBack = \max(0,\min(transfer,\tfrac{minimumN - Nitrogen.n}{minN\_Store})$
+
+\quad\quad      	RemoveDMFromOldestAgeClass(-transferBack)
+
+ \quad\quad       	DMStorage -= transferBack,  transfer = transfer - transferBack
+     
+  \quad 	if $maximumN < Nitrogen.n - 0.01$ then   // Check nitrogen status and transfer back
+   	
+ \quad\quad       $ transferBack = \max(0,\min(transfer,\tfrac{Nitrogen.n - maximumN}{maxN\_Store})$
+
+ \quad\quad      $	RemoveDMFromOldestAgeClass(-transferBack)$
+
+  \quad\quad      $DMStorage -= transferBack$,
+       $transfer = transfer - transferBack$
+      
+\quad      TransferedDMToStorage = 0
+
+
+
+
+
+
+\subsection{GiveEvapFactor()}
+   return $1$
+
+%\subsection{GiveCropHeight()}
+%   return $PlantHeight$
+
+
+
+\subsection{RemoveDMFromOldestAgeClass(transferFromAgeClass)}
+Removes DM from oldest ageclass
+
+    remove=0
+
+   for(int i=0i<4i++)
+   
+   \quad $remove=\min(AgeClassTop[3-i],transferFromAgeClass)$
+
+    \quad  AgeClassTop[3-i] -= remove, 
+    transferFromAgeClass -= remove
+   
+
+
+
+
+\subsection{SetGrazed(grazingheight, DMGrazed)}
+Adds an animal's contribution to the patch's grazed material
+Each animal calls this routine if it grazes this patch
+
+   $grazableDM = GetAvailableDM(0)$
+
+   $proportionCut=\tfrac{DMGrazed}{grazableDM}$
+
+   $checkDM=0$
+
+   for(int i=0i<4i++)
+   
+      \quad (Material is removed by grazing in proportion to its contribution to grazable DM)
+
+       \quad if $grazableDM>0$ then
+      
+      	 \quad \quad $grazedDM_i+=proportionCut  \cdot  AgeClassTop_i  \cdot  uptakeWeight_i$
+
+          \quad \quad $checkDM+=grazedDM_i$
+
+   
+
+
+   
+
+\subsection{ClearTemporaryVariables()}
+   for(int i=0i<4i++) do $grazedDM_i=0$
+
+
+
+
+\subsection{Grazing(grazedDM)}  
+	   nitrogen cutN = 0
+
+	   initialDM=GiveDMVegTop()+DMStorage
+
+	  $ proportionCut = \tfrac{grazedDM}{initialDM}$
+
+	   if $proportionCut>1$ then error("cropRyegrass.Grazing - Proportion cut > 1")
+
+	   nitrogen  aNitrogenInVegTop = NitrogenInVegTop()
+	 
+  for(int i=0i<4i++)
+	 
+	 \quad     $ tempDM = proportionCut \cdot AgeClassTop_i$
+
+	  \quad     $AgeClassTop_i-= tempDM $  // cut material
+	 
+      $cutN = aNitrogenInVegTop \cdot proportionCut$
+
+      Nitrogen = Nitrogen-cutN
+
+	   if $DMStorage > 0$ then
+	  
+	    \quad	  nitrogen aNitrogenInStorage=NitrogenInStorage().n
+
+	  \quad  	 $ DMStorage \cdot =(1-proportionCut)$
+
+	  \quad     $aNitrogenInStorage.n \cdot =(1-proportionCut)$
+
+	  \quad     Nitrogen.n -=  aNitrogenInStorage.n
+	  
+
+
+\subsection{Getter}
+
+\minisec{GetGrazedDM()}
+amount of DM grazed during the last period, then zero the values
+
+  return  $\sum_{i=0}^3 grazedDM_i$
+
+
+\minisec{GetAvailableDigestibleDM(residualDM)}
+
+   $retVal=0$, $residualDM/=4$, $tempDM=0$
+
+   for(int i=0i<4i++)
+   
+   \quad $tempDM=AgeClassTop_i  \cdot  uptakeWeight_i - residualDM$
+
+    \quad	if $tempDM>0$ then
+     
+     \quad      \quad if $i<3 $
+
+     \quad      \quad  \quad then $retVal += tempDM  \cdot  liveOMD$
+
+       \quad    \quad  \quad else $retVal += tempDM  \cdot  deadOMD$
+   
+   
+   return $retVal$
+
+
+\minisec{feedItem cropRyegrass.GetAvailability(cutHeight, int animalType)}
+Calculates grazable DM, N,C. Loads information on the available material into myProduct
+Returns amount in g fresh weight/sq metre
+
+$feedItem myProduct = new feedItem((feedItem)theProducts.GetProductElement(465))  $
+
+set product to grass, 100kgN, cut after 2 weeks (N content will be modified)
+
+myProduct.Setamount(0)
+
+   OMD=
+   tempDigest = 
+   grazableDM =
+   grazableN = 0
+
+   $N\_conc = NitrogenInVegTop().n/GiveDMVegTop()$
+
+   $liveOMD = 0.4 + 15.4  \cdot  (N\_conc-0.006)$
+
+   $liveOMD = \begin{cases}
+              0.8 & \text{if $liveOMD>0.8$} \\
+              deadOMD  & \text {if $liveOMD<deadOMD$}
+             \end{cases}$
+
+
+   $grazableDM=GetAvailableDM(0)$
+
+   $tempDigest= GetAvailableDigestibleDM(0)$
+
+   if (grazableDM>0)
+   	
+       \quad    grazableN =GetAvailableN(0)
+
+       \quad    $myProduct.Setamount(\tfrac{grazableDM}{myProduct.GetDM()})$
+
+        \quad   $myProduct.SetorgN\_content(grazableN/myProduct.GetAmount())$
+
+  
+        
+         \quad     if $animalType=1$ then
+           
+         \quad   \quad     $ OMD=\tfrac{tempDigest}{grazableDM}$,
+               myProduct.SetOMD(OMD),
+           myProduct.CalcME()
+
+         \quad    \quad     myProduct.CalcFE(),
+          myProduct.CalcFill(2)
+
+        \quad       \quad   $MEPerKg = 0.16 \cdot myProduct.GetOMD() \cdot 100 - 1.8$  //  from SCA 1990
+
+        \quad    \quad      $myProduct.SetME(MEPerKg  \cdot  myProduct.GetDM())$
+
+       \quad         
+       \quad      
+
+       \quad       else 
+
+ \quad    \quad    error("cropRyegrass.GetAvailability - not an allowed animal type")
+
+      \quad           
+       
+
+	return myProduct
+
+
+
+
+
+\minisec{GetAvailableStandingDM(cutHeight,bool useUptakeWeight)}
+
+Returns DM above the 'cut height'
+
+
+   $grazableDM = 0$
+
+   for(int i=0i<4i++)
+   
+    \quad  $temp\_height=PlantHeight$, $cutH=\\max(cutHeight,0.01)$
+
+    \quad $proportionCut= \begin{cases}
+               \tfrac{temp\_height - cutH}{temp\_height} &   \text{ if } temp\_height>cutH \\
+               0 & \text{ otherwise}        \end{cases}$
+
+    \quad    w=1
+
+    \quad if useUptakeWeight then  $ w=uptakeWeight_i$
+
+    \quad  $tempDM=proportionCut  \cdot  AgeClassTop_i  \cdot  w$
+     
+    \quad   $grazableDM +=tempDM$
+ 
+   return $grazableDM$
+
+
+\minisec{GetAvailableDM(residualDM)}
+
+   $retVal=0$, $residualDM/=4$, $tempDM=0$
+
+   for(int i=0i<4i++)
+  
+   \quad $tempDM=AgeClassTop_i  \cdot  uptakeWeight_i - residualDM$
+
+   \quad if $tempDM>0$ then $retVal+=tempDM$
+  
+   return $retVal$
+
+
+
+\minisec{GetAvailableN(residualDM)}
+ 
+   availDM = GetAvailableDM(residualDM)
+
+   return $\tfrac{availDM}{GiveDMVegTop()}  \cdot  NitrogenInStorage().n + NitrogenInVegTop().n$
+
+
+\subsection{Cut(plantItem cutPlantMaterial, cutheight)}
+
+Cut and return a plantItem. returns cut material in g/sq metre
+
+
+   if $cut\_height<0$ then $cut\_height=0.01$
+
+   if $GiveDMVegTop() \le 0$ then
+
+   \quad   warn("cropRyegrass.Cut - vegetative top must be bigger than zero here")
+
+/* 
+   \quad  grazableDM = 0
+
+   for(int i=0i<4i++)
+
+    \quad    $temp\_height=PlantHeight$,
+       $cutH=\max(cutHeight,0.01)$
+
+     \quad   if $temp\_height>cutH$ then
+
+    \quad  \quad     	$proportionCut= \tfrac{temp\_height - cutH}{temp\_height}$
+
+    \quad    else
+
+   \quad  \quad     	$proportionCut = 0$
+
+    \quad    $tempDM=proportionCut  \cdot  AgeClassTop_i  \cdot  uptakeWeight_i$
+
+ \quad 	  $ grazableDM +=tempDM$
+  
+   return grazableDM
+*/
+
+
+   if $cutPlantMaterial.GetName()_0 = ''$ then //  
+This might need expansion in the future. For FarmN purpose this will probably do. !!!
+   
+\quad      cutPlantMaterial.Setname(PlantItemName)
+
+\quad       theProducts.GiveProductInformation(cutPlantMaterial)
+   
+ cutDM = 
+   cutN = 0
+
+   initialDM=GiveDMVegTop()
+
+   nitrogen  aNitrogenInVegTop = NitrogenInVegTop()
+
+   for(int i=0i<4i++)
+   
+\quad       temp\_height=PlantHeight
+
+\quad       if $temp\_height>cut\_height$
+
+\quad \quad       	$proportionCut = \tfrac{temp\_height-cut\_height}{temp\_height}$
+
+\quad       else
+
+\quad \quad       	$proportionCut = 0$
+
+\quad       $tempDM = proportionCut \cdot AgeClassTop_i$
+
+\quad       $AgeClassTop_i-= tempDM $  // cut material
+
+\quad 	   $cutDM += tempDM$
+
+   if $cutDM>0$ then
+  	
+\quad       $cutN = aNitrogenInVegTop \cdot \tfrac{cutDM}{initialDM}$
+
+ \quad      Nitrogen = Nitrogen-cutN
+ 
+   if $DMStorage > 0$ then
+
+\quad    	nitrogen aNitrogenInStorage=NitrogenInStorage().n
+
+ \quad      cutDM += DMStorage,
+      cutN.n += aNitrogenInStorage.n
+
+ \quad      DMStorage=0,
+      Nitrogen.n -=  aNitrogenInStorage.n
+
+
+   if (cutPlantMaterial.GetDM()<0.01)
+   
+  \quad     error("cropRyegrass.Cut - dry matter content is below 1 %")
+
+   \quad    cutPlantMaterial.SetDM(0.10) //  In order to be able to debug
+  
+
+
+
+   cutPlantMaterial.Setamount($\tfrac{cutDM}{cutPlantMaterial.GetDM()}$)     // adjust for DM content
+
+   if $cutPlantMaterial.GetAmount()>0$ then
+
+\quad 	  $ cutPlantMaterial.SetorgN\_content(\tfrac{cutN}{cutPlantMaterial.GetAmount()})$
+ 
+  Nbudget.AddOutput(cutN.n),     
+   DMbudget.AddOutput(cutDM)
+
+   if $GiveDMVegTop() \le 0$ then
+
+    \quad  warn("cropRyegrass.Cut - zero or negative amount of dry matter in veg. top")
+
+   HasBeenCut = true,
+   Phenology.SetDSAfterCut()
+
+\subsection{Harvest(decomposable Storage, decomposable Straw)}
+
+   CutOrHarvested = true,
+   CuttingHeight = 0.1
+
+   $RatioStrawCut = \tfrac{PlantHeight-CuttingHeight}{PlantHeight}$
+
+   //    Storage.Setname(PlantItemName)
+
+   //    if $PlantItemName \ne ""$ then
+      Storage.Setname("GRASSSEED")
+  
+ //    if $PlantItemName \ne ""$ then
+     
+   	\quad   theProducts.GiveProductInformation(Storage)
+
+   	\quad   Storage.Setamount($\tfrac{DMStorage}{Storage.GetDM()}$)
+    
+
+   //    Straw.Setname(StrawItemName)
+
+      Straw.Setname("GRASSSEEDSTRAW"),
+   theProducts.GiveProductInformation(Straw)
+
+$   Straw.Setamount(GiveDMVegTop() \cdot \tfrac{RatioStrawCut}{Straw.GetDM()})$
+  
+
+   check amount of nitrogen at harvest, minimumN = Nmin(), maximumN = Nmax()
+
+   if $minimumN > Nitrogen.n  \cdot  1.25$ then 
+   
+      
+\quad    	warn("crop.Harvest - not enough nitrogen in plant at harvest")
+   
+
+   if $maximumN < Nitrogen.n  \cdot  0.75$ then 
+  
+  
+\quad 	  warn("crop.Harvest - too much nitrogen in plant at harvest")
+   
+   // partition between compartments
+
+   fN = fNitrogen()
+
+  	$TotalRootN  = (minN\_Root+fN \cdot (maxN\_Root-minN\_Root)) \cdot DMRoot$
+
+   $TotStorageN = (minN\_Store+fN \cdot (maxN\_Store-minN\_Store)) \cdot DMStorage$
+
+   $N15Ratio    = Nitrogen.Get15NRatio()$
+
+   TotalStrawN =  $(\tfrac{NpctminVegTop()}{100}+fN \cdot \tfrac{NpctmaxVegTop()-NpctminVegTop()}{100}) \cdot GiveDMVegTop()$
+
+  $ Nrest = Nitrogen.n - TotalRootN - TotStorageN - TotalStrawN$
+
+   if $Nrest<-0.01$ or $Nrest>0.01$ then
+  
+  \quad     warn("crop.Harvest - Nitrogen content adjusted")
+  
+\quad  	$RedFac = \tfrac{Nitrogen.n+Nrest}{Nitrogen.n}$
+
+\quad   		$TotalRootN = RedFac \cdot TotalRootN$
+
+\quad    	$TotStorageN = RedFac \cdot TotStorageN$
+ 
+
+
+   RootN.SetBoth(TotalRootN,$4N15Ratio \cdot TotalRootN$)
+
+   StorageN.SetBoth(TotStorageN,$N15Ratio \cdot TotStorageN$)
+
+   StrawN = Nitrogen - RootN - StorageN
+
+   if $Storage.GetAmount()>0$ then
+   	$Storage.SetorgN\_content(\tfrac{StorageN}{Storage.GetAmount()}$)
+
+   if $Straw.GetAmount()>0$ then
+		$Straw.SetorgN\_content(\tfrac{StrawN}{Straw.GetAmount()}$)
+
+	Nitrogen = Nitrogen-StorageN -StrawN
+
+	if $ not Phenology.Ripe()$ then
+      warn("crop.Harvest - crop not ready for harvest")
+
+   if $GiveDMVegTop()<0$  or  $DMStorage<0$  or $StorageN.n<0$  or  $StrawN.n<0$  or  $Nitrogen.n<0$ then
+   
+\quad	   warn("crop. Harvest values should not be negative")
+
+ \quad     $StorageN.n = \max(0,StorageN.n)$,
+    $StrawN.n = \max(0,StrawN.n)$
+
+
+   Nbudget.AddOutput(StorageN.n+StrawN.n),
+   N15budget.AddOutput(StorageN.n15+StrawN.n15)                   
+
+   DMbudget.AddOutput($GiveDMVegTop() \cdot RatioStrawCut+DMStorage$)
+
+   for (int i=0i<4i++)
+
+   \quad 	$AgeClassTop_i -= RatioStrawCut \cdot AgeClassTop_i$
+
+DMStorage   = 0, 
+GreenCAI = 0.1,
+YellowCAI= 0.2
+
+   PlantHeight        = 0.1,
+   topMatter          = NULL
+
+
+   EndBudget(NRemain,DMRemain),   Phenology.SetDSAfterCut(),    HasBeenCut = true
+
+
+\subsection{Terminate(decomposable Straw,decomposable DeadRoot, RootLengthList)}
+checks to make sure grazing has not occurred on the day of ploughing
+
+   for(int i=0i<4i++)
+
+    \quad   if $grazedDM_i>0$ then
+
+     \quad      \quad error("cropRyegrass.Terminate - terminating a crop on same day as it was grazed")
+   
+   $DMRoot += ReSeedDM$, $ReSeedDM = 0$
+
+   crop.Terminate(Straw,DeadRoot,RootLengthList)
+
+\subsection{bool cropRyegrass.EndBudget(NRemain, DMRemain)}
+
+	bool retVal=true
+
+  NRemain=Nitrogen.n, N15Remain = Nitrogen.n15
+
+  DMRemain=GiveDMVegTop()+DMRoot+DMStorage+SeedDM+ReSeedDM
+
+    
+
+   if $ not Nbudget.Balance(NRemain)$ or $ not DMbudget.Balance(DMRemain) $
+
+  \quad or $ not N15budget.Balance(N15Remain)$ then retVal=false
+ 
+
+   return retVal
+
+
+\bibliography{literature}
+  \bibliographystyle{plainnat}
+
+\end{document}

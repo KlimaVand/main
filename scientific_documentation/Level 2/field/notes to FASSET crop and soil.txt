@@ -1,0 +1,65 @@
+C R O P  N I T R O G E N
+
+- Justes (1994) provide a different validity range for "NpctMinVegTop":
+"NpctMinVegTop" is only valid for 0.5-1.4 t/ha, while the max function
+is valid between 1.5 and 14 t/ha; the current Fasset version, however,
+used the same validity range for min and max functions
+
+- "NpctMax/MinVegTop" refers to the aboveground plant part excluding
+storage. The corresponding literature (Justes, Bleken, Plenet, ...),
+however, provides functions only for the total aboveground plant
+(including storgage); We therefore wondered, if the current algorithms
+and parameterization is correct.
+
+- PowDM is identical for Min/Max, which according to literature, is only
+true for winter wheat, and the validity limit of 150 refers only to
+wheat (see Justes).
+
+C R O P
+
+- since temperate maize is assumed day neutral, we would prefer to
+“switch off” the impact of daylength. Could we choose DMAX and DB so
+that it amounts to “1” in "Phenology.update"? (For Maize it has to be
+1.) Or better have a switch to turn DL on/off?
+
+- Currently plant height only depends on DS and max height. Since a
+substantial impact of nitrogen supply on plant height must be assumed,
+we would rather prefer another algorithm, as for instance height = CAI_g
+* constant
+
+- "TransferDMToRoot" uses "deltaDM" in contrast to Berntsen et al (2005,
+Eq. 2) where "deltaOptDM" is used.
+
+- The temperature function (ftw) used in "deltaDM" differs from that
+provided by Berntsen (2005). The current version assumes a value of “1”
+for temp exceeding "MaxDMtemp"; however, a negative impact of very high
+temperature cannot be excluded for many crops;
+
+- Berntsen (2005, Eq. 10) suggests a different general "FNitrogenCurve",
+since the currently used algorithm may only work for winter wheat?
+
+- In contrast to Olesen (2004) the "LAIfraction" equation contains a
+denominator "PlantHeight^(a+1)" instead of "PlantHeight^(a+2)".
+
+- RootPenetrationReduction lacks the cases "clay < 0.02" and "clay >
+0.08", see Berntsen (2005, Eq 7).
+
+- Is "RootLengthInInterval" the same function as in Berntsen (2005, Eq. 8)?
+
+- Do you have a reference for the "TransferDMToStorage" function?
+
+S O I L
+
+- In "Soillayer" the "HeatCapacityIce" is set to 2000. In "Soilprofile"
+it is set to 2050. The value given in the Daisy documentation is 2050.
+
+- Chatskikh (2005) seems to be the current description for
+(de)nitrification. In "soilLayer.UpdateNitrification()" the
+"TempNitrificationEffect()" and "WaterNitrificationEffect()" are
+completely different to his description (Chatskikh 2005, Eq 1,4,5). Is
+this correct?
+
+- Is "soilLayer.MaxNitrogenFlux" adjusted to wheat or valid for any
+plant? There are some strange comments in the source code.
+
+- Do you have a reference for the "FracAmmoniumInWater()"?

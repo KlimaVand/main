@@ -1,0 +1,4454 @@
+\documentclass[%parskiphalf,%numbers=noendperiod
+]{scrartcl}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx,parskip}
+\usepackage{booktabs,longtable}
+\usepackage{lmodern}
+\usepackage[round]{natbib}
+
+\newcommand\mymarginpar[1]{\marginpar {\flushleft\bfseries\scriptsize #1}}
+
+\title{FASSET Soil Model}
+
+\author{}
+\date{\today}
+
+\usepackage{lmodern}
+
+\usepackage[backref]{hyperref}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+Shortforms: Amm-Ammonium, Nit-Nitrat
+
+
+\section{pF\_Curve}
+
+\subsection{pF\_Curve.pF\_Curve(intPool) : base()}
+  aPF\_Curve = new pF\_Curve\_Implementation(intPool)
+
+\subsection{pF\_Curve.pF\_Curve(pF\_Curve pFSource)}
+  aPF\_Curve = pFSource.aPF\_Curve, aPF\_Curve.AddOnePFCurve()
+
+
+\section{Water and nitrogen in soil}
+
+\subsection{soil.soil(char Pname,Idx,base owner) : base(Pname,Idx,owner)}
+
+ AccumulatedWaterDrainage   = 
+   AccumulatedNitDrainage = 
+   evapotransp        = 
+   soilEvap            = 
+   CO2Evolution               = 0
+
+   nitLeached.Clear(),
+   ammLeached.Clear(),
+   denitrification.Clear(),
+   nitrification.Clear()
+
+   EvapDepth = 200,
+   totalTransp        = 0,
+   NitrogenNetMineralisation.Clear(),
+   nitrogenUptake=NULL,
+   Nbudget.SetNames("soil","N"),
+   WaterBudget.SetNames("soil","water")
+\begin{align*}
+   Surface & = new soilSurface &
+   Profile & = new soilProfile("SoilProfile",0,this) 
+\end{align*}
+%\subsection{% soil.soil(soil& Soil) : base(Soil)}
+%       EvapDepth          = Soil.EvapDepth
+%       evapotransp        = Soil.evapotransp
+%       soilEvap           = Soil.soilEvap
+%       CO2Evolution              = Soil.CO2Evolution
+%       nitLeached            = Soil.nitLeached
+%       ammLeached           = Soil.ammLeached
+%       denitrification           = Soil.denitrification
+%       nitrification             = Soil.nitrification
+%       totalTransp        = Soil.totalTransp
+%       NitrogenNetMineralisation = Soil.NitrogenNetMineralisation
+% 
+%       AccumulatedWaterDrainage  = Soil.AccumulatedWaterDrainage
+%       AccumulatedNitDrainage= Soil.AccumulatedNitDrainage
+%       nitrogenUptake            = Soil.nitrogenUptake
+% 
+%       Nbudget	  	              = budget(Soil.Nbudget)
+%       WaterBudget	              = budget(Soil.WaterBudget)
+%       WaterBudget.Reset()      History ignored!
+%       Surface                   = new soilSurface( \cdot Soil.Surface)
+%       Profile                   = new soilProfile( \cdot Soil.Profile)
+%       Profile.SetOwner(this)
+%       Nbudget.Reset()      History ignored!
+ 
+
+%\subsection{% soil.Initialize(char soilFileName)}
+% 
+%    SetCritical()
+%    cout << "Initialising soil no " << GetLongNameInNumbers() << " with the file " << soilFileName << endl      a problem with patches can occure at this point
+%    OpenInputFile(soilFileName)
+%    Profile.Initialize(file)
+%    if (theOutputData.DetailsData.getSoilDetails()=true)
+%    {
+% 
+%       string fileName=theSystemData.getOutputDirectory()+"soil"+GetLongNameInNumbers()+".xls"
+% 
+%\subsection{%      	f.open(fileName.c\_str(),ios.out)}
+%       f.precision(4)
+%       f << "date"
+% 
+%       for(unsigned i=0i<theOutputData.WaterData.size()i++)
+%          f << "\twater"<< theOutputData.WaterData_{i}.getStartDepth() << "-"<<theOutputData.WaterData_{i}.getEndDepth() 
+%    
+%       for(unsigned i=0i<theOutputData.N\minData.size()i++)
+%          f << "\tN\min"<< theOutputData.N\minData_{i}.getStartDepth() << "-"<< theOutputData.N\minData_{i}.getEndDepth()
+%          f << "\tNO3-"<< theOutputData.N\minData_{i}.getStartDepth() << "-"<< theOutputData.N\minData_{i}.getEndDepth()
+%          f << "\tNH4-"<< theOutputData.N\minData_{i}.getStartDepth()  << "-"<< theOutputData.N\minData_{i}.getEndDepth()
+%          f << "\tTotal15N-"<< theOutputData.N\minData_{i}.getStartDepth() << "-"<< theOutputData.N\minData_{i}.getEndDepth()
+%       
+%       for(unsigned i=0i<theOutputData.SoilOrgCData.size()i++)
+%            {
+% 
+%               f << "\tSMB-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+% 
+%                f <<"\tNOM-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+%                f <<"\tIOM-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+%                f <<"\tAOM1-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+%                f <<"\tAOM2-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+%                f <<"\tSMB1-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+%                f <<"\tSMB2-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+%                f <<"\tSMR-C-"<< theOutputData.SoilOrgCData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgCData_{i}.getEndDepth()
+% 
+%            }
+%            for(unsigned i=0i<theOutputData.SoilOrgNData.size()i++)
+%            {
+% 
+%          	  f << "\tSMB-N-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	  f << "\tSMB-N15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tAOM1 N-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tAOM2 N-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tSMB1 N-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tSMB2 N-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tSMR N-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tNOM n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tIOM n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tAOM1 n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tAOM2 n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tSMB1 n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tSMB2 n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    << "\tSMR n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%          	    <<"\tMOM n15-"<< theOutputData.SoilOrgNData_{i}.getStartDepth() << "-"<<  theOutputData.SoilOrgNData_{i}.getEndDepth()<<"[m/g]"
+%            }
+%       for(unsigned i=0i<theOutputData.PoreWaterData.size()i++)
+%       {
+% 
+%          f << "\t" << theOutputData.PoreWaterData_{i}.getDepth()/10 <<"cmNit-N"
+%          << "\t" << theOutputData.PoreWaterData_{i}.getDepth()/10 <<"cmAm-N"
+%          << "\t" << theOutputData.PoreWaterData_{i}.getDepth()/10 <<"cmN"
+%        	<< "\t" << theOutputData.PoreWaterData_{i}.getDepth()/10 <<"cmCL"
+%          << "\t" << theOutputData.PoreWaterData_{i}.getDepth()/10 <<"cmN15"
+% 
+%       }
+% 
+%       for(unsigned i=0i<theOutputData.TempData.size()i++)
+%       {
+%     	  f << "\tt" <<theOutputData.TempData_{i}.getDepth()
+%       }
+% 
+%       f  << "\t Amm n 0-250 "
+%         << "\t nit n 0-250"
+%         << "\t Amm n15 0-250 "
+%         << "\t nit n15 0-250"
+%       f << "\tnetMineralisation"
+%     	<< "\tN2O-N"
+%     	<< "\tN2O-D"
+%     	<< "\tN2O"
+%     	<< "\tN2Oratio"
+%     	<< "\tDrainage"
+%     	<< "\tDrainage-N"
+%     	<< "\tSoilEvap"
+%     	<< "\tPlantET"
+%       f << "\tDenitrification"
+%     	<< "\tNitri"
+%     	<<"\tCO2"
+% 
+%       f << "\tSoilsurface-C"
+%     	<<"\tSoilSurface-OrgN"
+%     	<<"\tSoilSurface.TotN"
+%       f << endl
+%    }
+%    CloseInputFile()
+% }
+
+
+"nitrogenUptake" not included
+
+\subsection{soil.Update(surplus, airTemp, EPotToSoil, snowContent, linkList<rootStructure>  rootInfo)}
+Updates the soil corresponding to the passing of one day.
+
+\begin{tabular}{ll}
+   EPotToSoil     & potential evapotransp allocated to soil \\
+   surplus       & water added to soil [mm/d] \\
+   airTemp & air temp [C] \\
+   snowContent    & snow content \\
+   roots          & root descriptor list
+\end{tabular}
+
+   WaterBudget.AddInput(surplus),
+   evapotransp=0
+
+   for all i in 0..rootInfo.NumOfNodes()-1 do      Convert root radius from mm to m
+ 
+   \quad  $rootInfo.ElementAtNumber(i).rootRadius=\tfrac{rootInfo.ElementAtNumber(i).rootRadius}{1000}$
+
+ 
+  Profile.UpdateFinDiffTemp(airTemp,snowContent)
+       (Update soil temp)
+  
+    %  Profile.UpdateTemp(airTemp,snowContent)      Old version
+
+        Update soil organic matter
+\begin{align*}
+   nitrogen startMinN & = GetMinNitrogen() \\
+   CO2Evolution & = Profile.UpdateOrganicMatter() \\
+   NitrogenNetMineralisation & = NitrogenNetMineralisation \\
+                             & \quad     +     GetMinNitrogen()-startMinN 
+\end{align*}
+        Update nit by denitrification and nitrification
+   \begin{align*}
+nitrification & = Profile.UpdateNitrification() \\
+   denitrification & = Profile.UpdateDenitrification(CO2Evolution)
+\end{align*}
+   Nbudget.AddOutput(denitrification.n+Profile.GetN2OFromDenitrification().n)
+  
+ Nbudget.AddOutput(Profile.GetN2OFromNitrification().n)
+
+        Update soil Evap and nitrogen movement to soil
+   \begin{align*}
+   relativeSurfaceWater & = \min(1,
+     \tfrac{Profile.GetAvailWater(0.,EvapDepth)}
+                                    { Profile.GetAvailCapacity(0.,EvapDepth))} \\
+   maxEvap & = Profile.GetMaximumEvap()
+   \end{align*}
+   Surface.Update(surplus, EPotToSoil, relativeSurfaceWater, maxEvap, 
+
+    \quad \quad \quad Profile.GetEvapContent(),airTemp)
+   
+   soilEvap = Surface.GetEvap(),
+   evapotransp  = evapotransp + soilEvap
+   
+   Profile.SubtractEvap(soilEvap),
+   WaterBudget.AddOutput(soilEvap)
+
+   Profile.SubtractTransp(rootInfo), 
+   totalTransp = 0
+
+   for all i in 0..rootInfo.NumOfNodes()-1 do  
+
+    totalTransp  = totalTransp  + rootInfo.ElementAtNumber(i).actualTransp
+ 
+   evapotransp = evapotransp + totalTransp,
+   WaterBudget.AddOutput(totalTransp)
+\begin{align*}
+   surfaceNit & = Surface.ExtractNitDisolved() \\
+   urfaceAmm & = Surface.ExtractAmmDisolved()
+\end{align*}
+   surplus = surplus +  Surface.ExtractWater()      
+
+Code review 2011 Check whether it is properly figured out
+or whether all the water and N disappear pa once!
+
+   Chloride = Surface.ExtractChloride()
+  
+      Water infiltration and nitrogen leaching
+
+   Profile.UpdateInfiltrationSWAT(surplus,surfaceNit,surfaceAmm,
+
+\quad nitLeached,ammLeached,Chloride)
+
+        Deposit possibly "unused" water and N on soil surface
+ 
+       Code review Kan det nogensinde ske????!!!
+ 
+  Surface.AddWater(surplus) 
+
+ Surface.AddNitDissolved(surfaceNit),
+  Surface.AddAmmDissolved(surfaceAmm)
+ 
+       Perform surface run-off
+  
+ Surface.SurfaceRunOff()
+ 
+       Nitrogen uptake by the plants
+  
+ nitrogenUptake = Profile.SubtractNitrogenUptake(rootInfo)
+  
+    %  Perform budgeting
+  
+ WaterBudget.AddOutput(Profile.GetDrainage($GetMaximumDepth())+Surface.GetRunOff()$)
+  
+ if $Month=4 $ and  $Day=1$ then
+ \quad  $AccumulatedWaterDrainage = AccumulatedNitDrainage = 0$
+   \begin{align*}
+   AccumulatedWaterDrainage   & = AccumulatedWaterDrainage   + Profile.GetDrainage(1000) \\
+   AccumulatedNitDrainage & = AccumulatedNitDrainage + Profile.GetNitLeaching(1000).n
+   \end{align*}
+   for all i in 0..rootInfo.NumOfNodes()-1 do 
+	   $Nbudget.AddOutput(nitrogenUptake_{i}.n)$
+ 
+  Nbudget.AddOutput($Surface.GetRunOff\_N().n$)
+
+   Nbudget.AddOutput(GetNitLeaching(GetMaximumDepth()).n
+
+  \quad \quad \quad +GetAmmLeaching(GetMaximumDepth()).n)
+
+        EndBudget(NRemain,WaterRemain),  
+  WriteOutput()
+
+
+
+
+\subsection{Add}
+
+\minisec{soil.Add(soil addSoil, f)}
+\begin{align*}
+   EvapDepth         &  = (1-f) \cdot EvapDepth+f \cdot addSoil.EvapDepth \\  
+   evapotransp      &  = (1-f) \cdot evapotransp+f \cdot addSoil.evapotransp \\  
+ CO2Evolution             & = (1-f) \cdot CO2Evolution+f \cdot addSoil.CO2Evolution \\  
+ nitLeached         &   = nitLeached \cdot (1-f)+addSoil.nitLeached \cdot f \\ 
+  ammLeached        &   = ammLeached \cdot (1-f)+addSoil.ammLeached \cdot f \\  
+ denitrification         &  = denitrification \cdot (1-f)+addSoil.denitrification \cdot f \\   
+ nitrification          &   = nitrification \cdot (1-f)+addSoil.nitrification \cdot f \\
+   NitrogenNetMineralisation & = NitrogenNetMineralisation \cdot (1-f) \\
+                               & \quad     + addSoil.NitrogenNetMineralisation \cdot f \\
+   totalTransp      &  = (1-f) \cdot totalTransp+f \cdot addSoil.totalTransp \\
+  soilEvap       &    = (1-f) \cdot soilEvap+f \cdot addSoil.soilEvap \\
+ AccumulatedWaterDrainage &  = (1-f) \cdot AccumulatedWaterDrainage \\
+                            & \quad  +f \cdot addSoil.AccumulatedWaterDrainage \\
+   AccumulatedNitDrainage &= (1-f) \cdot AccumulatedNitDrainage \\
+                           & \quad     +f \cdot addSoil.AccumulatedNitDrainage
+\end{align*}
+   Surface.Add(addSoil.GetSoilSurface(),f), 
+  Profile.Add(addSoil.GetSoilProfile(),f)
+  
+ Nbudget.Add(addSoil.Nbudget,f),
+ WaterBudget.Add(addSoil.WaterBudget,f)
+
+
+\minisec{soil.AddNutrient(nitrogen surfNit, 
+ nitrogen surfAmm,  nitrogen soilNit,  nitrogen soilAmm)}
+Adds nitrogen to soil
+
+\begin{tabular}{ll}
+   surfNit/surfAmm   & Nit/Amm to be added to soil surface [g N/m] \\   
+   soilNit/soilAmm   & Nit/Amm to be added to top of soil profile [g N/m]  
+\end{tabular}
+  
+ Surface.AddSolidNitrogen(surfNit,surfAmm),  
+ Profile.AddNutrient(soilNit,soilAmm)
+ 
+  Nbudget.AddInput(surfNit.n+surfAmm.n+soilNit.n+soilAmm.n)
+
+\minisec{soil.AddDecomposable(decomposable  produc,  rootLengthList)}
+  
+ produc.RemoveWater()                                               To cope with dry matters less than 1
+  
+	if $produc.GetAmount()>0$ then
+ 	
+    
+  if $produc.GetorgN\_content().n<0$ then
+%\subsection{   		%theMessage.FatalError("soil.AddDecomposable - negative amount of organic N added")}
+  		%    if ((rootLengthList)  and  ( \cdot rootLengthList\le 0))
+%\subsection{   	%    	theMessage.FatalError("soil.AddDecomposable - rootLengthList can not contain zero in first element")}
+  	
+\quad	 organicProduct p = new organicProduct
+
+  	\quad	p.SetName($produc.GetName()$)
+
+  	\quad	p.SetCarbon($produc.GetC\_content() \cdot produc.GetAmount() \cdot 100$)
+
+  	\quad	p.SetNitrogen($produc.GetorgN\_content() \cdot produc.GetAmount() \cdot 100$)
+
+  	\quad	p.SetNO3\_content($produc.GetNO3\_content() \cdot produc.GetAmount() \cdot 100$)
+
+  	\quad	p.SetNH4\_content($produc.GetNH4\_content() \cdot produc.GetAmount() \cdot 100$)
+
+  	\quad	p.SetkAOM1($produc.GetkAOM1()$),
+  		p.SetkAOM2($produc.GetkAOM2()$)
+
+   \quad   p.SetReduceTurnover(produc.GetReduceTurnover())
+
+  	\quad	if $produc.GetAOM1\_frac()>0$ then
+   		p.SetAOM1\_frac($produc.GetAOM1\_frac()$)
+
+  	\quad	if $produc.GetAOM2\_frac()>0$ then
+   		p.SetAOM2\_frac($produc.GetAOM2\_frac()$)
+
+           N allocations
+       sum=0
+
+  \quad   if $produc.GetAOM1\_Nfrac()>0$  
+or  $produc.GetAOM2\_Nfrac()>0$ then      
+   
+\quad\quad		p.SetNFraction(0,produc.GetAOM1\_Nfrac())           	     AOM1
+     
+  \quad\quad  $sum=sum+produc.GetAOM1\_Nfrac()$
+   
+	\quad\quad	p.SetNFraction(1,produc.GetAOM2\_Nfrac())           	     AOM2
+    
+ \quad\quad   $sum=sum+produc.GetAOM2\_Nfrac()$
+   
+   \quad\quad  p.SetNFraction(2,1-sum)   (NOM)
+  
+%      if (sum<0  or  sum>1)
+%\subsection{ %         theMessage.FatalError("soil.AddDecomposable - inconsistency in values for fAOM1 and/or fAOM2")}
+     
+  AddOrganicProduct(p,rootLengthList),
+  Nbudget.AddInput(p.GetTotalNitrogen().n)
+
+  delete p
+
+\minisec{soil.AddOrganicProduct(organicProduct  product,   rootLengthList)}
+
+  organicProduct p = new organicProduct(  product)
+
+ if $rootLengthList=NULL$ then Surface.AddProduct(p)
+ 
+ else Profile.AddProduct(p, rootLengthList)
+
+delete p
+
+\subsection{soil.Incorporate(depth, frac, bool tillage, char tillagetype)}
+  Incorporates organic matter from the surface and roots into the soil
+(depth: mm, frac: 0-1)
+ 
+if $depth>0$  and  $frac>0$ then
+   
+\quad	   if(OpenInputFileString("Tillage.dat"))      Only comes in effect when tillage.dat is present
+		
+  \quad\quad
+    if tillage then    p1=0.1, p2=0.5
+    
+   \quad\quad\quad TurnoverFactor=2
+  \quad\quad\quad 		FindSection(tillagetype)
+   
+   \quad\quad\quad	GetParameter("KillSMBFraction",p1),    
+                  	GetParameter("MoveToFasterFraction",p2)
+     
+ \quad\quad\quad	GetParameter("TurnoverFactor",TurnoverFactor)
+
+  \quad\quad\quad       if p1 > 0 then  
+       	KillSMB(p1,depth)
+     
+  \quad\quad\quad  	if p2 > 0 then     
+     	ModifyAOM(p2,TurnoverFactor,depth)
+
+  \quad\quad    CloseInputFile()
+	
+  \quad    n = Profile.GetNumberOfLayers()
+   
+   %LengthList[300],
+   
+$       p = LengthList_0,   
+   CurrentDepth = 0,   
+    organicProduct prod$
+   
+   for all i in 0..n-1 do     
+      
+   \quad LayerThickness = Profile.GetLayerThickness(i+1)
+    
+   \quad $CurrentDepth += LayerThickness$,       
+   $LengthList_{i} = 0.$
+    
+    if $CurrentDepth\le depth$ then
+  
+    \quad      $LengthList_{i} = LayerThickness$
+    
+     else if $CurrentDepth-LayerThickness<depth$ then
+    
+   \quad      $LengthList_{i} = depth-(CurrentDepth-LayerThickness)$  
+   
+   $n = Surface.GetNumberOfProducts()$
+   
+   for all j in 0..n-1 do    
+  
+   \quad    $prod = Surface.RemoveProduct(j,frac)$
+  
+    \quad   if $prod.GetAmount().c>0$ then   
+    	 $AddOrganicProduct(prod,LengthList_0)$
+   
+     delete prod     
+   
+
+
+
+\minisec{soil.KillSMB(Fraction,Depth)}
+  Fraction (0-1) : frac of SMB killed, Depth: mm
+
+for all i in 0..Profile.GetNumberOfLayers()-1 do
+ 
+\quad if $Profile.GetLayer(i).GetStartDepth()<Depth$ then
+   (Actually a simplification !!!)
+
+  \quad\quad  $Profile.GetLayer(i).KillSMB(Fraction)$
+
+
+\minisec{soil.ModifyAOM(Fraction,TurnoverFactor, Depth)}
+Fraction (0-1) : frac of AOM transferred to pools with a modified turnover rate
+TurnoverFactor : Factor for modification of turnover rate
+Depth: mm
+
+  for all i in 0..Profile.GetNumberOfLayers()-1 do
+  
+ \quad if $Profile.GetLayer(i).GetStartDepth()<Depth$ then    
+  (Actually a simplification !!!)
+    
+ \quad\quad Profile.GetLayer(i).ModifyAOM(Fraction,TurnoverFactor)
+    
+\subsection{Budget}
+
+\minisec{soil.StartBudget()}
+   
+nitrogen N = GetTotalNitrogen(),   
+Nbudget.SetInput(N.n)
+  
+ WaterBudget.SetInput(GetWater(0,GetMaximumDepth())+GetSurfaceWater())
+   
+Profile.StartBudget()
+
+\minisec{bool soil.EndBudget(   NRemain,  WaterRemain)}
+  
+ bool retVal=true,
+     NRemain = GetTotalNitrogen().n
+  
+ if !Nbudget.Balance(NRemain) then  retVal=false
+   
+ WaterRemain = GetWater(0,GetMaximumDepth())+GetSurfaceWater()
+  
+ if !WaterBudget.Balance(WaterRemain) then  retVal=false
+   
+Profile.EndBudget()
+ 
+  return retVal
+
+
+%\subsection{% soil.WriteOutput()}
+% 
+%  	if(theOutputData.DetailsData.getSoilDetails()=true)
+% 	{
+%  		f << theTime.GetYear() << "-" << theTime.GetMonth() << "-" << theTime.GetDay()
+%  		for(unsigned i=0i<theOutputData.WaterData.size()i++)
+% 	 	{
+% 	 		f << "\t" << GetWater(theOutputData.WaterData_{i}.getStartDepth(), theOutputData.WaterData_{i}.getEndDepth()-theOutputData.WaterData_{i}.getStartDepth())
+% 	 	}
+%  		for(unsigned i=0i<theOutputData.N\minData.size()i++)
+%  		{
+%  			StartDepth =theOutputData.N\minData_{i}.getStartDepth()
+%  			Thickness = theOutputData.N\minData_{i}.getEndDepth()-StartDepth
+% 	 		f << "\t" << GetMinNitrogen(StartDepth, Thickness).n
+% 	 		f << "\t" << GetNit(StartDepth, Thickness).n
+% 	 		f << "\t" << GetAmm(StartDepth, Thickness).n
+% 	 		f << "\t" << GetTotalNitrogen(StartDepth, Thickness).n15
+% 	 	}
+% 
+%  		for(unsigned i=0i<theOutputData.SoilOrgCData.size()i++)
+%  		{
+%  			StartDepth =theOutputData.SoilOrgCData_{i}.getStartDepth()
+%  			Thickness = theOutputData.SoilOrgCData_{i}.getEndDepth()-StartDepth
+%  			SoilMass = GetSoilMass(StartDepth,Thickness)/10000000     BMP 29.10.2008 !!!!!!
+% 	 		f << "\t" << (GetPoolCarbon("SMB1",StartDepth,Thickness) + GetPoolCarbon("SMB2",StartDepth,Thickness))/SoilMass
+% 	 		f.precision(5)
+% 	 		f  << "\t" << GetPoolCarbon("NOM",StartDepth,Thickness)
+% 	 		f.precision(4)
+% 	 		f  << "\t" << GetPoolCarbon("IOM",StartDepth,Thickness)
+% 			   << "\t" << GetPoolCarbon("AOM1",StartDepth,Thickness)
+% 	 		   << "\t" << GetPoolCarbon("AOM2",StartDepth,Thickness)
+% 	 		   << "\t" << GetPoolCarbon("SMB1",StartDepth,Thickness)
+% 	 		   << "\t" << GetPoolCarbon("SMB2",StartDepth,Thickness)
+% 	 		   << "\t" << GetPoolCarbon("SMR",StartDepth,Thickness)
+% 	 	}
+%  		for(unsigned i=0i<theOutputData.SoilOrgNData.size()i++)
+%  		{
+%  			StartDepth =theOutputData.SoilOrgNData_{i}.getStartDepth()
+%  			Thickness = theOutputData.SoilOrgNData_{i}.getEndDepth()-StartDepth
+%  			SoilMass = GetSoilMass(StartDepth,Thickness)/10000000     BMP 29.10.2008 !!!!!!
+%  			f << "\t" << (GetPoolNitrogen("SMB1",StartDepth,Thickness).n + GetPoolNitrogen("SMB2",StartDepth,Thickness).n)/SoilMass
+%  			f << "\t" << (GetPoolNitrogen("SMB1",StartDepth,Thickness).n15 + GetPoolNitrogen("SMB2",StartDepth,Thickness).n15)/SoilMass
+%  		   f  << "\t" << GetPoolNitrogen("AOM1",StartDepth,Thickness).n
+%  		      << "\t" << GetPoolNitrogen("AOM2",StartDepth,Thickness).n
+%  		      << "\t" << GetPoolNitrogen("SMB1",StartDepth,Thickness).n
+%  		      << "\t" << GetPoolNitrogen("SMB2",StartDepth,Thickness).n
+%  		      << "\t" << GetPoolNitrogen("SMR",StartDepth,Thickness).n
+%  	      f.precision(5)
+%  		   f  << "\t" << GetPoolNitrogen("NOM",StartDepth,Thickness).n
+%  		   f.precision(4)
+%  		   f  << "\t" << GetPoolNitrogen("IOM",StartDepth,Thickness).n
+%  		      << "\t" << GetPoolNitrogen("AOM1",StartDepth,Thickness).n15
+%  		      << "\t" << GetPoolNitrogen("AOM2",StartDepth,Thickness).n15
+%  		      << "\t" << GetPoolNitrogen("SMB1",StartDepth,Thickness).n15
+%  		      << "\t" << GetPoolNitrogen("SMB2",StartDepth,Thickness).n15
+%  		      << "\t" << GetPoolNitrogen("SMR",StartDepth,Thickness).n15
+%  		      << "\t" << GetPoolNitrogen("NOM",StartDepth,Thickness).n15
+% 	 	}
+% 
+%  		for(unsigned i=0i<theOutputData.PoreWaterData.size()i++)
+%  		{
+%  			depth = theOutputData.PoreWaterData_{i}.getDepth()
+%  	 		f << "\t" << 1000 \cdot GetNit(depth-5,10).n/GetWater(depth-5,10)
+%          	<< "\t" << 1000 \cdot GetAmm(depth-5,10).n/GetWater(depth-5,10)
+%             << "\t" << 1000 \cdot (GetNit(depth-5,10).n+GetAmm(depth-5,10).n)/GetWater(depth-5,10)              Convert to mg/l
+%          	<< "\t" << 1000 \cdot Profile.GetChloride(depth-5,10)/GetWater(depth-5,10)         Convert to mg/l
+%             << "\t" << 1e5 \cdot GetNit(depth-5,10).n15/GetWater(depth-5,10)
+% 
+%   		}
+% 
+%       for(unsigned i=0i<theOutputData.TempData.size()i++)
+%  		{
+% 
+%  			depth = theOutputData.TempData_{i}.getDepth()
+%  	 		f << "\t" << Profile.GetTemp(depth)
+% 
+%   		}
+% 
+%       f  << "\t" << GetAmm(0,250).n
+%          << "\t" << GetNit(0,250).n
+% 	      << "\t" << GetAmm(0,250).n15
+%          << "\t" << GetNit(0,250).n15
+% 
+% 
+%       N2ORatio = 1
+%       if (Profile.GetN2OFromNitrification().n+Profile.GetN2OFromDenitrification().n>1e-10)
+%       	N2ORatio = denitrification.n/(Profile.GetN2OFromNitrification().n+Profile.GetN2OFromDenitrification().n)
+% 
+% 
+% 	     f << "\t" << NitrogenNetMineralisation.n
+%          << "\t" << Profile.GetN2OFromNitrification().n
+% 	      << "\t" << Profile.GetN2OFromDenitrification().n
+% 	     	<< "\t" << Profile.GetN2OFromNitrification().n+Profile.GetN2OFromDenitrification().n
+%          << "\t" << N2ORatio
+%          << "\t" << AccumulatedWaterDrainage
+%          << "\t" << AccumulatedNitDrainage
+%          << "\t" << soilEvap
+%          << "\t" << totalTransp
+%          << "\t" << denitrification.n
+%          << "\t" << nitrification.n
+%          << "\t" << CO2Evolution
+%       f << "\t" << Surface.GetCarbon()
+%     	<< "\t" << Surface.GetOrganicNitrogen().n
+%     	<< "\t" <<  Surface.GetTotalNitrogen().n
+%       f << endl
+%    }
+% }
+
+
+
+\subsection{Getter}
+
+\minisec{nitrogen soil.GetNitrogenNetMineralisation()} 
+  nitrogen Mineralisation = NitrogenNetMineralisation
+
+NitrogenNetMineralisation.Clear()
+    
+return Mineralisation
+
+
+\minisec{nitrogen soil.GetAmm(), GetNit(), GetMinNitrogen(), GetMinNitrogen(startDep, thick), GetTotalNitrogen(), 
+GetTotalNitrogen(startDep, thick), GetTotalNitrogen(depth)}
+return $Surface.GetAmmSolid()+Surface.GetAmmDisolved()
+                       +Profile.GetAmm()$
+
+return Surface.GetNitSolid()+Surface.GetNitDisolved()+Profile.GetNit()
+
+return GetAmm()+GetNit()
+
+return GetAmm(startDep,thick)+GetNit(startDep,thick)
+
+return Surface.GetTotalNitrogen()+Profile.GetTotalNitrogen()
+
+return GetMinNitrogen(startDep,thick) + Profile.GetOrganicNitrogen(startDep,thick)
+
+return Surface.GetTotalNitrogen()+ GetTotalNitrogen(0, depth)
+
+
+
+
+\section{Soil surface}
+
+\subsection{soilSurface.soilSurface(): base()}
+   %firstProduct=NULL     lastProduct=NULL
+   %ammSolid.Clear()   nitSolid.Clear()
+   %ammDisolved.Clear()   nitDisolved.Clear()
+   %ammoniaVolatilisation.Clear()   RunOff\_N.Clear()
+  
+   nitrogenDisolvedConstant = 0.05, 
+   nitrogenLeachedConstant  = 0.05    
+
+Evap  = 
+   temp    =   water        = 
+   RunOff            = 
+   Chloride                  = 0
+
+
+
+
+\subsection{soilSurface.soilSurface(soilSurface surface) : base(surface)}
+Copy constructor
+surface - Source object
+ %firstProduct = NULL
+ %lastProduct = NULL
+ %if (&surface)
+\begin{align*}
+  ammSolid          &  = surface.ammSolid \\
+  nitSolid            & = surface.nitSolid \\
+  ammDisolved       &  = surface.ammDisolved \\
+  nitDisolved        &  = surface.nitDisolved \\
+  nitrogenDisolvedConstant&  = surface.nitrogenDisolvedConstant \\ 
+  nitrogenLeachedConstant  &= surface.nitrogenLeachedConstant \\
+  Evap            &  = surface.Evap \\
+  ammoniaVolatilisation   & = surface.ammoniaVolatilisation \\
+  temp            &  = surface.temp \\
+  water                 &   = surface.water \\
+  RunOff                &   = surface.RunOff \\
+  RunOff\_N              &   = surface.RunOff\_N \\
+  Chloride             &    = surface.Chloride
+\end{align*}  
+$organicProduct  current$, $organicProduct tempProduct$
+
+  $current = surface.firstProduct$
+
+  while $current$ do
+
+\quad	tempProduct = new organicProduct(current)
+
+\quad	AddProduct(tempProduct), current = current.Next(), delete tempProduct
+
+
+%\subsection{% soilSurface.Add(soilSurface \cdot  surface, frac)}
+%   ammSolid            = ammSolid \cdot (1-frac) + surface.ammSolid \cdot frac
+%   nitSolid             = nitSolid \cdot (1-frac) + surface.nitSolid \cdot frac
+%   ammDisolved         = ammDisolved \cdot (1-frac) + surface.ammDisolved \cdot frac
+%   nitDisolved          = nitDisolved \cdot (1-frac) + surface.nitDisolved \cdot frac
+%   ammoniaVolatilisation    = ammoniaVolatilisation \cdot (1-frac) + surface.ammoniaVolatilisation \cdot frac
+%   RunOff\_N                 = RunOff\_N \cdot (1-frac)+surface.RunOff\_N \cdot frac
+% 
+%   nitrogenDisolvedConstant = (1-frac) \cdot nitrogenDisolvedConstant+frac \cdot surface.nitrogenDisolvedConstant
+%   nitrogenLeachedConstant  = (1-frac) \cdot nitrogenLeachedConstant+frac \cdot surface.nitrogenLeachedConstant
+%   Evap              = (1-frac) \cdot Evap+frac \cdot surface.Evap
+%   temp              = (1-frac) \cdot temp+frac \cdot surface.temp
+%   water                    = (1-frac) \cdot water+frac \cdot surface.water
+%   RunOff                   = (1-frac) \cdot RunOff+frac \cdot surface.RunOff
+%   Chloride                 = (1-frac) \cdot Chloride+frac \cdot surface.Chloride
+% 
+%    organicProduct current
+%   current = firstProduct                                first adjust original products
+%   while (current)
+%    current.Scale(1-frac)
+% 	current = current.Next()
+%   current = surface.firstProduct                      add products from surface
+%   while (current)
+%    current.Scale(frac)
+% 	AddProduct(current)
+% 	current = current.Next()
+
+
+
+\subsection{Update}
+
+\minisec{soilSurface.Update( surplus,   ePotToSoil,  relativeSurfaceWater,   maxEvap,   EvapContent,   airTemp)}
+   Updates the soil surface corresponding to the passing of one day.
+
+\begin{tabular}{ll}
+   surplus            & Water to be added (and drained) from soil surface [mm/d] \\
+   ePotToSoil         & Potential evapotransp from soil [mm/d] \\
+   sumWaterContent    & Content of plant available water in the Evap depth [mm] \\
+   sumWaterCapacity   & Capacity for plant availble water in the Evap depth [mm] \\
+   airTemp     & Air temp [°C]
+\end{tabular}
+
+temp = airTemp
+
+ 	     Calculate soil Evap E
+%  	     Old method
+%  	/* 
+% 	if (RelWater>1)
+% 	  E=1
+%  	else
+%   if (RelWater>0.33)   E=0.9+0.1 \cdot (RelWater-0.33)/0.67
+%   else
+%    if (RelWater>0.22)  E=0.27+0.63 \cdot (RelWater-0.22)/0.11
+%    else
+%     if (RelWater>0.2) E=0.05+0.22 \cdot (RelWater-0.2)/0.02
+%     else
+%       E=0.05 \cdot RelWater/0.2
+%   */
+      Plauborg and Olesen (MVTOOL) and Plauborg (Ph.D. dissertation)
+	
+        $E = \begin{cases}
+              1 & \text{ if } ePotToSoil \le EvapContent \\
+              0.65 \cdot relativeSurfaceWater & \text{ otherwise}
+             \end{cases}$
+
+      $  Evap = \min(maxEvap,E \cdot ePotToSoil)$
+
+     Update mineral nitrogen contents
+        \begin{align*}
+ 	disolved  & = \min(1,nitrogenDisolvedConstant \cdot relativeSurfaceWater \\
+               & +
+            nitrogenLeachedConstant \cdot ( surplus)) \\
+ 	nitDisolved  & = nitDisolved + nitSolid \cdot disolved \\
+ 	nitSolid     & = nitSolid - nitSolid \cdot disolved 
+       \end{align*}
+         \begin{align*}
+ 	disolved & = \min(1,nitrogenDisolvedConstant \cdot relativeSurfaceWater \\
+                 &  + nitrogenLeachedConstant \cdot ( surplus)) \\
+ 	ammDisolved & = ammDisolved + ammSolid \cdot disolved \\
+ 	ammSolid   & = ammSolid - ammSolid \cdot disolved 
+       \end{align*}
+
+\minisec{soilSurface.SurfaceRunOff()}
+   maxWater =25,  
+   RunOff = 0,   
+   RunOff\_N.Clear()
+
+   if $water>maxWater$ then  
+      \begin{align*}
+      f & =\frac{\max(0,(water-maxWater)) \cdot 0.1}{water} \\
+      nitDisolved  & = nitDisolved + nitSolid \cdot 0.5 \\
+      ammDisolved & = ammDisolved + ammSolid \cdot 0.5 \\
+      RunOff   & = f \cdot water \\
+      RunOff\_N & = (nitDisolved+ammDisolved) \cdot f \\
+      water    & = water - f \cdot water \\
+      nitDisolved & = nitDisolved - nitDisolved \cdot f \\
+      ammDisolved & = ammDisolved - ammDisolved \cdot f \\
+      nitDisolved & = nitDisolved + nitSolid \cdot 0.5 \\
+      ammDisolved & = ammDisolved + ammSolid \cdot 0.5 
+      \end{align*}
+      nitSolid.Clear, 
+      ammSolid.Clear()  
+%    if(ammDisolved.n<-1E-6  or  nitDisolved.n<-1E-6  or  ammSolid.n<-1E-6  or  nitSolid.n<-1E-6)
+%\subsection{%    	theMessage.WarningWithDisplay("SoilSurface.SurfaceRunOff - negative n concs")}
+
+\subsection{Extract}
+
+\minisec{soilSurface.ExtractWater(), ExtractChloride()}
+ extract  = water,  water  = 0,    return extract
+
+ extract  = Chloride,  Chloride  = 0,  return extract
+
+\minisec{nitrogen soilSurface.ExtractAmmDisolved(), ExtractNitDisolved()}  
+ Extract amm:
+   nitrogen am=ammDisolved, ammDisolved.Clear(), return am
+
+Extract nit:
+   nitrogen n = nitDisolved, nitDisolved.Clear(), return n
+
+
+
+\subsection{Add}
+
+\minisec{soilSurface.AddSolidNitrogen(nitrogen addNit, nitrogen addAmm), AddDisolvedNitrogen(nitrogen addNit, nitrogen addAmm)}
+Adds nitrogen to the soil surface.
+   addNit - Nit to be added [$g N/m^2$], 
+   addAmm - Amm to be added [$g N/m^2$]
+   \begin{align*}
+   nitSolid  & = nitSolid + addNit &  ammSolid & = ammSolid + addAmm \\
+  %
+%    if(ammDisolved.n<-1E-6  or  nitDisolved.n<-1E-6  or  ammSolid.n<-1E-6  or  nitSolid.n<-1E-6)
+%\subsection{% 	   theMessage.WarningWithDisplay("SoilSurface.AddNitrogen - negative n concs")}
+   nitDisolved & = nitDisolved + addNit &
+   ammDisolved & = ammDisolved + addAmm 
+   \end{align*}
+%    if(ammDisolved.n<-1E-6  or  nitDisolved.n<-1E-6  or  ammSolid.n<-1E-6  or  nitSolid.n<-1E-6)
+%\subsection{% 	   theMessage.WarningWithDisplay("SoilSurface.AddNitrogen - negative n concs")}
+
+
+\minisec{soilSurface.AddProduct(organicProduct  product)}
+Adds an organic (or inorganic) product to the the soil surface.
+   product - Organic product object
+
+	organicProduct p = new organicProduct(product)
+
+ 	AddDisolvedNitrogen(p.GetNit(), p.GetAmm())
+
+ 	p.ClearNO3\_content(), p.ClearNH4\_content()
+
+ 	if !firstProduct
+        then firstProduct = lastProduct = p
+
+ 	%else 	
+  	bool poolResemblance = false
+
+  	organicProduct  aProduct = firstProduct
+
+  \quad		while aProduct  do
+		
+  \quad		 \quad if (!poolResemblance  and  (aProduct.ProductSimilarity(p)))
+
+   \quad	\quad	\quad	aProduct.AddNext(p),
+   	poolResemblance = true,   		
+        aProduct = aProduct.Next()
+  		
+  \quad		if !poolResemblance then
+ 		
+\quad	  		\quad bool productAdded = lastProduct.AddNext(p)
+
+\quad	  		\quad  if productAdded then lastProduct = p
+
+
+\subsection{Remove}
+
+
+\minisec{organicProduct soilSurface.RemoveProduct(No, frac)}
+Removes part of an organic product from the soil surface. The removed product
+is returned as an object in the function call.
+   No  - Product number in list to remove (0..),
+   frac - Fraction of product to be removed
+
+  organicProduct p = firstProduct,
+  organicProduct np = NULL
+  
+  for all i in 0..No-1 do
+
+  \quad   if p then 
+            p = p.Next(),
+      np = p.GetFraction(frac),
+ 	p.Scale(1-frac) 	
+ 
+  return np
+
+
+
+
+
+\subsection{Getter}
+
+\minisec{nitrogen soilSurface.GetTotalNitrogen()}
+  return GetAmmSolid()+GetNitSolid()+GetAmmDisolved()+
+     GetNitDisolved()+GetOrganicNitrogen()
+
+
+\minisec{soilSurface.GetCarbon(), GetOrganicNitrogen(),GetTotalWater(), GetNumberOfProducts()}  
+   organicProduct current = firstProduct,  sum = 0.
+   
+   while $current \ne NULL$ do
+
+     \quad sum = sum + current.GetCarbon() | GetOrganicNitrogen() | GetTotalWater() | 1
+
+     \quad current  = current .Next()  
+ 
+  return sum
+
+
+%\subsection{nitrogen soilSurface.}   
+%   organicProduct  p = firstProduct, nitrogen sum, sum.Clear()
+   
+%   while (p) do   sum = sum +  p = p.Next()
+   
+ %  return sum
+
+
+
+
+%\subsection{soilSurface.}   
+  % n=0,  organicProduct current = firstProduct
+   
+ %  while $current  \ne  NULL$ do  n++,  current = current.Next()
+   
+%   return n
+
+
+
+
+
+
+
+
+\section{Soil Profile}
+
+\citep{DaisyDescription} 
+
+Density ($\rho$), specific heat capacity (c), and thermal conductivity (K) of different soil
+constituents. Water and air at 10°C (de Vries, 1963).
+
+\begin{tabular}{lrrr}
+Soil constituent & $\rho$ & c & K \\ 
+               & $kg/m^3$ & J/(kg\textdegree C) & W/(m \textdegree C) \\ \hline
+Quarts         & 2660 & 750 & 8.8 \\
+Clay minerals  & 2650 & 750 & 2.9 \\
+Organic matter & 1300 & 1920 & 0.25 \\
+Water          & 1000 & 4192 & 0.57 \\
+Ice            & 920 & 2050 & 2.20 \\
+Air            & 1.25 & 1005 & 0.025
+\end{tabular}
+
+Column of soil layers stored as a list
+\begin{align*}
+LatentHeatMelting & = 334400  [J/kg] \\
+HeatCapacityWater & = 4192   [J/(kg dgC)] \\
+HeatCapacitySolid & = 750    [J/(kg dgC)] \\
+HeatCapacityIce & = 2050      [J/(kg dgC)] \\
+WaterDensity & =1000 [kg/m^3] \\
+IceDensity & =920    [kg/m^3] \\
+VolHeatCapacityIce & =HeatCapacityIce \cdot IceDensity [J/(m^3 dgC)] \\
+VolHeatCapacityWater & =HeatCapacityWater \cdot WaterDensity [J/(m^3 dgC)] \\
+snowConductivity & = 2.86e-6 \cdot 300 \cdot 300  \qquad from DAISY \\
+specCapacity & = LatentHeatMelting \cdot WaterDensity [J/m^3]
+\end{align*}
+
+\subsection{soilProfile.soilProfile(char Pname,Idx,base  owner) : base(Pname,Idx,owner)}
+% last=first = NULL
+ 
+  for all i in 0..MaxPlants-1 do $nitrogenUptake_{i}.Clear()$
+
+  for all i in 0..MaxSoilLayers-1 do   
+      \begin{align*}
+      soilLayerArray_{i} & =NULL &
+      distanceToPreviousLayer_{i} & =0 \\
+      distanceToNextLayer_{i} & =0   &
+      temp_{i} & =0
+      \end{align*}  
+           infiltration = 
+   depthDampning = 
+ maxRootDepth         = 
+ NumOfSoilLayers      = 0 
+
+ EvapExtCoef          = 0.01,
+ EvapCapacity  = 10, 
+ EvapContent  = 0, 
+
+$   minTemp_0  =-10, 
+   minTemp_1=-10, 
+   minTemp[2] =-10, 
+   minTemp[3] =-3, 
+   minTemp[4] =0, 
+   minTemp[5]=5, 
+   minTemp[6] =7, 
+   minTemp[7] =8 (because of start-up problem)
+   minTemp[8] =8, 
+   minTemp[9] =3, 
+   minTemp[10] =-5, 
+   minTemp[11] =-10 $
+
+   lastErrorYear =-1,
+   calculateAverage =true
+
+
+
+\subsection{soilProfile.soilProfile(soilProfile Profile) : base(Profile)}
+   \begin{align*}
+   NumOfSoilLayers    &= Profile.NumOfSoilLayers \\
+   EvapExtCoef        &= Profile.EvapExtCoef \\
+   EvapCapacity &= Profile.EvapCapacity \\
+   EvapContent & = Profile.EvapContent \\
+   maxRootDepth       & = Profile.maxRootDepth
+   \end{align*}
+   %first = NULL
+   %last  = NULL
+  for all i in 0..MaxPlants-1 do	$nitrogenUptake_{i}.Clear()$
+  
+   i = 0
+  
+   if Profile  then
+
+   \quad	soilLayer current, soilLayer tempLayer, current = Profile.first
+     
+   while current do
+       
+   \quad       tempLayer = new soilLayer(current),
+          AddItem(tempLayer)
+
+    \quad     $ soilLayerArray_{i}=tempLayer$,
+        $  soilLayerArray_{i}.SetOwner(this)$
+
+  \quad        current = current.Next()
+
+   \quad       i++     
+      
+      for all i in 0..ExtraLayers-1 do     \quad (extra layers)
+
+    \quad  $soilLayerArray_{NumOfSoilLayers+i} = \text{ new } soilLayer( Profile.soilLayerArray_{NumOfSoilLayers+i}) 
+     $
+
+    
+
+    \quad $ soilLayerArray_{NumOfSoilLayers+i}.SetOwner(this)$
+  
+    for (i=0i<(NumOfSoilLayers+ExtraLayers)i++)
+      \begin{align*}   
+    distanceToPreviousLayer_{i} & = Profile.distanceToPreviousLayer_{i} \\
+         distanceToNextLayer_{i} &    = Profile.distanceToNextLayer_{i} \\
+         temp_{i}          &   = Profile.temp_{i}      
+    \end{align*}
+Distances between layers considered equal. This assumption is not tested though.
+
+
+\subsection{Add}
+
+
+\minisec{soilProfile.Add(soilProfile   Profile,frac)}
+  % if (NumOfSoilLayers \ne Profile.NumOfSoilLayers)
+%\subsection{ %  	theMessage.FatalError("soilProfile.profiles with different number of layers can't be added!")}
+
+   for all i in 0..MaxPlants-1 do	$nitrogenUptake_{i}.Clear()$
+\begin{align*}
+   EvapExtCoef         &= (1-frac) \cdot EvapExtCoef+frac \cdot Profile.EvapExtCoef  \\
+   EvapCapacity &= (1-frac) \cdot EvapCapacity+frac \cdot Profile.EvapCapacity \\
+   EvapContent  &= (1-frac) \cdot EvapContent+frac \cdot Profile.EvapContent \\
+   maxRootDepth        &= (1-frac) \cdot maxRootDepth+frac \cdot Profile.maxRootDepth
+\end{align*}
+for all i in 0..(NumOfSoilLayers+ExtraLayers)-1 do 
+
+     \quad  $soilLayerArray_{i}.Add(Profile.soilLayerArray_{i},frac)$
+
+    \quad  $ temp_{i}  = (1-frac) \cdot temp_{i}+frac \cdot Profile.temp_{i}$
+ 
+\minisec{soilProfile.AddNutrient(nitrogen soilNit, nitrogen soilAmm)}
+Adds nitrogen to the first layer in the profile.
+   addNit   - Nit to be added [$g N/m^2$],
+   addAmm   - Amm to be added [$g N/m^2$]
+
+% if (first  \ne  NULL)
+  first.AddNutrient(soilNit,soilAmm)
+
+
+\minisec{soilProfile.AddItem(soilLayer  data)}
+Adds a soil layer to the profile, 
+   data  - Soil layer object
+
+ if first = NULL 
+then first = data
+else last.AddNext(data)
+
+ last = data
+
+  
+\minisec{soilProfile.AddProduct(organicProduct product,  rootLengthList)   }
+      n = GetNumberOfLayers(), 
+      L = rootLengthList, 
+      sumL  = 0
+
+      for all i in 0..n-1 do 
+       \quad  $ sumL =   sumL + \cdot (L++)$
+
+    $  soilLayer current = first$,
+      $ organicProduct prod = (organicProduct  \cdot ) product $
+
+     To awarning
+
+       organicProduct p, L = rootLengthList,  k=0 (Remove later!)
+
+      while current do
+
+  \quad      if  $L>0$ then
+
+     \quad\quad  p = prod.GetFraction($\frac{L}{sumL}$), 
+        	current.AddProduct(p), delete p
+
+       \quad 	current = current.Next()
+
+        \quad	L++
+
+         k++
+
+
+
+
+\subsection{soilProfile.Initialize(fstream  f)}
+   Setfile(f), startDepth = 0,
+   SetCritical(), FindSection("SoilParameters"),
+   GetParameter("Nodes",NumOfSoilLayers),
+   nodeThickNess=100,
+   UnsetCritical()
+
+   GetParameter("NodeThickness",nodeThickNess)
+
+   JBC[] = \{0.03,0.03,0.025,0.02,0.02,0.015,0.015,0.01,0.01,0.01\} 
+
+       modify the dependence upon the clay,
+      perhaps a mistake
+
+   JB = 5,
+   EvapExtCoef = JBC[JB-1]
+
+   %soilLayer aTempSoilLayer
+
+   for all i in 0..NumOfSoilLayers-1 do
+
+    \quad   aTempSoilLayer = new soilLayer("soilLayer",i,this)
+
+   \quad    aTempSoilLayer.Initialize(startDepth,nodeThickNess,f)
+
+  \quad     AddItem(aTempSoilLayer)
+
+  \quad     $soilLayerArray_{i}=aTempSoilLayer$,
+      $startDepth += nodeThickNess$
+ 
+   AssignMaxRootDepth()
+%    if (startDepth<maxRootDepth)
+%\subsection{%    	theMessage.FatalError("soilProfile.Initialize - The depth of defined layers is smaller than the root depth")}
+ 
+ for all i in 0..NumOfSoilLayers-1 do     
+
+       Calculates the distance between layers and converts to meter
+      
+       default temp
+  
+     $ temp_{i}  = 8,                  
+      aTempSoilLayer  = soilLayerArray_{i}$
+       
+      $	distanceToPreviousLayer_{i} = \begin{cases}
+          \tfrac{ aTempSoilLayer.GetThickness()}{2000}   & \text{ if } i = 0 \\
+          \tfrac{aTempSoilLayer.GetThickness()+soilLayerArray_{i-1}.GetThickness()}{2000} & \text{ otherwise}
+      \end{cases}$  
+    
+
+     $	distanceToNextLayer_{i} = $
+
+$\begin{cases}
+        \tfrac{ aTempSoilLayer.GetThickness()}{1000 } &   \text{ if } i=NumOfSoilLayers-1 \\
+     \tfrac{aTempSoilLayer.GetThickness()+soilLayerArray_{i+1}.GetThickness()}{2000} & \text{ otherwise}
+   \end{cases}$
+  
+  for all i in 0..ExtraLayers-1 do        
+
+  \quad      extra layers to ensure no heat flow at bottom (boundary condition)
+   
+  \quad      $soilLayerArray_{NumOfSoilLayers+i}  = 
+   \text{new } soilLayer(soilLayerArray_{NumOfSoilLayers-1})$  
+
+  \quad $  temp_{i+NumOfSoilLayers}  = 8 $
+
+   \quad  $distanceToNextLayer[NumOfSoilLayers + i]    =$
+
+\quad\quad$ 
+distanceToNextLayer_{NumOfSoilLayers-1} \cdot (i+1) \cdot 10   $
+    
+   \quad   $soilLayerArray_{NumOfSoilLayers+i}.SetStartDepth($
+
+\quad \quad 
+$ soilLayerArray[NumOfSoilLayers+i-1].GetStartDepth()$
+
+\quad \quad  \quad $+  1000 \cdot distanceToNextLayer_{i+NumOfSoilLayers-1})$ 
+  
+   $ distanceToPreviousLayer_{i+NumOfSoilLayers}  = distanceToNextLayer_{i+NumOfSoilLayers-1}$
+      
+   $soilLayerArray_{NumOfSoilLayers+i}.SetThickness($
+
+\quad  \quad $distanceToNextLayer_{i+NumOfSoilLayers} \cdot 1000)$
+  
+  $ soilLayerArray_{NumOfSoilLayers+i}.SetFieldCapacity(\tfrac{soilLayerArray[
+      NumOfSoilLayers-1].GetFieldCapacity()}{     soilLayerArray_{NumOfSoilLayers-1}.GetThickness()} \cdot 
+                                                          soilLayerArray_{NumOfSoilLayers+i}.GetThickness())
+  $
+
+  \quad    $soilLayerArray_{NumOfSoilLayers+i}.SetWater(soilLayerArray_{NumOfSoilLayers+i}.GetFieldCapacity())
+  $
+
+   f=NULL
+
+   for (i=0i<(NumOfSoilLayers+ExtraLayers)i++)
+   \begin{align*}
+   	DistPreviousLayerInv_{i} & = \tfrac{1}{distanceToPreviousLayer_{i}} \\
+      DistNextLayerInv_{i}    &  = \tfrac{1}{distanceToNextLayer_{i}}
+  \end{align*} 
+   if theControlParameters.GetWriteSoilTemp() then
+
+SoilTempFile.open("soiltemp.txt",ios.out)
+
+
+
+\minisec{soilProfile.AssignMaxRootDepth()}
+   $c1=0.06, 
+   c2=0.15, 
+   d1=600, 
+   d2=2000$,
+   UnsetCritical()
+
+   if !GetParameter("MaxRootDepth", maxRootDepth) then
+
+   \quad  Clay = GetClayContent(500,200)
+   
+  \quad $ maxRootDepth = \begin{cases}
+                    d1 & \text{ if } Clay<c1 \\
+                    \min\left(d2,d1+(d2-d1) \cdot  \tfrac{Clay-c1}{c2-c1}\right) & \text{ otherwise}
+                   \end{cases}$
+
+
+%FARM-N pig farm 96074: calls a NULL here at some po???!!!
+
+
+
+
+
+
+
+
+\subsection{Subtract}
+
+
+
+\minisec{soilProfile.SubtractEvap(soilEvap)}
+Subtracts Evap [mm] from profile.
+  
+
+ /*  Newest, but presently discarded method
+
+ soilLayer current = first
+
+ while $soilEvap>0$ do
+  \begin{align*}
+subtractAmount & = \min(soilEvap,current.GetAvailWater()) \\
+   soilEvap & = soilEvap - subtractAmount \\
+   current.SubtractEvap(subtractAmount) \\
+current & = current.Next()
+\end{align*}
+  */
+
+      Original method - extended with the EvapContent part
+\begin{align*}
+ soilLayer current & = first \\
+ directEvap & =\min(\min(soilEvap,EvapContent),soilLayerArray_0.GetAvailWater()) \\
+ soilEvap & =  soilEvap- directEvap \\
+ EvapContent & =EvapContent-directEvap
+\end{align*}
+$ soilLayerArray_0.SubtractEvap(directEvap)$
+
+ if $soilEvap>0$ then 
+ sum = GetMaximumEvap()
+
+ \quad  while $current  \ne  NULL$  and  $sum>0$ do
+      \begin{align*}
+      a & = %     current.GetThickness() \cdot 
+        \max(0,current.GetAvailWater()) \cdot \exp(-EvapExtCoef current.GetCenterDepth()) \\
+     &  current.SubtractEvap(soilEvap \cdot \tfrac{a}{sum}) \\
+      current & = current.Next()
+ \end{align*}
+
+
+
+\minisec{soilProfile.SubtractTransp(linkList<rootStructure>   rootList)}
+Subtracts estimated transp from the water in the layer.
+
+   $waterBefore = soilLayerArray_0.GetAvailWater()$
+
+%    $PlantDemand[MaxPlants]$
+% 
+%  $  WaterUptakeAbility[MaxSoilLayers \cdot MaxPlants]$
+% 
+%   $ TotalWaterUptakeAbility[MaxSoilLayers \cdot MaxPlants]$
+% 
+%    %WaterResource_{MaxSoilLayers}
+% 
+%  $  PlantUptake[MaxPlants \cdot MaxSoilLayers]$
+
+   for all i in 0..$MaxPlants \cdot MaxSoilLayers-1$ do  
+	   $PlantUptake_{i}=0 $  
+
+   AttackerNumber = rootList.NumOfNodes()
+%    if (AttackerNumber>MaxPlants)  
+%       cout << GetLongName() << endl
+%\subsection{% 		theMessage.FatalError("soilProfile.SubtractTransp \maximum number of crops exceeded.")}
+  
+ for all i in 0..AttackerNumber-1 do
+
+   \quad	$PlantDemand_{i} = \max(0,rootList.ElementAtNumber(i).transpDemand)$
+
+  $ rootStructure  \cdot TotalRoot = new rootStructure$
+
+  % EstimateTotalRoot(TotalRoot,rootList)
+
+   ResourceNumber  = 0, 
+   soilLayer currentSoilLayer = first
+
+   while $currentSoilLayer  \ne  NULL$ do
+
+  \quad   currentSoilLayer = currentSoilLayer.Next(),
+   ResourceNumber++	
+  
+   TotalPlantUptake[MaxPlants]
+
+  for all j in 0..AttackerNumber-1 do
+   	$TotalPlantUptake_{j} = 0$
+
+   linkList <rootStructure>.PS currentRoot
+
+   rootList.PeekHead(currentRoot),
+   PlantIdx = 0
+
+   while $currentRoot  \ne  NULL$  do
+
+   \quad SoilLayerIdx = 0, 
+      soilLayer currentSoilLayer = first
+
+      while $currentSoilLayer  \ne  NULL$ do
+        
+      \quad $	WaterUptakeAbility[SoilLayerIdx+PlantIdx \cdot ResourceNumber] = $
+               
+ \quad \quad $currentSoilLayer.MaxTransp(currentRoot.element) $
+        \begin{align*}   
+         currentSoilLayer&= currentSoilLayer.Next() \\
+         SoilLayerIdx & =   SoilLayerIdx+ 1
+       \end{align*}      
+      rootList.OneStep(currentRoot)
+
+      PlantIdx++, 
+   currentSoilLayer  = first,
+   SoilLayerIdx = 0
+
+   while $currentSoilLayer  \ne  NULL$  do
+      \begin{align*}
+      TotalWaterUptakeAbility_{SoilLayerIdx} & = currentSoilLayer.MaxTransp(TotalRoot) \\
+      WaterResource_{SoilLayerIdx} & = \min(currentSoilLayer.GetTotalWater() \\
+              & \quad  -currentSoilLayer.GetIce(),\\
+              & \quad TotalWaterUptakeAbility_{SoilLayerIdx}) \\
+      currentSoilLayer & = currentSoilLayer.Next()     \\ 
+       SoilLayerIdx & = SoilLayerIdx+ 1
+     \end{align*}
+   ResourceCompetition(ResourceNumber, AttackerNumber, PlantDemand, $WaterUptakeAbility_0$, $WaterResource_0$, $PlantUptake_0$)
+
+  $ delete [sizeof(double) \cdot MaxSoilLayers] TotalRoot.rootLengthList  $
+    
+   delete TotalRoot
+
+   if $rootList \ne NULL$  then (Perform only if plants has roots) 
+
+   \quad   $soilLayer currentSoilLayer = first$,
+     SoilLayerIdx = 0
+     
+  \quad    while $currentSoilLayer  \ne  NULL$ do
+ 
+  \quad\quad    	subtractTransp = 0
+
+   \quad\quad      for all j in 0..AttackerNumber-1 do         
+           \begin{align*}
+            transpRate & = PlantUptake[SoilLayerIdx+j \cdot ResourceNumber] \\
+            transpRate & = \min(transpRate, \\
+                      & \quad currentSoilLayer.MaxTransp(rootList.ElementAtNumber(j))) \\
+            subtractTransp & = subtractTransp + transpRate \\
+            TotalPlantUptake_{j} & = TotalPlantUptake_{j} + transpRate     
+           \end{align*}
+  \quad       currentSoilLayer.SubtractTransp(subtractTransp)
+
+ \quad       currentSoilLayer = currentSoilLayer.Next(),
+        SoilLayerIdx++
+      
+   for all i in 0..AttackerNumber-1 do  
+   	$rootList.ElementAtNumber(i).actualTransp = TotalPlantUptake_{i}$
+   
+  %   if (TotalPlantUptake_{i}<0)
+%\subsection{    %  	theMessage.WarningWithDisplay("soilProfile.SubtractTransp negative ",TotalPlantUptake_{i})}
+%       if (TotalPlantUptake_{i}-rootList.ElementAtNumber(i).transpDemand>1e-5)
+%          cout << theTime << endl
+%          cout << "Layer: " << i << "  TotalPlantUptake: " << TotalPlantUptake_{i} << "  RootList\_transpDemand: " << rootList.ElementAtNumber(i).transpDemand
+%\subsection{%       	theMessage.WarningWithDisplay("soilProfile.SubtractTransp exceeds demand by ",TotalPlantUptake_{i}-rootList.ElementAtNumber(i).transpDemand)}
+      
+   if (waterBefore>1E-5) then
+   	$EvapContent   = \tfrac{soilLayerArray_0.GetAvailWater()}{waterBefore}$
+
+
+
+
+\minisec{nitrogen soilProfile.SubtractNitrogenUptake(linkList<rootStructure>  rootList)}
+  Subtracts estimated nitrogen uptake by the plants from the mineral
+nitrogen pools in the layer.
+
+%    PlantDemand[MaxPlants]
+% 
+%    $NitrogenUptakeAbility[2 \cdot MaxSoilLayers \cdot MaxPlants]  $
+% 
+%    $NitrogenResource[2 \cdot MaxSoilLayers]$
+% 
+%    $PlantUptake[MaxPlants \cdot 2 \cdot MaxSoilLayers]$
+% 
+%    $Iteration=MaxPlants \cdot 2 \cdot MaxSoilLayers$
+
+   for($i=0i<Iterationi++$)   
+	  $ PlantUptake_{i}=0 $  
+
+   %nitrogen TotalPlantUptake[MaxPlants]
+
+   AttackerNumber = rootList.NumOfNodes()
+
+   for all i in 0..AttackerNumber-1 do
+
+  \quad 	$PlantDemand_{i} = rootList.ElementAtNumber(i).NitrogenDemand$
+	
+   \quad    for all i in 0..AttackerNumber-1 do
+   \quad\quad	$TotalPlantUptake_{j}.Clear()$
+
+   rootStructure TotalRoot = new rootStructure
+
+   EstimateTotalRoot(TotalRoot,rootList)
+
+   ResourceNumber = 0, 
+   soilLayer currentSoilLayer  = first
+
+   while $currentSoilLayer  \ne  NULL$ do
+   
+   \quad   currentSoilLayer = currentSoilLayer.Next(),
+    ResourceNumber++
+  
+   $ResourceNumber = ResourceNumber \cdot 2   $
+
+                                   2 as both nit and amm are substrates
+
+   linkList <rootStructure>.PS currentRoot
+
+   rootList.PeekHead(currentRoot),
+   PlantIdx = 0
+
+   while $currentRoot  \ne  NULL$  do
+     
+	\quad SoilLayerIdx  = 0 ,
+      soilLayer currentSoilLayer = first
+      
+      \quad  while $currentSoilLayer  \ne  NULL$  do 
+        
+      	\quad\quad$NitrogenUptakeAbility[2 \cdot SoilLayerIdx+PlantIdx \cdot ResourceNumber] $
+
+         \quad\quad\quad    $   = currentSoilLayer.MaxNitrogenFlux(false,currentRoot.element) $
+
+	\quad\quad$NitrogenUptakeAbility[2 \cdot SoilLayerIdx+PlantIdx \cdot ResourceNumber+1] $
+
+           \quad\quad\quad     $ = currentSoilLayer.MaxNitrogenFlux(true ,currentRoot.element) $
+   
+\begin{align*}       
+ currentSoilLayer & = currentSoilLayer.Next() \\
+         SoilLayerIdx &= SoilLayerIdx  + 1
+        \end{align*}      
+      rootList.OneStep(currentRoot)
+
+      PlantIdx++
+  
+
+   SoilLayerIdx = 0, 
+   currentSoilLayer = first, 
+   static tmp  =0, 
+   tmp  = tmp + 1
+
+   while $currentSoilLayer  \ne  NULL$  do
+      \begin{align*}
+       TotalAmmUptake & = currentSoilLayer.MaxNitrogenFlux(false,TotalRoot) \\
+      LayerAmm & = currentSoilLayer.GetAmm().n \\
+      &  currentSoilLayer.FracAmmInWater() \\
+   	NitrogenResource[2 \cdot SoilLayerIdx]  & = \min(LayerAmm,TotalAmmUptake)
+      \end{align*}
+   	if($tmp=0$)   	
+   		cout<<currentSoilLayer.GetAmm().n<<endl   	
+   \begin{align*}
+      TotalNitUptake & = currentSoilLayer.MaxNitrogenFlux(true,TotalRoot) \\
+      LayerNit & = currentSoilLayer.GetNit().n \\
+   	NitrogenResource[2 \cdot SoilLayerIdx+1] & = \min(LayerNit,TotalNitUptake) \\
+      currentSoilLayer &  = currentSoilLayer.Next() \\
+      SoilLayerIdx & = SoilLayerIdx+ 1
+  \end{align*}  
+   ResourceCompetition(ResourceNumber, AttackerNumber, PlantDemand, $NitrogenUptakeAbility_0$, $NitrogenResource_0$, $PlantUptake_0$)
+
+      $ delete [sizeof(double) \cdot MaxSoilLayers] TotalRoot.rootLengthList $
+
+     
+   delete [] TotalRoot.rootLengthList,  
+   delete TotalRoot
+
+   if $rootList \ne NULL$ then (Perform only if plants has roots)
+ 	
+        \quad  soilLayer currentSoilLayer = first, 
+   	SoilLayerIdx  = 0
+        
+   	\quad while $currentSoilLayer  \ne  NULL$ do
+   	
+        \quad\quad   for all j in 0..AttackerNumber-1 do   
+            \begin{align*}
+             NH4LayerUptake & = currentSoilLayer.SubtractAmmUptake( \\
+               & \quad PlantUptake[2 \cdot SoilLayerIdx+j \cdot ResourceNumber]) \\
+            NO3LayerUptake & = currentSoilLayer.SubtractNitUptake( \\
+               & \quad PlantUptake[2 \cdot SoilLayerIdx+j \cdot ResourceNumber+1]) \\
+            TotalPlantUptake_{j} & = TotalPlantUptake_{j} + NH4LayerUptake + NO3LayerUptake
+  	    \end{align*}		
+        \begin{align*}
+         currentSoilLayer & = currentSoilLayer.Next() \\
+         SoilLayerIdx & = SoilLayerIdx + 1
+       \end{align*} 	
+   for all i in 0..AttackerNumber-1 do
+   	$nitrogenUptake_{i} = TotalPlantUptake_{i}$
+
+   return nitrogenUptake
+
+\subsection{soilProfile.EstimateTotalRoot(rootStructure TotalRoot,linkList<rootStructure> rootList)}
+   Generates average total rootDens
+
+   TotalRoot.rootRadius = TotalRoot.rootpF = TotalRoot.NitUptakeRate 
+
+= TotalRoot.AmmUptakeRate=   
+   TotalRoot.MinimumSoilNit  = 
+   TotalRoot.MinimumSoilAmm  = 0
+
+  $ TotalRoot.rootLengthList$  = new double$[MaxSoilLayers]$  (LEAK !!!)
+ 
+   for ($j=0j<MaxSoilLayersj++$) do $TotalRoot.rootLengthList_{j} = 0$
+
+   % TotalPlantRootLength[MaxPlants]
+
+   TotalRootLength = 0, 
+   AttackerNumber = 0
+
+   if rootList then AttackerNumber = rootList.NumOfNodes()
+
+   for all i in 0..AttackerNumber-1 do   
+      \begin{align*}
+      currentRoot & = rootList.ElementAtNumber(i) \\
+      TotalPlantRootLength_{i} & = 0
+      \end{align*}
+      for all j in 0..MaxSoilLayers-1 do
+   		$TotalPlantRootLength_{i} += currentRoot.rootLengthList_{j}$
+
+     $ TotalRootLength += TotalPlantRootLength_{i}$
+   
+   if $TotalRootLength>0$ then 
+
+\quad	   for all i in  0..AttackerNumber-1 do 	
+  
+\quad\quad	   	$currentRoot = rootList.ElementAtNumber(i)$
+	     
+\quad\quad	$ TotalRoot.rootRadius +=\tfrac{TotalPlantRootLength_{i}}{TotalRootLength} currentRoot.rootRadius$
+	   	
+\quad\quad	$TotalRoot.rootpF +=\tfrac{TotalPlantRootLength_{i}}{TotalRootLength} currentRoot.rootpF$
+		
+\quad\quad	$TotalRoot.NitUptakeRate +=\tfrac{TotalPlantRootLength_{i}}{TotalRootLength} currentRoot.NitUptakeRate$
+		
+\quad\quad	$TotalRoot.AmmUptakeRate +=\tfrac{TotalPlantRootLength_{i}}{TotalRootLength} currentRoot.AmmUptakeRate$
+		
+\quad\quad	$TotalRoot.MinimumSoilNit +=\tfrac{TotalPlantRootLength_{i}}{TotalRootLength} currentRoot.MinimumSoilNit$
+		
+\quad\quad	$TotalRoot.MinimumSoilAmm +=\tfrac{TotalPlantRootLength_{i}}{TotalRootLength} currentRoot.MinimumSoilAmm $
+
+	\quad      for all j in 0..MaxSoilLayers-1 do
+
+	 	$TotalRoot.rootLengthList_{j} += currentRoot.rootLengthList_{j}$
+	  
+  
+
+
+\subsection{soilProfile.ResourceCompetition(ResourceNumber, AttackerNumber, double  Demand, double  UptakeAbility, double  Resource, double ResourceRemoved)}
+   % PossibleUptake[MaxPlants]
+   %$MaxResourceUptake[2 \cdot MaxSoilLayers]$
+
+   for all j in 0..AttackerNumber-1 do $PossibleUptake_{j} = 0$
+
+   for all i in 0..ResourceNumber-1 do $MaxResourceUptake_{i} = 0$
+
+   for all j in 0..AttackerNumber-1 do
+
+   \quad	for all i in 0..ResourceNumber-1 do
+    	$ResourceRemoved_{i+j \cdot ResourceNumber} = 0$
+
+   bool DemandFullfilled = false
+
+   while !DemandFullfilled   do
+
+  \quad    DemandFullfilled = true
+
+  \quad  for all j in 0..AttackerNumber-1 do
+
+ \quad\quad	   	for all i in 0..ResourceNumber-1 do
+
+ \quad\quad\quad	      	$MaxResourceUptake_{i} += UptakeAbility_{i+j \cdot ResourceNumber}$
+
+   	for all j in 0..AttackerNumber-1 do
+    
+	\quad   	for all i in 0..ResourceNumber-1 do
+
+         \quad\quad   if $MaxResourceUptake_{i}>0$ then
+
+            \quad\quad\quad	$PossibleUptake_{j} += UptakeAbility_{i+j \cdot ResourceNumber} \cdot 
+\min(1,\tfrac{Resource_{i}}{MaxResourceUptake_{i}}$
+        
+            \quad\quad $DemandFullfilled = DemandFullfilled \& (PossibleUptake_{j}>Demand_{j})$
+    
+
+      if DemandFullfilled  then 
+   
+      \quad\quad	for all j in 0..AttackerNumber-1 do
+
+	\quad\quad\quad  for all i in 0..ResourceNumber-1 do
+
+           \quad\quad\quad\quad 	if $PossibleUptake_{j}>0$ and  $MaxResourceUptake_{i}>0$ and  $Demand_{j}>0$ then
+	          $ResourceRemoved_{i+j \cdot ResourceNumber} = \tfrac{Demand_{j}}{PossibleUptake_{j}} \cdot UptakeAbility_{i+j \cdot ResourceNumber} \cdot 
+\min(1,\tfrac{Resource_{i}}{MaxResourceUptake_{i}})$
+      else    
+ 
+      	bool singleDemand = false
+for all i in 0..AttackerNumber-1 do
+      
+	\quad   if (($PossibleUptake_{j}>Demand_{j}$)  and  ($Demand_{j}>0$))
+
+           \quad\quad  (single plant demand can be fullfilled!)
+          
+          \quad\quad  	for all i in 0..ResourceNumber-1 do   
+         
+           \quad\quad\quad 		if  $PossibleUptake_{j}>0$  and  $MaxResourceUptake_{i}>0$ then
+
+          \quad\quad\quad  \quad $ResourceRemoved_{i+j \cdot ResourceNumber} = \tfrac{Demand_{j}}{PossibleUptake_{j}} \cdot UptakeAbility_{i+j \cdot ResourceNumber} \cdot \min(1,\tfrac{Resource_{i}}{MaxResourceUptake_{i}})$
+               
+         \quad\quad\quad\quad $  UptakeAbility_{i+j \cdot ResourceNumber} = 0$
+              
+           \quad\quad   singleDemand = true
+
+         \quad     $ Demand_{j} = 0$
+         
+      	
+
+         if !singleDemand then
+        (all plants uptake are below demand !!)
+
+       \quad\quad     for all j in 0..AttackerNumber-1 do
+
+       \quad\quad\quad        for ($i=0 i<ResourceNumber i++$)
+
+         \quad\quad\quad\quad      
+  if $PossibleUptake_{j}>0$  and $MaxResourceUptake_{i}>0$  and  
+  $Demand_{j}>0$ 
+
+         \quad\quad\quad\quad\quad  then
+    $ResourceRemoved_{i+j \cdot ResourceNumber} = UptakeAbility_{i+j \cdot ResourceNumber}$
+          
+       $ \cdot \min(1,\tfrac{Resource_{i}}{MaxResourceUptake_{i}})$
+         
+   DemandFullfilled = true
+         
+\subsection{Update}   
+
+\minisec{soilProfile.UpdateT(  soilTemp,airTemp,depth,meanAirTemp)}   
+Calculates soil temp using a simple algorithm.
+Returned values for periods without frost are good estimates, returned
+values for periods with frost are fair estimates as frost and snow influence
+are not accounted for in a fully satisfactory fashion using this simple method.
+Konstants are presently hand-fitted (8.3.1999).   
+  airTemp  - mean air temp of the current day (Celsius),
+   depth  - soil depth in mm,  
+meanAirTemp - yearly mean air temp for the site (Celsius)
+
+  $ k1 =  30000,
+   k2 = -0.00033, 
+   k3 =  0.006,
+   k4 =  0.12,  
+   a1 = \tfrac{k1}{k1+(depth^2)} $
+ 
+   if $soilTemp<k3 \cdot depth$ then $a1=a1 \cdot k4$
+   \begin{align*}
+   dampenFactor &=\exp(k2 \cdot depth) \\
+   Tdampened &=((airTemp-meanAirTemp) \cdot dampenFactor) \\
+             & +meanAirTemp   \\
+             &   Dampen amplitude. Tdampened is target value for this depth \\
+    \cdot soilTemp &= \cdot soilTemp+a1 \cdot (Tdampened- \cdot soilTemp) \\
+             &     Pursue target value
+  \end{align*}
+
+
+
+
+\minisec{soilProfile.UpdateOrganicMatter(), UpdateNitrification()}
+Updates organic matter pools in profile.
+Performs nitrification and updates contents of ammonia and nit.
+ returns Nitrification [$g N/m^2$/d]
+
+   CO2Evolution  = 0,  soilLayer current  = first
+
+   while $current  \ne  NULL$ do   
+
+      \quad CO2Evolution =  CO2Evolution + current.UpdateOrganicMatter() |
+          UpdateNitrification()
+
+      \quad  current  = current.Next()
+   
+   return CO2Evolution
+
+
+
+    
+\minisec{nitrogen soilProfile.UpdateDenitrification(TotalCO2Emission)}
+Performs denitrification and updates contents of nit.
+ returns Nitrification [$g N/m^2$/d] 
+
+   nitrogen sum, soilLayer current = first
+
+   while $current \ne NULL$ do
+
+    \quad  current.UpdateN2OFromDenitrification(TotalCO2Emission)
+      
+    \quad  sum  = sum  current.UpdateN2Production(), 
+      current  = current.Next()
+    
+   return sum
+
+
+% \subsection{nitrogen soilProfile.GetPoolNitrogen(char Name), GetPoolNitrogen(char Name,startDep,thick),GetPoolCarbon(char Name,startDep,thick)}
+%    nitrogen Content, soilLayer current = first
+% 
+%    while $current  \ne  NULL$
+%    
+%       \quad Content  = Content + current.GetPoolNitrogen(Name) |  
+%            GetPoolNitrogen(char Name,startDep,thick) | GetPoolCarbon(char Name,startDep,thick)
+%       
+%        \quad current  = current.Next()
+%    
+%    return Content
+
+
+
+
+
+\subsection{Getter}
+
+
+\minisec{nitrogen soilProfile.GetAmm(s,t), GetNit(s,t),
+GetN2OFromNitrification(), GetN2OFromDenitrification(), GetChloride(s,t),
+GetAmm(), GetNit(), GetCarbon(), GetOrganicNitrogen(), GetOrganicNitrogen(s,t),
+GetOrganicCarbon(s,t), GetSoilMass(s,t), GetPoolNitrogen(Name), 
+           GetPoolNitrogen(Name,s,t), GetPoolCarbon(Name,s,t)}
+   nitrogen Content, soilLayer current = first, s - startDep, t - thick
+
+   while $current  \ne  NULL$ do
+     
+      \quad Content = Content + current.GetAmm(s,t) |
+GetNit(s,t) | GetN2OFromNitrification() | GetN2OFromDenitrification() |
+GetChloride(s,t) | GetAmm() | GetNit() | GetCarbon() | GetOrganicNitrogen()
+| GetOrganicNitrogen(s,t) | GetOrganicCarbon(s,t) | GetSoilMass(s,t) | GetPoolNitrogen(Name) |  
+           GetPoolNitrogen(Name,s,t) | GetPoolCarbon(Name,s,t)
+
+     \quad current = current.Next()
+    
+   return Content
+
+
+\minisec{soilProfile.GetTotalWater(s,t), GetAvailWater(s,t),
+GetAvailCapacity(s,t), GetFieldCapacity(s,t), GetWiltCapacity(s,t)
+}
+Calculates (soil water content |                 
+ plant available soil water content  | 
+ capacity for plant available water |   
+ field capacity for water | wilting capacity for) for a portion of the profile.
+
+\begin{tabular}{ll}
+   s - startDep   & Start depth of layer to be calculated for [mm] \\
+   t - thick     & Thickness of layer to be calculated for [mm] \\
+   returns    & Capacity for plant available water [mm]
+\end{tabular}
+
+ Content  = 0, 
+ soilLayer current = first
+
+ while $current  \ne  NULL$ do
+ 
+\quad Content = Content + current.GetTotalWater(s,t) | 
+ GetAvailWater(s,t) |
+ GetAvailCapacity(s, t) | 
+ GetFieldCapacity(s,t) | 
+ GetWiltCapacity(s,t) 
+  
+\quad current  = current.Next()
+
+ return Content
+
+
+
+
+\minisec{soilProfile.GetClayContent(startdepth, thick)}
+   $Content = TotalWeight=0,
+   soilLayer current=first$
+
+   while $current  \ne  NULL$ do
+     
+    \quad
+      top=current.GetStartDepth(),
+      th=current.GetThickness()
+    
+    \quad  if $top+th>startdepth$  and  $top<startdepth+thick$ then    
+            (Test if within range)
+       
+     \quad $ slice = \begin{cases}
+                 \max(0,top+th-startdepth)  & \text{ if } (top<startdepth) \\
+                 \max(0,startdepth+thick-top) & \text{ if } ((top+th)>(startdepth+thick)) \\
+                 th & \text{ otherwise}
+                \end{cases}$   
+ \begin{align*}
+        TotalWeight&=  TotalWeight+ slice current.GetDryBulkDensity() \\
+        Content&= Content+ slice current.GetDryBulkDensity() current.GetClayContent() \\   
+      current & = current.Next()  
+\end{align*} 
+   return $\tfrac{Content}{TotalWeight}$  
+
+
+\minisec{soilProfile.GetMaximumDepth()}
+   %if (soilLayerArray_{NumOfSoilLayers-1}=NULL)
+%\subsection{   %   theMessage.FatalError("soilProfile.GetMaximumDepth - array points at NULL")}
+   %else
+      return $soilLayerArray_{NumOfSoilLayers-1}.GetEndDepth()$
+   %return 0
+
+\minisec{nitrogen soilProfile.GetTotalNitrogen()}
+   return  GetAmm()+GetNit()+GetOrganicNitrogen()
+
+
+\minisec{nitrogen soilProfile.GetNitLeaching(depth),GetAmmLeaching(depth)}  
+    bool found = false, 
+   soilLayer current = first
+  
+   while $ not found$  and  $current  \ne NULL$ do
+
+ \quad     if ($depth  \ge  current.GetStartDepth()$  
+\quad \quad \quad and  $depth\le current.GetStartDepth()+current.GetThickness()$)
+	    
+    \quad  \quad   then  $  N = current.GetNitLeaching() | GetAmmLeaching(depth)$, 
+    $found = true$
+
+  \quad  $  current = current.Next() $  
+
+   return N
+
+\minisec{soilProfile.GetNumberOfLayers()}  
+   n  = 0,  soilLayer current  = first
+
+   while $current  \ne  NULL$  do   
+      do n = n + 1,
+      current = current.Next()
+      
+   return n
+
+\minisec{soilProfile.GetLayerThickness(No)}   
+   n = 0, thick  = 0, soilLayer current  = first
+ 
+   while $current  \ne  NULL$ do
+    
+      \quad if n=No then thick = current.GetThickness(), n = n + 1, current = current.Next()
+    
+   return thick
+
+\minisec{soilProfile.GetTemp(depth)}
+The temp of a given soil layer is defined at the top of the layers
+
+  i=0
+
+  while ($soilLayerArray_{i}.GetStartDepth()\le depth$  and $ i<NumOfSoilLayers$)
+
+   \quad  i++, if $i=NumOfSoilLayers-1$
+     then  return $ soilLayerArray_{i}.GetTemp()$
+
+$ a=depth-soilLayerArray_{i-1}.GetStartDepth()$,
+
+$   b=soilLayerArray_{i}.GetStartDepth()-depth   $
+
+ return $soilLayerArray_{i-1}.GetTemp() \cdot \tfrac{ b}{a+b}
+          +soilLayerArray_{i}.GetTemp() \cdot \tfrac{a}{a+b}$
+
+\minisec{soilProfile.GetDrainage(depth)}
+  if $depth\le \tfrac{soilLayerArray_0.GetThickness()}{2}$ then
+		return $soilLayerArray_0.GetWaterFlux()$
+
+  if $depth  \ge  (soilLayerArray_{NumOfSoilLayers-1}.GetStartDepth()$
+
+\quad	\quad \quad \quad$ +\tfrac{soilLayerArray_{NumOfSoilLayers-1}.GetThickness()}{2})$ 
+
+\quad \quad then
+		return $soilLayerArray_{NumOfSoilLayers-1}.GetWaterFlux()$
+
+	i=0
+
+	while $soilLayerArray_{i}.GetStartDepth()+\tfrac{soilLayerArray_{i}.GetThickness()}{2} <depth$ do
+
+	\quad	i++,
+  if $i=NumOfSoilLayers-1$ then
+	return $soilLayerArray_{i}.GetWaterFlux()$
+
+   return $soilLayerArray_{i-1}.GetWaterFlux()$
+
+
+
+
+
+\minisec{soilProfile.GetMaximumEvap()}
+Estimated maximum Evap from whole profiles
+
+   soilLayer current  = first, sum  = 0
+
+   while $current  \ne  NULL$ do
+    \begin{align*}
+     sum & = sum + \max(0,current.GetAvailWater()) \\
+            &  \cdot \exp(-EvapExtCoef current.GetCenterDepth()) \\  %current.GetThickness() \cdot 
+     current & = current.Next()
+    \end{align*}
+   return sum
+
+
+\subsection{Budget}
+  
+\minisec{soilProfile.StartBudget()}
+  soilLayer current = first
+
+  while $current  \ne  NULL$  do current.StartBudget(), current = cu
+
+\minisec{soilProfile.EndBudget()}
+
+soilLayer current = first
+
+while $current  \ne  NULL$ do
+  current.EndBudget(),
+ current = current.Next()
+
+
+
+\section{Soil layer}
+
+
+define $\pi$   3.14159265358979323846
+\begin{align*}
+HeatCapacityFreezingWater & = 334400 [J/kg] \\
+HeatCapacityWater  &  = 4192  [J/kgC] \\
+HeatCapacityIce & = 2000   [J/kgC] \\
+HeatCapacitySolid  & = 750   [J/kgC] \\
+WaterDensity   & = 1000   [kg/m^3]
+\end{align*}
+
+\subsection{Update}
+
+
+
+\minisec{soilLayer.UpdateOrganicMatter()}
+Update organic matter pools in layer.
+   \begin{align*}
+   TillageEffectTemp & = \max(0,TillageEffectTemp-0.05) \\
+   NewTemp & = \min(37.0,TillageEffectTemp+temp) \\
+%
+   pFValue & = pF.GetpF(\tfrac{waterContent}{thickness})
+\end{align*}
+\begin{align*}
+   nitrogen nit  & = nit\_mob + nit\_imob &
+   nitrogen amm & = amm\_mob + amm\_imob   
+\end{align*}
+ nitfrac = ammfrac =    unprotecFrac = 0
+
+   if $nit.n>0$ then $  nitfrac = \max(0,\min(1,\tfrac{nit\_mob}{nit})$
+    then
+  
+  if $amm\_mob.n>0$  and  $amm.n >0$ then
+   $  ammfrac = \max(0,\min(1,\tfrac{amm\_mob}{amm})$
+
+        Deals with protected NH4
+
+
+
+   if $amm.n>0$ then
+   	$unprotecFrac = \tfrac{AccesibleAmm()}{amm.n}$
+  \begin{align*}
+    nitrogen ProtectedNH4\_mob & = amm\_mob \cdot (1-unprotecFrac) \\
+   nitrogen ProtectedNH4\_imob & = amm\_imob \cdot (1-unprotecFrac) \\
+   amm & = amm \cdot unprotecFrac
+ \end{align*}
+   \begin{align*}
+  CO2Evolution & = OrganicMatter.Update(NewTemp,pFValue,nit,amm) \\
+  nitfrac & = FractionMobileWater() \\
+  ammfrac & = nitfrac \\
+  nit\_mob  & = nit \cdot nitfrac \\
+  nit\_imob & = nit \cdot (1-nitfrac) \\
+  amm\_mob & = amm \cdot ammfrac+ProtectedNH4\_mob \\ 
+  amm\_imob & = amm \cdot (1-ammfrac)+ProtectedNH4\_imob
+ \end{align*}
+  return CO2Evolution
+
+
+
+
+
+\minisec{nitrogen soilLayer.UpdateNitrification()}
+\citep{chatskikh2005simulation}
+Perform nitrification and update contents of ammonia and nit.
+returns Nitrification [$g N/m^2$/d]
+
+
+   %if (amm\_imob.n<-1e-10  or  amm\_mob.n<-1e-10  or  amm\_imob.n15<-1e-10  or  amm\_mob.n15<-1e-10)
+%\subsection{   %	theMessage.WarningWithDisplay("SoilLayer.UpdateNitrification NH4 less than zero")}
+  %	nitrogen AddN
+ 
+   ratio =    N15RatioAmm = 1
+   
+   if $(nit\_imob+nit\_mob).n>0$ then
+   	$ratio = \tfrac{ nit\_mob}{nit\_imob+nit\_mob}$
+
+
+   if $amm\_imob.n+amm\_mob.n>0$ then
+  	$N15RatioAmm = \max(0,\min(1,
+         \tfrac{amm\_imob.n15+amm\_mob.n15}{amm\_imob.n+amm\_mob.n}))$
+
+       M-N kinetics DAISY parameters
+
+%   /*  $NH4Conc = \tfrac{(amm\_imob+amm\_mob).n}{thickness/10}/10000 $           
+%
+%       unit g-N/cm-3
+%  \begin{align*}
+%   MNRate & = 5e-5 \cdot \tfrac{NH4Conc}{NH4Conc+5e-5} 
+%             \cdot \tfrac{thickness} \cdot 10000 \\
+%   Add & = MNRate % \cdot 
+%  \end{align*}
+%                TempNitrificationEffect(),
+%                WaterNitrificationEffect() */
+
+	    Old DAISY nitrification model
+\begin{align*}  
+	FirstOrderRate & = nitrificationRate \cdot AccesibleAmm() \\
+   Add & = FirstOrderRate \cdot  TempNitrificationEffect() \cdot  
+          WaterNitrificationEffect() 
+\end{align*}
+   AddN.SetBoth(Add,$Add \cdot N15RatioAmm$)
+\begin{align*}
+   N2Oratio & = RatioN2OEmissionNitri() \\
+	ratio & = FractionMobileWater() \\
+   nit\_mob & = nit\_mob + AddN \cdot ratio \cdot (1-N2Oratio) \\
+   nit\_imob & = nit\_imob + AddN \cdot (1-ratio) \cdot (1-N2Oratio) 
+\end{align*}
+   $N2OFromNitrification = AddN \cdot N2Oratio$
+
+    Remove amm,
+   ratio = 1
+
+   if $amm\_imob.n+amm\_mob.n>0$ then
+
+   \quad	$ratio = \max(0,\min(1,\tfrac{amm\_mob.n}{amm\_imob.n+amm\_mob.n}))$
+\begin{align*}
+   amm\_mob.n & = amm\_mob.n - AddN.n \cdot ratio \\
+   amm\_imob.n & = amm\_imob.n - AddN.n \cdot (1-ratio) 
+\end{align*}        
+   ratio = 1
+
+   if $amm\_imob.n15+amm\_mob.n15>0$ then
+
+   \quad	$ratio = \max(0,\min(1,\tfrac{amm\_mob.n15}{amm\_imob.n15+amm\_mob.n15}))$
+   \begin{align*}
+amm\_mob.n15  = amm\_mob.n15 - AddN.n15 \cdot ratio \\
+   amm\_imob.n15 = amm\_imob.n15 - AddN.n15 \cdot (1-ratio)
+\end{align*}
+  %if (amm\_imob.n<-1e-10  or  amm\_mob.n<-1e-10  or  amm\_imob.n15<-1e-10  or  amm\_mob.n15<-1e-10)
+%\subsection{  % 	theMessage.WarningWithDisplay("SoilLayer.UpdateNitrification NH4 less than zero")}
+   Nbudget.AddOutput(N2OFromNitrification.n),
+   N15budget.AddOutput(N2OFromNitrification.n15)
+
+   return $ AddN \cdot (1-N2Oratio)$
+
+
+\minisec{soilLayer.RatioN2OEmissionNitri()}
+Perform N2O emission from nitrification. %returns emission
+
+  % N2Oratio, Approach by Ingwersen et al, 1999
+  \citep{chatskikh2005simulation} %???
+  \begin{align*}
+  tFactor & = \max(0,\min(1,\exp(-0.5 \cdot (\tfrac{temp}{2 \cdot 3.14 \cdot 2.72}-2)^2))) \\
+  WaterFactor & = \max(0,\min(1,GetWaterFilledPorosity()))
+\end{align*}
+
+% Combined emission factor from er Ambus (2001), anual effect as from N2Oratio = 0.28-0.48 (Maag and Vinther, 1996) 
+% N2Oratio = 0.006
+\begin{align*}
+ N2Oratio & = 0.047 \cdot tFactor \cdot WaterFactor          
+  \end{align*}
+return N2Oratio
+
+\minisec{soilLayer.TempNitrificationEffect()}  
+Calculates the effect of temp on nitrification.
+returns relative effect. 
+\citep{berntsen2005simulation,hansen1990npo} (DAISY page 123)
+
+return $ \begin{cases}
+       0 & \text{ if } temp \le 1 \\
+ 0.125 \cdot (temp-1.) & \text{ if } temp \le 5 \\
+0.1 \cdot temp & \text{ if } temp\le 20 \\
+\exp(0.4657-0.027259 \cdot temp+0.0019315 \cdot temp^2) & \text{ otherwise}
+    \end{cases}$   
+
+\minisec{soilLayer.WaterNitrificationEffect() } 
+Calculates the effect of soil water content on nitrification.
+returns relative effect
+  
+$pf = pF.GetpF(\tfrac{waterContent}{thickness})$
+
+return $ \begin{cases}
+     0 & \text{ if } pf\le 0 \text{ or } pf  \ge  5 \\
+\tfrac{pf}{1.5} & \text{ if } pf<1.5 \\
+1 & \text{ if } (pf<2.5) \\
+\tfrac{5-pf}{2.5}  & \text{ otherwise}
+    \end{cases} $
+
+
+\minisec{soilLayer.UpdateN2OFromDenitrification(TotalCO2Emission)}
+\citep{chatskikh2005simulation}
+Perform denitrification and update contents of nit.
+returns Denitrification [$g N/m^2$/d]
+
+  % nitrogen NRemove
+
+     Water effect on denitrificaiton, data presented in Parton et al. (2000)
+
+  $ WaterEffect = \max\left(0,\min\left(1,0.0116+
+   \tfrac{1.36}{1+\exp(-(GetWaterFilledPorosity()-0.815)/0.0896)}\right)\right)$
+
+        N effect on denitrificaiton, based on loam soil
+   \begin{align*}
+   NitConc & = \tfrac{(nit\_mob.n+nit\_imob.n)}{thickness} \cdot \tfrac{1000}{dryBulkDensity} \cdot 1e6    
+     \text{ (unit: mg/kg) } \\
+   NitEffect & = \max(0,\min(1,1.17 \cdot \tfrac{NitConc}{32.7+NitConc}))
+  \end{align*}
+        Temp effect on denitrificaiton
+   \begin{align*}
+   tempAdjust & = 1/\exp(-3.432+0.168 \cdot 10 \cdot (1-0.5 \cdot \tfrac{10}{36.9})) \\
+   TempEffect & = tempAdjust \cdot \exp(-3.432+0.168 \cdot temp \cdot 
+(1-0.5 \cdot \tfrac{temp}{36.9}))
+\end{align*}
+        kd estimation
+
+	$DenPotClay = 0.286+0.0028 \cdot clayContent \cdot 100  $
+
+    clay effect is based on Drury et al., 1991  (Based on linear regression of data - JBE)
+
+        Actual denitrification
+\begin{align*}
+	Denitrification & = DenPotClay \cdot PotentialCarbonTurnover() \\
+                         & \quad      \cdot WaterEffect \cdot NitEffect \cdot TempEffect \\
+   Denitrification & = \min(Denitrification,0.9999 \cdot (nit\_mob.n+nit\_imob.n))
+\end{align*}
+   if $Denitrification>0$ then   
+    N15RatioNit= 1
+
+  if $nit\_imob.n+nit\_mob.n>0$ then
+
+   \quad $N15RatioNit = \max(0,\min(1,\tfrac{nit\_imob.n15+nit\_mob.n15}{nit\_imob.n+nit\_mob.n}))$
+
+      NRemove.SetBoth(Denitrification,$N15RatioNit \cdot Denitrification$)
+
+      N from nit pools
+
+	\quad   ratio = 1.
+
+     	if $nit\_imob.n+nit\_mob.n>0$ then
+
+      	\quad $ratio = \max(0,\min(1,\tfrac{nit\_mob.n}{nit\_imob.n+nit\_mob.n}))$
+\begin{align*}
+     	nit\_mob.n & = nit\_mob.n - ratio \cdot Denitrification \\
+     	nit\_imob.n & = nit\_imob.n - (1-ratio) \cdot Denitrification
+\end{align*}
+           15N from nit pools
+
+      \quad ratio = 1.
+
+     	if $nit\_imob.n15+nit\_mob.n15>0$ then
+      
+	\quad $ratio = \max(0,\min(1,\tfrac{nit\_imob.n15}{nit\_imob.n15+nit\_mob.n15}))$     	
+\begin{align*}
+         nit\_imob.n15 & = nit\_imob.n15 - N15RatioNit \cdot ratio \cdot Denitrification \\     	
+         nit\_mob.n15 & =  nit\_mob.n15 - N15RatioNit \cdot (1-ratio) \cdot Denitrification
+\end{align*}
+      %if(nit\_mob.n<-0 or  nit\_imob.n<-0)
+%\subsection{   	%	theMessage.WarningWithDisplay("soilLayer.Denitrification - negative nit concs")}
+%
+%	
+%
+   Nbudget.AddOutput(NRemove.n),
+   N15budget.AddOutput(NRemove.n15),
+   N2OFromDenitrification = NRemove
+
+
+\minisec{soilLayer.PotentialCarbonTurnover()}
+Potential carbon turnover used in denitrification model
+
+ return OrganicMatter.GetCarbonAvailability()
+
+
+
+\minisec{nitrogen soilLayer.UpdateN2Production()}
+\citep{chatskikh2005simulation}
+Perform estimation of N2 production from N2O pool.
+%returns - emission
+
+	nitrogen TotalN2OProduction = N2OFromDenitrification + N2OFromNitrification
+
+        W-factor (deficit of oxygen), based on Nommik (1956) and Wijler and Delwiche (1954)
+        inversed water factor
+   \begin{align*}
+   fWater & = 1-(0.0116+\tfrac{1.36}{1+\exp(-\tfrac{GetWaterFilledPorosity()-0.815}{0.0896})}) \\
+   fWater & = \max(0,\min(1,fWater))
+   \end{align*}
+        Diffusion model substitution the profile N2O also will be included!!!
+
+   $fTemp = \tfrac{1 }{1+\exp(-0.64+0.08 \cdot temp) }$   %  Finn's temp factor
+
+        Updated for loam soil to the clayContent range, corr. with data from Letey et al. (1980)
+   
+$fClay = 1.26 \cdot \exp(-1.16 \cdot clayContent)-0.249$
+
+        Soil N20 emission profile for loam soil % , based on Yoh et al. (1999)
+   \begin{align*}
+   depth & = \tfrac{GetCenterDepth()}{1000} \\
+   fProfile & = \max(0,\min(1,1.0008-0.0343 \cdot depth-3.1816 \cdot depth^2))
+  \end{align*}
+        N2 evolution and distribution of emitted N2O between the sources
+\begin{align*}
+   N2ORatio & = fClay \cdot fWater \cdot fTemp \cdot fProfile      N2O reduction corrected!
+\end{align*}
+\begin{align*}
+   nitrogen N2OEmission & = TotalN2OProduction \cdot N2ORatio \\
+   N2OFromDenitrification & = N2OFromDenitrification \cdot N2ORatio \\
+   N2OFromNitrification & = N2OFromNitrification \cdot N2ORatio
+\end{align*}
+\begin{align*}
+   Denitrification = TotalN2OProduction \cdot (1-N2ORatio)
+\end{align*}
+   return $ TotalN2OProduction \cdot (1-N2ORatio) $
+
+     notice this sum only includes N2 from denitrification
+
+
+
+\subsection{soilLayer.Initialize(startDep,thick,fstream f)}
+   Setfile(f),   
+   $startDepth   = startDep, 
+   thickness    = thick, 
+   center  = startDep+0.5 \cdot thick, 
+   foundLayer  =false$
+   
+   SetCritical(), GetSectionNumbers("SoilLayer",first,n),  i=first,
+   topOfLayer=0
+
+   while not foundLayer  and  i<first+n do
+
+      \quad FindSection("SoilLayer",i),
+      totalThickness,
+      GetParameter("Thickness",totalThickness)
+
+   %   if ($totalThickness\le 0$)
+
+%\subsection{      	Terminate("soilLayer.Initialize - Thickness must be above zero")}
+
+      foundLayer=($center  \ge  topOfLayer$)  and  ($center\le (topOfLayer+totalThickness)$)
+
+      if foundLayer then
+     
+      \quad   UnsetCritical(),
+      soilType=5
+
+      \quad   GetParameter("SoilType",soilType),
+         GetParameter("Ammonium",amm\_imob.n)
+
+    \quad    $ amm\_imob=amm\_imob \cdot \tfrac{thickness}{totalThickness}$, 
+        $amm\_mob.n        = 0$
+
+    \quad     GetParameter("Nitrate",nit\_imob.n)
+
+    \quad     $nit\_imob=nit\_imob \cdot \tfrac{thickness}{totalThickness}$, 
+      $nit\_mob.Clear()$    
+
+
+   \quad      GetParameter("SiltContent",siltContent)
+
+  \quad       if not GetParameter("ClayContent",clayContent) then
+        
+  \quad  JBC[] = {0.025,0.025,0.075,0.075,0.125,0.125,0.20,0.35,0.50,0.10}
+         
+  \quad JB = 5
+
+    \quad        if $soilType  \ge  1$  and $ soilType\le 10$ then
+          	JB = soilType
+
+   \quad         clayContent= JBC[JB-1]   
+     
+  \quad       if !GetParameter("DrainageConstant",drainageConstant) 
+  then 
+
+Function from \citep{addiscott1991simulation}
+%        Function from Addiscot Whitmore 1991, Soil Use. Man., 94-102 
+          \begin{align*}
+            drainageConstant&=1.0271-3.02 \cdot clayContent^2      \\               
+            drainageConstant&=\min(1,\max(0.1,drainageConstant))   \text{ Cut at [0.11.0]} \\
+            drainageConstant&=\min(1,drainageConstant \cdot 15.462 \cdot thickness^{-0.7}    
+         \end{align*}
+    Fitted to Fig. 2c, \citep{addiscott1991simulation} 
+
+   \quad       if !GetParameter("HoldbackConstant",holdbackConstant) then
+       holdbackConstant=0.1
+
+   \quad         if $startDep>199$ then $holdbackConstant=0.3$
+
+  \quad\quad       if $!GetParameter("DryBulkDensity",dryBulkDensity)$ then
+          	dryBulkDensity=1.5
+        \begin{align*}
+         porosity & = 1-\tfrac{dryBulkDensity}{2.65} \\
+         dryBulkDensity & =dryBulkDensity \cdot 1E6 \\
+         carbon & =0
+         \end{align*}
+         GetParameter("CarbonPct",carbon)
+
+	$bool TopSoil = (startDep<250)$
+      
+   $pF = new pF\_Curve(0) $
+
+     Interpolation method set to zero. Correct ?
+        
+ pF.ReadParameters(f,i,dryBulkDensity,clayContent,siltContent,carbon,TopSoil)     
+
+          Extra parameters added for support of Mualem van Genucten model
+      
+  
+ pF\_FC = 2
+
+         if $soilType=1$    then pF\_FC = 1.8
+\begin{align*}
+         fieldCapacity & = pF.GetRelativeWater(pF\_FC) \cdot thickness \\
+         waterContent & = fieldCapacity \\
+         MaxContent & = porosity \cdot thickness
+\end{align*}
+         if  $fieldCapacity>MaxContent$ then
+         	$porosity = pF.GetRelativeWater(0)  $  (HACK?)
+        
+         if $porosity\le 0.9 \cdot pF.GetRelativeWater(0)$ then
+         	$porosity = pF.GetRelativeWater(0)  $  (HACK?)
+         \begin{align*}
+         wiltCapacity & = pF.GetRelativeWater(4.2) \cdot thickness \\
+         nitrificationRate   & = 0.1 \\
+         tortuosityLimit     & = 0.1 \\
+         carbon &=carbon \cdot dryBulkDensity \cdot \tfrac{thickness}{10E4} \\
+         char sfn[80] &="cnmodel.dat"
+         \end{align*}
+         GetParameter("SomFileName",sfn)
+
+         OrganicMatter.Initialize(clayContent,carbon,f,i,sfn)
+
+            topOfLayer = topOfLayer+totalThickness
+
+      i++
+   
+
+   if not foundLayer then
+
+  \quad  Terminate("soilLayer.Initialize - no appropriate layer found")
+
+   \quad Setfile(NULL),
+   DeleteInputFile()
+
+
+\subsection{soilLayer.soilLayer(char aName, aIdx, base aOwner): base(aName,aIdx,aOwner)}
+   %next    = NULL
+   %pF     = NULL
+
+   OrganicMatter     = new organicMatter("OrganicMatter",0,this)
+
+   ammLeaching.Clear(), 
+   nitLeaching.Clear(),
+   nit\_mob.Clear(),
+   nit\_imob.Clear(),
+   amm\_mob.Clear(),
+   amm\_imob.Clear(),
+   N2OFromNitrification.Clear(),
+   N2OFromDenitrification.Clear(),
+   Denitrification.Clear()
+   
+   temp = 8,
+   equilibrated   = false,
+
+  waterContent             = 
+   waterFlux              =    
+   iceContent              = 
+   TillageEffectTemp  = 
+    clayContent              = 
+   Chloride\_mob             = 
+   Chloride\_imob            = 
+   drainageConstant        = 
+   holdbackConstant       = 
+   dryBulkDensity           = 
+   porosity               = 
+   fieldCapacity         = 
+   startDepth           = 
+   thickness              = 
+   wiltCapacity           = 
+   nitrificationRate      = 
+   tortuosityLimit        = 
+   waterUptake             = 
+   CO2Evolution            = 
+   mobility                = 
+   mobility1             = 0
+
+   Nbudget.SetNames("soillayer","N"),
+   N15budget.SetNames("soillayer","N15"),
+   WaterBudget.SetNames("soillayer","water")
+
+
+%\subsection{% soilLayer.soilLayer(soilLayer& Layer): base(Layer)}
+%  next = NULL
+%    TillageEffectTemp = Layer.TillageEffectTemp
+%   waterContent             = Layer.waterContent
+%   nit\_mob              = Layer.nit\_mob
+%   nit\_imob             = Layer.nit\_imob
+%   amm\_mob             = Layer.amm\_mob
+%   amm\_imob            = Layer.amm\_imob
+%   temp              = Layer.temp
+%   drainageConstant         = Layer.drainageConstant
+%   holdbackConstant         = Layer.holdbackConstant
+%   dryBulkDensity           = Layer.dryBulkDensity
+%   porosity                 = Layer.porosity
+%   fieldCapacity            = Layer.fieldCapacity
+%   startDepth               = Layer.startDepth
+%   thickness                = Layer.thickness
+%   wiltCapacity             = Layer.wiltCapacity
+%   clayContent              = Layer.clayContent
+%   nitrificationRate        = Layer.nitrificationRate
+%   tortuosityLimit          = Layer.tortuosityLimit
+%   waterUptake              = Layer.waterUptake
+%   waterFlux                = Layer.waterFlux
+%   CO2Evolution             = Layer.CO2Evolution
+%   ammLeaching         = Layer.ammLeaching
+%   nitLeaching          = Layer.nitLeaching
+%   iceContent               = Layer.iceContent
+%   equilibrated             = Layer.equilibrated
+%   Chloride\_mob             = Layer.Chloride\_mob
+%   Chloride\_imob            = Layer.Chloride\_imob
+%   mobility                 = Layer.mobility
+%   mobility1                = Layer.mobility1
+%   N2OFromNitrification     = Layer.N2OFromNitrification
+%   N2OFromDenitrification   = Layer.N2OFromDenitrification
+%   Denitrification          = Layer.Denitrification
+%   OrganicMatter            = new organicMatter( \cdot Layer.OrganicMatter)
+%   OrganicMatter.SetOwner(this)
+%   pF                       = new pF\_Curve( \cdot Layer.pF)
+%   Nbudget			         = budget(Layer.Nbudget)
+%   Nbudget.Reset()              History ignored!
+%   N15budget			         = budget(Layer.N15budget)
+%   N15budget.Reset()            History ignored!
+%   WaterBudget 	            = budget(Layer.WaterBudget)
+%   WaterBudget.Reset()          History ignored!
+ 
+
+% 
+% pF curves are assumed to be equal. This assumption is not tested though.
+% 
+%\subsection{% soilLayer.Add(soilLayer \cdot  Layer, frac)}
+%   TillageEffectTemp= TillageEffectTemp \cdot (1-frac)+Layer.TillageEffectTemp \cdot frac
+%   nit\_mob 				= nit\_mob \cdot (1-frac)+Layer.nit\_mob \cdot frac
+%   nit\_imob 			= nit\_imob \cdot (1-frac)+Layer.nit\_imob \cdot frac
+%   amm\_mob 			= amm\_mob \cdot (1-frac)+Layer.amm\_mob \cdot frac
+%   amm\_imob 			= amm\_imob \cdot (1-frac)+Layer.amm\_imob \cdot frac
+%   ammLeaching 		= ammLeaching \cdot (1-frac)+Layer.ammLeaching \cdot frac
+%   nitLeaching 		= nitLeaching \cdot (1-frac)+Layer.nitLeaching \cdot frac
+%   N2OFromNitrification  = N2OFromNitrification \cdot (1-frac)+Layer.N2OFromNitrification \cdot frac
+%   N2OFromDenitrification= N2OFromDenitrification \cdot (1-frac)+Layer.N2OFromDenitrification \cdot frac
+%   Denitrification       = Denitrification \cdot (1-frac)+Layer.Denitrification \cdot frac
+% 
+%   waterContent 			= (1-frac) \cdot waterContent+frac \cdot Layer.waterContent
+%   temp 				= (1-frac) \cdot temp+frac \cdot Layer.temp
+%   drainageConstant 		= (1-frac) \cdot drainageConstant+frac \cdot Layer.drainageConstant
+%   holdbackConstant 		= (1-frac) \cdot holdbackConstant+frac \cdot Layer.holdbackConstant
+%   dryBulkDensity 			= (1-frac) \cdot dryBulkDensity+frac \cdot Layer.dryBulkDensity
+%   porosity 					= (1-frac) \cdot porosity+frac \cdot Layer.porosity
+%   fieldCapacity 			= (1-frac) \cdot fieldCapacity+frac \cdot Layer.fieldCapacity
+%   startDepth 				= (1-frac) \cdot startDepth+frac \cdot Layer.startDepth
+%   thickness 				= (1-frac) \cdot thickness+frac \cdot Layer.thickness
+%   wiltCapacity         	= (1-frac) \cdot wiltCapacity+frac \cdot Layer.wiltCapacity
+%   clayContent          	= (1-frac) \cdot clayContent+frac \cdot Layer.clayContent
+%   nitrificationRate    	= (1-frac) \cdot nitrificationRate+frac \cdot Layer.nitrificationRate
+%   tortuosityLimit 		= (1-frac) \cdot tortuosityLimit+frac \cdot Layer.tortuosityLimit
+% 
+%   waterUptake = (1-frac) \cdot waterUptake+frac \cdot Layer.waterUptake
+%   waterFlux = (1-frac) \cdot waterFlux+frac \cdot Layer.waterFlux
+%   CO2Evolution = (1-frac) \cdot CO2Evolution+frac \cdot Layer.CO2Evolution
+%   iceContent= (1-frac) \cdot iceContent+frac \cdot Layer.iceContent
+%   Chloride\_mob    = (1-frac) \cdot Chloride\_mob+frac \cdot Layer.Chloride\_mob
+%   Chloride\_imob   = (1-frac) \cdot Chloride\_imob+frac \cdot Layer.Chloride\_imob
+%   mobility   = (1-frac) \cdot mobility+frac \cdot Layer.mobility
+%   mobility1  = (1-frac) \cdot mobility1+frac \cdot Layer.mobility1
+% 
+%   Nbudget.Add(Layer.Nbudget,frac)
+%   N15budget.Add(Layer.N15budget,frac)
+%   WaterBudget.Add(Layer.WaterBudget,frac)
+%   OrganicMatter.Add(Layer.OrganicMatter,frac)
+
+
+
+
+
+\subsection{soilLayer.SetIceContent(aIceContent)   }
+
+  $ iceContent = \max(0,\min(waterContent,aIceContent))$
+
+\subsection{Add}
+
+\minisec{soilLayer.AddNext(soilLayer layer)}
+
+ next = layer
+
+
+\minisec{soilLayer.AddNutrient(nitrogen addNit, nitrogen addAmm)}
+Adds nitrogen to layer.
+addNit- Nit to be added [$g N/m^2$].
+addAmm - Amm to be added [$g N/m^2$]
+
+    if $waterContent > fieldCapacity$ then
+
+\quad $nit\_mob  = nit\_mob + addNit$, $amm\_mob  = amm\_mob + addAmm$
+    
+ else 
+
+\quad $nit\_imob = nit\_imob + addNit$,   
+$amm\_imob  = amm\_imob + addAmm$    
+      
+   Nbudget.AddInput(addNit.n+addAmm.n),
+   N15budget.AddInput(addNit.n15+addAmm.n15)
+
+
+\minisec{soilLayer.AddWater(surplus, nitrogen nitLeached, nitrogen ammLeached,
+    ChlorideLeached}
+Perform infiltration of water, nit and amm in layer.
+surplus         - Water to be added to current (next) layer [mm],
+nitLeached/ammLeached  - Nit/Amm to the added to current (next) layer [$g N/m^2$],
+
+
+   %if(amm\_mob.n<-1E-6  or  amm\_imob.n<-1E-6  or  nit\_mob.n<-1E-6  or  nit\_imob.n<-1E-6)
+%\subsection{   %	theMessage.WarningWithDisplay("soilLayer.AddWater - negative n concs")}
+%	if (surplus<0)
+%\subsection{   %	theMessage.WarningWithDisplay("soilLayer.AddWater - amount of water to add can not be negative")}
+
+   $waterContent  = waterContent + surplus$,
+   WaterBudget.AddInput(surplus)
+
+  $ fracOfSolutesToMobile = $
+
+$\begin{cases}
+                   0 & waterContent<fieldCapacity    \\
+          \max(0,\min(1,\tfrac{waterContent-fieldCapacity}{surplus}) & waterContent-surplus<fieldCapacity 
+        \\
+               1    & \text{ otherwise}   
+   \end{cases}$
+
+(all solutes go into imobile domain |
+ parts go into mobile |
+ all go into mobile)        
+      \begin{align*}
+      nit\_mob & = nit\_mob+nitLeached \cdot fracOfSolutesToMobile \\
+      nit\_imob & = nit\_imob+nitLeached \cdot (1-fracOfSolutesToMobile) \\
+            amm\_mob & = amm\_mob+ammLeached \cdot fracOfSolutesToMobile \\
+      amm\_imob & = amm\_imob+ammLeached \cdot (1-fracOfSolutesToMobile) \\
+          Chloride\_mob & = Chloride\_mob+ChlorideLeached \cdot fracOfSolutesToMobile \\
+      Chloride\_imob & = Chloride\_imob+ChlorideLeached \cdot (1-fracOfSolutesToMobile)
+     \end{align*}
+ %  if(amm\_mob.n<-1E-6  or  amm\_imob.n<-1E-6  or  nit\_mob.n<-1E-6  or  nit\_imob.n<-1E-6)
+%\subsection{ %  	theMessage.WarningWithDisplay("soilLayer.AddWater - negative n concs")}
+   Nbudget.AddInput(nitLeached.n+ammLeached.n)
+
+   N15budget.AddInput(nitLeached.n15+ammLeached.n15)
+  % if((waterContent+0.001)<iceContent)
+%\subsection{ %  	theMessage.WarningWithDisplay("soilLayer.AddWater - ice exceeds total water at the end of the function")}
+
+
+
+
+\minisec{soilLayer.AddWaterAndSolutes(waterInFlow, nitrogen nitAdd, nitrogen ammAdd, chlorideAdd)}
+ Adds water, nit, amm and chloride to layer.
+surplus - Water to be added to current (next) layer [mm],
+nitLeached/ammLeached  - Nit/Amm to the added to current (next) layer [$g N/m^2$],
+ 
+ 
+   waterContent  = waterContent  + waterInFlow, 
+   WaterBudget.AddInput(waterInFlow)
+
+  $ fracOfSolutesToMobile = $
+
+$\begin{cases}
+                   0 & waterContent<fieldCapacity      \\
+         \max(0,\min(1,\tfrac{waterContent-fieldCapacity}{waterInFlow})) & waterContent-waterInFlow<fieldCapacity     
+  \\
+                   1    & \text{ otherwise}     
+   \end{cases}$  
+
+(all solutes go into imobile domain |
+ parts go into mobile |
+ all go into mobile)        
+     \begin{align*}
+ nit\_mob & = nit\_mob+nitAdd \cdot fracOfSolutesToMobile \\
+      nit\_imob & = nit\_imob+nitAdd \cdot (1-fracOfSolutesToMobile) \\
+      amm\_mob & = amm\_mob+ammAdd \cdot fracOfSolutesToMobile \\
+      amm\_imob & = amm\_imob+ammAdd \cdot (1-fracOfSolutesToMobile) \\
+      Chloride\_mob & = Chloride\_mob+chlorideAdd \cdot fracOfSolutesToMobile \\
+      Chloride\_imob & = Chloride\_imob+chlorideAdd \cdot (1-fracOfSolutesToMobile)
+\end{align*}
+     Nbudget.AddInput(nitAdd.n+ammAdd.n),
+   N15budget.AddInput(nitAdd.n15+ammAdd.n15)
+   
+
+\minisec{soilLayer.AddProduct(organicProduct product)}
+   \begin{align*}
+    organicProduct p & = new organicProduct(product) \\
+   nit\_mob  & = nit\_mob+p.GetNit() &
+   amm\_mob & = amm\_mob+p.GetAmm()
+   \end{align*}
+   p.ClearNO3\_content(),    p.ClearNH4\_content()
+\begin{align*}
+   nitrogen nit  & = nit\_mob + nit\_imob &
+   nitrogen amm & = amm\_mob + amm\_imob  \\
+   nitfrac & = 0
+\end{align*}
+   if $nit.n>0$ then $ nitfrac = \max(0,\min(1,\tfrac{nit\_mob}{nit}))$
+
+   ammfrac =  unprotecFrac = 0
+
+   if $amm\_mob.n>0$  and  $amm.n >0$ then
+      $ammfrac = \max(0,\min(1,\tfrac{amm\_mob}{amm}))$
+
+        Deals with protected NH4
+
+   if $amm.n>0$ then
+    $unprotecFrac = \tfrac{AccesibleAmm()}{amm.n}$
+  \begin{align*}
+   nitrogen ProtectedNH4\_mob  & = amm\_mob \cdot (1-unprotecFrac) \\
+   nitrogen ProtectedNH4\_imob & = amm\_imob \cdot (1-unprotecFrac) \\
+   amm & = amm \cdot unprotecFrac
+  \end{align*}
+   OrganicMatter.SetMineralNitrogen(nit,amm),
+   OrganicMatter.AddProduct(p)
+
+   OrganicMatter.GetMineralNitrogen(nit,amm)
+\begin{align*}
+   nitfrac &=FractionMobileWater() &
+   ammfrac &= nitfrac \\
+   nit\_mob & = nit \cdot nitfrac &
+   nit\_imob &= nit \cdot (1-nitfrac) 
+\end{align*}
+   $amm\_mob = amm \cdot ammfrac+ProtectedNH4\_mob $,
+
+   $amm\_imob = amm \cdot (1-ammfrac)+ProtectedNH4\_imob$
+
+   Nbudget.AddInput(product.GetTotalNitrogen().n),
+   N15budget.AddInput(product.GetTotalNitrogen().n15)
+
+   delete p
+
+
+
+\subsection{soilLayer.HeatCapacity() kg/m3/dgC}
+Calculates the volumetric heatcapacity
+
+	return $(HeatCapacitySolid \cdot \tfrac{dryBulkDensity}{1000}$
+
+\quad	\quad\quad	\quad			$  +HeatCapacityWater \cdot WaterDensity \cdot 
+\tfrac{waterContent-iceContent}{thickness}$
+			
+\quad	\quad\quad	\quad		 $ +HeatCapacityIce \cdot WaterDensity \cdot \tfrac{iceContent}{thickness})$
+
+
+\subsection{soilLayer.SpecWaterCapacity()}
+
+  $ relativeWater = \tfrac{waterContent}{thickness}$
+   
+   pF1 = pF.GetPressurePotential(relativeWater)
+
+   if $waterContent < porosity \cdot thickness$ then
+
+   \quad   
+  specWater = $\begin{cases} $1e10$ 
+      \text{ if $pF1=pF.GetPressurePotential(relativeWater-0.01)$} \\
+   \tfrac{0.01}{
+     pF1-pF.GetPressurePotential(relativeWater-0.01)} & \text{ otherwise}
+\end{cases}$
+  
+   else
+
+   	 $ specWater = \begin{cases} 1e10  \text{ if  $pF.GetPressurePotential(relativeWater+0.01)=pF1$ }  \\
+      \frac{-0.01}{pF1-pF.GetPressurePotential(relativeWater+0.01)} & \text { otherwise} \end{cases}$
+   
+return $1.1019e-5 \cdot specWater$   (converts m to J m-3)
+
+
+
+
+
+\subsection{soilLayer.HeatConductivity()}
+     %  Taken from SOIL-N (1996 p18 and p24)
+\citep{jansson2004CoupModel} - 27 pp.
+
+  $a1=0.7, 
+  a2=0.4, 
+  a3=0.6245,  
+  b1=0.00158, 
+  b2=1.336, 
+  b3=0.00375, 
+  b4=0.9118$ 
+
+  if $clayContent>0.1$ then
+b1=0.00144,
+b2=1.32, 
+  b3=0.0036, 
+  b4=0.8743  
+   \begin{align*}  
+   frozenPart& = \tfrac{iceContent}{waterContent} \\
+   waterConcentration & = \max(1,waterContent) \cdot \tfrac{100}{thickness}  \\
+   BulkDensity & = \tfrac{dryBulkDensity}{1000000}
+  \end{align*}
+     converted mm to vol %. Minimum of 1% according to COUP figure p 31
+%
+  % if (waterConcentration\le 0)
+%\subsection{  %    theMessage.FatalError("soilLayer.HeatConductivity - water content zero or below")}
+ \begin{align*}
+  k\_hm & = 0.1434 \cdot (a1 \cdot log10(\tfrac{waterConcentration}{BulkDensity})+a2) \cdot 10^{a3 \cdot BulkDensity} \\
+   k\_hmi & = b1 \cdot 10^{b2 \cdot BulkDensity}+b3 \cdot \tfrac{waterConcentration}{BulkDensity} \cdot 10^{b4 \cdot BulkDensity} \\
+   result & = (1-frozenPart) \cdot k\_hm+frozenPart \cdot k\_hmi \\
+   result & = \max(0.05,result)   
+\end{align*}                                            
+%According to COUP figure p 31
+  % if (result>10)
+%\subsection{   %	theMessage.WarningWithDisplay("soilLayer.HeatConductivity - conductivity to high")}
+	return result
+
+
+
+
+
+\subsection{Subtract}
+
+\minisec{soilLayer.SubtractEvap(Evap)}
+Subtracts Evap [mm] from layer.
+ \begin{align*}
+ draw &= \max(0,\min(waterContent-iceContent-1E-10,Evap)) \\
+ waterContent & = waterContent - draw
+ \end{align*}
+ WaterBudget.AddOutput(draw)
+
+
+\minisec{soilLayer.SubtractTransp(aWaterUptake)}
+Subtracts estimated transp from the water in the layer.
+aWaterUptake  - water uptake [mm]
+
+   if (waterContent<aWaterUptake)
+   	aWaterUptake=waterContent
+  
+   waterUptake  = aWaterUptake,
+   waterContent  = waterContent - waterUptake
+  
+   WaterBudget.AddOutput(aWaterUptake)
+
+\minisec{nitrogen soilLayer.SubtractNitUptake(nitUptake)}
+  $
+   nitrogen nit = nit\_mob+nit\_imob,
+   N15RatioNit = nit.Get15NRatio()$
+   
+   %nitrogen NO3\_Uptake
+
+   if $nitUptake>0$  and  $nit.n>0$ then
+ 	
+   \quad   NO3\_Uptake.SetBoth(nitUptake,N15RatioNit  nitUptake)
+
+  		$frac  = \max(0,\min(1,\tfrac{nit\_mob.n}{nit.n})$,  
+ 		if $frac<1e-10$ then $frac  = 0 $
+\begin{align*}
+ 		nit\_mob.n  & = nit\_mob.n - nitUptake \cdot frac \\
+  		nit\_imob.n & = nit\_imob.n - nitUptake \cdot (1-frac) \\
+\end{align*}
+          % 15N
+  		frac = 1,
+      if $nit.n15>0$ then $frac = \max(0,\min(1,\tfrac{nit\_mob.n15}{nit.n15}))$
+      
+     if $frac<1e-10$ then $frac = 0$
+ 		\begin{align*}
+                nit\_mob.n15 & =  nit\_mob.n15 - N15RatioNit \cdot nitUptake \cdot frac \\
+  		nit\_imob.n15 & = nit\_imob.n15 -N15RatioNit \cdot nitUptake \cdot (1-frac)
+               \end{align*}     	
+     \quad  Nbudget.AddOutput(NO3\_Uptake.n),
+ 		N15budget.AddOutput(NO3\_Uptake.n15)
+ 	
+   return NO3\_Uptake
+
+
+\minisec{nitrogen soilLayer.SubtractAmmUptake(ammUptake)}
+\begin{align*}
+	nitrogen amm & = amm\_mob+amm\_imob &
+   N15RatioAmm & = amm.Get15NRatio()
+\end{align*}  
+ %	nitrogen NH4\_Uptake
+
+   if $ammUptake>0$  and  $amm.n>0$ then
+ 	
+  	\quad	$NH4\_Uptake.SetBoth(ammUptake,N15RatioAmm \cdot ammUptake)$
+                \begin{align*}
+  		frac & = \max(0,\min(1,\tfrac{amm\_mob.n}{amm.n}) \\
+                %
+ 		amm\_mob.n   & = amm\_mob.n  - ammUptake \cdot frac \\
+  		amm\_imob.n & = amm\_imob.n -  ammUptake \cdot (1-frac)
+                \end{align*}
+         %        15N
+      frac = 1,
+      %if (amm\_mob.n15<-1e-10  or  amm\_imob.n15<-1e-10)
+%\subsection{     % 	theMessage.WarningWithDisplay("SoilLayer. SubtractAmm amm-N15 less than zero")}
+	if $amm.n15>0$ then $frac = \max(0,\min(1,\tfrac{amm\_mob.n15}{amm.n15})$
+ 		\begin{align*}
+                amm\_mob.n15 & = amm\_mob.n15 - N15RatioAmm \cdot ammUptake \cdot frac \\
+  		amm\_imob.n15 & = amm\_imob.n15 - N15RatioAmm \cdot ammUptake \cdot (1-frac)
+                \end{align*}      
+      Nbudget.AddOutput(NH4\_Uptake.n),
+		N15budget.AddOutput(NH4\_Uptake.n15)
+
+ 	
+   return NH4\_Uptake
+
+
+
+
+
+
+
+
+
+
+\subsection{soilLayer.FractionMobileWater()}
+Estimate the frac of mobile water (SLIM concept \citep{addiscott1991simulation})
+
+	return $\tfrac{\max(waterContent-fieldCapacity,0)}{waterContent}$
+
+
+\subsection{Remove}
+
+
+\minisec{soilLayer.RemoveWaterAndSolutes(waterOutflow,
+  nitrogen nitRemove, nitrogen ammRemove, ChlorideRemove)}
+Perform infiltration of water, nit and amm in layer.
+Used with the convection dispersion equation.
+The fluxes of nit amm and chloride can be negative.
+waterOutFlow   - Water to be revoved from current layer [mm],
+nitRemove/ammRemove  - Nit/Amm to be revomed from current layer [$g N/m^2$]
+
+   waterContent = waterContent- waterOutflow,
+   WaterBudget.AddOutput(waterOutflow)
+\begin{align*}
+   nit\_mob & = nit\_mob-nitRemove \\
+   amm\_mob  & = amm\_mob-ammRemove \\
+   Chloride\_mob &  =  Chloride\_mob  - ChlorideRemove
+\end{align*}
+   Nbudget.AddOutput(ammRemove.n+nitRemove.n)
+
+   N15budget.AddOutput(ammRemove.n15+nitRemove.n15)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Max}
+
+
+\minisec{soilLayer.MaxTransp(rootStructure root)}
+Calculates the maximum transpiration [mm] from the soil layer
+   \begin{align*}
+radius & = root.rootRadius \\
+   pF     & = root.rootpF \\
+   rootLength & = root.rootLengthList[Idx] 
+ \end{align*}
+   return MaxTransp(radius,pF,rootLength)
+
+\minisec{soilLayer.MaxTransp(rootRadius,  rootpF,  rootLength)}
+ \begin{align*}
+rootDens & = \tfrac{rootLength}{thickness} [m m-1] \\
+  relWater & = \tfrac{waterContent}{thickness} \\
+UptakeRate & = -4 \cdot \pi \cdot 
+   \tfrac{pF.GetFluxPotential(pF.GetpF(relWater))-pF.GetFluxPotential(rootpF)}
+   {-log(rootRadius \cdot rootRadius \cdot \pi  \cdot rootDens)} \\
+   availableWater & = waterContent-thickness \cdot pF.GetRelativeWater(rootpF)
+  \end{align*}
+ return $ \min(\max(0,availableWater),1000. \cdot 86400. \cdot UptakeRate \cdot rootLength
+         \cdot \tfrac{relWater}{porosity}) $
+
+
+
+
+\minisec{soilLayer.MaxNitrogenFlux(bool nit, rootStructure  root)}  
+Calculates the maximum flux of nit or amm into roots in the layer.
+returns maximum nitrogen uptake in layer [g N/m/d].
+   StdDiff = 0
+
+   if nit   then
+      \begin{align*}
+      StdDiff & = 3600 \cdot 2.0e-5 \cdot 24 \cdot 1e-4             
+\text{  (convert to m2 d-1)} \\
+      uptake  & = root.NitUptakeRate \\
+   	N\_amount & = nit\_mob.n+nit\_imob.n \\
+      conc & = 0
+      \end{align*}
+      if $waterContent>0$ then
+
+    $     conc=\max(0,1000. \cdot \tfrac{N\_amount}{waterContent}-root.MinimumSoilNit)$
+ 
+\quad		$bufferingCoef = 1   \tfrac{ waterContent}{thickness} $
+  
+ \text{NOT USED IN CURRENT DAISY CONCEPT?}
+   else     amm
+      \begin{align*}
+      StdDiff & = 3600 \cdot 1.8e-5 \cdot 24 \cdot 1e-4        convert to m2 d-1 \\
+   	uptake & = root.AmmUptakeRate \\
+      N\_amount & = amm\_mob.n+amm\_imob.n \\
+      conc & = 0
+     \end{align*}
+      if $waterContent>0$ then
+      \begin{align*}
+       conc & = \max(0,1000 \cdot \tfrac{N\_amount}{waterContent} \cdot FracAmmInWater()-root.MinimumSoilAmm) \\
+  		bufferingCoef & = 1    AmmBuffering()   \\
+                & \text{NOT USED IN CURRENT DAISY CONCEPT?}
+        \end{align*}
+ \begin{align*}
+   diffusionCoef & = StdDiff \cdot 1.03^{temp} \cdot Tortuosity()  \\
+                 & \cdot \tfrac{waterContent}{thickness}        m2 day-1 \\
+   rootLength & = root.rootLengthList[Idx] \\
+    maxFlux & = MaxNitrogenFlux(root.rootRadius,uptake,rootLength, \\
+               &  conc,diffusionCoef,bufferingCoef) \\
+   Nuptake & = rootLength \cdot  maxFlux
+   \end{align*}
+   $return \min(N\_amount,Nuptake)$
+
+\minisec{soilLayer.Tortuosity()}
+Calculate the tortuosity factor. Daisy Reference 347
+
+   $relWat = \tfrac{waterContent}{thickness} $
+
+   return $\tfrac{relWat^{\tfrac{7}{3}}}{pF.GetRelativeWater(0)^2} $
+                (Millington-Quirk)
+
+
+\minisec{soilLayer.MaxNitrogenFlux(rootRadius, uptakeRate, rootLength, conc, diffusionCoef, bufferingCoef)}
+  \citep{olesen2002comparison,hansen1991simulation}
+  adjusted for wheat?
+
+   if $rootLength<1e-15$ return 0
+  
+   \quad $q  = \tfrac{waterUptake}{1000 \cdot rootLength}, 
+   rootDens  =\tfrac{ 1000 \cdot  rootLength}{thickness}, 
+   \alpha  = 0$
+   
+   if $q>0$  and $ diffusionCoef>0$ then
+  	$\alpha = \tfrac{q}{2 \cdot \pi  \cdot diffusionCoef \cdot bufferingCoef}$
+   \begin{align*}
+   \beta & = \tfrac{1}{rootRadius \cdot sqrt(\pi  \cdot rootDens)} \\
+   \beta_2 &= \beta \cdot \beta \\
+   \beta_1 &= \beta_2-1 \\
+   \beta_3 &= \beta_1 \cdot (1-0.5 \cdot \alpha) \\
+   I &= 0
+   \end{align*}
+  $I = \begin{cases}
+       q \cdot \tfrac{\beta_1 \cdot conc}{\beta_1-log(\beta_2)}        & \text{ if  $\alpha>1E-13$ and $\alpha=2$} \\
+      q \cdot \beta_3 \cdot \tfrac{conc}{(\beta_3-\beta^{2-\alpha}+1)}   & \text{ if  $\alpha>1E-13$ and $\alpha \ne 2$} \\
+     4. \cdot \pi  \cdot diffusionCoef \cdot \tfrac{conc}{(\beta_2 
+\cdot \tfrac{log(\beta_2)}{\beta_1-1}} & \text{ otherwise}
+      \end{cases}$
+
+
+ $  return \min(I,uptakeRate)$
+
+\subsection{soilLayer.FracAmmInWater()}
+Calculate the frac of amm that is in the water/soluble phase.
+
+Vp =5.96E-3, 
+ Ve =0.308E-3, 
+ Kp  =630, 
+ Ke  =13.7 
+
+return $\min\left(1,\tfrac{\tfrac{waterContent}{thickness}}{clayContent \cdot dryBulkDensity \cdot (Vp/Kp+Ve/Ke)+\tfrac{waterContent}{thickness}}\right)$
+
+
+
+\subsection{soilLayer.AccesibleAmm()}
+Calculates the amm (g/m2) which is accesible for nitrification and mineralisation
+The rest is assumed to be physically-chemically protected from nitrifying
+bacteria by clay minerals allthough it is still chemically exchangeable.
+This protected part is only assumed to constitute part of the total
+adsorbed but exchangeable amm.
+	\begin{align*}
+        AmmSum         & = amm\_imob.n+amm\_mob.n  \\
+	adsorbedAmm   &  = AmmSum \cdot (1-FracAmmInWater()) \\
+	protectionCoeff & = 1E-9  \\   
+% optimised on organic crop rotation experiment by JB (24\_3\_3) \\
+	maxProtectedAmm & = thickness \cdot clayContent \cdot dryBulkDensity \cdot protectionCoeff \\
+	protectedAmm    & = \min(maxProtectedAmm,adsorbedAmm)	
+  \end{align*}
+return AmmSum-protectedAmm
+
+
+
+
+
+  
+
+
+
+
+\subsection{Budget}
+
+\minisec{soilLayer.StartBudget()}
+\begin{align*}
+   nitrogen NO  & =OrganicMatter.GetNitrogen() \\
+   nitrogen N & = nit\_mob+nit\_imob + amm\_mob+amm\_imob + NO
+\end{align*}
+   %Nbudget.SetInput(N.n)
+   %N15budget.SetInput(N.n15)
+   %WaterBudget.SetInput(waterContent)
+
+\minisec{soilLayer.EndBudget()}
+
+   $nitrogen NO=OrganicMatter.GetNitrogen()$,
+   $nitrogen NRemain = nit\_mob+nit\_imob+amm\_mob+amm\_imob+NO$
+  
+ if $!Nbudget.Balance(NRemain.n)$ then
+
+     cout << "soilLayer.EndBudget() - Name path " << GetLongName() << endl      !!!
+
+   N15budget.Balance(NRemain.n15),
+   WaterRemain = waterContent
+
+   WaterBudget.Balance(WaterRemain)
+
+   rrent.Next()
+
+
+
+
+\subsection{Getter}
+
+\minisec{soilLayer.GetCenterDepth(), GetPoolNitrogen(char Name,startDepth,thickness), GetWaterFilledPorosity()}
+
+  return $startDepth+\tfrac{thickness}{2}$
+   
+  return $OrganicMatter.GetPoolNitrogen(Name) \cdot IntervalFraction(startDepth,thickness)$
+
+  return $\min(1,\max(0,\tfrac{waterContent}{(porosity \cdot thickness)}))$
+
+
+\minisec{nitrogen soilLayer.GetAmm(startDepth,thickness), GetNit(startDepth,thickness), 
+  GetChloride(startDepth,thickness), GetOrganicNitrogen(startDepth, thickness)}
+
+  return $(amm\_mob+amm\_imob) \cdot IntervalFraction(startDepth,thickness)$
+
+  return $(nit\_mob+nit\_imob) \cdot IntervalFraction(startDepth,thickness)$
+
+  return $(Chloride\_mob+Chloride\_imob) \cdot IntervalFraction(startDepth,thickness)$
+
+  return $GetOrganicNitrogen() \cdot IntervalFraction(startDepth,thickness)$
+
+\section{Long functions}
+
+\subsection{soilProfile.Tridag(a[], b[], c[], r[], u[], unsigned long n)}
+Solves for a vector u[0..n-1] the tridiagonal linear set. The input vectors
+a,b,c and r are unmodified, and u contains the result
+Slightly modified after Numerical Recipies in C (Press, 1992), main modification
+is shift from [1..n] to [0..n-1], in concordance with mainstream C++ conventions.
+Used to calculate the Finite difference solution for temp.
+   
+   gam=new[n],  
+   $bet=b_0$,
+   $u_0=\tfrac{r_0}{bet}$
+
+   for all j in 1..n-1 do (Decomposition and forward substitution)
+
+   \quad   $gam_{j}=\tfrac{c_{j-1}}{bet}  $        $ e_{j}$
+
+   \quad   $bet=b_{j}-a_{j} \cdot gam_{j} $      $ g_{j}$
+
+  \quad    if $0=bet$ then
+
+   \quad\quad      Terminate("Error 2 in function Tridag")
+
+   \quad   $u_{j}=\tfrac{r_{j}-a_{j} \cdot u_{j-1}}{bet}$   
+
+   for (j=n-2;j+1>0;j--) do
+
+  \quad    $u_{j}-=gam[j+1] \cdot u[j+1] $     Backsubstitution
+
+   delete[] gam
+
+
+
+\subsection{soilProfile.UpdateFinDiffTemp(AirTemp, snow)}
+Alternative 3 (MEL 2007): UpdateFinDiffTemp calculates
+the soil temp according the finite difference sceme
+The upper boundary condition consist terms with
+both airtemp, radiation and snow cover.
+fracEvap is used to correct radiation for
+reflection by leaves.
+
+
+   if (theControlParameters.GetSimpleTempModel()  
+     or  theControlParameters.GetMeasuredSoilTemp() 
+     or theControlParameters.GetAirToSoilTemp()) then
+  
+   	if theControlParameters.GetSimpleTempModel() then
+     
+
+   	   for all i in 1..NumOfSoilLayers-1 do      
+        	$soilTemp=soilLayerArray_{i}.GetTemp()$
+
+	         %if ((soilTemp<-50)  or  (soilTemp>50))
+%\subsection{	          %  Terminate("soilProfile.UpdateFinDiffTemp - soil temp not within realistic range")}
+	        
+         \quad        $depth = soilLayerArray_{i}.GetStartDepth()+ soilLayerArray_{i}.GetThickness() \cdot 0.5$
+
+	 \quad        UpdateT(soilTemp,AirTemp,depth,8.0)
+	     
+
+	      $soilLayerArray_0.PutTemp(AirTemp)$
+     
+      else
+	\quad      if  theControlParameters.GetAirToSoilTemp() then
+	      
+
+             set soil temp to the same as air temp - special for laboratory conditions
+      		
+        \quad\quad      for all i in 0..NumOfSoilLayers-1 do
+                     $soilLayerArray_{i}.PutTemp(AirTemp)$
+
+      	
+      	else
+    
+
+      	\quad for all i in 0..NumOfSoilLayers-1 do
+        $soilLayerArray_{i}.PutTemp(theClimate.GetNextSoilTemp())$
+     
+   
+   else
+
+  %\quad    i
+
+  %\quad    soilLayer currentLayer
+
+      deltaTime  =        currentTime  = 0,
+%	moreFrozen_{MaxSoilLayers}
+ %     waterFlux_{MaxSoilLayers}, waterFluxMean_{MaxSoilLayers}, waterFluxSlope_{MaxSoilLayers}
+%
+%    	heatConductivity_{MaxSoilLayers}, heatConductivityMean_{MaxSoilLayers}, heatConductivitySlope_{MaxSoilLayers},  SpecWaterCapacity_{MaxSoilLayers}
+%    	UpperVector_{MaxSoilLayers},
+%    	MidVector_{MaxSoilLayers},
+% 	LowerVector_{MaxSoilLayers},
+% 	TOldArray_{MaxSoilLayers},
+% 	TNew_{MaxSoilLayers},
+% 	TOld_{MaxSoilLayers},
+%    	A_{MaxSoilLayers},
+%    	B_{MaxSoilLayers},
+%    	Ka_{MaxSoilLayers},
+%    	Kb_{MaxSoilLayers},
+%    	Kc_{MaxSoilLayers}
+   %
+      bool reduceTimestep=false     
+
+      $WaterInFlux=WaterDensity \cdot \tfrac{infiltration}{86400}/1000 $  unit kg m-2 s-1
+
+      numberOfTotalLayers = NumOfSoilLayers + ExtraLayers
+
+   	for all i in 0..numberOfTotalLayers-1 do
+         $moreFrozen_{i}=0$
+
+
+     for all i in 0..numberOfTotalLayers-1 do 
+
+\quad  
+         $waterFlux_{i} = WaterDensity \cdot \tfrac{soilLayerArray_{i}.GetWaterFlux()}{86400}/1000   $              unit kg m-2 s-1
+        	%if (fabs(waterFlux_{i})>0.01)
+%\subsection{         	%theMessage.WarningWithDisplay("soilProfile.UpdateFinDiffTemp waterflux is larger than 0.01 kg m-2 s-1")}
+        	%if (waterFlux_{i}<0)
+%\subsection{         	%theMessage.WarningWithDisplay("soilProfile.UpdateFinDiffTemp waterflux is negative")}
+    
+      %for all i in 0..numberOfTotalLayers-1 do     
+      	%if (waterFlux_{i}> 10)
+%\subsection{         	%theMessage.WarningWithDisplay("soilProfile.UpdateFinDiffTemp - Waterflux unrealistic high")}
+    
+      $waterFluxMean_0= (WaterInFlux+waterFlux_0) \cdot 0.5$
+
+      for all i in 1..numberOfTotalLayers-2 do
+
+     \quad 	$waterFluxMean_{i}= (waterFlux_{i-1}+waterFlux_{i}) \cdot 0.5$
+
+     $ waterFluxMean_{numberOfTotalLayers-1}=
+ (waterFlux_{numberOfTotalLayers-1}$
+  
+\quad $+ waterFlux_{numberOfTotalLayers-2}) \cdot 0.5$
+
+           (calculate the slope of the waterfluxes)
+
+      $waterFluxSlope_0 =  (waterFlux_0-WaterInFlux) \cdot DistPreviousLayerInv_0$
+    
+  for all i in 1..numberOfTotalLayers-2 do
+
+ \quad    	$waterFluxSlope_{i} = (waterFlux_{i}-waterFlux_{i-1}) \cdot DistPreviousLayerInv_{i}$
+     
+ $waterFluxSlope_{numberOfTotalLayers-1}
+= (waterFlux_{numberOfTotalLayers-1}$
+
+\quad$-waterFlux_{numberOfTotalLayers-2})
+      \cdot DistPreviousLayerInv_{numberOfTotalLayers-1}
+$          
+
+get new LB and UB conditions,
+          LB from analytical solution (as in DAISY)     
+
+$ maxDepth = $
+
+\quad $
+\tfrac{GetMaximumDepth() 
+          +soilLayerArray_{numberOfTotalLayers-2}.GetThickness() 
+         +soilLayerArray_{numberOfTotalLayers-1}.GetThickness()}{1000}$   
+   
+(change to actual depth!)
+      
+if calculateAverage  then  
+      
+         averageThermalCond  =
+         averageHeatCapacity =0
+      
+      	for all i in 0..numberOfTotalLayers-1 do  
+           \begin{align*}     
+      		averageThermalCond &= averageThermalCond \\
+                    & + soilLayerArray_{i}.HeatConductivity() \cdot \tfrac{GetLayerThickness(i)}{1000}/maxDepth \\
+      		averageHeatCapacity &= averageHeatCapacity  \\
+                    & + soilLayerArray_{i}.HeatCapacity() \cdot \tfrac{GetLayerThickness(i)}{1000}/maxDepth
+      	  \end{align*}
+         calculateAverage =false
+
+      $depthDampning = pow(2 \cdot averageThermalCond/(averageHeatCapacity \cdot \tfrac{0.0172142}{3600 \cdot 24},0.5)$
+
+                     approximately 2.4      
+      \begin{align*}
+       averageAirTemp & = 7.7 \\
+      amplitudeAirTemp & = 8 \\      
+      dayInYear & =theTime.GetDayInYear() \\
+      dayZero & =212       august 1th the hottest day january 30th the coldest day \\
+      daysFromZero & =dayInYear-dayZero \\
+      TLB & =averageAirTemp + amplitudeAirTemp 
+             \cdot \exp(-\tfrac{maxDepth}{depthDampning}) \\
+          &   \cdot cos(0.0172142 \cdot (daysFromZero)-\tfrac{maxDepth}{depthDampning})
+\end{align*}
+      if $snow>0$ then
+
+         if $AirTemp>0$ then       (snow contains liquid water)
+         
+   	TUB = 0
+				else                             no water in snowpack
+           
+ 	$TUB = (AirTemp \cdot \tfrac{snowConductivity}{snow/1000}+
+               		temp_0 \cdot soilLayerArray_0.HeatConductivity()
+        $
+
+\quad $ \cdot DistPreviousLayerInv_0)$
+                       
+\quad $   /\left(\tfrac{snowConductivity}{snow/1000}
+  +soilLayerArray_0.HeatConductivity() \cdot DistPreviousLayerInv_0\right)
+        $
+
+       else
+         TUB = AirTemp
+   
+        Initialise starting condition
+   
+	for all i in 0.. numberOfTotalLayers-1     
+
+        $ TNew_{i}=temp_{i}$
+
+         if $temp_{i}<0$  and  $reduceTimestep=false$ then
+         	reduceTimestep=true
+
+         if $soilLayerArray_{i}. GetIce()>0$  and  $reduceTimestep=false$
+            reduceTimestep=true 
+    
+      if AirTemp < 0  and   reduceTimestep=false then
+      	reduceTimestep=true
+
+      deltaTime=3600 (timestep  1 hour)
+
+      if reduceTimestep then
+         deltaTime=100 (timestep 5 min)
+
+      bool firstTime=true
+
+           simulate 24 hours
+
+      while $currentTime<86400$ do  
+
+  			    transfer of new temp to old temp
+
+for all i in 0..numberOfTotalLayers-1 do % (i=0i<numberOfTotalLayers++i)
+
+        $TOld_{i}=TNew_{i}$,
+            $frostChange_{i}=fabs(moreFrozen_{i})>1E-30$      
+          True if change in icecontent
+
+                calculate heatconductivity etc.
+
+         for all i in 0..numberOfTotalLayers-1 do
+
+            if $frostChange_{i}$  or $ firstTime$ then
+               \begin{align*}
+                heatConductivity_{i} & = soilLayerArray_{i}.HeatConductivity() \\
+               SpecWaterCapacity_{i} & = soilLayerArray_{i}.SpecWaterCapacity()
+             \end{align*}
+        for all i in 0..numberOfTotalLayers-1 do          calculates the slope of the heatconductivity
+            
+         \quad if $frostChange_{i}$  or  $firstTime$ then
+          
+          \quad  	if i=0 then
+                       (mean between soil and air)
+               \begin{align*}
+                  heatConductivitySlope_{i} & = (0.025+(heatConductivity_{i+1}-heatConductivity_{i}) \\
+                             & \cdot DistNextLayerInv_{i}) \cdot 0.5  \\            
+                  heatConductivityMean_{i} & =  (heatConductivity_{i+1}+heatConductivity_{i}) \cdot 0.5
+              \end{align*}
+               else             
+                  if $i=numberOfTotalLayers-1$ then
+                     \begin{align*}             
+                     heatConductivitySlope_{i} & =  (heatConductivity_{i}-heatConductivity_{i-1}) \cdot DistPreviousLayerInv_{i} \\
+                     heatConductivityMean_{i} & =  heatConductivity_{i}   
+                     \end{align*}             
+                  else  
+                     \begin{align*}             
+                     heatConductivitySlope_{i} & =  ((heatConductivity_{i+1}-heatConductivity_{i}) \cdot DistNextLayerInv_{i} \\
+                                                & \quad +
+                                                  (heatConductivity_{i}-heatConductivity_{i-1}) 
+                        \\ & \quad \cdot DistPreviousLayerInv_{i}) \cdot 0.5 \\
+                     heatConductivityMean_{i} & =  (heatConductivity_{i+1}+heatConductivity_{i}) \cdot 0.5
+                    \end{align*}   
+         for all i in 0..numberOfTotalLayers-1 do
+
+            if $frostChange_{i}$  or  $firstTime$ then
+            
+             \quad $currentLayer = soilLayerArray_{i}$
+         
+             if ($TNew_{i} < 0$  and  
+currentLayer.GetIce()<currentLayer.GetTotalWater()) freezing
+ or  ($TNew_{i} > 0$)  and  (currentLayer.GetIce()>0)  thawing then  
+                  \begin{align*}
+                  A_{i} & =specCapacity \cdot \tfrac{specCapacity}{273} \cdot SpecWaterCapacity_{i}+currentLayer.HeatCapacity() \\
+                  B_{i} & =specCapacity \cdot waterFluxSlope_{i}
+                  \end{align*}
+              else
+                  \begin{align*}
+                  A_{i} & =currentLayer.HeatCapacity() &
+                  B_{i} & =0
+                  \end{align*}              
+             \begin{align*}
+               Ka_{i} & = \tfrac{A_{i}}{deltaTime }\\
+               Kb_{i} & = \tfrac{heatConductivityMean_{i}}
+                     {distanceToPreviousLayer_{i}+distanceToNextLayer_{i}} \\
+               Kc_{i} & =\tfrac{heatConductivitySlope_{i}-HeatCapacityWater \cdot waterFluxMean_{i}}
+                  {2 \cdot (distanceToPreviousLayer_{i}+distanceToNextLayer_{i})}
+             \end{align*}
+             Initialization of diagonal vectors
+
+         for(i=0 i<numberOfTotalLayers ++i)
+
+            if $frostChange_{i} $ or  firstTime then       
+               \begin{align*}
+               UpperVector_{i} &=-Kb_{i} \cdot DistNextLayerInv_{i}-Kc_{i}  \\   
+               MidVector_{i} &=Ka_{i}+Kb_{i} \cdot (DistNextLayerInv_{i}+DistPreviousLayerInv_{i})     \\
+               LowerVector_{i} &= -Kb_{i} \cdot DistPreviousLayerInv_{i}+Kc_{i}                       \\
+               LowerVector_0 &= 0 \\
+               UpperVector_{numberOfTotalLayers-1}& =0
+               \end{align*}
+               %if (MidVector_0=0)
+%\subsection{               %	theMessage.WarningWithDisplay("soilProfile.UpdateFinDiffTemp - Error 1 in tridag vectors")}
+         
+   		    Initialization of vector with old values
+
+			i=0
+        \begin{align*}
+         TOldArray_{i}&=Ka_{i} \cdot TOld_{i} 
+            +Kb_{i} \cdot ( \\
+            &  (TOld_{i+1}-TOld_{i}) \cdot DistNextLayerInv_{i} \\
+            &   -(TOld_{i}-TUB) \cdot DistPreviousLayerInv_{i} 
+             ) \\
+            & +Kc_{i} \cdot (TOld_{i+1}-TUB)-B_{i} \\
+            & -(-Kb_{i} \cdot DistPreviousLayerInv_{i}+Kc_{i}) \cdot TUB
+        \end{align*}
+      	for all i in 1..numberOfTotalLayers-2 do
+        \begin{align*}
+         	TOldArray_{i}&=Ka_{i} \cdot TOld_{i} 
+            	                +Kb_{i} \cdot ( \\
+                               & (TOld_{i+1}-TOld_{i}) \cdot DistNextLayerInv_{i} \\
+                               & -(TOld_{i}-TOld_{i-1}) \cdot DistPreviousLayerInv_{i} \\
+                               & )  +Kc_{i} \cdot (TOld_{i+1}-TOld_{i-1})-B_{i}
+        \end{align*}
+$TOldArray_{numberOfTotalLayers-1}$
+         \begin{align*}
+         & = Ka_{numberOfTotalLayers-1}\cdot TOld_{numberOfTotalLayers-1}
+                +Kb_{numberOfTotalLayers-1}
+               & \cdot ( 
+                (TLB-TOld_{numberOfTotalLayers-1}) \cdot DistNextLayerInv_{numberOfTotalLayers-1}\\
+               & -(TOld_{numberOfTotalLayers-1}-TOld_{numberOfTotalLayers-2}) \\
+              &   \cdot DistPreviousLayerInv_{numberOfTotalLayers-1}\\
+              & ) 
+               %
+              +Kc_{numberOfTotalLayers-1}\cdot (TLB-TOld_{numberOfTotalLayers-2}) \\
+              & -B_{numberOfTotalLayers-1}
+               +(Kb_{numberOfTotalLayers-1}\cdot DistNextLayerInv_{numberOfTotalLayers-1}\\
+              & +Kc_{numberOfTotalLayers-1}) \cdot TLB
+        \end{align*}
+             Solve with the sweep method (function tridag)
+     
+          Tridag(LowerVector, MidVector, UpperVector, TOldArray, TNew, numberOfTotalLayers)
+
+             update IceContent
+			for all i in 0..numberOfTotalLayers-1 do
+   		
+
+           $ currentLayer = soilLayerArray_{i}$
+
+                    is there freezing or thawing
+
+            if ($TNew_{i} $< 0
+      and  $currentLayer.GetIce()<currentLayer.GetTotalWater()$)  
+freezin
+
+\quad or    
+                  ($TNew_{i}$ > 0  and  $currentLayer.GetIce()>0$)   
+    thawing then
+                     	\begin{align*}
+               TimeDerivTemp&=\tfrac{(TNew_{i}-TOld_{i})}{deltaTime} \\
+               TimeDerivIce &= \tfrac{WaterDensity}{IceDensity} \cdot (-\tfrac{1}{WaterDensity} \cdot waterFluxSlope_{i} \\
+                     & - (specCapacity \cdot \tfrac{SpecWaterCapacity_{i}}{273} \cdot TimeDerivTemp)) \\
+               moreFrozen_{i} &=  deltaTime \cdot TimeDerivIce currentLayer.GetThickness()         in mm
+               \end{align*}
+                if ($moreFrozen_{i}$+ currentLayer.GetIce() > currentLayer.GetTotalWater())          frozen water exceeds water
+               \begin{align*}
+               	TNew_{i} & =-0.001 \\
+                moreFrozen_{i} & =currentLayer.GetTotalWater()-currentLayer.GetIce()
+                \end{align*}            
+               else if ($moreFrozen_{i}+ currentLayer.GetIce()<0$)                                 frozen water negative
+               \begin{align*}
+               	TNew_{i} & =0.001 \\
+                  moreFrozen_{i} & = -currentLayer.GetIce()
+               \end{align*}
+               $ice=currentLayer.GetIce()$
+
+               $currentLayer.SetIceContent(\max(0,\min(currentLayer.GetTotalWater(),ice+ moreFrozen_{i})))$
+
+            
+            else  
+
+$moreFrozen_{i}=0$,           
+         $currentTime  = currentTime + deltaTime $,
+         $firstTime =false$
+        	
+      for all i in 0..numberOfTotalLayers-1 do
+         $temp_{i}=TNew_{i}$
+
+          check if the temp is witin realistic boundaries
+
+      $month=theTime.GetMonth(),
+      year=theTime.GetYear()$
+
+     for all i in 0..numberOfTotalLayers-1 do    
+         %if (i>9  and  i<19  and  temp_{i}<minTemp[month-1]  and  year \ne lastErrorYear)
+         %   lastErrorYear=year
+         %   cout << "Layer no " << i << " temp is " << temp_{i}
+%\subsection{         %   theMessage.WarningWithDisplay("soilProfile.UpdateFinDiffTemp - soil layer temp below \expert opinion monthly threshold")}
+      $   soilLayerArray_{i}.PutTemp(temp_{i})$
+    
+      if theControlParameters.GetWriteSoilTemp() then
+
+     \quad 	SoilTempFile << theTime
+
+      \quad   for all i in 0..numberOfTotalLayers-1 do
+      	  $ SoilTempFile < <  temp_{i}$
+
+         SoilTempFile << endl
+
+
+\subsection{SWAT}
+
+
+
+\minisec{soilLayer.RemoveWaterHourly(moveWater,
+      nitrogen nitLeached, nitrogen ammLeached,
+   ChlorideLeached, bool downwardMovement)}
+Perform infiltration of water, nit and amm in layer. Used for SWAT
+water model with hourly timestep.
+surplus         - Water to be added to current (next) layer [mm],
+nitLeached/ammLeached  - Nit/Amm to the added to current (next) layer [$g N/m^2$]
+
+
+   nitLeached.Clear(),
+   ammLeached.Clear()
+
+   if $moveWater>0$ then
+
+   \quad   Default value 0.5. BMP and JBE changed this - very important difference!!!
+      \begin{align*}
+      FirstMoveFraction & = 0  \\
+        mobileWater & = \max(waterContent-fieldCapacity,0) \\
+      \alpha &  = 0
+      \end{align*}
+      if $mobileWater>0$ then
+
+   \quad      $\alpha = \min(1,\tfrac{moveWater}{mobileWater}) $      As defined in original SLIM
+
+           Leach first proportion of the water using current mobile solute concs
+      \begin{align*}
+       \cdot nitLeached  & = nit\_mob \cdot \alpha \cdot FirstMoveFraction \\
+      nit\_mob      & = nit\_mob -  \cdot nitLeached \\
+      %
+       \cdot ammLeached & = amm\_mob \cdot \alpha \cdot FirstMoveFraction \\
+      amm\_mob     & = amm\_mob -  \cdot ammLeached \\
+      %
+       \cdot ChlorideLeached & = Chloride\_mob \cdot \alpha \cdot FirstMoveFraction \\
+      Chloride\_mob  &= Chloride\_mob -  \cdot ChlorideLeached
+      \end{align*}
+      EquilibrateNitrogen(mobileWater)
+\begin{align*}
+      waterContent & = waterContent - FirstMoveFraction \cdot moveWater \\
+      mobileWater  & = mobileWater  - FirstMoveFraction \cdot moveWater
+\end{align*}
+           Leach second proportion of the water using new mobile solute concs
+      \begin{align*}
+      nitrogen N       & = nit\_mob \cdot \alpha \cdot (1-FirstMoveFraction) \\
+       \cdot nitLeached  & =  \cdot nitLeached + N \\
+      nit\_mob      & = nit\_mob - N \\
+%
+      N                & = amm\_mob \cdot \alpha \cdot (1-FirstMoveFraction) \\
+       \cdot ammLeached & =  \cdot ammLeached + N \\
+      amm\_mob     & = amm\_mob - N \\
+%
+       \cdot ChlorideLeached  &=   \cdot ChlorideLeached +  Chloride\_mob \cdot \alpha \cdot (1-FirstMoveFraction) \\
+      Chloride\_mob      &= Chloride\_mob     - Chloride\_mob \cdot \alpha \cdot (1-FirstMoveFraction) \\
+%
+      waterContent & = waterContent - (1-FirstMoveFraction) \cdot moveWater
+      \end{align*}
+      WaterBudget.AddOutput(moveWater)
+   
+   else
+
+    if downwardMovement then
+     \begin{align*}
+       ammLeaching & = ammLeaching +  \cdot ammLeached &
+      nitLeaching & = nitLeaching +  \cdot nitLeached   
+    \end{align*}
+   Nbudget.AddOutput(ammLeached.n+nitLeached.n)
+
+   N15budget.AddOutput(ammLeached.n15+nitLeached.n15)
+
+
+   
+
+
+\subsection{soilLayer.EquilibrateNitrogen(mobileWater)}
+Intra-layer movement of water and solute
+   %if (waterContent<0)
+%\subsection{   %	theMessage.FatalError("soilLayer.EquilibrateNitrogen - water content below zero")}
+
+   rateCoefficient=0.9,
+   if (startDepth>199)
+   	rateCoefficient=0.7,        holdbackconstant =0.3
+
+   if $mobileWater > 0$ then
+            
+      \begin{align*}
+      concDiffChloride & = \tfrac{Chloride\_mob}{mobileWater} 
+         -\tfrac{Chloride\_imob+Chloride\_mob}{waterContent} \\
+      moveChlorideFromMobile & = concDiffChloride \cdot mobileWater \cdot (rateCoefficient) \\
+      Chloride\_mob   &= Chloride\_mob - moveChlorideFromMobile \\
+      Chloride\_imob  &= Chloride\_imob + moveChlorideFromMobile \\      
+      nitrogen concDiffNit & = \tfrac{nit\_mob}{mobileWater}
+             -\tfrac{nit\_imob+nit\_mob}{waterContent} \\
+      nitrogen moveNitFromMobile & = concDiffNit \cdot mobileWater
+            \cdot (rateCoefficient) \\
+      nit\_mob  & = nit\_mob - moveNitFromMobile \\
+      nit\_imob  & = nit\_imob + moveNitFromMobile \\    
+   	fAm   & = FracAmmInWater() \\
+      nitrogen concDiffAmm  & = \tfrac{amm\_mob}
+         {mobileWater}-\tfrac{amm\_imob+amm\_mob}{waterContent} \\
+      nitrogen moveAmmFromMobile & = concDiffAmm \cdot mobileWater
+              \cdot (rateCoefficient) \\
+      amm\_mob  & = amm\_mob - moveAmmFromMobile \cdot fAm \\
+      amm\_imob & = amm\_imob + moveAmmFromMobile \cdot fAm
+      \end{align*}
+   else  
+ (if no mobile phase is present the mobile solutes are moved to 
+the immobile phase)
+\begin{align*}
+   Chloride\_imob & =Chloride\_mob+Chloride\_imob &
+   Chloride\_mob & =0 \\
+   nit\_imob &=nit\_mob+nit\_imob &
+   nit\_mob & =0 \\
+   amm\_imob & =amm\_mob+amm\_imob &
+   amm\_mob & =0
+\end{align*}
+%/*         Chloride
+%   \begin{align*}
+%AddChloride  & = (Chloride\_mob+Chloride\_imob) \cdot (1.-holdbackConstant)   \\    
+%      Holdback constant burde afhï¿½nge af antallet af lag!
+%   Chloride\_mob  & = Chloride\_mob \cdot holdbackConstant + AddChloride \cdot f \\
+%   Chloride\_imob  & = Chloride\_imob \cdot holdbackConstant + AddChloride \cdot (1.-f) */
+% \end{align*}
+   equilibrated  = true
+
+
+      
+
+\subsection{soilProfile.UpdateInfiltrationSWAT( surplus, nitrogen surfaceNit,
+                                     nitrogen surfaceAmm, nitrogen NitLeached,
+                                     nitrogen  AmmLeached, Chloride)}
+Performs infiltration of water, nit and amm in profile using the SWAT
+water model. Simulates the transport of water and solutes with timestep one hour.
+Solutes are equilibrated between mobile and immobile domain only once a day.
+Optional use of convection-dispersion equation for transport in mobile domain.
+(MEL 2007)
+
+\begin{tabular}{ll}
+   surplus         &  Water to be added to/returned from profile [mm] \\
+   nitLeached/ammLeached  & Nit/Amm  to the added to/returned from profile [$g N/m^2$] \\
+ \end{tabular}
+%    double
+%       totalFlux_{MaxSoilLayers},
+%       maxContent_{MaxSoilLayers},
+%       waterContent_{MaxSoilLayers},
+%       FC_{MaxSoilLayers},
+%       satHydraulicConductivity_{MaxSoilLayers},
+%       layerThickness_{MaxSoilLayers},
+%       \theta_{MaxSoilLayers},
+%       \theta Old_{MaxSoilLayers},
+%       \thetaBack_{MaxSoilLayers},
+%       \thetaForward_{MaxSoilLayers},
+%       dispersion_{MaxSoilLayers},
+%       dispersionBack_{MaxSoilLayers},
+%       dispersionForward_{MaxSoilLayers},
+%       flowBack_{MaxSoilLayers},
+%       flowForward_{MaxSoilLayers},
+%       upperVector_{MaxSoilLayers},
+%       midVector_{MaxSoilLayers},
+%       lowerVector_{MaxSoilLayers},
+%       soluteOldVector_{MaxSoilLayers},
+%       soluteOld_{MaxSoilLayers},
+%       soluteNew_{MaxSoilLayers},
+%       mobileNitFlux_{MaxSoilLayers},
+%       mobileAmmFlux_{MaxSoilLayers},
+%       mobileNitN15Flux_{MaxSoilLayers},
+%       mobileAmmN15Flux_{MaxSoilLayers},
+%       mobileChlorideFlux_{MaxSoilLayers},
+%       mobileWaterNew_{MaxSoilLayers},
+%       mobileWaterOld_{MaxSoilLayers},
+%    	immobileWater_{MaxSoilLayers}
+
+
+   molecularDiff =
+   soluteInFlux =
+   soluteIn =
+   nitIn =
+   nitN15In =
+   ammIn =
+   ammN15In =
+   chlorideIn =
+   standingWater = 0
+
+
+%    bool IsThereSoluteFlux_{MaxSoilLayers}
+% 
+%    nitrogen surplusNH4_{MaxSoilLayers}
+% 
+%    nitrogen surplusNO3_{MaxSoilLayers}
+
+
+   simulationTime  = 0,
+   deltaT  =3600
+
+
+   TotalNumberOfLayers = NumOfSoilLayers + ExtraLayers
+
+   %$pF\_Curve pF_{MaxSoilLayers}$
+
+ 
+	for all i in 0..numberOfTotalLayers-1 do
+		$soilLayerArray_{i}.ClearLeaching() $                 
+
+set leaching to zero
+  \begin{align*}  
+  waterContent_{i} & = soilLayerArray_{i}.GetTotalWater() \\
+   %
+   pF_{i} & = soilLayerArray_{i}.GetpF\_Curve() \\
+%
+%
+      maxContent_{i} & =(soilLayerArray_{i}.GetPorosity() \cdot 
+    soilLayerArray_{i}.GetThickness()) \\
+      totalFlux_{i} & =0 \\
+      FC_{i} & = soilLayerArray_{i}.GetFieldCapacity()
+ \end{align*}    
+ $surplusNH4_{i}.Clear()$,
+      $surplusNO3_{i}.Clear() $  
+
+   standingWater= surplus,
+   soluteTransportMethod=1         
+
+if 1 use SLIM transport option
+
+   for all i in 0..TotalNumberOfLayers-1 do 
+     \begin{align*}
+      satHydraulicConductivity_{i} & = pF_{i}.GetConductivity(pF_{i}.GetpF(
+          \tfrac{maxContent_{i}}{soilLayerArray_{i}.GetThickness()}))  \\
+      layerThickness_{i} & =soilLayerArray_{i}.GetThickness()
+    \end{align*}
+ satHydraulicConductivity in m/s
+
+
+   while $simulationTime<86400$ do (simulates 24 hours)
+  
+ % \quad    $fluxInTimeStep_{MaxSoilLayers}$
+
+  \quad         Perform infiltration of top layer.
+
+  \quad    $infiltration=\max(0,\min(standingWater,maxContent_0-waterContent_0))$ in mm
+
+  \quad    if $infiltration>0$ then
+         \begin{align*}
+         standingWater &= standingWater- infiltration \\
+         waterContent_0 &= waterContent_0+ infiltration
+         \end{align*}
+         %if (waterContent_0>maxContent_0+0.0001)
+%\subsection{         %   theMessage.WarningWithDisplay("soilProfile.UpdateInfiltration - top layer contains more water than physically possible")}
+\quad     else
+         %if (infiltration<(-1E-10))
+%\subsection{         %   theMessage.WarningWithDisplay("soilProfile.UpdateInfiltrationSWAT - top layer contains more water than physically possible")}
+
+ \quad    for all i in 0..TotalNumberOfLayers-1 do
+         $fluxInTimeStep_{i}=0$
+
+  \quad    for all i in 0..numberOfTotalLayers-1 do  
+                
+$NotFrozenWater = waterContent_{i}-soilLayerArray_{i}.GetIce() $
+
+    in mm
+         \begin{align*}  						
+         travelTime & = \tfrac{maxContent_{i}-FC_{i}}{satHydraulicConductivity_{i}/1000} \\			    in s
+         soilWaterExcess & =\max(0,\min(NotFrozenWater,waterContent_{i}- FC_{i})) 	
+         \end{align*}				    in mm
+         if $soilWaterExcess>0$ then        drainage
+            
+      \quad      $fluxInTimeStep_{i} = soilWaterExcess \cdot (1-\exp(-\tfrac{deltaT}{travelTime})) $      in mm per timestep
+            
+            if $i<(TotalNumberOfLayers-1)$ then 
+            \begin{align*}        
+               fluxInTimeStep_{i} & = \max(0,\min(fluxInTimeStep_{i},maxContent_{i+1}-waterContent_{i+1})) \\       
+                       &   reduce flux according to capacity in next layer \\
+               waterContent_{i+1} & =  waterContent_{i+1} +fluxInTimeStep_{i}  \\ 		
+                     & \quad add flux to next layer
+            \end{align*}
+            \begin{align*}
+            waterContent_{i}  & = waterContent_{i} -  fluxInTimeStep_{i}  \\
+                              & \text{  remove flux from present layer} \\
+            totalFlux_{i} & =  totalFlux_{i}+  fluxInTimeStep_{i}  
+            \end{align*}      
+         else
+
+        $ fluxInTimeStep_{i}=0$
+
+         %if (waterContent_{i}>maxContent_{i}+0.0001)
+%\subsection{         %   theMessage.WarningWithDisplay("soilProfile.UpdateInfiltrationSWAT - soil layer contains more than physically possible")}
+    
+
+           Transport of water and solutes
+
+      $f=1$      f is frac of surface water that enter the soil
+
+ \quad    if $surplus>0$ then
+
+         f= $\tfrac{surplus-standingWater}{surplus}$
+
+  \quad    if $soluteTransportMethod=1$ then
+       
+\quad    \quad    $ nitrogen Nadd =  surfaceNit \cdot f + (  surfaceAmm \cdot f)$
+
+       $ soilLayerArray_0.AddWater( surplus \cdot f,  surfaceNit \cdot f,  surfaceAmm \cdot f,Chloride)$
+        
+        for all i in 0..numberOfTotalLayers-1 do      
+            %if (waterContent_{i}>(maxContent_{i}+0.1))
+%\subsection{            %   theMessage.WarningWithDisplay("soilProfile.UpdateInfiltrationSWAT - water content in soil layer exceeds the possible")}
+          
+ $ soilLayerArray_{i}.SetWaterFlux(fluxInTimeStep_{i})$,          
+  $soilLayerArray_{i}.SetEquilibrated(false)$
+         
+   nitrogen NO3, nitrogen NH4
+         
+   if $fluxInTimeStep_{i}>0$ then (Downward movement)
+
+  \quad            $ soilLayerArray_{i}.RemoveWaterHourly(fluxInTimeStep_{i},NO3,NH4,Chloride)$
+             
+  if $i=TotalNumberOfLayers-1$ then 
+                 \begin{align*}           
+                    NitLeached & = NO3 &
+                   AmmLeached  & = NH4 
+                \end{align*}              
+              if $i<TotalNumberOfLayers-1$ then
+
+                 \quad  $soilLayerArray_{i+1}.AddWater(fluxInTimeStep_{i},NO3,NH4,Chloride)$           
+        \begin{align*}
+          surplus & = surplus \cdot (1-f) \\
+           surfaceNit & =  surfaceNit \cdot (1-f) \\
+           surfaceAmm & =  surfaceAmm \cdot (1-f)
+        \end{align*}        
+        what about chloride?
+        
+      else
+ 
+          Use convection-dispersion equation on mobile domain
+     
+%\subsection{     % theMessage.FatalError("soilProfile.UpdateInfiltrationSWAT - Convection-dispersion equation for solute transport not properly implemented")}
+
+         for all i in 0..numberOfTotalLayers-1 do
+\begin{align*}     
+            mobileWaterOld_{i}&=\max(0,soilLayerArray_{i}.GetTotalWater()-FC_{i}) \\
+            immobileWater_{i}&= soilLayerArray_{i}.GetTotalWater()-mobileWaterOld_{i} \\
+            mobileWaterNew_{i}&=\max(0,waterContent_{i}-immobileWater_{i}) 
+\end{align*}        
+             solve individually for nit, amm and chloride
+    
+     for ($soluteType=0soluteType<5soluteType++$)
+       
+  \quad          if $soluteType=0$  then        (nit N)
+           
+ \quad              molecularDiff=1.902e-9            (m2 s-1)                   Change to diffusion coefficient in dilute solutions  !!!!!!!!!!!!
+               
+              for all i in 0..TotalNumberOfLayers-1 do
+
+   \quad \quad            $ soluteOld_{i}= \begin{cases}
+                \tfrac{ soilLayerArray_{i}.GetMobileNit().n}{\tfrac{mobileWaterOld_{i}}{1000}} & \text{ if } (mobileWaterOld_{i}>0) \\
+                 0 & \text{ otherwise} 
+                \end{cases}$
+
+    \quad        $   soluteIn= surfaceNit.n \cdot f$
+
+     \quad          nitIn=soluteIn  
+          
+            else if $soluteType=1$ then       (amm N)            
+          
+   \quad  molecularDiff=1.957e-9            (m2 s-1)
+               
+for all i in 0..TotalNumberOfLayers-1 do
+            
+\quad $soluteOld_{i}= \begin{cases}     
+                    \tfrac{ soilLayerArray_{i}.GetMobileAmm().n}{\tfrac{mobileWaterOld_{i}}{1000}} & \text{ if } (mobileWaterOld_{i}>0) \\
+                  0 & \text{ otherwise}
+\end{cases}$
+\begin{align*}
+               soluteIn&= surfaceAmm.n \cdot f \\
+                ammIn&=soluteIn
+\end{align*}            
+            else if  $soluteType=2$ then   (chloride)    
+     
+            \quad   molecularDiff=2.032e-9            m2 s-1
+
+             \quad  for all i in 0..TotalNumberOfLayers-1 do
+                        
+      \quad \quad       $ soluteOld_{i}=\begin{cases}
+   \tfrac{soilLayerArray_{i}.GetMobileChloride()}
+{\tfrac{mobileWaterOld_{i}}{1000}} & \text{  if $mobileWaterOld_{i}>0$} \\
+ 0 & \text{ otherwise}                           
+                            \end{cases}     $      
+              \begin{align*}
+               soluteIn&=Chloride \cdot f \\
+               chlorideIn&=soluteIn
+              \end{align*}           
+            else if  $soluteType=3$ then       (nit 15N) 
+        
+            \quad   molecularDiff=1.902e-9            (m2 s-1)
+
+           \quad    for all i in 0..TotalNumberOfLayers-1 do
+                 
+                      $ soluteOld_{i}= \begin{cases}
+\tfrac{soilLayerArray_{i}.GetMobileNit().n15}{\tfrac{mobileWaterOld_{i}}{1000}} & \text{ if } (mobileWaterOld_{i}>0) \\
+               0
+\end{cases} $
+             \begin{align*}
+  soluteIn& =surfaceNit.n15 \cdot f \\
+               nitN15In& =soluteIn
+\end{align*}           
+            else if  $soluteType=4$ then       (amm 15N)   
+         
+           \quad    molecularDiff=1.957e-9      
+  										      m2 s-1
+          \quad     for all i in 0..TotalNumberOfLayers-1 do               
+
+                    $ soluteOld_{i}= \begin{cases}
+\tfrac{soilLayerArray_{i}.GetMobileAmm().n15}{\tfrac{mobileWaterOld_{i}}{1000}} &      g/m2  if (mobileWaterOld_{i}>0) \\
+                     0 &
+                  \end{cases} $
+              \begin{align*}
+               soluteIn & =surfaceAmm.n15 \cdot f \\
+               ammN15In & =soluteIn
+             \end{align*}    
+            bool nonZeroConcentration=false
+
+           for all i in 0..TotalNumberOfLayers-1 do
+               if ($soluteOld_{i}>0$)  nonZeroConcentration=true
+
+            if $soluteIn>0$ then
+
+       \quad        nonZeroConcentration=true, tortuosity=0.6, dispersionLength=0.02       									      m
+
+         \quad      for all i in 0..TotalNumberOfLayers-1 do   
+                  \begin{align*}           
+                  \theta_{i}&=\min(1, \tfrac{mobileWaterNew_{i}}{soilLayerArray_{i}.GetThickness()}) \\
+                  \theta Old_{i}&=\min(1,\tfrac{mobileWaterOld_{i}}{soilLayerArray_{i}.GetThickness()}) \\
+                  soluteNew_{i}&= soluteOld_{i}
+                  \end{align*}              
+      \quad      if(nonZeroConcentration)      bypass if no conc is above zero
+            
+
+         \quad       determine where there is a solute flux (calculated out of the layer)
+
+        \quad      for all i in 0..TotalNumberOfLayers-1 do
+                 
+                 
+            $   IsThereSoluteFlux_{i}= $
+
+$\begin{cases}
+                       true & \text{ if } fluxInTimeStep_{i}>0 or
+                  (mobileWaterOld_{i+1}>0  and 
+                  mobileWaterOld_{i}>0) \\
+                         false & \text{ otherwise} 
+                                     \end{cases} $
+
+               
+
+        \quad           calculate centered values
+
+        \quad       for all i in 0..TotalNumberOfLayers-1 do
+
+              
+        \quad          if $i=0$   then             
+                    \begin{align*}
+                     \theta Back_{i}&=0.5 \cdot (\theta_{i}+\theta Old_{i}) \\ 
+                     \theta Forward_{i}&=0.25 \cdot (\theta_{i}+\theta_{i+1}+\theta Old_{i}+\theta Old_{i+1}) \\
+                     flowBack_{i}&=infiltration/deltaT/1000 \\
+                     flowForward_{i}&=fluxInTimeStep_{i}/deltaT/1000
+                     \end{align*}
+     \quad                if $\theta_{i}=0$ or $\theta Old_{i}=0$ then
+                        $dispersion_{i}=0$
+                    
+\quad  else
+    \quad                   $ dispersion_{i}=dispersionLength \cdot 0.5 \cdot \tfrac{flowForward_{i}+flowBack_{i}}{0.5 \cdot (\theta_{i}+\theta Old_{i})}+molecularDiff \cdot tortuosity
+$
+                         if $\theta_{i}=0$ or $\theta_{i-1}=0$ then
+ \quad                     $ dispersionBack_{i}=0$
+                        
+\quad else
+                           $ dispersionBack_{i}=dispersionLength \cdot \tfrac{flowBack_{i}}{\theta Back_{i}}+molecularDiff \cdot tortuosity
+  $
+
+ \quad                  if $\theta_{i}=0$  or $\theta Old_{i}=0$
+            or $\theta_{i+1}=0$ or $\theta Old_{i+1}=0$ then
+                       $ dispersionForward_{i}=0$
+                     
+\quad else
+     \quad                   $ dispersionForward_{i}=dispersionLength \cdot \tfrac{flowForward_{i}}{\theta Forward_{i}}
++molecularDiff \cdot tortuosity $
+                 
+                
+             else if $i=TotalNumberOfLayers-1$ then                
+                     \begin{align*}
+                     \theta Back_{i}&=0.25 \cdot (\theta_{i-1}+\theta_{i}+\theta Old_{i-1}+\theta Old_{i}) \\
+                     \theta Forward_{i}&=0.5 \cdot (\theta_{i}+\theta Old_{i}) \\
+                     flowBack_{i}&=fluxInTimeStep_{i-1}/deltaT/1000 \\
+                     flowForward_{i}&=fluxInTimeStep_{i}/deltaT/1000
+                     \end{align*}
+      \quad               if $\theta_{i}=0$ or $ \theta Old_{i}=0$ then
+                       $ dispersion_{i}=0$
+
+    \quad                 else
+                        $dispersion_{i}=dispersionLength \cdot 0.5 \cdot (flowForward_{i}+
+   \tfrac{flowBack_{i})}{0.5 \cdot (\theta_{i}+\theta Old_{i})}+molecularDiff \cdot tortuosity
+                 $
+
+    \quad if $\theta_{i-1}=0$  or $\theta Old_{i-1}=0$ or 
+    $\theta_{i}=0$ or $\theta Old_{i}=0$ then
+                        $dispersionBack_{i}=0$
+                   
+  \quad else
+                        $dispersionBack_{i}=dispersionLength \cdot 
+ \tfrac{flowBack_{i}}{\theta Back_{i}}+molecularDiff \cdot tortuosity$
+                    
+
+ \quad if $\theta_{i}=0$  or  $\theta Old_{i}=0)$ then
+
+    \quad  \quad       then              $ dispersionForward_{i}=0$
+
+   \quad     \quad               else
+                      $ dispersionForward_{i}=dispersionLength \cdot 
+\tfrac{flowForward_{i}}{\theta Forward_{i}}+molecularDiff \cdot tortuosity$
+                  
+\quad else  
+                      \begin{align*}
+                     \theta Back_{i}&=0.25 \cdot (\theta_{i-1}+\theta_{i}+\theta Old_{i-1}+\theta Old_{i}) \\
+                     \theta Forward_{i}&=0.25 \cdot (\theta_{i}+\theta_{i+1}+\theta Old_{i}+\theta Old_{i+1}) \\
+                     flowBack_{i}&=fluxInTimeStep_{i-1}/deltaT/1000 \\
+                     flowForward_{i}&=fluxInTimeStep_{i}/deltaT/1000
+                     \end{align*}
+                \quad     if $\theta_{i}=0$ or $\theta Old_{i}=0$ then
+                        $dispersion_{i}=0$
+                     
+            \quad          else
+                        $dispersion_{i}=dispersionLength \cdot 0.5 \cdot 
+\tfrac{(flowForward_{i}+flowBack_{i})}{(0.5 \cdot (\theta_{i}+\theta Old_{i}))}+molecularDiff \cdot tortuosity $
+                    
+        \quad             if $\theta_{i-1}=0$ 
+ or  $\theta Old_{i-1}=0$ or $\theta_{i}=0$ or $\theta Old_{i}=0)$
+then
+                        $dispersionBack_{i}=0$
+                     
+       \quad              else
+                        $dispersionBack_{i}=dispersionLength \cdot 
+\tfrac{flowBack_{i}}{\theta Back_{i}}+molecularDiff \cdot tortuosity$
+                   
+        \quad             if $\theta_{i}=0$  or $\theta Old_{i}=0$ or 
+$\theta_{i+1}=0$ or $\theta Old_{i+1}=0$ then
+                        $dispersionForward_{i}=0$
+                     
+          \quad           else
+                       $ dispersionForward_{i}=dispersionLength \cdot 
+\tfrac{flowForward_{i}}{\theta Forward_{i}}+molecularDiff \cdot tortuosity $
+                
+               
+             
+      \quad         $a_{MaxSoilLayers},b_{MaxSoilLayers},c_{MaxSoilLayers},
+                        da_{MaxSoilLayers},db_{MaxSoilLayers},dc_{MaxSoilLayers}$
+
+        \quad       for all i in 0..TotalNumberOfLayers-1 do
+               \begin{align*}
+                  a_{i} & = dispersionBack_{i} \cdot \tfrac{DistPreviousLayerInv_{i}}{2 \cdot layerThickness_{i}} 
+                         +\tfrac{flowBack_{i}}{(4 \cdot layerThickness_{i})} \\
+                  b_{i} & = -\tfrac{\theta_{i}}{deltaT} 
+                        -dispersionForward_{i} \cdot \tfrac{DistNextLayerInv_{i}}{2 \cdot layerThickness_{i}} 
+                         -dispersionBack_{i} \cdot \tfrac{DistPreviousLayerInv_{i}}{2 \cdot layerThickness_{i}} \\
+                        & -\tfrac{flowForward_{i}}{4 \cdot layerThickness_{i}}
+                        +\tfrac{flowBack_{i}}{4 \cdot layerThickness_{i}} \\
+                  c_{i} & = dispersionForward_{i} \cdot \tfrac{DistNextLayerInv_{i}}{2 \cdot layerThickness_{i}} 
+                        -\tfrac{flowForward_{i}}{4 \cdot layerThickness_{i}} \\
+                  da_{i} & =-dispersionBack_{i} \cdot \tfrac{DistPreviousLayerInv_{i}}{2 \cdot layerThickness_{i}} 
+                       -\tfrac{flowBack_{i}}{4 \cdot layerThickness_{i}} \\
+                  db_{i}& =-\tfrac{\theta Old_{i}}{deltaT}
+                         +dispersionForward_{i} \cdot \tfrac{DistNextLayerInv_{i}}{2 \cdot layerThickness_{i}} \\
+                        & +dispersionBack_{i} \cdot \tfrac{DistPreviousLayerInv_{i}}{2 \cdot layerThickness_{i}} 
+                        +\tfrac{flowForward_{i}}{4 \cdot layerThickness_{i}} 
+                        -\tfrac{flowBack_{i}}{4 \cdot layerThickness_{i}} \\
+                  dc_{i} & = -dispersionForward_{i} \cdot \tfrac{DistNextLayerInv_{i}}{2 \cdot layerThickness_{i}} 
+                          +\tfrac{flowForward_{i}}{4 \cdot layerThickness_{i}}
+             \end{align*}
+                   Assign values to vectors
+
+\quad               for all i in 0..TotalNumberOfLayers-1 do   
+           
+     \quad\quad             if $i=0$ then      
+            
+         \quad\quad\quad            b\_null,d\_null
+
+         \quad\quad\quad            if $soluteIn>0$ then        
+                        \begin{align*}             
+                        soluteInFlux & = \tfrac{soluteIn}{deltaT} \\
+                        b\_null &=\tfrac{dispersion_{i} \cdot DistPreviousLayerInv_{i}-0.5 \cdot flowBack_{i}}
+                                {2 \cdot (dispersion_{i} \cdot DistPreviousLayerInv_{i}+0.5 \cdot flowBack_{i})} \\
+                        d\_null &=(soluteInFlux+(dispersion_{i} \cdot DistPreviousLayerInv_{i}-0.5 \cdot flowBack_{i})) \\
+                                &  \cdot \tfrac{soluteOld_{i}}{2 \cdot (dispersion_{i} \cdot DistPreviousLayerInv_{i}+0.5 \cdot flowBack_{i})}
+                       \end{align*}
+      \quad\quad               else  
+                                          
+                        b\_null=0, 
+                        d\_null=0                         
+                   \begin{align*}            
+                     lowerVector_{i} & = 0 \\
+                     midVector_{i} & = b_{i}+ b\_null \cdot a_{i} \\
+                     upperVector_{i} & = c_{i} \\
+                     soluteOldVector_{i} & = soluteOld_{i} \cdot (da_{i}+db_{i}) + soluteOld_{i+1} \cdot  dc_{i}
+                                 -d\_null \cdot a_{i} 
+                   \end{align*}               
+     \quad\quad             else if $i=TotalNumberOfLayers-1$ then  
+                    \begin{align*}              
+                     lowerVector_{i}&= a_{i} \\
+                     midVector_{i}&=b_{i}+c_{i} \\
+                     upperVector_{i}&= 0 \\
+                     soluteOldVector_{i}&= soluteOld_{i-1} \cdot  da_{i}+ soluteOld_{i} \cdot (db_{i}+dc_{i})
+                    \end{align*}
+       \quad\quad           else 
+                    \begin{align*}                 
+                     lowerVector_{i}&= a_{i} \\
+                     midVector_{i}&= b_{i} \\
+                     upperVector_{i}&= c_{i} \\
+                     soluteOldVector_{i}&= soluteOld_{i-1} \cdot  da_{i}+ soluteOld_{i} \cdot db_{i} + soluteOld_{i+1} \cdot  dc_{i}
+                  \end{align*}              
+                   correct vectors for start of mobile domain
+              
+               k=0, 
+               l=0
+               
+               while $IsThereSoluteFlux_l=false$   do
+           
+        \quad          k=l+1,  l=1+l               
+
+               if $k>0$ then
+             
+                  for ($i=0i<TotalNumberOfLayers-ki++$)
+                 
+
+           \quad\quad\quad          if $i=0$ then  
+                       \begin{align*}                 
+                        midVector_{i}&=midVector_{i+k}+dispersion_{i+k} \cdot \tfrac{DistPreviousLayerInv_{i+k}}{2 \cdot layerThickness_{i+k}} \\
+                        lowerVector_{i}&=0 \\
+                        soluteOldVector_{i}&=soluteOldVector_{i+k}+dispersion_{i+k} \cdot \tfrac{DistPreviousLayerInv_{i+k}}{2 \cdot layerThickness_{i+k}} \cdot soluteOld_{i+k} \\
+                        upperVector_{i}&= upperVector_{i+k}
+                       \end{align*}
+            \quad\quad\quad       else                   
+                        if $IsThereSoluteFlux[i+k-1]=false$ and 
+                           $IsThereSoluteFlux_{i+k}=false$ then                       
+                          
+                           $  lowerVector_{i} =
+                           midVector_{i}= 
+                           upperVector_{i}= 
+                           soluteOldVector_{i}=0$
+                       
+            \quad\quad            else if 
+$IsThereSoluteFlux[i+k-1]=false$ and 
+                           $IsThereSoluteFlux_{i+k}=true$ then                       
+                           \begin{align*}
+                             lowerVector_{i} & =0 \\
+                           midVector_{i}& = midVector_{i+k}+dispersion_{i+k} \cdot \tfrac{DistPreviousLayerInv_{i+k}}{2 \cdot layerThickness_{i+k}} \\
+                                    & +\tfrac{flowBack_{i}}{4 \cdot layerThickness_{i}} \\
+                           soluteOldVector_{i}& =soluteOldVector_{i+k}+soluteOld_{i} \\  & \cdot 
+                         \left(dispersion_{i+k} 
+                               \cdot \tfrac{DistPreviousLayerInv_{i+k}}{2 \cdot layerThickness_{i+k}} 
+                                    +\tfrac{flowBack_{i}}{4 \cdot layerThickness_{i}} \right) \\
+                           upperVector_{i}& = upperVector_{i+k}
+                           \end{align*}                      
+          \quad\quad              else if  
+$IsThereSoluteFlux[i+k-1]=true$ and 
+                           $IsThereSoluteFlux_{i+k}=false$                      
+                         \begin{align*}
+                           lowerVector_{i}&=lowerVector_{i+k} \\
+                           midVector_{i}&= midVector_{i+k}+dispersion_{i+k} \cdot \tfrac{DistNextLayerInv_{i+k}}{2 \cdot layerThickness_{i+k}} 
+                                    -\tfrac{flowForward_{i+k}}{4 \cdot layerThickness_{i+k}} \\
+                           soluteOldVector_{i}&=soluteOldVector_{i+k}+soluteOld_{i+k} \cdot \\ & \left(dispersion_{i+k}
+                                      \cdot \tfrac{DistNextLayerInv_{i+k}}{2 \cdot layerThickness_{i+k}} 
+                                    -\tfrac{flowForward_{i+k}}{4 \cdot layerThickness_{i+k}} \right) \\
+                           upperVector_{i}&= 0
+                        \end{align*}                        
+         \quad\quad               else   
+                           \begin{align*}                     
+                           lowerVector_{i}&=lowerVector_{i+k} \\
+                           midVector_{i}&= midVector_{i+k} \\
+                           soluteOldVector_{i}&=soluteOldVector_{i+k} \\
+                           upperVector_{i}&= upperVector_{i+k}     
+                           \end{align*}  
+                   Solve with the sweep method (function tridag)
+               Tridag(lowerVector, midVector, upperVector, soluteOldVector, soluteNew, TotalNumberOfLayers-k)
+
+               if $k>0$ then     
+       
+           \quad       for ($i=TotalNumberOfLayers-1i>k-1i--$)
+                     $soluteNew_{i}=soluteNew[i-k]$
+
+            \quad      for all i in 0..ki-1 do %($i=0i<ki++$)
+                     $soluteNew_{i}=0 $            
+
+           for all i in 0..TotalNumberOfLayers-1 do
+               %if (soluteNew_{i}<0)              
+%\subsection{                %  theMessage.WarningWithDisplay("soilProfile.UpdateInfiltrationSWAT - negative conc")}
+                %  cout << "solutetype " << soluteType << " in layer " << i << endl
+             
+
+                Calculate the fluxes between layers
+                %$mobileXXXXFlux_{i} $ 
+
+               refer to the flux out of the layer can be both negative and positive
+
+      \quad\quad      if $soluteType=0$ then
+
+
+      \quad\quad\quad        for all i in 0..TotalNumberOfLayers-1 do
+
+                $  mobileNitFlux_{i}= $ 
+
+               $  \begin{cases}                
+                  nitIn-soluteNew_{i} \cdot \tfrac{mobileWaterNew_{i}}{1000}+soluteOld_{i} \cdot \tfrac{mobileWaterOld_{i}}{1000} & \text{ if }(i=0) \\
+                  mobileNitFlux_{i-1}-soluteNew_{i} \cdot \tfrac{mobileWaterNew_{i}}{1000}+soluteOld_{i} \cdot \tfrac{mobileWaterOld_{i}}{1000} & \text{ otherwise}
+                \end{cases}$
+
+    \quad\quad        else if $soluteType=1$ then
+
+      \quad\quad\quad         for all i in 0..numberOfTotalLayers-1 do     
+      
+             $  mobileAmmFlux_{i}= $
+
+$\begin{cases}    
+                  ammIn-soluteNew_{i} \cdot \tfrac{mobileWaterNew_{i}}{1000}+soluteOld_{i} \cdot \tfrac{mobileWaterOld_{i}}{1000} & \text{ if }(i=0) \\
+                mobileAmmFlux_{i-1}-soluteNew_{i} \cdot \tfrac{mobileWaterNew_{i}}{1000}+soluteOld_{i} \cdot \tfrac{mobileWaterOld_{i}}{1000} & \text{ otherwise}
+              \end{cases} $
+
+      \quad\quad      else if  $soluteType=2$ then
+
+           \quad \quad\quad  for all i in 0..TotalNumberOfLayers-1 do
+
+            $     mobileChlorideFlux_{i}=$
+
+$ \begin{cases} 
+                  chlorideIn-\tfrac{soluteNew_{i} \cdot mobileWaterNew_{i}-soluteOld_{i} \cdot mobileWaterOld_{i})}{1000} & \text{ if }(i=0) \\
+                    mobileChlorideFlux_{i-1}-\tfrac{soluteNew_{i} \cdot mobileWaterNew_{i}-soluteOld_{i} \cdot mobileWaterOld_{i})}{1000} & \text{ otherwise}
+            \end{cases} $
+
+       \quad\quad     else if  $soluteType=3$ then
+
+         \quad\quad\quad     for all i in 0..TotalNumberOfLayers-1 do
+
+                $ mobileNitN15Flux_{i}= $
+
+$\begin{cases} 
+                nitN15In-\tfrac{soluteNew_{i} \cdot mobileWaterNew_{i}-soluteOld_{i} \cdot mobileWaterOld_{i})}{1000} &  if(i=0) \\
+                mobileNitN15Flux_{i-1}-\tfrac{soluteNew_{i} \cdot mobileWaterNew_{i}-soluteOld_{i} \cdot mobileWaterOld_{i})}{1000} & \text{ otherwise}
+            \end{cases}$
+
+            else if  $soluteType=4$ then
+              for all i in 0..TotalNumberOfLayers-1 do
+                 
+
+                 $mobileAmmN15Flux_{i} =$
+
+$ \begin{cases}
+                     ammN15In-\tfrac{soluteNew_{i} \cdot mobileWaterNew_{i}-soluteOld_{i} \cdot mobileWaterOld_{i})}{1000} & \text{ if }(i=0) \\
+                      mobileAmmN15Flux_{i-1}-\tfrac{soluteNew_{i} \cdot mobileWaterNew_{i}-soluteOld_{i} \cdot mobileWaterOld_{i})}{1000}
+                                             \end{cases}    $                            
+
+                
+
+End bypass if nonzeroconc is false
+
+            else      non-zero conc true 
+
+       $     \begin{cases}        
+              for all i in 0..TotalNumberOfLayers-1 do mobileNitFlux_{i}=0  & \text{ if } (soluteType=0)  \\          
+               for all i in 0..TotalNumberOfLayers-1 do  mobileAmmFlux_{i}=0 & \text{ if } (soluteType=1) \\             
+              for all i in 0..TotalNumberOfLayers-1 do mobileChlorideFlux_{i}=0 & \text{ if }  (soluteType=2)  \\            
+              for all i in 0..TotalNumberOfLayers-1 do mobileNitN15Flux_{i}=0  & \text{ if }  (soluteType=3)  \\            
+              for all i in 0..TotalNumberOfLayers-1 do  mobileAmmN15Flux_{i}=0 & \text{ if }  (soluteType=4)
+           \end{cases} $
+         
+        all solutes
+
+             update budgets and assign values
+
+%          nitrogen aMobileNitFlux, aMobileAmmFlux, aNitIn, aAmmIn
+%       
+%          aMobileChlorideFlux, aChlorideIn
+
+         aNitIn.SetBoth(nitIn, nitN15In),
+         aAmmIn.SetBoth(ammIn, ammN15In)
+
+         aChlorideIn=chlorideIn
+
+         for all i in 0..numberOfTotalLayers-1 do     
+
+    \quad\quad        aMobileNitFlux.SetBoth($mobileNitFlux_{i},mobileNitN15Flux_{i}$)
+
+     \quad\quad       aMobileAmmFlux.SetBoth($mobileAmmFlux_{i},mobileAmmN15Flux_{i}$)
+
+           $ aMobileChlorideFlux= mobileChlorideFlux_{i}$
+
+     \quad\quad       if (i=0)     
+     
+       \quad\quad\quad        $soilLayerArray_0.AddWaterAndSolutes($
+
+ \quad\quad\quad\quad $infiltration,aNitIn, aAmmIn,aChlorideIn)$
+
+     \quad\quad\quad        $ soilLayerArray_1.AddWaterAndSolutes($
+
+\quad\quad\quad\quad  $fluxInTimeStep_0,aMobileNitFlux, aMobileAmmFlux,aMobileChlorideFlux) $
+                      
+ Add to next
+
+      \quad\quad\quad        $ soilLayerArray_0.RemoveWaterAndSolutes($
+
+
+\quad\quad\quad\quad $ fluxInTimeStep_0,aMobileNitFlux,
+                                 aMobileAmmFlux,aMobileChlorideFlux)$        
+
+
+
+                remove from current
+      
+      else if $i=TotalNumberOfLayers-1$  then     
+     
+    $ soilLayerArray_{i}.RemoveWaterAndSolutes($
+
+\quad $
+fluxInTimeStep_{i},aMobileNitFlux, aMobileAmmFlux,aMobileChlorideFlux) $     
+
+   remove from current,  (update leaching)
+               
+              $  NitLeached =  NitLeached+aMobileNitFlux$,  
+              $  AmmLeached =  AmmLeached+aMobileAmmFlux $ 
+          
+            else          
+             
+              $ soilLayerArray_{i+1}.AddWaterAndSolutes($
+
+\quad $fluxInTimeStep_{i},aMobileNitFlux,$
+
+               \quad \quad                $aMobileAmmFlux,aMobileChlorideFlux) $                       
+
+Add to next layer
+               
+\quad              $ soilLayerArray_{i}.RemoveWaterAndSolutes($
+
+$fluxInTimeStep_{i},aMobileNitFlux, aMobileAmmFlux,aMobileChlorideFlux)   $                     
+
+remove from current
+        
+        
+         $ surplus= surplus \cdot (1-f)$
+
+        $   surfaceNit=  surfaceNit \cdot (1-f)$,
+        $   surfaceAmm=  surfaceAmm \cdot (1-f)$
+
+             what about chlorid!!!
+     
+      simulationTime+=deltaT
+
+   End transport of water and solute.
+       Equilibrate between mobile and immobile water   (once a day)
+
+   for all i in 0..TotalNumberOfLayers-1 do
+
+   \quad if $waterContent_{i}<FC_{i}$ then
+
+   \quad \quad   	$soilLayerArray_{i}.EquilibrateNitrogen(0)$
+
+    \quad else
+
+    \quad \quad  $soilLayerArray_{i}.EquilibrateNitrogen(waterContent_{i}-FC_{i})$
+
+   \quad \quad $EvapContent=\min(EvapCapacity,infiltration+EvapContent)$
+
+  for all i in 0..TotalNumberOfLayers-1 do  
+    $ soilLayerArray_{i}.SetWaterFlux(totalFlux_{i})$
+   
+        End transport of water and solute
+
+
+%Returns content of carbon/organic nitrogen in products stored on soil surface [$g C/m^2$].
+%Calculates soil water content for the profile.  returns  - Water content [mm]
+%Returns number of organic product objects stored on soil surface
+
+  
+
+  \bibliography{literature}
+  \bibliographystyle{plainnat}
+
+
+
+\end{document}
